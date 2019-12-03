@@ -4,10 +4,10 @@
   Os mapas aqui são feitos na ferramenta freemind. Infelizmente essa ferramenta é uma aplicação windows e está descontinuada, mas não tenho tido dificuldades em usá-la no linux com o wine.
   A ferramenta também está neste repositório.
 
-  Angular
-  Ansible
-  Docker
-  Git
-  Java
-  Javascript
-  Wildfly
+  * Angular
+  * Ansible
+  * Docker
+  * Git
+  * Java
+  * Javascript
+  * Wildfly
