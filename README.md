@@ -6,6 +6,8 @@
 
   A ferramenta também está neste repositório.
 
+  Mapas disponíveis:
+
   * Angular
   * Ansible
   * Docker
