@@ -55,7 +55,7 @@
 <node CREATED="1554816200010" ID="Freemind_Link_938335308" MODIFIED="1554816219389" TEXT="Atualiza o stage e a working directory"/>
 </node>
 </node>
-<node CREATED="1553000895340" ID="Freemind_Link_2401123" MODIFIED="1553000897632" POSITION="right" TEXT="Consultas">
+<node CREATED="1553000895340" FOLDED="true" ID="Freemind_Link_2401123" MODIFIED="1553000897632" POSITION="right" TEXT="Consultas">
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_498123252" MODIFIED="1553000902888" TEXT="git ls-files">
 <icon BUILTIN="wizard"/>
 <node CREATED="1553000483439" ID="Freemind_Link_1748635380" MODIFIED="1553000912752" TEXT="Lista os arquivos versionados pelo git"/>
@@ -272,6 +272,10 @@
 <icon BUILTIN="flag"/>
 <node CREATED="1553000483439" ID="Freemind_Link_888834846" MODIFIED="1553007287348" TEXT="Cria uma branch local de nome &apos;design&apos; e a atrela &#xe0; branch remota &apos;origin/design&apos;"/>
 <node CREATED="1553007290857" ID="Freemind_Link_1396300615" MODIFIED="1553015822937" TEXT="&#xda;til quando se baixa as branches do repo remoto (com git pull) &#xa;e se quer trabalhar em uma das novas branches baixadas"/>
+</node>
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1674605579" MODIFIED="1574447101591" TEXT="-u origin/design">
+<icon BUILTIN="flag"/>
+<node CREATED="1553000483439" ID="Freemind_Link_1352379935" MODIFIED="1574447116354" TEXT="Vincula a branch corrente com a branch remota de nome &apos;design&apos;"/>
 </node>
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1343775611" MODIFIED="1553015216758" TEXT="-d nomeDaBranch | -D nomeDaBranch">
 <icon BUILTIN="flag"/>
@@ -515,7 +519,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1553601385660" FOLDED="true" ID="Freemind_Link_622410571" MODIFIED="1553601388279" POSITION="right" TEXT="Ferramentas">
+<node CREATED="1553601385660" ID="Freemind_Link_622410571" MODIFIED="1553601388279" POSITION="right" TEXT="Ferramentas">
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_617972534" MODIFIED="1553601403142" TEXT="git mergetool --tool-help">
 <icon BUILTIN="wizard"/>
 <node CREATED="1553004040163" ID="Freemind_Link_811461154" MODIFIED="1553601416749" TEXT="Exibe uma lista com as ferramentas de merge dispon&#xed;veis"/>
@@ -527,6 +531,11 @@
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1148775373" MODIFIED="1554820573496" TEXT="--">
 <icon BUILTIN="wizard"/>
 <node CREATED="1553004040163" ID="Freemind_Link_74667232" MODIFIED="1554820585496" TEXT="Indica ao git que daqui para frente ser&#xe3;o listados apenas arquivos"/>
+</node>
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1011493587" MODIFIED="1574769521952" TEXT="git archive nome_da_tag --format=zip --output=nome_do_arquivio.zip">
+<icon BUILTIN="wizard"/>
+<node CREATED="1553004040163" ID="Freemind_Link_330740709" MODIFIED="1574769534640" TEXT="Cria um zip com o projeto na vers&#xe3;o da tag informada"/>
+<node CREATED="1574769535788" ID="Freemind_Link_1061857721" MODIFIED="1574769571428" TEXT="Ignora os arquivos relacionados no .gitignore"/>
 </node>
 </node>
 <node CREATED="1553601717608" FOLDED="true" ID="Freemind_Link_879415836" MODIFIED="1553602662887" POSITION="right" TEXT="Procedimentos &#xa;de trabalho">

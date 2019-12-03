@@ -114,6 +114,23 @@
 </node>
 </node>
 <node CREATED="1563994368647" ID="_" MODIFIED="1563994372275" POSITION="right" TEXT="Dockerfile">
+<node CREATED="1563998221736" ID="Freemind_Link_368230737" MODIFIED="1568727208485" TEXT="Build">
+<node CREATED="1563998249496" ID="Freemind_Link_1953836887" MODIFIED="1563998261491" TEXT="Criar uma imagem a partir de um Dockerfile">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1375815715" MODIFIED="1563998864816" TEXT="docker build -f Dockerfile">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
+<node CREATED="1563998290112" ID="Freemind_Link_433493135" MODIFIED="1568404332665" TEXT="Constr&#xf3;i e nomeia uma imagem n&#xe3;o &#xa;oficial a partir de um Dockerfile">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_687733098" MODIFIED="1563998869584" TEXT="docker build -f Dockerfile -t username/imagename">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
+<node CREATED="1568727215886" ID="Freemind_Link_847739592" MODIFIED="1568727239437" TEXT="Constr&#xf3;i uma imagem definindo &#xa;os argumentos do Dockerfile">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1742279028" MODIFIED="1568727302806" TEXT="docker build --build-arg nome_da_variavel=valor_padrao">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
+</node>
 <node CREATED="1563994383568" ID="Freemind_Link_1745228819" MODIFIED="1563998221016" TEXT="Comandos">
 <node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1382520062" MODIFIED="1563994420043" TEXT="FROM">
 <node CREATED="1563994389535" ID="Freemind_Link_189974504" MODIFIED="1563994407717" TEXT="indica a imagem na qual sua imagem ser&#xe1; baseada"/>
@@ -171,21 +188,50 @@
 <icon BUILTIN="idea"/>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1449117917" MODIFIED="1568727047527" TEXT="ARG">
+<node CREATED="1563994389535" ID="Freemind_Link_143746373" MODIFIED="1568727069862" TEXT="Par&#xe2;metros que podem ser passados para o Docker na fase de build"/>
+<node CREATED="1568727117050" ID="Freemind_Link_289175241" MODIFIED="1568727150853" TEXT="Se nenhum valor padr&#xe3;o for determinado e n&#xe3;o &#xa;for passado o valor no build, ser&#xe1; gerado um erro"/>
+<node CREATED="1568728785930" FOLDED="true" ID="Freemind_Link_260693326" MODIFIED="1568728792757" TEXT="Imagem:">
+<node CREATED="1568728793827" ID="Freemind_Link_1743632444" MODIFIED="1568728886715" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/docker_environment_build_args_overview.png&quot;&gt;"/>
 </node>
-<node CREATED="1563998221736" ID="Freemind_Link_368230737" MODIFIED="1563998224484" TEXT="A&#xe7;&#xf5;es">
-<node CREATED="1563998249496" ID="Freemind_Link_1953836887" MODIFIED="1563998261491" TEXT="Criar uma imagem a partir de um Dockerfile">
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1375815715" MODIFIED="1563998864816" TEXT="docker build -f Dockerfile">
-<icon BUILTIN="wizard"/>
+<node CREATED="1568727278453" ID="Freemind_Link_1409774537" MODIFIED="1568727698125" TEXT="O valor do argumento deve ser passado no buil da imagem">
+<arrowlink COLOR="#f93216" DESTINATION="Freemind_Link_300428973" ENDARROW="Default" ENDINCLINATION="551;0;" ID="Freemind_Arrow_Link_1585719347" STARTARROW="None" STARTINCLINATION="551;0;"/>
+<arrowlink DESTINATION="Freemind_Link_1742279028" ENDARROW="Default" ENDINCLINATION="543;0;" ID="Freemind_Arrow_Link_1908929964" STARTARROW="None" STARTINCLINATION="543;0;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1284153952" MODIFIED="1568727097322" TEXT="Ex: ARG nome_da_variavel">
+<icon BUILTIN="idea"/>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1135000290" MODIFIED="1568727114178" TEXT="Ex: ARG nome_da_variavel=valor_padrao">
+<icon BUILTIN="idea"/>
 </node>
 </node>
-<node CREATED="1563998290112" ID="Freemind_Link_433493135" MODIFIED="1563998313540" TEXT="Constr&#xf3;i e nomeia uma imagem n&#xe3;o &#xa;oficial a partir de um Dockerfile]">
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_687733098" MODIFIED="1563998869584" TEXT="docker build -f Dockerfile -t username/imagename">
-<icon BUILTIN="wizard"/>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1622645257" MODIFIED="1568727769933" TEXT="ENV">
+<node CREATED="1563994389535" ID="Freemind_Link_1739972303" MODIFIED="1568727781743" TEXT="Define vari&#xe1;vel de ambiente do container"/>
+<node CREATED="1568727117050" ID="Freemind_Link_1029992062" MODIFIED="1568727916132" TEXT="A vari&#xe1;vel tamb&#xe9;m estar&#xe1; dispon&#xed;vel &#xa;na fase de build da imagem">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1274794772" MODIFIED="1568728006276" TEXT="Ex: ENV foo /bar&#xa;      ADD . $foo&#xa;      #ou ADD . ${foo}">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node CREATED="1568728785930" FOLDED="true" ID="Freemind_Link_762178252" MODIFIED="1568728792757" TEXT="Imagem:">
+<node CREATED="1568728793827" ID="Freemind_Link_1546283402" MODIFIED="1568728886715" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/docker_environment_build_args_overview.png&quot;&gt;"/>
+</node>
+<node CREATED="1568728032193" ID="Freemind_Link_1310152630" MODIFIED="1568728055838" TEXT="Para definir dinamicamente uma variavel de &#xa;ambiente conjugar o uso de ARG com ENV">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1216640135" MODIFIED="1568728100091" TEXT="Ex: ARG uma_variavel&#xa;      ENV variavel_ambiente=$uma_variavel">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node CREATED="1568728138789" ID="Freemind_Link_501556710" MODIFIED="1568728202736" TEXT="&#xc9; poss&#xed;vel sobrescrever a variavel &#xa;de ambiente no &apos;docker run&apos;">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_540005200" MODIFIED="1568728193416" TEXT="Ex: docker run -e &quot;env_var_name=another_value&quot; alpine env">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1158506155" MODIFIED="1568727857940" TEXT="Ex: ENV PATH  $PATH:$JAVA_HOME/bin:$M2_HOME/bin">
+<icon BUILTIN="idea"/>
 </node>
 </node>
 </node>
 </node>
-<node CREATED="1564003157733" ID="Freemind_Link_95353128" MODIFIED="1564003163698" POSITION="right" TEXT="Docker compose">
+<node CREATED="1564003157733" ID="Freemind_Link_95353128" MODIFIED="1568728858641" POSITION="right" TEXT="Docker compose">
 <node CREATED="1564003164413" ID="Freemind_Link_332229" MODIFIED="1564003171627" TEXT="Usa o padr&#xe3;o yaml">
 <node CREATED="1564074495999" ID="Freemind_Link_389868139" MODIFIED="1564074516932" TEXT="Arquivo com extens&#xe3;o yml ou yaml">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_924072677" MODIFIED="1564003205056" TEXT="Ex: arquivo docker-compose.yml">
@@ -197,7 +243,7 @@
 </node>
 <node CREATED="1564074518658" ID="Freemind_Link_609261117" MODIFIED="1564074527235" TEXT="&apos;-&apos; indica array no yaml"/>
 </node>
-<node CREATED="1564074095905" ID="Freemind_Link_1246829250" MODIFIED="1564074097903" TEXT="Comandos">
+<node CREATED="1564074095905" FOLDED="true" ID="Freemind_Link_1246829250" MODIFIED="1564074097903" TEXT="Comandos">
 <node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1980060614" MODIFIED="1564074110014" TEXT="version">
 <node CREATED="1563994389535" ID="Freemind_Link_483413953" MODIFIED="1564074121798" TEXT="Indica a vers&#xe3;o do Docker compose a ser utilizada"/>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1776307366" MODIFIED="1564074129230" TEXT="Ex: version: &apos;3&apos;">
@@ -211,10 +257,135 @@
 </node>
 </node>
 <node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_958259839" MODIFIED="1564074168600" TEXT="services">
+<node CREATED="1568727361188" ID="Freemind_Link_964408127" MODIFIED="1568727365723" TEXT="=&gt;">
 <node CREATED="1563994389535" ID="Freemind_Link_1147872933" MODIFIED="1564074186888" TEXT="Indica os servi&#xe7;os (containers) que dever&#xe3;o ser criados"/>
-<node CREATED="1564076111472" ID="Freemind_Link_901593512" MODIFIED="1564076131911" TEXT="Os conitainers tamb&#xe9;m se enxergar&#xe3;o mutuamente pelo nome do servi&#xe7;o escolhido"/>
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1025218926" MODIFIED="1564074129230" TEXT="Ex: version: &apos;3&apos;">
+<node CREATED="1564076111472" ID="Freemind_Link_901593512" MODIFIED="1568727454682" TEXT="Os containers tamb&#xe9;m se enxergar&#xe3;o mutuamente pelo nome do servi&#xe7;o escolhido"/>
+</node>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_141757836" MODIFIED="1568727390827" TEXT="nome_do_servico">
+<node CREATED="1568727361188" ID="Freemind_Link_828660778" MODIFIED="1568727365723" TEXT="=&gt;">
+<node CREATED="1563994389535" ID="Freemind_Link_1450731872" MODIFIED="1568727418000" TEXT="Indica o nome do servi&#xe7;o que se quer configurar/criar"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_447190662" MODIFIED="1568727492577" TEXT="Ex: mysql:">
 <icon BUILTIN="idea"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_178953681" MODIFIED="1568727400482" TEXT="build">
+<node CREATED="1568727361188" ID="Freemind_Link_254018351" MODIFIED="1568727365723" TEXT="=&gt;">
+<node CREATED="1563994389535" ID="Freemind_Link_1327581755" MODIFIED="1568727510031" TEXT="Configura&#xe7;&#xf5;es do build do servi&#xe7;o"/>
+</node>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_969891663" MODIFIED="1568727524574" TEXT="context">
+<node CREATED="1568727361188" ID="Freemind_Link_1039261140" MODIFIED="1568727365723" TEXT="=&gt;">
+<node CREATED="1563994389535" ID="Freemind_Link_617741681" MODIFIED="1568727537179" TEXT="???"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_122357454" MODIFIED="1568727544897" TEXT="Ex: context: ./app">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1979036975" MODIFIED="1568727400482" TEXT="build">
+<node CREATED="1568727361188" ID="Freemind_Link_1611467249" MODIFIED="1568727365723" TEXT="=&gt;">
+<node CREATED="1563994389535" ID="Freemind_Link_1192234849" MODIFIED="1568727510031" TEXT="Configura&#xe7;&#xf5;es do build do servi&#xe7;o"/>
+</node>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1602126504" MODIFIED="1568727524574" TEXT="context">
+<node CREATED="1568727361188" ID="Freemind_Link_1883246832" MODIFIED="1568727365723" TEXT="=&gt;">
+<node CREATED="1563994389535" ID="Freemind_Link_995497608" MODIFIED="1568727537179" TEXT="???"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1872522021" MODIFIED="1568727544897" TEXT="Ex: context: ./app">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1373829556" MODIFIED="1568727551337" TEXT="dockerfile">
+<node CREATED="1568727361188" ID="Freemind_Link_120404399" MODIFIED="1568727365723" TEXT="=&gt;">
+<node CREATED="1563994389535" ID="Freemind_Link_638364749" MODIFIED="1568727571039" TEXT="Indica o nome do Dockerfile para o build"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_820218043" MODIFIED="1568727582526" TEXT="Ex: dockerfile: Dockerfile">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1827407817" MODIFIED="1568727620838" TEXT="args">
+<node CREATED="1568727361188" ID="Freemind_Link_791562264" MODIFIED="1568727365723" TEXT="=&gt;">
+<node CREATED="1563994389535" ID="Freemind_Link_1596463909" MODIFIED="1568727686397" TEXT="Indica os argumentos para o build da imagem"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1718581932" MODIFIED="1568727721149" TEXT="Ex: args:&#xa;          nome_da_variavel: algum_valor">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1211920988" MODIFIED="1568727551337" TEXT="dockerfile">
+<node CREATED="1568727361188" ID="Freemind_Link_1346541790" MODIFIED="1568727365723" TEXT="=&gt;">
+<node CREATED="1563994389535" ID="Freemind_Link_1462739957" MODIFIED="1568727571039" TEXT="Indica o nome do Dockerfile para o build"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_29939828" MODIFIED="1568727582526" TEXT="Ex: dockerfile: Dockerfile">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_96749864" MODIFIED="1568727620838" TEXT="args">
+<node CREATED="1568727361188" ID="Freemind_Link_1951832328" MODIFIED="1568727365723" TEXT="=&gt;">
+<node CREATED="1563994389535" ID="Freemind_Link_300428973" MODIFIED="1568727686397" TEXT="Indica os argumentos para o build da imagem"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1871859090" MODIFIED="1568727721149" TEXT="Ex: args:&#xa;          nome_da_variavel: algum_valor">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1562778693" MODIFIED="1568728235379" TEXT="image">
+<node CREATED="1568727361188" ID="Freemind_Link_1687870274" MODIFIED="1568727365723" TEXT="=&gt;">
+<node CREATED="1563994389535" ID="Freemind_Link_722104493" MODIFIED="1568728246396" TEXT="Configura&#xe7;&#xf5;es da imagem a ser gerada"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1093698152" MODIFIED="1568728380345" TEXT="Ex: image: linuxserver/plex">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_871526760" MODIFIED="1568728253664" TEXT="environment">
+<node CREATED="1568727361188" ID="Freemind_Link_1040796923" MODIFIED="1568727365723" TEXT="=&gt;">
+<node CREATED="1563994389535" ID="Freemind_Link_955545564" MODIFIED="1568728438411" TEXT="Sobrescreve o valor de vari&#xe1;veis &#xa;de ambiente do container">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1103946452" MODIFIED="1568728318985" TEXT="Ex: environment:&#xa;         - env_var_name=another_value">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node CREATED="1563994389535" ID="Freemind_Link_1733352128" MODIFIED="1568728492079" TEXT="&#xc9; poss&#xed;vel passar uma vari&#xe1;vel de ambiente do &#xa;host para o container. Basta n&#xe3;o passar valor algum.">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1560763708" MODIFIED="1568728510071" TEXT="Ex: environment:&#xa;         - env_var_name">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1820506505" MODIFIED="1569014588740" TEXT="container_name">
+<node CREATED="1568727361188" ID="Freemind_Link_1079298412" MODIFIED="1568727365723" TEXT="=&gt;">
+<node CREATED="1569014529185" ID="Freemind_Link_149636215" MODIFIED="1569014597779" TEXT="Define um nome para o container"/>
+<node CREATED="1569014602076" ID="Freemind_Link_1147150618" MODIFIED="1569014614908" TEXT="Esse nome poder&#xe1; ser usado pelos containers como refer&#xea;ncia de rede"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_704562417" MODIFIED="1569014633235" TEXT="Ex: container_name: nome_do_container">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_341299167" MODIFIED="1568728564813" TEXT="env_file">
+<node CREATED="1568727361188" ID="Freemind_Link_90275853" MODIFIED="1568727365723" TEXT="=&gt;">
+<node CREATED="1563994389535" ID="Freemind_Link_1293815009" MODIFIED="1568728599759" TEXT="Define um arquivo com declara&#xe7;&#xf5;es &#xa;de vari&#xe1;veis de ambiente">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1546288068" MODIFIED="1568728627037" TEXT="Ex: env_file: nome_arquivo_env">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node CREATED="1568728785930" FOLDED="true" ID="Freemind_Link_1049779281" MODIFIED="1568728792757" TEXT="Imagem:">
+<node CREATED="1568728793827" ID="Freemind_Link_217308508" MODIFIED="1568728886715" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/docker_environment_build_args_overview.png&quot;&gt;"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_840526421" MODIFIED="1569014449822" TEXT="command">
+<node CREATED="1568727361188" ID="Freemind_Link_1023761097" MODIFIED="1568727365723" TEXT="=&gt;">
+<node CREATED="1563994389535" ID="Freemind_Link_1066583956" MODIFIED="1569014459429" TEXT="Sobrescreve o CMD do Dockerfile"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1532931934" MODIFIED="1569014470846" TEXT="Ex: command: /bin/bash">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1199250393" MODIFIED="1569014496035" TEXT="depends_on">
+<node CREATED="1568727361188" ID="Freemind_Link_944712442" MODIFIED="1568727365723" TEXT="=&gt;">
+<node CREATED="1563994389535" ID="Freemind_Link_61227076" MODIFIED="1569014522748" TEXT="Indica que este servi&#xe7;o tem outro como depend&#xea;ncia"/>
+<node CREATED="1569014529185" ID="Freemind_Link_279258597" MODIFIED="1569014541194" TEXT="Se baseia no nome do servi&#xe7;o referenciado"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_744656040" MODIFIED="1569014561883" TEXT="Ex: depends_on: nome_do_servico">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
 </node>
 </node>
 </node>
@@ -253,7 +424,7 @@
 </node>
 <node COLOR="#0000ff" CREATED="1563994459391" FOLDED="true" ID="Freemind_Link_587520050" MODIFIED="1564075527385" TEXT="Ex:">
 <icon BUILTIN="idea"/>
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1179208339" MODIFIED="1564075537756" TEXT="Ex: &#xa;services:&#xa;  nginx:&#xa;    build:&#xa;      dockerfile: ./docker/nginx.dockerfile&#xa;      context: .&#xa;    image: douglasq/nginx&#xa;    container_name: nginx&#xa;    ports:&#xa;      - &quot;80:80&quot;&#xa;      - &quot;1234:3000&quot;&#xa;    networks:&#xa;      - production-network&#xa;    depends_on:&#xa;      - &quot;node1&quot;&#xa;&#xa;  mongodb:&#xa;    image: mongo&#xa;    networks:&#xa;      - production-network&#xa;    &#xa;  node1:&#xa;    build:&#xa;      dockerfile: ./docker/alurabooks.dockerfile&#xa;      context: .&#xa;    image: douglasq/alura-books&#xa;    container_name: alura-books-1&#xa;    ports:&#xa;      - &quot;3000&quot;&#xa;    networks:&#xa;      - production-network&#xa;    depends_on:&#xa;      - &quot;mongodb&quot;&#xa;    &#xa;networks:&#xa;  production-network:&#xa;    driver: bridge"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1179208339" MODIFIED="1569014123108" TEXT="Ex: &#xa;version: &apos;3&apos;&#xa;services:&#xa;  nginx:&#xa;    build:&#xa;      dockerfile: ./docker/nginx.dockerfile&#xa;      context: .&#xa;    image: douglasq/nginx&#xa;    container_name: nginx&#xa;    ports:&#xa;      - &quot;80:80&quot;&#xa;      - &quot;1234:3000&quot;&#xa;    networks:&#xa;      - production-network&#xa;    depends_on:&#xa;      - &quot;node1&quot;&#xa;&#xa;  mongodb:&#xa;    image: mongo&#xa;    networks:&#xa;      - production-network&#xa;    &#xa;  node1:&#xa;    build:&#xa;      dockerfile: ./docker/alurabooks.dockerfile&#xa;      context: .&#xa;    image: douglasq/alura-books&#xa;    container_name: alura-books-1&#xa;    ports:&#xa;      - &quot;3000&quot;&#xa;    networks:&#xa;      - production-network&#xa;    depends_on:&#xa;      - &quot;mongodb&quot;&#xa;    &#xa;networks:&#xa;  production-network:&#xa;    driver: bridge"/>
 </node>
 </node>
 <node CREATED="1564077031578" ID="Freemind_Link_1003500916" MODIFIED="1564077035993" POSITION="right" TEXT="Docker Swarm">

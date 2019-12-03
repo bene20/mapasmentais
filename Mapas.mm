@@ -6,5 +6,7 @@
 <node CREATED="1553774751434" ID="Freemind_Link_616840375" LINK="Javascript/Javascript.mm" MODIFIED="1553774772000" POSITION="right" TEXT="Javascript"/>
 <node CREATED="1553774791468" ID="Freemind_Link_1551828805" LINK="Git/Git.mm" MODIFIED="1553774799011" POSITION="right" TEXT="Git"/>
 <node CREATED="1563994292032" ID="Freemind_Link_423968621" LINK="Docker/Docker.mm" MODIFIED="1563994347827" POSITION="right" TEXT="Docker"/>
+<node CREATED="1572997135178" ID="Freemind_Link_289996645" LINK="Wildfly/Wildfly.mm" MODIFIED="1572997199626" POSITION="right" TEXT="Wildfly"/>
+<node CREATED="1574964876560" ID="Freemind_Link_126675284" LINK="Ansible/Ansible.mm" MODIFIED="1574964931624" POSITION="right" TEXT="Ansible"/>
 </node>
 </map>
