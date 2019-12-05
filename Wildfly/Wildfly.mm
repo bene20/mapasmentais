@@ -178,7 +178,7 @@
 <icon BUILTIN="attach"/>
 </node>
 </node>
-<node CREATED="1574648132994" FOLDED="true" ID="Freemind_Link_1670176762" MODIFIED="1574648135012" POSITION="right" TEXT="Logger">
+<node CREATED="1574648132994" ID="Freemind_Link_1670176762" MODIFIED="1574648135012" POSITION="right" TEXT="Logger">
 <node CREATED="1574648676430" ID="Freemind_Link_1771058907" MODIFIED="1574648695352" TEXT="A aplica&#xe7;&#xe3;o deve usar o Logger em vez do System.out ou System.err"/>
 <node CREATED="1574648697536" ID="Freemind_Link_431466724" MODIFIED="1574648699530" TEXT="Na aplica&#xe7;&#xe3;o">
 <node CREATED="1574650128657" ID="Freemind_Link_65962841" MODIFIED="1574650131958" TEXT="Pacote da aplica&#xe7;&#xe3;o">
@@ -209,7 +209,7 @@
 </node>
 </node>
 <node CREATED="1574649766761" ID="Freemind_Link_1729574434" MODIFIED="1574649772962" TEXT="Vincular o logger ao handler">
-<node COLOR="#0000ff" CREATED="1574649893938" ID="Freemind_Link_1575726469" MODIFIED="1574649904331" TEXT="/subsystem=logging/logger=org.jboss.as.quickstarts:add(category=org.jboss.as.quickstarts,use-parent-handlers=false,level=DEBUG,handlers=[quickstarts]"/>
+<node COLOR="#0000ff" CREATED="1574649893938" ID="Freemind_Link_1575726469" MODIFIED="1575396453242" TEXT="/subsystem=logging/logger=org.jboss.as.quickstarts:add(category=org.jboss.as.quickstarts,use-parent-handlers=false,level=DEBUG,handlers=[quickstarts])"/>
 <node CREATED="1574650003998" ID="Freemind_Link_1396923034" MODIFIED="1574692100523" TEXT="Note a vincula&#xe7;&#xe3;o da aplica&#xe7;&#xe3;o de pacote org.jboss.as.quickstarts ao handler. Esse &#xe9; o pacote da aplica&#xe7;&#xe3;o"/>
 </node>
 <node CREATED="1574649972392" ID="Freemind_Link_491629780" MODIFIED="1574649976691" TEXT="Recarregar o wildfly">
