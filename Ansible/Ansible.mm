@@ -1,6 +1,9 @@
 <map version="0.8.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1553000049733" ID="Freemind_Link_683934292" LINK="../Mapas.mm" MODIFIED="1574964938879" TEXT="Ansible">
+<node CREATED="1575898107966" ID="Freemind_Link_52771434" MODIFIED="1575898111166" POSITION="right" TEXT="Parei aqui:">
+<node CREATED="1575898111661" ID="Freemind_Link_1719156974" MODIFIED="1575898113295" TEXT="Aula 8"/>
+</node>
 <node CREATED="1574965049161" ID="_" MODIFIED="1574965051582" POSITION="right" TEXT="Instala&#xe7;&#xe3;o">
 <node COLOR="#0000ff" CREATED="1574965053211" ID="Freemind_Link_1152421376" MODIFIED="1574965069420" TEXT="apt install ansible"/>
 </node>
@@ -22,7 +25,7 @@
 <arrowlink DESTINATION="Freemind_Link_1581582100" ENDARROW="Default" ENDINCLINATION="178;0;" ID="Freemind_Arrow_Link_347654395" STARTARROW="None" STARTINCLINATION="178;0;"/>
 </node>
 </node>
-<node CREATED="1575385922391" ID="Freemind_Link_1190167359" MODIFIED="1575385932032" TEXT="Ex (arq hosts):">
+<node CREATED="1575385922391" ID="Freemind_Link_1190167359" MODIFIED="1575897073796" TEXT="Ex (arq hosts):">
 <node COLOR="#ff00ff" CREATED="1575385938828" ID="Freemind_Link_1581582100" MODIFIED="1575386019423" TEXT="[wordpress]&#xa;10.10.0.1&#xa;10.10.0.2&#xa;&#xa;[mysql]&#xa;maq1.dominio.com.br"/>
 </node>
 <node CREATED="1575388150367" ID="Freemind_Link_1149327160" MODIFIED="1575388156957" TEXT="Pode ser inclu&#xed;do nome de usu&#xe1;rio">
@@ -40,6 +43,7 @@
 <node CREATED="1575385769415" ID="Freemind_Link_1054555287" MODIFIED="1575385775211" TEXT="Receita do que ser&#xe1; feito"/>
 <node CREATED="1575387870383" ID="Freemind_Link_1558220273" MODIFIED="1575387883558" TEXT="Execut&#xe1;vel pelo comando ansible-playbook">
 <icon BUILTIN="messagebox_warning"/>
+<node COLOR="#0000ff" CREATED="1575895728604" ID="Freemind_Link_593257815" MODIFIED="1575895743127" TEXT="Ex: ansible-playbook -i hosts provisioning.yml"/>
 </node>
 <node CREATED="1575386311887" ID="Freemind_Link_1240088551" MODIFIED="1575386320155" TEXT="Arquivo yaml (extens&#xe3;o yml)">
 <node CREATED="1575386324203" ID="Freemind_Link_984321112" MODIFIED="1575386329447" TEXT="Ex: provisioning.yml"/>
@@ -70,7 +74,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1575386532184" FOLDED="true" ID="Freemind_Link_299311849" MODIFIED="1575387338446" TEXT="apt">
+<node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_299311849" MODIFIED="1575387338446" TEXT="apt">
 <node CREATED="1575386528969" ID="Freemind_Link_367834196" MODIFIED="1575386844298" TEXT="Instala um pacote de distribui&#xe7;&#xe3;o Debian"/>
 <node CREATED="1575388839228" ID="Freemind_Link_1920462797" MODIFIED="1575388856824" TEXT="https://docs.ansible.com/ansible/latest/modules/apt_module.html#apt-module">
 <icon BUILTIN="attach"/>
@@ -179,23 +183,6 @@
 </node>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_286307148" MODIFIED="1575387129020" TEXT="become: yes">
-<node CREATED="1575386528969" ID="Freemind_Link_708914289" MODIFIED="1575387829208" TEXT="Indica que os comandos devem ser executados como root"/>
-</node>
-<node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_1191442657" MODIFIED="1575388044341" TEXT="with_items">
-<icon BUILTIN="button_cancel"/>
-<node CREATED="1575388047825" ID="Freemind_Link_1393161550" MODIFIED="1575388090077" TEXT="Descontinuado. Usar lista de &apos;name&apos;">
-<arrowlink DESTINATION="Freemind_Link_764025808" ENDARROW="Default" ENDINCLINATION="290;0;" ID="Freemind_Arrow_Link_1372603725" STARTARROW="None" STARTINCLINATION="290;0;"/>
-</node>
-<node CREATED="1575388068772" FOLDED="true" ID="Freemind_Link_85721346" MODIFIED="1575388081241" TEXT="Ver">
-<node CREATED="1575386528969" ID="Freemind_Link_1511239881" MODIFIED="1575387631794" TEXT="Permite iterar sobre uma lista de instala&#xe7;&#xf5;es"/>
-<node CREATED="1575387638361" ID="Freemind_Link_1647761683" MODIFIED="1575387643208" TEXT="Evita duplica&#xe7;&#xe3;o de c&#xf3;digo"/>
-<node CREATED="1575387774213" ID="Freemind_Link_1826695750" MODIFIED="1575387774802" TEXT="No name do pacote, usar a palavra reservada &apos;item&apos; para representar cada item da lista"/>
-<node CREATED="1575387654421" ID="Freemind_Link_1287499264" MODIFIED="1575387655459" TEXT="Ex:">
-<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_469488709" MODIFIED="1575387678375" TEXT="- hosts: all&#xa;  tasks:&#xa;    - name: &apos;Instala pacotes de dependencia do sistema operacional&apos;&#xa;      apt:&#xa;        name: &quot;{{ item }}&quot;&#xa;        state: latest&#xa;      become: yes&#xa;      with_items:&#xa;        - php5&#xa;        - apache2&#xa;        - libapache2-mod-php5"/>
-</node>
-</node>
-</node>
 <node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_481899317" MODIFIED="1575390457045" TEXT="handlers">
 <node CREATED="1575386528969" ID="Freemind_Link_805322592" MODIFIED="1575390727826" TEXT="Manipuladores de servi&#xe7;os">
 <node CREATED="1575390471781" ID="Freemind_Link_1198131766" MODIFIED="1575390485206" TEXT="&#xda;til para reiniciar, parar e iniciar servi&#xe7;os"/>
@@ -238,16 +225,36 @@
 </node>
 </node>
 </node>
+<node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_1191442657" MODIFIED="1575895678058" TEXT="with_items">
+<node CREATED="1575895588225" ID="Freemind_Link_553028641" MODIFIED="1575895882398" TEXT="N&#xe3;o est&#xe1; aninhado na &apos;task&apos; em si, mas no comando da task">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node CREATED="1575386528969" ID="Freemind_Link_1511239881" MODIFIED="1575387631794" TEXT="Permite iterar sobre uma lista de instala&#xe7;&#xf5;es"/>
+<node CREATED="1575387638361" ID="Freemind_Link_1647761683" MODIFIED="1575387643208" TEXT="Evita duplica&#xe7;&#xe3;o de c&#xf3;digo"/>
+<node CREATED="1575387774213" ID="Freemind_Link_1826695750" MODIFIED="1575387774802" TEXT="No name do pacote, usar a palavra reservada &apos;item&apos; para representar cada item da lista"/>
+<node CREATED="1575387654421" ID="Freemind_Link_1287499264" MODIFIED="1575387655459" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_469488709" MODIFIED="1575387678375" TEXT="- hosts: all&#xa;  tasks:&#xa;    - name: &apos;Instala pacotes de dependencia do sistema operacional&apos;&#xa;      apt:&#xa;        name: &quot;{{ item }}&quot;&#xa;        state: latest&#xa;      become: yes&#xa;      with_items:&#xa;        - php5&#xa;        - apache2&#xa;        - libapache2-mod-php5"/>
+</node>
+<node CREATED="1575387654421" ID="Freemind_Link_554265649" MODIFIED="1575387655459" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_1951630388" MODIFIED="1575895842784" TEXT="- name: &apos;Configura o wp-config com as entradas do banco de dados&apos;&#xa;  replace:&#xa;    path: &apos;/var/www/wordpress/wp-config.php&apos;&#xa;    regexp: &quot;{{ item.regex }}&quot;&#xa;    replace: &quot;{{ item.value }}&quot;&#xa;  with_items:&#xa;    - { regex: &apos;database_name_here&apos;, value: &apos;wordpress_db&apos;}&#xa;    - { regex: &apos;username_here&apos;, value: &apos;wordpress_user&apos;}&#xa;    - { regex: &apos;password_here&apos;, value: &apos;12345&apos;}&#xa;  become: yes"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_286307148" MODIFIED="1575387129020" TEXT="become: yes">
+<node CREATED="1575895588225" ID="Freemind_Link_286255183" MODIFIED="1575895894144" TEXT="N&#xe3;o est&#xe1; aninhado na &apos;task&apos; em si, mas no comando da task">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node CREATED="1575386528969" ID="Freemind_Link_708914289" MODIFIED="1575387829208" TEXT="Indica que os comandos devem ser executados como root"/>
+</node>
 </node>
 </node>
 </node>
 <node CREATED="1575387388343" ID="Freemind_Link_1975961551" MODIFIED="1575387389203" TEXT="Ex:">
-<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_694902138" MODIFIED="1575387403952" TEXT="- hosts: all&#xa;  tasks:&#xa;    - name: &apos;Instala o PHP5&apos;&#xa;      apt:&#xa;        name: php5&#xa;        state: latest&#xa;      become: yes&#xa;    - name: &apos;Instala o Apache2&apos;&#xa;      apt: &#xa;        name: apache2&#xa;        state:lastest&#xa;      became: yes"/>
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_694902138" MODIFIED="1575895569825" TEXT="- hosts: all&#xa;  tasks:&#xa;    - name: &apos;Instala o PHP5&apos;&#xa;      apt:&#xa;        name: php5&#xa;        state: latest&#xa;      become: yes&#xa;    - name: &apos;Instala o Apache2&apos;&#xa;      apt: &#xa;        name: apache2&#xa;        state:lastest&#xa;      become: yes"/>
 </node>
 </node>
 <node CREATED="1575385759054" ID="Freemind_Link_1309014051" MODIFIED="1575385783195" TEXT="Prov&#xea; modulariza&#xe7;&#xe3;o de c&#xf3;digo"/>
 </node>
-<node CREATED="1575386110147" ID="Freemind_Link_659727209" MODIFIED="1575386112382" POSITION="right" TEXT="M&#xf3;dulos">
+<node CREATED="1575386110147" FOLDED="true" ID="Freemind_Link_659727209" MODIFIED="1575386112382" POSITION="right" TEXT="M&#xf3;dulos">
 <node CREATED="1575386112861" ID="Freemind_Link_1911077895" MODIFIED="1575386126016" TEXT="Comandos que o Ansible &#xe9; capaz de rodar"/>
 <node CREATED="1575388482074" ID="Freemind_Link_1426892412" MODIFIED="1575388488882" TEXT="https://docs.ansible.com/ansible/latest/modules/modules_by_category.html">
 <icon BUILTIN="attach"/>
@@ -255,6 +262,53 @@
 <node CREATED="1575386129116" ID="Freemind_Link_962774895" MODIFIED="1575386165575" TEXT="Shell">
 <icon BUILTIN="forward"/>
 <node CREATED="1575386145570" ID="Freemind_Link_1405277527" MODIFIED="1575386156560" TEXT="Assim que fizer SSH para o alvo, ser&#xe1; executado um comando do shell"/>
+</node>
+</node>
+<node CREATED="1575896183175" ID="Freemind_Link_1070165121" MODIFIED="1575896217830" POSITION="right" TEXT="Pastas e arquivos">
+<node CREATED="1575896616532" ID="Freemind_Link_202031229" MODIFIED="1575896620857" TEXT="group_vars">
+<node CREATED="1575896621830" ID="Freemind_Link_620346108" MODIFIED="1575896627209" TEXT="Pasta especial do ansible"/>
+<node CREATED="1575897207312" ID="Freemind_Link_605005244" MODIFIED="1575897219485" TEXT="Cada grupo espec&#xed;fico pode ter seu pr&#xf3;prio arquivo de chaves-valores"/>
+<node CREATED="1575897230339" ID="Freemind_Link_1557298894" MODIFIED="1575897245901" TEXT="&#xc9; poss&#xed;vel ter um arquivo &apos;all.yml&apos; que engloba todos os groups"/>
+<node CREATED="1575896227378" ID="Freemind_Link_762691340" MODIFIED="1575896641678" TEXT="group_vars/all.yml">
+<icon BUILTIN="forward"/>
+<node CREATED="1575896234744" ID="Freemind_Link_1819725824" MODIFIED="1575896250482" TEXT="Arquivo default de defini&#xe7;&#xe3;o das vari&#xe1;veis do playbook"/>
+<node CREATED="1575896695083" ID="Freemind_Link_537892764" MODIFIED="1575896726191" TEXT="As vari&#xe1;veis declaradas aqui ser&#xe3;o aplicadas a todos os grupos de hosts"/>
+<node CREATED="1575897260720" ID="Freemind_Link_1319101967" MODIFIED="1575897302013" TEXT="Caso alguma as vari&#xe1;veis aqui seja declarada em um &#xa;arquivo de grupo espec&#xed;fico, valer&#xe1; a do grupo espec&#xed;fico"/>
+<node CREATED="1575896668051" ID="Freemind_Link_1448245183" MODIFIED="1575896674490" TEXT="Par chave-valor separado por &apos;:&apos;"/>
+<node CREATED="1575896251959" ID="Freemind_Link_1004380859" MODIFIED="1575896253242" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575896271879" ID="Freemind_Link_485412850" MODIFIED="1575897000166" TEXT="---&#xa;wp_username: wordpress_user&#xa;wp_db_name: wordpress_db"/>
+</node>
+</node>
+<node CREATED="1575896227378" ID="Freemind_Link_294502849" MODIFIED="1575897073797" TEXT="group_vars/nome_do_grupo.yml">
+<arrowlink DESTINATION="Freemind_Link_1190167359" ENDARROW="Default" ENDINCLINATION="426;0;" ID="Freemind_Arrow_Link_476412517" STARTARROW="None" STARTINCLINATION="426;0;"/>
+<icon BUILTIN="forward"/>
+<node CREATED="1575897033746" ID="Freemind_Link_1303850749" MODIFIED="1575897047599" TEXT="Deve seguir o mesmo nomo do grupo definido no arquivo de invent&#xe1;rio"/>
+<node CREATED="1575896695083" ID="Freemind_Link_1920466193" MODIFIED="1575897152564" TEXT="As vari&#xe1;veis declaradas aqui ser&#xe3;o aplicadas apenas aos hosts do grupo em quest&#xe3;o"/>
+<node CREATED="1575897085668" ID="Freemind_Link_1668478395" MODIFIED="1575897100219" TEXT="Ex:">
+<node CREATED="1575897085668" ID="Freemind_Link_1992231723" MODIFIED="1575897098356" TEXT="wordpress.yml"/>
+<node CREATED="1575897101642" ID="Freemind_Link_492831853" MODIFIED="1575897104485" TEXT="mysql.yml"/>
+</node>
+</node>
+</node>
+<node CREATED="1575897399538" ID="Freemind_Link_1711336624" MODIFIED="1575897400991" TEXT="templates">
+<node CREATED="1575897408055" ID="Freemind_Link_731360314" MODIFIED="1575897419554" TEXT="S&#xe3;o manipulados por meio de um m&#xf3;dulo hom&#xf4;nimo"/>
+<node CREATED="1575897449866" ID="Freemind_Link_993841373" MODIFIED="1575897457730" TEXT="Todo template termina com a extens&#xe3;o j2"/>
+<node CREATED="1575897755718" ID="Freemind_Link_1386663146" MODIFIED="1575897768127" TEXT="&#xc9; feita uma c&#xf3;pia do template processado para a m&#xe1;quina de destino">
+<node CREATED="1575897771328" ID="Freemind_Link_1351917007" MODIFIED="1575897785145" TEXT="Substitui o m&#xf3;dulo &apos;copy&apos;"/>
+</node>
+<node CREATED="1575897539538" ID="Freemind_Link_305849657" MODIFIED="1575897540410" TEXT="Ex:">
+<node CREATED="1575897503320" ID="Freemind_Link_383816038" MODIFIED="1575897509164" TEXT="No playbook:">
+<node COLOR="#ff00ff" CREATED="1575896271879" ID="Freemind_Link_1964146253" MODIFIED="1575897537018" TEXT="- name: &apos; Configura Apache para servir Wordpress&apos;&#xa;  template:&#xa;    src: &apos;templates/000-default.conf.j2&apos;&#xa;    dest: &apos;/etc/apache2/sites-available/000-default.conf&apos;&#xa;  become: yes&#xa;  notify: &#xa;    - restart apache">
+<node CREATED="1575897811895" ID="Freemind_Link_518691807" MODIFIED="1575897867681" TEXT="Antes era:">
+<node COLOR="#ff00ff" CREATED="1575896271879" ID="Freemind_Link_888984883" MODIFIED="1575897857306" TEXT="- name: &apos; Configura Apache para servir Wordpress&apos;&#xa;  copy:&#xa;    src: &apos;files/000-default.conf&apos;&#xa;    dest: &apos;/etc/apache2/sites-available/000-default.conf&apos;&#xa;  become: yes&#xa;  notify: &#xa;    - restart apache"/>
+</node>
+</node>
+</node>
+<node CREATED="1575897687125" ID="Freemind_Link_227457325" MODIFIED="1575897689275" TEXT="No template">
+<node CREATED="1575897562761" ID="Freemind_Link_1231330523" MODIFIED="1575897570553" TEXT="Arquivo templates/ 000-default.conf.j2"/>
+<node COLOR="#ff00ff" CREATED="1575896271879" ID="Freemind_Link_1231512693" MODIFIED="1575897730567" TEXT="...&#xa;DocumentRoot {{ wp_installation_dir }}&#xa;..."/>
+</node>
+</node>
 </node>
 </node>
 <node CREATED="1574965341983" ID="Freemind_Link_177292562" MODIFIED="1574965344124" POSITION="right" TEXT="Comando">
@@ -277,6 +331,14 @@
 <node CREATED="1575386290418" ID="Freemind_Link_597277728" MODIFIED="1575386303679" TEXT="&#xc9; o valor entre &apos;[&apos; e &apos;]&apos; do arq. de invent&#xe1;rio">
 <node CREATED="1575387811293" MODIFIED="1575387811293" TEXT="Indica que o comando deve ser executado como root"/>
 </node>
+</node>
+<node CREATED="1575896006301" ID="Freemind_Link_1493740766" MODIFIED="1575896017950" TEXT="--extra-vars">
+<node CREATED="1575896020658" ID="Freemind_Link_1533022372" MODIFIED="1575896028687" TEXT="Seta uma vari&#xe1;vel do playbook"/>
+<node CREATED="1575896036425" ID="Freemind_Link_622512554" MODIFIED="1575896050588" TEXT="O ideal &#xe9; usar um arquivo de configura&#xe7;&#xe3;o em vez desse par&#xe2;metro"/>
+<node CREATED="1575896007896" ID="Freemind_Link_1000820167" MODIFIED="1575896011921" TEXT="Ex: --extra-vars &apos;wp_db_name=wordpress_db&apos;">
+<node COLOR="#ff00ff" CREATED="1575896073947" ID="Freemind_Link_347632158" MODIFIED="1575896098058" TEXT="Uso no playbook:&#xa;...&#xa;priv: &quot;{{ wp_db_name }}.*:ALL&quot;&#xa;..."/>
+</node>
+<node CREATED="1575896007896" ID="Freemind_Link_1542115578" MODIFIED="1575896559416" TEXT="Ex: --extra-vars &apos;wp_db_name=wordpress_db wp_username=wordpress_user&apos;"/>
 </node>
 </node>
 </node>

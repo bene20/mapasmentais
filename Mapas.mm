@@ -8,5 +8,6 @@
 <node CREATED="1563994292032" ID="Freemind_Link_423968621" LINK="Docker/Docker.mm" MODIFIED="1563994347827" POSITION="right" TEXT="Docker"/>
 <node CREATED="1572997135178" ID="Freemind_Link_289996645" LINK="Wildfly/Wildfly.mm" MODIFIED="1572997199626" POSITION="right" TEXT="Wildfly"/>
 <node CREATED="1574964876560" ID="Freemind_Link_126675284" LINK="Ansible/Ansible.mm" MODIFIED="1574964931624" POSITION="right" TEXT="Ansible"/>
+<node CREATED="1575747053934" ID="Freemind_Link_785121986" LINK="Vagrant/Vagrant.mm" MODIFIED="1575747098726" POSITION="right" TEXT="Vagrant"/>
 </node>
 </map>
