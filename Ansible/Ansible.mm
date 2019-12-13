@@ -1,9 +1,6 @@
 <map version="0.8.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1553000049733" ID="Freemind_Link_683934292" LINK="../Mapas.mm" MODIFIED="1574964938879" TEXT="Ansible">
-<node CREATED="1575898107966" ID="Freemind_Link_52771434" MODIFIED="1575898111166" POSITION="right" TEXT="Parei aqui:">
-<node CREATED="1575898111661" ID="Freemind_Link_1719156974" MODIFIED="1575898113295" TEXT="Aula 8"/>
-</node>
 <node CREATED="1574965049161" ID="_" MODIFIED="1574965051582" POSITION="right" TEXT="Instala&#xe7;&#xe3;o">
 <node COLOR="#0000ff" CREATED="1574965053211" ID="Freemind_Link_1152421376" MODIFIED="1574965069420" TEXT="apt install ansible"/>
 </node>
@@ -16,7 +13,7 @@
 <node CREATED="1574965218759" ID="Freemind_Link_1910284875" MODIFIED="1574965230887" TEXT="Usa ssh para fazer as instala&#xe7;&#xf5;es na m&#xe1;quina target"/>
 <node CREATED="1575385702059" ID="Freemind_Link_979133388" MODIFIED="1575385706254" TEXT="S&#xf3; SSH e Python"/>
 </node>
-<node CREATED="1575385712416" ID="Freemind_Link_1753371469" MODIFIED="1575385716230" POSITION="right" TEXT="Usa 3 modelos de script">
+<node CREATED="1575385712416" FOLDED="true" ID="Freemind_Link_1753371469" MODIFIED="1575385716230" POSITION="right" TEXT="Usa 3 modelos de script">
 <node CREATED="1575385748471" FOLDED="true" ID="Freemind_Link_708606257" MODIFIED="1575385753322" TEXT="Arq. de invent&#xe1;rio">
 <node CREATED="1575385822182" ID="Freemind_Link_439848246" MODIFIED="1575385840177" TEXT="Grupos de m&#xe1;quinas a serem configuradas"/>
 <node CREATED="1575385844316" ID="Freemind_Link_281935356" MODIFIED="1575385858970" TEXT="Par&#xe2;metro obrigat&#xf3;rio p/ o Ansible">
@@ -39,7 +36,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1575385755720" FOLDED="true" ID="Freemind_Link_1774933042" MODIFIED="1575385757577" TEXT="Playbook">
+<node CREATED="1575385755720" ID="Freemind_Link_1774933042" MODIFIED="1575385757577" TEXT="Playbook">
 <node CREATED="1575385769415" ID="Freemind_Link_1054555287" MODIFIED="1575385775211" TEXT="Receita do que ser&#xe1; feito"/>
 <node CREATED="1575387870383" ID="Freemind_Link_1558220273" MODIFIED="1575387883558" TEXT="Execut&#xe1;vel pelo comando ansible-playbook">
 <icon BUILTIN="messagebox_warning"/>
@@ -62,6 +59,7 @@
 </node>
 <node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_181461832" MODIFIED="1575386648869" TEXT="tasks:">
 <node CREATED="1575386528969" ID="Freemind_Link_534876298" MODIFIED="1575386669900" TEXT="Lista de comandos a serem aplicados nos hosts"/>
+<node CREATED="1576260652870" ID="Freemind_Link_22477924" LINK="#Freemind_Link_1573725143" MODIFIED="1576260700637" TEXT="Pode estar nesta tag &apos;tasks&apos; ou no arquivo &apos;main.yml&apos; de uma role"/>
 <node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_1161337559" MODIFIED="1575387334823" TEXT="name">
 <node CREATED="1575386528969" ID="Freemind_Link_203176055" MODIFIED="1575387324059" TEXT="Define um nome para a task"/>
 <node CREATED="1575386528969" ID="Freemind_Link_1071527469" MODIFIED="1575387330867" TEXT="Permite refer&#xea;ncias futuras"/>
@@ -183,35 +181,6 @@
 </node>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_481899317" MODIFIED="1575390457045" TEXT="handlers">
-<node CREATED="1575386528969" ID="Freemind_Link_805322592" MODIFIED="1575390727826" TEXT="Manipuladores de servi&#xe7;os">
-<node CREATED="1575390471781" ID="Freemind_Link_1198131766" MODIFIED="1575390485206" TEXT="&#xda;til para reiniciar, parar e iniciar servi&#xe7;os"/>
-</node>
-<node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_306111896" MODIFIED="1575390773306" TEXT="name: &lt;nome_handler&gt;">
-<node CREATED="1575386528969" ID="Freemind_Link_1543415804" MODIFIED="1575390765444" TEXT="Nome descritivo do handler"/>
-</node>
-<node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_835179168" MODIFIED="1575390538623" TEXT="service:">
-<node CREATED="1575386528969" ID="Freemind_Link_278724903" MODIFIED="1575390545279" TEXT="Servi&#xe7;o a ser manipulado"/>
-<node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_1974645965" MODIFIED="1575390575927" TEXT="name: &lt;nome_servico&gt;">
-<node CREATED="1575386528969" ID="Freemind_Link_108841819" MODIFIED="1575390569564" TEXT="Nome do servi&#xe7;o no S.SO"/>
-</node>
-<node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_836057910" MODIFIED="1575390586400" TEXT="state: &lt;estado_pretendido&gt;">
-<node CREATED="1575386528969" ID="Freemind_Link_1666608355" MODIFIED="1575390602899" TEXT="Estado pretendido do servi&#xe7;o (se deve ser reiniciado, parado etc.)"/>
-<node CREATED="1575390608766" ID="Freemind_Link_1628766192" MODIFIED="1575390626147" TEXT="restarted">
-<icon BUILTIN="full-1"/>
-</node>
-<node CREATED="1575390611280" ID="Freemind_Link_460937670" MODIFIED="1575390629084" TEXT="stopped">
-<icon BUILTIN="full-2"/>
-</node>
-<node CREATED="1575390613633" ID="Freemind_Link_1016209316" MODIFIED="1575390633580" TEXT="started">
-<icon BUILTIN="full-3"/>
-</node>
-</node>
-</node>
-<node CREATED="1575389428460" ID="Freemind_Link_1095957848" MODIFIED="1575389429375" TEXT="Ex:">
-<node COLOR="#ff00ff" CREATED="1575389429981" ID="Freemind_Link_970215706" MODIFIED="1575390803171" TEXT="- hosts: all&#xa;  handlers:&#xa;    - name: restart apache&#xa;      service:&#xa;        name: apache2&#xa;        state: restarted&#xa;      become: yes"/>
-</node>
-</node>
 <node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_1936110905" MODIFIED="1575390716787" TEXT="notify">
 <node CREATED="1575386528969" ID="Freemind_Link_1198110052" MODIFIED="1575390727827" TEXT="Dispara um handler">
 <arrowlink DESTINATION="Freemind_Link_805322592" ENDARROW="Default" ENDINCLINATION="311;0;" ID="Freemind_Arrow_Link_1921785018" STARTARROW="None" STARTINCLINATION="311;0;"/>
@@ -246,6 +215,36 @@
 <node CREATED="1575386528969" ID="Freemind_Link_708914289" MODIFIED="1575387829208" TEXT="Indica que os comandos devem ser executados como root"/>
 </node>
 </node>
+<node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_481899317" MODIFIED="1575390457045" TEXT="handlers">
+<node CREATED="1575386528969" ID="Freemind_Link_805322592" MODIFIED="1575390727826" TEXT="Manipuladores de servi&#xe7;os">
+<node CREATED="1575390471781" ID="Freemind_Link_1198131766" MODIFIED="1575390485206" TEXT="&#xda;til para reiniciar, parar e iniciar servi&#xe7;os"/>
+</node>
+<node CREATED="1576261148851" ID="Freemind_Link_1031382212" LINK="#Freemind_Link_902062011" MODIFIED="1576261176885" TEXT="Pode estar nesta tag &apos;handlers&apos; ou no arquivo &apos;main.yml&apos; de uma role"/>
+<node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_306111896" MODIFIED="1575390773306" TEXT="name: &lt;nome_handler&gt;">
+<node CREATED="1575386528969" ID="Freemind_Link_1543415804" MODIFIED="1575390765444" TEXT="Nome descritivo do handler"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_835179168" MODIFIED="1575390538623" TEXT="service:">
+<node CREATED="1575386528969" ID="Freemind_Link_278724903" MODIFIED="1575390545279" TEXT="Servi&#xe7;o a ser manipulado"/>
+<node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_1974645965" MODIFIED="1575390575927" TEXT="name: &lt;nome_servico&gt;">
+<node CREATED="1575386528969" ID="Freemind_Link_108841819" MODIFIED="1575390569564" TEXT="Nome do servi&#xe7;o no S.SO"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_836057910" MODIFIED="1575390586400" TEXT="state: &lt;estado_pretendido&gt;">
+<node CREATED="1575386528969" ID="Freemind_Link_1666608355" MODIFIED="1575390602899" TEXT="Estado pretendido do servi&#xe7;o (se deve ser reiniciado, parado etc.)"/>
+<node CREATED="1575390608766" ID="Freemind_Link_1628766192" MODIFIED="1575390626147" TEXT="restarted">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1575390611280" ID="Freemind_Link_460937670" MODIFIED="1575390629084" TEXT="stopped">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1575390613633" ID="Freemind_Link_1016209316" MODIFIED="1575390633580" TEXT="started">
+<icon BUILTIN="full-3"/>
+</node>
+</node>
+</node>
+<node CREATED="1575389428460" ID="Freemind_Link_1095957848" MODIFIED="1575389429375" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575389429981" ID="Freemind_Link_970215706" MODIFIED="1575390803171" TEXT="- hosts: all&#xa;  handlers:&#xa;    - name: restart apache&#xa;      service:&#xa;        name: apache2&#xa;        state: restarted&#xa;      become: yes"/>
+</node>
+</node>
 </node>
 </node>
 <node CREATED="1575387388343" ID="Freemind_Link_1975961551" MODIFIED="1575387389203" TEXT="Ex:">
@@ -265,7 +264,8 @@
 </node>
 </node>
 <node CREATED="1575896183175" FOLDED="true" ID="Freemind_Link_1070165121" MODIFIED="1575896217830" POSITION="right" TEXT="Pastas e arquivos">
-<node CREATED="1575896616532" ID="Freemind_Link_202031229" MODIFIED="1575896620857" TEXT="group_vars">
+<node CREATED="1575896616532" ID="Freemind_Link_202031229" MODIFIED="1576258817334" TEXT="group_vars">
+<icon BUILTIN="forward"/>
 <node CREATED="1575896621830" ID="Freemind_Link_620346108" MODIFIED="1575896627209" TEXT="Pasta especial do ansible"/>
 <node CREATED="1575897207312" ID="Freemind_Link_605005244" MODIFIED="1575897219485" TEXT="Cada grupo espec&#xed;fico pode ter seu pr&#xf3;prio arquivo de chaves-valores"/>
 <node CREATED="1575897230339" ID="Freemind_Link_1557298894" MODIFIED="1575897245901" TEXT="&#xc9; poss&#xed;vel ter um arquivo &apos;all.yml&apos; que engloba todos os groups"/>
@@ -290,7 +290,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1575897399538" ID="Freemind_Link_1711336624" MODIFIED="1575897400991" TEXT="templates">
+<node CREATED="1575897399538" ID="Freemind_Link_1711336624" MODIFIED="1576258812670" TEXT="templates">
+<icon BUILTIN="forward"/>
 <node CREATED="1575897408055" ID="Freemind_Link_731360314" MODIFIED="1575897419554" TEXT="S&#xe3;o manipulados por meio de um m&#xf3;dulo hom&#xf4;nimo"/>
 <node CREATED="1575897449866" ID="Freemind_Link_993841373" MODIFIED="1575897457730" TEXT="Todo template termina com a extens&#xe3;o j2"/>
 <node CREATED="1575897755718" ID="Freemind_Link_1386663146" MODIFIED="1575897768127" TEXT="&#xc9; feita uma c&#xf3;pia do template processado para a m&#xe1;quina de destino">
@@ -307,6 +308,101 @@
 <node CREATED="1575897687125" ID="Freemind_Link_227457325" MODIFIED="1575897689275" TEXT="No template">
 <node CREATED="1575897562761" ID="Freemind_Link_1231330523" MODIFIED="1575897570553" TEXT="Arquivo templates/ 000-default.conf.j2"/>
 <node COLOR="#ff00ff" CREATED="1575896271879" ID="Freemind_Link_1231512693" MODIFIED="1575897730567" TEXT="...&#xa;DocumentRoot {{ wp_installation_dir }}&#xa;..."/>
+</node>
+</node>
+</node>
+<node CREATED="1576258689198" ID="Freemind_Link_818568523" MODIFIED="1576258801380" TEXT="roles">
+<icon BUILTIN="forward"/>
+<node CREATED="1576258715805" ID="Freemind_Link_608974361" MODIFIED="1576258735814" TEXT="Permite a modularioza&#xe7;&#xe3;o dos c&#xf3;digos Ansible"/>
+<node CREATED="1576261303299" ID="Freemind_Link_706754165" MODIFIED="1576261312341" TEXT="Pode ser usada no playbook">
+<node CREATED="1576261326636" ID="Freemind_Link_281100288" MODIFIED="1576261327682" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_1806746527" MODIFIED="1576261343457" TEXT="- hosts: all&#xa;  roles:&#xa;    - mysql">
+<node CREATED="1576261363542" ID="Freemind_Link_1911015204" MODIFIED="1576261419642" TEXT="Carrega as tasks  role mysql, presentes no &#xa;arquivo &lt;...&gt;/roles/mysql/tasks/main.yml"/>
+</node>
+</node>
+</node>
+<node CREATED="1576258753861" ID="Freemind_Link_1612124623" MODIFIED="1576258763728" TEXT="Os nomes das subpastas s&#xe3;o os nomes das roles">
+<node CREATED="1576258834441" ID="Freemind_Link_1011163389" MODIFIED="1576258861989" TEXT="Ex: &lt;...&gt;/roles/mysql/main.yml"/>
+</node>
+<node CREATED="1576260436874" ID="Freemind_Link_1023793107" MODIFIED="1576260446075" TEXT="Toda role tem uma pasta chamada &apos;tasks&apos;">
+<node CREATED="1576260448190" ID="Freemind_Link_1770282983" MODIFIED="1576260463692" TEXT="Dentro desta pasta &apos;tasks&apos; tem sempre o arquivo &apos;main.yml&apos;"/>
+</node>
+<node CREATED="1576258782177" ID="Freemind_Link_62115072" MODIFIED="1576258825526" TEXT="&lt;nome-da-role&gt;">
+<icon BUILTIN="forward"/>
+<node CREATED="1576260967125" ID="Freemind_Link_351778197" MODIFIED="1576260970871" TEXT="Ex: mysql">
+<node CREATED="1576260972507" ID="Freemind_Link_742678037" MODIFIED="1576260984934" TEXT="&lt;...&gt;/roles/mysql/tasks/&lt;...&gt;"/>
+</node>
+<node CREATED="1576258782177" ID="Freemind_Link_1271459711" MODIFIED="1576260471618" TEXT="tasks">
+<icon BUILTIN="forward"/>
+<node CREATED="1576260476545" ID="Freemind_Link_1573725143" MODIFIED="1576260527634" TEXT="main.yml">
+<icon BUILTIN="forward"/>
+<node CREATED="1576260533514" ID="Freemind_Link_1482488585" MODIFIED="1576260542845" TEXT="Arquivo com o c&#xf3;digo da task"/>
+<node CREATED="1576260730119" ID="Freemind_Link_1650074136" MODIFIED="1576260736624" TEXT="Lembrar de come&#xe7;ar o arquivo com &apos;---&apos;"/>
+<node CREATED="1576260579544" ID="Freemind_Link_545765769" LINK="#Freemind_Link_181461832" MODIFIED="1576261542234" TEXT="Conte&#xfa;do &#xe9; o mesmo que o da tag &apos;tasks&apos; do provisioning.yml"/>
+<node CREATED="1575387388343" ID="Freemind_Link_1178803662" MODIFIED="1575387389203" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_1914953712" MODIFIED="1576260953912" TEXT="---&#xa;- name: &apos;Instala o PHP5&apos;&#xa;  apt:&#xa;    name: php5&#xa;    state: latest&#xa;  become: yes&#xa;- name: &apos;Instala o Apache2&apos;&#xa;  apt: &#xa;    name: apache2&#xa;    state:lastest&#xa;  become: yes"/>
+</node>
+</node>
+</node>
+<node CREATED="1576258782177" ID="Freemind_Link_460361557" MODIFIED="1576261054642" TEXT="handlers">
+<icon BUILTIN="forward"/>
+<node CREATED="1576260476545" ID="Freemind_Link_902062011" MODIFIED="1576260527634" TEXT="main.yml">
+<icon BUILTIN="forward"/>
+<node CREATED="1576260533514" ID="Freemind_Link_1285734500" MODIFIED="1576261072197" TEXT="Arquivo com o c&#xf3;digo do handler"/>
+<node CREATED="1576260730119" ID="Freemind_Link_1352289533" MODIFIED="1576260736624" TEXT="Lembrar de come&#xe7;ar o arquivo com &apos;---&apos;"/>
+<node CREATED="1576261105310" ID="Freemind_Link_1664960337" LINK="#Freemind_Link_481899317" MODIFIED="1576261556641" TEXT="Conte&#xfa;do &#xe9; o mesmo que o da tag &apos;handlers&apos; do provisioning.yml"/>
+<node CREATED="1575387388343" ID="Freemind_Link_930600705" MODIFIED="1575387389203" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575389429981" ID="Freemind_Link_761581095" MODIFIED="1576261223881" TEXT="---&#xa;- name: restart apache&#xa;  service:&#xa;    name: apache2&#xa;    state: restarted&#xa;  become: yes"/>
+</node>
+</node>
+</node>
+<node CREATED="1576258782177" ID="Freemind_Link_1717598325" MODIFIED="1576261922256" TEXT="files">
+<icon BUILTIN="forward"/>
+<node CREATED="1576261927402" ID="Freemind_Link_546569692" MODIFIED="1576262013789" TEXT="Arquivos diversos, de configura&#xe7;&#xf5;es, a serem aplicados pelo Ansible"/>
+<node CREATED="1576261942767" ID="Freemind_Link_922159079" MODIFIED="1576261956133" TEXT="Ex: my.conf (arquivo deconfig do MySql)"/>
+</node>
+<node CREATED="1576258782177" ID="Freemind_Link_1246434370" MODIFIED="1576262002496" TEXT="templates">
+<icon BUILTIN="forward"/>
+<node CREATED="1576261927402" ID="Freemind_Link_234432306" MODIFIED="1576262075779" TEXT="Arquivos de templates espec&#xed;ficos desta role, a serem aplicados pelo Ansible"/>
+<node CREATED="1576261942767" ID="Freemind_Link_822297269" LINK="#Freemind_Link_1711336624" MODIFIED="1576262049712" TEXT="Ver os templates"/>
+</node>
+<node CREATED="1576258782177" ID="Freemind_Link_399083655" MODIFIED="1576264300659" TEXT="defaults">
+<icon BUILTIN="forward"/>
+<node CREATED="1576261927402" ID="Freemind_Link_1938070463" MODIFIED="1576264315299" TEXT="Arquivos com os valores default das vari&#xe1;veis"/>
+<node CREATED="1576264319878" ID="Freemind_Link_1235592358" MODIFIED="1576264336045" TEXT="As vari&#xe1;veis n&#xe3;o declaradas assumir&#xe3;o os valores default"/>
+<node CREATED="1576260476545" ID="Freemind_Link_975878967" MODIFIED="1576260527634" TEXT="main.yml">
+<icon BUILTIN="forward"/>
+<node CREATED="1576260533514" ID="Freemind_Link_1211011955" MODIFIED="1576264360053" TEXT="Arquivo com declara&#xe7;&#xf5;es de vari&#xe1;veis"/>
+<node CREATED="1576260730119" ID="Freemind_Link_1454403100" MODIFIED="1576260736624" TEXT="Lembrar de come&#xe7;ar o arquivo com &apos;---&apos;"/>
+<node CREATED="1575387388343" ID="Freemind_Link_536647617" MODIFIED="1575387389203" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575389429981" ID="Freemind_Link_1206154577" MODIFIED="1576264497998" TEXT="---&#xa;wp_host_ip:&#xa;  - &apos;127.0.0.1&apos;&#xa;  - localhost">
+<node CREATED="1576264501315" ID="Freemind_Link_1181269278" MODIFIED="1576264512754" TEXT="Valores default para a vari&#xe1;vel &apos;wp_host_ip&apos;"/>
+<node CREATED="1576264513404" ID="Freemind_Link_276725008" MODIFIED="1576264521784" TEXT="Note que &apos;wp_host_ip&apos; &#xe9; uma lista"/>
+<node CREATED="1576264531713" ID="Freemind_Link_1823683587" MODIFIED="1576264535739" TEXT="Uso dessa vari&#xe1;vel:">
+<node COLOR="#ff00ff" CREATED="1575389429981" ID="Freemind_Link_1231650210" MODIFIED="1576264683431" TEXT="...&#xa; - name: &apos;bl&#xe1; bl&#xe1;&apos;&#xa;   mysql_user:&#xa;      host: &quot;{{ item }}&quot;&#xa;   with_items:&#xa;     - &quot;{{ wp_host_ip }}&quot;"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1576258782177" ID="Freemind_Link_207402597" MODIFIED="1576264777307" TEXT="meta">
+<icon BUILTIN="forward"/>
+<node CREATED="1576261927402" ID="Freemind_Link_1885415152" MODIFIED="1576264785622" TEXT="Configura&#xe7;&#xf5;es diversas da rola"/>
+<node CREATED="1576260476545" ID="Freemind_Link_283165117" MODIFIED="1576260527634" TEXT="main.yml">
+<icon BUILTIN="forward"/>
+<node CREATED="1576260533514" ID="Freemind_Link_899439708" MODIFIED="1576264804709" TEXT="Arquivo com configura&#xe7;&#xf5;es diversas da role"/>
+<node CREATED="1576260730119" ID="Freemind_Link_194159873" MODIFIED="1576260736624" TEXT="Lembrar de come&#xe7;ar o arquivo com &apos;---&apos;"/>
+<node CREATED="1576264949654" ID="Freemind_Link_1987992198" MODIFIED="1576264951521" TEXT="Conte&#xfa;do">
+<node COLOR="#ff00ff" CREATED="1576264808767" ID="Freemind_Link_1447042203" MODIFIED="1576264874469" TEXT="dependencies">
+<node CREATED="1576264837724" ID="Freemind_Link_88068522" MODIFIED="1576264856376" TEXT="Informa a lista de depend&#xea;ncias dessa role (de quais outras roles ela depende)"/>
+<node CREATED="1575387388343" ID="Freemind_Link_1626432355" MODIFIED="1575387389203" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575389429981" ID="Freemind_Link_1217820079" MODIFIED="1576264916155" TEXT="---&#xa;dependencies:&#xa;  - mysql">
+<node CREATED="1576264501315" ID="Freemind_Link_1150866974" MODIFIED="1576264931625" TEXT="Indica que a role depende da aplica&#xe7;&#xe3;o da role &apos;mysql&apos;"/>
+</node>
+</node>
+</node>
+</node>
+</node>
 </node>
 </node>
 </node>
