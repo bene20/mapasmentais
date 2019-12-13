@@ -113,7 +113,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1563994368647" ID="_" MODIFIED="1563994372275" POSITION="right" TEXT="Dockerfile">
+<node CREATED="1563994368647" FOLDED="true" ID="_" MODIFIED="1563994372275" POSITION="right" TEXT="Dockerfile">
 <node CREATED="1563998221736" ID="Freemind_Link_368230737" MODIFIED="1568727208485" TEXT="Build">
 <node CREATED="1563998249496" ID="Freemind_Link_1953836887" MODIFIED="1563998261491" TEXT="Criar uma imagem a partir de um Dockerfile">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1375815715" MODIFIED="1563998864816" TEXT="docker build -f Dockerfile">
@@ -478,6 +478,31 @@
 <node CREATED="1564077255246" ID="Freemind_Link_538223243" MODIFIED="1564077285535" TEXT="Ver o IP atribu&#xed;do ao container: executar no container">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1230415612" MODIFIED="1564077273983" TEXT="hostname -i">
 <icon BUILTIN="wizard"/>
+</node>
+</node>
+</node>
+<node CREATED="1576178246382" ID="Freemind_Link_271093790" MODIFIED="1576178249673" POSITION="right" TEXT="Troubleshoot">
+<node CREATED="1576178250319" ID="Freemind_Link_1393571993" MODIFIED="1576178452267" TEXT="Adicionar uma porta a &#xa;um conteiner existente">
+<node CREATED="1576178262486" ID="Freemind_Link_622630033" MODIFIED="1576178297979" TEXT="Pare o container">
+<icon BUILTIN="full-1"/>
+<node COLOR="#0000ff" CREATED="1576178274000" ID="Freemind_Link_155071883" MODIFIED="1576178292579" TEXT="docker stop &lt;nome-container&gt;"/>
+</node>
+<node CREATED="1576178298752" ID="Freemind_Link_1552065179" MODIFIED="1576178309652" TEXT="Pare o servi&#xe7;o docker">
+<icon BUILTIN="full-2"/>
+<node COLOR="#0000ff" CREATED="1576178274000" ID="Freemind_Link_1906629882" MODIFIED="1576178325219" TEXT="sudo service docker stop"/>
+</node>
+<node CREATED="1576178332399" ID="Freemind_Link_1864802657" MODIFIED="1576178776100" TEXT="Altere os arquivos de config do container">
+<icon BUILTIN="full-3"/>
+<node COLOR="#0000ff" CREATED="1576178274000" ID="Freemind_Link_1186516600" MODIFIED="1576178380844" TEXT="sudo vim /var/lib/docker/containers/[hash_of_the_container]/hostconfig.json"/>
+<node COLOR="#0000ff" CREATED="1576178274000" ID="Freemind_Link_372306746" MODIFIED="1576178791491" TEXT="sudo vim /var/lib/docker/containers/[hash_of_the_container]/config.v2.json"/>
+</node>
+<node CREATED="1576178298752" ID="Freemind_Link_1649426788" MODIFIED="1576178407931" TEXT="Reinicie o servi&#xe7;o docker">
+<icon BUILTIN="full-4"/>
+<node COLOR="#0000ff" CREATED="1576178274000" ID="Freemind_Link_71759702" MODIFIED="1576178413186" TEXT="sudo service docker start"/>
+</node>
+<node CREATED="1576178420534" ID="Freemind_Link_262062415" MODIFIED="1576178433701" TEXT="Reinicie o container">
+<icon BUILTIN="full-5"/>
+<node COLOR="#0000ff" CREATED="1576178274000" ID="Freemind_Link_1856490440" MODIFIED="1576178440731" TEXT="docker start &lt;nome-container&gt;"/>
 </node>
 </node>
 </node>

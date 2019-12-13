@@ -17,7 +17,7 @@
 <node CREATED="1575385702059" ID="Freemind_Link_979133388" MODIFIED="1575385706254" TEXT="S&#xf3; SSH e Python"/>
 </node>
 <node CREATED="1575385712416" ID="Freemind_Link_1753371469" MODIFIED="1575385716230" POSITION="right" TEXT="Usa 3 modelos de script">
-<node CREATED="1575385748471" ID="Freemind_Link_708606257" MODIFIED="1575385753322" TEXT="Arq. de invent&#xe1;rio">
+<node CREATED="1575385748471" FOLDED="true" ID="Freemind_Link_708606257" MODIFIED="1575385753322" TEXT="Arq. de invent&#xe1;rio">
 <node CREATED="1575385822182" ID="Freemind_Link_439848246" MODIFIED="1575385840177" TEXT="Grupos de m&#xe1;quinas a serem configuradas"/>
 <node CREATED="1575385844316" ID="Freemind_Link_281935356" MODIFIED="1575385858970" TEXT="Par&#xe2;metro obrigat&#xf3;rio p/ o Ansible">
 <node CREATED="1575386037907" ID="Freemind_Link_1614877333" MODIFIED="1575386042567" TEXT="Par&#xe2;metro &apos;-i&apos;"/>
@@ -264,7 +264,7 @@
 <node CREATED="1575386145570" ID="Freemind_Link_1405277527" MODIFIED="1575386156560" TEXT="Assim que fizer SSH para o alvo, ser&#xe1; executado um comando do shell"/>
 </node>
 </node>
-<node CREATED="1575896183175" ID="Freemind_Link_1070165121" MODIFIED="1575896217830" POSITION="right" TEXT="Pastas e arquivos">
+<node CREATED="1575896183175" FOLDED="true" ID="Freemind_Link_1070165121" MODIFIED="1575896217830" POSITION="right" TEXT="Pastas e arquivos">
 <node CREATED="1575896616532" ID="Freemind_Link_202031229" MODIFIED="1575896620857" TEXT="group_vars">
 <node CREATED="1575896621830" ID="Freemind_Link_620346108" MODIFIED="1575896627209" TEXT="Pasta especial do ansible"/>
 <node CREATED="1575897207312" ID="Freemind_Link_605005244" MODIFIED="1575897219485" TEXT="Cada grupo espec&#xed;fico pode ter seu pr&#xf3;prio arquivo de chaves-valores"/>
