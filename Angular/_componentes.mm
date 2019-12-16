@@ -8,7 +8,7 @@
 <node CREATED="1547034488722" ID="Freemind_Link_1207673637" MODIFIED="1547034490278" POSITION="right" TEXT="Inputs">
 <node CREATED="1547037912186" ID="Freemind_Link_707412860" LINK="_diretivas.mm" MODIFIED="1547037924751" TEXT="Ver documenta&#xe7;&#xe3;o de input de Diretivas"/>
 </node>
-<node CREATED="1547037113511" ID="Freemind_Link_428425912" MODIFIED="1547037115609" POSITION="right" TEXT="Outputs">
+<node CREATED="1547037113511" FOLDED="true" ID="Freemind_Link_428425912" MODIFIED="1547037115609" POSITION="right" TEXT="Outputs">
 <node CREATED="1547037484636" ID="Freemind_Link_942152105" MODIFIED="1547037594015" TEXT="Etapas para &#xa;criar um output">
 <node CREATED="1547037499709" ID="Freemind_Link_33679998" MODIFIED="1547037553114" TEXT="Declarar o output no decorator da diretiva">
 <icon BUILTIN="full-1"/>
@@ -34,7 +34,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1549637873601" ID="Freemind_Link_406020964" MODIFIED="1549637876714" POSITION="right" TEXT="Templates">
+<node CREATED="1549637873601" FOLDED="true" ID="Freemind_Link_406020964" MODIFIED="1549637876714" POSITION="right" TEXT="Templates">
 <node CREATED="1549637919127" ID="Freemind_Link_900540662" MODIFIED="1549637941665" TEXT="Declara o template html a ser utilizado na renderiza&#xe7;&#xe3;o do componente"/>
 <node CREATED="1549637975829" ID="Freemind_Link_252147894" MODIFIED="1549637980251" TEXT="2 formas">
 <node CREATED="1549637983021" ID="Freemind_Link_1375237150" MODIFIED="1549638013281" TEXT="C&#xf3;digo do template &#xa;no componete">
@@ -165,8 +165,33 @@
 <node CREATED="1549638630136" ID="Freemind_Link_498025444" MODIFIED="1549638655636" TEXT="Um estilo aplicado a um componente pai ser&#xe1; &#xa;tamb&#xe9;m aplicado a todos os seus componentes filhos"/>
 </node>
 </node>
+<node CREATED="1576508668398" ID="Freemind_Link_1490579862" MODIFIED="1576509623295" TEXT="ngClass ou ngStyle">
+<node CREATED="1576508695051" ID="Freemind_Link_1567807503" MODIFIED="1576508718005" TEXT="Aplica classes css em componentes"/>
+<node CREATED="1576508799476" ID="Freemind_Link_407787505" MODIFIED="1576508832214" TEXT="Uso ideal quando um componente tem v&#xe1;rios estilos de estado (state styles)"/>
+<node CREATED="1576508850291" ID="Freemind_Link_1241903611" MODIFIED="1576508857437" TEXT="Recebe uma express&#xe3;o que pode ser:">
+<node CREATED="1576508857963" ID="Freemind_Link_1662211673" MODIFIED="1576508862077" TEXT="um objeto">
+<node COLOR="#0000ff" CREATED="1547038128593" ID="Freemind_Link_1246295271" MODIFIED="1576509163316" TEXT="Ex: &lt;button [ngClass]=&quot;{ btn:true, &apos;btn-primary&apos;:true }&quot;&gt;Button&lt;/button&gt;"/>
 </node>
-<node CREATED="1547651039669" ID="Freemind_Link_977049155" MODIFIED="1547651044380" POSITION="right" TEXT="Ciclo de vida">
+<node CREATED="1576508862858" ID="Freemind_Link_185799059" MODIFIED="1576508865912" TEXT="um array">
+<node COLOR="#0000ff" CREATED="1547038128593" ID="Freemind_Link_1952747305" MODIFIED="1576509052780" TEXT="Ex: &lt;button [ngClass]=&quot;[&apos;btn&apos;, &apos;btn-primary&apos;]&quot;&gt;Button&lt;/button&gt;"/>
+</node>
+<node CREATED="1576508867457" ID="Freemind_Link_1287348599" MODIFIED="1576508874456" TEXT="um string">
+<node COLOR="#0000ff" CREATED="1547038128593" ID="Freemind_Link_1129721210" MODIFIED="1576509102244" TEXT="Ex: &lt;button [ngClass]=&quot;&apos;btn btn-primary&apos;&quot; &gt;Button&lt;/button&gt;"/>
+</node>
+</node>
+<node CREATED="1576508729035" ID="Freemind_Link_27164981" MODIFIED="1576508730805" TEXT="Aplica&#xe7;&#xf5;es">
+<node CREATED="1576508721748" ID="Freemind_Link_964340790" MODIFIED="1576508725429" TEXT="Equivalentes:">
+<node COLOR="#0000ff" CREATED="1547038128593" ID="Freemind_Link_49312142" MODIFIED="1576508768506" TEXT="&lt;button class=&quot;btn btn-primary&quot; type=&quot;submit&quot;&gt;Button&lt;/button&gt;"/>
+<node COLOR="#0000ff" CREATED="1547038128593" ID="Freemind_Link_1779354092" MODIFIED="1576508764010" TEXT="&lt;button class=&quot;btn&quot; &#xa;        [class.btn-primary]=&quot;true&quot; &#xa;        type=&quot;submit&quot;&gt;Button&#xa;&lt;/button&gt;"/>
+</node>
+<node CREATED="1576509733185" ID="Freemind_Link_915329779" MODIFIED="1576509828293" TEXT="Ex 1:">
+<node COLOR="#0000ff" CREATED="1547038128593" ID="Freemind_Link_640946457" MODIFIED="1576509756740" TEXT="&lt;button [ngClass]=&quot;calculateClasses()&quot; (click)=&quot;submit()&quot;&gt;Button&lt;/button&gt;"/>
+<node COLOR="#0000ff" CREATED="1547038128593" ID="Freemind_Link_471403178" MODIFIED="1576509808549" TEXT="...&#xa;calculateClasses() {return {btn: true, &apos;btn-primary&apos;: true, &apos;btn-extra-class&apos;: this.stateFlag};}&#xa;..."/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1547651039669" FOLDED="true" ID="Freemind_Link_977049155" MODIFIED="1547651044380" POSITION="right" TEXT="Ciclo de vida">
 <node CREATED="1547651045096" ID="Freemind_Link_990930084" MODIFIED="1547651081205" TEXT="Permite determinar a&#xe7;&#xf5;es a srem tomadas em&#xa;fases espec&#xed;ficas do ciclo de vida de um componente"/>
 <node CREATED="1547651223537" ID="Freemind_Link_774392831" MODIFIED="1547651226733" TEXT="ngOnInit">
 <node CREATED="1547651250882" ID="Freemind_Link_1093825884" MODIFIED="1547652138130" TEXT="Ser&#xe1; invocado uma &#xfa;nica vez ap&#xf3;s a constru&#xe7;&#xe3;o co componente"/>
