@@ -43,6 +43,10 @@
 <node CREATED="1576520788565" ID="Freemind_Link_589568516" MODIFIED="1576520850513" TEXT="N&#xe3;o executa as instru&#xe7;&#xf5;es de provisioning do Vagrantfile"/>
 </node>
 </node>
+<node CREATED="1576549247531" ID="Freemind_Link_29401985" MODIFIED="1576549995388" TEXT="Em caso de problema com certificado SSL, use &apos;box add --insecure&apos; antes do &apos;up&apos;">
+<arrowlink COLOR="#fd0202" DESTINATION="Freemind_Link_669603919" ENDARROW="Default" ENDINCLINATION="240;5;" ID="Freemind_Arrow_Link_609828993" STARTARROW="None" STARTINCLINATION="482;0;"/>
+<icon BUILTIN="messagebox_warning"/>
+</node>
 </node>
 <node COLOR="#0000ff" CREATED="1576516318357" ID="Freemind_Link_1264032013" MODIFIED="1576516628359" TEXT="ssh">
 <node CREATED="1576516320326" ID="Freemind_Link_435939118" MODIFIED="1576516653428" TEXT="Faz uma conex&#xe3;o ssh com a VM gerenciada pelo vagrant"/>
@@ -93,9 +97,31 @@
 </node>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1576516318357" ID="Freemind_Link_280274344" MODIFIED="1576549293688" TEXT="box">
+<node CREATED="1576516320326" ID="Freemind_Link_1199511634" MODIFIED="1576549303716" TEXT="Manipula boxes do vagrant">
+<node CREATED="1576549880470" ID="Freemind_Link_1049720532" MODIFIED="1576549886772" TEXT="Instala&#xe7;&#xf5;es, remo&#xe7;&#xe3;o etc."/>
+</node>
+<node COLOR="#0000ff" CREATED="1576516318357" ID="Freemind_Link_14007384" MODIFIED="1576549321976" TEXT="add">
+<node CREATED="1576516320326" ID="Freemind_Link_1959875700" MODIFIED="1576549331416" TEXT="Adiciona (download) um box no cache local"/>
+<node CREATED="1576517222288" ID="Freemind_Link_1714518141" MODIFIED="1576517226736" TEXT="Par&#xe2;metros">
+<node COLOR="#0000ff" CREATED="1576520766720" ID="Freemind_Link_655941721" MODIFIED="1576549345949" TEXT="--insecure">
+<node CREATED="1576520788565" ID="Freemind_Link_149455439" MODIFIED="1576549354936" TEXT="Desabilita verifica&#xe7;&#xe3;o de certificado SSL"/>
+<node CREATED="1576549358502" ID="Freemind_Link_819532233" MODIFIED="1576549359442" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1576549262243" ID="Freemind_Link_669603919" MODIFIED="1576549433586" TEXT="vagrant box add --insecure bento/ubuntu-19.10"/>
 </node>
 </node>
-<node CREATED="1576519327581" FOLDED="true" ID="Freemind_Link_404778742" MODIFIED="1576519333889" POSITION="right" TEXT="Vagrantfile">
+<node COLOR="#0000ff" CREATED="1576520766720" ID="Freemind_Link_518509707" MODIFIED="1576549933892" TEXT="&lt;box&gt;">
+<node CREATED="1576520788565" ID="Freemind_Link_1501305501" MODIFIED="1576549940649" TEXT="Nome do box a ser baixado"/>
+<node CREATED="1576549358502" ID="Freemind_Link_1879787126" MODIFIED="1576549359442" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1576549262243" ID="Freemind_Link_403523127" MODIFIED="1576549957819" TEXT="vagrant box add bento/ubuntu-19.10"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1576519327581" ID="Freemind_Link_404778742" MODIFIED="1576519333889" POSITION="right" TEXT="Vagrantfile">
 <node CREATED="1576519605211" ID="Freemind_Link_1743887470" MODIFIED="1576519615070" TEXT="Port forward">
 <node CREATED="1576519637557" ID="Freemind_Link_1013002428" MODIFIED="1576520331664" TEXT="Permite mapear uma porta do host para o guest"/>
 <node CREATED="1576519730818" ID="Freemind_Link_658754853" MODIFIED="1576519731143" TEXT="https://www.vagrantup.com/docs/networking/forwarded_ports.html"/>
@@ -120,6 +146,14 @@
 <node COLOR="#ff00ff" CREATED="1576519620794" ID="Freemind_Link_735791534" MODIFIED="1576520984738" TEXT="config.vm.network &quot;public_network&quot;"/>
 <node CREATED="1576520018071" ID="Freemind_Link_1173267658" MODIFIED="1576520022010" TEXT="IP fixo:">
 <node COLOR="#ff00ff" CREATED="1576519620794" ID="Freemind_Link_1889419911" MODIFIED="1576520984737" TEXT="config.vm.network &quot;public_network&quot;, ip: &quot;192.168.1.24&quot;"/>
+</node>
+<node CREATED="1576600374539" ID="Freemind_Link_221936171" MODIFIED="1576600378609" TEXT="M&#xe1;scara:">
+<node COLOR="#ff00ff" CREATED="1576519620794" ID="Freemind_Link_1549258629" MODIFIED="1576600391656" TEXT="config.vm.network &quot;public_network&quot;, ip: &quot;192.168.1.24&quot;, netmask:&quot;255.255.0.0&quot;"/>
+</node>
+<node CREATED="1576600397284" ID="Freemind_Link_1200112054" MODIFIED="1576600400534" TEXT="Bridge:">
+<node CREATED="1576600436403" ID="Freemind_Link_1353613385" MODIFIED="1576600446351" TEXT="Indica em que modo a interface de rede da VM vai operar"/>
+<node CREATED="1576600459489" ID="Freemind_Link_1744128232" MODIFIED="1576600477749" TEXT="Indicar o nome da interface (obtido via comando &apos;ip a&apos;)"/>
+<node COLOR="#ff00ff" CREATED="1576519620794" ID="Freemind_Link_1524061765" MODIFIED="1576600425685" TEXT="config.vm.network &quot;public_network&quot;, ip: &quot;192.168.1.24&quot;, bridge: &quot;eth0&quot;"/>
 </node>
 </node>
 <node CREATED="1576521119658" ID="Freemind_Link_1932470956" MODIFIED="1576521126819" TEXT="Synced folder">

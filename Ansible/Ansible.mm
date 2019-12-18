@@ -13,9 +13,10 @@
 <node CREATED="1574965218759" ID="Freemind_Link_1910284875" MODIFIED="1574965230887" TEXT="Usa ssh para fazer as instala&#xe7;&#xf5;es na m&#xe1;quina target"/>
 <node CREATED="1575385702059" ID="Freemind_Link_979133388" MODIFIED="1575385706254" TEXT="S&#xf3; SSH e Python"/>
 </node>
-<node CREATED="1575385712416" FOLDED="true" ID="Freemind_Link_1753371469" MODIFIED="1575385716230" POSITION="right" TEXT="Usa 3 modelos de script">
-<node CREATED="1575385748471" FOLDED="true" ID="Freemind_Link_708606257" MODIFIED="1575385753322" TEXT="Arq. de invent&#xe1;rio">
+<node CREATED="1575385712416" ID="Freemind_Link_1753371469" MODIFIED="1575385716230" POSITION="right" TEXT="Usa 3 modelos de script">
+<node CREATED="1575385748471" ID="Freemind_Link_708606257" MODIFIED="1575385753322" TEXT="Arq. de invent&#xe1;rio">
 <node CREATED="1575385822182" ID="Freemind_Link_439848246" MODIFIED="1575385840177" TEXT="Grupos de m&#xe1;quinas a serem configuradas"/>
+<node CREATED="1576676296570" ID="Freemind_Link_1361179768" MODIFIED="1576676297379" TEXT="https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html"/>
 <node CREATED="1575385844316" ID="Freemind_Link_281935356" MODIFIED="1575385858970" TEXT="Par&#xe2;metro obrigat&#xf3;rio p/ o Ansible">
 <node CREATED="1575386037907" ID="Freemind_Link_1614877333" MODIFIED="1575386042567" TEXT="Par&#xe2;metro &apos;-i&apos;"/>
 <node COLOR="#0000ff" CREATED="1575385885231" ID="Freemind_Link_157237525" MODIFIED="1575386019429" TEXT="Ex: ansible wordpress -i hosts">
@@ -33,6 +34,26 @@
 <node CREATED="1575388150367" ID="Freemind_Link_1699892712" MODIFIED="1575388227766" TEXT="Pode ser inclu&#xed;da chave de SSH">
 <node CREATED="1575385922391" ID="Freemind_Link_1735841360" MODIFIED="1575388165676" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1575385938828" ID="Freemind_Link_1389945706" MODIFIED="1575388268012" TEXT="[wordpress]&#xa;10.10.0.1 ansible_user=vagrant ansible_ssh_private_key_file=&quot;/path/to/private_key&quot;"/>
+</node>
+</node>
+<node CREATED="1575388150367" ID="Freemind_Link_1973798065" MODIFIED="1576676143742" TEXT="Pode ser inclu&#xed;da porta de SSH">
+<node CREATED="1575385922391" ID="Freemind_Link_407312979" MODIFIED="1575388165676" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575385938828" ID="Freemind_Link_961123441" MODIFIED="1576676190482" TEXT="[wordpress]&#xa;10.10.0.1 ansible_user=vagrant ansible_ssh_private_key_file=&quot;/path/to/private_key&quot; ansible_port=2200"/>
+</node>
+</node>
+<node CREATED="1575388150367" ID="Freemind_Link_399339157" MODIFIED="1576676214253" TEXT="Pode ser declarada vari&#xe1;vel&#xa;espec&#xed;fica por host">
+<node CREATED="1575385922391" ID="Freemind_Link_1438364924" MODIFIED="1575388165676" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575385938828" ID="Freemind_Link_132145665" MODIFIED="1576676400306" TEXT="[atlanta]&#xa;host1 http_port=80 maxRequestsPerChild=808&#xa;host2 http_port=303 maxRequestsPerChild=909"/>
+</node>
+</node>
+<node CREATED="1576676667012" ID="Freemind_Link_1465857696" MODIFIED="1576676675843" TEXT="Pode ser em formato yaml">
+<node CREATED="1575385922391" ID="Freemind_Link_676341882" MODIFIED="1576676763227" TEXT="Ex (equivalentes):">
+<node CREATED="1576676745084" ID="Freemind_Link_1602509772" MODIFIED="1576676747673" TEXT="Yaml">
+<node COLOR="#ff00ff" CREATED="1575385938828" ID="Freemind_Link_16645234" MODIFIED="1576676734832" TEXT="atlanta:&#xa;  hosts:&#xa;    host1:&#xa;      http_port: 80&#xa;      maxRequestsPerChild: 808&#xa;    host2:&#xa;      http_port: 303&#xa;      maxRequestsPerChild: 909&#xa;  vars:&#xa;    ntp_server: ntp.atlanta.example.com&#xa;    proxy: proxy.atlanta.example.com"/>
+</node>
+<node CREATED="1576676751560" ID="Freemind_Link_1508147362" MODIFIED="1576676753958" TEXT="INI">
+<node COLOR="#ff00ff" CREATED="1575385938828" ID="Freemind_Link_270281730" MODIFIED="1576676896630" TEXT="[atlanta]&#xa;host1 http_port=80 maxRequestsPerChild=808&#xa;host2 http_port=303 maxRequestsPerChild=909&#xa;&#xa;[atlanta:vars]&#xa;ntp_server=ntp.atlanta.example.com&#xa;proxy=proxy.atlanta.example.com"/>
+</node>
 </node>
 </node>
 </node>
@@ -214,6 +235,14 @@
 </node>
 <node CREATED="1575386528969" ID="Freemind_Link_708914289" MODIFIED="1575387829208" TEXT="Indica que os comandos devem ser executados como root"/>
 </node>
+<node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_556581115" MODIFIED="1576680064219" TEXT="when">
+<node CREATED="1575386528969" ID="Freemind_Link_1675208275" MODIFIED="1576680078683" TEXT="Executa a tarefa apenas se a condi&#xe7;&#xe3;o for verdadeira"/>
+<node CREATED="1576680168050" ID="Freemind_Link_1737142446" MODIFIED="1576680168570" TEXT="https://docs.ansible.com/ansible/latest/user_guide/playbooks_conditionals.html"/>
+<node CREATED="1576680079309" ID="Freemind_Link_325537145" MODIFIED="1576680086448" TEXT="Pode usar valores de vari&#xe1;veis"/>
+<node CREATED="1575387654421" ID="Freemind_Link_1041983900" MODIFIED="1575387655459" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_239012229" MODIFIED="1576680193922" TEXT="tasks:&#xa;  - name: &quot;shut down Debian flavored systems&quot;&#xa;    command: /sbin/shutdown -t now&#xa;    when: ansible_facts[&apos;os_family&apos;] == &quot;Debian&quot;"/>
+</node>
+</node>
 </node>
 <node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_481899317" MODIFIED="1575390457045" TEXT="handlers">
 <node CREATED="1575386528969" ID="Freemind_Link_805322592" MODIFIED="1575390727826" TEXT="Manipuladores de servi&#xe7;os">
@@ -243,6 +272,36 @@
 </node>
 <node CREATED="1575389428460" ID="Freemind_Link_1095957848" MODIFIED="1575389429375" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1575389429981" ID="Freemind_Link_970215706" MODIFIED="1575390803171" TEXT="- hosts: all&#xa;  handlers:&#xa;    - name: restart apache&#xa;      service:&#xa;        name: apache2&#xa;        state: restarted&#xa;      become: yes"/>
+</node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1576599685411" ID="Freemind_Link_447952786" MODIFIED="1576599697072" TEXT="roles">
+<node CREATED="1576599699438" ID="Freemind_Link_1611243098" MODIFIED="1576599709614" TEXT="Executa as roles cadastradas"/>
+<node CREATED="1576599764788" ID="Freemind_Link_1141769711" LINK="#Freemind_Link_818568523" MODIFIED="1576599798114" TEXT="Ver roles"/>
+<node CREATED="1576261326636" ID="Freemind_Link_936309604" MODIFIED="1576261327682" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_46595085" MODIFIED="1576261343457" TEXT="- hosts: all&#xa;  roles:&#xa;    - mysql">
+<node CREATED="1576261363542" ID="Freemind_Link_1084750635" MODIFIED="1576599864124" TEXT="Carrega as tasks da role &apos;mysql&apos;"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1576678115756" ID="Freemind_Link_1242617320" MODIFIED="1576678118948" TEXT="Vari&#xe1;veis">
+<node CREATED="1576678688594" ID="Freemind_Link_543520066" MODIFIED="1576678689563" TEXT="https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html"/>
+<node CREATED="1576678121667" ID="Freemind_Link_1823617242" MODIFIED="1576678280482" TEXT="O ansible extrai facts (vari&#xe1;veis)&#xa;detectadas do guest">
+<node CREATED="1576678339930" ID="Freemind_Link_1360811227" MODIFIED="1576678342358" TEXT="Lista:">
+<node CREATED="1576678201570" ID="Freemind_Link_930464685" MODIFIED="1576678204751" TEXT="Executar no guest"/>
+<node COLOR="#0000ff" CREATED="1576678157378" ID="Freemind_Link_1382328921" MODIFIED="1576678212584" TEXT="ansible localhost -m setup"/>
+</node>
+<node CREATED="1576678198996" ID="Freemind_Link_624435527" MODIFIED="1576678200432" TEXT="Ex:">
+<node CREATED="1576678283498" ID="Freemind_Link_814863325" MODIFIED="1576678290908" TEXT="Primeiro disco:">
+<node COLOR="#ff00ff" CREATED="1576678292131" ID="Freemind_Link_548706021" MODIFIED="1576678323627" TEXT="{{ ansible_facts[&apos;devices&apos;][&apos;xvda&apos;][&apos;model&apos;] }}"/>
+</node>
+<node CREATED="1576678296393" ID="Freemind_Link_1337606771" MODIFIED="1576678299343" TEXT="hostname:">
+<node COLOR="#ff00ff" CREATED="1576678306191" ID="Freemind_Link_1336536909" MODIFIED="1576678323630" TEXT="{{ ansible_facts[&apos;nodename&apos;] }}"/>
+</node>
+<node CREATED="1576678576246" ID="Freemind_Link_1134468221" MODIFIED="1576678580695" TEXT="IPv4:">
+<node COLOR="#ff00ff" CREATED="1576678582171" ID="Freemind_Link_395115175" MODIFIED="1576678590403" TEXT="{{ ansible_facts[&quot;eth0&quot;][&quot;ipv4&quot;][&quot;address&quot;] }}"/>
+<node COLOR="#ff00ff" CREATED="1576678582171" ID="Freemind_Link_234919100" MODIFIED="1576678602603" TEXT="{{ ansible_facts.eth0.ipv4.address }}"/>
 </node>
 </node>
 </node>
@@ -297,7 +356,7 @@
 <node CREATED="1575897755718" ID="Freemind_Link_1386663146" MODIFIED="1575897768127" TEXT="&#xc9; feita uma c&#xf3;pia do template processado para a m&#xe1;quina de destino">
 <node CREATED="1575897771328" ID="Freemind_Link_1351917007" MODIFIED="1575897785145" TEXT="Substitui o m&#xf3;dulo &apos;copy&apos;"/>
 </node>
-<node CREATED="1575897539538" ID="Freemind_Link_305849657" MODIFIED="1575897540410" TEXT="Ex:">
+<node CREATED="1575897539538" ID="Freemind_Link_305849657" MODIFIED="1576599776216" TEXT="Ex:">
 <node CREATED="1575897503320" ID="Freemind_Link_383816038" MODIFIED="1575897509164" TEXT="No playbook:">
 <node COLOR="#ff00ff" CREATED="1575896271879" ID="Freemind_Link_1964146253" MODIFIED="1575897537018" TEXT="- name: &apos; Configura Apache para servir Wordpress&apos;&#xa;  template:&#xa;    src: &apos;templates/000-default.conf.j2&apos;&#xa;    dest: &apos;/etc/apache2/sites-available/000-default.conf&apos;&#xa;  become: yes&#xa;  notify: &#xa;    - restart apache">
 <node CREATED="1575897811895" ID="Freemind_Link_518691807" MODIFIED="1575897867681" TEXT="Antes era:">
@@ -435,6 +494,18 @@
 <node COLOR="#ff00ff" CREATED="1575896073947" ID="Freemind_Link_347632158" MODIFIED="1575896098058" TEXT="Uso no playbook:&#xa;...&#xa;priv: &quot;{{ wp_db_name }}.*:ALL&quot;&#xa;..."/>
 </node>
 <node CREATED="1575896007896" ID="Freemind_Link_1542115578" MODIFIED="1575896559416" TEXT="Ex: --extra-vars &apos;wp_db_name=wordpress_db wp_username=wordpress_user&apos;"/>
+<node CREATED="1576678893170" ID="Freemind_Link_1306373159" MODIFIED="1576678995111" TEXT="Formato json">
+<node COLOR="#0000ff" CREATED="1576678902072" ID="Freemind_Link_849022383" MODIFIED="1576678911830" TEXT="ansible-playbook release.yml --extra-vars &apos;{&quot;version&quot;:&quot;1.23.45&quot;,&quot;other_variable&quot;:&quot;foo&quot;}&apos; ansible-playbook arcade.yml --extra-vars &apos;{&quot;pacman&quot;:&quot;mrs&quot;,&quot;ghosts&quot;:[&quot;inky&quot;,&quot;pinky&quot;,&quot;clyde&quot;,&quot;sue&quot;]}&apos;"/>
+<node COLOR="#0000ff" CREATED="1576678971800" ID="Freemind_Link_889318073" MODIFIED="1576678979672" TEXT="ansible-playbook release.yml --extra-vars &quot;@some_file.json&quot;"/>
+</node>
+</node>
+</node>
+<node CREATED="1576605435024" ID="Freemind_Link_764194751" MODIFIED="1576605441956" TEXT="Vari&#xe1;veis">
+<node CREATED="1576605442817" ID="Freemind_Link_658555784" MODIFIED="1576605451591" TEXT="ANSIBLE_ENABLE_TASK_DEBUGGER">
+<node CREATED="1576605452969" ID="Freemind_Link_1591709280" MODIFIED="1576605461639" TEXT="Executa o ansible em modo debug"/>
+<node CREATED="1576605463659" ID="Freemind_Link_1215538761" MODIFIED="1576605464349" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1576605465554" ID="Freemind_Link_1633119263" MODIFIED="1576605481036" TEXT="ANSIBLE_ENABLE_TASK_DEBUGGER=True ansible-playbook provisioning.yml -i hosts.yml"/>
+</node>
 </node>
 </node>
 </node>
