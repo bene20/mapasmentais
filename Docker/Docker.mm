@@ -1,6 +1,36 @@
 <map version="0.8.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node BACKGROUND_COLOR="#8d8d92" CREATED="1533305953376" ID="Freemind_Link_1926993525" LINK="../Mapas.mm" MODIFIED="1563994358894" TEXT="Docker">
+<node CREATED="1576703502498" ID="Freemind_Link_136201076" MODIFIED="1576703505173" POSITION="right" TEXT="Instala&#xe7;&#xe3;o">
+<node CREATED="1576703530257" ID="Freemind_Link_1529578381" MODIFIED="1576703620087" TEXT="No Ubuntu (com sudo)">
+<node COLOR="#0000ff" CREATED="1576703507001" ID="Freemind_Link_63846611" MODIFIED="1576703545860" TEXT="apt install docker.io">
+<icon BUILTIN="full-1"/>
+</node>
+<node COLOR="#0000ff" CREATED="1576703507001" ID="Freemind_Link_676321738" MODIFIED="1576703657020" TEXT="groupadd docker">
+<icon BUILTIN="full-2"/>
+</node>
+<node COLOR="#0000ff" CREATED="1576703582459" ID="Freemind_Link_826003607" MODIFIED="1576703659936" TEXT="usermod -aG docker $USER">
+<icon BUILTIN="full-3"/>
+</node>
+<node COLOR="#0000ff" CREATED="1576703582459" ID="Freemind_Link_1396102726" MODIFIED="1576703662966" TEXT="chown root:docker /var/run/docker.sock">
+<icon BUILTIN="full-4"/>
+</node>
+<node CREATED="1576703670017" ID="Freemind_Link_1710824335" MODIFIED="1576703685766" TEXT="Configura&#xe7;&#xe3;o de proxy:">
+<node COLOR="#0000ff" CREATED="1576703507001" ID="Freemind_Link_1513994326" MODIFIED="1576703700934" TEXT="mkdir -p /etc/systemd/system/docker.service.d">
+<icon BUILTIN="full-1"/>
+</node>
+<node COLOR="#000000" CREATED="1576703507001" ID="Freemind_Link_771937382" MODIFIED="1576703875272" TEXT="Adicionar ao arquivo &quot;/etc/systemd/system/docker.service.d/http-proxy.conf&quot;:&#xa;[Service]&#xa;Environment=&quot;HTTP_PROXY=http://localhost:3128/&quot; &quot;HTTPS_PROY=http://localhost:3128/&quot; &quot;NO_PROXY=localhost,127.0.0.1,localaddress,.localdomain.com&quot;">
+<icon BUILTIN="full-2"/>
+</node>
+<node COLOR="#0000ff" CREATED="1576703582459" ID="Freemind_Link_1700467490" MODIFIED="1576703892478" TEXT="systemctl daemon-reload">
+<icon BUILTIN="full-3"/>
+</node>
+<node COLOR="#0000ff" CREATED="1576703582459" ID="Freemind_Link_131676881" MODIFIED="1576703909916" TEXT="systemctl restart docker">
+<icon BUILTIN="full-4"/>
+</node>
+</node>
+</node>
+</node>
 <node CREATED="1563998723358" ID="Freemind_Link_1353472525" MODIFIED="1563998725467" POSITION="right" TEXT="A&#xe7;&#xf5;es">
 <node CREATED="1563998741165" ID="Freemind_Link_1874998913" MODIFIED="1563998746387" TEXT="Baixar e carregar uma imagem">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1511048246" MODIFIED="1563998811711" TEXT="docker run nomeimagem">

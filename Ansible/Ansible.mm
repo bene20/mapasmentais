@@ -14,7 +14,7 @@
 <node CREATED="1575385702059" ID="Freemind_Link_979133388" MODIFIED="1575385706254" TEXT="S&#xf3; SSH e Python"/>
 </node>
 <node CREATED="1575385712416" ID="Freemind_Link_1753371469" MODIFIED="1575385716230" POSITION="right" TEXT="Usa 3 modelos de script">
-<node CREATED="1575385748471" ID="Freemind_Link_708606257" MODIFIED="1575385753322" TEXT="Arq. de invent&#xe1;rio">
+<node CREATED="1575385748471" FOLDED="true" ID="Freemind_Link_708606257" MODIFIED="1575385753322" TEXT="Arq. de invent&#xe1;rio">
 <node CREATED="1575385822182" ID="Freemind_Link_439848246" MODIFIED="1575385840177" TEXT="Grupos de m&#xe1;quinas a serem configuradas"/>
 <node CREATED="1576676296570" ID="Freemind_Link_1361179768" MODIFIED="1576676297379" TEXT="https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html"/>
 <node CREATED="1575385844316" ID="Freemind_Link_281935356" MODIFIED="1575385858970" TEXT="Par&#xe2;metro obrigat&#xf3;rio p/ o Ansible">
@@ -87,10 +87,22 @@
 </node>
 <node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_1366864271" MODIFIED="1575387336603" TEXT="shell">
 <node CREATED="1575386528969" ID="Freemind_Link_878786341" MODIFIED="1575386717632" TEXT="Executa comando de shell"/>
+<node CREATED="1578574477446" ID="Freemind_Link_1736211466" MODIFIED="1578574480954" TEXT="https://docs.ansible.com/ansible/latest/modules/shell_module.html">
+<icon BUILTIN="attach"/>
+</node>
 <node CREATED="1575386528969" ID="Freemind_Link_1129174012" MODIFIED="1575386554723" TEXT="Par&#xe2;metros">
 <node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_689058006" MODIFIED="1575386731740" TEXT="&apos;comando&apos;">
 <node CREATED="1575386745150" ID="Freemind_Link_808775471" MODIFIED="1575386759683" TEXT="Ex: &apos;echo hello &gt; vagrant/world.txt&apos;"/>
 </node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_625043602" MODIFIED="1578573276768" TEXT="lineinfile">
+<node CREATED="1575386528969" ID="Freemind_Link_1334239526" MODIFIED="1578573285432" TEXT="Adiciona linhas em arquivos espec&#xed;ficos"/>
+<node CREATED="1578573296550" ID="Freemind_Link_449280587" MODIFIED="1578573303130" TEXT="https://docs.ansible.com/ansible/latest/modules/lineinfile_module.html">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1578573328326" ID="Freemind_Link_603450297" MODIFIED="1578573329289" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1578573332621" ID="Freemind_Link_728145258" MODIFIED="1578573355544" TEXT="- name: config apt proxy http do trt10&#xa;  lineinfile:&#xa;    path: /etc/apt/apt.conf.d/80proxy&#xa;    line: Acquire::http::proxy &quot;http://{{ PROXYADMIN_HOST }}:{{ PROXYADMIN_PORT }}&quot;;&#xa;    create: yes&#xa;"/>
 </node>
 </node>
 <node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_299311849" MODIFIED="1575387338446" TEXT="apt">
@@ -312,7 +324,7 @@
 </node>
 <node CREATED="1575385759054" ID="Freemind_Link_1309014051" MODIFIED="1575385783195" TEXT="Prov&#xea; modulariza&#xe7;&#xe3;o de c&#xf3;digo"/>
 </node>
-<node CREATED="1575386110147" FOLDED="true" ID="Freemind_Link_659727209" MODIFIED="1575386112382" POSITION="right" TEXT="M&#xf3;dulos">
+<node CREATED="1575386110147" ID="Freemind_Link_659727209" MODIFIED="1575386112382" POSITION="right" TEXT="M&#xf3;dulos">
 <node CREATED="1575386112861" ID="Freemind_Link_1911077895" MODIFIED="1575386126016" TEXT="Comandos que o Ansible &#xe9; capaz de rodar"/>
 <node CREATED="1575388482074" ID="Freemind_Link_1426892412" MODIFIED="1575388488882" TEXT="https://docs.ansible.com/ansible/latest/modules/modules_by_category.html">
 <icon BUILTIN="attach"/>
@@ -322,7 +334,7 @@
 <node CREATED="1575386145570" ID="Freemind_Link_1405277527" MODIFIED="1575386156560" TEXT="Assim que fizer SSH para o alvo, ser&#xe1; executado um comando do shell"/>
 </node>
 </node>
-<node CREATED="1575896183175" FOLDED="true" ID="Freemind_Link_1070165121" MODIFIED="1575896217830" POSITION="right" TEXT="Pastas e arquivos">
+<node CREATED="1575896183175" ID="Freemind_Link_1070165121" MODIFIED="1575896217830" POSITION="right" TEXT="Pastas e arquivos">
 <node CREATED="1575896616532" ID="Freemind_Link_202031229" MODIFIED="1576258817334" TEXT="group_vars">
 <icon BUILTIN="forward"/>
 <node CREATED="1575896621830" ID="Freemind_Link_620346108" MODIFIED="1575896627209" TEXT="Pasta especial do ansible"/>
@@ -466,7 +478,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1574965341983" ID="Freemind_Link_177292562" MODIFIED="1574965344124" POSITION="right" TEXT="Comando">
+<node CREATED="1574965341983" FOLDED="true" ID="Freemind_Link_177292562" MODIFIED="1574965344124" POSITION="right" TEXT="Comando">
 <node CREATED="1574965356782" ID="Freemind_Link_686440155" MODIFIED="1574965358974" TEXT="Par&#xe2;metros">
 <node CREATED="1574965360759" ID="Freemind_Link_33090424" MODIFIED="1575386250269" TEXT="-i &lt;nome_arquivo&gt;">
 <node CREATED="1574965369184" ID="Freemind_Link_1802560157" MODIFIED="1574965371974" TEXT="Invent&#xe1;rio"/>
@@ -506,6 +518,15 @@
 <node CREATED="1576605463659" ID="Freemind_Link_1215538761" MODIFIED="1576605464349" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1576605465554" ID="Freemind_Link_1633119263" MODIFIED="1576605481036" TEXT="ANSIBLE_ENABLE_TASK_DEBUGGER=True ansible-playbook provisioning.yml -i hosts.yml"/>
 </node>
+</node>
+</node>
+</node>
+<node CREATED="1576695069449" ID="Freemind_Link_875265807" MODIFIED="1576695073015" POSITION="right" TEXT="Ansible galaxy">
+<node CREATED="1576695092747" ID="Freemind_Link_1091455870" MODIFIED="1576695103635" TEXT="Conjunto de roles pr&#xe9;-prontas, dispon&#xed;veis para dowload e uso"/>
+<node CREATED="1576695114963" ID="Freemind_Link_1039481678" MODIFIED="1576695116594" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1576695117440" ID="Freemind_Link_1140668925" MODIFIED="1576695367844" TEXT="ansible-galaxy install nickjj.docker -p ./roles">
+<node CREATED="1576695130982" ID="Freemind_Link_1564729488" MODIFIED="1576695374959" TEXT="Baixa a role de instala&#xe7;&#xe3;o de docker"/>
+<node CREATED="1576695154603" ID="Freemind_Link_1855573794" MODIFIED="1576695159929" TEXT="Ver https://galaxy.ansible.com/marvinpinto/docker"/>
 </node>
 </node>
 </node>

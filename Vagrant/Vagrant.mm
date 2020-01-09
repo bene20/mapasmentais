@@ -89,14 +89,6 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1576516318357" ID="Freemind_Link_1491609549" MODIFIED="1576522436992" TEXT="destroy">
-<node CREATED="1576516320326" ID="Freemind_Link_15560601" MODIFIED="1576522435886" TEXT="Destroi a m&#xe1;quina virtual"/>
-<node CREATED="1576517222288" ID="Freemind_Link_1341281929" MODIFIED="1576517226736" TEXT="Par&#xe2;metros">
-<node COLOR="#0000ff" CREATED="1576520766720" ID="Freemind_Link_741073912" MODIFIED="1576521341641" TEXT="-f">
-<node CREATED="1576520788565" ID="Freemind_Link_209015163" MODIFIED="1576521346853" TEXT="For&#xe7;a a destrui&#xe7;&#xe3;o"/>
-</node>
-</node>
-</node>
 <node COLOR="#0000ff" CREATED="1576516318357" ID="Freemind_Link_280274344" MODIFIED="1576549293688" TEXT="box">
 <node CREATED="1576516320326" ID="Freemind_Link_1199511634" MODIFIED="1576549303716" TEXT="Manipula boxes do vagrant">
 <node CREATED="1576549880470" ID="Freemind_Link_1049720532" MODIFIED="1576549886772" TEXT="Instala&#xe7;&#xf5;es, remo&#xe7;&#xe3;o etc."/>
@@ -121,7 +113,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1576519327581" ID="Freemind_Link_404778742" MODIFIED="1576519333889" POSITION="right" TEXT="Vagrantfile">
+<node CREATED="1576519327581" FOLDED="true" ID="Freemind_Link_404778742" MODIFIED="1576519333889" POSITION="right" TEXT="Vagrantfile">
 <node CREATED="1576519605211" ID="Freemind_Link_1743887470" MODIFIED="1576519615070" TEXT="Port forward">
 <node CREATED="1576519637557" ID="Freemind_Link_1013002428" MODIFIED="1576520331664" TEXT="Permite mapear uma porta do host para o guest"/>
 <node CREATED="1576519730818" ID="Freemind_Link_658754853" MODIFIED="1576519731143" TEXT="https://www.vagrantup.com/docs/networking/forwarded_ports.html"/>
