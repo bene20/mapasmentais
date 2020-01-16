@@ -9,5 +9,6 @@
 <node CREATED="1572997135178" ID="Freemind_Link_289996645" LINK="Wildfly/Wildfly.mm" MODIFIED="1572997199626" POSITION="right" TEXT="Wildfly"/>
 <node CREATED="1574964876560" ID="Freemind_Link_126675284" LINK="Ansible/Ansible.mm" MODIFIED="1574964931624" POSITION="right" TEXT="Ansible"/>
 <node CREATED="1575747053934" ID="Freemind_Link_785121986" LINK="Vagrant/Vagrant.mm" MODIFIED="1575747098726" POSITION="right" TEXT="Vagrant"/>
+<node CREATED="1578679627599" ID="Freemind_Link_1854833780" LINK="Gitlab/Gitlab.mm" MODIFIED="1578679646293" POSITION="left" TEXT="Gitlab"/>
 </node>
 </map>

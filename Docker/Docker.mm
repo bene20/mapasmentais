@@ -74,6 +74,11 @@
 <icon BUILTIN="flag"/>
 <node CREATED="1563998982186" ID="Freemind_Link_1456918011" MODIFIED="1564001655113" TEXT="Remove o container logo ap&#xf3;s sua execu&#xe7;&#xe3;o terminar"/>
 </node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1241073076" MODIFIED="1579194637554" TEXT="--restart">
+<icon BUILTIN="flag"/>
+<node CREATED="1563998982186" ID="Freemind_Link_656874651" MODIFIED="1579194660848" TEXT="Se o servi&#xe7;o cair, ele sobe automaticamente"/>
+<node CREATED="1579194665444" ID="Freemind_Link_1727068978" MODIFIED="1579194674392" TEXT="Garante que o container sempre estar&#xe1; em execu&#xe7;&#xe3;o"/>
+</node>
 </node>
 </node>
 <node CREATED="1563998900515" ID="Freemind_Link_796061691" MODIFIED="1563998907799" TEXT="Carregar um container j&#xe1; existente">
@@ -261,7 +266,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1564003157733" ID="Freemind_Link_95353128" MODIFIED="1568728858641" POSITION="right" TEXT="Docker compose">
+<node CREATED="1564003157733" FOLDED="true" ID="Freemind_Link_95353128" MODIFIED="1568728858641" POSITION="right" TEXT="Docker compose">
 <node CREATED="1564003164413" ID="Freemind_Link_332229" MODIFIED="1564003171627" TEXT="Usa o padr&#xe3;o yaml">
 <node CREATED="1564074495999" ID="Freemind_Link_389868139" MODIFIED="1564074516932" TEXT="Arquivo com extens&#xe3;o yml ou yaml">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_924072677" MODIFIED="1564003205056" TEXT="Ex: arquivo docker-compose.yml">
@@ -273,7 +278,7 @@
 </node>
 <node CREATED="1564074518658" ID="Freemind_Link_609261117" MODIFIED="1564074527235" TEXT="&apos;-&apos; indica array no yaml"/>
 </node>
-<node CREATED="1564074095905" FOLDED="true" ID="Freemind_Link_1246829250" MODIFIED="1564074097903" TEXT="Comandos">
+<node CREATED="1564074095905" ID="Freemind_Link_1246829250" MODIFIED="1564074097903" TEXT="Comandos">
 <node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1980060614" MODIFIED="1564074110014" TEXT="version">
 <node CREATED="1563994389535" ID="Freemind_Link_483413953" MODIFIED="1564074121798" TEXT="Indica a vers&#xe3;o do Docker compose a ser utilizada"/>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1776307366" MODIFIED="1564074129230" TEXT="Ex: version: &apos;3&apos;">
@@ -452,7 +457,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1563994459391" FOLDED="true" ID="Freemind_Link_587520050" MODIFIED="1564075527385" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_587520050" MODIFIED="1564075527385" TEXT="Ex:">
 <icon BUILTIN="idea"/>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1179208339" MODIFIED="1569014123108" TEXT="Ex: &#xa;version: &apos;3&apos;&#xa;services:&#xa;  nginx:&#xa;    build:&#xa;      dockerfile: ./docker/nginx.dockerfile&#xa;      context: .&#xa;    image: douglasq/nginx&#xa;    container_name: nginx&#xa;    ports:&#xa;      - &quot;80:80&quot;&#xa;      - &quot;1234:3000&quot;&#xa;    networks:&#xa;      - production-network&#xa;    depends_on:&#xa;      - &quot;node1&quot;&#xa;&#xa;  mongodb:&#xa;    image: mongo&#xa;    networks:&#xa;      - production-network&#xa;    &#xa;  node1:&#xa;    build:&#xa;      dockerfile: ./docker/alurabooks.dockerfile&#xa;      context: .&#xa;    image: douglasq/alura-books&#xa;    container_name: alura-books-1&#xa;    ports:&#xa;      - &quot;3000&quot;&#xa;    networks:&#xa;      - production-network&#xa;    depends_on:&#xa;      - &quot;mongodb&quot;&#xa;    &#xa;networks:&#xa;  production-network:&#xa;    driver: bridge"/>
 </node>

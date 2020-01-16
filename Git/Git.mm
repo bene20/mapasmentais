@@ -393,7 +393,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1553003892883" FOLDED="true" ID="Freemind_Link_910910030" MODIFIED="1553003897111" POSITION="right" TEXT="Remoto">
+<node CREATED="1553003892883" ID="Freemind_Link_910910030" MODIFIED="1553003897111" POSITION="right" TEXT="Remoto">
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_761149679" MODIFIED="1554820436898" TEXT="git remote">
 <icon BUILTIN="wizard"/>
 <node CREATED="1553000483439" ID="Freemind_Link_915509859" MODIFIED="1553003919398" TEXT="Indica quais reposit&#xf3;rios remotos este reposit&#xf3;rio tem"/>
@@ -401,20 +401,31 @@
 <icon BUILTIN="flag"/>
 <node CREATED="1553000483439" ID="Freemind_Link_1930540055" MODIFIED="1553005105858" TEXT="Indica a url associada ao alias de reposit&#xf3;rio remoto"/>
 </node>
-<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1767301822" MODIFIED="1556195302028" TEXT="add original &lt;url_do_outro_repo&gt;">
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1767301822" MODIFIED="1578936835774" TEXT="add &lt;meu_alias&gt; &lt;url_do_repositorio&gt;">
 <icon BUILTIN="flag"/>
 <node CREATED="1553000483439" ID="Freemind_Link_1633828158" MODIFIED="1553005105858" TEXT="Indica a url associada ao alias de reposit&#xf3;rio remoto"/>
 <node CREATED="1556195281322" ID="Freemind_Link_853419182" MODIFIED="1556195400826" TEXT="&quot;original&quot; &#xe9; o alias para o repo &lt;url_do_outro_repo&gt;"/>
+<node CREATED="1578936762244" ID="Freemind_Link_780036105" MODIFIED="1578936806507" TEXT="Um mesmo projeto pode, desta forma, estar vinculado a&#xa;dois gerenciadores de Git (Github e Gitlab, por exemplo)"/>
+</node>
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_428930825" MODIFIED="1579015838450" TEXT="set-url --add --push &lt;meu_alias&gt; &lt;url_do_repo&gt;">
+<icon BUILTIN="flag"/>
+<node CREATED="1553000483439" ID="Freemind_Link_1012965576" MODIFIED="1579015854242" TEXT="Adiciona um destino de push para oo repo remoto"/>
+<node CREATED="1578936762244" ID="Freemind_Link_1429907552" MODIFIED="1579015870205" TEXT="Pode-se ter mais de um alvo"/>
+<node CREATED="1579015875055" ID="Freemind_Link_550396660" MODIFIED="1579015951089" TEXT="Se usar este comando, certifique-se de us&#xe1;-lo mais uma vez para&#xa;a url do repo original, pois na primeira execu&#xe7;&#xe3;o ele ser&#xe1; perdido">
+<icon BUILTIN="messagebox_warning"/>
+</node>
 </node>
 </node>
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_324530898" MODIFIED="1553015859778" TEXT="git push">
 <icon BUILTIN="wizard"/>
 <node CREATED="1553000483439" ID="Freemind_Link_1613173038" MODIFIED="1553015899249" TEXT="Sobre o reposit&#xf3;rio local para o repo remoto"/>
-<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1834837564" MODIFIED="1553015960756" TEXT="origin master">
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1834837564" MODIFIED="1578936952703" TEXT="origin master">
 <icon BUILTIN="flag"/>
-<node CREATED="1553004040163" ID="Freemind_Link_1140343567" MODIFIED="1553004125067" TEXT="&apos;origin&apos; &#xe9; o nome de qual repo remoto eu estou fazendo o push"/>
+<node CREATED="1553004040163" ID="Freemind_Link_1140343567" MODIFIED="1553004125067" TEXT="&apos;origin&apos; &#xe9; o nome de qual repo remoto eu estou fazendo o push">
+<node CREATED="1578936960400" ID="Freemind_Link_469217623" MODIFIED="1578936966164" TEXT="Posso dar o nome que quiser"/>
+</node>
 <node CREATED="1553004167546" ID="Freemind_Link_487933412" MODIFIED="1559668210835" TEXT="&apos;master&apos; indica em qual branch do repo &#xa;remoto deve ser adicionada minha branch local">
-<node COLOR="#0000ff" CREATED="1559668212726" ID="Freemind_Link_423233774" MODIFIED="1559668239911" TEXT="Ex: git push -u origin nome-da-branch-remotamente"/>
+<node COLOR="#0000ff" CREATED="1559668212726" ID="Freemind_Link_423233774" MODIFIED="1578936932501" TEXT="Ex: git push origin nome-da-branch-remotamente"/>
 </node>
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_462818678" MODIFIED="1558629210112" TEXT="-u ou --set-upstream">
 <icon BUILTIN="flag"/>
