@@ -78,6 +78,7 @@
 <icon BUILTIN="flag"/>
 <node CREATED="1563998982186" ID="Freemind_Link_656874651" MODIFIED="1579194660848" TEXT="Se o servi&#xe7;o cair, ele sobe automaticamente"/>
 <node CREATED="1579194665444" ID="Freemind_Link_1727068978" MODIFIED="1579194674392" TEXT="Garante que o container sempre estar&#xe1; em execu&#xe7;&#xe3;o"/>
+<node CREATED="1579544042468" ID="Freemind_Link_1264175407" MODIFIED="1579544054793" TEXT="Levantar&#xe1; o container inclusive na reinicializa&#xe7;&#xe3;o do host"/>
 </node>
 </node>
 </node>

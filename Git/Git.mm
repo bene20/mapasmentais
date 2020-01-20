@@ -393,7 +393,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1553003892883" ID="Freemind_Link_910910030" MODIFIED="1553003897111" POSITION="right" TEXT="Remoto">
+<node CREATED="1553003892883" FOLDED="true" ID="Freemind_Link_910910030" MODIFIED="1553003897111" POSITION="right" TEXT="Remoto">
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_761149679" MODIFIED="1554820436898" TEXT="git remote">
 <icon BUILTIN="wizard"/>
 <node CREATED="1553000483439" ID="Freemind_Link_915509859" MODIFIED="1553003919398" TEXT="Indica quais reposit&#xf3;rios remotos este reposit&#xf3;rio tem"/>
@@ -485,7 +485,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1554811725334" FOLDED="true" ID="Freemind_Link_931340485" MODIFIED="1554811728168" POSITION="right" TEXT="Resets">
+<node CREATED="1554811725334" ID="Freemind_Link_931340485" MODIFIED="1554811728168" POSITION="right" TEXT="Resets">
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_465375070" MODIFIED="1553607301551" TEXT="git checkout">
 <icon BUILTIN="wizard"/>
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_625984500" MODIFIED="1554811738078" TEXT="nomeDoArquivo">
@@ -524,9 +524,24 @@
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_280009686" MODIFIED="1554818998956" TEXT="git revert">
 <icon BUILTIN="wizard"/>
 <node CREATED="1554815367342" ID="Freemind_Link_236256845" MODIFIED="1554819016523" TEXT="Desfaz as altera&#xe7;&#xf5;es antigas que um commit fez"/>
-<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1522385604" MODIFIED="1554818321321" TEXT="idDoCommit">
+<node CREATED="1579548305487" ID="Freemind_Link_547729441" MODIFIED="1579548323444" TEXT="Mantem o hist&#xf3;rico (volta o c&#xf3;digo para uma vers&#xe3;o anterior)"/>
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1522385604" MODIFIED="1579548974044" TEXT="idDoCommit">
 <icon BUILTIN="flag"/>
 <node CREATED="1554818342885" ID="Freemind_Link_554117832" MODIFIED="1554819047996" TEXT="Desfaz todas as altera&#xe7;&#xf5;es do commit &apos;idDoCommit&apos;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1316641051" MODIFIED="1579548980541" TEXT="idDoCommit..HEAD">
+<icon BUILTIN="flag"/>
+<node CREATED="1579548999815" ID="Freemind_Link_710226514" MODIFIED="1579549033388" TEXT="Desfaz, uma a uma, as altera&#xe7;&#xf5;es de cada um dos commits que varia de idDoCommit &#xe0; vers&#xe3;o do HEAD"/>
+<node CREATED="1579549038304" ID="Freemind_Link_1344951007" MODIFIED="1579549048431" TEXT="Ser&#xe1; solicitado um commit para cada &quot;desfazimento&quot;"/>
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_822752242" MODIFIED="1579548932693" TEXT="--no-commit">
+<icon BUILTIN="flag"/>
+<node CREATED="1554818342885" ID="Freemind_Link_1785424660" MODIFIED="1579548945765" TEXT="Faz a revers&#xe3;o do commit em um &#xfa;nico commit"/>
+</node>
+<node CREATED="1579549170642" ID="Freemind_Link_1289845153" MODIFIED="1579549174132" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1579549174857" ID="Freemind_Link_1425793968" MODIFIED="1579549212041" TEXT="git revert HEAD~2..HEAD">
+<node CREATED="1579549184302" ID="Freemind_Link_180293350" MODIFIED="1579549189493" TEXT="Reverte os &#xfa;ltimos dois commits"/>
+</node>
+</node>
 </node>
 </node>
 </node>

@@ -99,12 +99,77 @@
 <node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_376815706" MODIFIED="1578683273338" TEXT="before_script:&#xa;  - execute this instead of global before script&#xa;&#xa;after_script:&#xa;  - execute this after my script&#xa;&#xa;job:&#xa;  script:&#xa;    - my command&#xa;"/>
 </node>
 </node>
+<node CREATED="1579205078299" ID="Freemind_Link_753673414" MODIFIED="1579205080998" TEXT="rules">
+<node CREATED="1579205083609" ID="Freemind_Link_454956340" MODIFIED="1579205108535" TEXT="Define as regras que determinam se/quando um job ser&#xe1; executado"/>
+<node CREATED="1579205139211" ID="Freemind_Link_1068680425" MODIFIED="1579205174990" TEXT="Geralmente &#xe9; combinado com o &apos;if&apos;, &apos;changes&apos; e &apos;exists&apos;"/>
+<node CREATED="1578683234720" ID="Freemind_Link_386545622" MODIFIED="1578683235547" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_1008108220" MODIFIED="1579205129402" TEXT="job:&#xa;  script: &quot;echo Hello, Rules!&quot;&#xa;  rules:&#xa;    - if: &apos;$CI_MERGE_REQUEST_TARGET_BRANCH_NAME == &quot;master&quot;&apos;&#xa;      when: always&#xa;    - if: &apos;$VAR =~ /pattern/&apos;&#xa;      when: manual&#xa;    - when: on_success&#xa;"/>
+</node>
+</node>
+<node CREATED="1579543326378" ID="Freemind_Link_129089085" MODIFIED="1579543327219" TEXT="tags">
+<node CREATED="1579543327882" ID="Freemind_Link_1677386332" MODIFIED="1579543337418" TEXT="Indica qual/quais runners ir&#xe3;o executar o job"/>
+</node>
+<node CREATED="1579544531134" ID="Freemind_Link_930363076" MODIFIED="1579544533164" TEXT="dependencies">
+<node CREATED="1579544536814" ID="Freemind_Link_688738344" MODIFIED="1579544548187" TEXT="Indica que um job depende da conclus&#xe3;o de outro"/>
+<node CREATED="1579544549026" ID="Freemind_Link_1787119120" MODIFIED="1579544566857" TEXT="Um job s&#xf3; pode ser dependente de um job de outro stage"/>
+</node>
 </node>
 <node CREATED="1579124636241" ID="Freemind_Link_283128050" MODIFIED="1579124638818" TEXT="Vari&#xe1;veis">
-<node CREATED="1579124639384" ID="Freemind_Link_1507474536" MODIFIED="1579124653316" TEXT="Basta us&#xe1;-las com $ antes do nome"/>
-<node CREATED="1579124681253" ID="Freemind_Link_382279386" MODIFIED="1579124762641" TEXT="O valor das vari&#xe1;veis &#xe9; declarado no menu Settings =&gt; CI/CD =&gt; Variables no gitlab"/>
+<node CREATED="1579205957197" ID="Freemind_Link_1567301011" MODIFIED="1579205959661" TEXT="Declara&#xe7;&#xe3;o">
+<node CREATED="1579124681253" ID="Freemind_Link_382279386" MODIFIED="1579205977005" TEXT="No menu Settings =&gt; CI/CD =&gt; Variables no gitlab"/>
+<node CREATED="1579205982485" ID="Freemind_Link_608050465" MODIFIED="1579206016291" TEXT="Na se&#xe7;&#xe3;o &apos;variables&apos; do arquivo .gitlab-ci.yml">
+<node CREATED="1578683234720" ID="Freemind_Link_1713505374" MODIFIED="1578683235547" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_1983238564" MODIFIED="1579206024946" TEXT="variables:&#xa;  DATABASE_URL: &quot;postgres://postgres@postgres/my_database&quot;&#xa;"/>
+</node>
+</node>
+</node>
+<node CREATED="1579205950370" ID="Freemind_Link_804271702" MODIFIED="1579205952280" TEXT="Uso">
+<node CREATED="1579124639384" ID="Freemind_Link_1507474536" MODIFIED="1579206758325" TEXT="Basta us&#xe1;-las conforme o SO que executa o script">
+<node CREATED="1579206765201" ID="Freemind_Link_1113166858" MODIFIED="1579206768896" TEXT="No Linux:">
+<node CREATED="1579206769452" ID="Freemind_Link_1828621034" MODIFIED="1579206770439" TEXT="com $ antes do nome"/>
+<node CREATED="1579206830602" ID="Freemind_Link_234167315" MODIFIED="1579206831751" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_553136603" MODIFIED="1579206849181" TEXT="    - echo $CI_JOB_ID&#xa;"/>
+</node>
+</node>
+<node CREATED="1579206773571" ID="Freemind_Link_1658192984" MODIFIED="1579206776192" TEXT="No Windows">
+<node CREATED="1579206776805" ID="Freemind_Link_1416255611" MODIFIED="1579206790481" TEXT="com % no in&#xed;cio e no final do nome"/>
+<node CREATED="1579206830602" ID="Freemind_Link_422550105" MODIFIED="1579206831751" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_1899452338" MODIFIED="1579206860566" TEXT="    - echo %CI_JOB_ID %"/>
+</node>
+</node>
+<node CREATED="1579206796736" ID="Freemind_Link_96149026" MODIFIED="1579206801811" TEXT="No Powershell">
+<node CREATED="1579206804701" ID="Freemind_Link_48542990" MODIFIED="1579206813693" TEXT="com $env: antes do nome"/>
+<node CREATED="1579206830602" ID="Freemind_Link_837546666" MODIFIED="1579206831751" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_1971406472" MODIFIED="1579206888655" TEXT="    - echo $env:CI_JOB_ID "/>
+</node>
+</node>
+</node>
 <node CREATED="1578683234720" ID="Freemind_Link_86896239" MODIFIED="1578683235547" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_1887494230" MODIFIED="1579124677842" TEXT="before_script:&#xa;  - docker info&#xa;  - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD&#xa;"/>
+</node>
+</node>
+<node CREATED="1579206080533" ID="Freemind_Link_209937549" MODIFIED="1579206087643" TEXT="Pr&#xe9;-definidas">
+<node CREATED="1579206090525" ID="Freemind_Link_1700898795" MODIFIED="1579206102887" TEXT="https://gitlab.com/help/ci/variables/predefined_variables.md">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1579206134024" ID="Freemind_Link_1716154394" MODIFIED="1579206141890" TEXT="Vari&#xe1;veis definidas pelo runner"/>
+<node CREATED="1579206173232" ID="Freemind_Link_65776677" MODIFIED="1579206174968" TEXT="Exemplos">
+<node CREATED="1579206175637" ID="Freemind_Link_1297543353" MODIFIED="1579206177404" TEXT="CI_PROJECT_NAME">
+<node CREATED="1579206179663" ID="Freemind_Link_756725503" MODIFIED="1579206236177" TEXT="The name of the directory for the project that is currently being built"/>
+</node>
+<node CREATED="1579206207294" ID="Freemind_Link_814312618" MODIFIED="1579206208664" TEXT="CI_REGISTRY_USER">
+<node CREATED="1579206216910" ID="Freemind_Link_521904404" MODIFIED="1579206218387" TEXT="The username to use to push containers to the GitLab Container Registry"/>
+</node>
+<node CREATED="1579206262998" ID="Freemind_Link_1999894929" MODIFIED="1579206264240" TEXT="CI_REPOSITORY_URL">
+<node CREATED="1579206272678" ID="Freemind_Link_353922849" MODIFIED="1579206274040" TEXT="The URL to clone the Git repository"/>
+</node>
+<node CREATED="1579206310661" ID="Freemind_Link_954029286" MODIFIED="1579206312003" TEXT="GITLAB_USER_LOGIN">
+<node CREATED="1579206318029" ID="Freemind_Link_491030616" MODIFIED="1579206319430" TEXT="The login username of the user who started the job"/>
+</node>
+</node>
+</node>
+<node CREATED="1579206933803" ID="Freemind_Link_1111003001" MODIFIED="1579206953613" TEXT="Para listar todas as vari&#xe1;veis dispon&#xed;veis:">
+<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_1456637970" MODIFIED="1579206967779" TEXT="job_name:&#xa;  script:&#xa;    - export&#xa;"/>
 </node>
 </node>
 </node>
@@ -163,6 +228,14 @@
 </node>
 <node CREATED="1579196777850" ID="Freemind_Link_1526739377" MODIFIED="1579196846134" TEXT="Essa tag ser&#xe1; referenciada no apipeline configurado no arquivo .gitlab-ci.yml"/>
 <node CREATED="1579196641396" ID="Freemind_Link_5032416" MODIFIED="1579196646213" TEXT="Ex: executor-tarefas"/>
+</node>
+</node>
+<node CREATED="1579552046343" FOLDED="true" ID="Freemind_Link_414774395" MODIFIED="1579552049349" TEXT="Trouble-shoot">
+<node CREATED="1579552060538" ID="Freemind_Link_1860374065" MODIFIED="1579552099356" TEXT="Ao usar docker-i-docker &#xe9; importante indicar o host&#xa;odcker mais externo para o container mais interno">
+<node CREATED="1579552103319" ID="Freemind_Link_882066776" MODIFIED="1579552128731" TEXT="Declare &quot;DOCKER_HOST: tcp://docker:2375&quot; como vari&#xe1;vel no seu .gitlab-ci.yml"/>
+</node>
+<node CREATED="1579552138015" ID="Freemind_Link_1901869178" MODIFIED="1579552179260" TEXT="Para desabilitar o TLS no container do pipeline:">
+<node CREATED="1579552181079" ID="Freemind_Link_1012726120" MODIFIED="1579552208469" TEXT="Declare a vari&#xe1;vel DOCKER_TLS_CERTDIR com o valor vazio"/>
 </node>
 </node>
 </node>
