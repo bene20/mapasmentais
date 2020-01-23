@@ -114,6 +114,12 @@
 <node CREATED="1579544536814" ID="Freemind_Link_688738344" MODIFIED="1579544548187" TEXT="Indica que um job depende da conclus&#xe3;o de outro"/>
 <node CREATED="1579544549026" ID="Freemind_Link_1787119120" MODIFIED="1579544566857" TEXT="Um job s&#xf3; pode ser dependente de um job de outro stage"/>
 </node>
+<node CREATED="1579803366493" ID="Freemind_Link_1231008298" MODIFIED="1579803367805" TEXT="retry">
+<node CREATED="1579803368426" ID="Freemind_Link_1558447730" MODIFIED="1579803388536" TEXT="Indica quantas vezes deve-se tentar executar um job em caso de falha"/>
+<node CREATED="1578683234720" ID="Freemind_Link_1738311767" MODIFIED="1578683235547" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_206483679" MODIFIED="1579803409174" TEXT="job:&#xa;  script: &quot;echo Hello, Rules!&quot;&#xa;  retry: 2"/>
+</node>
+</node>
 </node>
 <node CREATED="1579124636241" ID="Freemind_Link_283128050" MODIFIED="1579124638818" TEXT="Vari&#xe1;veis">
 <node CREATED="1579205957197" ID="Freemind_Link_1567301011" MODIFIED="1579205959661" TEXT="Declara&#xe7;&#xe3;o">
@@ -209,7 +215,7 @@
 <node CREATED="1579195694577" ID="Freemind_Link_1783890873" MODIFIED="1579196056265" TEXT="Responder as quest&#xf5;es &#xa;do comando acima">
 <icon BUILTIN="full-3"/>
 <node CREATED="1579196161783" ID="Freemind_Link_171760490" MODIFIED="1579196164818" TEXT="Exemplo:">
-<node CREATED="1579196069064" ID="Freemind_Link_1069893170" MODIFIED="1579196900475" TEXT="Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com/):&#xa;Resposta: https://gitlab.com/&#xa;&#xa;Please enter the gitlab-ci token for this runner:&#xa;Resposta: qQtSzhmRjZASC3hqCYrc&#xa;&#xa;Please enter the gitlab-ci description for this runner:&#xa;[752fe20de360]:&#xa;Resposta: runner-bytebank&#xa;&#xa;Please enter the gitlab-ci tags for this runner (comma separated):&#xa;Resposta: Deixar em branco&#xa;&#xa;Registering runner... succeeded                     runner=qQtSzhmR&#xa;&#xa;Please enter the executor: kubernetes, docker-ssh, shell, docker-ssh+machine, ssh, virtualbox, docker+machine, custom, docker, parallels:&#xa;Resposta: docker&#xa;&#xa;Please enter the default Docker image (e.g. ruby:2.6):&#xa;Resposta: bene20/minha-imagem:latest (aqui informei o nome completo da imagem registrada no dockerhub)&#xa;&#xa;Runner registered successfully. Feel free to start it, but if it&apos;s running already the config should be automatically reloaded!"/>
+<node CREATED="1579196069064" ID="Freemind_Link_1069893170" MODIFIED="1579794105630" TEXT="Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com/):&#xa;Resposta: https://gitlab.com/&#xa;&#xa;Please enter the gitlab-ci token for this runner:&#xa;Resposta: qQtSzhmRjZASC3hqCYrc&#xa;&#xa;Please enter the gitlab-ci description for this runner:&#xa;[752fe20de360]:&#xa;Resposta: runner-bytebank&#xa;&#xa;Please enter the gitlab-ci tags for this runner (comma separated):&#xa;Resposta: Deixar em branco&#xa;&#xa;Registering runner... succeeded                     runner=qQtSzhmR&#xa;&#xa;Please enter the executor: kubernetes, docker-ssh, shell, docker-ssh+machine, ssh, virtualbox, docker+machine, custom, docker, parallels:&#xa;Resposta: docker&#xa;&#xa;Please enter the default Docker image (e.g. ruby:2.6):&#xa;Resposta: bene20/minha-imagem:latest (aqui informei o nome completo da imagem registrada no dockerhub)&#xa;&#xa;Runner registered successfully. Feel free to start it, but if it&apos;s running already the config should be automatically reloaded!"/>
 </node>
 </node>
 <node CREATED="1579196269591" ID="Freemind_Link_1342628862" MODIFIED="1579196278920" TEXT="Sair do container do runner">
@@ -227,11 +233,62 @@
 <node CREATED="1579196575550" ID="Freemind_Link_1193274250" MODIFIED="1579196598164" TEXT="Acessar o campo &apos;Tags&apos;">
 <node CREATED="1579196598653" ID="Freemind_Link_580856109" MODIFIED="1579196636309" TEXT="repetir passo 4 =&gt; editar o runner"/>
 </node>
-<node CREATED="1579196777850" ID="Freemind_Link_1526739377" MODIFIED="1579196846134" TEXT="Essa tag ser&#xe1; referenciada no apipeline configurado no arquivo .gitlab-ci.yml"/>
+<node CREATED="1579196777850" ID="Freemind_Link_1526739377" MODIFIED="1579794141998" TEXT="Essa tag ser&#xe1; referenciada no pipeline configurado no arquivo .gitlab-ci.yml"/>
 <node CREATED="1579196641396" ID="Freemind_Link_5032416" MODIFIED="1579196646213" TEXT="Ex: executor-tarefas"/>
+</node>
+<node CREATED="1579800132101" ID="Freemind_Link_311279927" MODIFIED="1579800149728" TEXT="Configurar chaves de ssh">
+<icon BUILTIN="full-6"/>
+<node CREATED="1579800151048" ID="Freemind_Link_1693161883" MODIFIED="1579800167484" TEXT="Passo necess&#xe1;rio apenas se for fazer scp ou ssh entre o runner e outra m&#xe1;quina"/>
+<node CREATED="1579800167893" ID="Freemind_Link_452969286" MODIFIED="1579800192547" TEXT="Muito comum em runner de deploy, quando se faz scp do build para a m&#xe1;quina alvo"/>
+<node CREATED="1579800201366" ID="Freemind_Link_94583256" MODIFIED="1579800204111" TEXT="Etapas:">
+<node CREATED="1579800206696" ID="Freemind_Link_970984301" MODIFIED="1579800376376" TEXT="Conectar no runner">
+<icon BUILTIN="full-1"/>
+<node COLOR="#0000ff" CREATED="1579800215855" ID="Freemind_Link_1253994219" MODIFIED="1579800266630" TEXT="docker exec -it gitlab-runner bash"/>
+</node>
+<node CREATED="1579800274670" ID="Freemind_Link_1011963383" MODIFIED="1579800379778" TEXT="Logar/virar usu&#xe1;rio gitlab-runner">
+<icon BUILTIN="full-2"/>
+<node COLOR="#0000ff" CREATED="1579800215855" ID="Freemind_Link_1560977632" MODIFIED="1579800298739" TEXT="su gitlab-runner"/>
+</node>
+<node CREATED="1579800337307" ID="Freemind_Link_320588485" MODIFIED="1579800382688" TEXT="Gerar par de chaves para o usu&#xe1;rio gitlab-runner">
+<icon BUILTIN="full-3"/>
+<node COLOR="#0000ff" CREATED="1579800215855" ID="Freemind_Link_1753992428" MODIFIED="1579800354937" TEXT="ssh-keygen"/>
+</node>
+<node CREATED="1579800385028" ID="Freemind_Link_852968973" MODIFIED="1579800428457" TEXT="Copiar a chave p&#xfa;blica para o &#xa;authorized-keys da m&#xe1;quina destino">
+<icon BUILTIN="full-4"/>
+<node CREATED="1579800522466" ID="Freemind_Link_751461273" MODIFIED="1579800524310" TEXT="Origem:">
+<node CREATED="1579800625258" ID="Freemind_Link_124911897" MODIFIED="1579800634643" TEXT="Container do gitlab-runner"/>
+<node CREATED="1579800530221" ID="Freemind_Link_912328953" MODIFIED="1579800531945" TEXT="/home/gitlab-runner/.ssh/id_rsa"/>
+</node>
+<node CREATED="1579800533051" ID="Freemind_Link_539793132" MODIFIED="1579800535206" TEXT="Destino:">
+<node CREATED="1579800635868" ID="Freemind_Link_909030017" MODIFIED="1579800650128" TEXT="M&#xe1;quina onde ser&#xe1; feito o deploy">
+<node CREATED="1579800921144" ID="Freemind_Link_734151394" MODIFIED="1579800932295" TEXT="Onde roda o servidor de aplica&#xe7;&#xf5;es"/>
+</node>
+<node CREATED="1579800619372" ID="Freemind_Link_1771472440" MODIFIED="1579800658666" TEXT="/home/&lt;usuario_local&gt;/.ssh/authorized_keys"/>
+<node CREATED="1579800661849" ID="Freemind_Link_217885681" MODIFIED="1579800672911" TEXT="Concatenar o arquivo de origem ao arquivo de destino">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1579800215855" ID="Freemind_Link_1114147273" MODIFIED="1579804121717" TEXT="cat ~/.ssh/id_rsa.pub | ssh usuarioremoto@ipdamaquina &quot;cat &gt;&gt;  ~/.ssh/authorized_keys&quot;"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1579799020677" ID="Freemind_Link_115340728" MODIFIED="1579799023034" TEXT="Executors">
+<node CREATED="1579799046143" ID="Freemind_Link_1293896596" MODIFIED="1579799049407" TEXT="https://docs.gitlab.com/runner/executors/">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1579799059520" ID="Freemind_Link_1201425129" MODIFIED="1579799061305" TEXT="Shell">
+<node CREATED="1579799067737" ID="Freemind_Link_1101948987" MODIFIED="1579799073019" TEXT="O mais simples dos executores"/>
+<node CREATED="1579799073482" ID="Freemind_Link_230430609" MODIFIED="1579799114723" TEXT="Todas as depend&#xea;ncias dever&#xe3;o ser instaladas na m&#xe3;o na mesma m&#xe1;quina em que o runner est&#xe1; instalado"/>
+</node>
+<node CREATED="1579799051553" ID="Freemind_Link_1471894365" MODIFIED="1579799057122" TEXT="Docker">
+<node CREATED="1579799533622" ID="Freemind_Link_1423634538" MODIFIED="1579799587691" TEXT="Todas as depend&#xea;ncias podem ser colocadas em uma imagem pronta para uso pelo runner"/>
 </node>
 </node>
 <node CREATED="1579552046343" ID="Freemind_Link_414774395" MODIFIED="1579552049349" TEXT="Trouble-shoot">
+<node CREATED="1579799737110" ID="Freemind_Link_919366581" MODIFIED="1579799740937" TEXT="https://docs.gitlab.com/runner/faq/README.html">
+<icon BUILTIN="attach"/>
+</node>
 <node CREATED="1579552060538" ID="Freemind_Link_1860374065" MODIFIED="1579626277393" TEXT="Ao usar docker-i-docker &#xe9; importante indicar o host&#xa;docker mais externo para o container mais interno">
 <node CREATED="1579552103319" ID="Freemind_Link_882066776" MODIFIED="1579552128731" TEXT="Declare &quot;DOCKER_HOST: tcp://docker:2375&quot; como vari&#xe1;vel no seu .gitlab-ci.yml"/>
 </node>
