@@ -84,8 +84,9 @@
 </node>
 <node CREATED="1579123111456" ID="Freemind_Link_1494852470" MODIFIED="1579123113408" TEXT="services">
 <node CREATED="1579123113957" ID="Freemind_Link_1210172168" MODIFIED="1579123134033" TEXT="Indica quais servi&#xe7;os devem estar de p&#xe9; no container executado pelo gitlab"/>
+<node CREATED="1579623763131" ID="Freemind_Link_440105725" MODIFIED="1579623778691" TEXT="S&#xe3;o imagens docker que ser&#xe3;o levantadas com o servi&#xe7;o especificado"/>
 <node CREATED="1578682895185" ID="Freemind_Link_1721405074" MODIFIED="1578682943830" TEXT="Ex:">
-<node COLOR="#ff00ff" CREATED="1578682901335" ID="Freemind_Link_479075911" MODIFIED="1579123188602" TEXT="services:&#xa;  - docker:dind"/>
+<node COLOR="#ff00ff" CREATED="1578682901335" ID="Freemind_Link_479075911" MODIFIED="1579623944571" TEXT="services:&#xa;  - docker:dind&#xa;  - mysql:5.7&#xa;variables:&#xa;  MYSQL_USER: devops_dev&#xa;  MYSQL_PASSWORD: mestre&#xa;  MYSQL_DATABASE: todo_dev&#xa;  MYSQL_ROOT_PASSWORD: senha"/>
 </node>
 </node>
 <node CREATED="1578683122391" ID="Freemind_Link_1545100943" MODIFIED="1578683127283" TEXT="before_script e after_script">
@@ -230,9 +231,13 @@
 <node CREATED="1579196641396" ID="Freemind_Link_5032416" MODIFIED="1579196646213" TEXT="Ex: executor-tarefas"/>
 </node>
 </node>
-<node CREATED="1579552046343" FOLDED="true" ID="Freemind_Link_414774395" MODIFIED="1579552049349" TEXT="Trouble-shoot">
-<node CREATED="1579552060538" ID="Freemind_Link_1860374065" MODIFIED="1579552099356" TEXT="Ao usar docker-i-docker &#xe9; importante indicar o host&#xa;odcker mais externo para o container mais interno">
+<node CREATED="1579552046343" ID="Freemind_Link_414774395" MODIFIED="1579552049349" TEXT="Trouble-shoot">
+<node CREATED="1579552060538" ID="Freemind_Link_1860374065" MODIFIED="1579626277393" TEXT="Ao usar docker-i-docker &#xe9; importante indicar o host&#xa;docker mais externo para o container mais interno">
 <node CREATED="1579552103319" ID="Freemind_Link_882066776" MODIFIED="1579552128731" TEXT="Declare &quot;DOCKER_HOST: tcp://docker:2375&quot; como vari&#xe1;vel no seu .gitlab-ci.yml"/>
+</node>
+<node CREATED="1579626283205" ID="Freemind_Link_1088576353" MODIFIED="1579626306202" TEXT="Por ser docker-in-docker, pode ser necess&#xe1;rio &#xa;rodar o runner em modo privilegiado">
+<node CREATED="1579626307262" ID="Freemind_Link_984775300" MODIFIED="1579626325849" TEXT="Altere o valor da vari&#xe1;vel &apos;privileged&apos; para true no arquivo config.toml"/>
+<node CREATED="1579626341620" ID="Freemind_Link_574683729" MODIFIED="1579626374817" TEXT="O arquivo acima ficar&#xe1; na pasta compartilhada (volume) definido para o container do runner"/>
 </node>
 <node CREATED="1579552138015" ID="Freemind_Link_1901869178" MODIFIED="1579552179260" TEXT="Para desabilitar o TLS no container do pipeline:">
 <node CREATED="1579552181079" ID="Freemind_Link_1012726120" MODIFIED="1579552208469" TEXT="Declare a vari&#xe1;vel DOCKER_TLS_CERTDIR com o valor vazio"/>
