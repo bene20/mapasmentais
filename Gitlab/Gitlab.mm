@@ -117,7 +117,21 @@
 <node CREATED="1579803366493" ID="Freemind_Link_1231008298" MODIFIED="1579803367805" TEXT="retry">
 <node CREATED="1579803368426" ID="Freemind_Link_1558447730" MODIFIED="1579803388536" TEXT="Indica quantas vezes deve-se tentar executar um job em caso de falha"/>
 <node CREATED="1578683234720" ID="Freemind_Link_1738311767" MODIFIED="1578683235547" TEXT="Ex:">
-<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_206483679" MODIFIED="1579803409174" TEXT="job:&#xa;  script: &quot;echo Hello, Rules!&quot;&#xa;  retry: 2"/>
+<node COLOR="#ff0000" CREATED="1578683237010" ID="Freemind_Link_206483679" MODIFIED="1580149377289" TEXT="job:&#xa;  script: &quot;echo Hello, Rules!&quot;&#xa;  retry: 2"/>
+</node>
+</node>
+<node CREATED="1580149023013" ID="Freemind_Link_1065414690" MODIFIED="1580149024856" TEXT="when">
+<node CREATED="1580149026063" ID="Freemind_Link_1929045178" MODIFIED="1580149033779" TEXT="Executa o job apenas em uma situa&#xe7;&#xe3;o espec&#xed;fica"/>
+<node CREATED="1580149036294" ID="Freemind_Link_237269865" MODIFIED="1580149039234" TEXT="Situa&#xe7;&#xf5;es:">
+<node CREATED="1580149040022" ID="Freemind_Link_847589180" MODIFIED="1580149046298" TEXT="on_succes">
+<node CREATED="1580149156792" ID="Freemind_Link_107616030" MODIFIED="1580149167538" TEXT="Quando tudo deu certo na etapa(stage) anterior"/>
+</node>
+<node CREATED="1580149148600" ID="Freemind_Link_663876793" MODIFIED="1580149151025" TEXT="on_failure">
+<node CREATED="1580149156792" ID="Freemind_Link_342750354" MODIFIED="1580149180187" TEXT="Quando algo deu errado na etapa(stage) anterior"/>
+</node>
+</node>
+<node CREATED="1578683234720" ID="Freemind_Link_418122747" MODIFIED="1578683235547" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_1528824100" MODIFIED="1580149094135" TEXT="job:&#xa;  script: &quot;echo Hello, Rules!&quot;&#xa;  when: on_success"/>
 </node>
 </node>
 </node>
