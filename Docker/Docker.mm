@@ -149,7 +149,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1563994368647" FOLDED="true" ID="_" MODIFIED="1563994372275" POSITION="right" TEXT="Dockerfile">
+<node CREATED="1563994368647" ID="_" MODIFIED="1563994372275" POSITION="right" TEXT="Dockerfile">
 <node CREATED="1563998221736" ID="Freemind_Link_368230737" MODIFIED="1568727208485" TEXT="Build">
 <node CREATED="1563998249496" ID="Freemind_Link_1953836887" MODIFIED="1563998261491" TEXT="Criar uma imagem a partir de um Dockerfile">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1375815715" MODIFIED="1563998864816" TEXT="docker build -f Dockerfile">
@@ -184,6 +184,11 @@
 <node CREATED="1563994389535" ID="Freemind_Link_959280270" MODIFIED="1563994453812" TEXT="Efetua c&#xf3;pias de arquivos do Docker Host para o container"/>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1778474076" MODIFIED="1563998839038" TEXT="Ex: COPY . /var/www">
 <icon BUILTIN="idea"/>
+</node>
+<node CREATED="1582138798847" ID="Freemind_Link_1333365113" MODIFIED="1582138837632" TEXT="Pode ser copiado arquivo de imagem &#xa;criada no pr&#xf3;prio Dockerfile">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_274944236" MODIFIED="1582138897534" TEXT="Ex: &#xa;FROM maven:3.6.0-jdk-8-alpine as builder &#xa;...&#xa;FROM jboss/wildfly EXPOSE 8080&#xa;COPY --from=builder target/projeto.war /opt/jboss/wildfly/standalone/deployments/">
+<icon BUILTIN="idea"/>
+</node>
 </node>
 </node>
 <node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_525199385" MODIFIED="1563994555802" TEXT="WORKDIR">
@@ -310,38 +315,9 @@
 </node>
 <node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_969891663" MODIFIED="1568727524574" TEXT="context">
 <node CREATED="1568727361188" ID="Freemind_Link_1039261140" MODIFIED="1568727365723" TEXT="=&gt;">
-<node CREATED="1563994389535" ID="Freemind_Link_617741681" MODIFIED="1568727537179" TEXT="???"/>
+<node CREATED="1563994389535" ID="Freemind_Link_617741681" MODIFIED="1581685590807" TEXT="Caminho para o path que cont&#xe9;m o Dockerile, ou url para um reposit&#xf3;rio git"/>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_122357454" MODIFIED="1568727544897" TEXT="Ex: context: ./app">
 <icon BUILTIN="idea"/>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1979036975" MODIFIED="1568727400482" TEXT="build">
-<node CREATED="1568727361188" ID="Freemind_Link_1611467249" MODIFIED="1568727365723" TEXT="=&gt;">
-<node CREATED="1563994389535" ID="Freemind_Link_1192234849" MODIFIED="1568727510031" TEXT="Configura&#xe7;&#xf5;es do build do servi&#xe7;o"/>
-</node>
-<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1602126504" MODIFIED="1568727524574" TEXT="context">
-<node CREATED="1568727361188" ID="Freemind_Link_1883246832" MODIFIED="1568727365723" TEXT="=&gt;">
-<node CREATED="1563994389535" ID="Freemind_Link_995497608" MODIFIED="1568727537179" TEXT="???"/>
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1872522021" MODIFIED="1568727544897" TEXT="Ex: context: ./app">
-<icon BUILTIN="idea"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1373829556" MODIFIED="1568727551337" TEXT="dockerfile">
-<node CREATED="1568727361188" ID="Freemind_Link_120404399" MODIFIED="1568727365723" TEXT="=&gt;">
-<node CREATED="1563994389535" ID="Freemind_Link_638364749" MODIFIED="1568727571039" TEXT="Indica o nome do Dockerfile para o build"/>
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_820218043" MODIFIED="1568727582526" TEXT="Ex: dockerfile: Dockerfile">
-<icon BUILTIN="idea"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1827407817" MODIFIED="1568727620838" TEXT="args">
-<node CREATED="1568727361188" ID="Freemind_Link_791562264" MODIFIED="1568727365723" TEXT="=&gt;">
-<node CREATED="1563994389535" ID="Freemind_Link_1596463909" MODIFIED="1568727686397" TEXT="Indica os argumentos para o build da imagem"/>
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1718581932" MODIFIED="1568727721149" TEXT="Ex: args:&#xa;          nome_da_variavel: algum_valor">
-<icon BUILTIN="idea"/>
-</node>
-</node>
 </node>
 </node>
 </node>

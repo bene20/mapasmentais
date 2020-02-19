@@ -33,7 +33,7 @@
 </node>
 </node>
 <node CREATED="1537886374027" ID="Freemind_Link_1715832664" MODIFIED="1537886375494" TEXT="drop">
-<node CREATED="1537886377963" ID="Freemind_Link_673229840" MODIFIED="1537886398023" TEXT="Remove um trecho preciamente digitado">
+<node CREATED="1537886377963" ID="Freemind_Link_673229840" MODIFIED="1582128839384" TEXT="Remove um trecho previamente digitado">
 <node COLOR="#0000ff" CREATED="1537885443565" ID="Freemind_Link_1844687786" MODIFIED="1537886411871" TEXT="Ex: /drop 4"/>
 </node>
 <node CREATED="1537886420027" ID="Freemind_Link_10552666" MODIFIED="1537886483511" TEXT="Pode ser usado com lista&#xa;ou intervalos de ID&apos;s">

@@ -10,5 +10,6 @@
 <node CREATED="1574964876560" ID="Freemind_Link_126675284" LINK="Ansible/Ansible.mm" MODIFIED="1574964931624" POSITION="right" TEXT="Ansible"/>
 <node CREATED="1575747053934" ID="Freemind_Link_785121986" LINK="Vagrant/Vagrant.mm" MODIFIED="1575747098726" POSITION="right" TEXT="Vagrant"/>
 <node CREATED="1578679627599" ID="Freemind_Link_1854833780" LINK="Gitlab/Gitlab.mm" MODIFIED="1578679646293" POSITION="left" TEXT="Gitlab"/>
+<node CREATED="1582130108204" ID="Freemind_Link_1756893405" LINK="Jenkins/Jenkins.mm" MODIFIED="1582130129551" POSITION="left" TEXT="Jenkins"/>
 </node>
 </map>

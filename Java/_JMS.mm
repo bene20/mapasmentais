@@ -36,7 +36,7 @@
 <node CREATED="1546626502111" ID="Freemind_Link_253010908" MODIFIED="1546626531634" TEXT="Uma mesma mensagem nunca &#xe9; &#xa;entregue a mais de um consumidor"/>
 </node>
 </node>
-<node CREATED="1546626298670" ID="Freemind_Link_252751127" MODIFIED="1546626307547" POSITION="right" TEXT="ActiveMQ">
+<node CREATED="1546626298670" FOLDED="true" ID="Freemind_Link_252751127" MODIFIED="1546626307547" POSITION="right" TEXT="ActiveMQ">
 <node CREATED="1546627553391" ID="Freemind_Link_1532511030" MODIFIED="1546627555891" TEXT="Configura&#xe7;&#xe3;o">
 <node CREATED="1546627556528" ID="Freemind_Link_306392130" MODIFIED="1546630248554" TEXT="Op&#xe7;&#xe3;o 1) Arquivo &#xa;jndi.properties">
 <node CREATED="1546627563056" ID="Freemind_Link_1206465986" MODIFIED="1546627574427" TEXT="Criar arquivo jndi.properties no classpath do projeto"/>
