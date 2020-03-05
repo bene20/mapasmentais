@@ -15,7 +15,7 @@
 <node COLOR="#0000ff" CREATED="1576703582459" ID="Freemind_Link_1396102726" MODIFIED="1576703662966" TEXT="chown root:docker /var/run/docker.sock">
 <icon BUILTIN="full-4"/>
 </node>
-<node CREATED="1576703670017" ID="Freemind_Link_1710824335" MODIFIED="1576703685766" TEXT="Configura&#xe7;&#xe3;o de proxy:">
+<node CREATED="1576703670017" ID="Freemind_Link_1710824335" MODIFIED="1583415012465" TEXT="Configura&#xe7;&#xe3;o&#xa;de proxy:">
 <node COLOR="#0000ff" CREATED="1576703507001" ID="Freemind_Link_1513994326" MODIFIED="1576703700934" TEXT="mkdir -p /etc/systemd/system/docker.service.d">
 <icon BUILTIN="full-1"/>
 </node>
@@ -27,6 +27,17 @@
 </node>
 <node COLOR="#0000ff" CREATED="1576703582459" ID="Freemind_Link_131676881" MODIFIED="1576703909916" TEXT="systemctl restart docker">
 <icon BUILTIN="full-4"/>
+</node>
+</node>
+<node CREATED="1576703670017" ID="Freemind_Link_261689548" MODIFIED="1583415004568" TEXT="Configura&#xe7;&#xe3;o &#xa;de certificado:">
+<node COLOR="#0000ff" CREATED="1576703507001" ID="Freemind_Link_1356985276" MODIFIED="1583415041836" TEXT="mkdir -p /etc/docker/certs.d/nome_registry">
+<icon BUILTIN="full-1"/>
+</node>
+<node COLOR="#000000" CREATED="1576703507001" ID="Freemind_Link_847651603" MODIFIED="1583415133195" TEXT="Adicionar o arquivo de certificado (extens&#xe3;o crt) na pasta acima, com o mesmo nome que a pasta.&#xa;Ex: /etc/docker/certs.d/registry.pje.redejt/registry.pje.redejt.crt">
+<icon BUILTIN="full-2"/>
+</node>
+<node COLOR="#0000ff" CREATED="1576703582459" ID="Freemind_Link_894573757" MODIFIED="1583415154186" TEXT="systemctl restart docker">
+<icon BUILTIN="full-3"/>
 </node>
 </node>
 </node>
@@ -148,6 +159,11 @@
 <icon BUILTIN="wizard"/>
 </node>
 </node>
+<node CREATED="1583414917668" ID="Freemind_Link_512393643" MODIFIED="1583414924827" TEXT="Pesquisar imagens no registry">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_268432044" MODIFIED="1583414941451" TEXT="docker search nomeimagem">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
 </node>
 <node CREATED="1563994368647" ID="_" MODIFIED="1563994372275" POSITION="right" TEXT="Dockerfile">
 <node CREATED="1563998221736" ID="Freemind_Link_368230737" MODIFIED="1568727208485" TEXT="Build">
@@ -174,9 +190,9 @@
 <icon BUILTIN="idea"/>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1487280853" MODIFIED="1563994428346" TEXT="MANTAINER">
-<node CREATED="1563994389535" ID="Freemind_Link_533571335" MODIFIED="1563994437355" TEXT="Indica o nome de quem mant&#xe9;m essa imagem"/>
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_618948832" MODIFIED="1563998834398" TEXT="Ex: MANTAINER Ubuntu">
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1487280853" MODIFIED="1583414482496" TEXT="LABEL">
+<node CREATED="1563994389535" ID="Freemind_Link_533571335" MODIFIED="1583414506924" TEXT="Especifica metadados para a imagem do container"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_618948832" MODIFIED="1583414536266" TEXT="Ex: LABEL maintainer &apos;Eben&#xe9;zer &lt;ebenezer.botelho@email.com&gt;&apos;">
 <icon BUILTIN="idea"/>
 </node>
 </node>
@@ -185,8 +201,25 @@
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1778474076" MODIFIED="1563998839038" TEXT="Ex: COPY . /var/www">
 <icon BUILTIN="idea"/>
 </node>
+<node CREATED="1583415207663" ID="Freemind_Link_1809642505" MODIFIED="1583415216162" TEXT="Aceita definir o user e group">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1374229439" MODIFIED="1583415258674" TEXT="Ex: COPY --chown=usuario:grupo . /var/www">
+<icon BUILTIN="idea"/>
+</node>
+</node>
 <node CREATED="1582138798847" ID="Freemind_Link_1333365113" MODIFIED="1582138837632" TEXT="Pode ser copiado arquivo de imagem &#xa;criada no pr&#xf3;prio Dockerfile">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_274944236" MODIFIED="1582138897534" TEXT="Ex: &#xa;FROM maven:3.6.0-jdk-8-alpine as builder &#xa;...&#xa;FROM jboss/wildfly EXPOSE 8080&#xa;COPY --from=builder target/projeto.war /opt/jboss/wildfly/standalone/deployments/">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_882437988" MODIFIED="1583414646286" TEXT="ADD">
+<node CREATED="1563994389535" ID="Freemind_Link_1245842606" MODIFIED="1583414666703" TEXT="Similar ao COPY, mas com suporte extendido a URLs"/>
+<node CREATED="1583414669535" ID="Freemind_Link_1532200723" MODIFIED="1583414678127" TEXT="Somente deve ser usado quando COPY n&#xe3;o for poss&#xed;vel"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_137226678" MODIFIED="1583415309740" TEXT="Ex: ADD http://example.com/big.tar.xz /usr/src/things/">
+<icon BUILTIN="idea"/>
+</node>
+<node CREATED="1583415207663" ID="Freemind_Link_69515511" MODIFIED="1583415216162" TEXT="Aceita definir o user e group">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1071951712" MODIFIED="1583415351066" TEXT="Ex: ADD --chown=usuario:grupo http://example.com/big.tar.xz /usr/src/things/">
 <icon BUILTIN="idea"/>
 </node>
 </node>
@@ -257,7 +290,7 @@
 <node CREATED="1568728793827" ID="Freemind_Link_1546283402" MODIFIED="1568728886715" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/docker_environment_build_args_overview.png&quot;&gt;"/>
 </node>
 <node CREATED="1568728032193" ID="Freemind_Link_1310152630" MODIFIED="1568728055838" TEXT="Para definir dinamicamente uma variavel de &#xa;ambiente conjugar o uso de ARG com ENV">
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1216640135" MODIFIED="1568728100091" TEXT="Ex: ARG uma_variavel&#xa;      ENV variavel_ambiente=$uma_variavel">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1216640135" MODIFIED="1583414604707" TEXT="Ex: ARG uma_variavel&#xa;      ENV variavel_ambiente=${uma_variavel}">
 <icon BUILTIN="idea"/>
 </node>
 </node>
@@ -267,6 +300,12 @@
 </node>
 </node>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1158506155" MODIFIED="1568727857940" TEXT="Ex: ENV PATH  $PATH:$JAVA_HOME/bin:$M2_HOME/bin">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_763589008" MODIFIED="1583414420773" TEXT="USER">
+<node CREATED="1563994389535" ID="Freemind_Link_95085555" MODIFIED="1583414443122" TEXT="Especifica qual usu&#xe1;rio ser&#xe1; usado para execu&#xe7;&#xe3;o do processo no container"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1676000668" MODIFIED="1583414459040" TEXT="Ex: USER www">
 <icon BUILTIN="idea"/>
 </node>
 </node>
