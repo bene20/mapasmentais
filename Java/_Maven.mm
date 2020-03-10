@@ -122,11 +122,11 @@
 </node>
 <node CREATED="1583783044397" ID="Freemind_Link_760870094" MODIFIED="1583783045578" TEXT="Users">
 <node CREATED="1583783047677" ID="Freemind_Link_1790826507" MODIFIED="1583783054762" TEXT="Criar usu&#xe1;rio de deploy associado &#xe0; role de deploy">
-<node CREATED="1583783067697" ID="Freemind_Link_260883416" MODIFIED="1583784322098" TEXT="Ex: deploy"/>
+<node CREATED="1583783067697" ID="Freemind_Link_260883416" MODIFIED="1583846938265" TEXT="Ex: deploy"/>
 </node>
 </node>
 </node>
-<node CREATED="1583783114158" ID="Freemind_Link_1078424053" MODIFIED="1583783270520" TEXT="Uploads de artefato">
+<node CREATED="1583783114158" ID="Freemind_Link_1078424053" MODIFIED="1583846988355" TEXT="Uploads&#xa;de artefato">
 <node CREATED="1583783119975" ID="Freemind_Link_242867620" MODIFIED="1583784235794" TEXT="Modificar pom.xml do projeto">
 <icon BUILTIN="full-1"/>
 <node CREATED="1583783332142" ID="Freemind_Link_1878158376" MODIFIED="1583784243785" TEXT="Definir a localiza&#xe7;&#xe3;o do reposit&#xf3;rio de releases">
@@ -154,7 +154,7 @@
 <node CREATED="1583783241808" ID="Freemind_Link_735657526" MODIFIED="1583783245660" TEXT="Comando: mvn deploy"/>
 </node>
 </node>
-<node CREATED="1583783114158" ID="Freemind_Link_638873313" MODIFIED="1583783275496" TEXT="Downloads de artefato">
+<node CREATED="1583783114158" ID="Freemind_Link_638873313" MODIFIED="1583846996548" TEXT="Downloads&#xa;de artefato">
 <node CREATED="1583783119975" ID="Freemind_Link_673429366" MODIFIED="1583783362609" TEXT="Modificar pom.xml do projeto">
 <icon BUILTIN="full-1"/>
 <node CREATED="1583783363250" ID="Freemind_Link_437811522" MODIFIED="1583783375540" TEXT="Definir as depend&#xea;ncias (tag dependency)"/>
@@ -163,6 +163,9 @@
 <icon BUILTIN="full-2"/>
 <node CREATED="1583783211167" ID="Freemind_Link_909629056" MODIFIED="1583783219962" TEXT="Arquivo ~/.m2/settings.xml"/>
 <node CREATED="1583783386388" ID="Freemind_Link_1406243695" MODIFIED="1583783399672" TEXT="Setar os mirrors apontando-os para o repo nexus"/>
+<node CREATED="1583784289753" ID="Freemind_Link_1992565018" MODIFIED="1583784290476" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1583784291093" ID="Freemind_Link_37425671" MODIFIED="1583846938255" TEXT="    &lt;mirror&gt;&#xa;      &lt;id&gt;trt10-public&lt;/id&gt;&#xa;      &lt;name&gt;TRT10 without ssl&lt;/name&gt;&#xa;      &lt;mirrorOf&gt;*&lt;/mirrorOf&gt;&#xa;      &lt;url&gt;http://localhost:8081/repository/trt10-public/&lt;/url&gt;&#xa;    &lt;/mirror&gt;&#xa;"/>
+</node>
 </node>
 <node CREATED="1583783234773" ID="Freemind_Link_63376488" MODIFIED="1583783410791" TEXT="Fazer o build">
 <icon BUILTIN="full-3"/>

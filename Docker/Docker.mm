@@ -91,6 +91,14 @@
 <node CREATED="1579194665444" ID="Freemind_Link_1727068978" MODIFIED="1579194674392" TEXT="Garante que o container sempre estar&#xe1; em execu&#xe7;&#xe3;o"/>
 <node CREATED="1579544042468" ID="Freemind_Link_1264175407" MODIFIED="1579544054793" TEXT="Levantar&#xe1; o container inclusive na reinicializa&#xe7;&#xe3;o do host"/>
 </node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1311055733" MODIFIED="1583858332674" TEXT="--volumes-from">
+<icon BUILTIN="flag"/>
+<node CREATED="1563998982186" ID="Freemind_Link_826194235" MODIFIED="1583858346344" TEXT="Monta os volumes de um outro container para o container atual"/>
+<node CREATED="1579194665444" ID="Freemind_Link_710290591" MODIFIED="1583858403055" TEXT="Ex: Vou subir o container A mas quero &#xa;montar os volumes do container B para A:&#xa;docker run [...] --volumes-from hash_do_container_B  A"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1355668689" MODIFIED="1583858426881" TEXT="Ex: docker run --volumes-from 777f7dc92da7 --volumes-from ba8c0c54f0f2:ro -i -t ubuntu pwd">
+<icon BUILTIN="idea"/>
+</node>
+</node>
 </node>
 </node>
 <node CREATED="1563998900515" ID="Freemind_Link_796061691" MODIFIED="1563998907799" TEXT="Carregar um container j&#xe1; existente">
