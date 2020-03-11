@@ -114,6 +114,11 @@
 <node CREATED="1583777183658" ID="Freemind_Link_132401872" MODIFIED="1583777204220" TEXT="Combina m&#xfa;ltiplos reposit&#xf3;rios em um &#xfa;nico"/>
 </node>
 </node>
+<node CREATED="1583932751979" ID="Freemind_Link_685745162" MODIFIED="1583932754073" TEXT="Backup">
+<node CREATED="1583932754372" ID="Freemind_Link_1959819219" MODIFIED="1583932759822" TEXT="https://help.sonatype.com/repomanager3/backup-and-restore">
+<icon BUILTIN="attach"/>
+</node>
+</node>
 <node CREATED="1583782869144" ID="Freemind_Link_194566657" MODIFIED="1583782871270" TEXT="Configura&#xe7;&#xe3;o">
 <node CREATED="1583782872060" ID="Freemind_Link_1327496745" MODIFIED="1583782876597" TEXT="Roles">
 <node CREATED="1583782877076" ID="Freemind_Link_1810293997" MODIFIED="1583782881253" TEXT="Criar role para deploy">
@@ -123,6 +128,23 @@
 <node CREATED="1583783044397" ID="Freemind_Link_760870094" MODIFIED="1583783045578" TEXT="Users">
 <node CREATED="1583783047677" ID="Freemind_Link_1790826507" MODIFIED="1583783054762" TEXT="Criar usu&#xe1;rio de deploy associado &#xe0; role de deploy">
 <node CREATED="1583783067697" ID="Freemind_Link_260883416" MODIFIED="1583846938265" TEXT="Ex: deploy"/>
+</node>
+</node>
+<node CREATED="1583931239177" ID="Freemind_Link_220533940" MODIFIED="1583931240271" TEXT="LDAP">
+<node CREATED="1583931245000" ID="Freemind_Link_1376815784" MODIFIED="1583931247148" TEXT="TRT10">
+<node CREATED="1583931255904" ID="Freemind_Link_1321195824" MODIFIED="1583931267285" TEXT="ldap://ldap.sde.trt10.jus.br"/>
+<node CREATED="1583931269755" ID="Freemind_Link_702255503" MODIFIED="1583931272403" TEXT="Port: 389"/>
+<node CREATED="1583931294288" ID="Freemind_Link_417824378" MODIFIED="1583931321124" TEXT="Search base DN: o=trt10"/>
+<node CREATED="1583931331280" ID="Freemind_Link_1605257964" MODIFIED="1583931344516" TEXT="Authentication method: An&#xf4;nimo"/>
+<node CREATED="1583931356360" ID="Freemind_Link_1937093182" MODIFIED="1583931364827" TEXT="User relative DN: ou=Usuarios"/>
+<node CREATED="1583931369382" ID="Freemind_Link_970034489" MODIFIED="1583931373035" TEXT="Use subtree: true"/>
+<node CREATED="1583931376568" ID="Freemind_Link_658697000" MODIFIED="1583931392766" TEXT="Object class: inetOrgPerson"/>
+<node CREATED="1583931403583" ID="Freemind_Link_1166801259" MODIFIED="1583931411988" TEXT="User ID attribute: uid"/>
+<node CREATED="1583931413144" ID="Freemind_Link_317827076" MODIFIED="1583931421845" TEXT="Real name attribute: cn"/>
+<node CREATED="1583931422998" ID="Freemind_Link_1437021483" MODIFIED="1583931433604" TEXT="Email attribute: mail"/>
+<node CREATED="1583931442511" ID="Freemind_Link_198396572" MODIFIED="1583931456468" TEXT="Map LDAP groups as roles: true"/>
+<node CREATED="1583931460543" ID="Freemind_Link_1452080802" MODIFIED="1583931468140" TEXT="Group type: Dynamic"/>
+<node CREATED="1583931472582" ID="Freemind_Link_1041164097" MODIFIED="1583931482241" TEXT="Group member of attribute: memberOf"/>
 </node>
 </node>
 </node>
