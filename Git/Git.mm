@@ -1,7 +1,7 @@
 <map version="0.8.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1553000049733" ID="Freemind_Link_683934292" LINK="../Mapas.mm" MODIFIED="1553774808576" TEXT="Git">
-<node CREATED="1553000786261" FOLDED="true" ID="Freemind_Link_1938373102" MODIFIED="1553000791041" POSITION="right" TEXT="Configura&#xe7;&#xe3;o">
+<node CREATED="1553000786261" ID="Freemind_Link_1938373102" MODIFIED="1553000791041" POSITION="right" TEXT="Configura&#xe7;&#xe3;o">
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_865563250" MODIFIED="1553000797001" TEXT="git init">
 <icon BUILTIN="wizard"/>
 <node CREATED="1553000483439" ID="Freemind_Link_641718298" MODIFIED="1553000806321" TEXT="Cria um reposit&#xf3;rio na pasta atual"/>
@@ -21,6 +21,21 @@
 <icon BUILTIN="flag"/>
 <node CREATED="1553001286930" ID="Freemind_Link_1648681665" MODIFIED="1553003641339" TEXT="O par&#xe2;metro --global, opcional, indica que essa configura&#xe7;&#xe3;o valer&#xe1; para todos os repos da m&#xe1;quina"/>
 </node>
+</node>
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1322278270" MODIFIED="1584465556287" TEXT="git config --global credential.helper &apos;cache --timeout=21600&apos;">
+<icon BUILTIN="wizard"/>
+<node CREATED="1553000483439" ID="Freemind_Link_1443620351" MODIFIED="1584465570568" TEXT="Configura o git para fazer cache da senha por um dia"/>
+</node>
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_884813835" MODIFIED="1584465609892" TEXT="git config --global http.proxy http://$PROXY_HOST:$PROXY_PORT">
+<icon BUILTIN="wizard"/>
+<node CREATED="1553000483439" ID="Freemind_Link_1960714904" MODIFIED="1584465621229" TEXT="Configura o proxy do git"/>
+</node>
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1969932558" MODIFIED="1584465655639" TEXT="git config --global http.sslverify false">
+<icon BUILTIN="wizard"/>
+<node CREATED="1553000483439" ID="Freemind_Link_1819000240" MODIFIED="1584465643727" TEXT="Configura o git para n&#xe3;o usar verifica&#xe7;&#xe3;o ssl"/>
+</node>
+<node CREATED="1584465731707" ID="Freemind_Link_1494283481" MODIFIED="1584465752292" TEXT="Adicionar epo remoto de push e fetch">
+<arrowlink DESTINATION="Freemind_Link_428930825" ENDARROW="Default" ENDINCLINATION="459;0;" ID="Freemind_Arrow_Link_891488892" STARTARROW="None" STARTINCLINATION="459;0;"/>
 </node>
 </node>
 <node CREATED="1553004297942" FOLDED="true" ID="Freemind_Link_1244511039" MODIFIED="1553004299073" POSITION="right" TEXT="Clone">
@@ -217,21 +232,21 @@
 <icon BUILTIN="flag"/>
 <node CREATED="1554819483933" ID="Freemind_Link_1449596346" MODIFIED="1554819750323" TEXT="Entra no modo de bisect"/>
 </node>
-<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1283075142" MODIFIED="1554819774517" TEXT="bad HEAD">
-<icon BUILTIN="flag"/>
-<node CREATED="1554819483933" ID="Freemind_Link_673779665" MODIFIED="1554819784605" TEXT="Indica ao bisect que o commit atual &#xe9; o ruim (HEAD)"/>
-</node>
-<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1656518362" MODIFIED="1554819799228" TEXT="good idDoCommit">
-<icon BUILTIN="flag"/>
-<node CREATED="1554819483933" ID="Freemind_Link_1525144350" MODIFIED="1554819814339" TEXT="Indica ao bisect que o commit indicado &#xe9; o bom"/>
-</node>
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_2371463" MODIFIED="1554819856959" TEXT="bad">
 <icon BUILTIN="flag"/>
 <node CREATED="1554819483933" ID="Freemind_Link_436825416" MODIFIED="1554819978637" TEXT="Marca o commit atual como &apos;bad&apos; e caminha para tr&#xe1;s na busca bin&#xe1;ria"/>
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1283075142" MODIFIED="1584464724477" TEXT="idDoCommit">
+<icon BUILTIN="flag"/>
+<node CREATED="1554819483933" ID="Freemind_Link_673779665" MODIFIED="1584464679921" TEXT="Indica ao bisect que o commit indicado &#xe9; ruim"/>
+</node>
 </node>
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_917620126" MODIFIED="1554819910683" TEXT="good">
 <icon BUILTIN="flag"/>
 <node CREATED="1554819483933" ID="Freemind_Link_315509079" MODIFIED="1554819993074" TEXT="Marca o commit atual como &apos;bad&apos; e caminha para frente na busca bin&#xe1;ria"/>
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1656518362" MODIFIED="1584464739167" TEXT="idDoCommit">
+<icon BUILTIN="flag"/>
+<node CREATED="1554819483933" ID="Freemind_Link_1525144350" MODIFIED="1554819814339" TEXT="Indica ao bisect que o commit indicado &#xe9; o bom"/>
+</node>
 </node>
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1861089202" MODIFIED="1554820239434" TEXT="log">
 <icon BUILTIN="flag"/>
@@ -240,6 +255,32 @@
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_818230108" MODIFIED="1554820144860" TEXT="reset">
 <icon BUILTIN="flag"/>
 <node CREATED="1554819483933" ID="Freemind_Link_1960775858" MODIFIED="1554820174994" TEXT="Sai do modo bisect e volta para o commit em que se estava antes do &apos;git bisect start&apos;"/>
+</node>
+<node CREATED="1584463751120" ID="Freemind_Link_251750173" MODIFIED="1584463751963" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1584463757098" ID="Freemind_Link_377204924" MODIFIED="1584463786863" TEXT="git bisect start">
+<icon BUILTIN="full-1"/>
+<node CREATED="1584463787777" ID="Freemind_Link_555688069" MODIFIED="1584463792429" TEXT="Inicio o modo bisect"/>
+</node>
+<node COLOR="#0000ff" CREATED="1584463757098" ID="Freemind_Link_749373904" MODIFIED="1584463875515" TEXT="git bisect goot idCoCommit">
+<icon BUILTIN="full-2"/>
+<node CREATED="1584463787777" ID="Freemind_Link_982512359" MODIFIED="1584463815891" TEXT="Indico um commit bom"/>
+<node CREATED="1584463846385" ID="Freemind_Link_1441573478" MODIFIED="1584463859254" TEXT="Se o commit atual for bom, pode-se omitir o idDoCommit"/>
+</node>
+<node COLOR="#0000ff" CREATED="1584463757098" ID="Freemind_Link_623664778" MODIFIED="1584463879519" TEXT="git bisect bad idCoCommit">
+<icon BUILTIN="full-3"/>
+<node CREATED="1584463787777" ID="Freemind_Link_18786406" MODIFIED="1584463843014" TEXT="Indico um commit ruim"/>
+<node CREATED="1584463846385" ID="Freemind_Link_678508385" MODIFIED="1584463867315" TEXT="Se o commit atual for ruim, pode-se omitir o idDoCommit"/>
+</node>
+<node CREATED="1584463921980" ID="Freemind_Link_1178016179" MODIFIED="1584463958864" TEXT="Agora o bisec vai ficar trocando as vers&#xf5;es e aguardando&#xa;vc informar, para cada uma delas, se o commit &#xe9; bom ou ruim">
+<icon BUILTIN="full-4"/>
+<node CREATED="1584463960151" ID="Freemind_Link_1254710044" MODIFIED="1584463985532" TEXT="Digite: &apos;git bisect good&apos; se o commit for bom"/>
+<node CREATED="1584463960151" ID="Freemind_Link_1851390308" MODIFIED="1584463996294" TEXT="Digite: &apos;git bisect bad&apos; se o commit for ruim"/>
+<node CREATED="1584464155928" ID="Freemind_Link_221912375" MODIFIED="1584464184556" TEXT="Quando terminar, o bisect dir&#xe1; qual foi o&#xa;primeiro commit que introduziu o erro"/>
+</node>
+<node COLOR="#0000ff" CREATED="1584463757098" ID="Freemind_Link_205149998" MODIFIED="1584464141283" TEXT="git bisect reset">
+<icon BUILTIN="full-5"/>
+<node CREATED="1584463787777" ID="Freemind_Link_187091280" MODIFIED="1584464145688" TEXT="Sai do modo bisect"/>
+</node>
 </node>
 </node>
 </node>
@@ -393,7 +434,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1553003892883" FOLDED="true" ID="Freemind_Link_910910030" MODIFIED="1553003897111" POSITION="right" TEXT="Remoto">
+<node CREATED="1553003892883" ID="Freemind_Link_910910030" MODIFIED="1553003897111" POSITION="right" TEXT="Remoto">
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_761149679" MODIFIED="1554820436898" TEXT="git remote">
 <icon BUILTIN="wizard"/>
 <node CREATED="1553000483439" ID="Freemind_Link_915509859" MODIFIED="1553003919398" TEXT="Indica quais reposit&#xf3;rios remotos este reposit&#xf3;rio tem"/>
@@ -407,13 +448,14 @@
 <node CREATED="1556195281322" ID="Freemind_Link_853419182" MODIFIED="1556195400826" TEXT="&quot;original&quot; &#xe9; o alias para o repo &lt;url_do_outro_repo&gt;"/>
 <node CREATED="1578936762244" ID="Freemind_Link_780036105" MODIFIED="1578936806507" TEXT="Um mesmo projeto pode, desta forma, estar vinculado a&#xa;dois gerenciadores de Git (Github e Gitlab, por exemplo)"/>
 </node>
-<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_428930825" MODIFIED="1579015838450" TEXT="set-url --add --push &lt;meu_alias&gt; &lt;url_do_repo&gt;">
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_428930825" MODIFIED="1584465752289" TEXT="set-url --add --push &lt;meu_alias&gt; &lt;url_do_repo&gt;">
 <icon BUILTIN="flag"/>
-<node CREATED="1553000483439" ID="Freemind_Link_1012965576" MODIFIED="1579015854242" TEXT="Adiciona um destino de push para oo repo remoto"/>
+<node CREATED="1553000483439" ID="Freemind_Link_1012965576" MODIFIED="1584375235029" TEXT="Adiciona um destino de push para o repo remoto"/>
 <node CREATED="1578936762244" ID="Freemind_Link_1429907552" MODIFIED="1579015870205" TEXT="Pode-se ter mais de um alvo"/>
 <node CREATED="1579015875055" ID="Freemind_Link_550396660" MODIFIED="1579015951089" TEXT="Se usar este comando, certifique-se de us&#xe1;-lo mais uma vez para&#xa;a url do repo original, pois na primeira execu&#xe7;&#xe3;o ele ser&#xe1; perdido">
 <icon BUILTIN="messagebox_warning"/>
 </node>
+<node COLOR="#0000ff" CREATED="1559668212726" ID="Freemind_Link_699014862" MODIFIED="1584375859915" TEXT="Ex: &#xa;git clone https://github.com/bene20/bashscripts.git&#xa;git remote set-url --add --push origin https://github.com/bene20/bashscripts.git&#xa;git remote set-url --add --push origin https://git.trt10.jus.br/ebenezer.botelho/bashscripts.git"/>
 </node>
 </node>
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_324530898" MODIFIED="1553015859778" TEXT="git push">
@@ -564,7 +606,7 @@
 <node CREATED="1574769535788" ID="Freemind_Link_1061857721" MODIFIED="1574769571428" TEXT="Ignora os arquivos relacionados no .gitignore"/>
 </node>
 </node>
-<node CREATED="1553601717608" FOLDED="true" ID="Freemind_Link_879415836" MODIFIED="1553602662887" POSITION="right" TEXT="Procedimentos &#xa;de trabalho">
+<node CREATED="1553601717608" ID="Freemind_Link_879415836" MODIFIED="1553602662887" POSITION="right" TEXT="Procedimentos &#xa;de trabalho">
 <node CREATED="1553601721418" ID="Freemind_Link_1508336398" MODIFIED="1553602706818" TEXT="Trabalhando em branch local&#xa;com commit de merge">
 <node CREATED="1553601731497" ID="Freemind_Link_1565746791" MODIFIED="1553601739609" TEXT="Criar a branch local">
 <icon BUILTIN="full-1"/>
