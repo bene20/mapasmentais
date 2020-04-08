@@ -41,10 +41,16 @@
 </node>
 </node>
 </node>
+<node CREATED="1586037049623" ID="Freemind_Link_753149170" MODIFIED="1586037052283" TEXT="Testes diversos">
+<node CREATED="1586037066782" ID="Freemind_Link_1516022817" MODIFIED="1586037073662" TEXT="https://labs.play-with-docker.com/">
+<icon BUILTIN="attach"/>
+</node>
+</node>
 </node>
 <node CREATED="1563998723358" ID="Freemind_Link_1353472525" MODIFIED="1563998725467" POSITION="right" TEXT="A&#xe7;&#xf5;es">
+<node CREATED="1586036574169" ID="Freemind_Link_1039136497" MODIFIED="1586036580439" TEXT="Container">
 <node CREATED="1563998741165" ID="Freemind_Link_1874998913" MODIFIED="1563998746387" TEXT="Baixar e carregar uma imagem">
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1511048246" MODIFIED="1563998811711" TEXT="docker run nomeimagem">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1511048246" MODIFIED="1586036628804" TEXT="docker container run nomeimagem">
 <icon BUILTIN="wizard"/>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_540447338" MODIFIED="1563999575749" TEXT="-p portalocal:portacontainer">
 <icon BUILTIN="flag"/>
@@ -77,8 +83,18 @@
 </node>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1796651428" MODIFIED="1564001017340" TEXT="--network nomerede">
 <icon BUILTIN="flag"/>
-<node CREATED="1563998982186" ID="Freemind_Link_37631227" MODIFIED="1564001068145" TEXT="Atribui uma rede ao seu container">
-<arrowlink DESTINATION="Freemind_Link_672566491" ENDARROW="Default" ENDINCLINATION="868;415;" ID="Freemind_Arrow_Link_386043444" STARTARROW="None" STARTINCLINATION="537;14;"/>
+<node CREATED="1563998982186" ID="Freemind_Link_37631227" MODIFIED="1564001068145" TEXT="Atribui uma rede ao seu container"/>
+<node CREATED="1585940263219" ID="Freemind_Link_1935842675" MODIFIED="1585940268270" TEXT="Redes pr&#xe9;-existentes">
+<node CREATED="1585940270084" ID="Freemind_Link_1616240670" MODIFIED="1585940271881" TEXT="none">
+<node CREATED="1585940281006" ID="Freemind_Link_1132293647" MODIFIED="1585940289873" TEXT="Desabilita toda comunica&#xe7;&#xe3;o de rede do container"/>
+</node>
+<node CREATED="1585940272569" ID="Freemind_Link_502592258" MODIFIED="1585940274454" TEXT="host">
+<node CREATED="1585940292021" ID="Freemind_Link_21194515" MODIFIED="1585940302691" TEXT="O container ter&#xe1; acesso direto &#xe0; interface de rede do host"/>
+</node>
+<node CREATED="1585940275138" ID="Freemind_Link_1591280535" MODIFIED="1585940276885" TEXT="bridge">
+<node CREATED="1585940304885" ID="Freemind_Link_459787641" MODIFIED="1585940316826" TEXT="Cria um isolamento entre a interface de rede do container e a do container"/>
+<node CREATED="1585940317373" ID="Freemind_Link_1003483952" MODIFIED="1585940324481" TEXT="Padr&#xe3;o quando n&#xe3;o especificado"/>
+</node>
 </node>
 </node>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_348571446" MODIFIED="1564001641108" TEXT="--rm">
@@ -102,17 +118,21 @@
 </node>
 </node>
 <node CREATED="1563998900515" ID="Freemind_Link_796061691" MODIFIED="1563998907799" TEXT="Carregar um container j&#xe1; existente">
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_78475208" MODIFIED="1563998917558" TEXT="docker start nomecontainer">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_78475208" MODIFIED="1586036633628" TEXT="docker container start nomecontainer">
 <icon BUILTIN="wizard"/>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_767680300" MODIFIED="1564077159331" TEXT="docker start -a -i ID_CONTAINER">
+<icon BUILTIN="wizard"/>
+<node CREATED="1564077118970" ID="Freemind_Link_1848801565" MODIFIED="1564077195755" TEXT="inicia o container com o id em quest&#xe3;o e integra&#xa;os terminais, permitindo intera&#xe7;&#xe3;o entre ambos"/>
 </node>
 </node>
 <node CREATED="1563998900515" ID="Freemind_Link_1657772041" MODIFIED="1563998934838" TEXT="Encerrar a execu&#xe7;&#xe3;o de um container">
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_382629805" MODIFIED="1563998938878" TEXT="docker stop nomecontainer">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_382629805" MODIFIED="1586036637483" TEXT="docker container stop nomecontainer">
 <icon BUILTIN="wizard"/>
 </node>
 </node>
 <node CREATED="1563998954053" ID="Freemind_Link_75558042" MODIFIED="1563998957229" TEXT="Listar containers">
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1206885543" MODIFIED="1563998962038" TEXT="docker ps">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1206885543" MODIFIED="1586036641923" TEXT="docker container ps">
 <icon BUILTIN="wizard"/>
 <node CREATED="1563998994777" ID="Freemind_Link_1095090671" MODIFIED="1563999000681" TEXT="Lista apenas os containers ativos"/>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_413979801" MODIFIED="1563998981553" TEXT="-a">
@@ -122,34 +142,38 @@
 </node>
 </node>
 <node CREATED="1563999006805" ID="Freemind_Link_1180671139" MODIFIED="1563999012446" TEXT="Remover todos os containers parados">
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1053129019" MODIFIED="1563999017663" TEXT="docker prune">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1053129019" MODIFIED="1586036645369" TEXT="docker container prune">
 <icon BUILTIN="wizard"/>
 </node>
 </node>
-<node CREATED="1563999057905" ID="Freemind_Link_1408322811" MODIFIED="1563999061241" TEXT="Administrar containers">
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1862027648" MODIFIED="1563999067518" TEXT="docker container">
-<icon BUILTIN="wizard"/>
-</node>
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1545175896" MODIFIED="1564077113721" TEXT="docker start ID_CONTAINER">
-<icon BUILTIN="wizard"/>
-<node CREATED="1564077118970" ID="Freemind_Link_1360826971" MODIFIED="1564077125531" TEXT="inicia o container com o id em quest&#xe3;o"/>
-</node>
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_767680300" MODIFIED="1564077159331" TEXT="docker start -a -i ID_CONTAINER">
-<icon BUILTIN="wizard"/>
-<node CREATED="1564077118970" ID="Freemind_Link_1848801565" MODIFIED="1564077195755" TEXT="inicia o container com o id em quest&#xe3;o e integra&#xa;os terminais, permitindo intera&#xe7;&#xe3;o entre ambos"/>
-</node>
-</node>
-<node CREATED="1563999057905" ID="Freemind_Link_1637303428" MODIFIED="1563999098093" TEXT="Administrar volumes">
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1452277168" MODIFIED="1563999102350" TEXT="docker volume">
+<node CREATED="1563999057905" ID="Freemind_Link_806852948" MODIFIED="1563999936952" TEXT="Exibir informa&#xe7;&#xf5;es de um container">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1680644605" MODIFIED="1586036874293" TEXT="docker container inspect CONTAINERID">
 <icon BUILTIN="wizard"/>
 </node>
 </node>
-<node CREATED="1563999057905" ID="Freemind_Link_308839781" MODIFIED="1563999111551" TEXT="Administrar imagens">
+</node>
+<node CREATED="1586036581298" ID="Freemind_Link_343859017" MODIFIED="1586036587964" TEXT="Imagem">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_128992638" MODIFIED="1563999114541" TEXT="docker image">
 <icon BUILTIN="wizard"/>
 </node>
+<node CREATED="1563999057905" ID="Freemind_Link_761790446" MODIFIED="1586036867238" TEXT="Exibir informa&#xe7;&#xf5;es de uma imagem">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1480959532" MODIFIED="1586036878283" TEXT="docker image inspect CONTAINERID">
+<icon BUILTIN="wizard"/>
 </node>
-<node CREATED="1563999057905" ID="Freemind_Link_1349876829" MODIFIED="1564000514015" TEXT="Administrar redes">
+</node>
+<node CREATED="1586038553757" ID="Freemind_Link_1203663429" MODIFIED="1586038560387" TEXT="Hist&#xf3;rico de comandos para cria&#xe7;&#xe3;o da imagem">
+<node CREATED="1586038516408" ID="Freemind_Link_1955562511" MODIFIED="1586038577049" TEXT="Mostra os comandos utilizados para criar a imagem(layer) especificada em rela&#xe7;&#xe3;o &#xe0; layer base (a da cl&#xe1;usula FROM de onde partiu a imagem)"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_279984031" MODIFIED="1586038541194" TEXT="docker history imagename">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
+</node>
+<node CREATED="1586036588207" ID="Freemind_Link_41107698" MODIFIED="1586036591043" TEXT="Volume">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1808803534" MODIFIED="1586036846045" TEXT="docker volume">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
+<node CREATED="1586036591321" ID="Freemind_Link_596144933" MODIFIED="1586036594400" TEXT="Network">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_980405446" MODIFIED="1564000521728" TEXT="docker network">
 <icon BUILTIN="wizard"/>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1611276416" MODIFIED="1564001965128" TEXT="create --driver bridge nomedarede">
@@ -160,11 +184,37 @@
 <icon BUILTIN="flag"/>
 <node CREATED="1563998982186" ID="Freemind_Link_1965713890" MODIFIED="1564002002479" TEXT="Lista todas as redes criadas no docker"/>
 </node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1659037979" MODIFIED="1585940798346" TEXT="connect nomerede nomecontainer">
+<icon BUILTIN="flag"/>
+<node CREATED="1563998982186" ID="Freemind_Link_183581161" MODIFIED="1585940827275" TEXT="Adiciona ao container nomecontainer&#xa;a conex&#xe3;o com a rede nomerede"/>
 </node>
 </node>
-<node CREATED="1563999057905" ID="Freemind_Link_806852948" MODIFIED="1563999936952" TEXT="Exibir informa&#xe7;&#xf5;es de um container">
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1680644605" MODIFIED="1563999950602" TEXT="docker inspect CONTAINERID">
+<node CREATED="1563999542614" ID="Freemind_Link_1535445831" MODIFIED="1564000029695" TEXT="Por padr&#xe3;o, todos os containers criados&#xa;j&#xe1; funcionam em uma mesma rede">
+<node CREATED="1564000014916" ID="Freemind_Link_1807101682" MODIFIED="1564000023398" TEXT="Essa rede &#xe9; criada pelo docker"/>
+<node CREATED="1564000399430" ID="Freemind_Link_1033350102" MODIFIED="1564000831089" TEXT="S&#xf3; se acessam as m&#xe1;quinas usando o IP"/>
+</node>
+<node CREATED="1564000435441" ID="Freemind_Link_672566491" MODIFIED="1564001655113" TEXT="Criando uma rede">
+<node CREATED="1564000808356" ID="Freemind_Link_1569290111" MODIFIED="1564000838127" TEXT="Permite que as m&#xe1;quinas se acessem via nome"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1270303842" MODIFIED="1564000676602" TEXT="">
+<icon BUILTIN="full-1"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1281630668" MODIFIED="1564000684396" TEXT="docker network create --driver bridge nomedarede">
 <icon BUILTIN="wizard"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1970880410" MODIFIED="1564000697362" TEXT="">
+<icon BUILTIN="full-2"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_649457164" MODIFIED="1564000702731" TEXT="docker run --name nomecontainer --network nomerede nomeimagem">
+<icon BUILTIN="wizard"/>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1015123014" MODIFIED="1564000743402" TEXT="Ex: docker run -it --name container1 --network minharede ubuntu">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+<node CREATED="1564077255246" ID="Freemind_Link_538223243" MODIFIED="1564077285535" TEXT="Ver o IP atribu&#xed;do ao container: executar no container">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1230415612" MODIFIED="1564077273983" TEXT="hostname -i">
+<icon BUILTIN="wizard"/>
+</node>
 </node>
 </node>
 <node CREATED="1583414917668" ID="Freemind_Link_512393643" MODIFIED="1583414924827" TEXT="Pesquisar imagens no registry">
@@ -189,6 +239,9 @@
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1742279028" MODIFIED="1568727302806" TEXT="docker build --build-arg nome_da_variavel=valor_padrao">
 <icon BUILTIN="wizard"/>
 </node>
+</node>
+<node CREATED="1586038676747" ID="Freemind_Link_1836840898" MODIFIED="1586038692432" TEXT="Pode-se passar uma url de um repo git no lugar de um path da m&#xe1;quina local">
+<icon BUILTIN="idea"/>
 </node>
 </node>
 <node CREATED="1563994383568" ID="Freemind_Link_1745228819" MODIFIED="1563998221016" TEXT="Comandos">
@@ -266,6 +319,7 @@
 </node>
 <node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_520954732" MODIFIED="1564003631035" TEXT="CMD">
 <node CREATED="1563994389535" ID="Freemind_Link_1206418010" MODIFIED="1564003643060" TEXT="Par&#xe2;metros extras para o entrypoint"/>
+<node CREATED="1586037968699" ID="Freemind_Link_1558642537" MODIFIED="1586037989713" TEXT="Pode ser substitu&#xed;do pelo &quot;command&quot; do docker-compose.yml"/>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1292768710" MODIFIED="1564003685116" TEXT="Ex: CMD [&quot;-g&quot;, &quot;daemon off;&quot;]">
 <icon BUILTIN="idea"/>
 </node>
@@ -318,6 +372,17 @@
 </node>
 </node>
 </node>
+<node CREATED="1586040494629" ID="Freemind_Link_968203153" MODIFIED="1586040501545" TEXT="Build multi-est&#xe1;gio">
+<node CREATED="1586041131713" ID="Freemind_Link_345383144" MODIFIED="1586041142860" TEXT="Pode-se usar imagens intermedi&#xe1;rias para se gerar a imagem final"/>
+<node CREATED="1586041153797" ID="Freemind_Link_1651615193" MODIFIED="1586041175972" TEXT="A imagem final ser&#xe1; a do &#xfa;ltimo &apos;FROM&apos; do Dockerfile"/>
+<node CREATED="1586041180674" ID="Freemind_Link_621540908" MODIFIED="1586041320586" TEXT="Pode-se copiar arquivos gerados &#xa;nas imagens anteriores">
+<node CREATED="1586041276823" ID="Freemind_Link_858384201" MODIFIED="1586041296471" TEXT="Necess&#xe1;rio atribuir alias aos containers anteriores"/>
+<node CREATED="1586041275188" ID="Freemind_Link_391075415" MODIFIED="1586041275741" TEXT=" via &quot;COPY --from=aliasDeterminado caminho_no_container_do_alias caminho_no_container_atual"/>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_334815876" MODIFIED="1586041119420" TEXT="Ex: &#xa;FROM maven:latest AS appserver&#xa;WORKDIR /usr/src/atsea&#xa;COPY pom.xml .&#xa;RUN mvn -B -f pom.xml -s /usr/share/maven/ref/docker-settings.xml dependency:resolve&#xa;COPY . .&#xa;RUN mvn -B -s /usr/share/maven/ref/docker-settings.xml package -DskipTests&#xa;&#xa;FROM java:8-jdk-alpine AS production&#xa;WORKDIR /app&#xa;COPY --from=appserver /usr/src/atsea/target/atsea-0.0.1-SNAPSHOT.jar .&#xa;ENTRYPOINT [&quot;java&quot;, &quot;-jar&quot;, &quot;/app/atsea-0.0.1-SNAPSHOT.jar&quot;]&#xa;CMD [&quot;--spring.profiles.active=postgres&quot;]">
+<icon BUILTIN="idea"/>
+</node>
+</node>
 </node>
 <node CREATED="1564003157733" FOLDED="true" ID="Freemind_Link_95353128" MODIFIED="1568728858641" POSITION="right" TEXT="Docker compose">
 <node CREATED="1564003164413" ID="Freemind_Link_332229" MODIFIED="1564003171627" TEXT="Usa o padr&#xe3;o yaml">
@@ -331,6 +396,11 @@
 </node>
 <node CREATED="1564074518658" ID="Freemind_Link_609261117" MODIFIED="1564074527235" TEXT="&apos;-&apos; indica array no yaml"/>
 </node>
+<node CREATED="1586038451439" ID="Freemind_Link_1966250928" MODIFIED="1586038452185" TEXT="docker-compose.override.yml">
+<node CREATED="1586038406045" ID="Freemind_Link_1228741223" MODIFIED="1586038481121" TEXT="sobrescreve o &quot;docker-compose.yml&quot; no que tiver sido &#xa;declarado. O restante vale como est&#xe1; no docker-compose">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
 <node CREATED="1564074095905" ID="Freemind_Link_1246829250" MODIFIED="1564074097903" TEXT="Comandos">
 <node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1980060614" MODIFIED="1564074110014" TEXT="version">
 <node CREATED="1563994389535" ID="Freemind_Link_483413953" MODIFIED="1564074121798" TEXT="Indica a vers&#xe3;o do Docker compose a ser utilizada"/>
@@ -338,7 +408,7 @@
 <icon BUILTIN="idea"/>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_172018679" MODIFIED="1564074383781" TEXT="networks">
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_172018679" MODIFIED="1586037587617" TEXT="networks">
 <node CREATED="1563994389535" ID="Freemind_Link_1513084681" MODIFIED="1564074396772" TEXT="Indica a cria&#xe7;&#xe3;o de redes para os containers"/>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_568575165" MODIFIED="1564074436475" TEXT="Ex:&#xa;networks:&#xa;  production-network:&#xa;    driver: bridge">
 <icon BUILTIN="idea"/>
@@ -439,8 +509,20 @@
 <node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1199250393" MODIFIED="1569014496035" TEXT="depends_on">
 <node CREATED="1568727361188" ID="Freemind_Link_944712442" MODIFIED="1568727365723" TEXT="=&gt;">
 <node CREATED="1563994389535" ID="Freemind_Link_61227076" MODIFIED="1569014522748" TEXT="Indica que este servi&#xe7;o tem outro como depend&#xea;ncia"/>
+<node CREATED="1586037610999" ID="Freemind_Link_1846723039" MODIFIED="1586037635905" TEXT="Ao subir um container, caso ele dependa de outro, esse outro tamb&#xe9;m &#xe9; levantado. Isso flui recursivamente"/>
 <node CREATED="1569014529185" ID="Freemind_Link_279258597" MODIFIED="1569014541194" TEXT="Se baseia no nome do servi&#xe7;o referenciado"/>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_744656040" MODIFIED="1569014561883" TEXT="Ex: depends_on: nome_do_servico">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1589951795" MODIFIED="1586037503329" TEXT="networks">
+<node CREATED="1568727361188" ID="Freemind_Link_616402851" MODIFIED="1568727365723" TEXT="=&gt;">
+<node CREATED="1563994389535" ID="Freemind_Link_775311539" MODIFIED="1586037519958" TEXT="Declara as redes em que o container estar&#xe1; conectado"/>
+<node CREATED="1586037561618" ID="Freemind_Link_1433748896" MODIFIED="1586037587619" TEXT="As redes devem ter sido declaradas na se&#xe7;&#xe3;o &apos;networks&apos; raiz">
+<arrowlink DESTINATION="Freemind_Link_172018679" ENDARROW="Default" ENDINCLINATION="993;0;" ID="Freemind_Arrow_Link_760945075" STARTARROW="None" STARTINCLINATION="993;0;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_323570270" MODIFIED="1586037555760" TEXT="Ex: networks:&#xa;        - rede1&#xa;        - rede2">
 <icon BUILTIN="idea"/>
 </node>
 </node>
@@ -480,6 +562,23 @@
 <icon BUILTIN="wizard"/>
 </node>
 </node>
+<node CREATED="1564075595012" ID="Freemind_Link_1134126046" MODIFIED="1586038199150" TEXT="Carrega &apos;n&apos; inst&#xe2;ncias de um service">
+<node CREATED="1586038172787" ID="Freemind_Link_1716268421" MODIFIED="1586038185935" TEXT="Note que um service &#xe9; um container declarado no docker-compose.yml"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1079833653" MODIFIED="1586038165847" TEXT="docker-compose --scale nomeservice=n">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
+<node CREATED="1564075595012" ID="Freemind_Link_1996204801" MODIFIED="1586038324634" TEXT="Listar os logs dos containers">
+<node CREATED="1586038325563" ID="Freemind_Link_147851986" MODIFIED="1586038328064" TEXT="Em tempo real"/>
+<node CREATED="1586038328408" ID="Freemind_Link_1235039884" MODIFIED="1586038336071" TEXT="Identifica qual log &#xe9; de qual service"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1830597506" MODIFIED="1586038305184" TEXT="docker-compose logs -t -f">
+<icon BUILTIN="wizard"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_757574540" MODIFIED="1586038365653" TEXT="nomeService">
+<icon BUILTIN="flag"/>
+<node CREATED="1563998982186" ID="Freemind_Link_1071059130" MODIFIED="1586038379226" TEXT="Restringe a exbibi&#xe7;&#xe3;o de logs ao container especificado"/>
+</node>
+</node>
+</node>
 </node>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_587520050" MODIFIED="1564075527385" TEXT="Ex:">
 <icon BUILTIN="idea"/>
@@ -505,37 +604,6 @@
 <node CREATED="1563998000276" ID="Freemind_Link_984028797" MODIFIED="1563998002302" TEXT="Pull">
 <node CREATED="1563998003450" ID="Freemind_Link_1553819539" MODIFIED="1563998385274" TEXT="Baixa uma imagem do Docker Hub"/>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1009378868" MODIFIED="1563998885151" TEXT="docker pull username/imagename">
-<icon BUILTIN="wizard"/>
-</node>
-</node>
-</node>
-<node CREATED="1563999538674" ID="Freemind_Link_1425538613" MODIFIED="1563999542203" POSITION="right" TEXT="Redes">
-<node CREATED="1563999542614" ID="Freemind_Link_1535445831" MODIFIED="1564000029695" TEXT="Por padr&#xe3;o, todos os containers criados&#xa;j&#xe1; funcionam em uma mesma rede">
-<node CREATED="1564000014916" ID="Freemind_Link_1807101682" MODIFIED="1564000023398" TEXT="Essa rede &#xe9; criada pelo docker"/>
-<node CREATED="1564000399430" ID="Freemind_Link_1033350102" MODIFIED="1564000831089" TEXT="S&#xf3; se acessam as m&#xe1;quinas usando o IP"/>
-</node>
-<node CREATED="1564000435441" ID="Freemind_Link_672566491" MODIFIED="1564001655113" TEXT="Criando uma rede">
-<node CREATED="1564000808356" ID="Freemind_Link_1569290111" MODIFIED="1564000838127" TEXT="Permite que as m&#xe1;quinas se acessem via nome">
-<arrowlink COLOR="#fb1cc5" DESTINATION="Freemind_Link_1033350102" ENDARROW="Default" ENDINCLINATION="112;0;" ID="Freemind_Arrow_Link_1346041761" STARTARROW="Default" STARTINCLINATION="112;0;"/>
-</node>
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1270303842" MODIFIED="1564000676602" TEXT="">
-<icon BUILTIN="full-1"/>
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1281630668" MODIFIED="1564000684396" TEXT="docker network create --driver bridge nomedarede">
-<icon BUILTIN="wizard"/>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1970880410" MODIFIED="1564000697362" TEXT="">
-<icon BUILTIN="full-2"/>
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_649457164" MODIFIED="1564000702731" TEXT="docker run --name nomecontainer --network nomerede nomeimagem">
-<icon BUILTIN="wizard"/>
-</node>
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1015123014" MODIFIED="1564000743402" TEXT="Ex: docker run -it --name container1 --network minharede ubuntu">
-<icon BUILTIN="idea"/>
-</node>
-</node>
-</node>
-<node CREATED="1564077255246" ID="Freemind_Link_538223243" MODIFIED="1564077285535" TEXT="Ver o IP atribu&#xed;do ao container: executar no container">
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1230415612" MODIFIED="1564077273983" TEXT="hostname -i">
 <icon BUILTIN="wizard"/>
 </node>
 </node>

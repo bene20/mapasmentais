@@ -70,7 +70,7 @@
 <node CREATED="1554816200010" ID="Freemind_Link_938335308" MODIFIED="1554816219389" TEXT="Atualiza o stage e a working directory"/>
 </node>
 </node>
-<node CREATED="1553000895340" FOLDED="true" ID="Freemind_Link_2401123" MODIFIED="1553000897632" POSITION="right" TEXT="Consultas">
+<node CREATED="1553000895340" ID="Freemind_Link_2401123" MODIFIED="1553000897632" POSITION="right" TEXT="Consultas">
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_498123252" MODIFIED="1553000902888" TEXT="git ls-files">
 <icon BUILTIN="wizard"/>
 <node CREATED="1553000483439" ID="Freemind_Link_1748635380" MODIFIED="1553000912752" TEXT="Lista os arquivos versionados pelo git"/>
@@ -144,6 +144,9 @@
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_995935426" MODIFIED="1566312714884" TEXT=" git for-each-ref --format=&quot;%(refname:short) %(push:track)&quot; refs/heads">
 <icon BUILTIN="wizard"/>
 <node CREATED="1553000483439" ID="Freemind_Link_484611105" MODIFIED="1566312729814" TEXT="Lista das branches com push pendente"/>
+</node>
+<node CREATED="1585241879422" ID="Freemind_Link_291981386" MODIFIED="1585241881749" TEXT="API">
+<node CREATED="1585241914338" ID="Freemind_Link_1473165183" LINK="../Gitlab/Gitlab.mm" MODIFIED="1585241941727" TEXT="Ver mapa do GitLab para API do Gitlab"/>
 </node>
 </node>
 <node CREATED="1553001048419" FOLDED="true" ID="Freemind_Link_1252739637" MODIFIED="1553001062424" POSITION="right" TEXT="Adicionar itens">
@@ -434,7 +437,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1553003892883" ID="Freemind_Link_910910030" MODIFIED="1553003897111" POSITION="right" TEXT="Remoto">
+<node CREATED="1553003892883" FOLDED="true" ID="Freemind_Link_910910030" MODIFIED="1553003897111" POSITION="right" TEXT="Remoto">
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_761149679" MODIFIED="1554820436898" TEXT="git remote">
 <icon BUILTIN="wizard"/>
 <node CREATED="1553000483439" ID="Freemind_Link_915509859" MODIFIED="1553003919398" TEXT="Indica quais reposit&#xf3;rios remotos este reposit&#xf3;rio tem"/>
@@ -527,7 +530,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1554811725334" ID="Freemind_Link_931340485" MODIFIED="1554811728168" POSITION="right" TEXT="Resets">
+<node CREATED="1554811725334" FOLDED="true" ID="Freemind_Link_931340485" MODIFIED="1554811728168" POSITION="right" TEXT="Resets">
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_465375070" MODIFIED="1553607301551" TEXT="git checkout">
 <icon BUILTIN="wizard"/>
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_625984500" MODIFIED="1554811738078" TEXT="nomeDoArquivo">
@@ -587,7 +590,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1553601385660" ID="Freemind_Link_622410571" MODIFIED="1553601388279" POSITION="right" TEXT="Ferramentas">
+<node CREATED="1553601385660" FOLDED="true" ID="Freemind_Link_622410571" MODIFIED="1553601388279" POSITION="right" TEXT="Ferramentas">
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_617972534" MODIFIED="1553601403142" TEXT="git mergetool --tool-help">
 <icon BUILTIN="wizard"/>
 <node CREATED="1553004040163" ID="Freemind_Link_811461154" MODIFIED="1553601416749" TEXT="Exibe uma lista com as ferramentas de merge dispon&#xed;veis"/>
@@ -606,7 +609,7 @@
 <node CREATED="1574769535788" ID="Freemind_Link_1061857721" MODIFIED="1574769571428" TEXT="Ignora os arquivos relacionados no .gitignore"/>
 </node>
 </node>
-<node CREATED="1553601717608" ID="Freemind_Link_879415836" MODIFIED="1553602662887" POSITION="right" TEXT="Procedimentos &#xa;de trabalho">
+<node CREATED="1553601717608" FOLDED="true" ID="Freemind_Link_879415836" MODIFIED="1553602662887" POSITION="right" TEXT="Procedimentos &#xa;de trabalho">
 <node CREATED="1553601721418" ID="Freemind_Link_1508336398" MODIFIED="1553602706818" TEXT="Trabalhando em branch local&#xa;com commit de merge">
 <node CREATED="1553601731497" ID="Freemind_Link_1565746791" MODIFIED="1553601739609" TEXT="Criar a branch local">
 <icon BUILTIN="full-1"/>

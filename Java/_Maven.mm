@@ -14,8 +14,17 @@
 <node CREATED="1575574466927" ID="Freemind_Link_589411740" MODIFIED="1575574503568" TEXT="Ex: mvn exec:help"/>
 </node>
 <node COLOR="#0000ff" CREATED="1575574418093" ID="Freemind_Link_799635344" MODIFIED="1575574431447" TEXT="mvn">
-<node COLOR="#0000ff" CREATED="1575574418093" ID="Freemind_Link_26452317" MODIFIED="1575574535857" TEXT="--settings &lt;filename&gt;">
+<node COLOR="#0000ff" CREATED="1575574418093" ID="Freemind_Link_26452317" MODIFIED="1586038908468" TEXT="-s | --settings &lt;filename&gt;">
 <node CREATED="1575574536550" ID="Freemind_Link_1223019557" MODIFIED="1575574551001" TEXT="For&#xe7;a maven a usar um arquivo de configura&#xe7;&#xf5;es espec&#xed;fico"/>
+</node>
+<node COLOR="#0000ff" CREATED="1575574418093" ID="Freemind_Link_1921713074" MODIFIED="1586038982009" TEXT="-B | --batch-mode">
+<node CREATED="1575574536550" ID="Freemind_Link_1751591644" MODIFIED="1586038999451" TEXT="Executa em modo n&#xe3;o interativo (modo batch ) (sem exibi&#xe7;&#xe3;o das cores)"/>
+</node>
+<node COLOR="#0000ff" CREATED="1575574418093" ID="Freemind_Link_760715401" MODIFIED="1586039112409" TEXT="-f | --file &lt;arg&gt;">
+<node CREATED="1575574536550" ID="Freemind_Link_316552919" MODIFIED="1586039098823" TEXT="For&#xe7;a o uso de um pom.xml espec&#xed;fico"/>
+</node>
+<node COLOR="#0000ff" CREATED="1575574418093" ID="Freemind_Link_1329850712" MODIFIED="1586324657945" TEXT="-Dmaven.wagon.http.ssl.insecure=true">
+<node CREATED="1575574536550" ID="Freemind_Link_1031321467" MODIFIED="1586324678757" TEXT="Instrui o maven a ignorar problemas de certificado"/>
 </node>
 </node>
 </node>
@@ -23,7 +32,7 @@
 <node CREATED="1575574678611" ID="Freemind_Link_821896362" MODIFIED="1575574683130" TEXT="https://maven.apache.org/plugins/index.html">
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1575574185200" FOLDED="true" ID="Freemind_Link_1583955425" MODIFIED="1575574186749" TEXT="exec">
+<node COLOR="#0033ff" CREATED="1575574185200" ID="Freemind_Link_1583955425" MODIFIED="1586039466890" TEXT="exec">
 <node CREATED="1575574188001" ID="Freemind_Link_885082661" MODIFIED="1575574198701" TEXT="Configurar a execu&#xe7;&#xe3;o de um jar">
 <node CREATED="1575574199634" ID="Freemind_Link_1073070271" MODIFIED="1575574200666" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1575574227257" ID="Freemind_Link_359842227" MODIFIED="1575574332564" TEXT="&lt;plugin&gt;&#xa;    &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;&#xa;    &lt;artifactId&gt;exec-maven-plugin&lt;/artifactId&gt;&#xa;    &lt;version&gt;1.1.1&lt;/version&gt;&#xa;    &lt;executions&gt;&#xa;        &lt;execution&gt;&#xa;            &lt;phase&gt;exec&lt;/phase&gt;&#xa;            &lt;goals&gt;&#xa;                &lt;goal&gt;exec&lt;/goal&gt;&#xa;            &lt;/goals&gt;&#xa;        &lt;/execution&gt;&#xa;    &lt;/executions&gt;&#xa;    &lt;configuration&gt;&#xa;        &lt;executable&gt;java&lt;/executable&gt;&#xa;        &lt;arguments&gt;&#xa;            &lt;argument&gt;-jar&lt;/argument&gt;&#xa;            &lt;argument&gt;target/pje.jar&lt;/argument&gt;&#xa;        &lt;/arguments&gt;&#xa;    &lt;/configuration&gt;&#xa;&lt;/plugin&gt;"/>
@@ -33,27 +42,27 @@
 </node>
 </node>
 <node CREATED="1575575361478" ID="Freemind_Link_1603415629" MODIFIED="1575575366047" TEXT="Goals">
-<node CREATED="1575575366694" ID="Freemind_Link_752689923" MODIFIED="1575575367891" TEXT="exec"/>
-<node CREATED="1575575368349" ID="Freemind_Link_749321662" MODIFIED="1575575369592" TEXT="help"/>
+<node COLOR="#0033ff" CREATED="1575575366694" ID="Freemind_Link_752689923" MODIFIED="1586039470790" TEXT="exec"/>
+<node COLOR="#0033ff" CREATED="1575575368349" ID="Freemind_Link_749321662" MODIFIED="1586039472747" TEXT="help"/>
 </node>
 </node>
-<node CREATED="1575575354164" ID="Freemind_Link_1963798231" MODIFIED="1575575356183" TEXT="javadoc">
+<node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_1963798231" MODIFIED="1586039444546" TEXT="javadoc">
 <node CREATED="1575575372600" ID="Freemind_Link_1501662763" MODIFIED="1575575374443" TEXT="Goals">
-<node CREATED="1575575376091" ID="Freemind_Link_232659922" MODIFIED="1575575377698" TEXT="javadoc">
+<node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_232659922" MODIFIED="1586039458023" TEXT="javadoc">
 <node CREATED="1575575378349" ID="Freemind_Link_1636731647" MODIFIED="1575575388947" TEXT="Gera o javadoc para o projeto"/>
 </node>
-<node CREATED="1575575396099" ID="Freemind_Link_1703413505" MODIFIED="1575575405663" TEXT="jar">
+<node COLOR="#0033ff" CREATED="1575575396099" ID="Freemind_Link_1703413505" MODIFIED="1586039460358" TEXT="jar">
 <node CREATED="1575575406879" ID="Freemind_Link_1685498075" MODIFIED="1575575417874" TEXT="Cria um arquivo jar com o javadoc do projeto"/>
 </node>
-<node CREATED="1575575441517" ID="Freemind_Link_94681092" MODIFIED="1575575442987" TEXT="fix">
+<node COLOR="#0033ff" CREATED="1575575441517" ID="Freemind_Link_94681092" MODIFIED="1586039462370" TEXT="fix">
 <node CREATED="1575575443363" ID="Freemind_Link_422824881" MODIFIED="1575575472272" TEXT="Ferramenta iterativa para fazer corre&#xe7;&#xf5;es na documenta&#xe7;&#xe3;o javadoc"/>
 </node>
 </node>
 </node>
-<node CREATED="1575575497828" ID="Freemind_Link_162010479" MODIFIED="1575575500142" TEXT="archetype">
+<node COLOR="#0033ff" CREATED="1575575497828" ID="Freemind_Link_162010479" MODIFIED="1586039441694" TEXT="archetype">
 <node CREATED="1575575502812" ID="Freemind_Link_1633944322" MODIFIED="1575575521086" TEXT="Gera novos projetos segundo um archetype definido"/>
 <node CREATED="1575575540525" ID="Freemind_Link_1879685663" MODIFIED="1575575541528" TEXT="Goals">
-<node CREATED="1575575542163" ID="Freemind_Link_1594475117" MODIFIED="1575575544357" TEXT="generate">
+<node COLOR="#0033ff" CREATED="1575575542163" ID="Freemind_Link_1594475117" MODIFIED="1586039448168" TEXT="generate">
 <node CREATED="1575575554298" ID="Freemind_Link_1705256202" MODIFIED="1575575564823" TEXT="Gera um novo projeto iterativamente">
 <node CREATED="1575576176072" ID="Freemind_Link_1074320308" MODIFIED="1575576200883" TEXT="A lista dos archetypes dispon&#xed;veis ser&#xe1; disponibilizada"/>
 </node>
@@ -80,6 +89,22 @@
 <node COLOR="#0000ff" CREATED="1575575753002" ID="Freemind_Link_1871677825" MODIFIED="1575576003395" TEXT="Ex: mvn archetype:generate -DarchetypeGroupId=br.com.meu.dominio"/>
 </node>
 </node>
+</node>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1586039266241" ID="Freemind_Link_1273951239" MODIFIED="1586039438388" TEXT="dependency">
+<node CREATED="1586039659257" ID="Freemind_Link_1581670270" MODIFIED="1586039664338" TEXT="http://maven.apache.org/plugins/maven-dependency-plugin/index.html">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1586039270980" ID="Freemind_Link_277687955" MODIFIED="1586039272657" TEXT="Goals">
+<node COLOR="#0033ff" CREATED="1586039274872" ID="Freemind_Link_1704055794" MODIFIED="1586039450779" TEXT="resolve">
+<node CREATED="1586039298692" ID="Freemind_Link_1028262941" MODIFIED="1586039308877" TEXT="Resolve todas as depend&#xea;ncias de um projeto com o reposit&#xf3;rio"/>
+</node>
+<node COLOR="#0033ff" CREATED="1586039274872" ID="Freemind_Link_165853281" MODIFIED="1586039629940" TEXT="tree">
+<node CREATED="1586039298692" ID="Freemind_Link_267516645" MODIFIED="1586039639425" TEXT="Exibe a &#xe1;rvore de depend&#xea;ncias do projeto"/>
+</node>
+<node COLOR="#0033ff" CREATED="1586039274872" ID="Freemind_Link_136210012" MODIFIED="1586039745118" TEXT="go-offline">
+<node CREATED="1586039298692" ID="Freemind_Link_1094584831" MODIFIED="1586039824684" TEXT="Resolve todas as depend&#xea;ncias de um projeto com o reposit&#xf3;rio, &#xa;incluindo plugins e reports e suas depend&#xea;ncias recursivamente"/>
 </node>
 </node>
 </node>
@@ -148,7 +173,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1583783114158" ID="Freemind_Link_1078424053" MODIFIED="1583846988355" TEXT="Uploads&#xa;de artefato">
+<node CREATED="1583783114158" ID="Freemind_Link_1078424053" MODIFIED="1586040398088" TEXT="Uploads de artefatos&#xa;para o nexus">
 <node CREATED="1583783119975" ID="Freemind_Link_242867620" MODIFIED="1583784235794" TEXT="Modificar pom.xml do projeto">
 <icon BUILTIN="full-1"/>
 <node CREATED="1583783332142" ID="Freemind_Link_1878158376" MODIFIED="1583784243785" TEXT="Definir a localiza&#xe7;&#xe3;o do reposit&#xf3;rio de releases">
@@ -176,7 +201,7 @@
 <node CREATED="1583783241808" ID="Freemind_Link_735657526" MODIFIED="1583783245660" TEXT="Comando: mvn deploy"/>
 </node>
 </node>
-<node CREATED="1583783114158" ID="Freemind_Link_638873313" MODIFIED="1583846996548" TEXT="Downloads&#xa;de artefato">
+<node CREATED="1583783114158" ID="Freemind_Link_638873313" MODIFIED="1586040411966" TEXT="Downloads de &#xa;artefatos do nexus">
 <node CREATED="1583783119975" ID="Freemind_Link_673429366" MODIFIED="1583783362609" TEXT="Modificar pom.xml do projeto">
 <icon BUILTIN="full-1"/>
 <node CREATED="1583783363250" ID="Freemind_Link_437811522" MODIFIED="1583783375540" TEXT="Definir as depend&#xea;ncias (tag dependency)"/>
