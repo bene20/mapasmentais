@@ -112,7 +112,7 @@
 <node CREATED="1583775083679" ID="Freemind_Link_1407337968" MODIFIED="1583775085572" POSITION="right" TEXT="Nexus">
 <node CREATED="1583775107310" ID="Freemind_Link_772301783" MODIFIED="1583775111178" TEXT="Docker">
 <node CREATED="1583775112167" ID="Freemind_Link_1582618485" MODIFIED="1583775141416" TEXT="docker run -d -p 8081:8081 --name nexus -v nexus-data:/nexus-data sonatype/nexus3"/>
-<node CREATED="1583775527038" ID="Freemind_Link_1217327943" MODIFIED="1583779074425" TEXT="Senha inicial:">
+<node CREATED="1583775527038" ID="Freemind_Link_1217327943" MODIFIED="1586814044255" TEXT="Senha inicial:">
 <node CREATED="1583775530156" ID="Freemind_Link_120274724" MODIFIED="1583775537697" TEXT="Arquivo /nexus-data/admin.password">
 <node CREATED="1583779084297" ID="Freemind_Link_1629958570" MODIFIED="1583779086749" TEXT="No container"/>
 <node CREATED="1583779087458" ID="Freemind_Link_26302447" MODIFIED="1583779098712" TEXT="A senha est&#xe1; em aberto (n&#xe3;o &#xe9; um hash da senha)"/>
@@ -151,8 +151,22 @@
 </node>
 </node>
 <node CREATED="1583783044397" ID="Freemind_Link_760870094" MODIFIED="1583783045578" TEXT="Users">
+<node CREATED="1586813666416" ID="Freemind_Link_1701644382" MODIFIED="1586813668450" TEXT="deploy">
 <node CREATED="1583783047677" ID="Freemind_Link_1790826507" MODIFIED="1583783054762" TEXT="Criar usu&#xe1;rio de deploy associado &#xe0; role de deploy">
 <node CREATED="1583783067697" ID="Freemind_Link_260883416" MODIFIED="1583846938265" TEXT="Ex: deploy"/>
+</node>
+<node CREATED="1586813694814" ID="Freemind_Link_1019976453" MODIFIED="1586813702333" TEXT="Privil&#xe9;gio recomendado:">
+<node CREATED="1586813703038" ID="Freemind_Link_1866587427" MODIFIED="1586813732673" TEXT="nx-repository-view-*-*-*"/>
+</node>
+</node>
+<node CREATED="1586813957987" ID="Freemind_Link_1468068933" MODIFIED="1586813959487" TEXT="admin">
+<node CREATED="1586813989020" ID="Freemind_Link_1386189292" MODIFIED="1586813993470" TEXT="J&#xe1; vem criado com o sistema"/>
+<node CREATED="1586814028679" ID="Freemind_Link_1734926990" MODIFIED="1586814055752" TEXT="Senha inicial">
+<arrowlink COLOR="#e8e255" DESTINATION="Freemind_Link_1217327943" ENDARROW="Default" ENDINCLINATION="404;0;" ID="Freemind_Arrow_Link_725862740" STARTARROW="None" STARTINCLINATION="404;0;"/>
+</node>
+<node CREATED="1586813694814" ID="Freemind_Link_905817045" MODIFIED="1586813702333" TEXT="Privil&#xe9;gio recomendado:">
+<node CREATED="1586813703038" ID="Freemind_Link_1207084195" MODIFIED="1586813984400" TEXT="nx-all"/>
+</node>
 </node>
 </node>
 <node CREATED="1583931239177" ID="Freemind_Link_220533940" MODIFIED="1583931240271" TEXT="LDAP">

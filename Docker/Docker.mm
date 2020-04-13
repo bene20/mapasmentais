@@ -348,7 +348,7 @@
 <icon BUILTIN="idea"/>
 </node>
 </node>
-<node CREATED="1568728785930" FOLDED="true" ID="Freemind_Link_762178252" MODIFIED="1568728792757" TEXT="Imagem:">
+<node CREATED="1568728785930" ID="Freemind_Link_762178252" MODIFIED="1568728792757" TEXT="Imagem:">
 <node CREATED="1568728793827" ID="Freemind_Link_1546283402" MODIFIED="1568728886715" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/docker_environment_build_args_overview.png&quot;&gt;"/>
 </node>
 <node CREATED="1568728032193" ID="Freemind_Link_1310152630" MODIFIED="1568728055838" TEXT="Para definir dinamicamente uma variavel de &#xa;ambiente conjugar o uso de ARG com ENV">
