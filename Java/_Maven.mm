@@ -28,6 +28,17 @@
 </node>
 </node>
 </node>
+<node CREATED="1586963818695" ID="Freemind_Link_204344341" MODIFIED="1586963821394" POSITION="right" TEXT="pom.xml">
+<node CREATED="1586963821978" ID="Freemind_Link_125063372" MODIFIED="1586963826509" TEXT="Depend&#xea;ncias">
+<node CREATED="1586963827010" ID="Freemind_Link_206224391" MODIFIED="1586963830814" TEXT="External jar">
+<node CREATED="1586963832307" ID="Freemind_Link_981074342" MODIFIED="1586963838008" TEXT="Adicionar tag dependency"/>
+<node CREATED="1575574199634" ID="Freemind_Link_1537366830" MODIFIED="1575574200666" TEXT="Ex:">
+<node CREATED="1586963913868" ID="Freemind_Link_704721231" MODIFIED="1586963938145" TEXT="Considerando um arquivo .jar colocado manualmente na pasta lib"/>
+<node COLOR="#ff00ff" CREATED="1575574227257" ID="Freemind_Link_1305678966" MODIFIED="1586963899983" TEXT="&lt;dependency&gt;&#xa;    &lt;groupId&gt;csjt-signer-applet&lt;/groupId&gt;&#xa;    &lt;artifactId&gt;csjt-signer-applet&lt;/artifactId&gt;&#xa;    &lt;version&gt;1.0.11&lt;/version&gt;&#xa;    &lt;scope&gt;system&lt;/scope&gt;&#xa;    &lt;systemPath&gt;${basedir}/lib/csjt-signer-applet-1.0.11.jar&lt;/systemPath&gt;&#xa;&lt;/dependency&gt;"/>
+</node>
+</node>
+</node>
+</node>
 <node CREATED="1575574182808" ID="Freemind_Link_1468390236" MODIFIED="1575574184422" POSITION="right" TEXT="Plugins">
 <node CREATED="1575574678611" ID="Freemind_Link_821896362" MODIFIED="1575574683130" TEXT="https://maven.apache.org/plugins/index.html">
 <icon BUILTIN="attach"/>

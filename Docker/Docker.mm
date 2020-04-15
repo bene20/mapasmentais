@@ -222,6 +222,29 @@
 <icon BUILTIN="wizard"/>
 </node>
 </node>
+<node CREATED="1583414917668" ID="Freemind_Link_1570758426" MODIFIED="1586963593216" TEXT="C&#xf3;pias de &#xa;arquivos">
+<node CREATED="1586963501680" ID="Freemind_Link_1516912312" MODIFIED="1586963505732" TEXT="https://docs.docker.com/engine/reference/commandline/cp/">
+<icon BUILTIN="attach"/>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1956956182" MODIFIED="1586963520832" TEXT="docker cp">
+<icon BUILTIN="wizard"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_876718935" MODIFIED="1586963540523" TEXT="caminho_arquivo_host idcontainer:caminho_destino_container">
+<icon BUILTIN="flag"/>
+<node CREATED="1563998982186" ID="Freemind_Link_28078190" MODIFIED="1586963562881" TEXT="Copia pasta/arquivo do host para o container"/>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_350286925" MODIFIED="1586963383688" TEXT="Ex: docker cp SDS1Services/ bdb571dfa58d:/usr/src/">
+<icon BUILTIN="idea"/>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_812382840" MODIFIED="1586963625387" TEXT="-a">
+<icon BUILTIN="flag"/>
+<node CREATED="1563998982186" ID="Freemind_Link_1541277592" MODIFIED="1586963635618" TEXT="Copia as informa&#xe7;&#xf5;es de usu&#xe1;rio e grupo (uid e gid)"/>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1399414696" MODIFIED="1586963646223" TEXT="-L">
+<icon BUILTIN="flag"/>
+<node CREATED="1563998982186" ID="Freemind_Link_1607677847" MODIFIED="1586963659025" TEXT="Segue os links no caminho de origem"/>
+</node>
+</node>
+</node>
 </node>
 <node CREATED="1563994368647" ID="_" MODIFIED="1563994372275" POSITION="right" TEXT="Dockerfile">
 <node CREATED="1563998221736" ID="Freemind_Link_368230737" MODIFIED="1568727208485" TEXT="Build">
