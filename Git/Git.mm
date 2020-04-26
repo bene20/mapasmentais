@@ -1,7 +1,58 @@
 <map version="0.8.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1553000049733" ID="Freemind_Link_683934292" LINK="../Mapas.mm" MODIFIED="1553774808576" TEXT="Git">
-<node CREATED="1553000786261" ID="Freemind_Link_1938373102" MODIFIED="1553000791041" POSITION="right" TEXT="Configura&#xe7;&#xe3;o">
+<node CREATED="1553000786261" ID="Freemind_Link_1938373102" MODIFIED="1587911575833" POSITION="right" TEXT="Configura&#xe7;&#xe3;o">
+<node CREATED="1587911443049" ID="Freemind_Link_1059939909" MODIFIED="1587911453210" TEXT="Estrutura de &#xa;configura&#xe7;&#xe3;o do Git">
+<node CREATED="1587911456291" ID="Freemind_Link_1246184340" MODIFIED="1587911512140" TEXT="&#xc9; hier&#xe1;rquica"/>
+<node CREATED="1587911460801" ID="Freemind_Link_504979270" MODIFIED="1587911518553" TEXT="Local (Repository)">
+<icon BUILTIN="full-1"/>
+<node CREATED="1587911538784" ID="Freemind_Link_1441689864" MODIFIED="1587911549520" TEXT="Localiza&#xe7;&#xe3;o: ">
+<node COLOR="#ff0000" CREATED="1587911550135" ID="Freemind_Link_154195373" MODIFIED="1587911583626" TEXT="repository/.git/config"/>
+</node>
+<node CREATED="1587912007367" ID="Freemind_Link_1760668498" MODIFIED="1587912013380" TEXT="Para editar:">
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_283320199" MODIFIED="1587912021306" TEXT="git config --local --edit">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
+<node CREATED="1587911780714" ID="Freemind_Link_1763842524" MODIFIED="1587911782036" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1136176566" MODIFIED="1587911793251" TEXT="git config --local user.name &quot;Meu nome&quot;">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
+</node>
+<node CREATED="1587911473021" ID="Freemind_Link_430487837" MODIFIED="1587911521390" TEXT="Global (User account)">
+<icon BUILTIN="full-2"/>
+<node CREATED="1587911538784" ID="Freemind_Link_1835024559" MODIFIED="1587911549520" TEXT="Localiza&#xe7;&#xe3;o: ">
+<node COLOR="#ff0000" CREATED="1587911550135" ID="Freemind_Link_124971525" MODIFIED="1587911623472" TEXT="$HOMEDIR/.gitconfig"/>
+</node>
+<node CREATED="1587912007367" ID="Freemind_Link_712207348" MODIFIED="1587912013380" TEXT="Para editar:">
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1214898088" MODIFIED="1587912035328" TEXT="git config --global --edit">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
+<node CREATED="1587911780714" ID="Freemind_Link_27642590" MODIFIED="1587911782036" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_698161578" MODIFIED="1587911804040" TEXT="git config --global user.name &quot;Meu nome&quot;">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
+</node>
+<node CREATED="1587911485415" ID="Freemind_Link_1313874766" MODIFIED="1587911525948" TEXT="System (Git installation)">
+<icon BUILTIN="full-3"/>
+<node CREATED="1587911538784" ID="Freemind_Link_1083809342" MODIFIED="1587911549520" TEXT="Localiza&#xe7;&#xe3;o: ">
+<node COLOR="#ff0000" CREATED="1587911550135" ID="Freemind_Link_699598106" MODIFIED="1587912101945" TEXT="/etc/gitconfig"/>
+</node>
+<node CREATED="1587912007367" ID="Freemind_Link_1735262071" MODIFIED="1587912013380" TEXT="Para editar:">
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1094608422" MODIFIED="1587912044353" TEXT="git config --system --edit">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
+<node CREATED="1587911780714" ID="Freemind_Link_1616615840" MODIFIED="1587911782036" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_523518450" MODIFIED="1587911812469" TEXT="git config --system user.name &quot;Meu nome&quot;">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
+</node>
+</node>
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_865563250" MODIFIED="1553000797001" TEXT="git init">
 <icon BUILTIN="wizard"/>
 <node CREATED="1553000483439" ID="Freemind_Link_641718298" MODIFIED="1553000806321" TEXT="Cria um reposit&#xf3;rio na pasta atual"/>
@@ -22,6 +73,10 @@
 <node CREATED="1553001286930" ID="Freemind_Link_1648681665" MODIFIED="1553003641339" TEXT="O par&#xe2;metro --global, opcional, indica que essa configura&#xe7;&#xe3;o valer&#xe1; para todos os repos da m&#xe1;quina"/>
 </node>
 </node>
+<node CREATED="1584465731707" ID="Freemind_Link_1494283481" MODIFIED="1587911442490" TEXT="Adicionar repo remoto de push e fetch">
+<arrowlink DESTINATION="Freemind_Link_428930825" ENDARROW="Default" ENDINCLINATION="459;0;" ID="Freemind_Arrow_Link_891488892" STARTARROW="None" STARTINCLINATION="459;0;"/>
+</node>
+<node CREATED="1587911729920" ID="Freemind_Link_1008408691" MODIFIED="1587911744377" TEXT="Eventuais">
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1322278270" MODIFIED="1584465556287" TEXT="git config --global credential.helper &apos;cache --timeout=21600&apos;">
 <icon BUILTIN="wizard"/>
 <node CREATED="1553000483439" ID="Freemind_Link_1443620351" MODIFIED="1584465570568" TEXT="Configura o git para fazer cache da senha por um dia"/>
@@ -34,8 +89,73 @@
 <icon BUILTIN="wizard"/>
 <node CREATED="1553000483439" ID="Freemind_Link_1819000240" MODIFIED="1584465643727" TEXT="Configura o git para n&#xe3;o usar verifica&#xe7;&#xe3;o ssl"/>
 </node>
-<node CREATED="1584465731707" ID="Freemind_Link_1494283481" MODIFIED="1584465752292" TEXT="Adicionar epo remoto de push e fetch">
-<arrowlink DESTINATION="Freemind_Link_428930825" ENDARROW="Default" ENDINCLINATION="459;0;" ID="Freemind_Arrow_Link_891488892" STARTARROW="None" STARTINCLINATION="459;0;"/>
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_374676700" MODIFIED="1587912180340" TEXT="git config --global --unset user.name">
+<icon BUILTIN="wizard"/>
+<node CREATED="1587912183155" ID="Freemind_Link_431042832" MODIFIED="1587912194805" TEXT="Remove uma configura&#xe7;&#xe3;o espec&#xed;fica"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1832228250" MODIFIED="1587911861785" TEXT="git config --list --show-origin">
+<icon BUILTIN="wizard"/>
+<node CREATED="1553000483439" ID="Freemind_Link_241966438" MODIFIED="1587911876548" TEXT="Lista todos os valores configurados e o arquivo onde foram definidos"/>
+</node>
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_147731436" MODIFIED="1587911903692" TEXT="git config user.name">
+<icon BUILTIN="wizard"/>
+<node CREATED="1553000483439" ID="Freemind_Link_104829806" MODIFIED="1587911939457" TEXT="Exibe o valor atual do valor de user.name"/>
+</node>
+<node CREATED="1587912283312" ID="Freemind_Link_481240896" MODIFIED="1587912287348" TEXT="Attributes">
+<node CREATED="1587912287918" ID="Freemind_Link_1216010302" MODIFIED="1587912293504" TEXT="Arquivo .gitattributes"/>
+<node CREATED="1587912353584" ID="Freemind_Link_1594433371" MODIFIED="1587912368755" TEXT="Permite configurar como arquivos espec&#xed;ficos ser&#xe3;o tratados"/>
+<node CREATED="1587912453318" ID="Freemind_Link_1504928962" MODIFIED="1587912454249" TEXT="Ex:">
+<node COLOR="#28d128" CREATED="1587912455696" ID="Freemind_Link_1073547790" MODIFIED="1587912548194" TEXT="* text=auto">
+<node CREATED="1587912561135" ID="Freemind_Link_1620840825" MODIFIED="1587912580453" TEXT="Auto detectar arquivos texto e definir finais de linhas"/>
+</node>
+<node COLOR="#28d128" CREATED="1587912455696" ID="Freemind_Link_1771107709" MODIFIED="1587912588813" TEXT="*.png binary">
+<node CREATED="1587912561135" ID="Freemind_Link_1618164405" MODIFIED="1587912598878" TEXT="Define os arquivos .png como bin&#xe1;rios"/>
+</node>
+<node COLOR="#28d128" CREATED="1587912455696" ID="Freemind_Link_1199785013" MODIFIED="1587912681120" TEXT="tests/*.* export-ignore">
+<node CREATED="1587912561135" ID="Freemind_Link_497145280" MODIFIED="1587912668734" TEXT="Exclui o conte&#xfa;do da pasta &apos;tests&apos; dos exports do repo"/>
+</node>
+<node COLOR="#28d128" CREATED="1587912455696" ID="Freemind_Link_1882099649" MODIFIED="1587913626439" TEXT=".* export-ignore">
+<node CREATED="1587912561135" ID="Freemind_Link_318294308" MODIFIED="1587913644733" TEXT="Exclui todos os arquivos iniciados com &apos;.&apos; dos exports do repo"/>
+</node>
+<node COLOR="#28d128" CREATED="1587912455696" ID="Freemind_Link_1626042379" MODIFIED="1587913323804" TEXT="*.jpg diff=exif">
+<node CREATED="1587912561135" ID="Freemind_Link_1698827460" MODIFIED="1587913352325" TEXT="Determina que diffs em arquivos jpg usar&#xe3;o uma ferramenta externa de diff"/>
+<node CREATED="1587913359624" ID="Freemind_Link_248432422" MODIFIED="1587913371494" TEXT="Requer definir a ferramenta externa">
+<node CREATED="1587913372270" ID="Freemind_Link_1033473589" MODIFIED="1587913372975" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_916746432" MODIFIED="1587913405758" TEXT="git config --global diff.exif.textconv exiftool">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1587912714705" ID="Freemind_Link_1550310516" MODIFIED="1587912716341" TEXT="Filter">
+<node CREATED="1587913700610" ID="Freemind_Link_366978338" MODIFIED="1587913730182" TEXT="Substitui valores espec&#xed;ficos antes/depois de fazer o stage/checkout de valores espec&#xed;ficos em arquivos espec&#xed;ficos"/>
+<node CREATED="1587912717858" ID="Freemind_Link_987464186" MODIFIED="1587912720474" TEXT="clean">
+<node CREATED="1587912726167" ID="Freemind_Link_1422376043" MODIFIED="1587912784626" TEXT="Define o que deve ser modificado antes de ir para o repo"/>
+<node CREATED="1587912898895" ID="Freemind_Link_989896019" MODIFIED="1587912964923" TEXT="&#xc9; executado no processo de staging"/>
+</node>
+<node CREATED="1587912720962" ID="Freemind_Link_843810374" MODIFIED="1587912723202" TEXT="smudge">
+<node CREATED="1587912726167" ID="Freemind_Link_1103821009" MODIFIED="1587912810677" TEXT="Define o que deve ser reestabelecido quando vier do repo para a pasta de trabalho"/>
+<node CREATED="1587912908009" ID="Freemind_Link_1515079385" MODIFIED="1587912969617" TEXT="&#xc9; executado no processo de checkout"/>
+</node>
+<node CREATED="1587912823844" ID="Freemind_Link_422842756" MODIFIED="1587912824572" TEXT="Ex:">
+<node CREATED="1587913889528" ID="Freemind_Link_1160947799" MODIFIED="1587913894274" TEXT="No .gitattributes">
+<node COLOR="#28d128" CREATED="1587912455696" ID="Freemind_Link_645742373" MODIFIED="1587913985455" TEXT="*.java filter=senhaSGBD">
+<node CREATED="1587912561135" ID="Freemind_Link_210481188" MODIFIED="1587913980751" TEXT="Determina que o filtero &apos;senhaSGBD&apos; ser&#xe1; aplicado aos arquivos de extens&#xe3;o &apos;.java&apos;"/>
+</node>
+</node>
+<node CREATED="1587913896353" ID="Freemind_Link_1923318394" MODIFIED="1587913899599" TEXT="Configura&#xe7;&#xe3;o">
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_663935927" MODIFIED="1587913856971" TEXT="git config --local filter.senhaSGBD.smudge &apos;sed &quot;s/{SENHA_AQUI}/pwd@123/&quot;&apos;&#xa;git config --local filter.senhaSGBD.clean &apos;sed &quot;s/pwd@123/{SENHA_AQUI}/&quot;&apos;">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1587912336549" ID="Freemind_Link_548180831" MODIFIED="1587912338649" TEXT="Ignore">
+<node CREATED="1587912287918" ID="Freemind_Link_1796324902" MODIFIED="1587912345176" TEXT="Arquivo .gitignore"/>
+<node CREATED="1587912372472" ID="Freemind_Link_818186201" MODIFIED="1587912382987" TEXT="Determina quais arquivos dever&#xe3;o ser ignorados pelo repo"/>
 </node>
 </node>
 <node CREATED="1553004297942" FOLDED="true" ID="Freemind_Link_1244511039" MODIFIED="1553004299073" POSITION="right" TEXT="Clone">

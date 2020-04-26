@@ -49,7 +49,7 @@
 </node>
 <node CREATED="1563998723358" ID="Freemind_Link_1353472525" MODIFIED="1563998725467" POSITION="right" TEXT="A&#xe7;&#xf5;es">
 <node CREATED="1586036574169" ID="Freemind_Link_1039136497" MODIFIED="1586036580439" TEXT="Container">
-<node CREATED="1563998741165" ID="Freemind_Link_1874998913" MODIFIED="1563998746387" TEXT="Baixar e carregar uma imagem">
+<node CREATED="1563998741165" ID="Freemind_Link_1874998913" MODIFIED="1587400429560" TEXT="Baixar e carregar &#xa;uma imagem">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1511048246" MODIFIED="1586036628804" TEXT="docker container run nomeimagem">
 <icon BUILTIN="wizard"/>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_540447338" MODIFIED="1563999575749" TEXT="-p portalocal:portacontainer">
@@ -62,6 +62,12 @@
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1773532370" MODIFIED="1563999630321" TEXT="-v pastalocal:pastacontainer">
 <icon BUILTIN="flag"/>
 <node CREATED="1563998982186" ID="Freemind_Link_1549823953" MODIFIED="1563999640745" TEXT="Mapeia uma pasta local em uma pasta do container"/>
+<node CREATED="1587582032221" ID="Freemind_Link_1325908523" MODIFIED="1587582041803" TEXT="Pode-se adicionar permiss&#xf5;es ">
+<node CREATED="1587582063856" ID="Freemind_Link_706026025" MODIFIED="1587582087884" TEXT="o &apos;rw&apos; abaixo garante ao container permiss&#xe3;o&#xa;de leitura e escrita na pasta montada"/>
+<node COLOR="#0000ff" CREATED="1587581922152" ID="Freemind_Link_1599359235" MODIFIED="1587582057789" TEXT="Ex: -v /usr/deployments:/opt/jboss/deployments/:rw">
+<icon BUILTIN="idea"/>
+</node>
+</node>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1264866677" MODIFIED="1563999658468" TEXT="Ex: docker run -v /home/meuusuario/teste:/var/www">
 <icon BUILTIN="idea"/>
 </node>
@@ -117,6 +123,9 @@
 </node>
 </node>
 </node>
+<node CREATED="1587400390028" ID="Freemind_Link_1415107864" MODIFIED="1587400441878" TEXT="Cria um container &#xa;sem carreg&#xe1;-lo">
+<node CREATED="1587400404547" ID="Freemind_Link_1942941947" MODIFIED="1587400417073" TEXT="ID&#xea;ntico ao &apos;docker container run&apos;, mas n&#xe3;o carrega o container"/>
+</node>
 <node CREATED="1563998900515" ID="Freemind_Link_796061691" MODIFIED="1563998907799" TEXT="Carregar um container j&#xe1; existente">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_78475208" MODIFIED="1586036633628" TEXT="docker container start nomecontainer">
 <icon BUILTIN="wizard"/>
@@ -148,6 +157,23 @@
 </node>
 <node CREATED="1563999057905" ID="Freemind_Link_806852948" MODIFIED="1563999936952" TEXT="Exibir informa&#xe7;&#xf5;es de um container">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1680644605" MODIFIED="1586036874293" TEXT="docker container inspect CONTAINERID">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
+<node CREATED="1587400246272" ID="Freemind_Link_1258651073" MODIFIED="1587400270545" TEXT="Exportar o container &#xa;para arquivo tar">
+<node CREATED="1587400289509" ID="Freemind_Link_949848612" MODIFIED="1587400310339" TEXT="Diferente do commit pois n&#xe3;o salva a imagem no repo local"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_94124432" MODIFIED="1587400287925" TEXT="docker container export CONTAINERID">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
+<node CREATED="1587559794682" ID="Freemind_Link_429092731" MODIFIED="1587559801800" TEXT="Comparar dois containers">
+<node CREATED="1587559811989" ID="Freemind_Link_1500852569" MODIFIED="1587559826928" TEXT="Mostra quais arquivos e pastas diferem entre dois containers"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1355364353" MODIFIED="1587562444181" TEXT="docker container diff CONTAINERID">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
+<node CREATED="1587562630802" ID="Freemind_Link_379605757" MODIFIED="1587562639199" TEXT="Cria nova imagem apartir do container atual">
+<node COLOR="#0000ff" CREATED="1587562640884" ID="Freemind_Link_957227128" MODIFIED="1587562704006" TEXT="docker container commit -a &apos;nome_do_autor&apos; -m &apos;Texto do commit&apos; nome_da_imagem">
 <icon BUILTIN="wizard"/>
 </node>
 </node>
@@ -245,6 +271,9 @@
 </node>
 </node>
 </node>
+<node CREATED="1587400456174" FOLDED="true" ID="Freemind_Link_1277564084" MODIFIED="1587400460056" TEXT="S&#xed;ntese">
+<node CREATED="1587400461142" ID="Freemind_Link_81422714" MODIFIED="1587400507747" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/docker_client_action_verbs_edx.png&quot;&gt;"/>
+</node>
 </node>
 <node CREATED="1563994368647" ID="_" MODIFIED="1563994372275" POSITION="right" TEXT="Dockerfile">
 <node CREATED="1563998221736" ID="Freemind_Link_368230737" MODIFIED="1568727208485" TEXT="Build">
@@ -282,6 +311,7 @@
 </node>
 <node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1814078829" MODIFIED="1563994442098" TEXT="COPY">
 <node CREATED="1563994389535" ID="Freemind_Link_959280270" MODIFIED="1563994453812" TEXT="Efetua c&#xf3;pias de arquivos do Docker Host para o container"/>
+<node CREATED="1587751294290" ID="Freemind_Link_639107079" MODIFIED="1587751304309" TEXT="Respeita o conte&#xfa;do do arquivo .dockerignore"/>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1778474076" MODIFIED="1563998839038" TEXT="Ex: COPY . /var/www">
 <icon BUILTIN="idea"/>
 </node>
@@ -299,6 +329,7 @@
 <node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_882437988" MODIFIED="1583414646286" TEXT="ADD">
 <node CREATED="1563994389535" ID="Freemind_Link_1245842606" MODIFIED="1583414666703" TEXT="Similar ao COPY, mas com suporte extendido a URLs"/>
 <node CREATED="1583414669535" ID="Freemind_Link_1532200723" MODIFIED="1583414678127" TEXT="Somente deve ser usado quando COPY n&#xe3;o for poss&#xed;vel"/>
+<node CREATED="1587751294290" ID="Freemind_Link_1695649683" MODIFIED="1587751304309" TEXT="Respeita o conte&#xfa;do do arquivo .dockerignore"/>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_137226678" MODIFIED="1583415309740" TEXT="Ex: ADD http://example.com/big.tar.xz /usr/src/things/">
 <icon BUILTIN="idea"/>
 </node>
@@ -316,6 +347,9 @@
 </node>
 <node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1802117927" MODIFIED="1563994596512" TEXT="RUN">
 <node CREATED="1563994389535" ID="Freemind_Link_1213101667" MODIFIED="1563994611721" TEXT="Executa algum comando no container na cria&#xe7;&#xe3;o da imagem"/>
+<node CREATED="1587567999844" ID="Freemind_Link_1825618668" MODIFIED="1587568023737" TEXT="Dica: se for usar mais de um comando, inicie com &apos;set -eux&apos;">
+<icon BUILTIN="bookmark"/>
+</node>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_408988033" MODIFIED="1563998848963" TEXT="Ex: RUN npm install">
 <icon BUILTIN="idea"/>
 </node>
@@ -331,6 +365,7 @@
 </node>
 <node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_472230709" MODIFIED="1563994636728" TEXT="ENTRYPOINT">
 <node CREATED="1563994389535" ID="Freemind_Link_872162963" MODIFIED="1563994692731" TEXT="Comando a ser executado assim que o container for carregado (executado)"/>
+<node CREATED="1587567004436" ID="Freemind_Link_177413304" MODIFIED="1587567059309" TEXT="Quando n&#xe3;o especificado, o padr&#xe3;o ser&#xe1; executar &apos;/bin/bash -c&apos;"/>
 <node CREATED="1564001403835" ID="Freemind_Link_230373013" MODIFIED="1564001413729" TEXT="A sintaxe do comando pode ser JSon (array)">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1625269670" MODIFIED="1564001429030" TEXT="Ex: ENTRYPOINT [&quot;npm&quot;, &quot;start&quot;]">
 <icon BUILTIN="idea"/>
@@ -343,6 +378,9 @@
 <node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_520954732" MODIFIED="1564003631035" TEXT="CMD">
 <node CREATED="1563994389535" ID="Freemind_Link_1206418010" MODIFIED="1564003643060" TEXT="Par&#xe2;metros extras para o entrypoint"/>
 <node CREATED="1586037968699" ID="Freemind_Link_1558642537" MODIFIED="1586037989713" TEXT="Pode ser substitu&#xed;do pelo &quot;command&quot; do docker-compose.yml"/>
+<node CREATED="1587568541306" ID="Freemind_Link_448690968" MODIFIED="1587568577860" TEXT="S&#xf3; pode haver um por Dockerfile. Se houver mais de um, somente o &#xfa;ltimo far&#xe1; efeito">
+<icon BUILTIN="messagebox_warning"/>
+</node>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1292768710" MODIFIED="1564003685116" TEXT="Ex: CMD [&quot;-g&quot;, &quot;daemon off;&quot;]">
 <icon BUILTIN="idea"/>
 </node>
@@ -391,6 +429,23 @@
 <node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_763589008" MODIFIED="1583414420773" TEXT="USER">
 <node CREATED="1563994389535" ID="Freemind_Link_95085555" MODIFIED="1583414443122" TEXT="Especifica qual usu&#xe1;rio ser&#xe1; usado para execu&#xe7;&#xe3;o do processo no container"/>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1676000668" MODIFIED="1583414459040" TEXT="Ex: USER www">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1587582677740" ID="Freemind_Link_84120657" MODIFIED="1587582685509" TEXT="HEALTHCHECK">
+<node CREATED="1587582687811" ID="Freemind_Link_844384211" MODIFIED="1587582831949" TEXT="Configura o mecanismo de verifica&#xe7;&#xe3;o do servi&#xe7;o rodando no container"/>
+<node CREATED="1587582849617" ID="Freemind_Link_1234306409" MODIFIED="1587583119769" TEXT="Status a retornar:">
+<node CREATED="1587582854979" ID="Freemind_Link_1201385882" MODIFIED="1587582855249" TEXT="0: success">
+<node CREATED="1587582886706" ID="Freemind_Link_451046211" MODIFIED="1587582893893" TEXT="O container est&#xe1; saud&#xe1;vel e pronto para uso"/>
+</node>
+<node CREATED="1587582866905" ID="Freemind_Link_786249879" MODIFIED="1587582867820" TEXT="1: unhealthy">
+<node CREATED="1587582899697" ID="Freemind_Link_1109204018" MODIFIED="1587582907139" TEXT="O container n&#xe3;o est&#xe1; funcionando adequadamente"/>
+</node>
+<node CREATED="1587582878954" ID="Freemind_Link_1998551568" MODIFIED="1587582879501" TEXT="2: reserved">
+<node CREATED="1587582914551" ID="Freemind_Link_1776715487" MODIFIED="1587582919982" TEXT="N&#xe3;o use este c&#xf3;digo de exit"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1587582772089" ID="Freemind_Link_135781797" MODIFIED="1587582783834" TEXT="Ex: HEALTHCHECK --interval=5m --timeout=3s \   CMD curl -f http://localhost/ || exit 1">
 <icon BUILTIN="idea"/>
 </node>
 </node>
