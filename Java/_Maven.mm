@@ -39,7 +39,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1575574182808" ID="Freemind_Link_1468390236" MODIFIED="1575574184422" POSITION="right" TEXT="Plugins">
+<node CREATED="1575574182808" FOLDED="true" ID="Freemind_Link_1468390236" MODIFIED="1575574184422" POSITION="right" TEXT="Plugins">
 <node CREATED="1575574678611" ID="Freemind_Link_821896362" MODIFIED="1575574683130" TEXT="https://maven.apache.org/plugins/index.html">
 <icon BUILTIN="attach"/>
 </node>
@@ -153,6 +153,44 @@
 <node CREATED="1583932751979" ID="Freemind_Link_685745162" MODIFIED="1583932754073" TEXT="Backup">
 <node CREATED="1583932754372" ID="Freemind_Link_1959819219" MODIFIED="1583932759822" TEXT="https://help.sonatype.com/repomanager3/backup-and-restore">
 <icon BUILTIN="attach"/>
+</node>
+<node CREATED="1588087443457" ID="Freemind_Link_1529916868" MODIFIED="1588087445111" TEXT="Backup">
+<node CREATED="1588087468637" ID="Freemind_Link_1299350482" MODIFIED="1588087482899" TEXT="Habilitar task de backups">
+<icon BUILTIN="full-1"/>
+<node CREATED="1588087448402" ID="Freemind_Link_1044856817" MODIFIED="1588087463921" TEXT="Admin =&gt; Export databases for backup"/>
+</node>
+<node CREATED="1588087488763" ID="Freemind_Link_1245380678" MODIFIED="1588087495809" TEXT="Executar task de backups">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1588087529181" ID="Freemind_Link_1743256515" MODIFIED="1588087559400" TEXT="Guardar configura&#xe7;&#xf5;es customizadas e diret&#xf3;rios de dados simultaneamente ao backup acima">
+<icon BUILTIN="full-3"/>
+</node>
+<node CREATED="1588087562937" ID="Freemind_Link_661349281" MODIFIED="1588087575856" TEXT="Armazenar os blob stores">
+<icon BUILTIN="full-4"/>
+</node>
+<node CREATED="1588087597444" ID="Freemind_Link_1042351879" MODIFIED="1588087608113" TEXT="Armazenar os backups acima juntos">
+<icon BUILTIN="full-5"/>
+</node>
+</node>
+<node CREATED="1588087445650" ID="Freemind_Link_897817099" MODIFIED="1588087447480" TEXT="Restore">
+<node CREATED="1588087660484" ID="Freemind_Link_1098768321" MODIFIED="1588087670337" TEXT="Parar o servi&#xe7;o nexus">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1588087672605" ID="Freemind_Link_1856849914" MODIFIED="1588087709966" TEXT="Remover as pastas de $data-dir/db">
+<icon BUILTIN="full-2"/>
+<node CREATED="1588087700163" ID="Freemind_Link_1793512704" MODIFIED="1588087702211" TEXT="component"/>
+<node CREATED="1588087702686" ID="Freemind_Link_626506115" MODIFIED="1588087704405" TEXT="config"/>
+<node CREATED="1588087704617" ID="Freemind_Link_622366979" MODIFIED="1588087706750" TEXT="security"/>
+</node>
+<node CREATED="1588087724760" ID="Freemind_Link_1440396735" MODIFIED="1588087738616" TEXT="Acessar o local onde est&#xe3;o salvos os seus backups">
+<icon BUILTIN="full-3"/>
+</node>
+<node CREATED="1588087741975" ID="Freemind_Link_1060930261" MODIFIED="1588087782940" TEXT="Copiar os arquivos .bak correspondentes para a pasta $data-dir/restore-from-backup">
+<icon BUILTIN="full-4"/>
+</node>
+<node CREATED="1588087786048" ID="Freemind_Link_1771537053" MODIFIED="1588087799878" TEXT="Reiniciar o servi&#xe7;o Nexus">
+<icon BUILTIN="full-5"/>
+</node>
 </node>
 </node>
 <node CREATED="1583782869144" ID="Freemind_Link_194566657" MODIFIED="1583782871270" TEXT="Configura&#xe7;&#xe3;o">

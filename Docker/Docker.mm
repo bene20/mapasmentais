@@ -312,6 +312,10 @@
 <node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1814078829" MODIFIED="1563994442098" TEXT="COPY">
 <node CREATED="1563994389535" ID="Freemind_Link_959280270" MODIFIED="1563994453812" TEXT="Efetua c&#xf3;pias de arquivos do Docker Host para o container"/>
 <node CREATED="1587751294290" ID="Freemind_Link_639107079" MODIFIED="1587751304309" TEXT="Respeita o conte&#xfa;do do arquivo .dockerignore"/>
+<node CREATED="1588091834497" ID="Freemind_Link_544770410" MODIFIED="1588091947957" TEXT="N&#xe3;o ter&#xe1; efeito se o destino for uma pasta a ser montada &#xa;via volume! (par&#xe2;metro -v de &apos;docker container run&apos;)">
+<icon BUILTIN="clanbomber"/>
+<node CREATED="1588091901963" ID="Freemind_Link_1612912414" MODIFIED="1588091960496" TEXT="Uma vez que o volume s&#xf3; &#xe9; montado em tempo de execu&#xe7;&#xe3;o do &#xa;container, a pasta ser&#xe1; sobreposta pelo volume no ato da montagem"/>
+</node>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1778474076" MODIFIED="1563998839038" TEXT="Ex: COPY . /var/www">
 <icon BUILTIN="idea"/>
 </node>
@@ -329,6 +333,10 @@
 <node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_882437988" MODIFIED="1583414646286" TEXT="ADD">
 <node CREATED="1563994389535" ID="Freemind_Link_1245842606" MODIFIED="1583414666703" TEXT="Similar ao COPY, mas com suporte extendido a URLs"/>
 <node CREATED="1583414669535" ID="Freemind_Link_1532200723" MODIFIED="1583414678127" TEXT="Somente deve ser usado quando COPY n&#xe3;o for poss&#xed;vel"/>
+<node CREATED="1588091834497" ID="Freemind_Link_1489612093" MODIFIED="1588091947957" TEXT="N&#xe3;o ter&#xe1; efeito se o destino for uma pasta a ser montada &#xa;via volume! (par&#xe2;metro -v de &apos;docker container run&apos;)">
+<icon BUILTIN="clanbomber"/>
+<node CREATED="1588091901963" ID="Freemind_Link_1865359254" MODIFIED="1588091960496" TEXT="Uma vez que o volume s&#xf3; &#xe9; montado em tempo de execu&#xe7;&#xe3;o do &#xa;container, a pasta ser&#xe1; sobreposta pelo volume no ato da montagem"/>
+</node>
 <node CREATED="1587751294290" ID="Freemind_Link_1695649683" MODIFIED="1587751304309" TEXT="Respeita o conte&#xfa;do do arquivo .dockerignore"/>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_137226678" MODIFIED="1583415309740" TEXT="Ex: ADD http://example.com/big.tar.xz /usr/src/things/">
 <icon BUILTIN="idea"/>
@@ -462,7 +470,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1564003157733" FOLDED="true" ID="Freemind_Link_95353128" MODIFIED="1568728858641" POSITION="right" TEXT="Docker compose">
+<node CREATED="1564003157733" FOLDED="true" ID="Freemind_Link_95353128" MODIFIED="1588539942378" POSITION="right" TEXT="Compose">
 <node CREATED="1564003164413" ID="Freemind_Link_332229" MODIFIED="1564003171627" TEXT="Usa o padr&#xe3;o yaml">
 <node CREATED="1564074495999" ID="Freemind_Link_389868139" MODIFIED="1564074516932" TEXT="Arquivo com extens&#xe3;o yml ou yaml">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_924072677" MODIFIED="1564003205056" TEXT="Ex: arquivo docker-compose.yml">
@@ -663,7 +671,7 @@
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1179208339" MODIFIED="1569014123108" TEXT="Ex: &#xa;version: &apos;3&apos;&#xa;services:&#xa;  nginx:&#xa;    build:&#xa;      dockerfile: ./docker/nginx.dockerfile&#xa;      context: .&#xa;    image: douglasq/nginx&#xa;    container_name: nginx&#xa;    ports:&#xa;      - &quot;80:80&quot;&#xa;      - &quot;1234:3000&quot;&#xa;    networks:&#xa;      - production-network&#xa;    depends_on:&#xa;      - &quot;node1&quot;&#xa;&#xa;  mongodb:&#xa;    image: mongo&#xa;    networks:&#xa;      - production-network&#xa;    &#xa;  node1:&#xa;    build:&#xa;      dockerfile: ./docker/alurabooks.dockerfile&#xa;      context: .&#xa;    image: douglasq/alura-books&#xa;    container_name: alura-books-1&#xa;    ports:&#xa;      - &quot;3000&quot;&#xa;    networks:&#xa;      - production-network&#xa;    depends_on:&#xa;      - &quot;mongodb&quot;&#xa;    &#xa;networks:&#xa;  production-network:&#xa;    driver: bridge"/>
 </node>
 </node>
-<node CREATED="1564077031578" ID="Freemind_Link_1003500916" MODIFIED="1564077035993" POSITION="right" TEXT="Docker Swarm">
+<node CREATED="1564077031578" ID="Freemind_Link_1003500916" MODIFIED="1588539946191" POSITION="right" TEXT="Swarm">
 <node CREATED="1564077043288" ID="Freemind_Link_951258139" MODIFIED="1564077045923" TEXT="facilita a cria&#xe7;&#xe3;o e administra&#xe7;&#xe3;o de um cluster de containers"/>
 </node>
 <node CREATED="1563997375560" ID="Freemind_Link_763419592" MODIFIED="1563997378156" POSITION="right" TEXT="DockerHub">
@@ -690,7 +698,7 @@
 <node CREATED="1576178250319" ID="Freemind_Link_1393571993" MODIFIED="1576178452267" TEXT="Adicionar uma porta a &#xa;um conteiner existente">
 <node CREATED="1576178262486" ID="Freemind_Link_622630033" MODIFIED="1576178297979" TEXT="Pare o container">
 <icon BUILTIN="full-1"/>
-<node COLOR="#0000ff" CREATED="1576178274000" ID="Freemind_Link_155071883" MODIFIED="1576178292579" TEXT="docker stop &lt;nome-container&gt;"/>
+<node COLOR="#0000ff" CREATED="1576178274000" ID="Freemind_Link_155071883" MODIFIED="1588539975925" TEXT="docker container stop &lt;nome-container&gt;"/>
 </node>
 <node CREATED="1576178298752" ID="Freemind_Link_1552065179" MODIFIED="1576178309652" TEXT="Pare o servi&#xe7;o docker">
 <icon BUILTIN="full-2"/>
@@ -707,7 +715,7 @@
 </node>
 <node CREATED="1576178420534" ID="Freemind_Link_262062415" MODIFIED="1576178433701" TEXT="Reinicie o container">
 <icon BUILTIN="full-5"/>
-<node COLOR="#0000ff" CREATED="1576178274000" ID="Freemind_Link_1856490440" MODIFIED="1576178440731" TEXT="docker start &lt;nome-container&gt;"/>
+<node COLOR="#0000ff" CREATED="1576178274000" ID="Freemind_Link_1856490440" MODIFIED="1588539991315" TEXT="docker container start &lt;nome-container&gt;"/>
 </node>
 </node>
 </node>

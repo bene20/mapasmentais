@@ -13,6 +13,7 @@
 <node CREATED="1574964876560" ID="Freemind_Link_126675284" LINK="Ansible/Ansible.mm" MODIFIED="1574964931624" TEXT="Ansible"/>
 <node CREATED="1575747053934" ID="Freemind_Link_785121986" LINK="Vagrant/Vagrant.mm" MODIFIED="1575747098726" TEXT="Vagrant"/>
 <node CREATED="1587587977702" ID="Freemind_Link_885152527" LINK="Kubernetes/Kubernetes.mm" MODIFIED="1587588101438" TEXT="Kubernetes"/>
+<node CREATED="1588092347383" ID="Freemind_Link_1148869046" LINK="Java/_Maven.mm" MODIFIED="1588092396251" TEXT="Nexus(Maven)"/>
 </node>
 </node>
 </map>
