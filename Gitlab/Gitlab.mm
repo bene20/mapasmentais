@@ -30,7 +30,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1578680589232" ID="_" MODIFIED="1578680594577" POSITION="right" TEXT="Configurado no arquivo .gitlab-cy.yml">
+<node CREATED="1589481894295" ID="Freemind_Link_1074073812" MODIFIED="1589481896855" POSITION="right" TEXT="CI/CD">
+<node CREATED="1578680589232" ID="_" MODIFIED="1589483436734" TEXT="Configurado no arquivo .gitlab-ci.yml">
 <node CREATED="1578680599813" ID="Freemind_Link_728663608" MODIFIED="1578680603692" TEXT="Na raiz do projeto"/>
 <node CREATED="1578681322423" ID="Freemind_Link_1518955066" MODIFIED="1578681333165" TEXT="Cont&#xe9;m a lista dos jobs e informa&#xe7;&#xf5;es de quando e como ser&#xe3;o executados"/>
 <node CREATED="1578681937487" ID="Freemind_Link_919054726" MODIFIED="1578681938655" TEXT="Ex:">
@@ -41,12 +42,12 @@
 <icon BUILTIN="attach"/>
 </node>
 <node CREATED="1579035722390" ID="Freemind_Link_1072684208" MODIFIED="1579035727196" TEXT="Obter via API do Gitlab">
-<node COLOR="#0000ff" CREATED="1579035735095" ID="Freemind_Link_1917271368" MODIFIED="1579035775795" TEXT="curl https://gitlab.example.com/api/v4/templates/gitlab_ci_ymls"/>
-<node COLOR="#0000ff" CREATED="1579035735095" ID="Freemind_Link_326546079" MODIFIED="1579035971672" TEXT="curl https://gitlab.example.com/api/v4/templates/gitlab_ci_ymls/Maven | sed &apos;s/\\n/\n/g&apos;"/>
+<node COLOR="#0000ff" CREATED="1579035735095" ID="Freemind_Link_1917271368" MODIFIED="1589483337229" TEXT="curl https://gitlab.example.com/api/v4/templates/gitlab_ci_ymls"/>
+<node COLOR="#0000ff" CREATED="1579035735095" ID="Freemind_Link_326546079" MODIFIED="1589483474289" TEXT="curl https://gitlab.example.com/api/v4/templates/gitlab_ci_ymls/Maven | sed &apos;s/\\n/\n/g&apos;"/>
 </node>
 </node>
 </node>
-<node CREATED="1578681234338" FOLDED="true" ID="Freemind_Link_1857077151" MODIFIED="1578681241349" POSITION="right" TEXT="Jobs">
+<node CREATED="1578681234338" ID="Freemind_Link_1857077151" MODIFIED="1578681241349" TEXT="Jobs">
 <node CREATED="1578681241904" ID="Freemind_Link_1981425285" MODIFIED="1578681248907" TEXT="Todo job pode ter um nome arbir&#xe1;rio"/>
 <node CREATED="1578681262462" ID="Freemind_Link_1223537013" MODIFIED="1578681301307" TEXT="Antes de cada job os comandos definidos em before_script ser&#xe3;o executados"/>
 <node CREATED="1578681356637" ID="Freemind_Link_735318917" MODIFIED="1578681370339" TEXT="Precisam ter o campo &apos;script&apos; obrigatoriamente"/>
@@ -77,6 +78,8 @@
 <node CREATED="1579122448504" ID="Freemind_Link_1969000603" MODIFIED="1579122449751" TEXT="build">
 <node CREATED="1579122450767" ID="Freemind_Link_1575058829" MODIFIED="1579122470124" TEXT="Indica que &#xe9; um job da fase de build do projeto"/>
 </node>
+<node CREATED="1589483845104" ID="Freemind_Link_1252441378" MODIFIED="1589483846098" TEXT="test"/>
+<node CREATED="1589483846586" ID="Freemind_Link_1723861406" MODIFIED="1589483848478" TEXT="deploy"/>
 </node>
 <node CREATED="1578682895185" ID="Freemind_Link_1797934862" MODIFIED="1578682943830" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1578682901335" ID="Freemind_Link_1931973088" MODIFIED="1579123153370" TEXT="stage: build"/>
@@ -85,6 +88,16 @@
 <node CREATED="1579123111456" ID="Freemind_Link_1494852470" MODIFIED="1579123113408" TEXT="services">
 <node CREATED="1579123113957" ID="Freemind_Link_1210172168" MODIFIED="1579123134033" TEXT="Indica quais servi&#xe7;os devem estar de p&#xe9; no container executado pelo gitlab"/>
 <node CREATED="1579623763131" ID="Freemind_Link_440105725" MODIFIED="1579623778691" TEXT="S&#xe3;o imagens docker que ser&#xe3;o levantadas com o servi&#xe7;o especificado"/>
+<node CREATED="1589911328360" ID="Freemind_Link_1378994476" MODIFIED="1589911350901" TEXT="Os servi&#xe7;os poder&#xe3;o ser &#xa;referenciados por seus nomes">
+<node CREATED="1589911355734" ID="Freemind_Link_83197730" MODIFIED="1589911376082" TEXT="Ex: service mysql:latest =&gt; referenciado por &apos;mysql&apos;"/>
+<node CREATED="1589911381144" ID="Freemind_Link_639657165" MODIFIED="1589911414424" TEXT="Ex: service tutum/wordpress:latest =&gt; referenciado por tutum-wordpress ou tutum_wordpress"/>
+</node>
+<node CREATED="1589911427733" ID="Freemind_Link_250969676" MODIFIED="1589911440050" TEXT="&#xc9; poss&#xed;vel definir alias para os servi&#xe7;os">
+<node CREATED="1589911607574" ID="Freemind_Link_163220282" MODIFIED="1589911616899" TEXT="Requer o atributo &apos;name&apos; no nome da imagem"/>
+<node CREATED="1578682895185" ID="Freemind_Link_1098909865" MODIFIED="1578682943830" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1578682901335" ID="Freemind_Link_1063502692" MODIFIED="1589911633905" TEXT="services:&#xa;  - name: mysql:5.7&#xa;    alias: meubd1&#xa;  - name: mysql:5.7&#xa;    alias: meubd2"/>
+</node>
+</node>
 <node CREATED="1578682895185" ID="Freemind_Link_1721405074" MODIFIED="1578682943830" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1578682901335" ID="Freemind_Link_479075911" MODIFIED="1579623944571" TEXT="services:&#xa;  - docker:dind&#xa;  - mysql:5.7&#xa;variables:&#xa;  MYSQL_USER: devops_dev&#xa;  MYSQL_PASSWORD: mestre&#xa;  MYSQL_DATABASE: todo_dev&#xa;  MYSQL_ROOT_PASSWORD: senha"/>
 </node>
@@ -105,6 +118,12 @@
 <node CREATED="1579205139211" ID="Freemind_Link_1068680425" MODIFIED="1579205174990" TEXT="Geralmente &#xe9; combinado com o &apos;if&apos;, &apos;changes&apos; e &apos;exists&apos;"/>
 <node CREATED="1578683234720" ID="Freemind_Link_386545622" MODIFIED="1578683235547" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_1008108220" MODIFIED="1579205129402" TEXT="job:&#xa;  script: &quot;echo Hello, Rules!&quot;&#xa;  rules:&#xa;    - if: &apos;$CI_MERGE_REQUEST_TARGET_BRANCH_NAME == &quot;master&quot;&apos;&#xa;      when: always&#xa;    - if: &apos;$VAR =~ /pattern/&apos;&#xa;      when: manual&#xa;    - when: on_success&#xa;"/>
+</node>
+</node>
+<node CREATED="1589485628770" ID="Freemind_Link_1123447812" MODIFIED="1589485630464" TEXT="cache">
+<node CREATED="1589485631218" ID="Freemind_Link_172817089" MODIFIED="1589485645229" TEXT="Lista de arquivos que devem ser armazenados entre execu&#xe7;&#xf5;es consecutivas"/>
+<node CREATED="1589485670442" ID="Freemind_Link_702274464" MODIFIED="1589485671318" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_529389646" MODIFIED="1589485707142" TEXT="cache:&#xa;  paths:&#xa;    - .m2/repository/&#xa;    - target/&#xa;"/>
 </node>
 </node>
 <node CREATED="1579543326378" ID="Freemind_Link_129089085" MODIFIED="1579543327219" TEXT="tags">
@@ -134,6 +153,19 @@
 <node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_1528824100" MODIFIED="1580149094135" TEXT="job:&#xa;  script: &quot;echo Hello, Rules!&quot;&#xa;  when: on_success"/>
 </node>
 </node>
+<node CREATED="1589487083346" ID="Freemind_Link_660835665" MODIFIED="1589487085253" TEXT="include">
+<node CREATED="1589487089978" ID="Freemind_Link_936236646" MODIFIED="1589487121141" TEXT="Possibilita um job incluir um arquivo yaml externo"/>
+<node CREATED="1589487121649" ID="Freemind_Link_20312873" MODIFIED="1589487124742" TEXT="Possibilidades:">
+<node CREATED="1589487136603" ID="Freemind_Link_116011705" MODIFIED="1589487137302" TEXT="include:local"/>
+<node CREATED="1589487147009" ID="Freemind_Link_1935695098" MODIFIED="1589487147710" TEXT="include:file"/>
+<node CREATED="1589487171081" ID="Freemind_Link_1290024898" MODIFIED="1589487171790" TEXT="include:template"/>
+<node CREATED="1589487125513" ID="Freemind_Link_1486818258" MODIFIED="1589487175767" TEXT="include:remote">
+<node CREATED="1578683234720" ID="Freemind_Link_1785616245" MODIFIED="1578683235547" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_1802100902" MODIFIED="1589487217093" TEXT="include:&#xa;  - remote: &apos;http://portal.pje.redejt/nexus/repository/snapshots/br/jus/csjt/smpad/templates/gitlab-ci-frontend.yml&apos;&#xa;"/>
+</node>
+</node>
+</node>
+</node>
 </node>
 <node CREATED="1579124636241" ID="Freemind_Link_283128050" MODIFIED="1579124638818" TEXT="Vari&#xe1;veis">
 <node CREATED="1579205957197" ID="Freemind_Link_1567301011" MODIFIED="1579205959661" TEXT="Declara&#xe7;&#xe3;o">
@@ -145,7 +177,7 @@
 </node>
 </node>
 <node CREATED="1579205950370" ID="Freemind_Link_804271702" MODIFIED="1579205952280" TEXT="Uso">
-<node CREATED="1579124639384" ID="Freemind_Link_1507474536" MODIFIED="1579206758325" TEXT="Basta us&#xe1;-las conforme o SO que executa o script">
+<node CREATED="1579124639384" ID="Freemind_Link_1507474536" MODIFIED="1589482274831" TEXT="Basta us&#xe1;-las conforme o&#xa;SO que executa o script">
 <node CREATED="1579206765201" ID="Freemind_Link_1113166858" MODIFIED="1579206768896" TEXT="No Linux:">
 <node CREATED="1579206769452" ID="Freemind_Link_1828621034" MODIFIED="1579206770439" TEXT="com $ antes do nome"/>
 <node CREATED="1579206830602" ID="Freemind_Link_234167315" MODIFIED="1579206831751" TEXT="Ex:">
@@ -194,7 +226,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1579193962548" FOLDED="true" ID="Freemind_Link_1153995823" MODIFIED="1579193964102" POSITION="right" TEXT="Runner">
+<node CREATED="1579193962548" ID="Freemind_Link_1153995823" MODIFIED="1579193964102" TEXT="Runner">
 <node CREATED="1579193964754" ID="Freemind_Link_210805590" MODIFIED="1579196941645" TEXT="Container pronto">
 <node CREATED="1579193988315" ID="Freemind_Link_1056811944" MODIFIED="1579195005045" TEXT="Baixar:">
 <node COLOR="#0000ff" CREATED="1579195006380" ID="Freemind_Link_857701346" MODIFIED="1579195033802" TEXT="docker pull gitlab/gitlab-runner:latest"/>
@@ -208,7 +240,7 @@
 <icon BUILTIN="full-1"/>
 <node CREATED="1579196388512" ID="Freemind_Link_1390050152" MODIFIED="1579196395274" TEXT="Em m&#xe1;quina local, por exemplo"/>
 <node CREATED="1579196401125" ID="Freemind_Link_741969869" MODIFIED="1579196423326" TEXT="Pode ser um conteiner j&#xe1; pronto para isso">
-<arrowlink DESTINATION="Freemind_Link_244530134" ENDARROW="Default" ENDINCLINATION="276;0;" ID="Freemind_Arrow_Link_603817046" STARTARROW="None" STARTINCLINATION="276;0;"/>
+<arrowlink DESTINATION="Freemind_Link_244530134" ENDARROW="Default" ENDINCLINATION="276;0;" ID="Freemind_Arrow_Link_1835423655" STARTARROW="None" STARTINCLINATION="276;0;"/>
 </node>
 </node>
 <node CREATED="1579195420881" ID="Freemind_Link_1983589750" MODIFIED="1579195564859" TEXT="Obter o token">
@@ -303,7 +335,7 @@
 <node CREATED="1579799737110" ID="Freemind_Link_919366581" MODIFIED="1579799740937" TEXT="https://docs.gitlab.com/runner/faq/README.html">
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1579552060538" ID="Freemind_Link_1860374065" MODIFIED="1579626277393" TEXT="Ao usar docker-i-docker &#xe9; importante indicar o host&#xa;docker mais externo para o container mais interno">
+<node CREATED="1579552060538" ID="Freemind_Link_1860374065" MODIFIED="1589483072273" TEXT="Ao usar docker-in-docker &#xe9; importante indicar o host&#xa;docker mais externo para o container mais interno">
 <node CREATED="1579552103319" ID="Freemind_Link_882066776" MODIFIED="1579552128731" TEXT="Declare &quot;DOCKER_HOST: tcp://docker:2375&quot; como vari&#xe1;vel no seu .gitlab-ci.yml"/>
 </node>
 <node CREATED="1579626283205" ID="Freemind_Link_1088576353" MODIFIED="1579626306202" TEXT="Por ser docker-in-docker, pode ser necess&#xe1;rio &#xa;rodar o runner em modo privilegiado">
@@ -312,6 +344,7 @@
 </node>
 <node CREATED="1579552138015" ID="Freemind_Link_1901869178" MODIFIED="1579552179260" TEXT="Para desabilitar o TLS no container do pipeline:">
 <node CREATED="1579552181079" ID="Freemind_Link_1012726120" MODIFIED="1579552208469" TEXT="Declare a vari&#xe1;vel DOCKER_TLS_CERTDIR com o valor vazio"/>
+</node>
 </node>
 </node>
 </node>

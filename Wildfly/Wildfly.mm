@@ -83,7 +83,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1573669976288" FOLDED="true" ID="Freemind_Link_1968018790" MODIFIED="1573915323833" POSITION="right" TEXT="jboss-cli.sh">
+<node COLOR="#0000ff" CREATED="1573669976288" ID="Freemind_Link_1968018790" MODIFIED="1573915323833" POSITION="right" TEXT="jboss-cli.sh">
 <node CREATED="1573915331657" ID="Freemind_Link_386061028" MODIFIED="1573915340989" TEXT="comandos">
 <node COLOR="#0000ff" CREATED="1573669995752" ID="Freemind_Link_1850611618" MODIFIED="1573915147618" TEXT="embed-host-controller --std-out=echo --domain-config=domain.xml --host-config=host.xml">
 <node CREATED="1573670037212" ID="Freemind_Link_657933385" MODIFIED="1573915399119" TEXT="Liga o host-controller(inst&#xe2;ncia do wildfly com &#xa;papel de Host-Controller) e se conecta a ele"/>
@@ -134,7 +134,7 @@
 <node CREATED="1573670037212" ID="Freemind_Link_834676884" MODIFIED="1574278276277" TEXT="Faz deploy de uma aplica&#xe7;&#xe3;o no modo domain em todos os server-groups"/>
 </node>
 <node COLOR="#0000ff" CREATED="1573669995752" ID="Freemind_Link_1901218369" MODIFIED="1574278374997" TEXT="deploy caminhoCompleto/arquivo.war --server-groups=grp-dev,grp-hom">
-<node CREATED="1573670037212" ID="Freemind_Link_261718946" MODIFIED="1574278276277" TEXT="Faz deploy de uma aplica&#xe7;&#xe3;o no modo domain em todos os server-groups"/>
+<node CREATED="1573670037212" ID="Freemind_Link_261718946" MODIFIED="1588693532068" TEXT="Faz deploy de uma aplica&#xe7;&#xe3;o no modo domain nos server-groups especificados"/>
 </node>
 </node>
 </node>

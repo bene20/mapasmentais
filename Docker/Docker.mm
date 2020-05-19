@@ -195,6 +195,11 @@
 </node>
 </node>
 <node CREATED="1586036588207" ID="Freemind_Link_41107698" MODIFIED="1586036591043" TEXT="Volume">
+<node CREATED="1589913908746" ID="Freemind_Link_832608958" MODIFIED="1589913971445" TEXT="Para fazer o container se comunicar com o daemon do Docker &#xa;no host, &#xe9; necess&#xe1;rio montar o volume /var/run/docker.sock">
+<node CREATED="1589914024985" ID="Freemind_Link_669994905" MODIFIED="1589914026638" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1589913993883" ID="Freemind_Link_12588334" MODIFIED="1589914033239" TEXT="docker container run -d \&#xa;  -p 9000:9000 \&#xa;  -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer"/>
+</node>
+</node>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1808803534" MODIFIED="1586036846045" TEXT="docker volume">
 <icon BUILTIN="wizard"/>
 </node>
@@ -309,7 +314,7 @@
 <icon BUILTIN="idea"/>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1814078829" MODIFIED="1563994442098" TEXT="COPY">
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1814078829" MODIFIED="1589467949418" TEXT="\">
 <node CREATED="1563994389535" ID="Freemind_Link_959280270" MODIFIED="1563994453812" TEXT="Efetua c&#xf3;pias de arquivos do Docker Host para o container"/>
 <node CREATED="1587751294290" ID="Freemind_Link_639107079" MODIFIED="1587751304309" TEXT="Respeita o conte&#xfa;do do arquivo .dockerignore"/>
 <node CREATED="1588091834497" ID="Freemind_Link_544770410" MODIFIED="1588091947957" TEXT="N&#xe3;o ter&#xe1; efeito se o destino for uma pasta a ser montada &#xa;via volume! (par&#xe2;metro -v de &apos;docker container run&apos;)">
