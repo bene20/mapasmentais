@@ -122,6 +122,32 @@
 </node>
 <node CREATED="1589485628770" ID="Freemind_Link_1123447812" MODIFIED="1589485630464" TEXT="cache">
 <node CREATED="1589485631218" ID="Freemind_Link_172817089" MODIFIED="1589485645229" TEXT="Lista de arquivos que devem ser armazenados entre execu&#xe7;&#xf5;es consecutivas"/>
+<node CREATED="1590029429662" ID="Freemind_Link_349039929" MODIFIED="1590029481050" TEXT="Lista de pastas/arquivos que &#xa;ser&#xe3;o compartilhados entre jobs">
+<node CREATED="1590029445478" ID="Freemind_Link_1642508870" MODIFIED="1590029469427" TEXT="Cada job, antes de executar, pergunta se existe&#xa;algo no cache a ser baixado para sua execu&#xe7;&#xe3;o"/>
+</node>
+<node CREATED="1590029510372" ID="Freemind_Link_483271396" MODIFIED="1590029512891" TEXT="untracked">
+<node CREATED="1590029513437" ID="Freemind_Link_281211623" MODIFIED="1590029533529" TEXT="Se true, far&#xe1; o cache de arquivos n&#xe3;o rastreados pelo reposit&#xf3;rio Git"/>
+</node>
+<node CREATED="1590029352070" ID="Freemind_Link_1944287020" MODIFIED="1590029354349" TEXT="policy">
+<node CREATED="1590029550255" ID="Freemind_Link_1827490987" MODIFIED="1590029558850" TEXT="Diz qual &#xe9; o comportamento do cache">
+<node CREATED="1590029559315" ID="Freemind_Link_547839180" MODIFIED="1590029567262" TEXT="O padr&#xe3;o &#xe9; pull-push"/>
+</node>
+<node CREATED="1590029573100" ID="Freemind_Link_728653382" MODIFIED="1590029574487" TEXT="pull">
+<node CREATED="1590029575110" ID="Freemind_Link_1099647731" MODIFIED="1590029602978" TEXT="Ser&#xe1; feito pull do cache antes da execu&#xe7;&#xe3;o do job, mas todas as altera&#xe7;&#xf5;es feitas pelo job ser&#xe3;o descartadas ap&#xf3;s sua execu&#xe7;&#xe3;o"/>
+</node>
+<node CREATED="1590029603990" ID="Freemind_Link_1300166887" MODIFIED="1590029606160" TEXT="push">
+<node CREATED="1590029608471" ID="Freemind_Link_1491130464" MODIFIED="1590029637592" TEXT="(Re)cria o cache antes da execu&#xe7;&#xe3;o do job">
+<node CREATED="1590029638286" ID="Freemind_Link_247170572" MODIFIED="1590029647898" TEXT="Conte&#xfa;dos pr&#xe9;cios ser&#xe3;o descartados"/>
+<node CREATED="1590029648556" ID="Freemind_Link_1676522836" MODIFIED="1590029655057" TEXT="&#xda;til quando se quer inicializar um cache"/>
+</node>
+</node>
+<node CREATED="1590029681852" ID="Freemind_Link_1132770870" MODIFIED="1590029688393" TEXT="pull-push">
+<node CREATED="1590029693517" ID="Freemind_Link_420463906" MODIFIED="1590029724480" TEXT="Far&#xe1; o pull antes da execu&#xe7;&#xe3;o do job e atualiar&#xe1; o&#xa;cache com push ap&#xf3;s o t&#xe9;rmino da execu&#xe7;&#xe3;o do job"/>
+</node>
+</node>
+<node CREATED="1590029392710" ID="Freemind_Link_360655433" MODIFIED="1590029394027" TEXT="key">
+<node CREATED="1590029395816" ID="Freemind_Link_1861948967" MODIFIED="1590029404112" TEXT="&#xda;til no caso de se utilizar diferentes caches"/>
+</node>
 <node CREATED="1589485670442" ID="Freemind_Link_702274464" MODIFIED="1589485671318" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_529389646" MODIFIED="1589485707142" TEXT="cache:&#xa;  paths:&#xa;    - .m2/repository/&#xa;    - target/&#xa;"/>
 </node>
@@ -139,7 +165,7 @@
 <node COLOR="#ff0000" CREATED="1578683237010" ID="Freemind_Link_206483679" MODIFIED="1580149377289" TEXT="job:&#xa;  script: &quot;echo Hello, Rules!&quot;&#xa;  retry: 2"/>
 </node>
 </node>
-<node CREATED="1580149023013" ID="Freemind_Link_1065414690" MODIFIED="1580149024856" TEXT="when">
+<node CREATED="1580149023013" ID="Freemind_Link_1065414690" MODIFIED="1590022371926" TEXT="when">
 <node CREATED="1580149026063" ID="Freemind_Link_1929045178" MODIFIED="1580149033779" TEXT="Executa o job apenas em uma situa&#xe7;&#xe3;o espec&#xed;fica"/>
 <node CREATED="1580149036294" ID="Freemind_Link_237269865" MODIFIED="1580149039234" TEXT="Situa&#xe7;&#xf5;es:">
 <node CREATED="1580149040022" ID="Freemind_Link_847589180" MODIFIED="1580149046298" TEXT="on_succes">
@@ -164,6 +190,34 @@
 <node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_1802100902" MODIFIED="1589487217093" TEXT="include:&#xa;  - remote: &apos;http://portal.pje.redejt/nexus/repository/snapshots/br/jus/csjt/smpad/templates/gitlab-ci-frontend.yml&apos;&#xa;"/>
 </node>
 </node>
+</node>
+</node>
+<node CREATED="1590021654927" ID="Freemind_Link_1694358510" MODIFIED="1590021657078" TEXT="artifacts">
+<node CREATED="1590021657713" ID="Freemind_Link_1987781191" MODIFIED="1590021675884" TEXT="Disponibiliza para download, no Gitlab, um conte&#xfa;do produzido no runner"/>
+<node CREATED="1590022032190" ID="Freemind_Link_917086340" MODIFIED="1590022035428" TEXT="Pode ter um nome">
+<node CREATED="1590022036023" ID="Freemind_Link_431530137" MODIFIED="1590022056899" TEXT="Isso viabiliza ter diversos artefatos distintos"/>
+<node CREATED="1590022057630" ID="Freemind_Link_444443686" MODIFIED="1590022065739" TEXT="Por padr&#xe3;o ser&#xe1; artifact.zip"/>
+<node CREATED="1590021806761" ID="Freemind_Link_491932489" MODIFIED="1590021808035" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_14651823" MODIFIED="1590022140276" TEXT="build:&#xa;  stage: build&#xa;  artifacts:&#xa;    name: &quot;$CI_JOB_NAME-$CI_COMMIT_REF_NAME&quot;&#xa;    paths:&#xa;      - build/&#xa;"/>
+</node>
+</node>
+<node CREATED="1590022225190" ID="Freemind_Link_1605065915" MODIFIED="1590022410153" TEXT="Para disponibilizar arquivos n&#xe3;o &#xa;rastreados, use &apos;untracked=true&apos;">
+<node CREATED="1590022242508" ID="Freemind_Link_1449814593" MODIFIED="1590022267976" TEXT="&#xc9; o caso dos arquivos que constam do .gitignore"/>
+<node CREATED="1590021806761" ID="Freemind_Link_1060419141" MODIFIED="1590021808035" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_1077864010" MODIFIED="1590022285793" TEXT="build:&#xa;  stage: build&#xa;  artifacts:&#xa;    untracked: true&#xa;    paths:&#xa;      - build/&#xa;"/>
+</node>
+</node>
+<node CREATED="1590022412499" ID="Freemind_Link_1518624328" MODIFIED="1590022434001" TEXT="Para determinar um prazo de disponibilidade &#xa;do artefato, use &apos;expire_in&apos;">
+<node CREATED="1590022473356" ID="Freemind_Link_933788389" MODIFIED="1590022477615" TEXT="O default &#xe9; 30 dias"/>
+<node CREATED="1590021806761" ID="Freemind_Link_905145892" MODIFIED="1590021808035" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_821506215" MODIFIED="1590022457656" TEXT="build:&#xa;  stage: build&#xa;  artifacts:&#xa;    expire_in: 1 week&#xa;    paths:&#xa;      - build/&#xa;"/>
+</node>
+</node>
+<node CREATED="1590022364237" ID="Freemind_Link_1027954170" MODIFIED="1590022371927" TEXT="Aceita o uso do when">
+<arrowlink DESTINATION="Freemind_Link_1065414690" ENDARROW="Default" ENDINCLINATION="554;0;" ID="Freemind_Arrow_Link_1521061584" STARTARROW="None" STARTINCLINATION="554;0;"/>
+</node>
+<node CREATED="1590021806761" ID="Freemind_Link_1648449875" MODIFIED="1590021808035" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_1124902659" MODIFIED="1590021817998" TEXT="build:&#xa;  stage: build&#xa;  artifacts:&#xa;    paths:&#xa;      - build/&#xa;"/>
 </node>
 </node>
 </node>
