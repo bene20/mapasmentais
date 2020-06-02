@@ -121,6 +121,14 @@
 <icon BUILTIN="idea"/>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1497671413" MODIFIED="1590712619529" TEXT="--dns">
+<icon BUILTIN="flag"/>
+<node CREATED="1563998982186" ID="Freemind_Link_1462191686" MODIFIED="1590712657316" TEXT="Define um dns a ser utilizado pelo container"/>
+<node CREATED="1590712660172" ID="Freemind_Link_268986642" MODIFIED="1590712667149" TEXT="Pode ser utilizado mais de uma vez"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1140290713" MODIFIED="1590712696120" TEXT="Ex: docker container run [...] --dns 8.8.8.8 --dns 1.1.1.1 [...]">
+<icon BUILTIN="idea"/>
+</node>
+</node>
 </node>
 </node>
 <node CREATED="1587400390028" ID="Freemind_Link_1415107864" MODIFIED="1587400441878" TEXT="Cria um container &#xa;sem carreg&#xe1;-lo">

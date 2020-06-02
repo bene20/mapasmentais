@@ -111,9 +111,20 @@
 </node>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1576516318357" ID="Freemind_Link_120789246" MODIFIED="1591025654147" TEXT="share">
+<node CREATED="1576516320326" ID="Freemind_Link_1321810912" MODIFIED="1591025669808" TEXT="Disponibiliza acesso global (pela internet) &#xe0; sua VM"/>
+<node CREATED="1591025672721" ID="Freemind_Link_442962167" MODIFIED="1591025681235" TEXT="&#xc9; necess&#xe1;rio instalar o plugin vagrant-share">
+<node CREATED="1576549358502" ID="Freemind_Link_773685668" MODIFIED="1576549359442" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1576549262243" ID="Freemind_Link_170926001" MODIFIED="1591025716618" TEXT="vagrant plugin install vagrant-share"/>
 </node>
 </node>
-<node CREATED="1576519327581" FOLDED="true" ID="Freemind_Link_404778742" MODIFIED="1576519333889" POSITION="right" TEXT="Vagrantfile">
+<node CREATED="1576549358502" ID="Freemind_Link_276716065" MODIFIED="1576549359442" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1576549262243" ID="Freemind_Link_265627825" MODIFIED="1591025723446" TEXT="vagrant share"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1576519327581" ID="Freemind_Link_404778742" MODIFIED="1576519333889" POSITION="right" TEXT="Vagrantfile">
 <node CREATED="1576519605211" ID="Freemind_Link_1743887470" MODIFIED="1576519615070" TEXT="Port forward">
 <node CREATED="1576519637557" ID="Freemind_Link_1013002428" MODIFIED="1576520331664" TEXT="Permite mapear uma porta do host para o guest"/>
 <node CREATED="1576519730818" ID="Freemind_Link_658754853" MODIFIED="1576519731143" TEXT="https://www.vagrantup.com/docs/networking/forwarded_ports.html"/>
@@ -197,10 +208,18 @@
 </node>
 </node>
 <node CREATED="1576521855561" ID="Freemind_Link_250165002" MODIFIED="1576521859257" TEXT="Multi-machine">
-<node CREATED="1576521866369" ID="Freemind_Link_24144910" MODIFIED="1576521871747" TEXT="Gera&#xe7;&#xe3;o de m&#xfa;ltiplos ambientes"/>
+<node CREATED="1576521866369" ID="Freemind_Link_24144910" MODIFIED="1591024861027" TEXT="Gera&#xe7;&#xe3;o de m&#xfa;ltiplos ambientes">
+<arrowlink DESTINATION="Freemind_Link_63147951" ENDARROW="Default" ENDINCLINATION="895;0;" ID="Freemind_Arrow_Link_1703924272" STARTARROW="None" STARTINCLINATION="895;0;"/>
+</node>
 <node CREATED="1576521872624" ID="Freemind_Link_837376127" MODIFIED="1576521881009" TEXT="Os ambientes podem compartilhar configura&#xe7;&#xf5;es em comum"/>
+<node CREATED="1591029326558" ID="Freemind_Link_578121242" MODIFIED="1591029347877" TEXT="&#xc9; poss&#xed;vel criar v&#xe1;rias m&#xe1;quinas &#xa;iguais (ou bem parecidas) com loop">
+<node CREATED="1576520895850" ID="Freemind_Link_579986763" MODIFIED="1576520896683" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1576520901441" ID="Freemind_Link_1915690273" MODIFIED="1591029364507" TEXT="(1..3).each do |i|&#xa;  config.vm.define &quot;node-#{i}&quot; do |node|&#xa;    node.vm.provision &quot;shell&quot;,&#xa;      inline: &quot;echo hello from node #{i}&quot;&#xa;  end&#xa;end"/>
+</node>
+</node>
 <node CREATED="1576520895850" ID="Freemind_Link_627042173" MODIFIED="1576520896683" TEXT="Ex:">
-<node COLOR="#ff00ff" CREATED="1576520901441" ID="Freemind_Link_1182306840" MODIFIED="1576522666603" TEXT="Vagrant.configure (&quot;2&quot;) do |config|&#xa;    config.vm.box = &quot;ubuntu/bionic64&quot;&#xa;&#xa;    config.vm.define &quot;mysqldb&quot; do |mysql|"/>
+<node CREATED="1591024801906" ID="Freemind_Link_1741594567" MODIFIED="1591024824418" TEXT="As m&#xe1;quinas podem ser levantadas separadamente"/>
+<node COLOR="#ff00ff" CREATED="1576520901441" ID="Freemind_Link_1182306840" MODIFIED="1591024768622" TEXT="Vagrant.configure (&quot;2&quot;) do |config|&#xa;    config.vm.box = &quot;ubuntu/bionic64&quot;&#xa;&#xa;    config.vm.define :web do |web_config|&#xa;        web_config.vm.box = &quot;web&quot;&#xa;        web_config.vm.forward_port 80, 8080&#xa;    end&#xa; &#xa;    config.vm.define :db do |db_config|&#xa;        db_config.vm.box = &quot;db&quot;&#xa;        db_config.vm.forward_port 3306, 3306&#xa;    end&#xa;end"/>
 </node>
 </node>
 <node CREATED="1576521623141" ID="Freemind_Link_1304696319" MODIFIED="1576521624481" TEXT="Scripts">
@@ -209,27 +228,47 @@
 <node COLOR="#ff00ff" CREATED="1576519620794" ID="Freemind_Link_444127032" MODIFIED="1576521682072" TEXT="$script_mysql = &lt;&lt;-SCRIPT&#xa;apt-get update &amp;&amp; \&#xa;apt-get install -y mysql-server-5.7 &amp;&amp; \&#xa;mysql -e &quot;create user &apos;phpuser&apos;@&apos;%&apos; identified by &apos;pass&apos;;&quot;&#xa;SCRIPT&#xa;...&#xa;config.vm.provision &quot;shell&quot;, inline: $script_mysql"/>
 </node>
 </node>
+<node CREATED="1591030093086" ID="Freemind_Link_619280695" MODIFIED="1591030094388" TEXT="Extras">
+<node CREATED="1591030094991" ID="Freemind_Link_61509008" MODIFIED="1591030102785" TEXT="Passando vari&#xe1;veis do host para o Vagrant">
+<node CREATED="1591030113991" ID="Freemind_Link_1531454578" MODIFIED="1591030116361" TEXT="Ex:">
+<node CREATED="1591030116911" ID="Freemind_Link_4343942" MODIFIED="1591030133643" TEXT="Usu&#xe1;rio que roda o &apos;vagrant up&apos;"/>
+<node COLOR="#ff00ff" CREATED="1576521740407" ID="Freemind_Link_638140330" MODIFIED="1591030197797" TEXT="username = &quot;#{ENV[&apos;USERNAME&apos;] || `whoami`}&quot;&#xa;config.vm.provision :shell, inline: &quot;echo #{username} &gt; /etc/profile.d/me&quot;"/>
+</node>
+</node>
+<node CREATED="1591030322694" ID="Freemind_Link_921135140" MODIFIED="1591030325906" TEXT="Configura&#xe7;&#xf5;es">
+<node CREATED="1591030457375" ID="Freemind_Link_862463320" MODIFIED="1591030458441" TEXT="https://www.vagrantup.com/docs/vagrantfile/machine_settings.html"/>
+<node CREATED="1591030326375" ID="Freemind_Link_1346712094" MODIFIED="1591030335611" TEXT="Nome da m&#xe1;quina (hostname)">
+<node CREATED="1591030337222" ID="Freemind_Link_1415122658" MODIFIED="1591030338066" TEXT="Ex:">
+<node CREATED="1591030340593" ID="Freemind_Link_1772517405" MODIFIED="1591030341651" TEXT="config.vm.hostname"/>
+<node COLOR="#ff00ff" CREATED="1576521740407" ID="Freemind_Link_573551734" MODIFIED="1591030370380" TEXT="config.vm.hostname = &quot;nomedamaquinavirtual&quot;"/>
+</node>
+</node>
+</node>
+</node>
 <node CREATED="1576520248303" ID="Freemind_Link_1935471171" MODIFIED="1576520253465" TEXT="Exemplos:">
 <node CREATED="1576520254218" FOLDED="true" ID="Freemind_Link_1207872776" MODIFIED="1576520263200" TEXT="Servidor NginX">
 <node COLOR="#ff00ff" CREATED="1576519620794" ID="Freemind_Link_1699584306" MODIFIED="1576520948464" TEXT="Vagrant.configure(&quot;2&quot;) do |config|&#xa;  config.vm.box = &quot;ubuntu/bionic64&quot;&#xa;  config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8089&#xa;  config.vm.network &quot;public_network&quot;, ip: &quot;192.168.1.24&quot;&#xa;end"/>
 </node>
-<node CREATED="1576521736375" FOLDED="true" ID="Freemind_Link_1780282475" MODIFIED="1576521739235" TEXT="Servidor Mysql">
+<node CREATED="1576521736375" ID="Freemind_Link_1780282475" MODIFIED="1576521739235" TEXT="Servidor Mysql">
 <node COLOR="#ff00ff" CREATED="1576521740407" ID="Freemind_Link_37567594" MODIFIED="1576521754223" TEXT="$script_mysql = &lt;&lt;-SCRIPT&#xa;  apt-get update &amp;&amp; \&#xa;  apt-get install -y mysql-server-5.7 &amp;&amp; \&#xa;  mysql -e &quot;create user &apos;phpuser&apos;@&apos;%&apos; identified by &apos;pass&apos;;&quot;&#xa;SCRIPT&#xa;&#xa;Vagrant.configure(&quot;2&quot;) do |config|&#xa;  config.vm.box = &quot;ubuntu/bionic64&quot;&#xa;&#xa;  config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8089&#xa;  config.vm.network &quot;public_network&quot;, ip: &quot;192.168.1.24&quot;&#xa;&#xa;  config.vm.provision &quot;shell&quot;, inline: &quot;cat /configs/id_bionic.pub &gt;&gt; .ssh/authorized_keys&quot;&#xa;&#xa;  config.vm.provision &quot;shell&quot;, inline: $script_mysql&#xa;  config.vm.provision &quot;shell&quot;, inline: &quot;cat /configs/mysqld.cnf &gt; /etc/mysql/mysql.conf.d/mysqld.cnf&quot;&#xa;  config.vm.provision &quot;shell&quot;, inline: &quot;service mysql restart&quot;&#xa;&#xa;  config.vm.synced_folder &quot;./configs&quot;, &quot;/configs&quot;&#xa;  config.vm.synced_folder &quot;.&quot;, &quot;/vagrant&quot;, disabled: true&#xa;end"/>
 </node>
-<node CREATED="1576521985903" FOLDED="true" ID="Freemind_Link_63147951" MODIFIED="1576521990202" TEXT="2 servidores">
+<node CREATED="1576521985903" ID="Freemind_Link_63147951" MODIFIED="1591024861025" TEXT="2 servidores">
 <node CREATED="1576522018023" ID="Freemind_Link_1454218265" MODIFIED="1576522039618" TEXT="Para subir as duas:">
 <node COLOR="#0000ff" CREATED="1576522040582" ID="Freemind_Link_433433263" MODIFIED="1576522066766" TEXT="vagrant up"/>
 <node COLOR="#0000ff" CREATED="1576522040582" ID="Freemind_Link_758444115" MODIFIED="1576522062095" TEXT="vagrant up phpweb mysqldb"/>
 </node>
 <node COLOR="#ff00ff" CREATED="1576521991230" ID="Freemind_Link_1461184011" MODIFIED="1576522001407" TEXT="Vagrant.configure(&quot;2&quot;) do |config|&#xa;&#xa;  config.vm.define &quot;phpweb&quot; do |php_config|&#xa;    php_config.vm.box = &quot;apache&quot;&#xa;  end&#xa;&#xa;  config.vm.define &quot;mysqldb&quot; do |mysql_config|&#xa;    mysql_config.vm.box = &quot;ubuntu/bionic64&quot;&#xa;  end&#xa;end"/>
 </node>
-<node CREATED="1576523267341" FOLDED="true" ID="Freemind_Link_1365336557" MODIFIED="1576523336672" TEXT="Provisioning com ansible">
+<node CREATED="1576523267341" ID="Freemind_Link_1365336557" MODIFIED="1576523336672" TEXT="Provisioning com ansible">
 <node CREATED="1576523292008" ID="Freemind_Link_1015973973" MODIFIED="1576523321201" TEXT="Adiciona as configura&#xe7;&#xf5;es de instala&#xe7;&#xe3;o do ansible, &#xa;copia a chave privada e executa o playbook"/>
 <node CREATED="1576523394202" ID="Freemind_Link_1526261052" MODIFIED="1576523395746" TEXT="Assume:">
 <node CREATED="1576523398423" ID="Freemind_Link_1170950973" MODIFIED="1576523407216" TEXT="Pasta &apos;ansible&apos; dentro da pasta &apos;configs&apos;"/>
 <node CREATED="1576523409772" ID="Freemind_Link_508345896" MODIFIED="1576523426632" TEXT="Arquivos &apos;hosts&apos; e &apos;playbook.yml&apos; na pasta &apos;configs/ansible&apos;"/>
 </node>
 <node COLOR="#ff00ff" CREATED="1576523275589" ID="Freemind_Link_1872275076" MODIFIED="1576523288707" TEXT="ansible.vm.provision &quot;shell&quot;,&#xa;    inline: &quot;apt-get update &amp;&amp;  \&#xa;               apt-get install -y software-properties-common &amp;&amp; \&#xa;               apt-add-repository --yes --update ppa:ansible/ansible &amp;&amp; \&#xa;               apt-get install -y ansible &quot;&#xa;&#xa;ansible.vm.provision &quot;shell&quot;,&#xa;    inline: &quot;cp /vagrant/id_bionic /home/vagrant/id_bionic &amp;&amp; \&#xa;                chmod 600 /home/vagrant/id_bionic&quot;&#xa;&#xa;ansible.vm.provision &quot;shell&quot;,&#xa;    inline: &quot;ansible-playbook -i /vagrant/configs/ansible/hosts \&#xa;                  /vagrant/configs/ansible/playbook.yml&quot;"/>
+</node>
+<node CREATED="1591117380059" FOLDED="true" ID="Freemind_Link_464977519" MODIFIED="1591117383194" TEXT="Runner de Gitlab">
+<node COLOR="#ff00ff" CREATED="1576523275589" ID="Freemind_Link_805037196" MODIFIED="1591117394293" TEXT="username = &quot;#{ENV[&apos;USERNAME&apos;] || `whoami`}&quot;&#xa;&#xa;$script_install_runner = &lt;&lt;-SCRIPT&#xa;  apt update -y;&#xa;  apt install -y docker.io;&#xa;  curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh | sudo bash&#xa;  apt-cache madison gitlab-runner&#xa;  apt install -y gitlab-runner=11.9.1&#xa;  usermod -aG docker vagrant&#xa;SCRIPT&#xa;&#xa;$script_register_runner = &lt;&lt;-SCRIPT&#xa;  gitlab-runner register \&#xa;         --non-interactive \&#xa;         --url https://git.trt10.jus.br/ \&#xa;         --registration-token a5-kAWrWAPDD6zqG5Wfj\&#xa;         --description &quot;CDSIS Group Runner for maven projects - VM - #{username}&quot; \&#xa;         --tag-list &quot;mavenprojects&quot; \&#xa;         --executor docker \&#xa;         --docker-dns 192.168.0.2 --docker-dns 10.10.12.10 \&#xa;         --docker-image &quot;maven:3.6.3-jdk-8&quot;&#xa;SCRIPT&#xa;&#xa;&#xa;Vagrant.configure(&quot;2&quot;) do |config|&#xa;&#xa;  config.vm.box = &quot;ubuntu/bionic64&quot;&#xa;  config.vm.hostname = &quot;gitlabrunner&quot;&#xa;&#xa;  config.vm.network &quot;public_network&quot;, bridge: &quot;wlx1cbfce55c6ef&quot;, type: &quot;dhcp&quot;&#xa;&#xa;  config.vm.provision &quot;shell&quot;, inline: $script_install_runner&#xa;  config.vm.provision &quot;shell&quot;, inline: $script_register_runner&#xa;end"/>
 </node>
 </node>
 </node>

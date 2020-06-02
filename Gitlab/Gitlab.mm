@@ -47,7 +47,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1578681234338" ID="Freemind_Link_1857077151" MODIFIED="1578681241349" TEXT="Jobs">
+<node CREATED="1578681234338" FOLDED="true" ID="Freemind_Link_1857077151" MODIFIED="1578681241349" TEXT="Jobs">
 <node CREATED="1578681241904" ID="Freemind_Link_1981425285" MODIFIED="1578681248907" TEXT="Todo job pode ter um nome arbir&#xe1;rio"/>
 <node CREATED="1578681262462" ID="Freemind_Link_1223537013" MODIFIED="1578681301307" TEXT="Antes de cada job os comandos definidos em before_script ser&#xe3;o executados"/>
 <node CREATED="1578681356637" ID="Freemind_Link_735318917" MODIFIED="1578681370339" TEXT="Precisam ter o campo &apos;script&apos; obrigatoriamente"/>
@@ -371,6 +371,14 @@
 <node COLOR="#0000ff" CREATED="1579800215855" ID="Freemind_Link_1114147273" MODIFIED="1579804121717" TEXT="cat ~/.ssh/id_rsa.pub | ssh usuarioremoto@ipdamaquina &quot;cat &gt;&gt;  ~/.ssh/authorized_keys&quot;"/>
 </node>
 </node>
+</node>
+</node>
+<node CREATED="1591032506617" ID="Freemind_Link_1801951203" MODIFIED="1591032510739" TEXT="config.toml">
+<node CREATED="1591032512345" ID="Freemind_Link_1500664719" MODIFIED="1591032518760" TEXT="Arquivo de configura&#xe7;&#xe3;o criado para o runner"/>
+<node CREATED="1591032519622" ID="Freemind_Link_1880923048" MODIFIED="1591032520610" TEXT="Local">
+<node CREATED="1591032521085" ID="Freemind_Link_1936199994" MODIFIED="1591032661250" TEXT="/etc/gitlab-runner/config.toml em sistemas *nix quando executado em modo root"/>
+<node CREATED="1591032521085" ID="Freemind_Link_1218914303" MODIFIED="1591032681623" TEXT="~/.gitlab-runner/config.toml em sistemas *nix quando executado em modo n&#xe3;o root"/>
+<node CREATED="1591032521085" ID="Freemind_Link_955168886" MODIFIED="1591032687369" TEXT="./config.toml em otros sistemas"/>
 </node>
 </node>
 <node CREATED="1579799020677" ID="Freemind_Link_115340728" MODIFIED="1579799023034" TEXT="Executors">
