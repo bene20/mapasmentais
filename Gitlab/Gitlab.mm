@@ -47,7 +47,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1578681234338" FOLDED="true" ID="Freemind_Link_1857077151" MODIFIED="1578681241349" TEXT="Jobs">
+<node CREATED="1578681234338" ID="Freemind_Link_1857077151" MODIFIED="1578681241349" TEXT="Jobs">
 <node CREATED="1578681241904" ID="Freemind_Link_1981425285" MODIFIED="1578681248907" TEXT="Todo job pode ter um nome arbir&#xe1;rio"/>
 <node CREATED="1578681262462" ID="Freemind_Link_1223537013" MODIFIED="1578681301307" TEXT="Antes de cada job os comandos definidos em before_script ser&#xe3;o executados"/>
 <node CREATED="1578681356637" ID="Freemind_Link_735318917" MODIFIED="1578681370339" TEXT="Precisam ter o campo &apos;script&apos; obrigatoriamente"/>
@@ -308,18 +308,36 @@
 <icon BUILTIN="full-1"/>
 <node COLOR="#0000ff" CREATED="1579195610386" ID="Freemind_Link_424021265" MODIFIED="1579195617416" TEXT="docker exec -it gitlab-runner bash"/>
 </node>
-<node CREATED="1579195782358" ID="Freemind_Link_509578588" MODIFIED="1579195796593" TEXT="Executar:">
+<node CREATED="1579195782358" ID="Freemind_Link_509578588" MODIFIED="1591741267658" TEXT="Executar (ou):">
 <icon BUILTIN="full-2"/>
-<node COLOR="#0000ff" CREATED="1579195677152" ID="Freemind_Link_417802504" MODIFIED="1579195688835" TEXT="gitlab-runner register"/>
-</node>
-<node CREATED="1579195694577" ID="Freemind_Link_1783890873" MODIFIED="1579196056265" TEXT="Responder as quest&#xf5;es &#xa;do comando acima">
-<icon BUILTIN="full-3"/>
-<node CREATED="1579196161783" ID="Freemind_Link_171760490" MODIFIED="1579196164818" TEXT="Exemplo:">
+<node COLOR="#0000ff" CREATED="1579195677152" ID="Freemind_Link_417802504" MODIFIED="1591740255583" TEXT="gitlab-runner register">
+<icon BUILTIN="forward"/>
+<node CREATED="1579196161783" ID="Freemind_Link_171760490" MODIFIED="1591741242148" TEXT="Ex:">
 <node CREATED="1579196069064" ID="Freemind_Link_1069893170" MODIFIED="1579794105630" TEXT="Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com/):&#xa;Resposta: https://gitlab.com/&#xa;&#xa;Please enter the gitlab-ci token for this runner:&#xa;Resposta: qQtSzhmRjZASC3hqCYrc&#xa;&#xa;Please enter the gitlab-ci description for this runner:&#xa;[752fe20de360]:&#xa;Resposta: runner-bytebank&#xa;&#xa;Please enter the gitlab-ci tags for this runner (comma separated):&#xa;Resposta: Deixar em branco&#xa;&#xa;Registering runner... succeeded                     runner=qQtSzhmR&#xa;&#xa;Please enter the executor: kubernetes, docker-ssh, shell, docker-ssh+machine, ssh, virtualbox, docker+machine, custom, docker, parallels:&#xa;Resposta: docker&#xa;&#xa;Please enter the default Docker image (e.g. ruby:2.6):&#xa;Resposta: bene20/minha-imagem:latest (aqui informei o nome completo da imagem registrada no dockerhub)&#xa;&#xa;Runner registered successfully. Feel free to start it, but if it&apos;s running already the config should be automatically reloaded!"/>
 </node>
 </node>
-<node CREATED="1579196269591" ID="Freemind_Link_1342628862" MODIFIED="1579196278920" TEXT="Sair do container do runner">
-<icon BUILTIN="full-4"/>
+<node CREATED="1591740306741" ID="Freemind_Link_1556004836" MODIFIED="1591740371102" TEXT="ou forne&#xe7;a j&#xe1; as configura&#xe7;&#xf5;es">
+<icon BUILTIN="forward"/>
+<node CREATED="1591740371883" ID="Freemind_Link_208577227" MODIFIED="1591740374415" TEXT="Ex:">
+<node CREATED="1591740396691" ID="Freemind_Link_112412568" MODIFIED="1591740549564" TEXT="--docker-volumes /var/run/docker.sock:/var/run/docker.sock">
+<icon BUILTIN="idea"/>
+<node CREATED="1591740408531" ID="Freemind_Link_929319506" MODIFIED="1591740426332" TEXT="Usado caso queira rodar containers no seu runner"/>
+<node CREATED="1591740426906" ID="Freemind_Link_402370360" MODIFIED="1591740450997" TEXT="Usando esse mount, os containers rodados ser&#xe3;o &apos;irm&#xe3;os&apos; (siblings) do runner"/>
+<node CREATED="1591740454777" ID="Freemind_Link_280904196" MODIFIED="1591741215133" TEXT="Usando isso, n&#xe3;o dever&#xe1; usar docker:dind&#xa;como service no job (no .gitlab-ci.yml)">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+<node CREATED="1591740542227" ID="Freemind_Link_1737535115" MODIFIED="1591740608566" TEXT="--docker-dns &lt;id-do-DNS-aqui&gt;">
+<icon BUILTIN="idea"/>
+<node CREATED="1591740560475" ID="Freemind_Link_330266718" MODIFIED="1591740573509" TEXT="Registra dns para o container executado pelo runner"/>
+<node CREATED="1591740574267" ID="Freemind_Link_655918109" MODIFIED="1591740579941" TEXT="Pode aparecer m&#xfa;ltiplas vezes"/>
+</node>
+<node COLOR="#0000ff" CREATED="1591740315020" ID="Freemind_Link_1651140190" MODIFIED="1591740531037" TEXT="gitlab-runner register \&#xa;         --non-interactive \&#xa;         --url &lt;url-do-gitlab-aqui&gt; \&#xa;         --registration-token &lt;token-do-gitlab-aqui&gt;\&#xa;         --description &quot;CDSIS Group Runner for maven projects - Container - $(whoami)&quot; \&#xa;         --tag-list &quot;mavenprojects&quot; \&#xa;         --executor docker \&#xa;         --docker-dns 192.168.0.2 --docker-dns 10.10.12.10 \&#xa;         --docker-volumes /var/run/docker.sock:/var/run/docker.sock \&#xa;         --docker-image  &quot;docker:19.03.1&quot;&#xa;"/>
+</node>
+</node>
+</node>
+<node CREATED="1579196269591" ID="Freemind_Link_1342628862" MODIFIED="1591740211697" TEXT="Sair do container do runner">
+<icon BUILTIN="full-3"/>
 <node COLOR="#0000ff" CREATED="1579195677152" ID="Freemind_Link_147541534" MODIFIED="1579196287554" TEXT="exit"/>
 </node>
 </node>

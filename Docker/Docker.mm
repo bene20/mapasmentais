@@ -731,6 +731,11 @@
 <node COLOR="#0000ff" CREATED="1576178274000" ID="Freemind_Link_1856490440" MODIFIED="1588539991315" TEXT="docker container start &lt;nome-container&gt;"/>
 </node>
 </node>
+<node CREATED="1591741491868" ID="Freemind_Link_1942049733" MODIFIED="1591741498167" TEXT="/var/run/docker.sock">
+<node CREATED="1591741513536" ID="Freemind_Link_419058625" MODIFIED="1591741529531" TEXT="Socker por onde o Daemon Docker recebe os comandos"/>
+<node CREATED="1591741531758" ID="Freemind_Link_1018004625" MODIFIED="1591741570087" TEXT="Quando se monta esse socket como &apos;bind volume&apos; em um container, o container estar&#xe1; usando o Daemon Docker do host"/>
+<node CREATED="1591741572502" ID="Freemind_Link_1218979778" MODIFIED="1591741611377" TEXT="Um container que roda uma imagem docker que tiver esse &apos;bind volume&apos;, criar&#xe1; containers irm&#xe3;oes a si mesmo"/>
+</node>
 </node>
 <node CREATED="1563998487048" ID="Freemind_Link_1123746225" MODIFIED="1563998491875" POSITION="right" TEXT="Imagens usuais">
 <node CREATED="1563998509501" ID="Freemind_Link_1292846156" MODIFIED="1563998522473" TEXT="Postgresql 9.6">
