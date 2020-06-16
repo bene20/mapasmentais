@@ -47,13 +47,41 @@
 </node>
 </node>
 </node>
+<node CREATED="1591993010716" ID="Freemind_Link_951448315" MODIFIED="1591993036771" TEXT="Para n&#xe3;o disparar o pipeline:">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1591993019067" ID="Freemind_Link_519075278" MODIFIED="1591993032745" TEXT="Incluir o texto [skip ci] no texto do commit."/>
+</node>
 <node CREATED="1578681234338" ID="Freemind_Link_1857077151" MODIFIED="1578681241349" TEXT="Jobs">
 <node CREATED="1578681241904" ID="Freemind_Link_1981425285" MODIFIED="1578681248907" TEXT="Todo job pode ter um nome arbir&#xe1;rio"/>
 <node CREATED="1578681262462" ID="Freemind_Link_1223537013" MODIFIED="1578681301307" TEXT="Antes de cada job os comandos definidos em before_script ser&#xe3;o executados"/>
 <node CREATED="1578681356637" ID="Freemind_Link_735318917" MODIFIED="1578681370339" TEXT="Precisam ter o campo &apos;script&apos; obrigatoriamente"/>
 <node CREATED="1578681390981" ID="Freemind_Link_464886681" MODIFIED="1578681395690" TEXT="S&#xe3;o executados pelos runners"/>
 <node CREATED="1578681409454" ID="Freemind_Link_1598175414" MODIFIED="1578681415755" TEXT="Cada job &#xe9; totalmente independente dos demais"/>
+<node CREATED="1591814780494" ID="Freemind_Link_1315159136" MODIFIED="1591814795689" TEXT="A execu&#xe7;&#xe3;o dos jobs &#xe9; feita em 4 etapas">
+<node CREATED="1591814804510" ID="Freemind_Link_1745855081" MODIFIED="1591814825771" TEXT="Prepare: Create and start the services.">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1591814810657" ID="Freemind_Link_1667717232" MODIFIED="1591814828679" TEXT="Pre-job: Clone, restore cache and download artifacts from previous stages. This is run on a special Docker image.">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1591814816296" ID="Freemind_Link_1043041120" MODIFIED="1591814832017" TEXT="Job: User build. This is run on the user-provided Docker image.">
+<icon BUILTIN="full-3"/>
+</node>
+<node CREATED="1591814822167" ID="Freemind_Link_1777622859" MODIFIED="1591814835646" TEXT="Post-job: Create cache, upload artifacts to GitLab. This is run on a special Docker Image.">
+<icon BUILTIN="full-4"/>
+</node>
+</node>
 <node CREATED="1578682793040" ID="Freemind_Link_858726247" MODIFIED="1578682795834" TEXT="Par&#xe2;metros">
+<node CREATED="1591814990435" ID="Freemind_Link_1604400962" MODIFIED="1591814992943" TEXT="variables">
+<node CREATED="1591815260650" ID="Freemind_Link_715166168" MODIFIED="1591815265000" TEXT="Podem ser globais ou de job"/>
+<node CREATED="1591815138774" ID="Freemind_Link_1380136002" MODIFIED="1591815336964" TEXT="H&#xe1; algumas predefinidas">
+<arrowlink DESTINATION="Freemind_Link_209937549" ENDARROW="Default" ENDINCLINATION="1059;0;" ID="Freemind_Arrow_Link_104443828" STARTARROW="None" STARTINCLINATION="655;0;"/>
+</node>
+<node CREATED="1591814993670" ID="Freemind_Link_1461053063" MODIFIED="1591815024376" TEXT="As vari&#xe1;veis criadas no YAML s&#xe3;o repassadas aos services">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node CREATED="1591815051819" ID="Freemind_Link_1469416265" MODIFIED="1591815065377" TEXT="As vari&#xe1;veis &apos;seguras&apos; s&#xf3; ser&#xe3;o repasadas aos containers de &apos;build&apos;"/>
+</node>
 <node CREATED="1578682796920" ID="Freemind_Link_1620673213" MODIFIED="1578682798243" TEXT="script">
 <node CREATED="1578682798936" ID="Freemind_Link_1582994030" MODIFIED="1578682810300" TEXT="https://gitlab.com/help/ci/yaml/README.md#script">
 <icon BUILTIN="attach"/>
@@ -70,6 +98,15 @@
 <icon BUILTIN="attach"/>
 </node>
 <node CREATED="1578683023640" ID="Freemind_Link_698644860" MODIFIED="1578683041497" TEXT="Indica a imagem docker a ser usada pelo job"/>
+<node CREATED="1591814862359" ID="Freemind_Link_1984479069" MODIFIED="1591814873124" TEXT="O hostname do container &#xe9; gerado com 2 aliases">
+<node CREATED="1591814888999" ID="Freemind_Link_1056818898" MODIFIED="1591814908715" TEXT="Tudo ap&#xf3;s o &apos;:&apos; &#xe9; descartado"/>
+<node CREATED="1591814909927" ID="Freemind_Link_517438777" MODIFIED="1591814937632" TEXT="&apos;/&apos; &#xe9; substitu&#xed;do por &apos;__&apos;">
+<icon BUILTIN="forward"/>
+</node>
+<node CREATED="1591814909927" ID="Freemind_Link_932860446" MODIFIED="1591814958836" TEXT="&apos;/&apos; &#xe9; substitu&#xed;do por &apos;-&apos;">
+<icon BUILTIN="forward"/>
+</node>
+</node>
 </node>
 <node CREATED="1579122426232" ID="Freemind_Link_722697682" MODIFIED="1579122427329" TEXT="stage">
 <node CREATED="1579122427840" ID="Freemind_Link_725189547" MODIFIED="1579122437307" TEXT="Indica em que fase do pipelane se est&#xe1;"/>
@@ -128,6 +165,14 @@
 <node CREATED="1590029510372" ID="Freemind_Link_483271396" MODIFIED="1590029512891" TEXT="untracked">
 <node CREATED="1590029513437" ID="Freemind_Link_281211623" MODIFIED="1590029533529" TEXT="Se true, far&#xe1; o cache de arquivos n&#xe3;o rastreados pelo reposit&#xf3;rio Git"/>
 </node>
+<node CREATED="1591981079219" ID="Freemind_Link_234444155" MODIFIED="1591981089625" TEXT="Para desabilitar o cache em um job espec&#xed;fico, use &apos;{}&apos;">
+<node CREATED="1589485670442" ID="Freemind_Link_782866712" MODIFIED="1589485671318" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_627950785" MODIFIED="1591981125541" TEXT="jobsemcache:&#xa;  cache: {}"/>
+</node>
+</node>
+<node CREATED="1591814517857" ID="Freemind_Link_243273315" MODIFIED="1591814537794" TEXT="Ao declarar o cache em um job, o job global ser&#xe1; IGNORADO">
+<icon BUILTIN="messagebox_warning"/>
+</node>
 <node CREATED="1590029352070" ID="Freemind_Link_1944287020" MODIFIED="1590029354349" TEXT="policy">
 <node CREATED="1590029550255" ID="Freemind_Link_1827490987" MODIFIED="1590029558850" TEXT="Diz qual &#xe9; o comportamento do cache">
 <node CREATED="1590029559315" ID="Freemind_Link_547839180" MODIFIED="1590029567262" TEXT="O padr&#xe3;o &#xe9; pull-push"/>
@@ -150,6 +195,9 @@
 </node>
 <node CREATED="1589485670442" ID="Freemind_Link_702274464" MODIFIED="1589485671318" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_529389646" MODIFIED="1589485707142" TEXT="cache:&#xa;  paths:&#xa;    - .m2/repository/&#xa;    - target/&#xa;"/>
+<node CREATED="1591981162140" FOLDED="true" ID="Freemind_Link_1995817839" MODIFIED="1591981170171" TEXT="Herdar cache global, sobrescrevendo algo:">
+<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_779415522" MODIFIED="1591981185828" TEXT="cache: &amp;global_cache&#xa;    key: ${CI_COMMIT_REF_SLUG}&#xa;    paths:&#xa;      - node_modules/&#xa;      - public/&#xa;      - vendor/&#xa;    policy: pull-push&#xa;&#xa;job:&#xa;  cache:&#xa;    # inherit all global cache settings&#xa;    &lt;&lt;: *global_cache&#xa;    # override the policy&#xa;    policy: pull"/>
+</node>
 </node>
 </node>
 <node CREATED="1579543326378" ID="Freemind_Link_129089085" MODIFIED="1579543327219" TEXT="tags">
@@ -173,6 +221,12 @@
 </node>
 <node CREATED="1580149148600" ID="Freemind_Link_663876793" MODIFIED="1580149151025" TEXT="on_failure">
 <node CREATED="1580149156792" ID="Freemind_Link_342750354" MODIFIED="1580149180187" TEXT="Quando algo deu errado na etapa(stage) anterior"/>
+</node>
+<node CREATED="1591856045925" ID="Freemind_Link_362337362" MODIFIED="1591856047736" TEXT="manual">
+<node CREATED="1591856050901" ID="Freemind_Link_416692582" MODIFIED="1591856065687" TEXT="Apenas ap&#xf3;s intera&#xe7;&#xe3;o do usu&#xe1;rio (via bot&#xe3;o)"/>
+</node>
+<node CREATED="1591856048604" ID="Freemind_Link_496950909" MODIFIED="1591856050050" TEXT="delayed">
+<node CREATED="1591856067508" ID="Freemind_Link_494559383" MODIFIED="1591856072679" TEXT="Ap&#xf3;s um certo per&#xed;odo de tempo"/>
 </node>
 </node>
 <node CREATED="1578683234720" ID="Freemind_Link_418122747" MODIFIED="1578683235547" TEXT="Ex:">
@@ -255,7 +309,7 @@
 <node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_1887494230" MODIFIED="1579124677842" TEXT="before_script:&#xa;  - docker info&#xa;  - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD&#xa;"/>
 </node>
 </node>
-<node CREATED="1579206080533" ID="Freemind_Link_209937549" MODIFIED="1579206087643" TEXT="Pr&#xe9;-definidas">
+<node CREATED="1579206080533" ID="Freemind_Link_209937549" MODIFIED="1591815336965" TEXT="Pr&#xe9;-definidas">
 <node CREATED="1579206090525" ID="Freemind_Link_1700898795" MODIFIED="1579206102887" TEXT="https://gitlab.com/help/ci/variables/predefined_variables.md">
 <icon BUILTIN="attach"/>
 </node>
@@ -286,7 +340,7 @@
 <node COLOR="#0000ff" CREATED="1579195006380" ID="Freemind_Link_857701346" MODIFIED="1579195033802" TEXT="docker pull gitlab/gitlab-runner:latest"/>
 </node>
 <node CREATED="1579194978274" ID="Freemind_Link_180183413" MODIFIED="1579196435199" TEXT="Executar:">
-<node COLOR="#0000ff" CREATED="1579194981485" ID="Freemind_Link_244530134" MODIFIED="1579196423325" TEXT="docker run -d --name gitlab-runner --restart always -v /home/ebenezer.botelho/tmp/shared/:/etc/gitlab-runner -v /var/run/docker.sock:/var/run/docker.sock gitlab/gitlab-runner:latest "/>
+<node COLOR="#0000ff" CREATED="1579194981485" ID="Freemind_Link_244530134" MODIFIED="1591855673625" TEXT="docker run -d --name gitlab-runner --restart always \&#xa;      -v /home/ebenezer.botelho/tmp/shared/:/etc/gitlab-runner \&#xa;      -v /var/run/docker.sock:/var/run/docker.sock \&#xa;      gitlab/gitlab-runner:latest "/>
 </node>
 </node>
 <node CREATED="1579195417561" ID="Freemind_Link_880931997" MODIFIED="1579196381350" TEXT="Cria&#xe7;&#xe3;o/configura&#xe7;&#xe3;o">
@@ -325,6 +379,9 @@
 <node CREATED="1591740426906" ID="Freemind_Link_402370360" MODIFIED="1591740450997" TEXT="Usando esse mount, os containers rodados ser&#xe3;o &apos;irm&#xe3;os&apos; (siblings) do runner"/>
 <node CREATED="1591740454777" ID="Freemind_Link_280904196" MODIFIED="1591741215133" TEXT="Usando isso, n&#xe3;o dever&#xe1; usar docker:dind&#xa;como service no job (no .gitlab-ci.yml)">
 <icon BUILTIN="messagebox_warning"/>
+</node>
+<node CREATED="1591855501299" ID="Freemind_Link_293250408" MODIFIED="1591855583850" TEXT="Caso o runner esteja rodando em container, ser&#xe1; necess&#xe1;rio &#xa;adicionar &apos;--privileged&apos; no comando &apos;docker container run&apos;">
+<arrowlink COLOR="#fba60c" DESTINATION="Freemind_Link_244530134" ENDARROW="Default" ENDINCLINATION="974;0;" ID="Freemind_Arrow_Link_1177543676" STARTARROW="None" STARTINCLINATION="228;0;"/>
 </node>
 </node>
 <node CREATED="1591740542227" ID="Freemind_Link_1737535115" MODIFIED="1591740608566" TEXT="--docker-dns &lt;id-do-DNS-aqui&gt;">
@@ -392,6 +449,7 @@
 </node>
 </node>
 <node CREATED="1591032506617" ID="Freemind_Link_1801951203" MODIFIED="1591032510739" TEXT="config.toml">
+<node CREATED="1591815857584" ID="Freemind_Link_1718565136" MODIFIED="1591815858467" TEXT="https://docs.gitlab.com/runner/configuration/advanced-configuration.html"/>
 <node CREATED="1591032512345" ID="Freemind_Link_1500664719" MODIFIED="1591032518760" TEXT="Arquivo de configura&#xe7;&#xe3;o criado para o runner"/>
 <node CREATED="1591032519622" ID="Freemind_Link_1880923048" MODIFIED="1591032520610" TEXT="Local">
 <node CREATED="1591032521085" ID="Freemind_Link_1936199994" MODIFIED="1591032661250" TEXT="/etc/gitlab-runner/config.toml em sistemas *nix quando executado em modo root"/>
@@ -406,6 +464,9 @@
 <node CREATED="1579799059520" ID="Freemind_Link_1201425129" MODIFIED="1579799061305" TEXT="Shell">
 <node CREATED="1579799067737" ID="Freemind_Link_1101948987" MODIFIED="1579799073019" TEXT="O mais simples dos executores"/>
 <node CREATED="1579799073482" ID="Freemind_Link_230430609" MODIFIED="1579799114723" TEXT="Todas as depend&#xea;ncias dever&#xe3;o ser instaladas na m&#xe3;o na mesma m&#xe1;quina em que o runner est&#xe1; instalado"/>
+<node CREATED="1591815891113" ID="Freemind_Link_1187952687" MODIFIED="1591815898280" TEXT="O checkout do projeto &#xe9; feito em:">
+<node COLOR="#e60adc" CREATED="1591815908268" ID="Freemind_Link_806306203" MODIFIED="1591815924489" TEXT="&lt;working-directory&gt;/builds/&lt;short-token&gt;/&lt;concurrent-id&gt;/&lt;namespace&gt;/&lt;project-name&gt;"/>
+</node>
 </node>
 <node CREATED="1579799051553" ID="Freemind_Link_1471894365" MODIFIED="1579799057122" TEXT="Docker">
 <node CREATED="1579799533622" ID="Freemind_Link_1423634538" MODIFIED="1579799587691" TEXT="Todas as depend&#xea;ncias podem ser colocadas em uma imagem pronta para uso pelo runner"/>
@@ -425,6 +486,9 @@
 <node CREATED="1579552138015" ID="Freemind_Link_1901869178" MODIFIED="1579552179260" TEXT="Para desabilitar o TLS no container do pipeline:">
 <node CREATED="1579552181079" ID="Freemind_Link_1012726120" MODIFIED="1579552208469" TEXT="Declare a vari&#xe1;vel DOCKER_TLS_CERTDIR com o valor vazio"/>
 </node>
+</node>
+<node CREATED="1591816002798" ID="Freemind_Link_1779229460" MODIFIED="1591816006727" TEXT="Runner em VM">
+<node CREATED="1591816007273" ID="Freemind_Link_356493853" MODIFIED="1591816015468" TEXT="https://github.com/wdhif/vagrant-gitlab-ci-runner"/>
 </node>
 </node>
 </node>

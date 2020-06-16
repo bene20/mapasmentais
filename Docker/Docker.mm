@@ -129,6 +129,13 @@
 <icon BUILTIN="idea"/>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1605075019" MODIFIED="1591801697360" TEXT="--entrypoint [comando]">
+<icon BUILTIN="flag"/>
+<node CREATED="1563998982186" ID="Freemind_Link_843515984" MODIFIED="1591801709528" TEXT="Substitui o comando do ENTRYPOINT da imagem"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1522038872" MODIFIED="1591801763474" TEXT="Ex:docker container run -it --entrypoint /bin/bash [docker_image]">
+<icon BUILTIN="idea"/>
+</node>
+</node>
 </node>
 </node>
 <node CREATED="1587400390028" ID="Freemind_Link_1415107864" MODIFIED="1587400441878" TEXT="Cria um container &#xa;sem carreg&#xe1;-lo">
@@ -253,6 +260,11 @@
 <node CREATED="1564077255246" ID="Freemind_Link_538223243" MODIFIED="1564077285535" TEXT="Ver o IP atribu&#xed;do ao container: executar no container">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1230415612" MODIFIED="1564077273983" TEXT="hostname -i">
 <icon BUILTIN="wizard"/>
+</node>
+</node>
+<node CREATED="1592247458085" ID="Freemind_Link_1359132549" MODIFIED="1592247476556" TEXT="Colocar dois containers j&#xe1; &#xa;carregados na mesma rede">
+<node CREATED="1592248160506" ID="Freemind_Link_161648583" MODIFIED="1592248161679" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1592248162642" ID="Freemind_Link_575352040" MODIFIED="1592248210247" TEXT="docker network create myNetwork &#xa;docker network connect myNetwork container1&#xa;docker network connect myNetwork container2"/>
 </node>
 </node>
 </node>
