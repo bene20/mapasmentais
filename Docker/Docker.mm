@@ -421,6 +421,17 @@
 <node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1449117917" MODIFIED="1568727047527" TEXT="ARG">
 <node CREATED="1563994389535" ID="Freemind_Link_143746373" MODIFIED="1568727069862" TEXT="Par&#xe2;metros que podem ser passados para o Docker na fase de build"/>
 <node CREATED="1568727117050" ID="Freemind_Link_289175241" MODIFIED="1568727150853" TEXT="Se nenhum valor padr&#xe3;o for determinado e n&#xe3;o &#xa;for passado o valor no build, ser&#xe1; gerado um erro"/>
+<node CREATED="1592834998146" ID="Freemind_Link_282540081" MODIFIED="1592835003494" TEXT="Pode ser usado antes do FROM">
+<node CREATED="1592835007722" ID="Freemind_Link_1058588061" MODIFIED="1592835264273" TEXT="Nesse caso, n&#xe3;o estar&#xe1; acess&#xed;vel depois do FROM">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1592835051337" ID="Freemind_Link_1700871027" MODIFIED="1592835268296" TEXT="Caso queira usar o valor atribu&#xed;o antes do FROM, declare ARG novamente sem valor">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1592835099656" ID="Freemind_Link_1560627072" MODIFIED="1592835105164" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1592835106246" ID="Freemind_Link_1705258844" MODIFIED="1592835124116" TEXT="ARG VERSION=latest&#xa;FROM busybox:$VERSION&#xa;ARG VERSION&#xa;RUN echo $VERSION &gt; image_version"/>
+</node>
+</node>
 <node CREATED="1568728785930" FOLDED="true" ID="Freemind_Link_260693326" MODIFIED="1568728792757" TEXT="Imagem:">
 <node CREATED="1568728793827" ID="Freemind_Link_1743632444" MODIFIED="1568728886715" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/docker_environment_build_args_overview.png&quot;&gt;"/>
 </node>
