@@ -39,6 +39,14 @@
 </node>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_566292803" MODIFIED="1592318218980" TEXT="deployments">
 <node CREATED="1591997501435" ID="Freemind_Link_673913318" MODIFIED="1592318239046" TEXT="Lista os deployments ativos do cluster"/>
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1951202095" MODIFIED="1593796519960" TEXT="--show-labels">
+<icon BUILTIN="flag"/>
+<node CREATED="1592314815568" ID="Freemind_Link_1275866529" MODIFIED="1593796532121" TEXT="Lista os deployments com seus respectivos labels"/>
+</node>
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_328900956" MODIFIED="1593799657552" TEXT="-l key=value">
+<icon BUILTIN="flag"/>
+<node CREATED="1592314815568" ID="Freemind_Link_1946776836" MODIFIED="1593799683474" TEXT="Lista os deployments que t&#xea;m um label &apos;key&apos; cujo valor seja &apos;value&apos;"/>
+</node>
 </node>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1381354478" MODIFIED="1592318247923" TEXT="services">
 <node CREATED="1591997501435" ID="Freemind_Link_670343985" MODIFIED="1592318255055" TEXT="Lista os services ativos do cluster"/>
@@ -222,6 +230,23 @@
 <node CREATED="1592314815568" ID="Freemind_Link_14981077" MODIFIED="1593626940785" TEXT="Indica a quantidade m&#xe1;xima de Pods a serem instanciados"/>
 <node CREATED="1593529486490" ID="Freemind_Link_544651220" MODIFIED="1593529487579" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1763623933" MODIFIED="1593624643789" TEXT="... --max=10"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1831588263" MODIFIED="1593799742784" TEXT="scale">
+<node CREATED="1591997501435" ID="Freemind_Link_307304603" MODIFIED="1593799753775" TEXT="Aplica o scaling de um recurso"/>
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_413824817" MODIFIED="1593799794271" TEXT="&lt;tipo-recurso&gt; &lt;nome-recurso&gt;">
+<node CREATED="1593799985664" ID="Freemind_Link_1356300367" MODIFIED="1593799995211" TEXT="Ou">
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1929040300" MODIFIED="1593800028100" TEXT="-f &lt;arquivo-yaml-do-recurso&gt;">
+<icon BUILTIN="flag"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_545197310" MODIFIED="1593799801782" TEXT="--replicas=5">
+<icon BUILTIN="flag"/>
+<node CREATED="1592314815568" ID="Freemind_Link_843751655" MODIFIED="1593799815393" TEXT="Indica a quantidade de r&#xe9;plicas do recurso"/>
+<node CREATED="1593529486490" ID="Freemind_Link_1205634351" MODIFIED="1593529487579" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1425812014" MODIFIED="1593799836239" TEXT="kubectl scale deployment nome-do-deployment --replicas=5"/>
 </node>
 </node>
 </node>
@@ -520,7 +545,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_1583377990" MODIFIED="1593785558533" TEXT="livenessProbe">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1583377990" MODIFIED="1593785558533" TEXT="livenessProbe">
 <node CREATED="1593785242110" ID="Freemind_Link_904708096" MODIFIED="1593788322579" TEXT="Serve para determinar se um container est&#xe1; rodando como esperado ou se deve ser reiniciado"/>
 <node CREATED="1593785712945" ID="Freemind_Link_950374838" MODIFIED="1593785718092" TEXT="Poss&#xed;veis resultados:">
 <node CREATED="1593785720010" ID="Freemind_Link_26698013" MODIFIED="1593785721381" TEXT="Success"/>
@@ -529,6 +554,20 @@
 </node>
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1662510482" MODIFIED="1593785608501" TEXT="httpGet">
 <node CREATED="1593785242110" ID="Freemind_Link_344686377" MODIFIED="1593785641694" TEXT="Faz uma requisi&#xe7;&#xe3;o http contra o container"/>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1672948180" MODIFIED="1593798744289" TEXT="host">
+<node CREATED="1593785242110" ID="Freemind_Link_1518011208" MODIFIED="1593798756329" TEXT="Especifica o host a ser acessado"/>
+<node CREATED="1593798758214" ID="Freemind_Link_124057534" MODIFIED="1593798790278" TEXT="Quando n&#xe3;o especificado, ser&#xe1; usado &apos;PodIP&apos;"/>
+<node CREATED="1593785504539" ID="Freemind_Link_521691050" MODIFIED="1593785505278" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1260787810" MODIFIED="1593798892368" TEXT="host: my-host"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_900914266" MODIFIED="1593798823481" TEXT="scheme">
+<node CREATED="1593785242110" ID="Freemind_Link_1197425918" MODIFIED="1593798866304" TEXT="Define o protocolo a ser usado. Apenas &apos;HTTP&apos; e &apos;HTTPS&apos; s&#xe3;o permitidos"/>
+<node CREATED="1593798758214" ID="Freemind_Link_815157131" MODIFIED="1593798847864" TEXT="Quando n&#xe3;o especificado, ser&#xe1; usado &apos;HTTP&apos;"/>
+<node CREATED="1593785504539" ID="Freemind_Link_1238249623" MODIFIED="1593785505278" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1095357142" MODIFIED="1593798902574" TEXT="scheme: HTTP"/>
+</node>
+</node>
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_868335406" MODIFIED="1593785758550" TEXT="path">
 <node CREATED="1593785242110" ID="Freemind_Link_206089774" MODIFIED="1593785768403" TEXT="Indica a URL do recurso que deve ser acessado"/>
 <node CREATED="1593785504539" ID="Freemind_Link_76455569" MODIFIED="1593785505278" TEXT="Ex:">
@@ -539,6 +578,12 @@
 <node CREATED="1593785242110" ID="Freemind_Link_208700392" MODIFIED="1593785833380" TEXT="Indica em qual porta deve ser feita a requisi&#xe7;&#xe3;o"/>
 <node CREATED="1593785504539" ID="Freemind_Link_1798116955" MODIFIED="1593785505278" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1486152415" MODIFIED="1593785809900" TEXT="port: 80"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_403600673" MODIFIED="1593798919375" TEXT="httpHeaders">
+<node CREATED="1593785242110" ID="Freemind_Link_1326923621" MODIFIED="1593798933596" TEXT="Especifica cabe&#xe7;alhos http que ser&#xe3;o adicionados &#xe0; requisi&#xe7;&#xe3;o"/>
+<node CREATED="1593785504539" ID="Freemind_Link_1478772848" MODIFIED="1593785505278" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1930943808" MODIFIED="1593798972934" TEXT="httpHeaders:&#xa;  - name: X-Custom_Header&#xa;    value: Awesome"/>
 </node>
 </node>
 </node>
@@ -660,10 +705,17 @@
 <node COLOR="#ff00ff" CREATED="1592315193877" ID="Freemind_Link_931031604" MODIFIED="1592319442411" TEXT="matchLabels">
 <font NAME="SansSerif" SIZE="13"/>
 <node CREATED="1592315196676" ID="Freemind_Link_1063529729" MODIFIED="1592319566443" TEXT="Requerido pelo selector"/>
+<node CREATED="1593800309447" ID="Freemind_Link_1068880225" MODIFIED="1593800335498" TEXT="Usado para vincular o deployment ao template"/>
 <node COLOR="#ff00ff" CREATED="1592315193877" ID="Freemind_Link_64473245" MODIFIED="1592319454019" TEXT="name">
 <font NAME="SansSerif" SIZE="13"/>
 <node CREATED="1592315196676" ID="Freemind_Link_492983779" MODIFIED="1592319741091" TEXT="Obrigat&#xf3;rio"/>
 </node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1593795651769" ID="Freemind_Link_807205173" MODIFIED="1593801388598" TEXT="minReadySeconds">
+<node COLOR="#ff0000" CREATED="1593795864512" ID="Freemind_Link_1634663936" MODIFIED="1593802103195" TEXT="Tempo m&#xed;nimo que se deve esperar antes de considerar que o Deployment est&#xe1; quebrado"/>
+<node CREATED="1593801418622" ID="Freemind_Link_1216499980" MODIFIED="1593801419416" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1593795651769" ID="Freemind_Link_1016836844" MODIFIED="1593801433161" TEXT="minReadySeconds: 10"/>
 </node>
 </node>
 <node COLOR="#ff00ff" CREATED="1592315193877" ID="Freemind_Link_1893083904" MODIFIED="1592319577574" TEXT="template">
@@ -705,8 +757,8 @@
 <node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_1903883038" MODIFIED="1592319310334" TEXT="apiVersion: apps/v1&#xa;kind: Deployment&#xa;metadata:&#xa;  name: aplicacao-noticia-deployment&#xa;spec:&#xa;  selector:&#xa;    matchLabels:&#xa;      name: aplicacao-noticia-pod&#xa;  template:&#xa;    metadata:&#xa;      labels:&#xa;        name: aplicacao-noticia-pod&#xa;    spec:&#xa;      containers:&#xa;        - name: container-aplicacao&#xa;          image: jnlucas/image-phpmysql:latest&#xa;          ports:&#xa;            - containerPort: 80&#xa;"/>
 </node>
 </node>
-<node CREATED="1593794348274" ID="Freemind_Link_385274977" MODIFIED="1593795027844" TEXT="Rela&#xe7;&#xe3;o com ReplicaSet e Pod">
-<node CREATED="1593794361243" ID="Freemind_Link_895115272" MODIFIED="1593794371502" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/DeploymentxStatefulSet.png&quot;&gt;"/>
+<node CREATED="1593802111877" ID="Freemind_Link_542717204" MODIFIED="1593802112647" TEXT="Rela&#xe7;&#xe3;o com ReplicaSet e Pod">
+<node CREATED="1593802114208" ID="Freemind_Link_1015659314" MODIFIED="1593802124488" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/DeploymentxStatefulSet.jpg&quot;&gt;"/>
 </node>
 </node>
 <node CREATED="1593789113033" ID="Freemind_Link_1043343101" MODIFIED="1593789115891" TEXT="ReplicaSet">
