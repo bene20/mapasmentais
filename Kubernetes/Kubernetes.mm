@@ -28,6 +28,13 @@
 <icon BUILTIN="flag"/>
 <node CREATED="1592314815568" ID="Freemind_Link_1818566023" MODIFIED="1592317237859" TEXT="Indica qual arquivo tem as especifica&#xe7;&#xf5;es do objeto a ser criado"/>
 </node>
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_417606686" MODIFIED="1594063741101" TEXT="--save-config">
+<icon BUILTIN="flag"/>
+<node CREATED="1592314815568" ID="Freemind_Link_295409867" MODIFIED="1594063781325" TEXT="Salva as propriedades correntes como annotations. Permite uso posterior do &apos;kubectl apply&apos; no lugar do &apos;kubectl create&apos;"/>
+<node CREATED="1594063796087" ID="Freemind_Link_1108830287" MODIFIED="1594063797741" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1592316606926" ID="Freemind_Link_322271156" MODIFIED="1594063811355" TEXT="kubectl create -f file.pod.yml --save-config"/>
+</node>
+</node>
 </node>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1841282645" MODIFIED="1592316012408" TEXT="get">
 <node CREATED="1591997501435" ID="Freemind_Link_1618155496" MODIFIED="1592316177570" TEXT="Lista recursos ativos do cluster"/>
@@ -247,6 +254,21 @@
 <node CREATED="1592314815568" ID="Freemind_Link_843751655" MODIFIED="1593799815393" TEXT="Indica a quantidade de r&#xe9;plicas do recurso"/>
 <node CREATED="1593529486490" ID="Freemind_Link_1205634351" MODIFIED="1593529487579" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1425812014" MODIFIED="1593799836239" TEXT="kubectl scale deployment nome-do-deployment --replicas=5"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_943273599" MODIFIED="1594063564241" TEXT="run">
+<node CREATED="1591997501435" ID="Freemind_Link_1940339625" MODIFIED="1594063578489" TEXT="Cria e executa um Pod">
+<node CREATED="1594063578772" ID="Freemind_Link_779512893" MODIFIED="1594063581560" TEXT="Modo imperativo"/>
+</node>
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1321817100" MODIFIED="1594063592657" TEXT="&lt;nome-Pod&gt;">
+<node CREATED="1593799985664" ID="Freemind_Link_136714505" MODIFIED="1594063621648" TEXT="Alternativa ao &apos;kubectl create -f &lt;arquivo-yaml-do-Pod&gt;"/>
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_485064967" MODIFIED="1594063679245" TEXT="--image=&lt;nome-imagem&gt;">
+<icon BUILTIN="flag"/>
+<node CREATED="1592314815568" ID="Freemind_Link_374988149" MODIFIED="1594063640047" TEXT="Indica qual a imagem a ser usada para o container"/>
+<node CREATED="1593529486490" ID="Freemind_Link_611429808" MODIFIED="1593529487579" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_678386971" MODIFIED="1594063672502" TEXT="kubectl run myNginx --image=nginx:alpine"/>
 </node>
 </node>
 </node>
@@ -811,7 +833,7 @@
 <node CREATED="1593790762843" ID="Freemind_Link_429142299" LINK="#Freemind_Link_1172709011" MODIFIED="1593791261523" TEXT="Ver ramo com documenta&#xe7;&#xe3;o"/>
 </node>
 <node COLOR="#ff00ff" CREATED="1593615237850" ID="Freemind_Link_1783829029" MODIFIED="1593615253361" TEXT="- (item)">
-<node COLOR="#ff00ff" CREATED="1592330030692" ID="Freemind_Link_149562997" MODIFIED="1592843525044" TEXT="volumeMounts">
+<node COLOR="#ff00ff" CREATED="1592330030692" ID="Freemind_Link_149562997" MODIFIED="1594064621697" TEXT="volumeMounts">
 <node CREATED="1592315196676" ID="Freemind_Link_1462736533" MODIFIED="1592841461390" TEXT="Especifica os volumes montados para os containers"/>
 <node CREATED="1592845576878" ID="Freemind_Link_244056044" MODIFIED="1592845589032" TEXT="Define a pasta concreta de montagem e d&#xe1; nome para o volume"/>
 </node>
@@ -827,25 +849,76 @@
 </node>
 </node>
 <node CREATED="1592845599953" ID="Freemind_Link_660380407" MODIFIED="1592845610882" TEXT="Associa nome de volume com uma permiss&#xe3;o"/>
-<node COLOR="#ff00ff" CREATED="1592330030692" ID="Freemind_Link_1250802272" MODIFIED="1592843384104" TEXT="==&gt;">
+<node COLOR="#ff00ff" CREATED="1592330030692" ID="Freemind_Link_1250802272" MODIFIED="1594064598586" TEXT="- (item)">
 <node COLOR="#ff00ff" CREATED="1592330030692" ID="Freemind_Link_952629391" MODIFIED="1592843382248" TEXT="name">
 <node CREATED="1592843453396" ID="Freemind_Link_1235604869" MODIFIED="1592843465542" TEXT="Nome do volume, para refer&#xea;ncia posterior"/>
 <node CREATED="1592843484848" ID="Freemind_Link_788811420" MODIFIED="1592843525047" TEXT="Tem que ser o mesmo que o definido na sess&#xe3;o volumeMounts acima">
 <arrowlink DESTINATION="Freemind_Link_149562997" ENDARROW="Default" ENDINCLINATION="468;0;" ID="Freemind_Arrow_Link_35795789" STARTARROW="None" STARTINCLINATION="468;0;"/>
 </node>
 </node>
+<node COLOR="#ff00ff" CREATED="1592330030692" ID="Freemind_Link_1328882623" MODIFIED="1594064612171" TEXT="&lt;tipo&gt;">
+<node CREATED="1592843453396" ID="Freemind_Link_59262983" MODIFIED="1594064628828" TEXT="Tipo do volume"/>
+<node CREATED="1592843484848" ID="Freemind_Link_536419091" MODIFIED="1594064621691" TEXT="Possibilidades">
+<node COLOR="#ff00ff" CREATED="1592841087435" ID="Freemind_Link_1430193151" MODIFIED="1594064668644" TEXT="emptyDir">
+<node CREATED="1592841110596" ID="Freemind_Link_1435365624" MODIFIED="1594064687227" TEXT="Diret&#xf3;rio vazio para dados transientes"/>
+<node CREATED="1594064687697" ID="Freemind_Link_1432567573" MODIFIED="1594064697923" TEXT="&#xda;til quando se quer compartilhar dados entre containers de um mesmo Pod"/>
+<node CREATED="1594064900206" ID="Freemind_Link_715920336" MODIFIED="1594064931329" TEXT="Para usar, o container deve referenciar o nome em sua se&#xe7;&#xe3;o volumeMounts"/>
+<node CREATED="1594065185357" FOLDED="true" ID="Freemind_Link_997764107" MODIFIED="1594065186365" TEXT="Ex:">
+<node CREATED="1594065186841" ID="Freemind_Link_92927253" MODIFIED="1594065194073" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/emptyDir.jpg&quot;&gt;"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1592841087435" ID="Freemind_Link_1949982665" MODIFIED="1594064709876" TEXT="hostPath">
+<node CREATED="1594064687697" ID="Freemind_Link_735919650" MODIFIED="1594064730623" TEXT="O volume montado ficar&#xe1; no n&#xf3; em que o Pod &#xe9; executado"/>
+<node COLOR="#ff00ff" CREATED="1592841087435" ID="Freemind_Link_991636334" MODIFIED="1594065455198" TEXT="type">
+<node CREATED="1594064687697" ID="Freemind_Link_851933969" MODIFIED="1594065465045" TEXT="Tipo de volume a ser montado no n&#xf3;"/>
+<node CREATED="1594065469067" ID="Freemind_Link_238490758" MODIFIED="1594065471203" TEXT="Possibilidades">
+<node CREATED="1594065474836" ID="Freemind_Link_12199958" MODIFIED="1594065480564" TEXT="Socket">
+<node CREATED="1594065675928" ID="Freemind_Link_1160263114" MODIFIED="1594065691796" TEXT="&#xda;til quando se quer conectar ao socket do Docker do n&#xf3;"/>
+<node CREATED="1594065693458" ID="Freemind_Link_1591981660" MODIFIED="1594065694094" TEXT="Ex:">
+<node CREATED="1594065694945" ID="Freemind_Link_946112717" MODIFIED="1594065738813" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/volumeSocket.png&quot;&gt;"/>
+</node>
+</node>
+<node CREATED="1594065480963" ID="Freemind_Link_380370234" MODIFIED="1594065482303" TEXT="File"/>
+<node CREATED="1594065642875" ID="Freemind_Link_46350999" MODIFIED="1594065645750" TEXT="FileOrCreate"/>
+<node CREATED="1594065486348" ID="Freemind_Link_884550224" MODIFIED="1594065488397" TEXT="Directory"/>
+<node CREATED="1594065634442" ID="Freemind_Link_911629196" MODIFIED="1594065638677" TEXT="DirectoryOrCreate"/>
+</node>
+</node>
+<node CREATED="1594065372306" FOLDED="true" ID="Freemind_Link_31452815" MODIFIED="1594065373661" TEXT="Ex:">
+<node CREATED="1594065374232" ID="Freemind_Link_536177728" MODIFIED="1594065384335" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/hostPath.jpg&quot;&gt;"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1592841087435" ID="Freemind_Link_95774713" MODIFIED="1594064743682" TEXT="nfs">
+<node CREATED="1594064687697" ID="Freemind_Link_1261483888" MODIFIED="1594064771792" TEXT="Monta um volume NFS compartilhado para o Pod"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1592841087435" ID="Freemind_Link_1394541594" MODIFIED="1594064841186" TEXT="configMap/secret">
+<node CREATED="1594064687697" ID="Freemind_Link_841569485" MODIFIED="1594064801481" TEXT="Tipo especial de volume">
+<node CREATED="1594064801742" ID="Freemind_Link_423745093" MODIFIED="1594064805807" TEXT="Arquivos de configura&#xe7;&#xe3;o"/>
+<node CREATED="1594064807193" ID="Freemind_Link_1475742812" MODIFIED="1594064811475" TEXT="Par chave-valor"/>
+</node>
+</node>
 <node COLOR="#ff00ff" CREATED="1592330030692" ID="Freemind_Link_366100960" MODIFIED="1592843403694" TEXT="persistentVolumeClaim">
 <node CREATED="1592843442916" ID="Freemind_Link_1141539187" MODIFIED="1592845632602" TEXT="Sess&#xe3;o que define as permiss&#xf5;es e o tamanho do volume"/>
-<node COLOR="#ff00ff" CREATED="1592330030692" ID="Freemind_Link_294535621" MODIFIED="1592843948849" TEXT="claimName">
+<node COLOR="#ff00ff" CREATED="1592330030692" ID="Freemind_Link_294535621" MODIFIED="1594066712958" TEXT="claimName">
 <node CREATED="1592843417254" ID="Freemind_Link_1929120389" MODIFIED="1592843427999" TEXT="Nome do arquivo que cont&#xe9;m as defini&#xe7;&#xf5;es das permiss&#xf5;es do volume"/>
 <node CREATED="1592843750061" ID="Freemind_Link_1147742699" MODIFIED="1592844107676" TEXT="Esse arquivo ser&#xe1; um YAML do tipo PersistentVolumeClaim">
 <arrowlink DESTINATION="Freemind_Link_462714548" ENDARROW="Default" ENDINCLINATION="965;0;" ID="Freemind_Arrow_Link_442148361" STARTARROW="None" STARTINCLINATION="180;0;"/>
 </node>
 </node>
+<node CREATED="1594066618064" FOLDED="true" ID="Freemind_Link_215087912" MODIFIED="1594066619276" TEXT="Ex:">
+<node CREATED="1594066619840" ID="Freemind_Link_928017198" MODIFIED="1594066644949" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/PVC_using.png&quot;&gt;"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1592841087435" ID="Freemind_Link_1422556872" MODIFIED="1594064849191" TEXT="cloud">
+<node CREATED="1594064687697" ID="Freemind_Link_40768625" MODIFIED="1594064859723" TEXT="Storage em cluster ">
+<node CREATED="1594064801742" ID="Freemind_Link_888574041" MODIFIED="1594064868935" TEXT="Ex: Amazon, Azure etc."/>
+</node>
+</node>
+</node>
 </node>
 </node>
 <node CREATED="1592320070984" ID="Freemind_Link_454697789" MODIFIED="1592320071948" TEXT="Ex:">
-<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_245013870" MODIFIED="1592841905997" TEXT="volumes:&#xa;  - name: imagens&#xa;    persistentVolumeClaim:&#xa;    claimName: permissao-imagens&#xa;  - name: sessoes&#xa;    persistentVolumeClaim:&#xa;    claimName: permissao-sessao"/>
+<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_245013870" MODIFIED="1594064413187" TEXT="volumes:&#xa;  - name: imagens&#xa;    persistentVolumeClaim:&#xa;      claimName: permissao-imagens&#xa;  - name: sessoes&#xa;    persistentVolumeClaim:&#xa;      claimName: permissao-sessao"/>
 </node>
 </node>
 </node>
@@ -858,12 +931,13 @@
 </node>
 <node CREATED="1592843772426" ID="Freemind_Link_462714548" MODIFIED="1592844107679" TEXT="PersistentVolumeClaim">
 <node CREATED="1592843789480" ID="Freemind_Link_77974550" MODIFIED="1592843806700" TEXT="Objeto respons&#xe1;vel por definir permiss&#xf5;es de volumes"/>
+<node CREATED="1594065960231" ID="Freemind_Link_397565660" MODIFIED="1594065971855" TEXT="&#xc9; uma requisi&#xe7;&#xe3;o para o PersistentVolume"/>
 <node CREATED="1592843810916" ID="Freemind_Link_1379604935" MODIFIED="1592843812923" TEXT="YAML">
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_202406560" MODIFIED="1592843880874" TEXT="spec">
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_778527165" MODIFIED="1592843907808" TEXT="metadata">
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1035712759" MODIFIED="1592843915463" TEXT="name">
 <node CREATED="1592843918269" ID="Freemind_Link_772293910" MODIFIED="1592843923351" TEXT="Nome do recurso"/>
-<node CREATED="1592843923640" ID="Freemind_Link_1384302404" MODIFIED="1592843956514" TEXT="Deve ser o mesmo definido na se&#xe7;&#xe3;o claimName de persistentVolumeClaim">
+<node CREATED="1592843923640" ID="Freemind_Link_1384302404" MODIFIED="1594066712954" TEXT="Deve ser o mesmo definido na se&#xe7;&#xe3;o claimName de persistentVolumeClaim">
 <arrowlink COLOR="#f50e0e" DESTINATION="Freemind_Link_294535621" ENDARROW="Default" ENDINCLINATION="273;0;" ID="Freemind_Arrow_Link_838039224" STARTARROW="None" STARTINCLINATION="273;0;"/>
 </node>
 </node>
@@ -890,8 +964,17 @@
 </node>
 </node>
 </node>
+<node CREATED="1594065904982" ID="Freemind_Link_49866561" MODIFIED="1594065909920" TEXT="PersistentVolume">
+<node CREATED="1594066104525" ID="Freemind_Link_1751726467" MODIFIED="1594066106919" TEXT="ou PV"/>
+<node CREATED="1594065911080" ID="Freemind_Link_743481050" MODIFIED="1594065942912" TEXT="Tem o ciclo de vida independente do ciclo de vida do Pod"/>
+<node CREATED="1594066007613" ID="Freemind_Link_1788572198" MODIFIED="1594066034439" TEXT="&#xc9; um recuro de storage via rede - NAS"/>
+<node CREATED="1594066039413" ID="Freemind_Link_638019430" MODIFIED="1594066058617" TEXT="Geralmente provido por um administrador de cluster"/>
+<node CREATED="1594066063660" ID="Freemind_Link_609507243" MODIFIED="1594066101417" TEXT="Fica dispon&#xed;vel ao Pod mesmo que ele seja reescalonado para um n&#xf3; diferente do n&#xf3; do PV"/>
+<node CREATED="1594066120821" ID="Freemind_Link_1886394958" MODIFIED="1594066137353" TEXT="&#xc9; associado aos Pods via PVC (PersistentVolumeClaim)"/>
+</node>
 <node CREATED="1592316092693" ID="Freemind_Link_1567221451" MODIFIED="1592316095839" TEXT="Service">
 <node CREATED="1592325699922" ID="Freemind_Link_112789781" MODIFIED="1592325714101" TEXT="Objeto k8s que fica exposto ao mundo externo"/>
+<node CREATED="1594063837170" ID="Freemind_Link_989566241" MODIFIED="1594063850922" TEXT="Prov&#xea; um ponto de acesso &#xfa;nico para um ou mais pods"/>
 <node CREATED="1592327609358" ID="Freemind_Link_1900887548" MODIFIED="1592327654738" TEXT="Possuem um IP est&#xe1;vel"/>
 <node CREATED="1592327731419" ID="Freemind_Link_434191741" MODIFIED="1592328114991" TEXT="Pode ser criado diretamente na linha de&#xa;comando via comando &apos;kubectl expose ...&apos;">
 <node CREATED="1592327758255" ID="Freemind_Link_1152905879" MODIFIED="1592327759442" TEXT="Ex:">
@@ -903,16 +986,37 @@
 <node CREATED="1592326091033" ID="Freemind_Link_58040619" MODIFIED="1592326097860" TEXT="Em ambiente DEV ser&#xe1; o minikube"/>
 </node>
 <node CREATED="1592844932300" ID="Freemind_Link_1953329863" MODIFIED="1592844934368" TEXT="YAML">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_241021067" MODIFIED="1594064234851" TEXT="metadata">
+<node CREATED="1592844989287" ID="Freemind_Link_808875694" MODIFIED="1594064241803" TEXT="Metadados do service"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1338483751" MODIFIED="1594064237530" TEXT="name">
+<node CREATED="1592844989287" ID="Freemind_Link_1703678633" MODIFIED="1594064249961" TEXT="Indica o nome do servi&#xe7;o"/>
+<node CREATED="1594064251728" ID="Freemind_Link_658504610" MODIFIED="1594064358740" TEXT="Os Pods poder&#xe3;o acessar &#xa;o service por este nome">
+<node CREATED="1594064294367" ID="Freemind_Link_1764421318" MODIFIED="1594064348793" TEXT="Ex: se o service se chama &apos;backend&apos; e est&#xe1; exposto na &#xa;porta80, os Pods poder&#xe3;o acess&#xe1;-lo via endere&#xe7;o &apos;backend:80&apos;"/>
+</node>
+</node>
+</node>
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1943828235" MODIFIED="1592843880874" TEXT="spec">
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_14686369" MODIFIED="1592844955299" TEXT="type">
 <node CREATED="1592844030528" ID="Freemind_Link_839204935" MODIFIED="1592844964272" TEXT="Define o tipo do servi&#xe7;o"/>
 <node CREATED="1592844050304" ID="Freemind_Link_244561653" MODIFIED="1592844052523" TEXT="Possiblidades">
 <node CREATED="1592326109167" ID="Freemind_Link_1608069962" MODIFIED="1592326112060" TEXT="LoadBalancer">
 <node CREATED="1592326161718" ID="Freemind_Link_207496899" MODIFIED="1592326169035" TEXT="Balanceador de carga entre pods"/>
+<node CREATED="1594063976894" ID="Freemind_Link_867419232" MODIFIED="1594063995256" TEXT="Prov&#xea; um IP externo para agir como load balancer para o service"/>
 </node>
-<node CREATED="1592326138161" ID="Freemind_Link_1252862017" MODIFIED="1592326145325" TEXT="ClusterIP"/>
-<node CREATED="1592326145835" ID="Freemind_Link_1550173008" MODIFIED="1592326151261" TEXT="ExternalName"/>
-<node CREATED="1592326152200" ID="Freemind_Link_252354911" MODIFIED="1592326154762" TEXT="NodePort"/>
+<node CREATED="1592326138161" ID="Freemind_Link_1252862017" MODIFIED="1592326145325" TEXT="ClusterIP">
+<node CREATED="1594063871730" ID="Freemind_Link_1242243736" MODIFIED="1594063892772" TEXT="Exp&#xf5;e o servi&#xe7;o em um IP interno ao cluster"/>
+</node>
+<node CREATED="1592326145835" ID="Freemind_Link_1550173008" MODIFIED="1592326151261" TEXT="ExternalName">
+<node CREATED="1594063934576" ID="Freemind_Link_904239250" MODIFIED="1594063959482" TEXT="Mapeia um servi&#xe7;o externo para um nome DNS"/>
+</node>
+<node CREATED="1592326152200" ID="Freemind_Link_252354911" MODIFIED="1592326154762" TEXT="NodePort">
+<node CREATED="1594063911482" ID="Freemind_Link_1467425602" MODIFIED="1594063928852" TEXT="Exp&#xf5;e o servi&#xe7;o para cada n&#xf3; (internamente) em porta espec&#xed;fica"/>
+</node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_930784207" MODIFIED="1594064021491" TEXT="selector">
+<node CREATED="1592844030528" ID="Freemind_Link_500784098" MODIFIED="1594064046416" TEXT="Seleciona os Pods aos quais ser&#xe3;o aplicados esse service">
+<node CREATED="1594064048583" ID="Freemind_Link_970445923" MODIFIED="1594064054571" TEXT="Via bind dos labels"/>
 </node>
 </node>
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1035068113" MODIFIED="1592844987282" TEXT="ports">
