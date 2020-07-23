@@ -68,6 +68,14 @@
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1423057260" MODIFIED="1593706015516" TEXT="kubectl get apiservice v1beta1.metrics.k8s.io"/>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_246425623" MODIFIED="1595533837496" TEXT="cm">
+<node CREATED="1591997501435" ID="Freemind_Link_1256606182" MODIFIED="1595533848766" TEXT="Lista os configMaps do cluster"/>
+<node CREATED="1595533868890" ID="Freemind_Link_1771835580" MODIFIED="1595533874405" TEXT="O nome do configMap &#xe9; opcional"/>
+<node CREATED="1595533880587" ID="Freemind_Link_1827461585" MODIFIED="1595533892158" TEXT="A sa&#xed;da pode ser exportada para o formato YAML"/>
+<node CREATED="1592316781753" ID="Freemind_Link_122224298" MODIFIED="1592316782633" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_213352217" MODIFIED="1595533866158" TEXT="kubectl get cm &lt;nome do configMap&gt; -o yaml"/>
+</node>
+</node>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1462888654" MODIFIED="1592316036274" TEXT="all">
 <node CREATED="1591997501435" ID="Freemind_Link_982738182" MODIFIED="1592317245780" TEXT="Lista todos os objetos ativos do cluster"/>
 </node>
@@ -402,7 +410,10 @@
 <node CREATED="1592317603628" ID="Freemind_Link_384967012" MODIFIED="1592317610335" TEXT="S&#xe3;o os workers"/>
 <node CREATED="1592317625992" ID="Freemind_Link_1950507259" MODIFIED="1592317640453" TEXT="Dentro de um n&#xf3; tem-se o que &#xe9; necess&#xe1;rio para que um Pod funcione"/>
 </node>
-<node CREATED="1592315531047" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
+<node CREATED="1595532051386" ID="Freemind_Link_1962448922" MODIFIED="1595532053686" TEXT="Estrutura">
+<node CREATED="1595532054884" ID="Freemind_Link_1767773898" MODIFIED="1595532244379" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/estruturaK8s.png&quot;&gt;"/>
+</node>
+<node CREATED="1592315531047" FOLDED="true" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
 <node CREATED="1592316082413" ID="Freemind_Link_1900255977" MODIFIED="1592316091293" TEXT="Unidade m&#xed;nima do cluster"/>
 <node CREATED="1592316104077" ID="Freemind_Link_1091604377" MODIFIED="1592316111082" TEXT="Pode conter um ou mais containers">
 <node CREATED="1592316111542" ID="Freemind_Link_235141017" MODIFIED="1592316119762" TEXT="Ideal que tenha apenas um container">
@@ -667,7 +678,7 @@
 </node>
 <node CREATED="1592320475126" ID="Freemind_Link_983240483" MODIFIED="1592320484767" TEXT="Deve-se usar o &apos;Deployment&apos; em seu lugar"/>
 </node>
-<node CREATED="1592318588142" ID="Freemind_Link_1350939554" MODIFIED="1592841149334" TEXT="Deployment">
+<node CREATED="1592318588142" FOLDED="true" ID="Freemind_Link_1350939554" MODIFIED="1592841149334" TEXT="Deployment">
 <node CREATED="1592319036690" ID="Freemind_Link_1445718489" MODIFIED="1592319046058" TEXT="Monitora os pods">
 <node CREATED="1592319060111" ID="Freemind_Link_151124480" MODIFIED="1592319297508" TEXT="&#xc9; respons&#xe1;vel por subir os pods, controlar a qtdd de r&#xe9;plicas etc."/>
 <node CREATED="1593529217401" ID="Freemind_Link_240641209" MODIFIED="1593529235838" TEXT="&#xc9; um meio declarativo de gerenciar Pods usando ReplicaSet"/>
@@ -783,7 +794,7 @@
 <node CREATED="1593802114208" ID="Freemind_Link_1015659314" MODIFIED="1593802124488" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/DeploymentxStatefulSet.jpg&quot;&gt;"/>
 </node>
 </node>
-<node CREATED="1593789113033" ID="Freemind_Link_1043343101" MODIFIED="1593789115891" TEXT="ReplicaSet">
+<node CREATED="1593789113033" FOLDED="true" ID="Freemind_Link_1043343101" MODIFIED="1593789115891" TEXT="ReplicaSet">
 <node CREATED="1593789117479" ID="Freemind_Link_1763043569" MODIFIED="1593793886750" TEXT="&#xc9; gerenciado e criado pelo Deployment nos bastidores"/>
 <node CREATED="1593529217401" ID="Freemind_Link_1466585321" MODIFIED="1593789146072" TEXT="&#xc9; um meio declarativo de gerenciar Pods "/>
 <node CREATED="1593789227999" ID="Freemind_Link_1088144625" MODIFIED="1593789286919" TEXT="&#xc9; o respons&#xe1;vel ">
@@ -797,7 +808,7 @@
 <node CREATED="1593795006342" ID="Freemind_Link_1505697872" MODIFIED="1593795015870" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/ReplicaSet.jpg&quot;&gt;"/>
 </node>
 </node>
-<node CREATED="1592840607361" ID="Freemind_Link_968347144" MODIFIED="1592840929650" TEXT="StatefulSet">
+<node CREATED="1592840607361" FOLDED="true" ID="Freemind_Link_968347144" MODIFIED="1592840929650" TEXT="StatefulSet">
 <node CREATED="1592840769881" ID="Freemind_Link_1733104068" MODIFIED="1592840785316" TEXT="Permite preservar o estado de um Pod quando ele &#xe9; escalado">
 <node CREATED="1592840848710" ID="Freemind_Link_379462848" MODIFIED="1592840855275" TEXT="Preserva todas as informa&#xe7;&#xf5;es"/>
 <node CREATED="1592841187539" ID="Freemind_Link_1001477443" MODIFIED="1592841487153" TEXT="Compartilha diret&#xf3;rios estrat&#xe9;gicos entre todos os pods">
@@ -929,7 +940,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592843772426" ID="Freemind_Link_462714548" MODIFIED="1592844107679" TEXT="PersistentVolumeClaim">
+<node CREATED="1592843772426" FOLDED="true" ID="Freemind_Link_462714548" MODIFIED="1592844107679" TEXT="PersistentVolumeClaim">
 <node CREATED="1592843789480" ID="Freemind_Link_77974550" MODIFIED="1592843806700" TEXT="Objeto respons&#xe1;vel por definir permiss&#xf5;es de volumes"/>
 <node CREATED="1594065960231" ID="Freemind_Link_397565660" MODIFIED="1594065971855" TEXT="&#xc9; uma requisi&#xe7;&#xe3;o para o PersistentVolume"/>
 <node CREATED="1592843810916" ID="Freemind_Link_1379604935" MODIFIED="1592843812923" TEXT="YAML">
@@ -967,10 +978,130 @@
 <node CREATED="1594065904982" ID="Freemind_Link_49866561" MODIFIED="1594065909920" TEXT="PersistentVolume">
 <node CREATED="1594066104525" ID="Freemind_Link_1751726467" MODIFIED="1594066106919" TEXT="ou PV"/>
 <node CREATED="1594065911080" ID="Freemind_Link_743481050" MODIFIED="1594065942912" TEXT="Tem o ciclo de vida independente do ciclo de vida do Pod"/>
-<node CREATED="1594066007613" ID="Freemind_Link_1788572198" MODIFIED="1594066034439" TEXT="&#xc9; um recuro de storage via rede - NAS"/>
+<node CREATED="1594066007613" ID="Freemind_Link_1788572198" MODIFIED="1595531880928" TEXT="&#xc9; um recurso de storage via rede - NAS"/>
 <node CREATED="1594066039413" ID="Freemind_Link_638019430" MODIFIED="1594066058617" TEXT="Geralmente provido por um administrador de cluster"/>
 <node CREATED="1594066063660" ID="Freemind_Link_609507243" MODIFIED="1594066101417" TEXT="Fica dispon&#xed;vel ao Pod mesmo que ele seja reescalonado para um n&#xf3; diferente do n&#xf3; do PV"/>
 <node CREATED="1594066120821" ID="Freemind_Link_1886394958" MODIFIED="1594066137353" TEXT="&#xc9; associado aos Pods via PVC (PersistentVolumeClaim)"/>
+<node CREATED="1595531924989" ID="Freemind_Link_437024806" MODIFIED="1595531928430" TEXT="StorageClass">
+<node CREATED="1595531935792" ID="Freemind_Link_440721128" MODIFIED="1595531944791" TEXT="&#xc9; um tipo de template de storage"/>
+<node CREATED="1595531945317" ID="Freemind_Link_1725657480" MODIFIED="1595531958314" TEXT="Usado para prover storage dinamicamente"/>
+</node>
+</node>
+<node CREATED="1595532309289" ID="Freemind_Link_918501028" MODIFIED="1595532313583" TEXT="ConfigMap">
+<node CREATED="1595532319803" ID="Freemind_Link_874999571" MODIFIED="1595532439500" TEXT="Prov&#xea; um meio para salvar informa&#xe7;&#xf5;es de configura&#xe7;&#xe3;o e as prov&#xea; aos containers"/>
+<node CREATED="1595533709844" ID="Freemind_Link_633518713" MODIFIED="1595533711480" TEXT="Literal">
+<node CREATED="1595533712068" ID="Freemind_Link_177169477" MODIFIED="1595533731449" TEXT="Cria um ConfigMap definindo seus dados via linha de comando"/>
+<node CREATED="1595533584225" ID="Freemind_Link_142574888" MODIFIED="1595533585552" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1595533032457" ID="Freemind_Link_168030280" MODIFIED="1595533764733" TEXT="kubectl create configmap &lt;nome-do-configmap&gt; --from-literal=apiUrl=https://my-api"/>
+<node CREATED="1595533767917" ID="Freemind_Link_1629978705" MODIFIED="1595533783135" TEXT="O par&#xe2;metro --from-literal pode aparecer in&#xfa;meras vezes">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+</node>
+<node CREATED="1595532947226" ID="Freemind_Link_40302536" MODIFIED="1595532948551" TEXT="TEXT">
+<node CREATED="1595532949388" ID="Freemind_Link_971204808" MODIFIED="1595532975679" TEXT="Os dados tamb&#xe9;m podem ser definidos em arquivo texto do tipo key-value"/>
+<node CREATED="1595533023628" ID="Freemind_Link_1717722550" MODIFIED="1595533563400" TEXT="Comandos para criar o objeto:">
+<node COLOR="#0000ff" CREATED="1595533032457" ID="Freemind_Link_785772147" MODIFIED="1595533607194" TEXT="from-env-file">
+<icon BUILTIN="forward"/>
+<node CREATED="1595533619124" ID="Freemind_Link_1898005563" MODIFIED="1595533636227" TEXT="N&#xe3;o adiciona o nome do arquivo como chave"/>
+<node CREATED="1595533584225" ID="Freemind_Link_551182743" MODIFIED="1595533585552" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1595533032457" ID="Freemind_Link_728378373" MODIFIED="1595533581668" TEXT="kubectl create configmap &lt;nome-do-configmap&gt; --from-env-file=&lt;caminho do arquivo&gt;"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1595533032457" ID="Freemind_Link_910938865" MODIFIED="1595533616465" TEXT="from-file">
+<icon BUILTIN="forward"/>
+<node CREATED="1595533619124" ID="Freemind_Link_742158394" MODIFIED="1595533646098" TEXT="Adiciona o nome do arquivo como chave"/>
+<node CREATED="1595533591376" ID="Freemind_Link_1314210508" MODIFIED="1595533592345" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1595533032457" ID="Freemind_Link_1657486591" MODIFIED="1595533598125" TEXT="kubectl create configmap &lt;nome-do-configmap&gt; --from-file=&lt;caminho do arquivo&gt;"/>
+</node>
+</node>
+</node>
+<node CREATED="1595532976996" ID="Freemind_Link_832465492" MODIFIED="1595532977823" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592315193877" ID="Freemind_Link_228413112" MODIFIED="1595533013927" TEXT="enemies=aliens&#xa;livex=3&#xa;enemies.cheat=true&#xa;enemies.cheat.level=noGoodRotten">
+<font NAME="SansSerif" SIZE="13"/>
+</node>
+</node>
+</node>
+<node CREATED="1595532452894" ID="Freemind_Link_729234719" MODIFIED="1595532455236" TEXT="YAML">
+<node CREATED="1592315184190" ID="Freemind_Link_1200381858" MODIFIED="1592317291156" TEXT="Arquivo que define os objetos do cluster"/>
+<node CREATED="1595533023628" ID="Freemind_Link_1289437420" MODIFIED="1595533031733" TEXT="Para criar o objeto, use o comando:">
+<node COLOR="#0000ff" CREATED="1595533032457" ID="Freemind_Link_905439407" MODIFIED="1595533052101" TEXT="kubectl create -f &lt;nome-arquivo.yml&gt;"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1592315193877" ID="Freemind_Link_1585094311" MODIFIED="1592315247257" TEXT="apiVersion">
+<font NAME="SansSerif" SIZE="13"/>
+<node CREATED="1592315196676" ID="Freemind_Link_1845165242" MODIFIED="1592315214848" TEXT="Especifica a vers&#xe3;o da API que o k8s est&#xe1; utilizando"/>
+<node CREATED="1592315259357" ID="Freemind_Link_1439378762" MODIFIED="1592315272601" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_1049326444" MODIFIED="1592315285768" TEXT="apiVersion: v1"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1592315193877" ID="Freemind_Link_1673440752" MODIFIED="1595532532274" TEXT="kind: ConfigMap">
+<font NAME="SansSerif" SIZE="13"/>
+<node CREATED="1592315196676" ID="Freemind_Link_1236768224" MODIFIED="1592317307491" TEXT="Indica o tipo do objeto (o que se quer criar)"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1592315193877" ID="Freemind_Link_669545232" MODIFIED="1592315361546" TEXT="metadadata">
+<font NAME="SansSerif" SIZE="13"/>
+<node CREATED="1592315196676" ID="Freemind_Link_1972074171" MODIFIED="1592317324764" TEXT="Define algumas informa&#xe7;&#xf5;es sobre o objeto a sercriado"/>
+<node COLOR="#ff00ff" CREATED="1592315193877" ID="Freemind_Link_1982574922" MODIFIED="1592315398697" TEXT="name">
+<font NAME="SansSerif" SIZE="13"/>
+<node CREATED="1592315196676" ID="Freemind_Link_355213152" MODIFIED="1592315403512" TEXT="Define o nome da aplica&#xe7;&#xe3;o"/>
+<node CREATED="1592315259357" ID="Freemind_Link_181602122" MODIFIED="1592315272601" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_596278586" MODIFIED="1592315424322" TEXT="metadata:&#xa;  name: aplicacao-noticia"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1592315193877" ID="Freemind_Link_1716893679" MODIFIED="1595532570105" TEXT="labels">
+<font NAME="SansSerif" SIZE="13"/>
+<node CREATED="1592315196676" ID="Freemind_Link_1239471715" MODIFIED="1595532579163" TEXT="Define labels para usos diversos"/>
+<node CREATED="1592315259357" ID="Freemind_Link_1523477603" MODIFIED="1592315272601" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_1547303214" MODIFIED="1595532601568" TEXT="metadata:&#xa;  labels:&#xa;    app: app-settings"/>
+</node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1592315193877" ID="Freemind_Link_1019692043" MODIFIED="1595532608571" TEXT="data">
+<font NAME="SansSerif" SIZE="13"/>
+<node CREATED="1592315196676" ID="Freemind_Link_1566036069" MODIFIED="1595532722726" TEXT="Define os dados do configMap (os par&#xe2;metros de configura&#xe7;&#xe3;o a serem armazenados)"/>
+<node CREATED="1592315259357" ID="Freemind_Link_1142472113" MODIFIED="1592315272601" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_243140324" MODIFIED="1595532688034" TEXT="data:&#xa;  enemies: aliens&#xa;  lives: &quot;3&quot;&#xa;  enemies.cheat: &quot;true&quot;&#xa;  enemies.cheat.level=noGoodRotten"/>
+</node>
+</node>
+</node>
+<node CREATED="1595533963177" ID="Freemind_Link_1714431762" MODIFIED="1595533964020" TEXT="Usos">
+<node CREATED="1595533998651" ID="Freemind_Link_1745301970" MODIFIED="1595534016605" TEXT="Usado dentro da se&#xe7;&#xe3;o &apos;env&apos; do &apos;spec&apos;"/>
+<node CREATED="1595533976816" ID="Freemind_Link_1420242181" MODIFIED="1595533982751" TEXT="Pegando valor espec&#xed;fico">
+<node CREATED="1595534308687" ID="Freemind_Link_618290906" MODIFIED="1595534316394" TEXT="Pega um &#xfa;nico valor definido no configMap"/>
+<node CREATED="1595534025508" ID="Freemind_Link_1827575847" MODIFIED="1595534036070" TEXT="Usar o configMapKeyRef"/>
+<node CREATED="1595534036977" ID="Freemind_Link_791568208" MODIFIED="1595534038007" TEXT="Ex:">
+<node CREATED="1595534128897" ID="Freemind_Link_1327204943" MODIFIED="1595534232350" TEXT="Neste exemplo">
+<node CREATED="1595534128897" ID="Freemind_Link_1449918613" MODIFIED="1595534243933" TEXT="pego o conte&#xfa;do do atributo &apos;enemies&apos; do ConfigMap cujo nome &#xe9; &apos;app-settings&apos;"/>
+<node CREATED="1595534250798" ID="Freemind_Link_1041623211" MODIFIED="1595534261513" TEXT="declaro a vari&#xe1;vel de ambiente ENEMIES"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_120910266" MODIFIED="1595534127102" TEXT="...&#xa;spec:&#xa;  containers: ...&#xa;  env:&#xa;    - name: ENEMIES&#xa;      valueFrom:&#xa;        configMapKeyRef:&#xa;          key: app-settings&#xa;          name: enemies"/>
+</node>
+</node>
+<node CREATED="1595533976816" ID="Freemind_Link_899486008" MODIFIED="1595534301092" TEXT="Pegando todos os valores">
+<node CREATED="1595534318136" ID="Freemind_Link_1574281015" MODIFIED="1595534326329" TEXT="Pega todos os valores definidos no configMap"/>
+<node CREATED="1595534025508" ID="Freemind_Link_896228144" MODIFIED="1595534336701" TEXT="Usar o envFrom"/>
+<node CREATED="1595534036977" ID="Freemind_Link_168439102" MODIFIED="1595534038007" TEXT="Ex:">
+<node CREATED="1595534128897" ID="Freemind_Link_1409142290" MODIFIED="1595534232350" TEXT="Neste exemplo">
+<node CREATED="1595534128897" ID="Freemind_Link_85934884" MODIFIED="1595534773123" TEXT="pego os dados do ConfigMap cujo nome &#xe9; &apos;app-settings&apos;"/>
+<node CREATED="1595534250798" ID="Freemind_Link_193529945" MODIFIED="1595534473386" TEXT="declaro vari&#xe1;veis com os mesmos nomes dos &apos;keys&apos; usado no arquivo que define o configMap"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_1900172020" MODIFIED="1595534448031" TEXT="...&#xa;spec:&#xa;  containers: ...&#xa;  envFrom:&#xa;    - configMapRef:&#xa;      name: app-settings"/>
+</node>
+</node>
+<node CREATED="1595534561838" ID="Freemind_Link_1885270048" MODIFIED="1595534570192" TEXT="Carrego todos os valores em arquivos">
+<node CREATED="1595534570965" ID="Freemind_Link_1564031545" MODIFIED="1595534589303" TEXT="Para cada dado do configMap ser&#xe1; criado um arquivo">
+<node CREATED="1595534590037" ID="Freemind_Link_238264819" MODIFIED="1595534595953" TEXT="O nome do arquivo ser&#xe1; o key"/>
+<node CREATED="1595534590037" ID="Freemind_Link_522884725" MODIFIED="1595534612991" TEXT="O conte&#xfa;do do arquivo ser&#xe1; o value"/>
+</node>
+<node CREATED="1595534036977" ID="Freemind_Link_1803448649" MODIFIED="1595534038007" TEXT="Ex:">
+<node CREATED="1595534128897" ID="Freemind_Link_1179046403" MODIFIED="1595534232350" TEXT="Neste exemplo">
+<node CREATED="1595534128897" ID="Freemind_Link_1729370747" MODIFIED="1595534773123" TEXT="pego os dados do ConfigMap cujo nome &#xe9; &apos;app-settings&apos;"/>
+<node CREATED="1595534250798" ID="Freemind_Link_1129613986" MODIFIED="1595534737919" TEXT="Os arquivos ser&#xe3;o criados na pasta /etc/config do container"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_1623232534" MODIFIED="1595534711152" TEXT="...&#xa;spec:&#xa;  volumes:&#xa;    - name: app-config-vol&#xa;      configMap:&#xa;        name: app-settings&#xa;  containers:&#xa;    volumeMounts:&#xa;      - name: app-config-vol&#xa;        mount-Path: /etc/config"/>
+</node>
+</node>
+</node>
 </node>
 <node CREATED="1592316092693" ID="Freemind_Link_1567221451" MODIFIED="1592316095839" TEXT="Service">
 <node CREATED="1592325699922" ID="Freemind_Link_112789781" MODIFIED="1592325714101" TEXT="Objeto k8s que fica exposto ao mundo externo"/>
