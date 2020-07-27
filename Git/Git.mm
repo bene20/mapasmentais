@@ -710,6 +710,42 @@
 </node>
 </node>
 </node>
+<node CREATED="1595536084713" ID="Freemind_Link_836478549" MODIFIED="1595536087048" POSITION="right" TEXT="Hooks">
+<node CREATED="1595536095172" ID="Freemind_Link_1651522755" MODIFIED="1595536109465" TEXT="Para definir um hook globalmente:">
+<node COLOR="#0000ff" CREATED="1595536117196" ID="Freemind_Link_1891744897" MODIFIED="1595536148671" TEXT="git config --global core.hooksPath /pat/to/global/hooks"/>
+</node>
+<node CREATED="1595536179357" ID="Freemind_Link_1135489039" MODIFIED="1595536185909" TEXT="Prepare-commit-msg">
+<node CREATED="1595536189397" ID="Freemind_Link_156871708" MODIFIED="1595536262535" TEXT="Par&#xe2;metros">
+<node CREATED="1595536203160" ID="Freemind_Link_416168090" MODIFIED="1595536246430" TEXT="Arquivo tempor&#xe1;rio com a mensagem de commit">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1595536231339" ID="Freemind_Link_856051677" MODIFIED="1595536250127" TEXT="A fonte da mensagem do commit">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1595536237585" ID="Freemind_Link_1626500054" MODIFIED="1595536253012" TEXT="O hash SHA-1 do commit">
+<icon BUILTIN="full-3"/>
+</node>
+<node CREATED="1595536264652" ID="Freemind_Link_432580857" MODIFIED="1595536267964" TEXT="Exemplo de uso:">
+<node CREATED="1595536272129" ID="Freemind_Link_30790617" MODIFIED="1595536282368" TEXT="commit_msg_filepath = sys.argv[1]"/>
+</node>
+</node>
+<node CREATED="1595536303760" ID="Freemind_Link_1327053187" MODIFIED="1595543298388" TEXT="Snippets">
+<icon BUILTIN="idea"/>
+<node CREATED="1595543188794" ID="Freemind_Link_1015591188" MODIFIED="1595543204173" TEXT="Verificar se o texto do commit come&#xe7;a com &apos;Merge branch&apos;">
+<node COLOR="#0000ff" CREATED="1595536117196" ID="Freemind_Link_798669546" MODIFIED="1595543238205" TEXT="if grep -qE &quot;Merge branch&quot; &quot;$1&quot;; then ..."/>
+</node>
+</node>
+</node>
+<node CREATED="1595536303760" ID="Freemind_Link_494484269" MODIFIED="1595543301129" TEXT="Snippets">
+<icon BUILTIN="idea"/>
+<node CREATED="1595536306379" ID="Freemind_Link_1300755785" MODIFIED="1595536323239" TEXT="Obter o nome da branch atual:">
+<node COLOR="#0000ff" CREATED="1595536117196" ID="Freemind_Link_1617828058" MODIFIED="1595536718857" TEXT="current_branch=&quot;$(git rev-parse --abbrev-ref HEAD)&quot; "/>
+</node>
+<node CREATED="1595536399639" ID="Freemind_Link_1853154290" MODIFIED="1595536404914" TEXT="Sair com erro (aborta o commit)">
+<node COLOR="#0000ff" CREATED="1595536117196" ID="Freemind_Link_1132408265" MODIFIED="1595536724084" TEXT="exit 1"/>
+</node>
+</node>
+</node>
 <node CREATED="1553601385660" FOLDED="true" ID="Freemind_Link_622410571" MODIFIED="1553601388279" POSITION="right" TEXT="Ferramentas">
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_617972534" MODIFIED="1553601403142" TEXT="git mergetool --tool-help">
 <icon BUILTIN="wizard"/>
