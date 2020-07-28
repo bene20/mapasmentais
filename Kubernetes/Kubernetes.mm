@@ -17,7 +17,7 @@
 </node>
 </node>
 <node CREATED="1591997555354" ID="Freemind_Link_1121402737" MODIFIED="1591997566014" POSITION="right" TEXT="Ferramentas">
-<node COLOR="#0000ff" CREATED="1591997283387" ID="Freemind_Link_461602891" MODIFIED="1591997541541" TEXT="kubectl">
+<node COLOR="#0000ff" CREATED="1591997283387" FOLDED="true" ID="Freemind_Link_461602891" MODIFIED="1591997541541" TEXT="kubectl">
 <node CREATED="1592317124854" ID="Freemind_Link_1986325000" MODIFIED="1592317142693" TEXT="&#xc9; uma interface de linha de comandos para gerenciar k8s"/>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1145737261" MODIFIED="1591997526134" TEXT="version">
 <node CREATED="1591997501435" ID="Freemind_Link_885210971" MODIFIED="1591997537374" TEXT="Exibe a vers&#xe3;o do kubectl instalada"/>
@@ -40,6 +40,9 @@
 <node CREATED="1591997501435" ID="Freemind_Link_1618155496" MODIFIED="1592316177570" TEXT="Lista recursos ativos do cluster"/>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1862005678" MODIFIED="1592316026697" TEXT="pods">
 <node CREATED="1591997501435" ID="Freemind_Link_1691489598" MODIFIED="1592316187023" TEXT="Lista os pods ativos do cluster"/>
+</node>
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_232052009" MODIFIED="1595949736186" TEXT="pod &lt;nome-pod&gt;">
+<node CREATED="1591997501435" ID="Freemind_Link_1586969121" MODIFIED="1595949749759" TEXT="Lista informa&#xe7;&#xf5;es de um pod espec&#xed;fico"/>
 </node>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_342101733" MODIFIED="1592317714790" TEXT="nodes">
 <node CREATED="1591997501435" ID="Freemind_Link_1852439302" MODIFIED="1592317732636" TEXT="Lista os n&#xf3;s ativos do cluster"/>
@@ -84,6 +87,14 @@
 <node CREATED="1592314815568" ID="Freemind_Link_66159339" MODIFIED="1592318301574" TEXT="Exibe mais informa&#xe7;&#xf5;es do recurso"/>
 <node CREATED="1592316781753" ID="Freemind_Link_481592897" MODIFIED="1592316782633" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_908031001" MODIFIED="1592318332853" TEXT="kubectl get pods -o wide"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1562385298" MODIFIED="1595949646647" TEXT="-o yaml">
+<icon BUILTIN="flag"/>
+<node CREATED="1592314815568" ID="Freemind_Link_455555038" MODIFIED="1595949660875" TEXT="Exporta a sa&#xed;da para o formato yaml"/>
+<node CREATED="1595949662088" ID="Freemind_Link_552718006" MODIFIED="1595949681554" TEXT="&#xda;til quando se quer obter um arquivo YAML de um objeto k8s"/>
+<node CREATED="1592316781753" ID="Freemind_Link_1242126797" MODIFIED="1592316782633" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_202654256" MODIFIED="1595949693024" TEXT="kubectl get pod &lt;nome-pod&gt; -o yaml"/>
 </node>
 </node>
 </node>
@@ -289,8 +300,24 @@
 </node>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1182249788" MODIFIED="1595953849748" TEXT="config">
+<node CREATED="1591997501435" ID="Freemind_Link_579345162" MODIFIED="1595953870002" TEXT="Exibe/altera algumas configura&#xe7;&#xf5;es do K8S"/>
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_470778521" MODIFIED="1595953889957" TEXT="current-context">
+<node CREATED="1591997501435" ID="Freemind_Link_1683672267" MODIFIED="1595953906179" TEXT="Apresenta o contexto atual "/>
 </node>
-<node COLOR="#0000ff" CREATED="1591997286697" ID="Freemind_Link_288764766" MODIFIED="1591997547957" TEXT="minikube">
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1673355378" MODIFIED="1595953915297" TEXT="set-context">
+<node CREATED="1591997501435" ID="Freemind_Link_933254931" MODIFIED="1595953935722" TEXT="Altera dados de um contexto"/>
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_400858039" MODIFIED="1595954020580" TEXT="&lt;nome-contexto&gt; --namespace=dev">
+<icon BUILTIN="flag"/>
+<node CREATED="1591997501435" ID="Freemind_Link_783364740" MODIFIED="1595953969179" TEXT="Altera o namespace do contexto para &apos;dev&apos;"/>
+<node CREATED="1595953970704" ID="Freemind_Link_91840042" MODIFIED="1595953971389" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1671328819" MODIFIED="1595954002787" TEXT="kubectl config set-context $(kubectl config current-context) --namespace=dev"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1591997286697" FOLDED="true" ID="Freemind_Link_288764766" MODIFIED="1591997547957" TEXT="minikube">
 <node CREATED="1591997581539" ID="Freemind_Link_1189140737" MODIFIED="1591997588821" TEXT="S&#xf3; funciona se a virtualiza&#xe7;&#xe3;o estiver habilitada">
 <node CREATED="1591997632538" ID="Freemind_Link_1004617445" MODIFIED="1591997724800" TEXT="Para checar, certifique-se de que a execu&#xe7;&#xe3;o&#xa;do comando abaixo n&#xe3;o retorna vazia"/>
 <node COLOR="#0000ff" CREATED="1591997701770" ID="Freemind_Link_1416954113" MODIFIED="1591997716036" TEXT="grep -E --color &apos;vmx|svm&apos; /proc/cpuinfo"/>
@@ -390,7 +417,7 @@
 <node CREATED="1595532051386" ID="Freemind_Link_1962448922" MODIFIED="1595532053686" TEXT="Estrutura">
 <node CREATED="1595532054884" ID="Freemind_Link_1767773898" MODIFIED="1595532244379" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/estruturaK8s.png&quot;&gt;"/>
 </node>
-<node CREATED="1592315531047" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
+<node CREATED="1592315531047" FOLDED="true" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
 <node CREATED="1592316082413" ID="Freemind_Link_1900255977" MODIFIED="1592316091293" TEXT="Unidade m&#xed;nima do cluster"/>
 <node CREATED="1592316104077" ID="Freemind_Link_1091604377" MODIFIED="1592316111082" TEXT="Pode conter um ou mais containers">
 <node CREATED="1592316111542" ID="Freemind_Link_235141017" MODIFIED="1592316119762" TEXT="Ideal que tenha apenas um container">
@@ -660,13 +687,13 @@
 </node>
 </node>
 </node>
-<node CREATED="1592320466495" ID="Freemind_Link_625607988" MODIFIED="1592320470618" TEXT="Replication Controller">
+<node CREATED="1592320466495" FOLDED="true" ID="Freemind_Link_625607988" MODIFIED="1592320470618" TEXT="Replication Controller">
 <node CREATED="1592320471216" ID="Freemind_Link_1774168972" MODIFIED="1592320496273" TEXT="Descontinuado!">
 <icon BUILTIN="button_cancel"/>
 </node>
 <node CREATED="1592320475126" ID="Freemind_Link_983240483" MODIFIED="1592320484767" TEXT="Deve-se usar o &apos;Deployment&apos; em seu lugar"/>
 </node>
-<node CREATED="1592318588142" ID="Freemind_Link_1350939554" MODIFIED="1592841149334" TEXT="Deployment">
+<node CREATED="1592318588142" FOLDED="true" ID="Freemind_Link_1350939554" MODIFIED="1592841149334" TEXT="Deployment">
 <node CREATED="1592319036690" ID="Freemind_Link_1445718489" MODIFIED="1592319046058" TEXT="Monitora os pods">
 <node CREATED="1592319060111" ID="Freemind_Link_151124480" MODIFIED="1592319297508" TEXT="&#xc9; respons&#xe1;vel por subir os pods, controlar a qtdd de r&#xe9;plicas etc."/>
 <node CREATED="1593529217401" ID="Freemind_Link_240641209" MODIFIED="1593529235838" TEXT="&#xc9; um meio declarativo de gerenciar Pods usando ReplicaSet"/>
@@ -796,7 +823,7 @@
 <node CREATED="1593795006342" ID="Freemind_Link_1505697872" MODIFIED="1593795015870" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/ReplicaSet.jpg&quot;&gt;"/>
 </node>
 </node>
-<node CREATED="1592840607361" ID="Freemind_Link_968347144" MODIFIED="1592840929650" TEXT="StatefulSet">
+<node CREATED="1592840607361" FOLDED="true" ID="Freemind_Link_968347144" MODIFIED="1592840929650" TEXT="StatefulSet">
 <node CREATED="1592840769881" ID="Freemind_Link_1733104068" MODIFIED="1592840785316" TEXT="Permite preservar o estado de um Pod quando ele &#xe9; escalado">
 <node CREATED="1592840848710" ID="Freemind_Link_379462848" MODIFIED="1592840855275" TEXT="Preserva todas as informa&#xe7;&#xf5;es"/>
 <node CREATED="1592841187539" ID="Freemind_Link_1001477443" MODIFIED="1592841487153" TEXT="Compartilha diret&#xf3;rios estrat&#xe9;gicos entre todos os pods">
@@ -975,7 +1002,7 @@
 <node CREATED="1595531945317" ID="Freemind_Link_1725657480" MODIFIED="1595531958314" TEXT="Usado para prover storage dinamicamente"/>
 </node>
 </node>
-<node CREATED="1595532309289" ID="Freemind_Link_918501028" MODIFIED="1595532313583" TEXT="ConfigMap">
+<node CREATED="1595532309289" FOLDED="true" ID="Freemind_Link_918501028" MODIFIED="1595532313583" TEXT="ConfigMap">
 <node CREATED="1595532319803" ID="Freemind_Link_874999571" MODIFIED="1595532439500" TEXT="Prov&#xea; um meio para salvar informa&#xe7;&#xf5;es de configura&#xe7;&#xe3;o e as prov&#xea; aos containers"/>
 <node CREATED="1595533709844" ID="Freemind_Link_633518713" MODIFIED="1595533711480" TEXT="Literal">
 <node CREATED="1595533712068" ID="Freemind_Link_177169477" MODIFIED="1595533731449" TEXT="Cria um ConfigMap definindo seus dados via linha de comando"/>
@@ -1091,7 +1118,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592316092693" ID="Freemind_Link_1567221451" MODIFIED="1592316095839" TEXT="Service">
+<node CREATED="1592316092693" FOLDED="true" ID="Freemind_Link_1567221451" MODIFIED="1592316095839" TEXT="Service">
 <node CREATED="1592325699922" ID="Freemind_Link_112789781" MODIFIED="1592325714101" TEXT="Objeto k8s que fica exposto ao mundo externo"/>
 <node CREATED="1594063837170" ID="Freemind_Link_989566241" MODIFIED="1594063850922" TEXT="Prov&#xea; um ponto de acesso &#xfa;nico para um ou mais pods"/>
 <node CREATED="1592327609358" ID="Freemind_Link_1900887548" MODIFIED="1592327654738" TEXT="Possuem um IP est&#xe1;vel"/>
@@ -1159,7 +1186,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1595868879135" ID="Freemind_Link_890756444" MODIFIED="1595868881082" TEXT="Secret">
+<node CREATED="1595868879135" FOLDED="true" ID="Freemind_Link_890756444" MODIFIED="1595868881082" TEXT="Secret">
 <node CREATED="1595868888117" ID="Freemind_Link_1816769083" MODIFIED="1595868908146" TEXT="Objeto que cont&#xe9;m dados sens&#xed;veis">
 <node CREATED="1595868908436" ID="Freemind_Link_1931982190" MODIFIED="1595868911951" TEXT="Em pequena quantidade"/>
 <node CREATED="1595868915525" ID="Freemind_Link_1817606610" MODIFIED="1595868928032" TEXT="Ex: senha. token, chave privada"/>
@@ -1201,6 +1228,109 @@
 <node CREATED="1595869812903" ID="Freemind_Link_1444340457" MODIFIED="1595869814120" TEXT="Usos">
 <node CREATED="1595869823180" ID="Freemind_Link_951171348" MODIFIED="1595869838055" TEXT="Semelhante ao uso do ConfigMap">
 <node CREATED="1595869839940" ID="Freemind_Link_1888112226" MODIFIED="1595888587915" TEXT="Trocando &apos;configMapRef&apos; por &apos;secretRef&apos;"/>
+</node>
+</node>
+</node>
+<node CREATED="1595951529873" FOLDED="true" ID="Freemind_Link_1422405519" MODIFIED="1595951596905" TEXT="Namespace">
+<node CREATED="1595951888502" ID="Freemind_Link_1438646733" MODIFIED="1595951894616" TEXT="Pr&#xe9;-existentes:">
+<node CREATED="1595951895708" ID="Freemind_Link_763528009" MODIFIED="1595951897538" TEXT="default">
+<node CREATED="1595951908007" ID="Freemind_Link_1246459924" MODIFIED="1595951930663" TEXT="&#xc9; o padr&#xe3;o do k8s, quando n&#xe3;o se escolhe um"/>
+</node>
+<node CREATED="1595951897940" ID="Freemind_Link_1642921033" MODIFIED="1595951901799" TEXT="kube-system">
+<node CREATED="1595951933078" ID="Freemind_Link_86430517" MODIFIED="1595951951918" TEXT="&#xc9; onde ficam os objetos de servi&#xe7;o do k8s, como DNS etc."/>
+</node>
+<node CREATED="1595951902430" ID="Freemind_Link_1687234709" MODIFIED="1595951905295" TEXT="kube-public">
+<node CREATED="1595951955612" ID="Freemind_Link_39715661" MODIFIED="1595951967871" TEXT="&#xc9; onde ficam os objetos que devem estar acess&#xed;vies a todos os usu&#xe1;rios"/>
+</node>
+</node>
+<node CREATED="1595951978005" ID="Freemind_Link_834395242" MODIFIED="1595952021054" TEXT="Pods dentro de um mesmo namespace pode se comunicar diretamente por seus nomes. Pods em namespaces diferentes precisam explicitar o namespace"/>
+<node CREATED="1595951611078" ID="Freemind_Link_565058721" MODIFIED="1595951615922" TEXT="Isola ambientes uns dos outros">
+<node CREATED="1595951648190" ID="Freemind_Link_841676578" MODIFIED="1595951662106" TEXT="Evita que se modifique objetos acidentalmente"/>
+<node CREATED="1595951617502" ID="Freemind_Link_514927319" MODIFIED="1595951636674" TEXT="Ex: PROD, DEV, TEST etc"/>
+</node>
+<node CREATED="1595952110845" ID="Freemind_Link_1085491601" MODIFIED="1595952464607" TEXT="Estrutura de nomes:">
+<node COLOR="#0000ff" CREATED="1595952411340" ID="Freemind_Link_781355425" MODIFIED="1595952416523" TEXT="db-service.dev.svc.cluster.local">
+<node COLOR="#0000ff" CREATED="1595952139989" ID="Freemind_Link_1828119351" MODIFIED="1595952248917" TEXT="cluster.local">
+<node CREATED="1595952251270" ID="Freemind_Link_1490014176" MODIFIED="1595952480489" TEXT="&#xc9; o nome padr&#xe3;o de dom&#xed;nio do cluster k8s"/>
+</node>
+<node COLOR="#0000ff" CREATED="1595952139989" ID="Freemind_Link_1297839941" MODIFIED="1595952332068" TEXT="svc">
+<node CREATED="1595952251270" ID="Freemind_Link_828771055" MODIFIED="1595952364366" TEXT="&#xc9; o subdom&#xed;nio de servi&#xe7;o"/>
+</node>
+<node COLOR="#0000ff" CREATED="1595952139989" ID="Freemind_Link_606896686" MODIFIED="1595952358702" TEXT="dev">
+<node CREATED="1595952251270" ID="Freemind_Link_434332498" MODIFIED="1595952393038" TEXT="&#xc9; o nome do namespace"/>
+</node>
+<node COLOR="#0000ff" CREATED="1595952139989" ID="Freemind_Link_396396841" MODIFIED="1595952380841" TEXT="db-service">
+<node CREATED="1595952251270" ID="Freemind_Link_1140225100" MODIFIED="1595952389965" TEXT="&#xc9; o nome do servi&#xe7;o"/>
+</node>
+</node>
+<node CREATED="1595952643282" ID="Freemind_Link_1468955473" MODIFIED="1595952644038" TEXT="Ex:">
+<node CREATED="1595952509938" ID="Freemind_Link_213722250" MODIFIED="1595952569193" TEXT="Um Pod no mesmo namespace poderia &#xa;acessar db-service simplesmente por seu nome">
+<node CREATED="1595952534250" ID="Freemind_Link_276760006" MODIFIED="1595952562904" TEXT="Ex: mysql.connect(&quot;db-service&quot;)"/>
+</node>
+<node CREATED="1595952509938" ID="Freemind_Link_1725801864" MODIFIED="1595952625765" TEXT="Um Pod em outro namespace dever&#xe1; indicar&#xa;o &apos;namespace&apos; para acessar db-service ">
+<node CREATED="1595952534250" ID="Freemind_Link_1589717990" MODIFIED="1595952635437" TEXT="Ex: mysql.connect(&quot;db-service.dev.svc.cluster.local&quot;)"/>
+</node>
+</node>
+</node>
+<node CREATED="1595953126552" ID="Freemind_Link_243192665" MODIFIED="1595953135090" TEXT="Funcionamento">
+<node CREATED="1595953101425" ID="Freemind_Link_401392707" MODIFIED="1595953121612" TEXT="Ao executar &apos;kubectl get pods&apos;, listam-se apenas os pods do namespace corrente"/>
+<node CREATED="1595953138952" ID="Freemind_Link_1563602887" MODIFIED="1595953248719" TEXT="Para listar os pods do namespace &apos;kube-system&apos;:">
+<node COLOR="#0000ff" CREATED="1595953163615" ID="Freemind_Link_471431945" MODIFIED="1595953221695" TEXT="kubectl get pods --namespace=kube-system"/>
+</node>
+<node CREATED="1595869017286" ID="Freemind_Link_502454475" MODIFIED="1595954210023" TEXT="Para listar todos os Pods de todos os namespaces:">
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_364576642" MODIFIED="1595954079460" TEXT="kubectl get pods --all-namespaces"/>
+</node>
+<node CREATED="1595954172841" ID="Freemind_Link_1019552824" MODIFIED="1595954213146" TEXT="Para trocar de namespace corrente:">
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_353361754" MODIFIED="1595953596367" TEXT="kubectl config set-context $(kubectl config current-context) --namespace=dev">
+<node CREATED="1595869017286" ID="Freemind_Link_1979106030" MODIFIED="1595953641936" TEXT="Altera para o namespace &apos;dev&apos;"/>
+</node>
+</node>
+<node CREATED="1595953249475" ID="Freemind_Link_899884578" MODIFIED="1595953361572" TEXT="Para criar um objeto em um &#xa;namespace diferente do corrente:">
+<node COLOR="#0000ff" CREATED="1595953163615" ID="Freemind_Link_1951618817" MODIFIED="1595953323560" TEXT="kubectl create -f arquivo.yml --namespace=dev">
+<icon BUILTIN="forward"/>
+</node>
+<node CREATED="1595953329544" ID="Freemind_Link_664013495" MODIFIED="1595953351357" TEXT="Adicionar o namespace no metadata do arquivo yaml">
+<icon BUILTIN="forward"/>
+<node CREATED="1592845146578" ID="Freemind_Link_49400216" MODIFIED="1592845147336" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_187009984" MODIFIED="1595953425173" TEXT="apiVersion: v1&#xa;kind: Pod&#xa;metadata:&#xa;  namespace: dev&#xa;  name: db-passwords&#xa;..."/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1595868955278" ID="Freemind_Link_1750139902" MODIFIED="1595868961065" TEXT="Linha de comando">
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_1117197738" MODIFIED="1595953520352" TEXT="kubectl create namespace dev">
+<node CREATED="1595869017286" ID="Freemind_Link_1009005915" MODIFIED="1595953525671" TEXT="Cria o namespace &apos;dev&apos;"/>
+</node>
+</node>
+<node CREATED="1595951537400" ID="Freemind_Link_1209637459" MODIFIED="1595951540236" TEXT="YAML">
+<node CREATED="1595951551270" ID="Freemind_Link_1288513811" MODIFIED="1595951552490" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_180108670" MODIFIED="1595953482380" TEXT="apiVersion: v1&#xa;kind: Namespace&#xa;metadata:&#xa;  name: dev"/>
+</node>
+</node>
+</node>
+<node CREATED="1595954306605" FOLDED="true" ID="Freemind_Link_1848547261" MODIFIED="1595954310678" TEXT="ResourceQuota">
+<node CREATED="1595954313973" ID="Freemind_Link_1638346957" MODIFIED="1595954320910" TEXT="Usado para limitar os recursos de um namespace"/>
+<node CREATED="1595954325010" ID="Freemind_Link_215393309" MODIFIED="1595954326950" TEXT="YAML">
+<node CREATED="1595954328543" ID="Freemind_Link_1745971916" MODIFIED="1595954329303" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_699731548" MODIFIED="1595954432688" TEXT="apiVersion: v1&#xa;kind: ResourceQuota&#xa;metadata:&#xa;  name: compute-quota&#xa;  namespace: dev&#xa;spec:&#xa;  hard:&#xa;    pods: &quot;10&quot;&#xa;    requests.cpu: &quot;4&quot;&#xa;    requests.memory: 5Gi&#xa;    limits.cpu: &quot;10&quot;&#xa;    limits.memory: 10Gi"/>
+</node>
+</node>
+</node>
+<node CREATED="1595951529873" ID="Freemind_Link_1776501553" MODIFIED="1595951582089" TEXT="???">
+<node CREATED="1595868955278" ID="Freemind_Link_1629152481" MODIFIED="1595868961065" TEXT="Linha de comando">
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_738242659" MODIFIED="1595951572386" TEXT="???">
+<node CREATED="1595869017286" ID="Freemind_Link_1526756937" MODIFIED="1595951574305" TEXT="???"/>
+</node>
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_347642389" MODIFIED="1595951572386" TEXT="???">
+<node CREATED="1595869017286" ID="Freemind_Link_765101381" MODIFIED="1595951574305" TEXT="???"/>
+</node>
+</node>
+<node CREATED="1595951537400" ID="Freemind_Link_634609125" MODIFIED="1595951540236" TEXT="YAML">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_607940255" MODIFIED="1595951561106" TEXT="???">
+<node CREATED="1592844989287" ID="Freemind_Link_1171325727" MODIFIED="1595951562899" TEXT="???"/>
+</node>
+<node CREATED="1595951551270" ID="Freemind_Link_129672794" MODIFIED="1595951552490" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_617557325" MODIFIED="1595951561106" TEXT="???"/>
 </node>
 </node>
 </node>
