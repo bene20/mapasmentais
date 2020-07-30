@@ -1,7 +1,7 @@
 <map version="0.8.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1587588035937" ID="Freemind_Link_179599812" LINK="../Mapas.mm" MODIFIED="1587588110544" TEXT="Kubernetes">
-<node CREATED="1587588278670" ID="_" MODIFIED="1587588281148" POSITION="right" TEXT="Instala&#xe7;&#xe3;o">
+<node CREATED="1587588278670" FOLDED="true" ID="_" MODIFIED="1587588281148" POSITION="right" TEXT="Instala&#xe7;&#xe3;o">
 <node CREATED="1587588396290" ID="Freemind_Link_1993121344" MODIFIED="1587588399504" TEXT="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/">
 <icon BUILTIN="attach"/>
 </node>
@@ -403,6 +403,90 @@
 </node>
 </node>
 </node>
+<node CREATED="1596034959140" ID="Freemind_Link_902301057" MODIFIED="1596034963642" POSITION="right" TEXT="Scheduling">
+<node CREATED="1596034965646" ID="Freemind_Link_1847599504" MODIFIED="1596035021281" TEXT="&#xc9; poss&#xed;vel determinar afinidade ou restri&#xe7;&#xf5;es entre pods e n&#xf3;s"/>
+<node CREATED="1596119449395" ID="Freemind_Link_1513609610" MODIFIED="1596119454460" TEXT="Manual">
+<node CREATED="1596119454969" ID="Freemind_Link_379128097" MODIFIED="1596119494999" TEXT="Para determinar um n&#xf3; espec&#xed;fico para um Pod use o atributo &apos;nodeName&apos; da se&#xe7;&#xe3;o &apos;spec&apos;"/>
+<node CREATED="1596119496921" ID="Freemind_Link_1521676715" MODIFIED="1596119497712" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_723311129" MODIFIED="1596030243491" TEXT="...&#xa;spec:&#xa;  containers: ...&#xa;  nodeName: node02"/>
+</node>
+</node>
+<node CREATED="1596119531049" ID="Freemind_Link_1778475563" MODIFIED="1596119532984" TEXT="Binding">
+<node CREATED="1596119534181" ID="Freemind_Link_107543601" LINK="#Freemind_Link_824110118" MODIFIED="1596119554565" TEXT="Ver objeto &apos;Binding&apos;"/>
+</node>
+<node CREATED="1596119775395" ID="Freemind_Link_1227534434" MODIFIED="1596119780766" TEXT="Taints e Tolerations">
+<node CREATED="1596122547884" ID="Freemind_Link_570508055" MODIFIED="1596122549854" TEXT="Taints">
+<node CREATED="1596122277403" ID="Freemind_Link_1903864533" MODIFIED="1596122557934" TEXT="S&#xe3;o aplicadas aos N&#xf3;s"/>
+<node CREATED="1596122307493" ID="Freemind_Link_419801390" MODIFIED="1596122315351" TEXT="Funciona como repelente"/>
+<node CREATED="1596122316124" ID="Freemind_Link_1333943734" MODIFIED="1596122338225" TEXT="Todos os Pods que n&#xe3;o forem tolerantes ao Taint, n&#xe3;o ser&#xe3;o schedulados no n&#xf3;"/>
+<node CREATED="1596127673646" ID="Freemind_Link_288155496" MODIFIED="1596127820521" TEXT="Por padr&#xe3;o, o k8s aplica um Taint aos n&#xf3;s &apos;master&apos;&#xa;para que Pods n&#xe3;o sejam schedulados neles">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1596127750716" ID="Freemind_Link_909287419" MODIFIED="1596127753461" TEXT="Veja:">
+<node COLOR="#0000ff" CREATED="1596122602914" ID="Freemind_Link_1341954913" MODIFIED="1596127776556" TEXT="kubectl describe node master | grep Taint"/>
+</node>
+<node CREATED="1596127731522" ID="Freemind_Link_1193043176" MODIFIED="1596127747374" TEXT="Taint: node-role.kubernetes.io/master:NoSchedule"/>
+</node>
+<node CREATED="1596122654544" ID="Freemind_Link_1585252393" MODIFIED="1596122663644" TEXT="Efeitos:">
+<node CREATED="1596122676217" ID="Freemind_Link_427508625" MODIFIED="1596122680308" TEXT="NoSchedule">
+<node CREATED="1596122704738" ID="Freemind_Link_1777140125" MODIFIED="1596122724367" TEXT="O n&#xf3; que n&#xe3;o tolerar o taint n&#xe3;o ser&#xe1; schedulado no N&#xf3; em hip&#xf3;tese alguma"/>
+</node>
+<node CREATED="1596122697040" ID="Freemind_Link_668128645" MODIFIED="1596122703573" TEXT="PreferNoSchedule">
+<node CREATED="1596122771464" ID="Freemind_Link_1515008710" MODIFIED="1596122785549" TEXT="O n&#xf3; far&#xe1; o poss&#xed;vel para n&#xe3;o schedular o Pod, mas isso n&#xe3;o &#xe9; garantido"/>
+<node CREATED="1596122704738" ID="Freemind_Link_121881587" MODIFIED="1596122745477" TEXT="O n&#xf3; que n&#xe3;o tolerar o taint n&#xe3;o ser&#xe1; schedulado no N&#xf3;, a menos que n&#xe3;o exista nenhum n&#xf3; dispon&#xed;vel para ele"/>
+</node>
+<node CREATED="1596122681568" ID="Freemind_Link_1604447421" MODIFIED="1596122696367" TEXT="NoExecute">
+<node CREATED="1596122806146" ID="Freemind_Link_1653152185" MODIFIED="1596127570079" TEXT="Novos Pods n&#xe3;o ser&#xe3;o schedulados no n&#xf3; e Pods j&#xe1; existentes no n&#xf3; ser&#xe3;o evitados (novas requisi&#xe7;&#xf5;es n&#xe3;o ser&#xe3;o encaminhadas para eles)"/>
+<node CREATED="1596127502308" ID="Freemind_Link_667184865" MODIFIED="1596127531090" TEXT="Os Pods evitados ser&#xe3;o eliminados assim que n&#xe3;o houver mais requisi&#xe7;&#xe3;o em andamento para ele"/>
+</node>
+</node>
+<node CREATED="1596122623954" ID="Freemind_Link_585886539" MODIFIED="1596122625846" TEXT="Comando:">
+<node COLOR="#0000ff" CREATED="1596122602914" ID="Freemind_Link_808070842" MODIFIED="1596128758460" TEXT="kubectl taint nodes &lt;nome-n&#xf3;&gt; &lt;key&gt;=&lt;value&gt;:&lt;taint-effect&gt;">
+<node CREATED="1596130298227" ID="Freemind_Link_232099553" MODIFIED="1596130302564" TEXT="Adiciona um taint"/>
+</node>
+<node COLOR="#0000ff" CREATED="1596130295495" ID="Freemind_Link_1069418563" MODIFIED="1596130373723" TEXT="kubectl taint node &lt;nome-n&#xf3;&gt; &lt;nome_taint&gt;:&lt;effect&gt;-">
+<node CREATED="1596130376334" ID="Freemind_Link_1885598956" MODIFIED="1596130395825" TEXT="Note o &apos;-&apos; ao t&#xe9;rmino do nome da &apos;taint&apos;"/>
+<node CREATED="1596130304326" ID="Freemind_Link_663594970" MODIFIED="1596130307906" TEXT="Remove um taint"/>
+</node>
+</node>
+<node CREATED="1596122599739" ID="Freemind_Link_931329712" MODIFIED="1596122601021" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1596122602914" ID="Freemind_Link_653012893" MODIFIED="1596122875882" TEXT="kubectl taint nodes node01 app=blue:NoSchedule">
+<node CREATED="1596130404444" ID="Freemind_Link_851835865" MODIFIED="1596130423954" TEXT="Cria o Taint &apos;app&apos; com valor &apos;blue&apos; no n&#xf3; &apos;node01&apos;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1596130295495" ID="Freemind_Link_513276687" MODIFIED="1596130320752" TEXT="kubectl taint node master node-role.kubernetes.io/master:NoSchedule-">
+<node CREATED="1596130304326" ID="Freemind_Link_1844436830" MODIFIED="1596130447824" TEXT="Remove o taint &apos;node-role.kubernetes.io/master&apos; do n&#xf3; master"/>
+</node>
+</node>
+</node>
+<node CREATED="1596122289434" ID="Freemind_Link_828343240" MODIFIED="1596122562845" TEXT="Tolerations">
+<node CREATED="1596122563453" ID="Freemind_Link_394200636" MODIFIED="1596122565968" TEXT="S&#xe3;o aplicados aos Pods">
+<node CREATED="1596122931230" ID="Freemind_Link_990552566" MODIFIED="1596122939013" TEXT="Registrados no &apos;spec&apos; do Pod"/>
+</node>
+<node CREATED="1596122569073" ID="Freemind_Link_758290171" MODIFIED="1596122590444" TEXT="Torna o Pod tolerante ao repelente (taint)"/>
+<node CREATED="1596123161123" ID="Freemind_Link_1321446829" MODIFIED="1596129849184" TEXT="Operators:">
+<node CREATED="1596123169596" ID="Freemind_Link_87357780" MODIFIED="1596123170862" TEXT="Equal"/>
+<node CREATED="1596123171892" ID="Freemind_Link_1958965283" MODIFIED="1596123173065" TEXT="In">
+<node CREATED="1596129812337" ID="Freemind_Link_111136484" MODIFIED="1596129816285" TEXT="&#xc9; do tipo array"/>
+</node>
+<node CREATED="1596123173629" ID="Freemind_Link_821861208" MODIFIED="1596123175609" TEXT="Not In">
+<node CREATED="1596129812337" ID="Freemind_Link_1593073230" MODIFIED="1596129816285" TEXT="&#xc9; do tipo array"/>
+</node>
+</node>
+<node CREATED="1596122942230" ID="Freemind_Link_454332148" MODIFIED="1596122942998" TEXT="Ex:">
+<node CREATED="1596123047882" ID="Freemind_Link_1982119118" MODIFIED="1596123056921" TEXT="Para o taint:">
+<node COLOR="#0000ff" CREATED="1596122602914" ID="Freemind_Link_1215502928" MODIFIED="1596122875882" TEXT="kubectl taint nodes node01 app=blue:NoSchedule"/>
+</node>
+<node CREATED="1596123062917" ID="Freemind_Link_699947064" MODIFIED="1596123092438" TEXT="Vale o Toleration:">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1263379616" MODIFIED="1596123141669" TEXT="...&#xa;spec:&#xa;  containers: ...&#xa;  tolerations:&#xa;    - key: &quot;app&quot;&#xa;      operator: &quot;Equal&quot;&#xa;      value: &quot;blue&quot;&#xa;      effect: &quot;NoSchedule&quot;">
+<node CREATED="1596123146503" ID="Freemind_Link_51242623" MODIFIED="1596123151190" TEXT="Os valores devem estar entre aspas"/>
+<node CREATED="1596129824635" ID="Freemind_Link_216227735" MODIFIED="1596129858587" TEXT="Existem v&#xe1;rios tipos de operators">
+<arrowlink COLOR="#13c30f" DESTINATION="Freemind_Link_1321446829" ENDARROW="Default" ENDINCLINATION="510;0;" ID="Freemind_Arrow_Link_1538813545" STARTARROW="None" STARTINCLINATION="510;0;"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
 <node CREATED="1592315528094" ID="Freemind_Link_1064829192" MODIFIED="1592317218772" POSITION="right" TEXT="Objetos k8s">
 <node CREATED="1592317521186" ID="Freemind_Link_1956142399" MODIFIED="1592317522903" TEXT="Master">
 <node CREATED="1592317523600" ID="Freemind_Link_755059932" MODIFIED="1592317530400" TEXT="Gerencia o cluster"/>
@@ -417,7 +501,23 @@
 <node CREATED="1595532051386" ID="Freemind_Link_1962448922" MODIFIED="1595532053686" TEXT="Estrutura">
 <node CREATED="1595532054884" ID="Freemind_Link_1767773898" MODIFIED="1595532244379" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/estruturaK8s.png&quot;&gt;"/>
 </node>
-<node CREATED="1592315531047" FOLDED="true" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
+<node COLOR="#ff00ff" CREATED="1596039896690" ID="Freemind_Link_1894393993" MODIFIED="1596040170780" TEXT="metadata">
+<node CREATED="1596039899475" ID="Freemind_Link_714215144" MODIFIED="1596039925590" TEXT="Se&#xe7;&#xe3;o dos arquivos YAML que adiciona labels, nomes e outros dados comuns a todos os tpos de objetos do k8s"/>
+<node COLOR="#ff00ff" CREATED="1596039929587" ID="Freemind_Link_1621783044" MODIFIED="1596040054477" TEXT="name">
+<node CREATED="1596040077177" ID="Freemind_Link_1871479056" MODIFIED="1596040084755" TEXT="Declara o nome do objeto k8s"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1596039942259" ID="Freemind_Link_1906281772" MODIFIED="1596040045498" TEXT="labels">
+<node CREATED="1596040087161" ID="Freemind_Link_792440234" MODIFIED="1596040099535" TEXT="Declara labels que permitem o agrupamento de objetos"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1596039944829" ID="Freemind_Link_1985493252" MODIFIED="1596039962068" TEXT="annotations">
+<node CREATED="1596040103831" ID="Freemind_Link_349857241" MODIFIED="1596040112402" TEXT="Adiciona informa&#xe7;&#xf5;es diversas ao objeto"/>
+<node CREATED="1596039949372" ID="Freemind_Link_1354530674" MODIFIED="1596039951565" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1596039942259" ID="Freemind_Link_314500756" MODIFIED="1596040130310" TEXT="buildVersion: 1.34"/>
+<node COLOR="#ff00ff" CREATED="1596039942259" ID="Freemind_Link_1353102990" MODIFIED="1596040139123" TEXT="contato: 3328-4569"/>
+</node>
+</node>
+</node>
+<node CREATED="1592315531047" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
 <node CREATED="1592316082413" ID="Freemind_Link_1900255977" MODIFIED="1592316091293" TEXT="Unidade m&#xed;nima do cluster"/>
 <node CREATED="1592316104077" ID="Freemind_Link_1091604377" MODIFIED="1592316111082" TEXT="Pode conter um ou mais containers">
 <node CREATED="1592316111542" ID="Freemind_Link_235141017" MODIFIED="1592316119762" TEXT="Ideal que tenha apenas um container">
@@ -679,6 +779,13 @@
 <node CREATED="1595884458636" ID="Freemind_Link_544406331" MODIFIED="1595884519317" TEXT="Cria o alias &apos;foo.remote&apos; para o IP 10.1.2.3"/>
 <node CREATED="1595884458636" ID="Freemind_Link_276295305" MODIFIED="1595884528743" TEXT="Cria o alias &apos;bar.remote&apos; para o IP 10.1.2.3"/>
 </node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1196258973" MODIFIED="1596030189775" TEXT="nodeName">
+<node CREATED="1595884413397" ID="Freemind_Link_754328525" MODIFIED="1596031112482" TEXT="For&#xe7;a o Pod a rodar em um n&#xf3; espec&#xed;fico"/>
+<node CREATED="1596031192077" ID="Freemind_Link_1068698440" LINK="#Freemind_Link_824110118" MODIFIED="1596031621540" TEXT="Alternativa: &apos;Binding&apos;"/>
+<node CREATED="1595884393584" ID="Freemind_Link_1287287816" MODIFIED="1595884394465" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1872568259" MODIFIED="1596030243491" TEXT="...&#xa;spec:&#xa;  containers: ...&#xa;  nodeName: node02"/>
 </node>
 </node>
 </node>
@@ -1118,18 +1225,18 @@
 </node>
 </node>
 </node>
-<node CREATED="1592316092693" FOLDED="true" ID="Freemind_Link_1567221451" MODIFIED="1592316095839" TEXT="Service">
+<node CREATED="1592316092693" ID="Freemind_Link_1567221451" MODIFIED="1592316095839" TEXT="Service">
 <node CREATED="1592325699922" ID="Freemind_Link_112789781" MODIFIED="1592325714101" TEXT="Objeto k8s que fica exposto ao mundo externo"/>
 <node CREATED="1594063837170" ID="Freemind_Link_989566241" MODIFIED="1594063850922" TEXT="Prov&#xea; um ponto de acesso &#xfa;nico para um ou mais pods"/>
 <node CREATED="1592327609358" ID="Freemind_Link_1900887548" MODIFIED="1592327654738" TEXT="Possuem um IP est&#xe1;vel"/>
-<node CREATED="1592327731419" ID="Freemind_Link_434191741" MODIFIED="1595870021442" TEXT="Linha de comando">
-<node CREATED="1592327758255" ID="Freemind_Link_1152905879" MODIFIED="1592327759442" TEXT="Ex:">
-<node COLOR="#131cdc" CREATED="1592327760166" ID="Freemind_Link_1408914233" MODIFIED="1592327775134" TEXT="kubectl expose deployment \&#xa;  nginx-deploy \&#xa;  --name=nginx-service \&#xa;  --type=LoadBalancer \&#xa;  --port=8080 \&#xa;  --target-port=80"/>
-</node>
-</node>
 <node CREATED="1592326067511" ID="Freemind_Link_1449026450" MODIFIED="1592326101546" TEXT="Quem diz qual &#xe9; o IP a ser acessado pelo ,mundo externo &#xe9; o k8s">
 <icon BUILTIN="messagebox_warning"/>
 <node CREATED="1592326091033" ID="Freemind_Link_58040619" MODIFIED="1592326097860" TEXT="Em ambiente DEV ser&#xe1; o minikube"/>
+</node>
+<node CREATED="1592327731419" ID="Freemind_Link_434191741" MODIFIED="1595870021442" TEXT="Linha de comando">
+<node COLOR="#131cdc" CREATED="1592327760166" ID="Freemind_Link_1408914233" MODIFIED="1595958958018" TEXT="kubectl expose deployment  nginx-deploy  --name=nginx-service  --type=LoadBalancer  --port=8080  --target-port=80">
+<node CREATED="1595958996942" ID="Freemind_Link_1725916616" MODIFIED="1595959027417" TEXT="Exp&#xf5;e um deployment em uma porta aleat&#xf3;ria do n&#xf3;"/>
+</node>
 </node>
 <node CREATED="1592844932300" ID="Freemind_Link_1953329863" MODIFIED="1592844934368" TEXT="YAML">
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_241021067" MODIFIED="1594064234851" TEXT="metadata">
@@ -1314,6 +1421,16 @@
 <node CREATED="1595954328543" ID="Freemind_Link_1745971916" MODIFIED="1595954329303" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_699731548" MODIFIED="1595954432688" TEXT="apiVersion: v1&#xa;kind: ResourceQuota&#xa;metadata:&#xa;  name: compute-quota&#xa;  namespace: dev&#xa;spec:&#xa;  hard:&#xa;    pods: &quot;10&quot;&#xa;    requests.cpu: &quot;4&quot;&#xa;    requests.memory: 5Gi&#xa;    limits.cpu: &quot;10&quot;&#xa;    limits.memory: 10Gi"/>
 </node>
+</node>
+</node>
+<node COLOR="#000000" CREATED="1596031192077" ID="Freemind_Link_824110118" MODIFIED="1596031678686" TEXT="Binding">
+<node CREATED="1596031203314" ID="Freemind_Link_593289301" MODIFIED="1596031706264" TEXT="Usado para vincular um Pod a um n&#xf3; espec&#xed;fico"/>
+<node CREATED="1596031236426" ID="Freemind_Link_986681717" MODIFIED="1596031239584" TEXT="YAML:">
+<node CREATED="1596031220293" ID="Freemind_Link_1289646055" MODIFIED="1596031714818" TEXT="O arquivo yaml deve ser enviado via POST para o kubeAPI"/>
+<node CREATED="1596031289390" ID="Freemind_Link_1512302031" MODIFIED="1596031740154" TEXT="Comando para envio via POST:">
+<node COLOR="#0000ff" CREATED="1596031299702" ID="Freemind_Link_1032711313" MODIFIED="1596031389192" TEXT="curl --header &quot;Content-Type:application/json&quot; --request POST --data &apos;{&quot;apiVersion&quot;:&quot;v1&quot;, &quot;kind&quot;: &quot;Binding&quot; ...}&apos; http://$SERVER/api/v1/namespaces/default/pods/#PODNAME/binding/"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1869548284" MODIFIED="1596031283389" TEXT="apiVersion: v1&#xa;kind: Binding&#xa;metadata:&#xa;  name: nginx&#xa;target:&#xa;  apiVersion: v1&#xa;  kind: Node&#xa;  name: node02"/>
 </node>
 </node>
 <node CREATED="1595951529873" ID="Freemind_Link_1776501553" MODIFIED="1595951582089" TEXT="???">
