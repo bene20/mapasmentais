@@ -317,7 +317,8 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1591997286697" FOLDED="true" ID="Freemind_Link_288764766" MODIFIED="1591997547957" TEXT="minikube">
+<node COLOR="#0000ff" CREATED="1591997286697" ID="Freemind_Link_288764766" MODIFIED="1591997547957" TEXT="minikube">
+<node CREATED="1596205466443" ID="Freemind_Link_1462077979" MODIFIED="1596205477704" TEXT="&#xc9; uma VM que roda um n&#xf3; (o master) do k8s"/>
 <node CREATED="1591997581539" ID="Freemind_Link_1189140737" MODIFIED="1591997588821" TEXT="S&#xf3; funciona se a virtualiza&#xe7;&#xe3;o estiver habilitada">
 <node CREATED="1591997632538" ID="Freemind_Link_1004617445" MODIFIED="1591997724800" TEXT="Para checar, certifique-se de que a execu&#xe7;&#xe3;o&#xa;do comando abaixo n&#xe3;o retorna vazia"/>
 <node COLOR="#0000ff" CREATED="1591997701770" ID="Freemind_Link_1416954113" MODIFIED="1591997716036" TEXT="grep -E --color &apos;vmx|svm&apos; /proc/cpuinfo"/>
@@ -393,6 +394,12 @@
 </node>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1922851387" MODIFIED="1596205449320" TEXT="ssh">
+<node CREATED="1591997501435" ID="Freemind_Link_499308704" MODIFIED="1596205457383" TEXT="Conecta &#xe0; VM minikube"/>
+<node CREATED="1596205487213" ID="Freemind_Link_1061921122" MODIFIED="1596205491161" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1922409823" MODIFIED="1596205541912" TEXT="minikube ssh"/>
+</node>
+</node>
 <node CREATED="1593455743106" ID="Freemind_Link_1332834250" MODIFIED="1593455745843" TEXT="Troubleshoot">
 <node CREATED="1593455767880" ID="Freemind_Link_1145384260" MODIFIED="1593455806490" TEXT="x509: certificate is valid for">
 <icon BUILTIN="button_cancel"/>
@@ -400,10 +407,32 @@
 <icon BUILTIN="password"/>
 </node>
 </node>
+<node CREATED="1596205872182" ID="Freemind_Link_1890707813" MODIFIED="1596205880038" TEXT="Configurar DNS">
+<node CREATED="1596206051046" ID="Freemind_Link_795696719" MODIFIED="1596206061378" TEXT="Conectar &#xe0; VM minikube">
+<icon BUILTIN="full-1"/>
+<node COLOR="#0000ff" CREATED="1596205892636" ID="Freemind_Link_1314406300" MODIFIED="1596206101497" TEXT="minikube ssh"/>
+</node>
+<node CREATED="1596206063231" ID="Freemind_Link_1028710783" MODIFIED="1596206076736" TEXT="Virar root">
+<icon BUILTIN="full-2"/>
+<node COLOR="#0000ff" CREATED="1596205892636" ID="Freemind_Link_1006682822" MODIFIED="1596206107366" TEXT="sudo su -"/>
+</node>
+<node CREATED="1596206081522" ID="Freemind_Link_704074888" MODIFIED="1596206091163" TEXT="Configurar o DNS">
+<icon BUILTIN="full-3"/>
+<node COLOR="#0000ff" CREATED="1596205892636" ID="Freemind_Link_141585985" MODIFIED="1596206114746" TEXT="cat &lt;&lt; EOF &gt; /etc/systemd/resolved.conf &#xa;&gt; [Resolve]&#xa;&gt; DNS=10.10.12.10 192.168.0.2&#xa;&gt; FallbackDNS=10.10.12.10 192.168.0.2&#xa;&gt; EOF&#xa;"/>
+<node CREATED="1596206589481" ID="Freemind_Link_1428203173" MODIFIED="1596206602615" TEXT="Se n&#xe3;o funcionar, edite diretamente o arquivo /etc/resolv.conf"/>
+</node>
+<node CREATED="1596206164169" ID="Freemind_Link_487616322" MODIFIED="1596206185919" TEXT="Reiniciar o DNS">
+<icon BUILTIN="full-4"/>
+<node COLOR="#0000ff" CREATED="1596205892636" ID="Freemind_Link_1016207554" MODIFIED="1596206182616" TEXT="systemctl restart systemd-resolved"/>
+</node>
+</node>
+<node CREATED="1596212515293" ID="Freemind_Link_1855652776" MODIFIED="1596212518353" TEXT="Docker login">
+<node CREATED="1596213911244" ID="Freemind_Link_261720495" LINK="#Freemind_Link_548219744" MODIFIED="1596213963666" TEXT="Ver se&#xe7;&#xe3;o &apos;imagePullSecrets&apos; do Pod"/>
 </node>
 </node>
 </node>
-<node CREATED="1596034959140" ID="Freemind_Link_902301057" MODIFIED="1596034963642" POSITION="right" TEXT="Scheduling">
+</node>
+<node CREATED="1596034959140" FOLDED="true" ID="Freemind_Link_902301057" MODIFIED="1596034963642" POSITION="right" TEXT="Scheduling">
 <node CREATED="1596034965646" ID="Freemind_Link_1847599504" MODIFIED="1596035021281" TEXT="&#xc9; poss&#xed;vel determinar afinidade ou restri&#xe7;&#xf5;es entre pods e n&#xf3;s"/>
 <node CREATED="1596119449395" ID="Freemind_Link_1513609610" MODIFIED="1596119454460" TEXT="Manual">
 <node CREATED="1596119454969" ID="Freemind_Link_379128097" MODIFIED="1596119494999" TEXT="Para determinar um n&#xf3; espec&#xed;fico para um Pod use o atributo &apos;nodeName&apos; da se&#xe7;&#xe3;o &apos;spec&apos;"/>
@@ -517,7 +546,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592315531047" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
+<node CREATED="1592315531047" FOLDED="true" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
 <node CREATED="1592316082413" ID="Freemind_Link_1900255977" MODIFIED="1592316091293" TEXT="Unidade m&#xed;nima do cluster"/>
 <node CREATED="1592316104077" ID="Freemind_Link_1091604377" MODIFIED="1592316111082" TEXT="Pode conter um ou mais containers">
 <node CREATED="1592316111542" ID="Freemind_Link_235141017" MODIFIED="1592316119762" TEXT="Ideal que tenha apenas um container">
@@ -786,6 +815,67 @@
 <node CREATED="1596031192077" ID="Freemind_Link_1068698440" LINK="#Freemind_Link_824110118" MODIFIED="1596031621540" TEXT="Alternativa: &apos;Binding&apos;"/>
 <node CREATED="1595884393584" ID="Freemind_Link_1287287816" MODIFIED="1595884394465" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1872568259" MODIFIED="1596030243491" TEXT="...&#xa;spec:&#xa;  containers: ...&#xa;  nodeName: node02"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1341733396" MODIFIED="1596203358494" TEXT="dnsPolicy">
+<node CREATED="1595884413397" ID="Freemind_Link_764016063" MODIFIED="1596203374418" TEXT="Define a pol&#xed;tica de DNS a ser usada"/>
+<node CREATED="1596203866481" ID="Freemind_Link_269925098" MODIFIED="1596203868974" TEXT="Possibilidades">
+<node COLOR="#ff00ff" CREATED="1596203872043" ID="Freemind_Link_161149398" MODIFIED="1596203949141" TEXT="Default">
+<node CREATED="1596203995453" ID="Freemind_Link_445050115" MODIFIED="1596204016174" TEXT="O Pod herda a configura&#xe7;&#xe3;o de resolu&#xe7;&#xe3;o de nome do n&#xf3; em que &#xe9; executado"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1596203880245" ID="Freemind_Link_1220004709" MODIFIED="1596203943853" TEXT="ClusterFirst">
+<node CREATED="1596204180579" ID="Freemind_Link_1649453574" MODIFIED="1596204234571" TEXT="Toda consulta DNS que n&#xe3;o correpsonda ao sufixo do dom&#xed;nio do cluster (ex: www.kubernetes.io), ser&#xe1; reencaminhada para o servidor de nomes herdado do n&#xf3;"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1596203885613" ID="Freemind_Link_121852504" MODIFIED="1596203937568" TEXT="ClusterFirstWithHostNet">
+<node CREATED="1596204249227" ID="Freemind_Link_439487805" MODIFIED="1596204275618" TEXT="Todo Pod rodando em modo &apos;hostNetwork&apos; deve usar esta pol&#xed;tica de DNS"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1596203891996" ID="Freemind_Link_760488659" MODIFIED="1596203929775" TEXT="None">
+<node CREATED="1596204282126" ID="Freemind_Link_1174874424" MODIFIED="1596204303332" TEXT="Permite ao Pod ignorar as configura&#xe7;&#xf5;es de DNS do K8S">
+<node CREATED="1596204306975" ID="Freemind_Link_198504427" MODIFIED="1596204317420" TEXT="Requer que a configura&#xe7;&#xe3;o seja feita manualmente"/>
+</node>
+<node CREATED="1596203374794" ID="Freemind_Link_1916320832" MODIFIED="1596203915703" TEXT="Quando escolhido, ser&#xe1; obrigat&#xf3;rio declarar a se&#xe7;&#xe3;o &apos;dnsConfig&apos; (ver abaixo)">
+<arrowlink DESTINATION="Freemind_Link_1708794795" ENDARROW="Default" ENDINCLINATION="206;0;" ID="Freemind_Arrow_Link_246891786" STARTARROW="Default" STARTINCLINATION="206;0;"/>
+</node>
+</node>
+</node>
+<node CREATED="1596203442409" ID="Freemind_Link_76151803" MODIFIED="1596203443559" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_442183114" MODIFIED="1596203985280" TEXT="...&#xa;spec:&#xa;  containers: ...&#xa;  dnsPolicy: &quot;Default&quot;"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_939318344" MODIFIED="1596203405350" TEXT="dnsConfig">
+<node CREATED="1595884413397" ID="Freemind_Link_532089958" MODIFIED="1596203420727" TEXT="Define as configura&#xe7;&#xf5;es de DNS espec&#xed;ficas para o Pod"/>
+<node CREATED="1596203791013" ID="Freemind_Link_1708794795" MODIFIED="1596203817648" TEXT="Necess&#xe1;rio quando o valor de &apos;dnsPolicy&apos; for &quot;None&quot;">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_443619633" MODIFIED="1596203433207" TEXT="nameservers">
+<node CREATED="1595884413397" ID="Freemind_Link_1065553669" MODIFIED="1596203441096" TEXT="Array com a lista dos servidres DNS"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1052046432" MODIFIED="1596203553832" TEXT="searches">
+<node CREATED="1595884413397" ID="Freemind_Link_619935917" MODIFIED="1596203634810" TEXT="Array com a lista dos DNS search domains"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1015959263" MODIFIED="1596203618067" TEXT="options">
+<node CREATED="1595884413397" ID="Freemind_Link_127215276" MODIFIED="1596203671818" TEXT="Array com a lista dos valores opcionais"/>
+<node CREATED="1596203673308" ID="Freemind_Link_1972770686" MODIFIED="1596203695080" TEXT="Cada valor deve ter um name (obrigat&#xf3;rio) e um value (opcional)"/>
+<node CREATED="1596203699138" ID="Freemind_Link_343497465" MODIFIED="1596203700145" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_279698461" MODIFIED="1596203755688" TEXT="...&#xa;  options:&#xa;    - name: ndots&#xa;      value: &quot;2&quot;&#xa;    - name: edns0"/>
+</node>
+</node>
+<node CREATED="1596203442409" ID="Freemind_Link_689675448" MODIFIED="1596203443559" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1250009289" MODIFIED="1596204586577" TEXT="...&#xa;spec:&#xa;  containers: ...&#xa;  dnsPolicy: &quot;None&quot;&#xa;  dnsConfig:&#xa;    nameservers:&#xa;      - 10.10.12.10&#xa;      - 192.168.0.2&#xa;    searches:&#xa;      - meudominio.com.br&#xa;    options:&#xa;      - name: ndots&#xa;        value: &quot;2&quot;&#xa;      - name: edns0">
+<node CREATED="1596204396288" ID="Freemind_Link_1713539383" MODIFIED="1596204411211" TEXT="/etc/resolv.conf resultado:">
+<node CREATED="1596204413808" ID="Freemind_Link_1303099863" MODIFIED="1596204562509" TEXT="nameserver 10.10.12.10&#xa;nameserver 192.168.0.2&#xa;search meudominio.com.br&#xa;options ndots:2 edns0"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_548219744" MODIFIED="1596213936671" TEXT="imagePullSecrets">
+<node CREATED="1595884413397" ID="Freemind_Link_670921187" MODIFIED="1596213785631" TEXT="Indica qual secret cont&#xe9;m as credenciais para o &apos;docker login&apos;"/>
+<node CREATED="1596213786134" ID="Freemind_Link_542729878" MODIFIED="1596213797147" TEXT="Requerido quando se usa um registry privado"/>
+<node CREATED="1596213821909" ID="Freemind_Link_533754058" MODIFIED="1596213828047" TEXT="Cria&#xe7;&#xe3;o do secret:">
+<node COLOR="#0000ff" CREATED="1596212523119" ID="Freemind_Link_121975717" MODIFIED="1596212629191" TEXT="kubectl create secret docker-registry regcred \&#xa;    --docker-server=meu.registry.com:4567 \&#xa;    --docker-username=meuusuario \&#xa;    --docker-password=abcd@1234 \&#xa;    --docker-email=meuEmail@abc.com"/>
+</node>
+<node CREATED="1595884393584" ID="Freemind_Link_446311987" MODIFIED="1595884394465" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1139097285" MODIFIED="1596213818587" TEXT="...&#xa;spec:&#xa;  containers: ...&#xa;  imagePullSecrets:&#xa;    - name: regcred"/>
 </node>
 </node>
 </node>
@@ -1225,7 +1315,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592316092693" ID="Freemind_Link_1567221451" MODIFIED="1592316095839" TEXT="Service">
+<node CREATED="1592316092693" FOLDED="true" ID="Freemind_Link_1567221451" MODIFIED="1592316095839" TEXT="Service">
 <node CREATED="1592325699922" ID="Freemind_Link_112789781" MODIFIED="1592325714101" TEXT="Objeto k8s que fica exposto ao mundo externo"/>
 <node CREATED="1594063837170" ID="Freemind_Link_989566241" MODIFIED="1594063850922" TEXT="Prov&#xea; um ponto de acesso &#xfa;nico para um ou mais pods"/>
 <node CREATED="1592327609358" ID="Freemind_Link_1900887548" MODIFIED="1592327654738" TEXT="Possuem um IP est&#xe1;vel"/>
@@ -1423,7 +1513,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#000000" CREATED="1596031192077" ID="Freemind_Link_824110118" MODIFIED="1596031678686" TEXT="Binding">
+<node COLOR="#000000" CREATED="1596031192077" FOLDED="true" ID="Freemind_Link_824110118" MODIFIED="1596031678686" TEXT="Binding">
 <node CREATED="1596031203314" ID="Freemind_Link_593289301" MODIFIED="1596031706264" TEXT="Usado para vincular um Pod a um n&#xf3; espec&#xed;fico"/>
 <node CREATED="1596031236426" ID="Freemind_Link_986681717" MODIFIED="1596031239584" TEXT="YAML:">
 <node CREATED="1596031220293" ID="Freemind_Link_1289646055" MODIFIED="1596031714818" TEXT="O arquivo yaml deve ser enviado via POST para o kubeAPI"/>
