@@ -17,7 +17,7 @@
 </node>
 </node>
 <node CREATED="1591997555354" ID="Freemind_Link_1121402737" MODIFIED="1591997566014" POSITION="right" TEXT="Ferramentas">
-<node COLOR="#0000ff" CREATED="1591997283387" FOLDED="true" ID="Freemind_Link_461602891" MODIFIED="1591997541541" TEXT="kubectl">
+<node COLOR="#0000ff" CREATED="1591997283387" ID="Freemind_Link_461602891" MODIFIED="1591997541541" TEXT="kubectl">
 <node CREATED="1592317124854" ID="Freemind_Link_1986325000" MODIFIED="1592317142693" TEXT="&#xc9; uma interface de linha de comandos para gerenciar k8s"/>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1145737261" MODIFIED="1591997526134" TEXT="version">
 <node CREATED="1591997501435" ID="Freemind_Link_885210971" MODIFIED="1591997537374" TEXT="Exibe a vers&#xe3;o do kubectl instalada"/>
@@ -317,7 +317,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1591997286697" ID="Freemind_Link_288764766" MODIFIED="1591997547957" TEXT="minikube">
+<node COLOR="#0000ff" CREATED="1591997286697" FOLDED="true" ID="Freemind_Link_288764766" MODIFIED="1591997547957" TEXT="minikube">
 <node CREATED="1596205466443" ID="Freemind_Link_1462077979" MODIFIED="1596205477704" TEXT="&#xc9; uma VM que roda um n&#xf3; (o master) do k8s"/>
 <node CREATED="1591997581539" ID="Freemind_Link_1189140737" MODIFIED="1591997588821" TEXT="S&#xf3; funciona se a virtualiza&#xe7;&#xe3;o estiver habilitada">
 <node CREATED="1591997632538" ID="Freemind_Link_1004617445" MODIFIED="1591997724800" TEXT="Para checar, certifique-se de que a execu&#xe7;&#xe3;o&#xa;do comando abaixo n&#xe3;o retorna vazia"/>
@@ -432,7 +432,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1596034959140" FOLDED="true" ID="Freemind_Link_902301057" MODIFIED="1596034963642" POSITION="right" TEXT="Scheduling">
+<node CREATED="1596034959140" ID="Freemind_Link_902301057" MODIFIED="1596034963642" POSITION="right" TEXT="Scheduling">
 <node CREATED="1596034965646" ID="Freemind_Link_1847599504" MODIFIED="1596035021281" TEXT="&#xc9; poss&#xed;vel determinar afinidade ou restri&#xe7;&#xf5;es entre pods e n&#xf3;s"/>
 <node CREATED="1596119449395" ID="Freemind_Link_1513609610" MODIFIED="1596119454460" TEXT="Manual">
 <node CREATED="1596119454969" ID="Freemind_Link_379128097" MODIFIED="1596119494999" TEXT="Para determinar um n&#xf3; espec&#xed;fico para um Pod use o atributo &apos;nodeName&apos; da se&#xe7;&#xe3;o &apos;spec&apos;"/>
@@ -515,8 +515,74 @@
 </node>
 </node>
 </node>
+<node CREATED="1596462670997" ID="Freemind_Link_1920130177" MODIFIED="1596462672529" TEXT="Labels">
+<node CREATED="1596462673127" ID="Freemind_Link_983056364" MODIFIED="1596462689713" TEXT="&#xc9; poss&#xed;vel atribuir Labels a n&#xf3;s e vincular Pods a eles por meio desses labels"/>
+<node CREATED="1596463007538" ID="Freemind_Link_1861830151" MODIFIED="1596463012382" TEXT="&#xc9; limitado">
+<node CREATED="1596463013339" ID="Freemind_Link_952203354" MODIFIED="1596463022703" TEXT="N&#xe3;o permite express&#xf5;es">
+<node CREATED="1596463038780" ID="Freemind_Link_858296390" MODIFIED="1596463059073" TEXT="Ex: ">
+<node CREATED="1596463059741" ID="Freemind_Link_1616672555" MODIFIED="1596463060385" TEXT="N&#xe3;o permite selecionar n&#xf3;s que &quot;n&#xe3;o tenham o label &apos;size&apos;&quot;"/>
+<node CREATED="1596463059741" ID="Freemind_Link_1615352926" MODIFIED="1596463089535" TEXT="N&#xe3;o permite selecionar n&#xf3;s cujo valor do label &apos;size&apos; seja diferente de &apos;small&apos;"/>
 </node>
-<node CREATED="1592315528094" ID="Freemind_Link_1064829192" MODIFIED="1592317218772" POSITION="right" TEXT="Objetos k8s">
+</node>
+<node CREATED="1596463024131" ID="Freemind_Link_651587697" MODIFIED="1596463032535" TEXT="Para casos mais complexos, use o NodeAffinity"/>
+</node>
+<node CREATED="1596462798526" ID="Freemind_Link_119685249" MODIFIED="1596462800719" TEXT="No n&#xf3;:">
+<node CREATED="1596462822557" ID="Freemind_Link_162638662" MODIFIED="1596462834903" TEXT="Atribuir um label:">
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_875443964" MODIFIED="1596462945198" TEXT="kubectl label nodes &lt;node-name&gt; &lt;label-key&gt;=&lt;label-value&gt;"/>
+<node CREATED="1596462948757" ID="Freemind_Link_1992644056" MODIFIED="1596462949874" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_673795684" MODIFIED="1596462995447" TEXT="kubectl label nodes node01 size=Large"/>
+</node>
+</node>
+</node>
+<node CREATED="1596462704943" ID="Freemind_Link_1777185267" MODIFIED="1596462706968" TEXT="No Pod:">
+<node CREATED="1596462707686" ID="Freemind_Link_1639096847" MODIFIED="1596462715522" TEXT="Usar o &apos;nodeSelector&apos;">
+<node CREATED="1596462715957" ID="Freemind_Link_422597484" MODIFIED="1596462730707" TEXT="Fica dentro da se&#xe7;&#xe3;o &apos;pec&apos; de &apos;containers&apos;"/>
+<node CREATED="1596462734493" ID="Freemind_Link_1978261199" MODIFIED="1596462735264" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1975776236" MODIFIED="1596462760218" TEXT="...&#xa;spec:&#xa;  containers: ...&#xa;  nodeSelector:&#xa;    size: Large">
+<node CREATED="1596462761030" ID="Freemind_Link_1980299960" MODIFIED="1596462995448" TEXT="Seleciona o N&#xf3; que tem um label &apos;size&apos; com valor &apos;Large&apos;">
+<arrowlink DESTINATION="Freemind_Link_673795684" ENDARROW="Default" ENDINCLINATION="268;0;" ID="Freemind_Arrow_Link_1599827603" STARTARROW="None" STARTINCLINATION="268;0;"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1596461359201" ID="Freemind_Link_1108347021" MODIFIED="1596461365047" TEXT="Node affinity">
+<node CREATED="1596462276713" ID="Freemind_Link_360611897" MODIFIED="1596462287359" TEXT="Aplicada aos Pods"/>
+<node CREATED="1596463123205" ID="Freemind_Link_797035873" MODIFIED="1596463129311" TEXT="Requer aplica&#xe7;&#xe3;o de labels aos n&#xf3;s">
+<node CREATED="1596463133116" ID="Freemind_Link_690792585" LINK="#Freemind_Link_1920130177" MODIFIED="1596463165609" TEXT="Ver se&#xe7;&#xe3;o anterior"/>
+</node>
+<node CREATED="1596461761456" ID="Freemind_Link_1913197261" MODIFIED="1596461763216" TEXT="Tipos">
+<node COLOR="#ff00ff" CREATED="1596461775421" ID="Freemind_Link_1625728016" MODIFIED="1596461801928" TEXT="requiredDuringSchedulingIgnoredDuringExecution">
+<node CREATED="1596462004594" ID="Freemind_Link_807594385" MODIFIED="1596462076717" TEXT="A afinidade ser&#xe1; respeitada no momento de schedular o Pod. Caso n&#xe3;o haja n&#xf3; dispon&#xed;vel, o Pod n&#xe3;o ser&#xe1; schedulado"/>
+<node CREATED="1596462021258" ID="Freemind_Link_1675594108" MODIFIED="1596462039629" TEXT="A afinidade n&#xe3;o ser&#xe1; respeitada se for modificada depois que o Pod j&#xe1; estiver carregado no n&#xf3;"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1596461775421" ID="Freemind_Link_1758827420" MODIFIED="1596461814620" TEXT="preferredDuringSchedulingIgnoredDuringExecution">
+<node CREATED="1596462004594" ID="Freemind_Link_789816352" MODIFIED="1596462106020" TEXT="A afinidade ser&#xe1; respeitada no momento de schedular o Pod, mas caso n&#xe3;o haja n&#xf3; dispon&#xed;vel, o Pod ser&#xe1; schedulado"/>
+<node CREATED="1596462021258" ID="Freemind_Link_927965746" MODIFIED="1596462039629" TEXT="A afinidade n&#xe3;o ser&#xe1; respeitada se for modificada depois que o Pod j&#xe1; estiver carregado no n&#xf3;"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1596461775421" ID="Freemind_Link_655642411" MODIFIED="1596461915328" TEXT="requiredDuringSchedulingRequiredDuringExecution">
+<node CREATED="1596462004594" ID="Freemind_Link_1715685990" MODIFIED="1596462076717" TEXT="A afinidade ser&#xe1; respeitada no momento de schedular o Pod. Caso n&#xe3;o haja n&#xf3; dispon&#xed;vel, o Pod n&#xe3;o ser&#xe1; schedulado"/>
+<node CREATED="1596462021258" ID="Freemind_Link_1834001804" MODIFIED="1596462169685" TEXT="A afinidade ser&#xe1; respeitada mesmo se for modificada depois que o Pod j&#xe1; estiver carregado no n&#xf3;. Ness caso o Pod ser&#xe1; removido do n&#xf3;."/>
+</node>
+</node>
+<node CREATED="1596462455785" ID="Freemind_Link_905522809" MODIFIED="1596462461935" TEXT="Operadores:">
+<node COLOR="#ff00ff" CREATED="1596462462601" ID="Freemind_Link_933642753" MODIFIED="1596462469048" TEXT="In"/>
+<node COLOR="#ff00ff" CREATED="1596462462601" ID="Freemind_Link_1596514311" MODIFIED="1596462473221" TEXT="NotIn"/>
+<node COLOR="#ff00ff" CREATED="1596462462601" ID="Freemind_Link_285783786" MODIFIED="1596462477065" TEXT="Exists">
+<node CREATED="1596463964231" ID="Freemind_Link_371880258" MODIFIED="1596463973585" TEXT="Uso ideal quando se tem um &apos;label&apos; sem valor">
+<node CREATED="1596463977726" ID="Freemind_Link_739025680" MODIFIED="1596464011993" TEXT="Ex: o label &apos;node-role.kubernetes.io/master&apos;, que indica o n&#xf3; mester"/>
+</node>
+</node>
+</node>
+<node CREATED="1596462289112" ID="Freemind_Link_143769070" MODIFIED="1596462290067" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1507291917" MODIFIED="1596462414220" TEXT="...&#xa;spec:&#xa;  containers: ...&#xa;  affinity:&#xa;    nodeAffinity:&#xa;      requiredDuringSchedulingIgnoredDuringExecution:&#xa;        nodeSelectorTerms:&#xa;          - matchExpressions:&#xa;            - key: size&#xa;              operator: In&#xa;              values:&#xa;                - Large">
+<node CREATED="1596462417432" ID="Freemind_Link_1448189557" MODIFIED="1596462437692" TEXT="Declara o Pod com afinidade ao n&#xf3; que tem o Label &apos;size&apos; com valor &apos;Large&apos;"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1592315528094" FOLDED="true" ID="Freemind_Link_1064829192" MODIFIED="1592317218772" POSITION="right" TEXT="Objetos k8s">
 <node CREATED="1592317521186" ID="Freemind_Link_1956142399" MODIFIED="1592317522903" TEXT="Master">
 <node CREATED="1592317523600" ID="Freemind_Link_755059932" MODIFIED="1592317530400" TEXT="Gerencia o cluster"/>
 <node CREATED="1592317530989" ID="Freemind_Link_1067778424" MODIFIED="1592317540209" TEXT="&#xc9; onde ficam todos os arquivos YAML"/>
@@ -546,7 +612,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592315531047" FOLDED="true" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
+<node CREATED="1592315531047" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
 <node CREATED="1592316082413" ID="Freemind_Link_1900255977" MODIFIED="1592316091293" TEXT="Unidade m&#xed;nima do cluster"/>
 <node CREATED="1592316104077" ID="Freemind_Link_1091604377" MODIFIED="1592316111082" TEXT="Pode conter um ou mais containers">
 <node CREATED="1592316111542" ID="Freemind_Link_235141017" MODIFIED="1592316119762" TEXT="Ideal que tenha apenas um container">
@@ -1383,20 +1449,36 @@
 </node>
 </node>
 </node>
-<node CREATED="1595868879135" FOLDED="true" ID="Freemind_Link_890756444" MODIFIED="1595868881082" TEXT="Secret">
+<node CREATED="1595868879135" ID="Freemind_Link_890756444" MODIFIED="1595868881082" TEXT="Secret">
 <node CREATED="1595868888117" ID="Freemind_Link_1816769083" MODIFIED="1595868908146" TEXT="Objeto que cont&#xe9;m dados sens&#xed;veis">
 <node CREATED="1595868908436" ID="Freemind_Link_1931982190" MODIFIED="1595868911951" TEXT="Em pequena quantidade"/>
 <node CREATED="1595868915525" ID="Freemind_Link_1817606610" MODIFIED="1595868928032" TEXT="Ex: senha. token, chave privada"/>
 </node>
 <node CREATED="1595868955278" ID="Freemind_Link_1176230559" MODIFIED="1595868961065" TEXT="Linha de comando">
+<node COLOR="#0000ff" CREATED="1596229405351" ID="Freemind_Link_218973457" MODIFIED="1596229478415" TEXT="generic">
+<node CREATED="1596229425924" ID="Freemind_Link_836642621" MODIFIED="1596229449851" TEXT="Cria um secret gen&#xe9;rico"/>
+<node CREATED="1596229672960" ID="Freemind_Link_151941491" MODIFIED="1596229674326" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_295356546" MODIFIED="1595869005343" TEXT="kubectl create secret generic my-secret --from-literal=pwd=my-password">
 <node CREATED="1595869017286" ID="Freemind_Link_1469070252" MODIFIED="1595869030365" TEXT="Cria um secret e o armazena com seguran&#xe7;a no k8s"/>
 </node>
 <node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_1562559652" MODIFIED="1595869075844" TEXT="kubectl create secret generic my-secret --from-file=ssh-privatekey=~/.ssh/id_rsa">
 <node CREATED="1595869017286" ID="Freemind_Link_939262589" MODIFIED="1595869087092" TEXT="Cria um secret a partir de um arquivo"/>
 </node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1596229400742" ID="Freemind_Link_1706328522" MODIFIED="1596229472362" TEXT="docker-registry">
+<node CREATED="1596229410183" ID="Freemind_Link_1019664130" MODIFIED="1596229422025" TEXT="Cria um secret pra uso com o Docker Registry"/>
+<node CREATED="1596229672960" ID="Freemind_Link_1789802529" MODIFIED="1596229674326" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1596229566260" ID="Freemind_Link_1927965605" MODIFIED="1596229617745" TEXT="kubectl create secret docker-registry regcred --docker-server=meu.registry.com:4567 --docker-username=meuusuario --docker-password=abcd@1234 --docker-email=meuEmail@abc.com"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1596229407509" ID="Freemind_Link_309192359" MODIFIED="1596229483143" TEXT="tls">
+<node CREATED="1596229451543" ID="Freemind_Link_1076262841" MODIFIED="1596229458390" TEXT="Cria um secret TLS"/>
+<node CREATED="1596229672960" ID="Freemind_Link_1018566459" MODIFIED="1596229674326" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_1437730246" MODIFIED="1595869145555" TEXT="kubectl create secret tls tls-secret --cert=path/to/tls.cert --key=path/to/tls.ket">
-<node CREATED="1595869017286" ID="Freemind_Link_1632641232" MODIFIED="1595869156182" TEXT="Cria um secret a partir de um par chave-valor"/>
+<node CREATED="1595869017286" ID="Freemind_Link_1632641232" MODIFIED="1596229542214" TEXT="Cria um secret TLS a partir de um par chave-valor"/>
+</node>
+</node>
 </node>
 </node>
 <node CREATED="1595869175889" ID="Freemind_Link_354606359" MODIFIED="1595869177043" TEXT="YAML">
