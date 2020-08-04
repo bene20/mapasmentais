@@ -17,7 +17,7 @@
 </node>
 </node>
 <node CREATED="1591997555354" ID="Freemind_Link_1121402737" MODIFIED="1591997566014" POSITION="right" TEXT="Ferramentas">
-<node COLOR="#0000ff" CREATED="1591997283387" ID="Freemind_Link_461602891" MODIFIED="1591997541541" TEXT="kubectl">
+<node COLOR="#0000ff" CREATED="1591997283387" FOLDED="true" ID="Freemind_Link_461602891" MODIFIED="1591997541541" TEXT="kubectl">
 <node CREATED="1592317124854" ID="Freemind_Link_1986325000" MODIFIED="1592317142693" TEXT="&#xc9; uma interface de linha de comandos para gerenciar k8s"/>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1145737261" MODIFIED="1591997526134" TEXT="version">
 <node CREATED="1591997501435" ID="Freemind_Link_885210971" MODIFIED="1591997537374" TEXT="Exibe a vers&#xe3;o do kubectl instalada"/>
@@ -432,7 +432,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1596034959140" ID="Freemind_Link_902301057" MODIFIED="1596034963642" POSITION="right" TEXT="Scheduling">
+<node CREATED="1596034959140" FOLDED="true" ID="Freemind_Link_902301057" MODIFIED="1596034963642" POSITION="right" TEXT="Scheduling">
 <node CREATED="1596034965646" ID="Freemind_Link_1847599504" MODIFIED="1596035021281" TEXT="&#xc9; poss&#xed;vel determinar afinidade ou restri&#xe7;&#xf5;es entre pods e n&#xf3;s"/>
 <node CREATED="1596119449395" ID="Freemind_Link_1513609610" MODIFIED="1596119454460" TEXT="Manual">
 <node CREATED="1596119454969" ID="Freemind_Link_379128097" MODIFIED="1596119494999" TEXT="Para determinar um n&#xf3; espec&#xed;fico para um Pod use o atributo &apos;nodeName&apos; da se&#xe7;&#xe3;o &apos;spec&apos;"/>
@@ -582,7 +582,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592315528094" FOLDED="true" ID="Freemind_Link_1064829192" MODIFIED="1592317218772" POSITION="right" TEXT="Objetos k8s">
+<node CREATED="1592315528094" ID="Freemind_Link_1064829192" MODIFIED="1592317218772" POSITION="right" TEXT="Objetos k8s">
 <node CREATED="1592317521186" ID="Freemind_Link_1956142399" MODIFIED="1592317522903" TEXT="Master">
 <node CREATED="1592317523600" ID="Freemind_Link_755059932" MODIFIED="1592317530400" TEXT="Gerencia o cluster"/>
 <node CREATED="1592317530989" ID="Freemind_Link_1067778424" MODIFIED="1592317540209" TEXT="&#xc9; onde ficam todos os arquivos YAML"/>
@@ -728,24 +728,56 @@
 <node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_1026654734" MODIFIED="1593623984951" TEXT="resources">
 <font NAME="SansSerif" SIZE="13"/>
 <node CREATED="1593615285135" ID="Freemind_Link_252754275" MODIFIED="1593624070225" TEXT="Define a capacidade dos recursos do container"/>
+<node CREATED="1596548366232" ID="Freemind_Link_520245172" MODIFIED="1596557829274" TEXT="Para definir o padr&#xe3;o de &apos;request&apos; e &apos;limit&apos; dos Pods de forma global (por namespace), use o &apos;LimitRange&apos;">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1596557835565" ID="Freemind_Link_422974474" LINK="#Freemind_Link_1776501553" MODIFIED="1596557874506" TEXT="Ver documenta&#xe7;&#xe3;o"/>
+</node>
 <node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_8637365" MODIFIED="1593624078438" TEXT="requests">
 <font NAME="SansSerif" SIZE="13"/>
 <node CREATED="1593615285135" ID="Freemind_Link_630931016" MODIFIED="1593624091589" TEXT="O que &#xe9; requerido em termo de recurso para o container"/>
 <node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_1034951929" MODIFIED="1593624094917" TEXT="cpu">
 <font NAME="SansSerif" SIZE="13"/>
 <node CREATED="1593615285135" ID="Freemind_Link_1524722292" MODIFIED="1593624116732" TEXT="Define a capacidade em Mhz da cpu dispensada ao container"/>
+<node CREATED="1596547911819" ID="Freemind_Link_837362512" MODIFIED="1596548112805" TEXT="Por padr&#xe3;o o K8s determina que cada Pod usa 0.5 de CPU">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1596548119079" ID="Freemind_Link_1684057994" MODIFIED="1596548134334" TEXT="1 CPU = 1000m (milicors)"/>
+<node CREATED="1596548113186" ID="Freemind_Link_1733401617" MODIFIED="1596548116668" TEXT="Equivale a 500m"/>
+</node>
 <node CREATED="1593624117985" ID="Freemind_Link_251334047" MODIFIED="1593624118782" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_312308389" MODIFIED="1593624128640" TEXT="cpu: 400m">
 <font NAME="SansSerif" SIZE="13"/>
-<node CREATED="1593624130148" ID="Freemind_Link_1719152635" MODIFIED="1593624141206" TEXT="Equivale a um processador de 400Mhz"/>
+<node CREATED="1593624130148" ID="Freemind_Link_1719152635" MODIFIED="1596557777907" TEXT="Equivale a um uso de 400 milicors"/>
 </node>
 </node>
 </node>
 <node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_305835305" MODIFIED="1593706385400" TEXT="memory">
 <font NAME="SansSerif" SIZE="13"/>
 <node CREATED="1593615285135" ID="Freemind_Link_350184327" MODIFIED="1593706408606" TEXT="Define a capacidade em megabytes da mem&#xf3;ria dispensada ao container"/>
+<node CREATED="1596548209749" ID="Freemind_Link_277111085" MODIFIED="1596548213137" TEXT="Tamanhos:">
+<node CREATED="1596548213789" ID="Freemind_Link_463968958" MODIFIED="1596548227088" TEXT="1G (Gigabyte)">
+<node CREATED="1596548286082" ID="Freemind_Link_1076806200" MODIFIED="1596548294481" TEXT="1.000.000.000 bytes"/>
+</node>
+<node CREATED="1596548213789" ID="Freemind_Link_26744389" MODIFIED="1596548240396" TEXT="1M (Megabyte)">
+<node CREATED="1596548286082" ID="Freemind_Link_958215507" MODIFIED="1596548301734" TEXT="1.000.000 bytes"/>
+</node>
+<node CREATED="1596548213789" ID="Freemind_Link_133772210" MODIFIED="1596548247010" TEXT="1K (Kilobyte)">
+<node CREATED="1596548286082" ID="Freemind_Link_955761021" MODIFIED="1596548308944" TEXT="1.000 bytes"/>
+</node>
+<node CREATED="1596548213789" ID="Freemind_Link_1943992772" MODIFIED="1596548256687" TEXT="1Gi (Gibibyte)">
+<node CREATED="1596548313842" ID="Freemind_Link_471696186" MODIFIED="1596548321135" TEXT="1.073.741.824 bytes"/>
+</node>
+<node CREATED="1596548213789" ID="Freemind_Link_231824187" MODIFIED="1596548272271" TEXT="1 Mi (mebibyte)">
+<node CREATED="1596548325139" ID="Freemind_Link_1366810111" MODIFIED="1596548331651" TEXT="1.048.576 bytes"/>
+</node>
+<node CREATED="1596548213789" ID="Freemind_Link_842606470" MODIFIED="1596548280386" TEXT="1 Ki (Kibibyte)">
+<node CREATED="1596548332551" ID="Freemind_Link_1676155083" MODIFIED="1596548336805" TEXT="1.024 bytes"/>
+</node>
+</node>
 <node CREATED="1593624117985" ID="Freemind_Link_1346308093" MODIFIED="1593624118782" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_938754634" MODIFIED="1593706420650" TEXT="memory: &quot;32Mi&quot;">
+<font NAME="SansSerif" SIZE="13"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_505257812" MODIFIED="1596548010374" TEXT="memory: &quot;1Gi&quot;">
 <font NAME="SansSerif" SIZE="13"/>
 </node>
 </node>
@@ -758,7 +790,10 @@
 </node>
 <node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_1545301465" MODIFIED="1593624094917" TEXT="cpu">
 <font NAME="SansSerif" SIZE="13"/>
-<node CREATED="1593615285135" ID="Freemind_Link_1798631570" MODIFIED="1593706548679" TEXT="Define a capacidade m&#xe1;xima em Mhz da cpu dispensada ao container"/>
+<node CREATED="1593615285135" ID="Freemind_Link_1798631570" MODIFIED="1593706548679" TEXT="Define a capacidade m&#xe1;xima em Mhz da cpu dispensada ao container">
+<node CREATED="1596548795760" ID="Freemind_Link_576348223" MODIFIED="1596548795760" TEXT=""/>
+</node>
+<node CREATED="1596549004156" ID="Freemind_Link_667612969" MODIFIED="1596549057778" TEXT="Caso o container tente usar mais CPU do que o fornecido, ele ser&#xe1; reprimido e n&#xe3;o conseguir&#xe1; CPU extra (mas continuar&#xe1; rodando)"/>
 <node CREATED="1593624117985" ID="Freemind_Link_1513316282" MODIFIED="1593624118782" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_700143983" MODIFIED="1593624128640" TEXT="cpu: 400m">
 <font NAME="SansSerif" SIZE="13"/>
@@ -769,6 +804,7 @@
 <node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_106595828" MODIFIED="1593706385400" TEXT="memory">
 <font NAME="SansSerif" SIZE="13"/>
 <node CREATED="1593615285135" ID="Freemind_Link_1838374831" MODIFIED="1593706571862" TEXT="Define a capacidade m&#xe1;xima em megabytes da mem&#xf3;ria dispensada ao container"/>
+<node CREATED="1596549004156" ID="Freemind_Link_1739958621" MODIFIED="1596549115574" TEXT="Caso o container tente usar mais mem&#xf3;ria do que o fornecido, ele conseguir&#xe1; fazer isso por algum tempo. Caso isso permane&#xe7;a por muito tempo (ou seja constante), ele ser&#xe1; eliminado pelo k8s"/>
 <node CREATED="1593624117985" ID="Freemind_Link_1077703935" MODIFIED="1593624118782" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_107398413" MODIFIED="1593706420650" TEXT="memory: &quot;32Mi&quot;">
 <font NAME="SansSerif" SIZE="13"/>
@@ -1449,7 +1485,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1595868879135" ID="Freemind_Link_890756444" MODIFIED="1595868881082" TEXT="Secret">
+<node CREATED="1595868879135" FOLDED="true" ID="Freemind_Link_890756444" MODIFIED="1595868881082" TEXT="Secret">
 <node CREATED="1595868888117" ID="Freemind_Link_1816769083" MODIFIED="1595868908146" TEXT="Objeto que cont&#xe9;m dados sens&#xed;veis">
 <node CREATED="1595868908436" ID="Freemind_Link_1931982190" MODIFIED="1595868911951" TEXT="Em pequena quantidade"/>
 <node CREATED="1595868915525" ID="Freemind_Link_1817606610" MODIFIED="1595868928032" TEXT="Ex: senha. token, chave privada"/>
@@ -1605,21 +1641,89 @@
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1869548284" MODIFIED="1596031283389" TEXT="apiVersion: v1&#xa;kind: Binding&#xa;metadata:&#xa;  name: nginx&#xa;target:&#xa;  apiVersion: v1&#xa;  kind: Node&#xa;  name: node02"/>
 </node>
 </node>
-<node CREATED="1595951529873" ID="Freemind_Link_1776501553" MODIFIED="1595951582089" TEXT="???">
-<node CREATED="1595868955278" ID="Freemind_Link_1629152481" MODIFIED="1595868961065" TEXT="Linha de comando">
-<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_738242659" MODIFIED="1595951572386" TEXT="???">
-<node CREATED="1595869017286" ID="Freemind_Link_1526756937" MODIFIED="1595951574305" TEXT="???"/>
+<node CREATED="1595951529873" FOLDED="true" ID="Freemind_Link_1776501553" MODIFIED="1596549364577" TEXT="LimitRange">
+<node CREATED="1596549369703" ID="Freemind_Link_113018493" MODIFIED="1596549391957" TEXT="Determina os valores default de recursos liberados (e limitados) aos Pods, quando estes n&#xe3;o os especificarem"/>
+<node CREATED="1596549426926" ID="Freemind_Link_381984723" MODIFIED="1596549440467" TEXT="&#xc9; v&#xe1;lido apenas para o namespace onde for criado"/>
+<node CREATED="1596550673305" ID="Freemind_Link_1735158582" MODIFIED="1596550680264" TEXT="Linha de comando">
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_709270185" MODIFIED="1596550693628" TEXT="kubectl get limitranges">
+<node CREATED="1595869017286" ID="Freemind_Link_1059423943" MODIFIED="1596550704012" TEXT="Lista os &apos;LimitRange&apos;s do namespace atual"/>
 </node>
-<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_347642389" MODIFIED="1595951572386" TEXT="???">
-<node CREATED="1595869017286" ID="Freemind_Link_765101381" MODIFIED="1595951574305" TEXT="???"/>
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_1034723165" MODIFIED="1596550762411" TEXT="kubectl get limitrange &lt;nome_do_limitrange&gt; --output=yaml">
+<node CREATED="1595869017286" ID="Freemind_Link_1725993321" MODIFIED="1596550738123" TEXT="Detalha um LimitRange espec&#xed;fico"/>
 </node>
 </node>
 <node CREATED="1595951537400" ID="Freemind_Link_634609125" MODIFIED="1595951540236" TEXT="YAML">
-<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_607940255" MODIFIED="1595951561106" TEXT="???">
-<node CREATED="1592844989287" ID="Freemind_Link_1171325727" MODIFIED="1595951562899" TEXT="???"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_763131380" MODIFIED="1596549518959" TEXT="kind">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_461638995" MODIFIED="1596549527257" TEXT="LimitRange"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_137400505" MODIFIED="1596549555349" TEXT="metadata">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_613836868" MODIFIED="1596549557934" TEXT="name">
+<node CREATED="1596549569643" ID="Freemind_Link_171837725" MODIFIED="1596549572116" TEXT="Pode ser:">
+<node COLOR="#ff00ff" CREATED="1596549573145" ID="Freemind_Link_1119998677" MODIFIED="1596549592394" TEXT="mem-limit-range">
+<node CREATED="1596549602486" ID="Freemind_Link_129593305" MODIFIED="1596549630714" TEXT="Usado para declarar os limites padr&#xe3;o de uso de mem&#xf3;ria"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1596549573145" ID="Freemind_Link_1027539653" MODIFIED="1596549601650" TEXT="cpu-limit-range">
+<node CREATED="1596549602486" ID="Freemind_Link_1496315674" MODIFIED="1596549636944" TEXT="Usado para declarar os limites padr&#xe3;o de uso de cpu"/>
+</node>
+</node>
+<node CREATED="1596549644878" ID="Freemind_Link_280994350" MODIFIED="1596549645588" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_143004524" MODIFIED="1596549658072" TEXT="name: mem-limit-range"/>
+</node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_607940255" MODIFIED="1596549508813" TEXT="spec">
+<node CREATED="1592844989287" ID="Freemind_Link_1171325727" MODIFIED="1596549544677" TEXT="Declara as especifica&#xe7;&#xf5;es do objeto"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_478059516" MODIFIED="1596549548590" TEXT="limits">
+<node CREATED="1592844989287" ID="Freemind_Link_208829220" MODIFIED="1596549671840" TEXT="Objeto do tipo array"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_942307719" MODIFIED="1596549686152" TEXT="- (item)">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1162188888" MODIFIED="1596549698679" TEXT="default">
+<node CREATED="1592844989287" ID="Freemind_Link_1216885830" MODIFIED="1596549709885" TEXT="Valores padr&#xe3;o de limit"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1312403794" MODIFIED="1596549725823" TEXT="memory">
+<node CREATED="1592844989287" ID="Freemind_Link_555846364" MODIFIED="1596549735710" TEXT="Valores padr&#xe3;o de limite de mem&#xf3;ria fornecido aos Pods"/>
+<node CREATED="1596549748520" ID="Freemind_Link_1352809261" MODIFIED="1596549749660" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_490447645" MODIFIED="1596549767158" TEXT="memory: 256Mi"/>
+</node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_423102168" MODIFIED="1596549780679" TEXT="defaultRequest">
+<node CREATED="1592844989287" ID="Freemind_Link_1908700141" MODIFIED="1596549794922" TEXT="Valores padr&#xe3;o de requisi&#xe7;&#xe3;o de recurso"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1759692223" MODIFIED="1596549725823" TEXT="memory">
+<node CREATED="1592844989287" ID="Freemind_Link_426223668" MODIFIED="1596549735710" TEXT="Valores padr&#xe3;o de limite de mem&#xf3;ria fornecido aos Pods"/>
+<node CREATED="1596549748520" ID="Freemind_Link_1251330218" MODIFIED="1596549749660" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1794449937" MODIFIED="1596549767158" TEXT="memory: 256Mi"/>
+</node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_187078711" MODIFIED="1596549808741" TEXT="type">
+<node CREATED="1592844989287" ID="Freemind_Link_1178815733" MODIFIED="1596549826938" TEXT="Tipo do objeto que ter&#xe1; o limite"/>
+<node CREATED="1596549748520" ID="Freemind_Link_216992734" MODIFIED="1596549749660" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1521611807" MODIFIED="1596549831059" TEXT="type: Container"/>
+</node>
+</node>
+</node>
+</node>
 </node>
 <node CREATED="1595951551270" ID="Freemind_Link_129672794" MODIFIED="1595951552490" TEXT="Ex:">
-<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_617557325" MODIFIED="1595951561106" TEXT="???"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_617557325" MODIFIED="1596549846827" TEXT="apiVersion: v1&#xa;kind: LimitRange&#xa;metadata:&#xa;  name: mem-limit-range&#xa;spec:&#xa;  limits:&#xa;  - default:&#xa;      memory: 512Mi&#xa;    defaultRequest:&#xa;      memory: 256Mi&#xa;    type: Container"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_525730850" MODIFIED="1596549863810" TEXT="apiVersion: v1&#xa;kind: LimitRange&#xa;metadata:&#xa;  name: cpu-limit-range&#xa;spec:&#xa;  limits:&#xa;  - default:&#xa;      cpu: 1&#xa;    defaultRequest:&#xa;      cpu: 0.5&#xa;    type: Container"/>
+</node>
+</node>
+</node>
+<node CREATED="1595951529873" ID="Freemind_Link_936807225" MODIFIED="1595951582089" TEXT="???">
+<node CREATED="1595868955278" ID="Freemind_Link_1044606509" MODIFIED="1595868961065" TEXT="Linha de comando">
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_672655132" MODIFIED="1595951572386" TEXT="???">
+<node CREATED="1595869017286" ID="Freemind_Link_295518312" MODIFIED="1595951574305" TEXT="???"/>
+</node>
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_1002647027" MODIFIED="1595951572386" TEXT="???">
+<node CREATED="1595869017286" ID="Freemind_Link_1660077162" MODIFIED="1595951574305" TEXT="???"/>
+</node>
+</node>
+<node CREATED="1595951537400" ID="Freemind_Link_706439882" MODIFIED="1595951540236" TEXT="YAML">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1159509485" MODIFIED="1595951561106" TEXT="???">
+<node CREATED="1592844989287" ID="Freemind_Link_1339998930" MODIFIED="1595951562899" TEXT="???"/>
+</node>
+<node CREATED="1595951551270" ID="Freemind_Link_1483892810" MODIFIED="1595951552490" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1587165421" MODIFIED="1595951561106" TEXT="???"/>
 </node>
 </node>
 </node>
