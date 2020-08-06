@@ -32,7 +32,7 @@
 </node>
 </node>
 <node CREATED="1591997555354" ID="Freemind_Link_1121402737" MODIFIED="1591997566014" POSITION="right" TEXT="Ferramentas">
-<node COLOR="#0000ff" CREATED="1591997283387" FOLDED="true" ID="Freemind_Link_461602891" MODIFIED="1591997541541" TEXT="kubectl">
+<node COLOR="#0000ff" CREATED="1591997283387" ID="Freemind_Link_461602891" MODIFIED="1591997541541" TEXT="kubectl">
 <node CREATED="1592317124854" ID="Freemind_Link_1986325000" MODIFIED="1592317142693" TEXT="&#xc9; uma interface de linha de comandos para gerenciar k8s"/>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1145737261" MODIFIED="1591997526134" TEXT="version">
 <node CREATED="1591997501435" ID="Freemind_Link_885210971" MODIFIED="1591997537374" TEXT="Exibe a vers&#xe3;o do kubectl instalada"/>
@@ -339,11 +339,55 @@
 </node>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1836199688" MODIFIED="1596642368378" TEXT="logs &lt;nome-do-Pod&gt; ">
 <node CREATED="1593529415655" ID="Freemind_Link_1502729328" MODIFIED="1596642359571" TEXT="Lista os logs de um Pod"/>
+<node CREATED="1596726311150" ID="Freemind_Link_1779863044" MODIFIED="1596726331949" TEXT="Ser&#xe1; necess&#xe1;rio especificar o nome do container ap&#xf3;s o nome do Pod caso o Pod tenha mais de um container">
+<icon BUILTIN="messagebox_warning"/>
+</node>
 <node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_741632018" MODIFIED="1596642352424" TEXT="--namespace=&lt;seu-namespace&gt;">
 <icon BUILTIN="flag"/>
 <node CREATED="1592314815568" ID="Freemind_Link_939699270" MODIFIED="1596642385196" TEXT="Indica em qual namespace o Pod se encontra"/>
 <node CREATED="1593529486490" ID="Freemind_Link_1980119971" MODIFIED="1593529487579" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1888586016" MODIFIED="1596642405352" TEXT="kubectl logs my-Pod --namespace=kube-system"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1839083394" MODIFIED="1596724231561" TEXT="top">
+<node CREATED="1591997501435" ID="Freemind_Link_228925855" MODIFIED="1593620733779" TEXT="Edita o arquivo YAML de um recurso em tempo real">
+<node CREATED="1593620735495" ID="Freemind_Link_541124238" MODIFIED="1593620748148" TEXT="Ap&#xf3;s salvar o arquivo, as altera&#xe7;&#xf5;es ser&#xe3;o aplicadas imediatamente"/>
+</node>
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1833863734" MODIFIED="1596724258748" TEXT="node">
+<node CREATED="1596724262242" ID="Freemind_Link_877138056" MODIFIED="1596724288665" TEXT="Exibe o consumo de mem&#xf3;ria e CPU dos n&#xf3;s do cluster"/>
+</node>
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1597843316" MODIFIED="1596724310565" TEXT="pod">
+<node CREATED="1596724262242" ID="Freemind_Link_456514356" MODIFIED="1596724318502" TEXT="Exibe o consumo de mem&#xf3;ria e CPU de um Pod"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_321868487" MODIFIED="1596728482410" TEXT="rollout">
+<node CREATED="1591997501435" ID="Freemind_Link_364733426" MODIFIED="1596728820518" TEXT="Acontece quando se atualiza a imagem de um Pod">
+<node CREATED="1596729136818" ID="Freemind_Link_1899875520" MODIFIED="1596729150983" TEXT="Via comando &apos;kubectl set image ...&apos;, por exemplo"/>
+<node CREATED="1593620735495" ID="Freemind_Link_630638092" MODIFIED="1596728578664" TEXT="Por padr&#xe3;o a atualiza&#xe7;&#xe3;o &#xe9; feita de forma gradativa, um Pod por vez"/>
+<node CREATED="1596728597283" ID="Freemind_Link_112994404" MODIFIED="1596728611344" TEXT="Ex: quando se executa o &apos;kubectl apply ...&apos; em um Pod j&#xe1; existente"/>
+</node>
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1136635346" MODIFIED="1596728658563" TEXT="undo &lt;recurso&gt;">
+<node CREATED="1596724262242" ID="Freemind_Link_785845624" MODIFIED="1596728625527" TEXT="Desfaz o update"/>
+<node CREATED="1596728628038" ID="Freemind_Link_1495748472" MODIFIED="1596728644282" TEXT="Remove os Pods novos (atualizados) e restaura os antigos (os substitu&#xed;dos)"/>
+<node CREATED="1596728660326" ID="Freemind_Link_96455178" MODIFIED="1596728661031" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_933960242" MODIFIED="1596728683233" TEXT="kubectl rollout undo deployment/myapp-deployment"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1983460405" MODIFIED="1596728830408" TEXT="set">
+<node CREATED="1591997501435" ID="Freemind_Link_1908958133" MODIFIED="1596728841195" TEXT="Redefine atributos de objetos do cluster"/>
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_872944522" MODIFIED="1596729051379" TEXT="image &lt;nome-do-objeto&gt; &lt;nome-container&gt;=&lt;nome-da-imagem&gt;">
+<node CREATED="1596729082897" ID="Freemind_Link_88750360" MODIFIED="1596729087131" TEXT="O objeto pode ser">
+<node CREATED="1596729087801" ID="Freemind_Link_595688179" MODIFIED="1596729093636" TEXT="Pod"/>
+<node CREATED="1596729094392" ID="Freemind_Link_944458238" MODIFIED="1596729106811" TEXT="ReplicationController"/>
+<node CREATED="1596729107984" ID="Freemind_Link_664539867" MODIFIED="1596729111018" TEXT="Deployment"/>
+<node CREATED="1596729111390" ID="Freemind_Link_813232019" MODIFIED="1596729115852" TEXT="DaemonSet"/>
+<node CREATED="1596729116258" ID="Freemind_Link_1387848925" MODIFIED="1596729121847" TEXT="ReplicaSet"/>
+</node>
+<node CREATED="1596724262242" ID="Freemind_Link_679125407" MODIFIED="1596728861102" TEXT="Permite alterar a imagem de um objeto do cluster"/>
+<node CREATED="1596728660326" ID="Freemind_Link_208217006" MODIFIED="1596728661031" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1053858227" MODIFIED="1596728951805" TEXT="kubectl set image deployment/my-app-deployment nginx=nginx:1.9.1"/>
 </node>
 </node>
 </node>
@@ -669,6 +713,48 @@
 <node CREATED="1596637383815" ID="Freemind_Link_311824272" MODIFIED="1596637410202" TEXT="Instalar o ETCD nos n&#xf3;s"/>
 <node CREATED="1596637383815" ID="Freemind_Link_899337594" MODIFIED="1596637422198" TEXT="Instalar a apiServer nos n&#xf3;s"/>
 <node CREATED="1596637383815" ID="Freemind_Link_709979421" MODIFIED="1596637443604" TEXT="Instalar o controller-manager nos n&#xf3;s"/>
+</node>
+</node>
+</node>
+<node CREATED="1596732335275" ID="Freemind_Link_1795218081" MODIFIED="1596732339669" POSITION="right" TEXT="UpdateStrategy">
+<node CREATED="1596729082897" ID="Freemind_Link_559184636" MODIFIED="1596732352558" TEXT="Aplic&#xe1;vel a">
+<node CREATED="1596729087801" ID="Freemind_Link_802860164" MODIFIED="1596729093636" TEXT="Pod"/>
+<node CREATED="1596729094392" ID="Freemind_Link_561351016" MODIFIED="1596729106811" TEXT="ReplicationController"/>
+<node CREATED="1596729107984" ID="Freemind_Link_1595518298" MODIFIED="1596729111018" TEXT="Deployment"/>
+<node CREATED="1596729111390" ID="Freemind_Link_1372515725" MODIFIED="1596729115852" TEXT="DaemonSet"/>
+<node CREATED="1596729116258" ID="Freemind_Link_193140702" MODIFIED="1596729121847" TEXT="ReplicaSet"/>
+</node>
+<node CREATED="1596732354706" ID="Freemind_Link_186874258" MODIFIED="1596732356349" TEXT="YAML">
+<node CREATED="1596732357962" ID="Freemind_Link_1360460628" MODIFIED="1596732371382" TEXT="Colocar na se&#xe7;&#xe3;o &apos;spec&apos; do objeto a ser atualizado"/>
+<node COLOR="#ff00ff" CREATED="1596732376994" ID="Freemind_Link_1330934070" MODIFIED="1596732386823" TEXT="spec">
+<node COLOR="#ff00ff" CREATED="1596732376994" ID="Freemind_Link_764074835" MODIFIED="1596732398700" TEXT="strategy">
+<node CREATED="1596732449775" ID="Freemind_Link_1904349648" MODIFIED="1596732455739" TEXT="Para RollingUpdate:"/>
+<node COLOR="#ff00ff" CREATED="1596732376994" ID="Freemind_Link_1838157435" MODIFIED="1596732406837" TEXT="type">
+<node CREATED="1596732408105" ID="Freemind_Link_74725996" MODIFIED="1596732411901" TEXT="Pode ser:">
+<node COLOR="#ff00ff" CREATED="1596732412585" ID="Freemind_Link_42248864" MODIFIED="1596732431931" TEXT="RollingUpdate">
+<node CREATED="1596732672702" ID="Freemind_Link_221536322" MODIFIED="1596732684009" TEXT="A atualiza&#xe7;&#xe3;o ser&#xe1; gradativa, um Pod por vez"/>
+<node CREATED="1596732698998" ID="Freemind_Link_569654547" MODIFIED="1596732702114" TEXT="Downtime zero"/>
+<node CREATED="1596732724758" ID="Freemind_Link_485389400" MODIFIED="1596732741111" TEXT="Requer configura&#xe7;&#xe3;o">
+<arrowlink COLOR="#f7d40e" DESTINATION="Freemind_Link_1898026389" ENDARROW="Default" ENDINCLINATION="303;0;" ID="Freemind_Arrow_Link_839742350" STARTARROW="None" STARTINCLINATION="303;0;"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1596732422404" ID="Freemind_Link_1216559591" MODIFIED="1596732431934" TEXT="Recreate">
+<node CREATED="1596732688624" ID="Freemind_Link_1926366646" MODIFIED="1596732696554" TEXT="A atualiza&#xe7;&#xe3;o ser&#xe1; de uma vez s&#xf3;"/>
+<node CREATED="1596732703358" ID="Freemind_Link_1683814517" MODIFIED="1596732714857" TEXT="Haver&#xe1; um per&#xed;odo de indisponibilidade da aplica&#xe7;&#xe3;o"/>
+</node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1596732376994" ID="Freemind_Link_1898026389" MODIFIED="1596732733389" TEXT="rollingUpdate">
+<node COLOR="#ff00ff" CREATED="1596732376994" ID="Freemind_Link_1061646067" MODIFIED="1596732480100" TEXT="maxSurge">
+<node CREATED="1596732496714" ID="Freemind_Link_918263154" MODIFIED="1596732507115" TEXT="Quantidade m&#xe1;xima de objetos atualizados por vez"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1596732376994" ID="Freemind_Link_463303542" MODIFIED="1596732491124" TEXT="maxUnavailable"/>
+</node>
+</node>
+</node>
+<node CREATED="1596732537145" ID="Freemind_Link_1730282562" MODIFIED="1596732537994" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1596732376994" ID="Freemind_Link_20797149" MODIFIED="1596732668714" TEXT="spec:&#xa;  strategy:&#xa;    rollingUpdate:&#xa;    type: Recreate"/>
+<node COLOR="#ff00ff" CREATED="1596732376994" ID="Freemind_Link_690634316" MODIFIED="1596732656508" TEXT="spec:&#xa;  strategy:&#xa;    rollingUpdate:&#xa;      maxSurge: 25%&#xa;      maxUnavailable: 25%&#xa;    type: RollingUpdate"/>
 </node>
 </node>
 </node>
