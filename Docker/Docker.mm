@@ -52,6 +52,32 @@
 <node CREATED="1563998741165" ID="Freemind_Link_1874998913" MODIFIED="1587400429560" TEXT="Baixar e carregar &#xa;uma imagem">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1511048246" MODIFIED="1586036628804" TEXT="docker container run nomeimagem">
 <icon BUILTIN="wizard"/>
+<node CREATED="1596814837333" ID="Freemind_Link_611411608" MODIFIED="1596814887607" TEXT="Por padr&#xe3;o o docker n&#xe3;o anexa um terminal ao container">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1596814852157" ID="Freemind_Link_1577739021" MODIFIED="1596814882659" TEXT="Isso acarreta no encerramento imediato do container que &#xe9; iniciado com o ENTRYPOINT/CMD &quot;bash&quot; e n&#xe3;o tem um terminal atachado"/>
+<node CREATED="1596814898467" ID="Freemind_Link_1050967719" MODIFIED="1596814906793" TEXT="Isso se resolve com o par&#xe2;metro -t"/>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_140282976" MODIFIED="1596814916272" TEXT="-t">
+<icon BUILTIN="flag"/>
+<node CREATED="1563998982186" ID="Freemind_Link_869815257" MODIFIED="1596814985331" TEXT="Atacha o terminal corrente ao container"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1517808223" MODIFIED="1596814933507" TEXT="Ex: docker run -t imagem ">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_210955673" MODIFIED="1596814958838" TEXT="-i">
+<icon BUILTIN="flag"/>
+<node CREATED="1563998982186" ID="Freemind_Link_1286423292" MODIFIED="1596814957105" TEXT="Carrega o container em modo iterativo">
+<node CREATED="1596814965518" ID="Freemind_Link_575053283" MODIFIED="1596814985333" TEXT="Provavelmente ser&#xe1; necess&#xe1;rio atachar um terminal ao container">
+<arrowlink DESTINATION="Freemind_Link_869815257" ENDARROW="Default" ENDINCLINATION="426;0;" ID="Freemind_Arrow_Link_1701109867" STARTARROW="None" STARTINCLINATION="426;0;"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1275316494" MODIFIED="1596815008866" TEXT="Ex: docker run -it imagem ">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_34398913" MODIFIED="1596815016233" TEXT="Ex: docker run -i imagem ">
+<icon BUILTIN="idea"/>
+</node>
+</node>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_540447338" MODIFIED="1563999575749" TEXT="-p portalocal:portacontainer">
 <icon BUILTIN="flag"/>
 <node CREATED="1563998982186" ID="Freemind_Link_804186726" MODIFIED="1563999588361" TEXT="Mapeia a porta do DockerHost na porta do container"/>
@@ -117,7 +143,7 @@
 <icon BUILTIN="flag"/>
 <node CREATED="1563998982186" ID="Freemind_Link_826194235" MODIFIED="1583858346344" TEXT="Monta os volumes de um outro container para o container atual"/>
 <node CREATED="1579194665444" ID="Freemind_Link_710290591" MODIFIED="1583858403055" TEXT="Ex: Vou subir o container A mas quero &#xa;montar os volumes do container B para A:&#xa;docker run [...] --volumes-from hash_do_container_B  A"/>
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1355668689" MODIFIED="1583858426881" TEXT="Ex: docker run --volumes-from 777f7dc92da7 --volumes-from ba8c0c54f0f2:ro -i -t ubuntu pwd">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1355668689" MODIFIED="1596814653578" TEXT="Ex: docker container run --volumes-from 777f7dc92da7 --volumes-from ba8c0c54f0f2:ro -i -t ubuntu pwd">
 <icon BUILTIN="idea"/>
 </node>
 </node>
@@ -132,7 +158,18 @@
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1605075019" MODIFIED="1591801697360" TEXT="--entrypoint [comando]">
 <icon BUILTIN="flag"/>
 <node CREATED="1563998982186" ID="Freemind_Link_843515984" MODIFIED="1591801709528" TEXT="Substitui o comando do ENTRYPOINT da imagem"/>
+<node CREATED="1596814758238" ID="Freemind_Link_1571129030" MODIFIED="1596814771721" TEXT="Geralmente o ENTRYPOINT &#xe9; definido como :">
+<node COLOR="#0000ff" CREATED="1596814799364" ID="Freemind_Link_569620455" MODIFIED="1596814824863" TEXT="[&quot;sh&quot;, &quot;-c&quot;]"/>
+</node>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1522038872" MODIFIED="1591801763474" TEXT="Ex:docker container run -it --entrypoint /bin/bash [docker_image]">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1596814578351" ID="Freemind_Link_1320043083" MODIFIED="1596814590368" TEXT="&lt;comando&gt;">
+<node CREATED="1596814593352" ID="Freemind_Link_754921555" MODIFIED="1596814605073" TEXT="Substitui o valor de &quot;CMD&quot; do &apos;Dockerfile&apos;">
+<node CREATED="1596814617289" ID="Freemind_Link_284043349" MODIFIED="1596814629500" TEXT="Substitui os argumentos do ENTRYPOINT do &apos;Dockerfile&apos;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1354047934" MODIFIED="1596814679228" TEXT="Ex: docker container run busybox ls -la">
 <icon BUILTIN="idea"/>
 </node>
 </node>
@@ -300,7 +337,7 @@
 <node CREATED="1587400461142" ID="Freemind_Link_81422714" MODIFIED="1587400507747" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/docker_client_action_verbs_edx.png&quot;&gt;"/>
 </node>
 </node>
-<node CREATED="1563994368647" ID="_" MODIFIED="1563994372275" POSITION="right" TEXT="Dockerfile">
+<node CREATED="1563994368647" FOLDED="true" ID="_" MODIFIED="1563994372275" POSITION="right" TEXT="Dockerfile">
 <node CREATED="1563998221736" ID="Freemind_Link_368230737" MODIFIED="1568727208485" TEXT="Build">
 <node CREATED="1563998249496" ID="Freemind_Link_1953836887" MODIFIED="1563998261491" TEXT="Criar uma imagem a partir de um Dockerfile">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1375815715" MODIFIED="1563998864816" TEXT="docker build -f Dockerfile">

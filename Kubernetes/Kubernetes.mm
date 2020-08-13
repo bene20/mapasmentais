@@ -55,6 +55,11 @@
 <node CREATED="1591997501435" ID="Freemind_Link_1618155496" MODIFIED="1592316177570" TEXT="Lista recursos ativos do cluster"/>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1862005678" MODIFIED="1592316026697" TEXT="pods">
 <node CREATED="1591997501435" ID="Freemind_Link_1691489598" MODIFIED="1592316187023" TEXT="Lista os pods ativos do cluster"/>
+<node CREATED="1597329185134" ID="Freemind_Link_952479325" MODIFIED="1597329225808" TEXT="Para saber os n&#xf3;s onde os Pods est&#xe3;o sendo executados, adicione o par&#xe2;metro:">
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_264945703" MODIFIED="1592318337303" TEXT="-o wide">
+<icon BUILTIN="flag"/>
+</node>
+</node>
 </node>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_232052009" MODIFIED="1595949736186" TEXT="pod &lt;nome-pod&gt;">
 <node CREATED="1591997501435" ID="Freemind_Link_1586969121" MODIFIED="1595949749759" TEXT="Lista informa&#xe7;&#xf5;es de um pod espec&#xed;fico"/>
@@ -391,6 +396,28 @@
 </node>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1597327082007" ID="Freemind_Link_147996754" MODIFIED="1597327195140" TEXT="drain &lt;nome-n&#xf3;&gt;">
+<node CREATED="1597327133437" ID="Freemind_Link_475432878" MODIFIED="1597327148425" TEXT="Remove todos os Pods de um n&#xf3; e o desabilita a receber novos Pods">
+<node CREATED="1597327153837" ID="Freemind_Link_995456821" MODIFIED="1597327234230" TEXT="Para reabilit&#xe1;-lo, use o comando &apos;uncordon&apos;"/>
+</node>
+<node CREATED="1596728660326" ID="Freemind_Link_1125341776" MODIFIED="1596728661031" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1054774973" MODIFIED="1597327204579" TEXT="kubectl drain node-1"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1597327082007" ID="Freemind_Link_583060454" MODIFIED="1597327314015" TEXT="cordon &lt;nome-n&#xf3;&gt;">
+<node CREATED="1597327133437" ID="Freemind_Link_1702200900" MODIFIED="1597327323371" TEXT="Desabilita o n&#xf3; a receber novos Pods">
+<node CREATED="1597327393269" ID="Freemind_Link_1824624941" MODIFIED="1597327403805" TEXT="Os Pods j&#xe1; existentes no n&#xf3; permanecer&#xe3;o nele"/>
+</node>
+<node CREATED="1596728660326" ID="Freemind_Link_1834609813" MODIFIED="1596728661031" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1325282770" MODIFIED="1597327277279" TEXT="kubectl uncordon node-1"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1597327082007" ID="Freemind_Link_421916108" MODIFIED="1597327246846" TEXT="uncordon &lt;nome-n&#xf3;&gt;">
+<node CREATED="1597327133437" ID="Freemind_Link_755757433" MODIFIED="1597327264471" TEXT="Resabilita o n&#xf3; a receber novos Pods"/>
+<node CREATED="1596728660326" ID="Freemind_Link_1029180422" MODIFIED="1596728661031" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_315436114" MODIFIED="1597327277279" TEXT="kubectl uncordon node-1"/>
+</node>
+</node>
 </node>
 <node COLOR="#0000ff" CREATED="1591997286697" FOLDED="true" ID="Freemind_Link_288764766" MODIFIED="1591997547957" TEXT="minikube">
 <node CREATED="1596205466443" ID="Freemind_Link_1462077979" MODIFIED="1596205477704" TEXT="&#xc9; uma VM que roda um n&#xf3; (o master) do k8s"/>
@@ -716,7 +743,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1596732335275" ID="Freemind_Link_1795218081" MODIFIED="1596732339669" POSITION="right" TEXT="UpdateStrategy">
+<node CREATED="1596732335275" FOLDED="true" ID="Freemind_Link_1795218081" MODIFIED="1596732339669" POSITION="right" TEXT="UpdateStrategy">
 <node CREATED="1596729082897" ID="Freemind_Link_559184636" MODIFIED="1596732352558" TEXT="Aplic&#xe1;vel a">
 <node CREATED="1596729087801" ID="Freemind_Link_802860164" MODIFIED="1596729093636" TEXT="Pod"/>
 <node CREATED="1596729094392" ID="Freemind_Link_561351016" MODIFIED="1596729106811" TEXT="ReplicationController"/>
@@ -879,6 +906,13 @@
 </node>
 </node>
 </node>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_296041203" MODIFIED="1593787935364" TEXT="args">
+<node CREATED="1593785460534" ID="Freemind_Link_1188482389" MODIFIED="1593787959553" TEXT="S&#xe3;o os argumentos de command. Substitui o CMD do Dockerfile da imagem do container"/>
+<node CREATED="1593785504539" ID="Freemind_Link_1088702776" MODIFIED="1593785505278" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_757040354" MODIFIED="1593788017691" TEXT="args: [&quot;-c&quot;, &quot;while true; do echo hello; sleep 10; done&quot;]"/>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_118242738" MODIFIED="1593788065834" TEXT="args:&#xa;  - /bin/sh&#xa;  - -c&#xa;  - touch /tmp/healthy; sleep 30;"/>
+</node>
+</node>
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1688041536" MODIFIED="1593787912845" TEXT="command">
 <node CREATED="1593785460534" ID="Freemind_Link_26811013" MODIFIED="1593787973114" TEXT="Substitui o ENTRYPOINT do Dockerfile da imagem do container"/>
 <node CREATED="1593788098767" ID="Freemind_Link_1078931083" MODIFIED="1593788102305" TEXT="https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/">
@@ -887,13 +921,6 @@
 <node CREATED="1593785504539" ID="Freemind_Link_327006776" MODIFIED="1593785505278" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1552907605" MODIFIED="1593787991756" TEXT="command: [&quot;/bin/bash&quot;]"/>
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_531405664" MODIFIED="1596644172428" TEXT="command:&#xa;  - my-command&#xa;  - --my-parameter1&#xa;  - --my-parameter2"/>
-</node>
-</node>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_296041203" MODIFIED="1593787935364" TEXT="args">
-<node CREATED="1593785460534" ID="Freemind_Link_1188482389" MODIFIED="1593787959553" TEXT="S&#xe3;o os argumentos de command. Substitui o CMD do Dockerfile da imagem do container"/>
-<node CREATED="1593785504539" ID="Freemind_Link_1088702776" MODIFIED="1593785505278" TEXT="Ex:">
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_757040354" MODIFIED="1593788017691" TEXT="args: [&quot;-c&quot;, &quot;while true; do echo hello; sleep 10; done&quot;]"/>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_118242738" MODIFIED="1593788065834" TEXT="args:&#xa;  - /bin/sh&#xa;  - -c&#xa;  - touch /tmp/healthy; sleep 30;"/>
 </node>
 </node>
 <node COLOR="#ff00ff" CREATED="1593615267316" FOLDED="true" ID="Freemind_Link_1681454867" MODIFIED="1593615469345" TEXT="lifecycle">
@@ -1118,6 +1145,91 @@
 <node CREATED="1593785242110" ID="Freemind_Link_918604412" MODIFIED="1593788333808" TEXT="Serve para determinar se um container est&#xe1; pronto para receber requisi&#xe7;&#xf5;es"/>
 <node CREATED="1593788183249" ID="Freemind_Link_1951492614" MODIFIED="1593788198089" TEXT="Quanto aos par&#xe2;metros, ver &apos;livenessProbe (acima)&apos;"/>
 </node>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1565150061" MODIFIED="1596819407145" TEXT="env">
+<node CREATED="1593785242110" ID="Freemind_Link_388794987" MODIFIED="1596819418894" TEXT="Usado para declarar vari&#xe1;veis de ambiente do Pod"/>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1540150337" MODIFIED="1596819437169" TEXT="- (item)">
+<node CREATED="1593785242110" ID="Freemind_Link_1371328312" MODIFIED="1596819472038" TEXT="Cada vari&#xe1;vel faz parte de um item do array"/>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1659733137" MODIFIED="1596819447241" TEXT="name">
+<node CREATED="1593785242110" ID="Freemind_Link_800777823" MODIFIED="1596819455112" TEXT="Nome da vari&#xe1;vel de ambiente"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1822952019" MODIFIED="1596819477337" TEXT="value">
+<node CREATED="1593785242110" ID="Freemind_Link_1530110121" MODIFIED="1596819485086" TEXT="Valor declarado para a vari&#xe1;vel de ambiente"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_492633976" MODIFIED="1596819574326" TEXT="valueFrom">
+<node CREATED="1593785242110" ID="Freemind_Link_985658766" MODIFIED="1596819599991" TEXT="Usado no lugar de &apos;value&apos; para obter vari&#xe1;veis de &apos;ConfigMaps&apos; ou de &apos;Secrets&apos;"/>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_873616000" MODIFIED="1596819611982" TEXT="configMapKeyRef">
+<node CREATED="1593785242110" ID="Freemind_Link_715878320" MODIFIED="1596819933970" TEXT="Usado para pegar um valor espec&#xed;fico de um ConfigMap">
+<node CREATED="1596819761338" ID="Freemind_Link_1315770735" LINK="#Freemind_Link_918501028" MODIFIED="1596819779032" TEXT="Ver anota&#xe7;&#xf5;es abaixo"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_279496766" MODIFIED="1596821174070" TEXT="name">
+<node CREATED="1593785242110" ID="Freemind_Link_382690207" MODIFIED="1596821191384" TEXT="Nome do ConfigMap que tem a vari&#xe1;vel de ambiente declarada"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_425294733" MODIFIED="1596821201156" TEXT="key">
+<node CREATED="1593785242110" ID="Freemind_Link_1265583024" MODIFIED="1596821210416" TEXT="Nome da vari&#xe1;vel a ser injetada"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1625843757" MODIFIED="1596819687734" TEXT="secretKeyRef">
+<node CREATED="1593785242110" ID="Freemind_Link_1193468412" MODIFIED="1596819946674" TEXT="Usado para pegar um valor espec&#xed;fico de um Secret">
+<node CREATED="1596819761338" ID="Freemind_Link_1468075239" LINK="#Freemind_Link_890756444" MODIFIED="1596819784666" TEXT="Ver anota&#xe7;&#xf5;es abaixo"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1213844548" MODIFIED="1596821174070" TEXT="name">
+<node CREATED="1593785242110" ID="Freemind_Link_795503316" MODIFIED="1596821230309" TEXT="Nome do Secret que tem a vari&#xe1;vel de ambiente declarada"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1185218955" MODIFIED="1596821201156" TEXT="key">
+<node CREATED="1593785242110" ID="Freemind_Link_147847278" MODIFIED="1596821210416" TEXT="Nome da vari&#xe1;vel a ser injetada"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1137430281" MODIFIED="1597328429820" TEXT="fieldRef">
+<node CREATED="1593785242110" ID="Freemind_Link_458875831" MODIFIED="1597328458885" TEXT="Usado para expor informa&#xe7;&#xf5;es do Pod para o container"/>
+<node CREATED="1597328901819" ID="Freemind_Link_105724415" MODIFIED="1597328906388" TEXT="https://kubernetes.io/docs/tasks/inject-data-application/environment-variable-expose-pod-information/">
+<icon BUILTIN="attach"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1193406668" MODIFIED="1597328480726" TEXT="fieldPath">
+<node CREATED="1593785242110" ID="Freemind_Link_1489820645" MODIFIED="1597328525073" TEXT="Caminho do campo que se quer expor em vari&#xe1;vel de ambiente"/>
+</node>
+<node CREATED="1593785504539" ID="Freemind_Link_842882743" MODIFIED="1593785505278" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1735288808" MODIFIED="1597328632417" TEXT="env:&#xa;  - name: MY_NODE_NAME&#xa;    valueFrom:&#xa;      fieldRef:&#xa;        fieldPath: spec.nodeName&#xa;  - name: MY_POD_NAME&#xa;    valueFrom:&#xa;      fieldRef:&#xa;        fieldPath: metadata.name&#xa;  - name: MY_POD_NAMESPACE&#xa;    valueFrom:&#xa;      fieldRef:&#xa;        fieldPath: metadata.namespace&#xa;  - name: MY_POD_IP&#xa;    valueFrom:&#xa;      fieldRef:&#xa;        fieldPath: status.podIP&#xa;  - name: MY_POD_SERVICE_ACCOUNT&#xa;    valueFrom:&#xa;      fieldRef:&#xa;        fieldPath: spec.serviceAccountName"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1593785504539" ID="Freemind_Link_1780384959" MODIFIED="1593785505278" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1366261519" MODIFIED="1596819539952" TEXT="env:&#xa;  - name: APP_COLOR&#xa;    value: pink"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_1879616432" MODIFIED="1596820023795" TEXT="envFrom">
+<node CREATED="1593785242110" ID="Freemind_Link_893351373" MODIFIED="1596820078747" TEXT="Usado para declarar vari&#xe1;veis de ambiente do Pod a partir de ConfigMap&apos;s ou Secret&apos;s"/>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_419337972" MODIFIED="1596819437169" TEXT="- (item)">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1835789969" MODIFIED="1596820105722" TEXT="configMapRef">
+<node CREATED="1593785242110" ID="Freemind_Link_811456173" MODIFIED="1596820113231" TEXT="Especifica o uso de um ConfigMap"/>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_412136363" MODIFIED="1596820219128" TEXT="name">
+<node CREATED="1593785242110" ID="Freemind_Link_1847679334" MODIFIED="1596820238209" TEXT="Name do ConfigMap a ser injetado no Pod"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1924397323" MODIFIED="1596820124103" TEXT="secretRef">
+<node CREATED="1593785242110" ID="Freemind_Link_1240309915" MODIFIED="1596820214918" TEXT="Especifica o uso de um Secret"/>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1828997565" MODIFIED="1596820219128" TEXT="name">
+<node CREATED="1593785242110" ID="Freemind_Link_1256226751" MODIFIED="1596820229681" TEXT="Name do Secret a ser injetado no Pod"/>
+</node>
+</node>
+</node>
+<node CREATED="1593785504539" ID="Freemind_Link_1714148825" MODIFIED="1593785505278" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_1499732801" MODIFIED="1595888624432" TEXT="...&#xa;spec:&#xa;  containers: &#xa;    - name ...&#xa;      envFrom:&#xa;        - configMapRef:&#xa;            name: app-settings"/>
+<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_108858090" MODIFIED="1596820303088" TEXT="...&#xa;spec:&#xa;  containers: &#xa;    - name ...&#xa;      envFrom:&#xa;        - secretRef:&#xa;            name: app-secret-settings"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1597272709128" FOLDED="true" ID="Freemind_Link_545629209" MODIFIED="1597272721689" TEXT="initContainers">
+<node CREATED="1597272724031" ID="Freemind_Link_37702925" MODIFIED="1597272781097" TEXT="Usado em casos em que se quer executar um container que faz uma tarefa espec&#xed;fica e que n&#xe3;o precisa ficar rodando para sempre"/>
+<node CREATED="1597272782093" ID="Freemind_Link_406340228" MODIFIED="1597272807588" TEXT="Usado para criar containers tempor&#xe1;rios que fazem atividades pontuais de apoio ao container principal"/>
+<node CREATED="1597272815007" ID="Freemind_Link_1496403376" MODIFIED="1597272857388" TEXT="Toda a configura&#xe7;&#xe3;o &#xe9; semelhante &#xe0; configura&#xe7;&#xe3;o da se&#xe7;&#xe3;o &apos;containers&apos; (acima)"/>
+<node CREATED="1597272901619" ID="Freemind_Link_237813547" MODIFIED="1597272913280" TEXT="Todo container declarado aqui ser&#xe1; ">
+<node CREATED="1597272914060" ID="Freemind_Link_729774321" MODIFIED="1597272923961" TEXT="Executado antes dos containers da se&#xe7;&#xe3;o &apos;containers&apos;"/>
+<node CREATED="1597272926599" ID="Freemind_Link_1838818054" MODIFIED="1597272935799" TEXT="Executado um a um, na ordem em que forem declarados"/>
+</node>
+<node CREATED="1597272972582" ID="Freemind_Link_1977802478" MODIFIED="1597272974567" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_1328955710" MODIFIED="1597273009360" TEXT="...&#xa;spec:&#xa;  containers:&#xa;  - name: myapp-container&#xa;    image: busybox:1.28&#xa;    command: [&apos;sh&apos;, &apos;-c&apos;, &apos;echo The app is running! &amp;&amp; sleep 3600&apos;]&#xa;  initContainers:&#xa;  - name: init-myservice&#xa;    image: busybox:1.28&#xa;    command: [&apos;sh&apos;, &apos;-c&apos;, &apos;until nslookup myservice; do echo waiting for myservice; sleep 2; done;&apos;]&#xa;  - name: init-mydb&#xa;    image: busybox:1.28&#xa;    command: [&apos;sh&apos;, &apos;-c&apos;, &apos;until nslookup mydb; do echo waiting for mydb; sleep 2; done;&apos;]"/>
 </node>
 </node>
 <node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_336050288" MODIFIED="1595884388104" TEXT="hostAliases">
@@ -1567,7 +1679,8 @@
 </node>
 <node CREATED="1595532947226" ID="Freemind_Link_40302536" MODIFIED="1595532948551" TEXT="TEXT">
 <node CREATED="1595532949388" ID="Freemind_Link_971204808" MODIFIED="1595532975679" TEXT="Os dados tamb&#xe9;m podem ser definidos em arquivo texto do tipo key-value"/>
-<node CREATED="1595533023628" ID="Freemind_Link_1717722550" MODIFIED="1595533563400" TEXT="Comandos para criar o objeto:">
+<node CREATED="1595533023628" ID="Freemind_Link_1717722550" MODIFIED="1596820559846" TEXT="Comandos para criar o objeto:">
+<font NAME="SansSerif" SIZE="13"/>
 <node COLOR="#0000ff" CREATED="1595533032457" ID="Freemind_Link_785772147" MODIFIED="1595533607194" TEXT="from-env-file">
 <icon BUILTIN="forward"/>
 <node CREATED="1595533619124" ID="Freemind_Link_1898005563" MODIFIED="1595533636227" TEXT="N&#xe3;o adiciona o nome do arquivo como chave"/>
@@ -1635,7 +1748,7 @@
 <node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_1900172020" MODIFIED="1595888624432" TEXT="...&#xa;spec:&#xa;  containers: &#xa;    - name ...&#xa;      envFrom:&#xa;        - configMapRef:&#xa;            name: app-settings"/>
 </node>
 </node>
-<node CREATED="1595534561838" ID="Freemind_Link_1885270048" MODIFIED="1595534570192" TEXT="Carrego todos os valores em arquivos">
+<node CREATED="1595534561838" ID="Freemind_Link_1885270048" MODIFIED="1596820777353" TEXT="Carregando todos os valores em arquivos">
 <node CREATED="1595534570965" ID="Freemind_Link_1564031545" MODIFIED="1595534589303" TEXT="Para cada dado do configMap ser&#xe1; criado um arquivo">
 <node CREATED="1595534590037" ID="Freemind_Link_238264819" MODIFIED="1595534595953" TEXT="O nome do arquivo ser&#xe1; o key"/>
 <node CREATED="1595534590037" ID="Freemind_Link_522884725" MODIFIED="1595534612991" TEXT="O conte&#xfa;do do arquivo ser&#xe1; o value"/>
