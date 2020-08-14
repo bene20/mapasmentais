@@ -30,9 +30,103 @@
 <icon BUILTIN="full-4"/>
 </node>
 </node>
+<node CREATED="1597409965716" FOLDED="true" ID="Freemind_Link_1903822424" MODIFIED="1597409969522" TEXT="Atualiza&#xe7;&#xe3;o do cluser">
+<node CREATED="1597410188637" ID="Freemind_Link_1625455322" MODIFIED="1597410193801" TEXT="Usar a ferramenta &apos;kubeadm&apos;">
+<node CREATED="1597410196980" ID="Freemind_Link_1769973743" LINK="#Freemind_Link_1270117106" MODIFIED="1597410208212" TEXT="Ver anota&#xe7;&#xf5;es abaixo"/>
+</node>
+<node CREATED="1597411453696" FOLDED="true" ID="Freemind_Link_1273837279" MODIFIED="1597411639505" TEXT="Compatibilidade entre vers&#xf5;es dos componentes:">
+<node CREATED="1597411625669" ID="Freemind_Link_48127004" MODIFIED="1597411631178" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/versoescomponentes.jpg&quot;&gt;"/>
+</node>
+<node CREATED="1597409970078" ID="Freemind_Link_1225686618" MODIFIED="1597409972098" TEXT="Etapas:">
+<node CREATED="1597411030410" ID="Freemind_Link_718093492" MODIFIED="1597411032447" TEXT="Master">
+<node CREATED="1597411051829" ID="Freemind_Link_554492918" MODIFIED="1597411120850" TEXT="Colocar o n&#xf3; em estado &quot;Unschedulable&quot;">
+<icon BUILTIN="full-1"/>
+<node CREATED="1597410071093" ID="Freemind_Link_1553192356" MODIFIED="1597410072200" TEXT="Ex:">
+<node CREATED="1597410075055" ID="Freemind_Link_1466082274" MODIFIED="1597411112173" TEXT="Remove os potenciais Pods do n&#xf3; e os recria em outros n&#xf3;s"/>
+<node COLOR="#0000ff" CREATED="1597410048836" ID="Freemind_Link_194241534" MODIFIED="1597411080759" TEXT="kubectl drain master"/>
+</node>
+</node>
+<node CREATED="1597409973252" ID="Freemind_Link_1403667052" MODIFIED="1597411125218" TEXT="Atualizar o kubeadm">
+<icon BUILTIN="full-2"/>
+<node CREATED="1597410071093" ID="Freemind_Link_386102771" MODIFIED="1597410072200" TEXT="Ex:">
+<node CREATED="1597410075055" ID="Freemind_Link_1415018239" MODIFIED="1597410085680" TEXT="Atualizando o kubeadm para vers&#xe3;o 1.18.0-00"/>
+<node COLOR="#0000ff" CREATED="1597410048836" ID="Freemind_Link_1428918563" MODIFIED="1597410469104" TEXT="apt install kubeadm=1.18.0-00"/>
+</node>
+</node>
+<node CREATED="1597409984774" ID="Freemind_Link_35417274" MODIFIED="1597411129185" TEXT="Atualizar os componentes do n&#xf3; master">
+<icon BUILTIN="full-3"/>
+<node CREATED="1597410071093" ID="Freemind_Link_767035602" MODIFIED="1597410072200" TEXT="Ex:">
+<node CREATED="1597410075055" ID="Freemind_Link_551628246" MODIFIED="1597410257568" TEXT="Atualizando os componentes do master para vers&#xe3;o 1.18.0"/>
+<node COLOR="#0000ff" CREATED="1597410048836" ID="Freemind_Link_662954824" MODIFIED="1597410249647" TEXT="kubeadm upgrade apply v1.18.0"/>
+</node>
+</node>
+<node CREATED="1597410006125" ID="Freemind_Link_205259936" MODIFIED="1597411133505" TEXT="Atualizar o kubelet">
+<icon BUILTIN="full-4"/>
+<node CREATED="1597410071093" ID="Freemind_Link_1083330867" MODIFIED="1597410072200" TEXT="Ex:">
+<node CREATED="1597410075055" ID="Freemind_Link_1019127961" MODIFIED="1597410481120" TEXT="Atualizando o kubelet para vers&#xe3;o 1.18.0-00"/>
+<node COLOR="#0000ff" CREATED="1597410048836" ID="Freemind_Link_660771442" MODIFIED="1597410065784" TEXT="apt install kubelet=1.18.0-00"/>
+</node>
+</node>
+<node CREATED="1597411051829" ID="Freemind_Link_1451275255" MODIFIED="1597411157647" TEXT="Colocar o n&#xf3; em estado &quot;Schedulable&quot;">
+<icon BUILTIN="full-5"/>
+<node CREATED="1597410071093" ID="Freemind_Link_1435458991" MODIFIED="1597410072200" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1597410048836" ID="Freemind_Link_623775624" MODIFIED="1597411163799" TEXT="kubectl uncordon master"/>
+</node>
+</node>
+</node>
+<node CREATED="1597411030410" ID="Freemind_Link_685799458" MODIFIED="1597411718049" TEXT="Workers">
+<node CREATED="1597411051829" ID="Freemind_Link_883289823" MODIFIED="1597411120850" TEXT="Colocar o n&#xf3; em estado &quot;Unschedulable&quot;">
+<icon BUILTIN="full-1"/>
+<node CREATED="1597410071093" ID="Freemind_Link_422383572" MODIFIED="1597410072200" TEXT="Ex:">
+<node CREATED="1597410075055" ID="Freemind_Link_1225034614" MODIFIED="1597411112173" TEXT="Remove os potenciais Pods do n&#xf3; e os recria em outros n&#xf3;s"/>
+<node COLOR="#0000ff" CREATED="1597410048836" ID="Freemind_Link_725997643" MODIFIED="1597411727115" TEXT="kubectl drain worker01"/>
+</node>
+</node>
+<node CREATED="1597411803405" ID="Freemind_Link_1624508106" MODIFIED="1597411849265" TEXT="Conectar no worker">
+<icon BUILTIN="full-2"/>
+<node CREATED="1597410071093" ID="Freemind_Link_356300368" MODIFIED="1597410072200" TEXT="Ex:">
+<node CREATED="1597410075055" ID="Freemind_Link_1244675931" MODIFIED="1597411842882" TEXT="Via ssh"/>
+<node COLOR="#0000ff" CREATED="1597410048836" ID="Freemind_Link_681924636" MODIFIED="1597411838377" TEXT="ssh worker01"/>
+</node>
+</node>
+<node CREATED="1597409984774" ID="Freemind_Link_1671632662" MODIFIED="1597413491831" TEXT="Atualizar as configura&#xe7;&#xf5;es&#xa;do n&#xf3; worker">
+<icon BUILTIN="full-3"/>
+<node CREATED="1597413362147" ID="Freemind_Link_170979689" MODIFIED="1597413374430" TEXT="O comando &apos;node&apos; executa as seguintes fases:">
+<node CREATED="1597413376459" ID="Freemind_Link_656217346" MODIFIED="1597413406966" TEXT="Upgrade do control-plane do n&#xf3; (se houver um)"/>
+<node CREATED="1597413410810" ID="Freemind_Link_198375173" MODIFIED="1597413425630" TEXT="Upgrade da configura&#xe7;&#xe3;o do kubelet do n&#xf3;"/>
+</node>
+<node CREATED="1597410071093" ID="Freemind_Link_1270177945" MODIFIED="1597410072200" TEXT="Ex:">
+<node CREATED="1597410075055" ID="Freemind_Link_221849380" MODIFIED="1597412232776" TEXT="Atualizando os componentes do worker (exceto o kubelet)"/>
+<node COLOR="#0000ff" CREATED="1597410048836" ID="Freemind_Link_148960283" MODIFIED="1597412218574" TEXT="kubeadm upgrade node"/>
+</node>
+</node>
+<node CREATED="1597410006125" ID="Freemind_Link_803061810" MODIFIED="1597412293187" TEXT="Atualizar o kubelet">
+<icon BUILTIN="full-4"/>
+<node CREATED="1597410071093" ID="Freemind_Link_1022244132" MODIFIED="1597410072200" TEXT="Ex:">
+<node CREATED="1597410075055" ID="Freemind_Link_1189710866" MODIFIED="1597410481120" TEXT="Atualizando o kubelet para vers&#xe3;o 1.18.0-00"/>
+<node COLOR="#0000ff" CREATED="1597410048836" ID="Freemind_Link_1880870388" MODIFIED="1597410065784" TEXT="apt install kubelet=1.18.0-00"/>
+</node>
+</node>
+<node CREATED="1597411051829" ID="Freemind_Link_1974541072" MODIFIED="1597412295857" TEXT="Colocar o n&#xf3; em estado &quot;Schedulable&quot;">
+<icon BUILTIN="full-5"/>
+<node CREATED="1597410071093" ID="Freemind_Link_1219417971" MODIFIED="1597410072200" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1597410048836" ID="Freemind_Link_1788875944" MODIFIED="1597411756457" TEXT="kubectl uncordon worker01"/>
+</node>
+</node>
+</node>
+</node>
+</node>
 </node>
 <node CREATED="1591997555354" ID="Freemind_Link_1121402737" MODIFIED="1591997566014" POSITION="right" TEXT="Ferramentas">
-<node COLOR="#0000ff" CREATED="1591997283387" ID="Freemind_Link_461602891" MODIFIED="1591997541541" TEXT="kubectl">
+<node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_1270117106" MODIFIED="1597409834931" TEXT="kubeadm">
+<node CREATED="1597409873583" ID="Freemind_Link_1028947641" MODIFIED="1597409888010" TEXT="Ferramenta de administra&#xe7;&#xe3;o do cluster (instala&#xe7;&#xe3;o e configura&#xe7;&#xe3;o)"/>
+<node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_588434013" MODIFIED="1597409845241" TEXT="upgrade">
+<node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_579109195" MODIFIED="1597409848265" TEXT="plan">
+<node CREATED="1597409850231" ID="Freemind_Link_1983633002" MODIFIED="1597409868412" TEXT="Informa as vers&#xf5;es atuais e dispon&#xed;veis dos componentes do k8s"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1591997283387" FOLDED="true" ID="Freemind_Link_461602891" MODIFIED="1591997541541" TEXT="kubectl">
 <node CREATED="1592317124854" ID="Freemind_Link_1986325000" MODIFIED="1592317142693" TEXT="&#xc9; uma interface de linha de comandos para gerenciar k8s"/>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1145737261" MODIFIED="1591997526134" TEXT="version">
 <node CREATED="1591997501435" ID="Freemind_Link_885210971" MODIFIED="1591997537374" TEXT="Exibe a vers&#xe3;o do kubectl instalada"/>
@@ -402,6 +496,11 @@
 </node>
 <node CREATED="1596728660326" ID="Freemind_Link_1125341776" MODIFIED="1596728661031" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1054774973" MODIFIED="1597327204579" TEXT="kubectl drain node-1"/>
+</node>
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_410755489" MODIFIED="1597412803678" TEXT="--ignore-daemonsets">
+<icon BUILTIN="flag"/>
+<node CREATED="1591997501435" ID="Freemind_Link_1416299770" MODIFIED="1597412987939" TEXT="Instrui o drain a ignorar os DaemonSets. Por padr&#xe3;o isso n&#xe3;o &#xe9; feito"/>
+<node CREATED="1597412993760" ID="Freemind_Link_1197897474" LINK="#Freemind_Link_88158431" MODIFIED="1597413009207" TEXT="Ver anota&#xe7;&#xf5;es sobre os DaemonSets"/>
 </node>
 </node>
 <node COLOR="#0000ff" CREATED="1597327082007" ID="Freemind_Link_583060454" MODIFIED="1597327314015" TEXT="cordon &lt;nome-n&#xf3;&gt;">
