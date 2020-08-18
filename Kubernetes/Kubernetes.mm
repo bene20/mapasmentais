@@ -116,9 +116,77 @@
 </node>
 </node>
 </node>
+<node CREATED="1597756577370" ID="Freemind_Link_1326851633" MODIFIED="1597756582454" TEXT="Seguran&#xe7;a">
+<node CREATED="1597756583128" ID="Freemind_Link_141401221" MODIFIED="1597756599307" TEXT="O k8s n&#xe3;o cria usu&#xe1;rios de acesso ao cluster">
+<node CREATED="1597756601155" ID="Freemind_Link_1820649453" MODIFIED="1597756606501" TEXT="Mas cria contas de servi&#xe7;o">
+<node CREATED="1597756606946" ID="Freemind_Link_1302044043" MODIFIED="1597756624015" TEXT="Contas de servi&#xe7;o s&#xe3;o usadas por rob&#xf4;s (ou outros sistemas)"/>
+<node CREATED="1597756625953" ID="Freemind_Link_1507532724" MODIFIED="1597756632580" TEXT="serviceaccount"/>
+<node CREATED="1597756633592" ID="Freemind_Link_1942935740" MODIFIED="1597756634396" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1634214562" MODIFIED="1597756655284" TEXT="kubectl create serviceaccount sa1"/>
+</node>
+</node>
+</node>
+<node CREATED="1597757022260" ID="Freemind_Link_458808886" MODIFIED="1597757121665" TEXT="Autentica&#xe7;&#xe3;o (ou)">
+<node CREATED="1597757122424" ID="Freemind_Link_371342487" MODIFIED="1597758011157" TEXT="Static password file">
+<icon BUILTIN="forward"/>
+<node CREATED="1597757955411" ID="Freemind_Link_1591848982" MODIFIED="1597757966686" TEXT="N&#xe3;o &#xe9; uma abordagem segura!">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node CREATED="1597757184872" ID="Freemind_Link_1367580664" MODIFIED="1597757190292" TEXT="Fornecido em arquivo CSV">
+<node CREATED="1597757597957" ID="Freemind_Link_1512522661" MODIFIED="1597757667030" TEXT="Adicionalmente pode-se ter uma &#xa;quarta coluna indicando grupos">
+<node CREATED="1597757191265" ID="Freemind_Link_986858010" MODIFIED="1597757193037" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1597757203793" ID="Freemind_Link_419727046" MODIFIED="1597757656742" TEXT="password123,user1,u0001,group1&#xa;password123,user2,u0002,group1&#xa;password123,user3,u0003,group2"/>
+</node>
+</node>
+<node CREATED="1597757191265" ID="Freemind_Link_1128235749" MODIFIED="1597757193037" TEXT="Ex:">
+<node CREATED="1597757198817" ID="Freemind_Link_1156457690" MODIFIED="1597757203084" TEXT="user-details.csv"/>
+<node COLOR="#ff00ff" CREATED="1597757203793" ID="Freemind_Link_1193072190" MODIFIED="1597757327894" TEXT="password123,user1,u0001&#xa;password123,user2,u0002&#xa;password123,user3,u0003"/>
+</node>
+</node>
+<node CREATED="1597757344489" ID="Freemind_Link_1606953251" MODIFIED="1597757520908" TEXT="Informado ao kube-apiserver no &#xa;momento de seu carregamento">
+<node CREATED="1597757363177" ID="Freemind_Link_1798439284" MODIFIED="1597757514037" TEXT="Via par&#xe2;metro --basic-auth-file"/>
+<node CREATED="1597757468737" ID="Freemind_Link_1690903520" MODIFIED="1597757980814" TEXT="Se tiver configurado o cluster via kubeadm, a altera&#xe7;&#xe3;o ter&#xe1; que ser feita na defini&#xe7;&#xe3;o do Pod &apos;kube-apiserver&apos;">
+<icon BUILTIN="idea"/>
+</node>
+<node CREATED="1597756633592" ID="Freemind_Link_849714483" MODIFIED="1597756634396" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_305009072" MODIFIED="1597757427558" TEXT="kube-apiserver [...] --basic-auth-file=user-details.csv"/>
+</node>
+</node>
+<node CREATED="1597758179359" ID="Freemind_Link_292893367" MODIFIED="1597758191162" TEXT="Requer configura&#xe7;&#xe3;o de roles de acesso para os usu&#xe1;rios">
+<node CREATED="1597758191767" ID="Freemind_Link_1325667311" MODIFIED="1597758208626" TEXT="Objeto &apos;Role&apos; e &apos;RoleBinding&apos; do k8s"/>
+<node CREATED="1597757191265" FOLDED="true" ID="Freemind_Link_1325946927" MODIFIED="1597757193037" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1597757203793" ID="Freemind_Link_561417927" MODIFIED="1597758239138" TEXT="---&#xa;kind: Role&#xa;apiVersion: rbac.authorization.k8s.io/v1&#xa;metadata:&#xa;  namespace: default&#xa;  name: pod-reader&#xa;rules:&#xa;- apiGroups: [&quot;&quot;] # &quot;&quot; indicates the core API group&#xa;  resources: [&quot;pods&quot;]&#xa;  verbs: [&quot;get&quot;, &quot;watch&quot;, &quot;list&quot;]&#xa; &#xa;---&#xa;# This role binding allows &quot;jane&quot; to read pods in the &quot;default&quot; namespace.&#xa;kind: RoleBinding&#xa;apiVersion: rbac.authorization.k8s.io/v1&#xa;metadata:&#xa;  name: read-pods&#xa;  namespace: default&#xa;subjects:&#xa;- kind: User&#xa;  name: user1 # Name is case sensitive&#xa;  apiGroup: rbac.authorization.k8s.io&#xa;roleRef:&#xa;  kind: Role #this must be Role or ClusterRole&#xa;  name: pod-reader # this must match the name of the Role or ClusterRole you wish to bind to&#xa;  apiGroup: rbac.authorization.k8s.io"/>
+</node>
+</node>
+<node CREATED="1597757537663" ID="Freemind_Link_277839926" MODIFIED="1597757541170" TEXT="Para testar:">
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_605796468" MODIFIED="1597757578361" TEXT="curl -v -k https://master-node-ip:6443/api/v1/pods -u &quot;user1:password123&quot;"/>
+</node>
+</node>
+<node CREATED="1597757130696" ID="Freemind_Link_574247200" MODIFIED="1597758014533" TEXT="Static token file">
+<icon BUILTIN="forward"/>
+<node CREATED="1597757955411" ID="Freemind_Link_278891880" MODIFIED="1597757966686" TEXT="N&#xe3;o &#xe9; uma abordagem segura!">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node CREATED="1597757684290" ID="Freemind_Link_1330991383" MODIFIED="1597757698413" TEXT="Semelhante o &apos;Static password file&apos;">
+<node CREATED="1597757698738" ID="Freemind_Link_1941439789" MODIFIED="1597757711509" TEXT="Substituindo a coluna de pasword pela de token"/>
+<node CREATED="1597757719498" ID="Freemind_Link_1529260792" MODIFIED="1597757749541" TEXT="Substituindo o par&#xe2;metro &apos;--basic-auth-file&apos; por &apos;--token-auth-file&apos;"/>
+</node>
+<node CREATED="1597757537663" ID="Freemind_Link_1713338375" MODIFIED="1597757541170" TEXT="Para testar:">
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1770517074" MODIFIED="1597757815178" TEXT="curl -v -k https://master-node-ip:6443/api/v1/pods --header &quot;Authorization: Bearer &lt;token-aqui&gt;&quot;"/>
+</node>
+</node>
+<node CREATED="1597757140368" ID="Freemind_Link_901682722" MODIFIED="1597758018151" TEXT="Certificates">
+<icon BUILTIN="forward"/>
+</node>
+<node CREATED="1597757149000" ID="Freemind_Link_232678066" MODIFIED="1597758022077" TEXT="Identity Services">
+<icon BUILTIN="forward"/>
+<node CREATED="1597757158443" ID="Freemind_Link_1888085083" MODIFIED="1597757162729" TEXT="Ex: Kerberos, LDAP etc."/>
+</node>
+</node>
+</node>
 </node>
 <node CREATED="1591997555354" ID="Freemind_Link_1121402737" MODIFIED="1591997566014" POSITION="right" TEXT="Ferramentas">
-<node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_1270117106" MODIFIED="1597409834931" TEXT="kubeadm">
+<node COLOR="#0000ff" CREATED="1597409823944" FOLDED="true" ID="Freemind_Link_1270117106" MODIFIED="1597409834931" TEXT="kubeadm">
 <node CREATED="1597409873583" ID="Freemind_Link_1028947641" MODIFIED="1597409888010" TEXT="Ferramenta de administra&#xe7;&#xe3;o do cluster (instala&#xe7;&#xe3;o e configura&#xe7;&#xe3;o)"/>
 <node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_588434013" MODIFIED="1597409845241" TEXT="upgrade">
 <node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_579109195" MODIFIED="1597409848265" TEXT="plan">
@@ -133,6 +201,11 @@
 </node>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1653340423" MODIFIED="1592315802388" TEXT="create">
 <node CREATED="1591997501435" ID="Freemind_Link_142971277" MODIFIED="1592315807155" TEXT="Cria um recurso"/>
+<node COLOR="#0000ff" CREATED="1597756704399" ID="Freemind_Link_1159838842" MODIFIED="1597756744911" TEXT="serviceaccount &lt;nome-conta&gt;">
+<node CREATED="1597756714571" ID="Freemind_Link_1378048359" MODIFIED="1597756722145" TEXT="Cria uma conta de servi&#xe7;o">
+<node CREATED="1597756722541" ID="Freemind_Link_604169747" MODIFIED="1597756731566" TEXT="Usada por rob&#xf4;s (ou outros sistemas)"/>
+</node>
+</node>
 <node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1418686165" MODIFIED="1592315822419" TEXT="-f &lt;nome_arquivo_yml&gt;">
 <icon BUILTIN="flag"/>
 <node CREATED="1592314815568" ID="Freemind_Link_1818566023" MODIFIED="1592317237859" TEXT="Indica qual arquivo tem as especifica&#xe7;&#xf5;es do objeto a ser criado"/>
@@ -145,7 +218,13 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1841282645" MODIFIED="1592316012408" TEXT="get">
+<node COLOR="#0000ff" CREATED="1597756817269" ID="Freemind_Link_653665410" MODIFIED="1597756830215" TEXT="list">
+<node CREATED="1597756834965" ID="Freemind_Link_1174288766" MODIFIED="1597756844113" TEXT="Lista recursos do k8s"/>
+<node COLOR="#0000ff" CREATED="1597756817269" ID="Freemind_Link_526918053" MODIFIED="1597756854562" TEXT="serviceaccount">
+<node CREATED="1597756834965" ID="Freemind_Link_1816258564" MODIFIED="1597756862740" TEXT="Lista todas as contas de servi&#xe7;o criadas no k8s"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1591997498699" FOLDED="true" ID="Freemind_Link_1841282645" MODIFIED="1592316012408" TEXT="get">
 <node CREATED="1591997501435" ID="Freemind_Link_1618155496" MODIFIED="1592316177570" TEXT="Lista recursos ativos do cluster"/>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1862005678" MODIFIED="1592316026697" TEXT="pods">
 <node CREATED="1591997501435" ID="Freemind_Link_1691489598" MODIFIED="1592316187023" TEXT="Lista os pods ativos do cluster"/>
@@ -632,6 +711,54 @@
 </node>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1597409823944" FOLDED="true" ID="Freemind_Link_834080811" MODIFIED="1597680728439" TEXT="etcdctl">
+<node CREATED="1597409873583" ID="Freemind_Link_637664235" MODIFIED="1597680743460" TEXT="Cliente da ferramenta ETCD">
+<node CREATED="1597680750737" ID="Freemind_Link_1410623300" MODIFIED="1597680788904" TEXT="O ETCD &#xe9; um banco no estilo chave-valor utilziado pelo k8s para salvar as informa&#xe7;&#xf5;es sobre a infra do cluster"/>
+</node>
+<node CREATED="1597680803147" ID="Freemind_Link_1788913719" MODIFIED="1597680846254" TEXT="Para us&#xe1;-lo, &#xe9; importante definir a vari&#xe1;vel ETCDCTL_API com o n&#xfa;mero da vers&#xe3;o do service">
+<node CREATED="1597680849463" ID="Freemind_Link_672906050" MODIFIED="1597680850206" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_387961408" MODIFIED="1597680867883" TEXT="export ETCDCTL_API=3"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_229190172" MODIFIED="1597680893128" TEXT="snapshot">
+<node CREATED="1597686157101" ID="Freemind_Link_644355448" MODIFIED="1597686161943" TEXT="https://github.com/mmumshad/kubernetes-the-hard-way/blob/master/practice-questions-answers/cluster-maintenance/backup-etcd/etcd-backup-and-restore.md">
+<icon BUILTIN="attach"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_216157916" MODIFIED="1597680895615" TEXT="save">
+<node CREATED="1597409850231" ID="Freemind_Link_1385931346" MODIFIED="1597680912908" TEXT="Tira uma foto (snapshot) da base do ETCD"/>
+<node CREATED="1597683007803" FOLDED="true" ID="Freemind_Link_824296740" MODIFIED="1597683008705" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1597683010301" ID="Freemind_Link_430144178" MODIFIED="1597683016279" TEXT="ETCDCTL_API=3 etcdctl snapshot save /tmp/snapshot-pre-boot.db --endpoints=https://127.0.0.1:2379 --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_625269280" MODIFIED="1597681284571" TEXT="restore">
+<node CREATED="1597409850231" ID="Freemind_Link_1689375019" MODIFIED="1597681236316" TEXT="Restaura uma foto tirada anteriormente da base do ETCD"/>
+<node CREATED="1597683007803" FOLDED="true" ID="Freemind_Link_918853104" MODIFIED="1597683008705" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1597683010301" ID="Freemind_Link_805270534" MODIFIED="1597686145434" TEXT="ETCDCTL_API=3 etcdctl --endpoints=https://[127.0.0.1]:2379 --cacert=/etc/kubernetes/pki/etcd/ca.crt \&#xa;     --name=master \&#xa;     --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key \&#xa;     --data-dir /var/lib/etcd-from-backup \&#xa;     --initial-cluster=master=https://127.0.0.1:2380 \&#xa;     --initial-cluster-token=etcd-cluster-1 \&#xa;     --initial-advertise-peer-urls=https://127.0.0.1:2380 \&#xa;     snapshot restore /tmp/snapshot-pre-boot.db"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_1762846950" MODIFIED="1597681021796" TEXT="--cacert">
+<icon BUILTIN="flag"/>
+<node CREATED="1597680947198" ID="Freemind_Link_996936962" MODIFIED="1597681526474" TEXT="Flag obrigat&#xf3;ria quando se utiliza o ETCD com TLS"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_1743889627" MODIFIED="1597681023134" TEXT="--cert">
+<icon BUILTIN="flag"/>
+<node CREATED="1597680947198" ID="Freemind_Link_1043163137" MODIFIED="1597681531161" TEXT="Flag obrigat&#xf3;ria quando se utiliza o ETCD com TLS"/>
+<node CREATED="1597681050443" ID="Freemind_Link_469282787" MODIFIED="1597681082315" TEXT="Indica o certificado a ser usado para verificar que o cliente &#xe9; seguro"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597680973326" ID="Freemind_Link_1665642356" MODIFIED="1597681024949" TEXT="--endpoints=[127.0.0.1:2379]">
+<icon BUILTIN="flag"/>
+<node CREATED="1597680947198" ID="Freemind_Link_1658801710" MODIFIED="1597680961488" TEXT="Flag obrigat&#xf3;ria quando se utiliza o TECD com TLS"/>
+<node CREATED="1597681100642" ID="Freemind_Link_592725493" MODIFIED="1597681140831" TEXT="&#xc9; o padr&#xe3;o:">
+<node CREATED="1597681141376" ID="Freemind_Link_1195958391" MODIFIED="1597681164686" TEXT="No master, o ETCD &#xe9; exposto no localhost, porta 2379"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1597680973326" ID="Freemind_Link_665368617" MODIFIED="1597681026638" TEXT="--key">
+<icon BUILTIN="flag"/>
+<node CREATED="1597680947198" ID="Freemind_Link_1913703263" MODIFIED="1597680961488" TEXT="Flag obrigat&#xf3;ria quando se utiliza o TECD com TLS"/>
+<node CREATED="1597681172514" ID="Freemind_Link_1778526428" MODIFIED="1597681192557" TEXT="Identifica o cliente seguro usando esse arquivo de chave TLS"/>
+</node>
+</node>
 </node>
 <node CREATED="1596034959140" FOLDED="true" ID="Freemind_Link_902301057" MODIFIED="1596034963642" POSITION="right" TEXT="Scheduling">
 <node CREATED="1596034965646" ID="Freemind_Link_1847599504" MODIFIED="1596035021281" TEXT="&#xc9; poss&#xed;vel determinar afinidade ou restri&#xe7;&#xf5;es entre pods e n&#xf3;s"/>
@@ -842,7 +969,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1596732335275" FOLDED="true" ID="Freemind_Link_1795218081" MODIFIED="1596732339669" POSITION="right" TEXT="UpdateStrategy">
+<node CREATED="1596732335275" ID="Freemind_Link_1795218081" MODIFIED="1597756405896" POSITION="right" TEXT="Update Strategy">
 <node CREATED="1596729082897" ID="Freemind_Link_559184636" MODIFIED="1596732352558" TEXT="Aplic&#xe1;vel a">
 <node CREATED="1596729087801" ID="Freemind_Link_802860164" MODIFIED="1596729093636" TEXT="Pod"/>
 <node CREATED="1596729094392" ID="Freemind_Link_561351016" MODIFIED="1596729106811" TEXT="ReplicationController"/>
