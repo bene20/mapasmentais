@@ -116,7 +116,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1597756577370" FOLDED="true" ID="Freemind_Link_1326851633" MODIFIED="1597756582454" TEXT="Seguran&#xe7;a">
+<node CREATED="1597756577370" ID="Freemind_Link_1326851633" MODIFIED="1597756582454" TEXT="Seguran&#xe7;a">
 <node CREATED="1597756583128" ID="Freemind_Link_141401221" MODIFIED="1597756599307" TEXT="O k8s n&#xe3;o cria usu&#xe1;rios de acesso ao cluster">
 <node CREATED="1597756601155" ID="Freemind_Link_1820649453" MODIFIED="1597756606501" TEXT="Mas cria contas de servi&#xe7;o">
 <node CREATED="1597756606946" ID="Freemind_Link_1302044043" MODIFIED="1597756624015" TEXT="Contas de servi&#xe7;o s&#xe3;o usadas por rob&#xf4;s (ou outros sistemas)"/>
@@ -175,7 +175,7 @@
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1770517074" MODIFIED="1597757815178" TEXT="curl -v -k https://master-node-ip:6443/api/v1/pods --header &quot;Authorization: Bearer &lt;token-aqui&gt;&quot;"/>
 </node>
 </node>
-<node CREATED="1597757140368" FOLDED="true" ID="Freemind_Link_901682722" MODIFIED="1597758018151" TEXT="Certificates">
+<node CREATED="1597757140368" ID="Freemind_Link_901682722" MODIFIED="1597758018151" TEXT="Certificates">
 <icon BUILTIN="forward"/>
 <node CREATED="1597841330290" ID="Freemind_Link_1071842695" MODIFIED="1597841331711" TEXT="CA">
 <node CREATED="1597841359845" ID="Freemind_Link_1403634719" MODIFIED="1597841367457" TEXT="&#xc9; exigido um CA para o cluster"/>
@@ -268,7 +268,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1597842315445" FOLDED="true" ID="Freemind_Link_1623000098" MODIFIED="1597842317369" TEXT="Admin user">
+<node CREATED="1597842315445" ID="Freemind_Link_1623000098" MODIFIED="1597842317369" TEXT="Admin user">
 <node CREATED="1597841482623" ID="Freemind_Link_952174397" MODIFIED="1597841485870" TEXT="Keys">
 <node COLOR="#0000ff" CREATED="1597841487189" ID="Freemind_Link_330246094" MODIFIED="1597842345753" TEXT="openssl genrsa -out admin.key 2048">
 <node CREATED="1597841518795" ID="Freemind_Link_1132337179" MODIFIED="1597842351377" TEXT="Gera o admin.key"/>
@@ -340,7 +340,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1597844903227" FOLDED="true" ID="Freemind_Link_80734919" MODIFIED="1597844910030" TEXT="Kube-Api-Server">
+<node CREATED="1597844903227" ID="Freemind_Link_80734919" MODIFIED="1597844910030" TEXT="Kube-Api-Server">
 <node CREATED="1597844913045" ID="Freemind_Link_1190837589" MODIFIED="1597845028611" TEXT="Precisa ter todos os nomes &#xa;alternativos registrados no certificado">
 <node CREATED="1597845017072" ID="Freemind_Link_261553801" MODIFIED="1597845019447" TEXT="Lista:">
 <node CREATED="1597844926683" ID="Freemind_Link_909800739" MODIFIED="1597844929231" TEXT="kubernetes"/>
@@ -358,7 +358,7 @@
 </node>
 <node CREATED="1597843960612" ID="Freemind_Link_1974467746" MODIFIED="1597843965688" TEXT="Ex:">
 <node CREATED="1597846380792" ID="Freemind_Link_1455277089" MODIFIED="1597846384916" TEXT="Comando de cria&#xe7;&#xe3;o do CSR"/>
-<node COLOR="#0000ff" CREATED="1597841487189" ID="Freemind_Link_1086514703" MODIFIED="1597845614763" TEXT="openssl [...] -subj &quot;/CN=system:kube-apiserver&quot; -out apiserver.csr -config openssl.cnf [...]"/>
+<node COLOR="#0000ff" CREATED="1597841487189" ID="Freemind_Link_1086514703" MODIFIED="1597935010245" TEXT="openssl [...] -subj &quot;/CN=kube-apiserver&quot; -out apiserver.csr -config openssl.cnf [...]"/>
 </node>
 </node>
 </node>
@@ -391,6 +391,11 @@
 <node CREATED="1597843632310" ID="Freemind_Link_1256486549" MODIFIED="1597843651093" TEXT="Isso far&#xe1; com que o certificado do usu&#xe1;rio &apos;admin&apos; tenha privil&#xe9;gios de administrador"/>
 </node>
 </node>
+</node>
+</node>
+<node CREATED="1597932571695" ID="Freemind_Link_303370516" MODIFIED="1597932574684" TEXT="An&#xe1;lise">
+<node CREATED="1597932575989" ID="Freemind_Link_322130907" MODIFIED="1597932583849" TEXT="Para visualizar o conte&#xfa;do de um certificado:">
+<node COLOR="#0000ff" CREATED="1597932588134" ID="Freemind_Link_745123145" MODIFIED="1597932616657" TEXT="openssl x509 -in mycertificado.crt -text -noout"/>
 </node>
 </node>
 </node>
@@ -1227,7 +1232,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592315528094" ID="Freemind_Link_1064829192" MODIFIED="1592317218772" POSITION="right" TEXT="Objetos k8s">
+<node CREATED="1592315528094" FOLDED="true" ID="Freemind_Link_1064829192" MODIFIED="1592317218772" POSITION="right" TEXT="Objetos k8s">
 <node CREATED="1592317521186" ID="Freemind_Link_1956142399" MODIFIED="1592317522903" TEXT="Master">
 <node CREATED="1592317523600" ID="Freemind_Link_755059932" MODIFIED="1592317530400" TEXT="Gerencia o cluster"/>
 <node CREATED="1592317530989" ID="Freemind_Link_1067778424" MODIFIED="1592317540209" TEXT="&#xc9; onde ficam todos os arquivos YAML"/>
