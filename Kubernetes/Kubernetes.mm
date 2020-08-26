@@ -126,7 +126,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1597757022260" ID="Freemind_Link_458808886" MODIFIED="1597757121665" TEXT="Autentica&#xe7;&#xe3;o (ou)">
+<node CREATED="1597757022260" FOLDED="true" ID="Freemind_Link_458808886" MODIFIED="1597757121665" TEXT="Autentica&#xe7;&#xe3;o (ou)">
 <node CREATED="1597757122424" ID="Freemind_Link_371342487" MODIFIED="1597758011157" TEXT="Static password file">
 <icon BUILTIN="forward"/>
 <node CREATED="1597757955411" ID="Freemind_Link_1591848982" MODIFIED="1597757966686" TEXT="N&#xe3;o &#xe9; uma abordagem segura!">
@@ -415,7 +415,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1591997283387" FOLDED="true" ID="Freemind_Link_461602891" MODIFIED="1591997541541" TEXT="kubectl">
+<node COLOR="#0000ff" CREATED="1591997283387" ID="Freemind_Link_461602891" MODIFIED="1598276866576" TEXT="kubectl">
 <node CREATED="1592317124854" ID="Freemind_Link_1986325000" MODIFIED="1592317142693" TEXT="&#xc9; uma interface de linha de comandos para gerenciar k8s"/>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1145737261" MODIFIED="1591997526134" TEXT="version">
 <node CREATED="1591997501435" ID="Freemind_Link_885210971" MODIFIED="1591997537374" TEXT="Exibe a vers&#xe3;o do kubectl instalada"/>
@@ -735,6 +735,27 @@
 </node>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1598453602545" ID="Freemind_Link_1379585377" MODIFIED="1598454441479" TEXT="view">
+<node CREATED="1598453619749" ID="Freemind_Link_1306002414" MODIFIED="1598453660849" TEXT="Visualiza o objeto &apos;Config&apos; do usu&#xe1;rio do cluter (arquivo $HOME/.kube/config)"/>
+<node COLOR="#0000ff" CREATED="1598453602545" ID="Freemind_Link_1474488431" MODIFIED="1598454123021" TEXT="--kubeconfig=&lt;arquivo de config&gt;">
+<icon BUILTIN="flag"/>
+<node CREATED="1598453619749" ID="Freemind_Link_232260715" MODIFIED="1598454114909" TEXT="Visualiza um arquivo de Config espec&#xed;fico (que n&#xe3;o o em $HOME/.kube/config)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1598453602545" ID="Freemind_Link_709820823" MODIFIED="1598454446406" TEXT="use-context &lt;nome-contexto&gt;">
+<node CREATED="1598453619749" ID="Freemind_Link_338134546" MODIFIED="1598454233824" TEXT="Altera o contexto atual para o especificado">
+<node CREATED="1598454317268" ID="Freemind_Link_1322643664" MODIFIED="1598454329602" TEXT="O arquivo de config tamb&#xe9;m ser&#xe1; alterado!">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+<node CREATED="1598454242011" ID="Freemind_Link_786929238" MODIFIED="1598454242913" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1598453602545" ID="Freemind_Link_1820759324" MODIFIED="1598454262504" TEXT="kubectl config use-context my-kube-admin@my-kube-playground"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1598453602545" ID="Freemind_Link_1522067092" MODIFIED="1598454434673" TEXT="-h">
+<icon BUILTIN="flag"/>
+<node CREATED="1598453619749" ID="Freemind_Link_498490673" MODIFIED="1598454386628" TEXT="Exibe o help do config"/>
+</node>
 </node>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1836199688" MODIFIED="1596642368378" TEXT="logs &lt;nome-do-Pod&gt; ">
 <node CREATED="1593529415655" ID="Freemind_Link_1502729328" MODIFIED="1596642359571" TEXT="Lista os logs de um Pod"/>
@@ -815,6 +836,39 @@
 <node CREATED="1597327133437" ID="Freemind_Link_755757433" MODIFIED="1597327264471" TEXT="Resabilita o n&#xf3; a receber novos Pods"/>
 <node CREATED="1596728660326" ID="Freemind_Link_1029180422" MODIFIED="1596728661031" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_315436114" MODIFIED="1597327277279" TEXT="kubectl uncordon node-1"/>
+</node>
+</node>
+<node CREATED="1598276866561" ID="Freemind_Link_1086141826" MODIFIED="1598276869416" TEXT="Flags">
+<node CREATED="1598277122584" ID="Freemind_Link_432823762" MODIFIED="1598277154507" TEXT="Podem ser evitadas via objeto Config">
+<node CREATED="1598277155878" ID="Freemind_Link_730160602" LINK="#Freemind_Link_1755709500" MODIFIED="1598277172520" TEXT="Ver anota&#xe7;&#xf5;es"/>
+</node>
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_316376218" MODIFIED="1598277089290" TEXT="--server &lt;endere&#xe7;o do server&gt;">
+<icon BUILTIN="flag"/>
+<node CREATED="1592314815568" ID="Freemind_Link_1268030365" MODIFIED="1598277051362" TEXT="Indica onde est&#xe1; rodando o server do k8s"/>
+<node CREATED="1593529486490" ID="Freemind_Link_611672967" MODIFIED="1593529487579" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1219138667" MODIFIED="1598277077362" TEXT="kubectl get pods --server my-kube-playgound:6443 [...]"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_967894840" MODIFIED="1598276836132" TEXT="--client-key &lt;arquivo com chave privada&gt;">
+<icon BUILTIN="flag"/>
+<node CREATED="1592314815568" ID="Freemind_Link_970286280" MODIFIED="1598276824418" TEXT="Usado para autenticar o usu&#xe1;rio"/>
+<node CREATED="1593529486490" ID="Freemind_Link_1264229481" MODIFIED="1593529487579" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_784051356" MODIFIED="1598276962002" TEXT="kubectl get pods --client-key admin.key [...]"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1353942279" MODIFIED="1598276898720" TEXT="--client-certificate &lt;arquivo com chave p&#xfa;blica&gt;">
+<icon BUILTIN="flag"/>
+<node CREATED="1592314815568" ID="Freemind_Link_568723956" MODIFIED="1598276824418" TEXT="Usado para autenticar o usu&#xe1;rio"/>
+<node CREATED="1593529486490" ID="Freemind_Link_92295428" MODIFIED="1593529487579" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_468015991" MODIFIED="1598276963969" TEXT="kubectl get pods --client-certificate admin.crt [...]"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1985231131" MODIFIED="1598276935601" TEXT="--certificate-authority &lt;chave p&#xfa;blica assinador&gt;">
+<icon BUILTIN="flag"/>
+<node CREATED="1592314815568" ID="Freemind_Link_1312252257" MODIFIED="1598276949692" TEXT="Usado para autenticar o usu&#xe1;rio. indica quem assinou o certificado dele"/>
+<node CREATED="1593529486490" ID="Freemind_Link_48369831" MODIFIED="1593529487579" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1352300200" MODIFIED="1598277000265" TEXT="kubectl get pods --certificate-authority ca.crt [...]"/>
+</node>
 </node>
 </node>
 </node>
@@ -1232,7 +1286,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592315528094" FOLDED="true" ID="Freemind_Link_1064829192" MODIFIED="1592317218772" POSITION="right" TEXT="Objetos k8s">
+<node CREATED="1592315528094" ID="Freemind_Link_1064829192" MODIFIED="1592317218772" POSITION="right" TEXT="Objetos k8s">
 <node CREATED="1592317521186" ID="Freemind_Link_1956142399" MODIFIED="1592317522903" TEXT="Master">
 <node CREATED="1592317523600" ID="Freemind_Link_755059932" MODIFIED="1592317530400" TEXT="Gerencia o cluster"/>
 <node CREATED="1592317530989" ID="Freemind_Link_1067778424" MODIFIED="1592317540209" TEXT="&#xc9; onde ficam todos os arquivos YAML"/>
@@ -2533,29 +2587,203 @@
 </node>
 </node>
 </node>
-<node CREATED="1597844410876" FOLDED="true" ID="Freemind_Link_1755709500" MODIFIED="1597844412128" TEXT="Config">
+<node CREATED="1597844410876" ID="Freemind_Link_1755709500" MODIFIED="1597844412128" TEXT="Config">
 <node CREATED="1597844412804" ID="Freemind_Link_83752346" MODIFIED="1597844475590" TEXT="Declara configura&#xe7;&#xf5;es do endpoint, certificados etc."/>
+<node CREATED="1598449244941" ID="Freemind_Link_272798741" MODIFIED="1598453228429" TEXT="Por padr&#xe3;o, o kubectl procura &#xa;pelo arquivo $HOME/.kube/config">
+<node CREATED="1598449986424" ID="Freemind_Link_355496337" MODIFIED="1598449993891" TEXT="Pasta do usu&#xe1;rio do SO"/>
+<node CREATED="1598449300673" ID="Freemind_Link_67767348" MODIFIED="1598449312846" TEXT="Pode-se declarar o &apos;Config&apos; nesse arquivo"/>
+<node CREATED="1598453194274" ID="Freemind_Link_715666905" MODIFIED="1598453213564" TEXT="N&#xe3;o se deve usar o &apos;kubectl create -f ...&apos; neste arquivo">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+<node CREATED="1598453595536" ID="Freemind_Link_1707282447" MODIFIED="1598453596763" TEXT="Comandos">
+<node COLOR="#0000ff" CREATED="1598453602545" ID="Freemind_Link_1319534000" MODIFIED="1598454373372" TEXT="kubectl config -h">
+<node CREATED="1598453619749" ID="Freemind_Link_65644853" MODIFIED="1598454386628" TEXT="Exibe o help do config"/>
+</node>
+<node COLOR="#0000ff" CREATED="1598453602545" ID="Freemind_Link_736759752" MODIFIED="1598453617098" TEXT="kubectl config view">
+<node CREATED="1598453619749" ID="Freemind_Link_551879433" MODIFIED="1598453660849" TEXT="Visualiza o objeto &apos;Config&apos; do usu&#xe1;rio do cluter (arquivo $HOME/.kube/config)"/>
+<node COLOR="#0000ff" CREATED="1598453602545" ID="Freemind_Link_911082758" MODIFIED="1598454123021" TEXT="--kubeconfig=&lt;arquivo de config&gt;">
+<icon BUILTIN="flag"/>
+<node CREATED="1598453619749" ID="Freemind_Link_362755333" MODIFIED="1598454114909" TEXT="Visualiza um arquivo de Config espec&#xed;fico (que n&#xe3;o o em $HOME/.kube/config)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1598453602545" ID="Freemind_Link_1385893420" MODIFIED="1598454223639" TEXT="kubectl config use-context &lt;nome-contexto&gt;">
+<node CREATED="1598453619749" ID="Freemind_Link_1816555521" MODIFIED="1598454233824" TEXT="Altera o contexto atual para o especificado">
+<node CREATED="1598454317268" ID="Freemind_Link_1677015449" MODIFIED="1598454329602" TEXT="O arquivo de config tamb&#xe9;m ser&#xe1; alterado!">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+<node CREATED="1598454242011" ID="Freemind_Link_399898244" MODIFIED="1598454242913" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1598453602545" ID="Freemind_Link_419710995" MODIFIED="1598454262504" TEXT="kubectl config use-context my-kube-admin@my-kube-playground"/>
+</node>
+</node>
+</node>
 <node CREATED="1597844479600" ID="Freemind_Link_761846689" MODIFIED="1597844484347" TEXT="YAML">
+<node COLOR="#ff00ff" CREATED="1598453352093" ID="Freemind_Link_1534125856" MODIFIED="1598453370198" TEXT="apiVersion: v1"/>
+<node COLOR="#ff00ff" CREATED="1598453377500" ID="Freemind_Link_1612539101" MODIFIED="1598453384400" TEXT="kind: Config"/>
+<node COLOR="#ff00ff" CREATED="1598453386675" ID="Freemind_Link_1663778643" MODIFIED="1598453394940" TEXT="current-context">
+<node CREATED="1598453396293" ID="Freemind_Link_760964190" MODIFIED="1598453412121" TEXT="Indica qual dos contextos da se&#xe7;&#xe3;o &apos;contexts&apos; ser&#xe1; o default"/>
+<node CREATED="1598453420231" ID="Freemind_Link_160060241" MODIFIED="1598453421149" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_417127905" MODIFIED="1598453447335" TEXT="current-context: my-kube-admin@my-kube-playground"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_698361883" MODIFIED="1598449601595" TEXT="clusters">
+<node CREATED="1598449767660" ID="Freemind_Link_893516210" MODIFIED="1598450023831" TEXT="Indica os clusters que o usu&#xe1;rio(do SO) tem acesso">
+<node CREATED="1598449906789" ID="Freemind_Link_1374502443" MODIFIED="1598449921601" TEXT="Incluindo diferentes organiza&#xe7;&#xf5;es, cloud providers etc."/>
+<node CREATED="1598449884716" ID="Freemind_Link_548871004" MODIFIED="1598449886160" TEXT="Ex:">
+<node CREATED="1598449887068" ID="Freemind_Link_799619350" MODIFIED="1598449889200" TEXT="Development"/>
+<node CREATED="1598449890432" ID="Freemind_Link_551060908" MODIFIED="1598449892596" TEXT="Production"/>
+<node CREATED="1598449892823" ID="Freemind_Link_1601044994" MODIFIED="1598449894195" TEXT="Google"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_1184782536" MODIFIED="1598451276393" TEXT="-(item)">
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_1087794635" MODIFIED="1598452590904" TEXT="name">
+<node CREATED="1598452706445" ID="Freemind_Link_1603968385" MODIFIED="1598452712130" TEXT="Nome escolhido para o cluster">
+<node CREATED="1598452712399" ID="Freemind_Link_577204429" MODIFIED="1598452865149" TEXT="Ser&#xe1; usado como refer&#xea;ncia em &apos;contexts&apos; para vincular o cluster ao usu&#xe1;rio"/>
+</node>
+<node CREATED="1598452930055" ID="Freemind_Link_1456869739" MODIFIED="1598452931940" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_1361714664" MODIFIED="1598453059481" TEXT="name: my-kube-playground"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_1056088142" MODIFIED="1598452595246" TEXT="cluster">
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_1553329562" MODIFIED="1598452599845" TEXT="server">
+<node CREATED="1598452650472" ID="Freemind_Link_142152077" MODIFIED="1598452657055" TEXT="Servidor onde roda o cluster"/>
+<node CREATED="1598452658038" ID="Freemind_Link_1783097629" MODIFIED="1598452658703" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_1761313986" MODIFIED="1598452675708" TEXT="server: https://my-kube-playground:6443"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_1395405610" MODIFIED="1598452609920" TEXT="certificate-authority">
+<node CREATED="1598452610525" ID="Freemind_Link_347699709" MODIFIED="1598452639585" TEXT="Arquivo de certificado da unidade certificadora do cluster"/>
+<node CREATED="1598454776923" ID="Freemind_Link_597361397" MODIFIED="1598454790268" TEXT="Ideal usar o caminho completo do arquivo">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_1095133099" MODIFIED="1598454877356" TEXT="certificate-authority-data">
+<node CREATED="1598452610525" ID="Freemind_Link_1236677641" MODIFIED="1598454898199" TEXT="Alternativa ao &apos;certificate-authority&apos;"/>
+<node CREATED="1598454902091" ID="Freemind_Link_1470836073" MODIFIED="1598455022171" TEXT="O texto do certificado (convertido em base64) vai aqui, em vez de o caminho do arquivo do certificado"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_123264736" MODIFIED="1598449617221" TEXT="contexts">
+<node CREATED="1598450698136" ID="Freemind_Link_1613997168" MODIFIED="1598450707615" TEXT="Vincula usu&#xe1;rios a clusters">
+<node CREATED="1598450716552" ID="Freemind_Link_517981300" MODIFIED="1598450717684" TEXT="Ex:">
+<node CREATED="1598450719129" ID="Freemind_Link_165772896" MODIFIED="1598450723064" TEXT="Admin@Production"/>
+<node CREATED="1598450724251" ID="Freemind_Link_43245090" MODIFIED="1598450728588" TEXT="Dev@Google"/>
+<node CREATED="1598450734803" ID="Freemind_Link_138015154" MODIFIED="1598450754120" TEXT="MyKubeAdmin@MyKubePlayground"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_978493145" MODIFIED="1598451276393" TEXT="-(item)">
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_1875959041" MODIFIED="1598452896077" TEXT="name">
+<node CREATED="1598452930055" ID="Freemind_Link_232264645" MODIFIED="1598452931940" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_437596559" MODIFIED="1598452977928" TEXT="name: my-kube-admin@my-kube-playground"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_1824913335" MODIFIED="1598452902678" TEXT="context">
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_1872215207" MODIFIED="1598452906748" TEXT="cluster">
+<node CREATED="1598453010409" ID="Freemind_Link_1411620891" MODIFIED="1598453018422" TEXT="Nome do cluster que ser&#xe1; vinculado ao usu&#xe1;rio"/>
+<node CREATED="1598452930055" ID="Freemind_Link_98736994" MODIFIED="1598452931940" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_154664220" MODIFIED="1598453074668" TEXT="name: my-kube-playground">
+<arrowlink COLOR="#0bed08" DESTINATION="Freemind_Link_1361714664" ENDARROW="Default" ENDINCLINATION="223;0;" ID="Freemind_Arrow_Link_856560269" STARTARROW="None" STARTINCLINATION="223;0;"/>
+</node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_74742569" MODIFIED="1598452910174" TEXT="user">
+<node CREATED="1598453019388" ID="Freemind_Link_249336405" MODIFIED="1598453029455" TEXT="Nome do usu&#xe1;rio que ser&#xe1; vinculado ao cluster"/>
+<node CREATED="1598452930055" ID="Freemind_Link_1363737035" MODIFIED="1598452931940" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_1322712647" MODIFIED="1598453083818" TEXT="name: my-kube-admin">
+<arrowlink COLOR="#08f706" DESTINATION="Freemind_Link_1162694642" ENDARROW="Default" ENDINCLINATION="159;0;" ID="Freemind_Arrow_Link_1146489850" STARTARROW="None" STARTINCLINATION="159;0;"/>
+</node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_893355818" MODIFIED="1598454581010" TEXT="namespace">
+<node CREATED="1598453019388" ID="Freemind_Link_1321509169" MODIFIED="1598454608497" TEXT="Define o namespace padr&#xe3;o para este contexto"/>
+<node CREATED="1598452930055" ID="Freemind_Link_1658314097" MODIFIED="1598452931940" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_1093445852" MODIFIED="1598454617321" TEXT="namespace: finance"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_1520181048" MODIFIED="1598449619700" TEXT="users">
+<node CREATED="1598449939401" ID="Freemind_Link_1924316727" MODIFIED="1598450078510" TEXT="Indica os usu&#xe1;rios de cluster que o usu&#xe1;rio do SO tem acesso">
+<node CREATED="1598450548040" ID="Freemind_Link_1641396422" MODIFIED="1598450578160" TEXT="Diferentes usu&#xe1;rios com diferentes privil&#xe9;gios em diferentes clusters"/>
+<node CREATED="1598450407569" ID="Freemind_Link_1605205935" MODIFIED="1598450415054" TEXT="Ex:">
+<node CREATED="1598450415514" ID="Freemind_Link_462865136" MODIFIED="1598450417014" TEXT="Admin"/>
+<node CREATED="1598450417514" ID="Freemind_Link_1949097967" MODIFIED="1598450421701" TEXT="Dev User"/>
+<node CREATED="1598450421979" ID="Freemind_Link_980522159" MODIFIED="1598450424750" TEXT="Prod User"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_302064578" MODIFIED="1598451276393" TEXT="-(item)">
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_1791587974" MODIFIED="1598452756630" TEXT="name">
+<node CREATED="1598452706445" ID="Freemind_Link_197607850" MODIFIED="1598452825557" TEXT="Nome escolhido para o usu&#xe1;rio">
+<node CREATED="1598452712399" ID="Freemind_Link_1325197682" MODIFIED="1598452854310" TEXT="Ser&#xe1; usado como refer&#xea;ncia em &apos;contexts&apos; para vincular o usu&#xe1;rio ao cluster"/>
+</node>
+<node CREATED="1598452930055" ID="Freemind_Link_1543852683" MODIFIED="1598452931940" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_1162694642" MODIFIED="1598453076485" TEXT="name: my-kube-admin"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_1665896738" MODIFIED="1598452760044" TEXT="user">
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_1448028744" MODIFIED="1598452766284" TEXT="client-certificate">
+<node CREATED="1598452771961" ID="Freemind_Link_1467543762" MODIFIED="1598452806315" TEXT="Arquivo de certificado do usu&#xe1;rio"/>
+<node CREATED="1598454776923" ID="Freemind_Link_582891449" MODIFIED="1598454790268" TEXT="Ideal usar o caminho completo do arquivo">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1598449581599" ID="Freemind_Link_1531373734" MODIFIED="1598452770098" TEXT="client-key">
+<node CREATED="1598452771961" ID="Freemind_Link_152163095" MODIFIED="1598452792294" TEXT="Arquivo com chave privada do usu&#xe1;rio"/>
+<node CREATED="1598454776923" ID="Freemind_Link_320782287" MODIFIED="1598454790268" TEXT="Ideal usar o caminho completo do arquivo">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+</node>
+</node>
+</node>
 <node CREATED="1597844484968" ID="Freemind_Link_1498530649" MODIFIED="1597844485788" TEXT="Ex:">
-<node COLOR="#ff00ff" CREATED="1597844489517" ID="Freemind_Link_1717551529" MODIFIED="1597844632089" TEXT="apiVersion: v1&#xa;kind: Config&#xa;clusters:&#xa;  - cluster:&#xa;      certificate-authority: ca.crt&#xa;      server: https://kube-apiserver:6443&#xa;    name: kubernetes&#xa;users:&#xa;  - name: kubernetes-admin&#xa;    user:&#xa;      client-certificate: admin.crt&#xa;      client-key: admin.key"/>
+<node CREATED="1598454776923" ID="Freemind_Link_1467809957" MODIFIED="1598454830691" TEXT="Ideal usar o caminho completo dos arquivos *.crt e *.key">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1597844489517" ID="Freemind_Link_1717551529" MODIFIED="1598454718826" TEXT="apiVersion: v1&#xa;kind: Config&#xa;clusters:&#xa;  - name: production&#xa;    cluster:&#xa;      certificate-authority: ca.crt&#xa;      server: https://kube-apiserver:6443&#xa;contexts:&#xa;  - name: admin@production&#xa;    context:&#xa;      cluster: production&#xa;      user: admin&#xa;      namespace: finance&#xa;users:&#xa;  - name: admin&#xa;    user:&#xa;      client-certificate: admin.crt&#xa;      client-key: admin.key"/>
 </node>
 </node>
 </node>
-<node CREATED="1595951529873" ID="Freemind_Link_936807225" MODIFIED="1595951582089" TEXT="???">
+<node CREATED="1595951529873" FOLDED="true" ID="Freemind_Link_936807225" MODIFIED="1598274861904" TEXT="CertificateSigningRequest">
+<node CREATED="1598274866687" ID="Freemind_Link_606439443" MODIFIED="1598274883522" TEXT="Usado para fazer rotate e renova&#xe7;&#xe3;o autom&#xe1;tica dos certificados dos usu&#xe1;rios admin do cluster"/>
+<node CREATED="1598275264226" ID="Freemind_Link_1466033866" MODIFIED="1598275279345" TEXT="O k8s tem uma API para assinar certificados">
+<node CREATED="1598275280442" ID="Freemind_Link_222771307" MODIFIED="1598275323581" TEXT="Configur&#xe1;vel nos par&#xe2;metros &apos;--cluster-signing-cert-file&apos; e &apos;--cluster-signing-cert-key-file&apos; do &apos;kube-controller-manager&apos;"/>
+</node>
 <node CREATED="1595868955278" ID="Freemind_Link_1044606509" MODIFIED="1595868961065" TEXT="Linha de comando">
-<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_672655132" MODIFIED="1595951572386" TEXT="???">
-<node CREATED="1595869017286" ID="Freemind_Link_295518312" MODIFIED="1595951574305" TEXT="???"/>
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_672655132" MODIFIED="1598275053172" TEXT="kubectl get csr">
+<node CREATED="1595869017286" ID="Freemind_Link_295518312" MODIFIED="1598275065447" TEXT="Visualiza todos os objetos de requisi&#xe7;&#xe3;o de assinatura"/>
 </node>
-<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_1002647027" MODIFIED="1595951572386" TEXT="???">
-<node CREATED="1595869017286" ID="Freemind_Link_1660077162" MODIFIED="1595951574305" TEXT="???"/>
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_1002647027" MODIFIED="1598275087252" TEXT="kubectl certificate approve jane">
+<node CREATED="1595869017286" ID="Freemind_Link_1660077162" MODIFIED="1598275125084" TEXT="Aprova o CSR &apos;jane&apos;, listado com &apos;kubectl get csr&apos;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_705738054" MODIFIED="1598276601944" TEXT="kubectl delete csr jane">
+<node CREATED="1595869017286" ID="Freemind_Link_419335471" MODIFIED="1598276628736" TEXT="Deleta o objeto CSR especificado do k8s"/>
 </node>
 </node>
 <node CREATED="1595951537400" ID="Freemind_Link_706439882" MODIFIED="1595951540236" TEXT="YAML">
-<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1159509485" MODIFIED="1595951561106" TEXT="???">
-<node CREATED="1592844989287" ID="Freemind_Link_1339998930" MODIFIED="1595951562899" TEXT="???"/>
-</node>
 <node CREATED="1595951551270" ID="Freemind_Link_1483892810" MODIFIED="1595951552490" TEXT="Ex:">
-<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1587165421" MODIFIED="1595951561106" TEXT="???"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1587165421" MODIFIED="1598275022880" TEXT="apiVersion: certificates.k8s.io/v1beta1&#xa;kind: CertificateSigningRequest&#xa;metadata:&#xa;  name: jane&#xa;spec:&#xa;  groups:&#xa;    - system:authenticated&#xa;  usages:&#xa;    - digital signature&#xa;    - key encipherment&#xa;    - server auth&#xa;  request:&#xa;    &lt; aqui vai o conte&#xfa;do do arquivo CSR encodado em base64 &gt;"/>
+</node>
+</node>
+</node>
+<node CREATED="1595951529873" ID="Freemind_Link_1392265144" MODIFIED="1595951582089" TEXT="???">
+<node CREATED="1595868955278" ID="Freemind_Link_1755876692" MODIFIED="1595868961065" TEXT="Linha de comando">
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_640018735" MODIFIED="1595951572386" TEXT="???">
+<node CREATED="1595869017286" ID="Freemind_Link_152740146" MODIFIED="1595951574305" TEXT="???"/>
+</node>
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_1002400283" MODIFIED="1595951572386" TEXT="???">
+<node CREATED="1595869017286" ID="Freemind_Link_1742381037" MODIFIED="1595951574305" TEXT="???"/>
+</node>
+</node>
+<node CREATED="1595951537400" ID="Freemind_Link_1900827163" MODIFIED="1595951540236" TEXT="YAML">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_536453164" MODIFIED="1595951561106" TEXT="???">
+<node CREATED="1592844989287" ID="Freemind_Link_1647311721" MODIFIED="1595951562899" TEXT="???"/>
+</node>
+<node CREATED="1595951551270" ID="Freemind_Link_1602147367" MODIFIED="1595951552490" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1366965536" MODIFIED="1595951561106" TEXT="???"/>
 </node>
 </node>
 </node>
