@@ -165,6 +165,29 @@
 <icon BUILTIN="idea"/>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1219599137" MODIFIED="1599240360144" TEXT="--privileged=&lt;true|false&gt;">
+<icon BUILTIN="flag"/>
+<node CREATED="1563998982186" ID="Freemind_Link_766065005" MODIFIED="1599239694886" TEXT="Habilita todos os provil&#xe9;gios de admin ao executar o container"/>
+<node CREATED="1599239713776" ID="Freemind_Link_1904369618" MODIFIED="1599239751195" TEXT="Ideal usar o &apos;--cap-add&apos; e adicionar apenas as capacidades realmente necess&#xe1;rias"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1770754941" MODIFIED="1599240383273" TEXT="Ex:docker container run -it --privileged=true [docker_image]">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1585100630" MODIFIED="1599239907224" TEXT="--cap-add=&lt;CAPABILITY&gt;&#xa;--cap-drop=&lt;CAPABILITY&gt;">
+<icon BUILTIN="flag"/>
+<node CREATED="1563998982186" ID="Freemind_Link_1882019601" MODIFIED="1599239948897" TEXT="Adiciona/Remove uma capacidade espec&#xed;fica"/>
+<node CREATED="1599239792583" ID="Freemind_Link_279117836" MODIFIED="1599239795852" TEXT="Lista de capacidades:">
+<node CREATED="1599239809196" ID="Freemind_Link_160287194" MODIFIED="1599239815599" TEXT="https://docs.docker.com/engine/reference/run/">
+<icon BUILTIN="attach"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_456810097" MODIFIED="1599239857486" TEXT="Ex:docker container run -it --cap-add=NET_ADMIN [docker_image]">
+<icon BUILTIN="idea"/>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_727583887" MODIFIED="1599239967473" TEXT="Ex:docker container run -it --cap-add=ALL --cap-drop=NET_ADMIN [docker_image]">
+<icon BUILTIN="idea"/>
+</node>
+</node>
 <node COLOR="#0000ff" CREATED="1596814578351" ID="Freemind_Link_1320043083" MODIFIED="1596814590368" TEXT="&lt;comando&gt;">
 <node CREATED="1596814593352" ID="Freemind_Link_754921555" MODIFIED="1596814605073" TEXT="Substitui o valor de &quot;CMD&quot; do &apos;Dockerfile&apos;">
 <node CREATED="1596814617289" ID="Freemind_Link_284043349" MODIFIED="1596814629500" TEXT="Substitui os argumentos do ENTRYPOINT do &apos;Dockerfile&apos;"/>

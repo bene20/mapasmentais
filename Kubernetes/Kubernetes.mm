@@ -413,6 +413,9 @@
 <node CREATED="1598537115358" ID="Freemind_Link_1595776533" LINK="#Freemind_Link_1129790239" MODIFIED="1598537198384" TEXT="Ver anota&#xe7;&#xf5;es"/>
 </node>
 </node>
+<node CREATED="1599064092474" ID="Freemind_Link_131181898" MODIFIED="1599064100619" TEXT="Configura&#xe7;&#xe3;o de acesso a clusters">
+<node CREATED="1599064101162" ID="Freemind_Link_853204876" LINK="#Freemind_Link_1755709500" MODIFIED="1599064119292" TEXT="Ver objeto Config em anota&#xe7;&#xf5;es abaixo"/>
+</node>
 </node>
 </node>
 <node CREATED="1591997555354" ID="Freemind_Link_1121402737" MODIFIED="1591997566014" POSITION="right" TEXT="Ferramentas">
@@ -907,6 +910,21 @@
 </node>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_427077592" MODIFIED="1599064727137" TEXT="api-resources">
+<node CREATED="1599064756245" ID="Freemind_Link_1502529153" MODIFIED="1599064770794" TEXT="Lista dos recursos suportados via API"/>
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_1598618271" MODIFIED="1599064740373" TEXT="--namespaced=true">
+<icon BUILTIN="flag"/>
+<node CREATED="1595869017286" ID="Freemind_Link_1360836206" MODIFIED="1599064597885" TEXT="Lista os recursos de cluster que exigem a vincula&#xe7;&#xe3;o a um namespace"/>
+</node>
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_1416162169" MODIFIED="1599064788850" TEXT="--namespaced=false">
+<icon BUILTIN="flag"/>
+<node CREATED="1595869017286" ID="Freemind_Link_389604399" MODIFIED="1599064619102" TEXT="Lista os recursos de cluster que n&#xe3;o s&#xe3;o vincul&#xe1;veis a um namespace"/>
+</node>
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_1153004030" MODIFIED="1599064820104" TEXT="-o wide">
+<icon BUILTIN="flag"/>
+<node CREATED="1595869017286" ID="Freemind_Link_582855429" MODIFIED="1599064828809" TEXT="Exibe mais informa&#xe7;&#xf5;es dos recursos"/>
+</node>
+</node>
 <node CREATED="1598276866561" ID="Freemind_Link_1086141826" MODIFIED="1598276869416" TEXT="Flags">
 <node CREATED="1598277122584" ID="Freemind_Link_432823762" MODIFIED="1598277154507" TEXT="Podem ser evitadas via objeto Config">
 <node CREATED="1598277155878" ID="Freemind_Link_730160602" LINK="#Freemind_Link_1755709500" MODIFIED="1598277172520" TEXT="Ver anota&#xe7;&#xf5;es"/>
@@ -1032,6 +1050,7 @@
 </node>
 </node>
 <node CREATED="1596205872182" ID="Freemind_Link_1890707813" MODIFIED="1596205880038" TEXT="Configurar DNS">
+<node CREATED="1599157357055" ID="Freemind_Link_706950784" MODIFIED="1599157359073" TEXT="Manualmente">
 <node CREATED="1596206051046" ID="Freemind_Link_795696719" MODIFIED="1596206061378" TEXT="Conectar &#xe0; VM minikube">
 <icon BUILTIN="full-1"/>
 <node COLOR="#0000ff" CREATED="1596205892636" ID="Freemind_Link_1314406300" MODIFIED="1596206101497" TEXT="minikube ssh"/>
@@ -1042,12 +1061,33 @@
 </node>
 <node CREATED="1596206081522" ID="Freemind_Link_704074888" MODIFIED="1596206091163" TEXT="Configurar o DNS">
 <icon BUILTIN="full-3"/>
-<node COLOR="#0000ff" CREATED="1596205892636" ID="Freemind_Link_141585985" MODIFIED="1596206114746" TEXT="cat &lt;&lt; EOF &gt; /etc/systemd/resolved.conf &#xa;&gt; [Resolve]&#xa;&gt; DNS=10.10.12.10 192.168.0.2&#xa;&gt; FallbackDNS=10.10.12.10 192.168.0.2&#xa;&gt; EOF&#xa;"/>
+<node COLOR="#0000ff" CREATED="1596205892636" ID="Freemind_Link_141585985" MODIFIED="1599157782685" TEXT="cat &lt;&lt; EOF &gt; /etc/systemd/resolved.conf &#xa;[Resolve]&#xa;DNS=10.10.12.10 192.168.0.2&#xa;FallbackDNS=10.10.12.10 192.168.0.2&#xa;EOF&#xa;"/>
 <node CREATED="1596206589481" ID="Freemind_Link_1428203173" MODIFIED="1596206602615" TEXT="Se n&#xe3;o funcionar, edite diretamente o arquivo /etc/resolv.conf"/>
 </node>
 <node CREATED="1596206164169" ID="Freemind_Link_487616322" MODIFIED="1596206185919" TEXT="Reiniciar o DNS">
 <icon BUILTIN="full-4"/>
 <node COLOR="#0000ff" CREATED="1596205892636" ID="Freemind_Link_1016207554" MODIFIED="1596206182616" TEXT="systemctl restart systemd-resolved"/>
+</node>
+</node>
+<node CREATED="1599157362945" ID="Freemind_Link_1137742276" MODIFIED="1599157365452" TEXT="Automaticamente">
+<node CREATED="1599157382615" ID="Freemind_Link_1255584541" MODIFIED="1599157423422" TEXT="O minikube tem um mecanismo de sincroniza&#xe7;&#xe3;o de arquivos">
+<node CREATED="1599157366144" ID="Freemind_Link_1367058110" MODIFIED="1599157380940" TEXT="https://minikube.sigs.k8s.io/docs/handbook/filesync/">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1599157423793" ID="Freemind_Link_1997354540" MODIFIED="1599157440148" TEXT="Esse mecanismo s&#xf3; &#xe9; disparado na execu&#xe7;&#xe3;o do &apos;minikube start&apos;"/>
+</node>
+<node CREATED="1599157552075" ID="Freemind_Link_905845405" MODIFIED="1599157591186" TEXT="Criar o arquivo &apos;resolv.conf&apos; desejado para o minikube">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1599157493795" ID="Freemind_Link_1073266376" MODIFIED="1599157594714" TEXT="Copiar o &apos;resolv.conf&apos; para a pasta &apos;$MINIKUBE_HOME/files">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1599157580262" ID="Freemind_Link_574202110" MODIFIED="1599157597204" TEXT="Iniciar o minikube">
+<icon BUILTIN="full-3"/>
+</node>
+<node CREATED="1599157613040" ID="Freemind_Link_1330587022" MODIFIED="1599157613826" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1596205892636" ID="Freemind_Link_971551881" MODIFIED="1599157795365" TEXT="mkdir -p ~/.minikube/files/etc&#xa;cat &lt;&lt; EOF &gt; ~/.minikube/files/etc/resolv.conf&#xa;[Resolve]&#xa;DNS=10.10.12.10 192.168.0.2&#xa;FallbackDNS=10.10.12.10 192.168.0.2&#xa;EOF&#xa;minikube start&#xa;&#xa;&#xa;"/>
+</node>
 </node>
 </node>
 <node CREATED="1596212515293" ID="Freemind_Link_1855652776" MODIFIED="1596212518353" TEXT="Docker login">
@@ -1495,7 +1535,7 @@
 </node>
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_692137565" MODIFIED="1593785438824" TEXT="spec">
 <node CREATED="1593785451598" ID="Freemind_Link_749494706" MODIFIED="1593785458727" TEXT="Define as especifica&#xe7;&#xf5;es do Pod"/>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1172709011" MODIFIED="1593785445680" TEXT="containers">
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_1172709011" MODIFIED="1593785445680" TEXT="containers">
 <node CREATED="1593785460534" ID="Freemind_Link_102134197" MODIFIED="1593785465401" TEXT="Lista dos containers do Pod"/>
 <node CREATED="1593790854670" ID="Freemind_Link_287114057" MODIFIED="1593790859711" TEXT="Uso em">
 <node CREATED="1593791003028" ID="Freemind_Link_695080169" LINK="#Freemind_Link_1544273506" MODIFIED="1593791026678" TEXT="Deployment"/>
@@ -1844,7 +1884,7 @@
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1366261519" MODIFIED="1596819539952" TEXT="env:&#xa;  - name: APP_COLOR&#xa;    value: pink"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_1879616432" MODIFIED="1596820023795" TEXT="envFrom">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1879616432" MODIFIED="1596820023795" TEXT="envFrom">
 <node CREATED="1593785242110" ID="Freemind_Link_893351373" MODIFIED="1596820078747" TEXT="Usado para declarar vari&#xe1;veis de ambiente do Pod a partir de ConfigMap&apos;s ou Secret&apos;s"/>
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_419337972" MODIFIED="1596819437169" TEXT="- (item)">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1835789969" MODIFIED="1596820105722" TEXT="configMapRef">
@@ -1948,7 +1988,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_548219744" MODIFIED="1596213936671" TEXT="imagePullSecrets">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_548219744" MODIFIED="1596213936671" TEXT="imagePullSecrets">
 <node CREATED="1595884413397" ID="Freemind_Link_670921187" MODIFIED="1596213785631" TEXT="Indica qual secret cont&#xe9;m as credenciais para o &apos;docker login&apos;"/>
 <node CREATED="1596213786134" ID="Freemind_Link_542729878" MODIFIED="1596213797147" TEXT="Requerido quando se usa um registry privado"/>
 <node CREATED="1596213821909" ID="Freemind_Link_533754058" MODIFIED="1596213828047" TEXT="Cria&#xe7;&#xe3;o do secret:">
@@ -1958,7 +1998,7 @@
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1139097285" MODIFIED="1596213818587" TEXT="...&#xa;spec:&#xa;  containers: ...&#xa;  imagePullSecrets:&#xa;    - name: regcred"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1596641733042" FOLDED="true" ID="Freemind_Link_1615171536" MODIFIED="1596641741551" TEXT="schedulerName">
+<node COLOR="#ff00ff" CREATED="1596641733042" ID="Freemind_Link_1615171536" MODIFIED="1596641741551" TEXT="schedulerName">
 <node CREATED="1596641743396" ID="Freemind_Link_176333411" MODIFIED="1596641753831" TEXT="Indica o nome do scheduler, caso n&#xe3;o se queira usar o padr&#xe3;o"/>
 <node CREATED="1596641800572" ID="Freemind_Link_677025905" MODIFIED="1596642085918" TEXT="Para carregar um scheduler personalizado &#xa;&#xe9; necess&#xe1;rio usar configurar o kube-scheduler">
 <node CREATED="1596641839482" ID="Freemind_Link_1293646742" LINK="#Freemind_Link_844029011" MODIFIED="1596641867733" TEXT="Ver anota&#xe7;&#xe3;o acima"/>
@@ -1971,6 +2011,37 @@
 </node>
 <node CREATED="1596641764356" ID="Freemind_Link_1281969805" MODIFIED="1596641765060" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1596641733042" ID="Freemind_Link_1440886177" MODIFIED="1596641776628" TEXT="schedulerName: my-custom-scheduler"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1596641733042" ID="Freemind_Link_1616519083" MODIFIED="1599240168562" TEXT="securityContext">
+<node CREATED="1599240168542" ID="Freemind_Link_574049780" MODIFIED="1599240171221" TEXT="Usado para">
+<node CREATED="1596641743396" ID="Freemind_Link_671216124" MODIFIED="1599240173811" TEXT="adicionar/remover capabilities ao container (ou ao Pod)">
+<node CREATED="1599240092822" ID="Freemind_Link_325586731" MODIFIED="1599241774524" TEXT="Quando configurado na se&#xe7;&#xe3;o &apos;containers&apos;, ser&#xe1; aplicado apenas ao container em quest&#xe3;o"/>
+<node CREATED="1599240092822" ID="Freemind_Link_1984553687" MODIFIED="1599240134629" TEXT="Quando configurado na se&#xe7;&#xe3;o &apos;spec&apos;, ser&#xe1; aplicado a todos os containers do Pod"/>
+</node>
+<node CREATED="1599240175118" ID="Freemind_Link_562206190" MODIFIED="1599240190319" TEXT="definir o usu&#xe1;rio de execu&#xe7;&#xe3;o do container"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1596641733042" ID="Freemind_Link_1809887283" MODIFIED="1599241714478" TEXT="runAsUser">
+<node CREATED="1599240168542" ID="Freemind_Link_805359015" MODIFIED="1599241726430" TEXT="Usado para definir o usu&#xe1;rio de execu&#xe7;&#xe3;o do container"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1596641733042" ID="Freemind_Link_1236952431" MODIFIED="1599241736036" TEXT="capabilities">
+<node CREATED="1599241754625" ID="Freemind_Link_648020298" MODIFIED="1599241774527" TEXT="N&#xe3;o pode ser declarado na se&#xe7;&#xe3;o &apos;spec&apos;">
+<arrowlink DESTINATION="Freemind_Link_325586731" ENDARROW="Default" ENDINCLINATION="682;0;" ID="Freemind_Arrow_Link_1923707509" STARTARROW="None" STARTINCLINATION="682;0;"/>
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node CREATED="1599240168542" ID="Freemind_Link_1118480883" MODIFIED="1599241752197" TEXT="Usado para adicionar/remover capabilities ao container"/>
+<node COLOR="#ff00ff" CREATED="1596641733042" ID="Freemind_Link_432700530" MODIFIED="1599241790596" TEXT="add">
+<node CREATED="1599241793418" ID="Freemind_Link_896989430" MODIFIED="1599241796108" TEXT="Tipo array"/>
+<node CREATED="1599240168542" ID="Freemind_Link_1763432345" MODIFIED="1599241807227" TEXT="Lista de capacidades a serem adicionadas ao container"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1596641733042" ID="Freemind_Link_1889888737" MODIFIED="1599241810621" TEXT="drop">
+<node CREATED="1599241793418" ID="Freemind_Link_1685812105" MODIFIED="1599241796108" TEXT="Tipo array"/>
+<node CREATED="1599240168542" ID="Freemind_Link_350949458" MODIFIED="1599241819789" TEXT="Lista de capacidades a serem removidas do container"/>
+</node>
+</node>
+<node CREATED="1596641764356" ID="Freemind_Link_1082690062" MODIFIED="1596641765060" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1674844931" MODIFIED="1599240307991" TEXT="...&#xa;spec:&#xa;  securityContext:&#xa;    runAsUser: 1000&#xa;    capabilities:&#xa;      add: [&quot;MAC_ADMIN&quot;]&#xa;  containers: ..."/>
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1816724464" MODIFIED="1599240299887" TEXT="...&#xa;spec:&#xa;  containers:&#xa;    - name: ubuntu&#xa;      securityContext:&#xa;        runAsUser: 1000&#xa;        capabilities:&#xa;          add: [&quot;MAC_ADMIN&quot;]"/>
 </node>
 </node>
 </node>
@@ -2416,7 +2487,7 @@
 <node CREATED="1595868915525" ID="Freemind_Link_1817606610" MODIFIED="1595868928032" TEXT="Ex: senha. token, chave privada"/>
 </node>
 <node CREATED="1595868955278" ID="Freemind_Link_1176230559" MODIFIED="1595868961065" TEXT="Linha de comando">
-<node COLOR="#0000ff" CREATED="1596229405351" ID="Freemind_Link_218973457" MODIFIED="1596229478415" TEXT="generic">
+<node COLOR="#000000" CREATED="1596229405351" ID="Freemind_Link_218973457" MODIFIED="1599154624106" TEXT="generic">
 <node CREATED="1596229425924" ID="Freemind_Link_836642621" MODIFIED="1596229449851" TEXT="Cria um secret gen&#xe9;rico"/>
 <node CREATED="1596229672960" ID="Freemind_Link_151941491" MODIFIED="1596229674326" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_295356546" MODIFIED="1595869005343" TEXT="kubectl create secret generic my-secret --from-literal=pwd=my-password">
@@ -2427,13 +2498,17 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1596229400742" ID="Freemind_Link_1706328522" MODIFIED="1596229472362" TEXT="docker-registry">
+<node COLOR="#000000" CREATED="1596229400742" ID="Freemind_Link_1706328522" MODIFIED="1599154640231" TEXT="docker-registry">
 <node CREATED="1596229410183" ID="Freemind_Link_1019664130" MODIFIED="1596229422025" TEXT="Cria um secret pra uso com o Docker Registry"/>
+<node CREATED="1599156494505" ID="Freemind_Link_898845036" MODIFIED="1599156505235" TEXT="Para referenciar este secret, use a se&#xe7;&#xe3;o"/>
+<node CREATED="1599156407141" ID="Freemind_Link_678386611" MODIFIED="1599156546115" TEXT="Para referenciar este secret, use a se&#xe7;&#xe3;o se&#xe7;&#xe3;o &apos;imagePullSecrets&apos; do Pod">
+<node CREATED="1599156464928" ID="Freemind_Link_1287635523" LINK="#Freemind_Link_548219744" MODIFIED="1599156475744" TEXT="Ver anota&#xe7;&#xe3;oes"/>
+</node>
 <node CREATED="1596229672960" ID="Freemind_Link_1789802529" MODIFIED="1596229674326" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1596229566260" ID="Freemind_Link_1927965605" MODIFIED="1596229617745" TEXT="kubectl create secret docker-registry regcred --docker-server=meu.registry.com:4567 --docker-username=meuusuario --docker-password=abcd@1234 --docker-email=meuEmail@abc.com"/>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1596229407509" ID="Freemind_Link_309192359" MODIFIED="1596229483143" TEXT="tls">
+<node COLOR="#000000" CREATED="1596229407509" ID="Freemind_Link_309192359" MODIFIED="1599154680524" TEXT="tls">
 <node CREATED="1596229451543" ID="Freemind_Link_1076262841" MODIFIED="1596229458390" TEXT="Cria um secret TLS"/>
 <node CREATED="1596229672960" ID="Freemind_Link_1018566459" MODIFIED="1596229674326" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_1437730246" MODIFIED="1595869145555" TEXT="kubectl create secret tls tls-secret --cert=path/to/tls.cert --key=path/to/tls.ket">
@@ -2471,6 +2546,9 @@
 <node CREATED="1595869812903" ID="Freemind_Link_1444340457" MODIFIED="1595869814120" TEXT="Usos">
 <node CREATED="1595869823180" ID="Freemind_Link_951171348" MODIFIED="1595869838055" TEXT="Semelhante ao uso do ConfigMap">
 <node CREATED="1595869839940" ID="Freemind_Link_1888112226" MODIFIED="1595888587915" TEXT="Trocando &apos;configMapRef&apos; por &apos;secretRef&apos;"/>
+</node>
+<node CREATED="1599156407141" ID="Freemind_Link_801055890" MODIFIED="1599156555545" TEXT="Quando o secret for criado para docker-registry use a se&#xe7;&#xe3;o &apos;imagePullSecrets&apos; do Pod">
+<node CREATED="1599156464928" ID="Freemind_Link_1454540914" LINK="#Freemind_Link_548219744" MODIFIED="1599156475744" TEXT="Ver anota&#xe7;&#xe3;oes"/>
 </node>
 </node>
 </node>
@@ -2617,6 +2695,12 @@
 <node CREATED="1595868955278" ID="Freemind_Link_1750139902" MODIFIED="1595868961065" TEXT="Linha de comando">
 <node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_1117197738" MODIFIED="1595953520352" TEXT="kubectl create namespace dev">
 <node CREATED="1595869017286" ID="Freemind_Link_1009005915" MODIFIED="1595953525671" TEXT="Cria o namespace &apos;dev&apos;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_1773678074" MODIFIED="1599064580711" TEXT="kubectl api-resources --namespaced=true">
+<node CREATED="1595869017286" ID="Freemind_Link_563067452" MODIFIED="1599064597885" TEXT="Lista os recursos de cluster que exigem a vincula&#xe7;&#xe3;o a um namespace"/>
+</node>
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_833958567" MODIFIED="1599064603564" TEXT="kubectl api-resources --namespaced=false">
+<node CREATED="1595869017286" ID="Freemind_Link_1948598137" MODIFIED="1599064619102" TEXT="Lista os recursos de cluster que n&#xe3;o s&#xe3;o vincul&#xe1;veis a um namespace"/>
 </node>
 </node>
 <node CREATED="1595951537400" ID="Freemind_Link_1209637459" MODIFIED="1595951540236" TEXT="YAML">
@@ -2915,7 +2999,22 @@
 </node>
 </node>
 </node>
+<node CREATED="1599065070467" FOLDED="true" ID="Freemind_Link_1791945266" MODIFIED="1599065074959" TEXT="Roles/Bindings">
+<node CREATED="1599065079683" ID="Freemind_Link_1055263211" MODIFIED="1599065081655" TEXT="Namespaced">
+<node CREATED="1599065154450" ID="Freemind_Link_734238434" MODIFIED="1599065332845" TEXT="Roles e Rolebinds s&#xe3;o aplicados apenas &#xa;a recursos vinculados a namespaces">
+<node CREATED="1599065337032" ID="Freemind_Link_1182510088" MODIFIED="1599065338262" TEXT="Ex:">
+<node CREATED="1599065377863" ID="Freemind_Link_41655592" MODIFIED="1599065383020" TEXT="configmap"/>
+<node CREATED="1599065384938" ID="Freemind_Link_300786917" MODIFIED="1599065388020" TEXT="pod"/>
+<node CREATED="1599065390541" ID="Freemind_Link_1161742924" MODIFIED="1599065394742" TEXT="service"/>
+<node CREATED="1599065398763" ID="Freemind_Link_1500020543" MODIFIED="1599065401239" TEXT="secret"/>
+<node CREATED="1599065401832" ID="Freemind_Link_1289411504" MODIFIED="1599065405683" TEXT="deployment"/>
+</node>
+</node>
 <node CREATED="1595951529873" FOLDED="true" ID="Freemind_Link_1392265144" MODIFIED="1598537171816" TEXT="Role">
+<node CREATED="1599064918684" ID="Freemind_Link_1503653179" MODIFIED="1599064993931" TEXT="Role s&#xe3;o aplicados apenas aos &apos;Namespaced resources&apos;">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1599064939456" ID="Freemind_Link_1127090765" MODIFIED="1599064990032" TEXT="Apenas os recursos que obrigatoriamente s&#xe3;o vinculados a um namespace &#xe9; que s&#xe3;o manipulados em um &apos;Role&apos;"/>
+</node>
 <node CREATED="1595868955278" ID="Freemind_Link_1755876692" MODIFIED="1595868961065" TEXT="Linha de comando">
 <node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_640018735" MODIFIED="1598537533092" TEXT="kubectl get roles">
 <node CREATED="1595869017286" ID="Freemind_Link_152740146" MODIFIED="1598537540075" TEXT="Exibe as roles criadas no cluster"/>
@@ -2956,6 +3055,8 @@
 <node CREATED="1598538385099" ID="Freemind_Link_697366755" MODIFIED="1598538388354" TEXT="Tipo array"/>
 <node CREATED="1598539838118" ID="Freemind_Link_1165684567" MODIFIED="1598539847425" TEXT="Se&#xe7;&#xe3;o opcional!">
 <icon BUILTIN="messagebox_warning"/>
+<node CREATED="1599061690556" ID="Freemind_Link_175899784" MODIFIED="1599061699938" TEXT="Se n&#xe3;o especificada, todos os PODs ser&#xe3;o contemplados"/>
+<node CREATED="1599061700481" ID="Freemind_Link_815391381" MODIFIED="1599061712020" TEXT="Se especificada, apenas os Pods listados ser&#xe3;o contemplados"/>
 </node>
 <node CREATED="1598539669003" ID="Freemind_Link_416660485" MODIFIED="1598539707006" TEXT="Pode-se especificar os nomes dos recursos aos quais a role se aplica (mais restritivo)"/>
 <node CREATED="1598538393114" ID="Freemind_Link_27255044" MODIFIED="1598538393759" TEXT="Ex:">
@@ -2977,11 +3078,16 @@
 </node>
 </node>
 <node CREATED="1595951551270" ID="Freemind_Link_1602147367" MODIFIED="1595951552490" TEXT="Ex:">
-<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1366965536" MODIFIED="1598537318307" TEXT="apiVersion: rbac.authorization.k8s.io/v1&#xa;kind: Role&#xa;metadata:&#xa;  name: developer&#xa;rules:&#xa;  - apiGroups: [&quot;&quot;]&#xa;    resources: [&quot;pods&quot;]&#xa;    verbs: [&quot;list&quot;, &quot;get&quot;, &quot;create&quot;, &quot;update&quot;, &quot;delete&quot; ]&#xa;  - apiGroups: [&quot;&quot;]&#xa;    resources: [&quot;ConfigMap&quot;]&#xa;    verbs: [&quot;create&quot; ]"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1366965536" MODIFIED="1599061887238" TEXT="apiVersion: rbac.authorization.k8s.io/v1&#xa;kind: Role&#xa;metadata:&#xa;  name: deploy-role&#xa;  namespace: blue&#xa;rules:&#xa;- apiGroups: [&quot;apps&quot;, &quot;extensions&quot;]&#xa;  resources: [&quot;deployments&quot;]&#xa;  verbs: [&quot;create&quot;]"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1285288310" MODIFIED="1598537318307" TEXT="apiVersion: rbac.authorization.k8s.io/v1&#xa;kind: Role&#xa;metadata:&#xa;  name: developer&#xa;rules:&#xa;  - apiGroups: [&quot;&quot;]&#xa;    resources: [&quot;pods&quot;]&#xa;    verbs: [&quot;list&quot;, &quot;get&quot;, &quot;create&quot;, &quot;update&quot;, &quot;delete&quot; ]&#xa;  - apiGroups: [&quot;&quot;]&#xa;    resources: [&quot;ConfigMap&quot;]&#xa;    verbs: [&quot;create&quot; ]"/>
 </node>
 </node>
 </node>
 <node CREATED="1595951529873" FOLDED="true" ID="Freemind_Link_1129790239" MODIFIED="1598537176155" TEXT="RoleBinding">
+<node CREATED="1599064918684" ID="Freemind_Link_1252110107" MODIFIED="1599065020185" TEXT="RoleBinding s&#xe3;o aplicados apenas aos &apos;Namespaced resources&apos;">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1599064939456" ID="Freemind_Link_2100434" MODIFIED="1599065035311" TEXT="Apenas os recursos que obrigatoriamente s&#xe3;o vinculados a um namespace &#xe9; que s&#xe3;o manipulados em um &apos;RoleBinding&apos;"/>
+</node>
 <node CREATED="1598538958278" ID="Freemind_Link_1847286933" MODIFIED="1598538969459" TEXT="Usado para vincular um usu&#xe1;rio a uma role"/>
 <node CREATED="1595868955278" ID="Freemind_Link_1093385210" MODIFIED="1595868961065" TEXT="Linha de comando">
 <node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_1703216540" MODIFIED="1598537557941" TEXT="kubectl get rolebindings">
@@ -3047,7 +3153,64 @@
 </node>
 </node>
 </node>
-<node CREATED="1595951529873" ID="Freemind_Link_1689365564" MODIFIED="1595951582089" TEXT="???">
+</node>
+<node CREATED="1599065084290" ID="Freemind_Link_1510505224" MODIFIED="1599065236261" TEXT="Cluster &#xa;Scoped">
+<node CREATED="1599065154450" ID="Freemind_Link_1071162246" MODIFIED="1599066006639" TEXT="ClusterRoles e Clusterbinds&#xa;s&#xe3;o aplicados a">
+<node CREATED="1599065154450" ID="Freemind_Link_203331090" MODIFIED="1599066038080" TEXT="recursos &apos;cluster wide&apos; (recursos do &#xa;cluster, n&#xe3;o vinculados a namespaces)">
+<node CREATED="1599065337032" ID="Freemind_Link_1684346670" MODIFIED="1599065338262" TEXT="Ex:">
+<node CREATED="1599065433992" ID="Freemind_Link_1326578021" MODIFIED="1599065435525" TEXT="node"/>
+<node CREATED="1599065435896" ID="Freemind_Link_253856951" MODIFIED="1599065437639" TEXT="namespace"/>
+<node CREATED="1599065461032" ID="Freemind_Link_1278178606" MODIFIED="1599065471847" TEXT="persistentvolume"/>
+<node CREATED="1599065473024" ID="Freemind_Link_644319855" MODIFIED="1599065478218" TEXT="persistentvolumeclaim"/>
+<node CREATED="1599065487240" ID="Freemind_Link_174262410" MODIFIED="1599065492309" TEXT="certificatesigningrequest"/>
+</node>
+</node>
+<node CREATED="1599066049687" ID="Freemind_Link_1997317799" MODIFIED="1599066094417" TEXT="recursos namespaced (recursos que &#xa;necessariamente s&#xe3;o vinculados a um namespace)">
+<node CREATED="1599066096821" ID="Freemind_Link_1529748906" MODIFIED="1599066116133" TEXT="Nesse caso, o binding afetar&#xe1; TODOS os namespaces">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+</node>
+<node CREATED="1595951529873" ID="Freemind_Link_1399334198" MODIFIED="1599065139697" TEXT="ClusterRole">
+<node CREATED="1599065292880" ID="Freemind_Link_1017541563" MODIFIED="1599066133493" TEXT="Id&#xea;ntico ao &apos;Role&apos;">
+<node CREATED="1599066146361" ID="Freemind_Link_247326744" LINK="#Freemind_Link_1392265144" MODIFIED="1599066169762" TEXT="Ver anota&#xe7;&#xf5;es do &apos;Role&apos; "/>
+</node>
+<node CREATED="1595951537400" ID="Freemind_Link_1067077925" MODIFIED="1595951540236" TEXT="YAML">
+<node CREATED="1595951551270" ID="Freemind_Link_1380575137" MODIFIED="1595951552490" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1241978294" MODIFIED="1599065606236" TEXT="apiVersion: rbac.authorization.k8s.io/v1&#xa;kind: ClusterRole&#xa;metadata:&#xa;  name: cluster-administrator&#xa;rules:&#xa;  - apiGroups: [&quot;&quot;]&#xa;    resources: [&quot;nodes&quot;]&#xa;    verbs: [&quot;list&quot;, &quot;get&quot;, &quot;create&quot;, &quot;delete&quot; ]"/>
+</node>
+</node>
+</node>
+<node CREATED="1595951529873" ID="Freemind_Link_1790340749" MODIFIED="1599065145385" TEXT="ClusterBinding">
+<node CREATED="1599065292880" ID="Freemind_Link_513752019" MODIFIED="1599066138388" TEXT="Id&#xea;ntico ao &apos;RoleBinding&apos;">
+<node CREATED="1599066146361" ID="Freemind_Link_632873894" LINK="#Freemind_Link_1129790239" MODIFIED="1599066181770" TEXT="Ver anota&#xe7;&#xf5;es do &apos;RoleBinding&apos;"/>
+</node>
+<node CREATED="1595951537400" ID="Freemind_Link_1715498912" MODIFIED="1595951540236" TEXT="YAML">
+<node CREATED="1595951551270" ID="Freemind_Link_654194396" MODIFIED="1595951552490" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_325634600" MODIFIED="1599069102536" TEXT="apiVersion: rbac.authorization.k8s.io/v1&#xa;kind: ClusterRoleBinding&#xa;metadata:&#xa;  name: cluster-admin-role-binding&#xa;subjects:&#xa;  - kind: User&#xa;    name: cluster-admin&#xa;    apiGroup: rbac.authorization.k8s.io&#xa;roleRef:&#xa;  kind: ClusterRole&#xa;  name: cluster-administrator&#xa;  apiGroup: rbac.authorization.k8s.io"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1595951529873" FOLDED="true" ID="Freemind_Link_1689365564" MODIFIED="1599242918620" TEXT="NetworkPolicy">
+<node CREATED="1599242920542" ID="Freemind_Link_813974365" MODIFIED="1599242950068" TEXT="Usado para liberar/barrar tr&#xe1;fego  de entrada e sa&#xed;da de um Pod">
+<node CREATED="1599242943385" MODIFIED="1599242943385" TEXT="Ingress e Egress"/>
+</node>
+<node CREATED="1599244103306" ID="Freemind_Link_165096144" MODIFIED="1599244153367" TEXT="Nem todas as solu&#xe7;&#xf5;es de&#xa;network aceitam o NetworkPolicy">
+<node CREATED="1599244231865" ID="Freemind_Link_1363450873" MODIFIED="1599244254745" TEXT="Mesmo n&#xe3;o suportando, sempre ser&#xe1; poss&#xed;vel criar o NetworkPolicy. Ele s&#xf3; n&#xe3;o far&#xe1; efeito">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node CREATED="1599244142291" ID="Freemind_Link_1476029082" MODIFIED="1599244157518" TEXT="Aceitam:">
+<node CREATED="1599244169924" ID="Freemind_Link_162283507" MODIFIED="1599244174668" TEXT="Kube-router"/>
+<node CREATED="1599244176089" ID="Freemind_Link_1868966352" MODIFIED="1599244177549" TEXT="Calico"/>
+<node CREATED="1599244178973" ID="Freemind_Link_659276029" MODIFIED="1599244180452" TEXT="Romana"/>
+<node CREATED="1599244180964" ID="Freemind_Link_354421981" MODIFIED="1599244183873" TEXT="Weave-net"/>
+</node>
+<node CREATED="1599244144643" ID="Freemind_Link_1233491793" MODIFIED="1599244165216" TEXT="N&#xe3;o aceitam:">
+<node CREATED="1599244184908" ID="Freemind_Link_439274528" MODIFIED="1599244188335" TEXT="Flannel"/>
+</node>
+</node>
 <node CREATED="1595868955278" ID="Freemind_Link_1912289897" MODIFIED="1595868961065" TEXT="Linha de comando">
 <node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_283771724" MODIFIED="1595951572386" TEXT="???">
 <node CREATED="1595869017286" ID="Freemind_Link_1584501016" MODIFIED="1595951574305" TEXT="???"/>
@@ -3057,11 +3220,79 @@
 </node>
 </node>
 <node CREATED="1595951537400" ID="Freemind_Link_1055689448" MODIFIED="1595951540236" TEXT="YAML">
-<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_748229557" MODIFIED="1595951561106" TEXT="???">
-<node CREATED="1592844989287" ID="Freemind_Link_1112136653" MODIFIED="1595951562899" TEXT="???"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_748229557" MODIFIED="1599243144647" TEXT="spec">
+<node CREATED="1592844989287" ID="Freemind_Link_1112136653" MODIFIED="1599243155295" TEXT="Define as especifica&#xe7;&#xf5;es do objeto"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1919522863" MODIFIED="1599243160500" TEXT="podSelector">
+<node CREATED="1592844989287" ID="Freemind_Link_1692619148" MODIFIED="1599243188165" TEXT="Indica a qual/quais Pods essa pol&#xed;tica de rede ser&#xe1; aplicada"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1530451649" MODIFIED="1599243196459" TEXT="matchLabels">
+<node CREATED="1592844989287" ID="Freemind_Link_1405098525" MODIFIED="1599243607558" TEXT="Rela&#xe7;&#xe3;o do par &apos;label&apos; x &apos;valor&apos; dos Pods a serem selecionados"/>
+<node CREATED="1595951551270" ID="Freemind_Link_985200260" MODIFIED="1595951552490" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1444910141" MODIFIED="1599243656906" TEXT="...&#xa;spec:&#xa;  podSelector:&#xa;    matchLabels:&#xa;      role: db&#xa;..."/>
+</node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_792297719" MODIFIED="1599243349781" TEXT="policyTypes">
+<node CREATED="1599243375858" ID="Freemind_Link_1256775877" MODIFIED="1599243378634" TEXT="Tipo Array"/>
+<node CREATED="1592844989287" ID="Freemind_Link_35748772" MODIFIED="1599243366232" TEXT="Indica os tipos de pol&#xed;tica de rede que ser&#xe3;o aplicados"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1045010522" MODIFIED="1599243396545" TEXT="ingress">
+<node CREATED="1599243375858" ID="Freemind_Link_1826470341" MODIFIED="1599243378634" TEXT="Tipo Array"/>
+<node CREATED="1592844989287" ID="Freemind_Link_1123435295" MODIFIED="1599243366232" TEXT="Indica os tipos de pol&#xed;tica de rede que ser&#xe3;o aplicados"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_180844358" MODIFIED="1599244021779" TEXT="-(item)">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1073399090" MODIFIED="1599243955639" TEXT="from">
+<node CREATED="1599243375858" ID="Freemind_Link_848535900" MODIFIED="1599243378634" TEXT="Tipo Array"/>
+<node CREATED="1592844989287" ID="Freemind_Link_1770251480" MODIFIED="1599243488746" TEXT="Indica de quais Pods poder&#xe3;o chegar tr&#xe1;fego"/>
+<node COLOR="#ff00ff" CREATED="1599243955618" ID="Freemind_Link_73589574" MODIFIED="1599243969235" TEXT="-(item)">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_225674248" MODIFIED="1599243507525" TEXT="podSelector">
+<node CREATED="1592844989287" ID="Freemind_Link_1001495476" MODIFIED="1599243543542" TEXT="Seleciona os Pods de onde os tr&#xe1;fegos ser&#xe3;o permitidos"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1132970037" MODIFIED="1599243196459" TEXT="matchLabels">
+<node CREATED="1592844989287" ID="Freemind_Link_164070757" MODIFIED="1599243595513" TEXT="Rela&#xe7;&#xe3;o do par &apos;label&apos; x &apos;valor&apos; dos Pods a serem selecionados"/>
+<node CREATED="1595951551270" ID="Freemind_Link_555033345" MODIFIED="1595951552490" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_759021926" MODIFIED="1599243687217" TEXT="...&#xa;spec:&#xa;  ingress:&#xa;    - from:&#xa;      - podSelector:&#xa;        matchLabels:&#xa;          name: api-pod&#xa;..."/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1847414845" MODIFIED="1599243780405" TEXT="ports">
+<node CREATED="1599243375858" ID="Freemind_Link_1860983389" MODIFIED="1599243378634" TEXT="Tipo Array"/>
+<node CREATED="1592844989287" ID="Freemind_Link_1517772124" MODIFIED="1599243802825" TEXT="Indica quais portas e protocolos ser&#xe3;o aceitos como tr&#xe1;fego de chegada"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_276474468" MODIFIED="1599243807966" TEXT="protocol">
+<node CREATED="1592844989287" ID="Freemind_Link_893705378" MODIFIED="1599243823042" TEXT="Indica o protocolo aceito"/>
+<node CREATED="1599243824119" ID="Freemind_Link_1697603362" MODIFIED="1599243824894" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_50987248" MODIFIED="1599243850388" TEXT="ports:&#xa;  - protocol: TCP"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_950327332" MODIFIED="1599243859002" TEXT="port">
+<node CREATED="1592844989287" ID="Freemind_Link_456068194" MODIFIED="1599243885725" TEXT="Indica a porta de chegada que ser&#xe1; liberada para receber o tr&#xe1;fego"/>
+<node CREATED="1599243824119" ID="Freemind_Link_648589407" MODIFIED="1599243824894" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1543240810" MODIFIED="1599243896734" TEXT="ports:&#xa;  - port: 3306"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
 </node>
 <node CREATED="1595951551270" ID="Freemind_Link_341604891" MODIFIED="1595951552490" TEXT="Ex:">
-<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_346388654" MODIFIED="1595951561106" TEXT="???"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_346388654" MODIFIED="1599243118340" TEXT="apiVersion: networking.k8s.io/v1&#xa;kind: NetworkPolicy&#xa;metadata:&#xa;  name: db-policy&#xa;spec:&#xa;  podSelector:&#xa;    matchLabels:&#xa;      role: db&#xa;  policyTypes:&#xa;    - Ingress&#xa;  ingress:&#xa;    - from:&#xa;      - podSelector:&#xa;        matchLabels:&#xa;          name: api-pod&#xa;      ports:&#xa;        - protocol: TCP&#xa;          port: 3306"/>
+</node>
+</node>
+</node>
+<node CREATED="1595951529873" ID="Freemind_Link_1784173705" MODIFIED="1595951582089" TEXT="???">
+<node CREATED="1595868955278" ID="Freemind_Link_1967800627" MODIFIED="1595868961065" TEXT="Linha de comando">
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_297066360" MODIFIED="1595951572386" TEXT="???">
+<node CREATED="1595869017286" ID="Freemind_Link_1460148529" MODIFIED="1595951574305" TEXT="???"/>
+</node>
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_817320764" MODIFIED="1595951572386" TEXT="???">
+<node CREATED="1595869017286" ID="Freemind_Link_18069954" MODIFIED="1595951574305" TEXT="???"/>
+</node>
+</node>
+<node CREATED="1595951537400" ID="Freemind_Link_1458020013" MODIFIED="1595951540236" TEXT="YAML">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_653186480" MODIFIED="1595951561106" TEXT="???">
+<node CREATED="1592844989287" ID="Freemind_Link_36652104" MODIFIED="1595951562899" TEXT="???"/>
+</node>
+<node CREATED="1595951551270" ID="Freemind_Link_1029784249" MODIFIED="1595951552490" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1221866902" MODIFIED="1595951561106" TEXT="???"/>
 </node>
 </node>
 </node>
