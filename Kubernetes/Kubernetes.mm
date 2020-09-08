@@ -508,6 +508,12 @@
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_213352217" MODIFIED="1595533866158" TEXT="kubectl get cm &lt;nome do configMap&gt; -o yaml"/>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_736681678" MODIFIED="1599579159207" TEXT="networkpolicy">
+<node CREATED="1591997501435" ID="Freemind_Link_1621864097" MODIFIED="1599579169520" TEXT="Lista as pol&#xed;ticas de rede cluster"/>
+<node CREATED="1592316781753" ID="Freemind_Link_895794478" MODIFIED="1592316782633" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_86248970" MODIFIED="1599579192703" TEXT="kubectl get networkpolicy"/>
+</node>
+</node>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1462888654" MODIFIED="1592316036274" TEXT="all">
 <node CREATED="1591997501435" ID="Freemind_Link_982738182" MODIFIED="1592317245780" TEXT="Lista todos os objetos ativos do cluster"/>
 </node>
@@ -3212,11 +3218,8 @@
 </node>
 </node>
 <node CREATED="1595868955278" ID="Freemind_Link_1912289897" MODIFIED="1595868961065" TEXT="Linha de comando">
-<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_283771724" MODIFIED="1595951572386" TEXT="???">
-<node CREATED="1595869017286" ID="Freemind_Link_1584501016" MODIFIED="1595951574305" TEXT="???"/>
-</node>
-<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_1534511972" MODIFIED="1595951572386" TEXT="???">
-<node CREATED="1595869017286" ID="Freemind_Link_541482615" MODIFIED="1595951574305" TEXT="???"/>
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_283771724" MODIFIED="1599579099215" TEXT="kubectl get networkpolicy">
+<node CREATED="1595869017286" ID="Freemind_Link_1584501016" MODIFIED="1599579130928" TEXT="Lista as pol&#xed;ticas de rede criadas"/>
 </node>
 </node>
 <node CREATED="1595951537400" ID="Freemind_Link_1055689448" MODIFIED="1595951540236" TEXT="YAML">
@@ -3234,6 +3237,10 @@
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_792297719" MODIFIED="1599243349781" TEXT="policyTypes">
 <node CREATED="1599243375858" ID="Freemind_Link_1256775877" MODIFIED="1599243378634" TEXT="Tipo Array"/>
 <node CREATED="1592844989287" ID="Freemind_Link_35748772" MODIFIED="1599243366232" TEXT="Indica os tipos de pol&#xed;tica de rede que ser&#xe3;o aplicados"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1865700041" MODIFIED="1599580482588" TEXT="-(Item)">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_251133459" MODIFIED="1599580488060" TEXT="Ingress"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1001078678" MODIFIED="1599580492293" TEXT="Egress"/>
+</node>
 </node>
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1045010522" MODIFIED="1599243396545" TEXT="ingress">
 <node CREATED="1599243375858" ID="Freemind_Link_1826470341" MODIFIED="1599243378634" TEXT="Tipo Array"/>
@@ -3272,9 +3279,45 @@
 </node>
 </node>
 </node>
+<node COLOR="#ff00ff" CREATED="1599579979849" ID="Freemind_Link_297834594" MODIFIED="1599579991505" TEXT="egress">
+<node CREATED="1599579996730" ID="Freemind_Link_509364804" MODIFIED="1599579999887" TEXT="Tipo Array"/>
+<node COLOR="#ff00ff" CREATED="1599579979849" ID="Freemind_Link_1266954562" MODIFIED="1599580006465" TEXT="-(Item)">
+<node COLOR="#ff00ff" CREATED="1599579979849" ID="Freemind_Link_1434180791" MODIFIED="1599580011272" TEXT="to">
+<node CREATED="1599579996730" ID="Freemind_Link_1341579140" MODIFIED="1599579999887" TEXT="Tipo Array"/>
+<node COLOR="#ff00ff" CREATED="1599579979849" ID="Freemind_Link_1798624574" MODIFIED="1599580006465" TEXT="-(Item)">
+<node COLOR="#ff00ff" CREATED="1599579979849" ID="Freemind_Link_750168723" MODIFIED="1599580028584" TEXT="podSelector">
+<node CREATED="1592844989287" ID="Freemind_Link_1036832013" MODIFIED="1599243543542" TEXT="Seleciona os Pods de onde os tr&#xe1;fegos ser&#xe3;o permitidos"/>
+<node COLOR="#ff00ff" CREATED="1599579979849" ID="Freemind_Link_597954403" MODIFIED="1599580038015" TEXT="matchLabels">
+<node CREATED="1592844989287" ID="Freemind_Link_1521101621" MODIFIED="1599243595513" TEXT="Rela&#xe7;&#xe3;o do par &apos;label&apos; x &apos;valor&apos; dos Pods a serem selecionados"/>
+<node CREATED="1595951551270" ID="Freemind_Link_899826485" MODIFIED="1595951552490" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_819214847" MODIFIED="1599580108848" TEXT="...&#xa;spec:&#xa;  egress:&#xa;    - to:&#xa;      - podSelector:&#xa;        matchLabels:&#xa;          name: api-pod&#xa;..."/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1353002200" MODIFIED="1599243780405" TEXT="ports">
+<node CREATED="1599243375858" ID="Freemind_Link_1805142605" MODIFIED="1599243378634" TEXT="Tipo Array"/>
+<node CREATED="1592844989287" ID="Freemind_Link_749190249" MODIFIED="1599580176966" TEXT="Indica quais portas e protocolos ser&#xe3;o aceitos como tr&#xe1;fego de sa&#xed;da"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1924008078" MODIFIED="1599243807966" TEXT="protocol">
+<node CREATED="1592844989287" ID="Freemind_Link_1799958195" MODIFIED="1599243823042" TEXT="Indica o protocolo aceito"/>
+<node CREATED="1599243824119" ID="Freemind_Link_1083686922" MODIFIED="1599243824894" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1263540420" MODIFIED="1599243850388" TEXT="ports:&#xa;  - protocol: TCP"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_845846240" MODIFIED="1599243859002" TEXT="port">
+<node CREATED="1592844989287" ID="Freemind_Link_982070676" MODIFIED="1599580204476" TEXT="Indica a porta de destino que ser&#xe1; liberada para enviar o tr&#xe1;fego"/>
+<node CREATED="1599243824119" ID="Freemind_Link_1367080856" MODIFIED="1599243824894" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1111264923" MODIFIED="1599243896734" TEXT="ports:&#xa;  - port: 3306"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
 </node>
 <node CREATED="1595951551270" ID="Freemind_Link_341604891" MODIFIED="1595951552490" TEXT="Ex:">
-<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_346388654" MODIFIED="1599243118340" TEXT="apiVersion: networking.k8s.io/v1&#xa;kind: NetworkPolicy&#xa;metadata:&#xa;  name: db-policy&#xa;spec:&#xa;  podSelector:&#xa;    matchLabels:&#xa;      role: db&#xa;  policyTypes:&#xa;    - Ingress&#xa;  ingress:&#xa;    - from:&#xa;      - podSelector:&#xa;        matchLabels:&#xa;          name: api-pod&#xa;      ports:&#xa;        - protocol: TCP&#xa;          port: 3306"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_346388654" MODIFIED="1599581159932" TEXT="apiVersion: networking.k8s.io/v1&#xa;kind: NetworkPolicy&#xa;metadata:&#xa;  name: db-policy&#xa;spec:&#xa;  podSelector:&#xa;    matchLabels:&#xa;      role: db&#xa;  policyTypes:&#xa;    - Ingress&#xa;  ingress:&#xa;    - from:&#xa;      - podSelector:&#xa;          matchLabels:&#xa;            name: api-pod&#xa;      ports:&#xa;        - protocol: TCP&#xa;          port: 3306"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1272618472" MODIFIED="1599581164939" TEXT="apiVersion: networking.k8s.io/v1&#xa;kind: NetworkPolicy&#xa;metadata:&#xa;  name: appserver-policy&#xa;spec:&#xa;  podSelector:&#xa;    matchLabels:&#xa;      role: appserver&#xa;  policyTypes:&#xa;    - Egress&#xa;  egress:&#xa;    - to:&#xa;      - podSelector:&#xa;          matchLabels:&#xa;            name: api-pod&#xa;      ports:&#xa;        - protocol: TCP&#xa;          port: 3306"/>
 </node>
 </node>
 </node>
