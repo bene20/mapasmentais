@@ -47,6 +47,21 @@
 </node>
 </node>
 </node>
+<node CREATED="1599582226827" ID="Freemind_Link_58061954" MODIFIED="1599769867064" POSITION="right" TEXT="Estrutura">
+<node CREATED="1599582233530" ID="Freemind_Link_1769272267" MODIFIED="1599582244205" TEXT="No Linux, os arquivos do Docker ficam em:">
+<node COLOR="#0000ff" CREATED="1599582244720" ID="Freemind_Link_1123956488" MODIFIED="1599582264299" TEXT="/var/lib/docker">
+<node COLOR="#0000ff" CREATED="1599582273730" ID="Freemind_Link_92816905" MODIFIED="1599582285228" TEXT="/containers">
+<node CREATED="1599582332788" ID="Freemind_Link_90917361" MODIFIED="1599582369501" TEXT="Local onde ficam armazenados os dados (camadas) dos containers"/>
+</node>
+<node COLOR="#0000ff" CREATED="1599582273730" ID="Freemind_Link_1206053194" MODIFIED="1599582319552" TEXT="/image">
+<node CREATED="1599582332788" ID="Freemind_Link_1631680044" MODIFIED="1599582347253" TEXT="Local onde ficam armazenadas as imagens baixadas e criadas"/>
+</node>
+<node COLOR="#0000ff" CREATED="1599582273730" ID="Freemind_Link_1303604799" MODIFIED="1599582325696" TEXT="/volumes">
+<node CREATED="1599582332788" ID="Freemind_Link_509987543" MODIFIED="1599582382368" TEXT="Local onde ficam armazenados os volumes dos containers"/>
+</node>
+</node>
+</node>
+</node>
 <node CREATED="1563998723358" ID="Freemind_Link_1353472525" MODIFIED="1563998725467" POSITION="right" TEXT="A&#xe7;&#xf5;es">
 <node CREATED="1586036574169" ID="Freemind_Link_1039136497" MODIFIED="1586036580439" TEXT="Container">
 <node CREATED="1563998741165" ID="Freemind_Link_1874998913" MODIFIED="1587400429560" TEXT="Baixar e carregar &#xa;uma imagem">
@@ -87,7 +102,25 @@
 </node>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1773532370" MODIFIED="1563999630321" TEXT="-v pastalocal:pastacontainer">
 <icon BUILTIN="flag"/>
+<node CREATED="1599770644282" ID="Freemind_Link_810449056" MODIFIED="1599770653207" TEXT="Desrecomendado. Ideal &#xe9; usar o --mount"/>
 <node CREATED="1563998982186" ID="Freemind_Link_1549823953" MODIFIED="1563999640745" TEXT="Mapeia uma pasta local em uma pasta do container"/>
+<node CREATED="1599770236805" ID="Freemind_Link_142536975" MODIFIED="1599770238591" TEXT="Tipos">
+<node CREATED="1599770189538" ID="Freemind_Link_619066174" MODIFIED="1599770244405" TEXT="Volume mounting">
+<node CREATED="1599770253218" ID="Freemind_Link_1406346262" MODIFIED="1599770278536" TEXT="Quando se monta um volume na pasta padr&#xe3;o do docker (/var/lib/docker/volume)"/>
+<node CREATED="1599770279409" ID="Freemind_Link_1627666998" MODIFIED="1599770306175" TEXT="N&#xe3;o se especifica um caminho completo do volume no host, apenas o nome do volume"/>
+<node COLOR="#0000ff" CREATED="1587581922152" ID="Freemind_Link_433924386" MODIFIED="1599770407668" TEXT="Ex: -v deployments:/opt/jboss/deployments/">
+<arrowlink COLOR="#ff0000" DESTINATION="Freemind_Link_731901469" ENDARROW="Default" ENDINCLINATION="96;0;" ID="Freemind_Arrow_Link_633336427" STARTARROW="Default" STARTINCLINATION="96;0;"/>
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node CREATED="1599770189538" ID="Freemind_Link_1117077154" MODIFIED="1599770428175" TEXT="Bind mounting">
+<node CREATED="1599770335898" ID="Freemind_Link_607819402" MODIFIED="1599770363086" TEXT="Quando se monta um volume em uma pasta espec&#xed;fica do host (distinta da pasta padr&#xe3;o do docker)"/>
+<node CREATED="1599770367794" ID="Freemind_Link_910764929" MODIFIED="1599770380946" TEXT="Deve-se especificar o caminho completo do volume no host"/>
+<node COLOR="#0000ff" CREATED="1587581922152" ID="Freemind_Link_731901469" MODIFIED="1599770396465" TEXT="Ex: -v /usr/deployments:/opt/jboss/deployments/">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
 <node CREATED="1587582032221" ID="Freemind_Link_1325908523" MODIFIED="1587582041803" TEXT="Pode-se adicionar permiss&#xf5;es ">
 <node CREATED="1587582063856" ID="Freemind_Link_706026025" MODIFIED="1587582087884" TEXT="o &apos;rw&apos; abaixo garante ao container permiss&#xe3;o&#xa;de leitura e escrita na pasta montada"/>
 <node COLOR="#0000ff" CREATED="1587581922152" ID="Freemind_Link_1599359235" MODIFIED="1587582057789" TEXT="Ex: -v /usr/deployments:/opt/jboss/deployments/:rw">
@@ -95,6 +128,15 @@
 </node>
 </node>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1264866677" MODIFIED="1563999658468" TEXT="Ex: docker run -v /home/meuusuario/teste:/var/www">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1599770657546" ID="Freemind_Link_542673448" MODIFIED="1599770672989" TEXT="--mount">
+<icon BUILTIN="flag"/>
+<node CREATED="1599771187710" ID="Freemind_Link_1668628875" MODIFIED="1599771199945" TEXT="Substituto recomendado do par&#xe2;metro &apos;-v&apos;">
+<node CREATED="1599771203333" ID="Freemind_Link_975009559" MODIFIED="1599771207406" TEXT="Este &#xe9; mais verboso"/>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_223484505" MODIFIED="1599770721027" TEXT="Ex: docker run --mount type=bind,source=/data/mysql,target=/var/lib/mysql mysql">
 <icon BUILTIN="idea"/>
 </node>
 </node>
@@ -144,6 +186,14 @@
 <node CREATED="1563998982186" ID="Freemind_Link_826194235" MODIFIED="1583858346344" TEXT="Monta os volumes de um outro container para o container atual"/>
 <node CREATED="1579194665444" ID="Freemind_Link_710290591" MODIFIED="1583858403055" TEXT="Ex: Vou subir o container A mas quero &#xa;montar os volumes do container B para A:&#xa;docker run [...] --volumes-from hash_do_container_B  A"/>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1355668689" MODIFIED="1596814653578" TEXT="Ex: docker container run --volumes-from 777f7dc92da7 --volumes-from ba8c0c54f0f2:ro -i -t ubuntu pwd">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_572731454" MODIFIED="1599770930512" TEXT="--volume-driver">
+<icon BUILTIN="flag"/>
+<node CREATED="1563998982186" ID="Freemind_Link_932115249" MODIFIED="1599770940540" TEXT="Usado para montar volumes na nuvem"/>
+<node CREATED="1579194665444" ID="Freemind_Link_1318036969" MODIFIED="1599770968733" TEXT="Ex: montar um volume no storage da Amazon&#xa;"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1815722739" MODIFIED="1599771024780" TEXT="Ex: docker container run --volume-driver rexray/ebs --mount src=ebs-vol,target=/var/lib/mysql mysql">
 <icon BUILTIN="idea"/>
 </node>
 </node>
