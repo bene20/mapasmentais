@@ -1511,7 +1511,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592315531047" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
+<node CREATED="1592315531047" FOLDED="true" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
 <node CREATED="1592316082413" ID="Freemind_Link_1900255977" MODIFIED="1592316091293" TEXT="Unidade m&#xed;nima do cluster"/>
 <node CREATED="1596637761488" ID="Freemind_Link_557787628" MODIFIED="1596637780453" TEXT="Static Pods:">
 <node CREATED="1596637767688" ID="Freemind_Link_1065461531" LINK="#Freemind_Link_1076101247" MODIFIED="1596637785246" TEXT="Ver documenta&#xe7;&#xe3;o acima"/>
@@ -1911,7 +1911,7 @@
 <node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_108858090" MODIFIED="1596820303088" TEXT="...&#xa;spec:&#xa;  containers: &#xa;    - name ...&#xa;      envFrom:&#xa;        - secretRef:&#xa;            name: app-secret-settings"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_487957306" MODIFIED="1599771392818" TEXT="volumeMounts">
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_487957306" MODIFIED="1599771392818" TEXT="volumeMounts">
 <node CREATED="1599771407754" ID="Freemind_Link_73451198" MODIFIED="1599772237664" TEXT="Monta volumes no container"/>
 <node CREATED="1599772660064" ID="Freemind_Link_691185238" MODIFIED="1599772674283" TEXT="Requer que os volumes tenham sido declarados previamente na se&#xe7;&#xe3;o &apos;volumes&apos; do Pod">
 <node CREATED="1599772307273" ID="Freemind_Link_527302162" LINK="#Freemind_Link_504683107" MODIFIED="1599772314001" TEXT="Ver anota&#xe7;&#xf5;es"/>
@@ -2468,7 +2468,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592843772426" FOLDED="true" ID="Freemind_Link_462714548" MODIFIED="1592844107679" TEXT="PersistentVolumeClaim">
+<node CREATED="1592843772426" ID="Freemind_Link_462714548" MODIFIED="1592844107679" TEXT="PersistentVolumeClaim">
 <node CREATED="1599776605476" ID="Freemind_Link_1970851341" MODIFIED="1599776607741" TEXT="Ou PVC"/>
 <node CREATED="1592843789480" ID="Freemind_Link_77974550" MODIFIED="1592843806700" TEXT="Objeto respons&#xe1;vel por definir permiss&#xf5;es de volumes"/>
 <node CREATED="1594065960231" ID="Freemind_Link_397565660" MODIFIED="1594065971855" TEXT="&#xc9; uma requisi&#xe7;&#xe3;o para o PersistentVolume"/>
@@ -2523,10 +2523,6 @@
 <node CREATED="1594066039413" ID="Freemind_Link_638019430" MODIFIED="1594066058617" TEXT="Geralmente provido por um administrador de cluster"/>
 <node CREATED="1594066063660" ID="Freemind_Link_609507243" MODIFIED="1594066101417" TEXT="Fica dispon&#xed;vel ao Pod mesmo que ele seja reescalonado para um n&#xf3; diferente do n&#xf3; do PV"/>
 <node CREATED="1594066120821" ID="Freemind_Link_1886394958" MODIFIED="1594066137353" TEXT="&#xc9; associado aos Pods via PVC (PersistentVolumeClaim)"/>
-<node CREATED="1595531924989" ID="Freemind_Link_437024806" MODIFIED="1595531928430" TEXT="StorageClass">
-<node CREATED="1595531935792" ID="Freemind_Link_440721128" MODIFIED="1595531944791" TEXT="&#xc9; um tipo de template de storage"/>
-<node CREATED="1595531945317" ID="Freemind_Link_1725657480" MODIFIED="1595531958314" TEXT="Usado para prover storage dinamicamente"/>
-</node>
 <node CREATED="1595951537400" ID="Freemind_Link_436443650" MODIFIED="1595951540236" TEXT="YAML">
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1957809266" MODIFIED="1599774861420" TEXT="kind: PersistentVolume"/>
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_108357218" MODIFIED="1599774872889" TEXT="spec">
@@ -2588,8 +2584,37 @@
 </node>
 </node>
 <node CREATED="1595951551270" ID="Freemind_Link_1626621732" MODIFIED="1595951552490" TEXT="Ex:">
-<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1629339374" MODIFIED="1599776255456" TEXT="apiVersion: v1&#xa;kind: PersistentVolume&#xa;metadata:&#xa;  name: pv-vol1&#xa;spec:&#xa;  accessModes:&#xa;    - ReadWriteOnce&#xa;    capacity:&#xa;      storage: 1Gi&#xa;    awsElasticBlockStore:&#xa;      volumeID: &lt;volume-id&gt;&#xa;      fsType: ext4"/>
-<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1807409388" MODIFIED="1599776287952" TEXT="apiVersion: v1&#xa;kind: PersistentVolume&#xa;metadata:&#xa;  name: pv-vol1&#xa;spec:&#xa;  accessModes:&#xa;    - ReadWriteOnce&#xa;    capacity:&#xa;      storage: 1Gi&#xa;    hostPath:&#xa;      path: /tmp/data"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1629339374" MODIFIED="1601317286376" TEXT="apiVersion: v1&#xa;kind: PersistentVolume&#xa;metadata:&#xa;  name: pv-vol1&#xa;spec:&#xa;  accessModes:&#xa;    - ReadWriteOnce&#xa;  capacity:&#xa;    storage: 1Gi&#xa;  awsElasticBlockStore:&#xa;    volumeID: &lt;volume-id&gt;&#xa;    fsType: ext4"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1807409388" MODIFIED="1601317305580" TEXT="apiVersion: v1&#xa;kind: PersistentVolume&#xa;metadata:&#xa;  name: pv-vol1&#xa;spec:&#xa;  accessModes:&#xa;    - ReadWriteOnce&#xa;  capacity:&#xa;    storage: 1Gi&#xa;  hostPath:&#xa;    path: /tmp/data"/>
+</node>
+</node>
+</node>
+<node CREATED="1595531924989" ID="Freemind_Link_437024806" MODIFIED="1595531928430" TEXT="StorageClass">
+<node CREATED="1595531935792" ID="Freemind_Link_440721128" MODIFIED="1595531944791" TEXT="&#xc9; um tipo de template de storage"/>
+<node CREATED="1595531945317" ID="Freemind_Link_1725657480" MODIFIED="1595531958314" TEXT="Usado para prover storage dinamicamente"/>
+<node CREATED="1601407271801" ID="Freemind_Link_1151142865" MODIFIED="1601407345254" TEXT="Quando se usa o StorageClass, o PV ser&#xe1; criado automaticamente">
+<node CREATED="1601407348230" ID="Freemind_Link_1395546574" MODIFIED="1601407641958" TEXT="Nesse caso, usa-se a se&#xe7;&#xe3;o &apos;storageClassName&apos; no &apos;sec&apos; do PVC para referenciar o StorageClass"/>
+</node>
+<node CREATED="1595951537400" ID="Freemind_Link_784826594" MODIFIED="1595951540236" TEXT="YAML">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1894690136" MODIFIED="1601407510958" TEXT="apiVersion: storage.k8s.io/v1"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1714921932" MODIFIED="1601407493131" TEXT="kind: StorageClass"/>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_871099497" MODIFIED="1601408787184" TEXT="provisioner">
+<node CREATED="1601408787949" ID="Freemind_Link_1053167554" MODIFIED="1601408798529" TEXT="Especifica o provisioner do storage"/>
+<node CREATED="1601408801142" ID="Freemind_Link_1743499092" MODIFIED="1601408802033" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1147718406" MODIFIED="1601408818400" TEXT="provisioner: kubernetes.io/no-provisioner"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_654927034" MODIFIED="1601408833170" TEXT="volumeBindingMode">
+<node CREATED="1601408787949" ID="Freemind_Link_1385179165" MODIFIED="1601408869257" TEXT="Indica o momento em que o binding com o volume deve ser feito"/>
+<node CREATED="1601408801142" ID="Freemind_Link_1469045690" MODIFIED="1601408802033" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_364931232" MODIFIED="1601408846976" TEXT="volumeBindingMode: WaitForFirstConsumer"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1480806620" MODIFIED="1601407715300" TEXT="parameters">
+<node CREATED="1601407718582" ID="Freemind_Link_538866349" MODIFIED="1601407723774" TEXT="Requerido por alguns provisioners"/>
+</node>
+<node CREATED="1595951551270" ID="Freemind_Link_1346124146" MODIFIED="1595951552490" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_268171510" MODIFIED="1601407574975" TEXT="apiVersion: storage.k8s.io/v1&#xa;kind: storageClass&#xa;metadata:&#xa;  name: google-storageprovisioner: kubernetes.io/gce-pd"/>
 </node>
 </node>
 </node>
