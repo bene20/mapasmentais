@@ -680,6 +680,11 @@
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_782962895" MODIFIED="1554818321321" TEXT="idDoCommit">
 <icon BUILTIN="flag"/>
 <node CREATED="1554818342885" ID="Freemind_Link_1425387659" MODIFIED="1554818426648" TEXT="Desfaz todos os commits posteriores ao commit &apos;idDoCommit&apos; (mantendo a pasta de trabalho inalterada)"/>
+<node CREATED="1603140385374" ID="Freemind_Link_1503738420" MODIFIED="1603140386094" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1603140390210" ID="Freemind_Link_586253258" MODIFIED="1603140410942" TEXT="git reset HEAD~1">
+<node CREATED="1603140393742" ID="Freemind_Link_847409607" MODIFIED="1603140400570" TEXT="Remove o &#xfa;ltimo commit do repo local"/>
+</node>
+</node>
 </node>
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_223180679" MODIFIED="1554818819758" TEXT="-- files">
 <icon BUILTIN="flag"/>

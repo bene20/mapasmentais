@@ -616,17 +616,6 @@
 <node CREATED="1593529912608" ID="Freemind_Link_689891044" MODIFIED="1593529923839" TEXT="O comando &#xe9; o que ser&#xe1; executado dentro do container do pod"/>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1045587522" MODIFIED="1593529582477" TEXT="run &lt;nome-deployment&gt;">
-<node CREATED="1591997501435" ID="Freemind_Link_520990633" MODIFIED="1593529411182" TEXT="Cria e executa uma imagem particular em um Pod"/>
-<node CREATED="1593529415655" ID="Freemind_Link_425157657" MODIFIED="1593529438549" TEXT="Cria, tamb&#xe9;m, um Deployment e um ReplicaSet associados ao Pod"/>
-<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1328106586" MODIFIED="1593529499580" TEXT="--image=nomeImagem">
-<icon BUILTIN="flag"/>
-<node CREATED="1592314815568" ID="Freemind_Link_1140430745" MODIFIED="1593529476452" TEXT="Indica qual imagem deve ser utilizada para cria&#xe7;&#xe3;o do container"/>
-<node CREATED="1593529486490" ID="Freemind_Link_589484262" MODIFIED="1593529487579" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1677702973" MODIFIED="1593530325429" TEXT="kubectl run myNginx --image=nginx:alpine"/>
-</node>
-</node>
-</node>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1649773124" MODIFIED="1593529692243" TEXT="port-forward &lt;nome-pod&gt;">
 <node CREATED="1593529415655" ID="Freemind_Link_1899748959" MODIFIED="1593529632358" TEXT="Exp&#xf5;e uma porta de um Pod para o n&#xf3;">
 <node CREATED="1593529634005" ID="Freemind_Link_352943775" MODIFIED="1593529667474" TEXT="Por padr&#xe3;o, as portas dos Pods s&#xf3; s&#xe3;o vis&#xed;veis dentro do cluster"/>
@@ -726,14 +715,31 @@
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_943273599" MODIFIED="1594063564241" TEXT="run">
 <node CREATED="1591997501435" ID="Freemind_Link_1940339625" MODIFIED="1594063578489" TEXT="Cria e executa um Pod">
 <node CREATED="1594063578772" ID="Freemind_Link_779512893" MODIFIED="1594063581560" TEXT="Modo imperativo"/>
+<node CREATED="1604936119884" ID="Freemind_Link_166908272" MODIFIED="1604936131299" TEXT="Cria um deployment associado ao Pod"/>
 </node>
-<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1321817100" MODIFIED="1594063592657" TEXT="&lt;nome-Pod&gt;">
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1045587522" MODIFIED="1604936086632" TEXT="&lt;nome-deployment&gt;">
 <node CREATED="1593799985664" ID="Freemind_Link_136714505" MODIFIED="1594063621648" TEXT="Alternativa ao &apos;kubectl create -f &lt;arquivo-yaml-do-Pod&gt;"/>
-<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_485064967" MODIFIED="1594063679245" TEXT="--image=&lt;nome-imagem&gt;">
+<node CREATED="1591997501435" ID="Freemind_Link_520990633" MODIFIED="1593529411182" TEXT="Cria e executa uma imagem particular em um Pod"/>
+<node CREATED="1593529415655" ID="Freemind_Link_425157657" MODIFIED="1593529438549" TEXT="Cria, tamb&#xe9;m, um Deployment e um ReplicaSet associados ao Pod"/>
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1328106586" MODIFIED="1593529499580" TEXT="--image=nomeImagem">
 <icon BUILTIN="flag"/>
-<node CREATED="1592314815568" ID="Freemind_Link_374988149" MODIFIED="1594063640047" TEXT="Indica qual a imagem a ser usada para o container"/>
-<node CREATED="1593529486490" ID="Freemind_Link_611429808" MODIFIED="1593529487579" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_678386971" MODIFIED="1594063672502" TEXT="kubectl run myNginx --image=nginx:alpine"/>
+<node CREATED="1592314815568" ID="Freemind_Link_1140430745" MODIFIED="1593529476452" TEXT="Indica qual imagem deve ser utilizada para cria&#xe7;&#xe3;o do container"/>
+<node CREATED="1593529486490" ID="Freemind_Link_589484262" MODIFIED="1593529487579" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1677702973" MODIFIED="1593530325429" TEXT="kubectl run myNginx --image=nginx:alpine"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_891825539" MODIFIED="1605006304110" TEXT="--dry-run=client -o yaml">
+<icon BUILTIN="flag"/>
+<node CREATED="1592314815568" ID="Freemind_Link_318336478" MODIFIED="1605006292596" TEXT="N&#xe3;o cria efetivamente o Pod. Apenas exibe o yaml que o criaria"/>
+<node CREATED="1593529486490" ID="Freemind_Link_248621213" MODIFIED="1593529487579" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1246368385" MODIFIED="1605006313927" TEXT="kubectl run myNginx --image=nginx:alpine --dry-run=client -o yaml"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1948152581" MODIFIED="1605006332064" TEXT="--comand &lt;comando&gt;">
+<icon BUILTIN="flag"/>
+<node CREATED="1592314815568" ID="Freemind_Link_1297374935" MODIFIED="1605006358702" TEXT="Define o EntryPoint do Pod a ser criado"/>
+<node CREATED="1593529486490" ID="Freemind_Link_490469310" MODIFIED="1593529487579" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_47320993" MODIFIED="1605006414694" TEXT="kubectl run myNginx --image=nginx:alpine --command sleep 1000"/>
 </node>
 </node>
 </node>
@@ -1511,7 +1517,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592315531047" FOLDED="true" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
+<node CREATED="1592315531047" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
 <node CREATED="1592316082413" ID="Freemind_Link_1900255977" MODIFIED="1592316091293" TEXT="Unidade m&#xed;nima do cluster"/>
 <node CREATED="1596637761488" ID="Freemind_Link_557787628" MODIFIED="1596637780453" TEXT="Static Pods:">
 <node CREATED="1596637767688" ID="Freemind_Link_1065461531" LINK="#Freemind_Link_1076101247" MODIFIED="1596637785246" TEXT="Ver documenta&#xe7;&#xe3;o acima"/>
@@ -1524,6 +1530,20 @@
 </node>
 <node CREATED="1592318444045" ID="Freemind_Link_1209872803" MODIFIED="1592318461700" TEXT="O endere&#xe7;o IP recebido por um POD &#xe9; um endere&#xe7;o de dentro do cluster">
 <node CREATED="1592318462295" ID="Freemind_Link_1278084043" MODIFIED="1592318468594" TEXT="N&#xe3;o &#xe9; vis&#xed;vel de fora do cluster"/>
+</node>
+<node CREATED="1605011818774" ID="Freemind_Link_1410692068" MODIFIED="1605011911910" TEXT="Pods n&#xe3;o t&#xea;m registros criados no &#xa;DNS do cluster de forma autom&#xe1;tica">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1605011913974" ID="Freemind_Link_1856238893" MODIFIED="1605011922023" TEXT="Deve ser habilitado manualmente"/>
+<node CREATED="1605011690296" ID="Freemind_Link_709022295" MODIFIED="1605011694809" TEXT="Nome completo no cluster:">
+<node CREATED="1605011933477" ID="Freemind_Link_1133715204" MODIFIED="1605011955506" TEXT="&#xc9; feito pegando-se o IP do Pod e substituindo-se os pontos por tra&#xe7;os"/>
+<node CREATED="1605011698711" ID="Freemind_Link_1149837247" MODIFIED="1605011999354" TEXT="nomepod.namespace.pod.cluster.local"/>
+<node CREATED="1605011739350" ID="Freemind_Link_122024317" MODIFIED="1605011740769" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1605011743990" ID="Freemind_Link_1105236810" MODIFIED="1605011991450" TEXT="10-244-2-5.apps.pod.cluster.local"/>
+<node COLOR="#ff00ff" CREATED="1605011743990" ID="Freemind_Link_200908172" MODIFIED="1605012080176" TEXT="10-244-1-5.default.pod.cluster.local">
+<node CREATED="1605012082614" ID="Freemind_Link_1063783964" MODIFIED="1605012090568" TEXT="Pod criado no namespace default do cluster"/>
+</node>
+</node>
+</node>
 </node>
 <node CREATED="1592318488620" ID="Freemind_Link_925083509" MODIFIED="1592318504915" TEXT="N&#xe3;o &#xe9; recomendado acessar diretamente um pod">
 <icon BUILTIN="messagebox_warning"/>
@@ -2468,7 +2488,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592843772426" ID="Freemind_Link_462714548" MODIFIED="1592844107679" TEXT="PersistentVolumeClaim">
+<node CREATED="1592843772426" FOLDED="true" ID="Freemind_Link_462714548" MODIFIED="1592844107679" TEXT="PersistentVolumeClaim">
 <node CREATED="1599776605476" ID="Freemind_Link_1970851341" MODIFIED="1599776607741" TEXT="Ou PVC"/>
 <node CREATED="1592843789480" ID="Freemind_Link_77974550" MODIFIED="1592843806700" TEXT="Objeto respons&#xe1;vel por definir permiss&#xf5;es de volumes"/>
 <node CREATED="1594065960231" ID="Freemind_Link_397565660" MODIFIED="1594065971855" TEXT="&#xc9; uma requisi&#xe7;&#xe3;o para o PersistentVolume"/>
@@ -2589,7 +2609,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1595531924989" ID="Freemind_Link_437024806" MODIFIED="1595531928430" TEXT="StorageClass">
+<node CREATED="1595531924989" FOLDED="true" ID="Freemind_Link_437024806" MODIFIED="1595531928430" TEXT="StorageClass">
 <node CREATED="1595531935792" ID="Freemind_Link_440721128" MODIFIED="1595531944791" TEXT="&#xc9; um tipo de template de storage"/>
 <node CREATED="1595531945317" ID="Freemind_Link_1725657480" MODIFIED="1595531958314" TEXT="Usado para prover storage dinamicamente"/>
 <node CREATED="1601407271801" ID="Freemind_Link_1151142865" MODIFIED="1601407345254" TEXT="Quando se usa o StorageClass, o PV ser&#xe1; criado automaticamente">
@@ -2790,6 +2810,15 @@
 <node CREATED="1592325699922" ID="Freemind_Link_112789781" MODIFIED="1592325714101" TEXT="Objeto k8s que fica exposto ao mundo externo"/>
 <node CREATED="1594063837170" ID="Freemind_Link_989566241" MODIFIED="1594063850922" TEXT="Prov&#xea; um ponto de acesso &#xfa;nico para um ou mais pods"/>
 <node CREATED="1592327609358" ID="Freemind_Link_1900887548" MODIFIED="1592327654738" TEXT="Possuem um IP est&#xe1;vel"/>
+<node CREATED="1605011818774" ID="Freemind_Link_1116206985" MODIFIED="1605011852813" TEXT="Services t&#xea;m registros criados no &#xa;DNS do cluster de forma autom&#xe1;tica">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1605011690296" ID="Freemind_Link_1918761353" MODIFIED="1605011694809" TEXT="Nome completo no cluster:">
+<node CREATED="1605011698711" ID="Freemind_Link_1249431695" MODIFIED="1605011715802" TEXT="nomepod.namespace.svc.cluster.local"/>
+<node CREATED="1605011739350" ID="Freemind_Link_893228027" MODIFIED="1605011740769" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1605011743990" ID="Freemind_Link_1351212174" MODIFIED="1605011769885" TEXT="web-app.apps.svc.cluster.local"/>
+</node>
+</node>
+</node>
 <node CREATED="1592326067511" ID="Freemind_Link_1449026450" MODIFIED="1592326101546" TEXT="Quem diz qual &#xe9; o IP a ser acessado pelo ,mundo externo &#xe9; o k8s">
 <icon BUILTIN="messagebox_warning"/>
 <node CREATED="1592326091033" ID="Freemind_Link_58040619" MODIFIED="1592326097860" TEXT="Em ambiente DEV ser&#xe1; o minikube"/>
@@ -3564,6 +3593,68 @@
 </node>
 <node CREATED="1595951551270" ID="Freemind_Link_1029784249" MODIFIED="1595951552490" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1221866902" MODIFIED="1595951561106" TEXT="???"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1604936438648" ID="Freemind_Link_688879133" MODIFIED="1604936443140" POSITION="right" TEXT="Troubleshooting">
+<node CREATED="1604936443694" ID="Freemind_Link_1310028104" MODIFIED="1604936445379" TEXT="Rede">
+<node CREATED="1604936446271" ID="Freemind_Link_1875988166" MODIFIED="1604936457324" TEXT="Verificar a rota default de um n&#xf3; do cluster">
+<node CREATED="1604936458272" ID="Freemind_Link_1218661930" MODIFIED="1604936469963" TEXT="Logar no n&#xf3; (via SSH)">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1604936470930" ID="Freemind_Link_1560173672" MODIFIED="1604936479431" TEXT="Executar:">
+<icon BUILTIN="full-2"/>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_729621897" MODIFIED="1604936500475" TEXT="ip route show default"/>
+</node>
+</node>
+<node CREATED="1604936446271" ID="Freemind_Link_113268372" MODIFIED="1604936516249" TEXT="Verificar as interfaces de um n&#xf3; do cluster">
+<node CREATED="1604936458272" ID="Freemind_Link_579049330" MODIFIED="1604936469963" TEXT="Logar no n&#xf3; (via SSH)">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1604936470930" ID="Freemind_Link_1322885191" MODIFIED="1604936479431" TEXT="Executar:">
+<icon BUILTIN="full-2"/>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_769802852" MODIFIED="1604936522283" TEXT="ip link"/>
+</node>
+</node>
+<node CREATED="1604936446271" ID="Freemind_Link_823130509" MODIFIED="1604937089896" TEXT="Verificar as portas usadas pelos &#xa;servi&#xe7;os de um n&#xf3; do cluster">
+<node CREATED="1604936458272" ID="Freemind_Link_569636544" MODIFIED="1604936469963" TEXT="Logar no n&#xf3; (via SSH)">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1604936470930" ID="Freemind_Link_331606288" MODIFIED="1604936479431" TEXT="Executar:">
+<icon BUILTIN="full-2"/>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_148516032" MODIFIED="1604936652242" TEXT="netstat -ntlp"/>
+</node>
+</node>
+<node CREATED="1604936446271" ID="Freemind_Link_1803333761" MODIFIED="1605005542708" TEXT="Ver a faixa de IP reservada para um determinado link">
+<node CREATED="1604936458272" ID="Freemind_Link_154984940" MODIFIED="1604936469963" TEXT="Logar no n&#xf3; (via SSH)">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1604936470930" ID="Freemind_Link_1474751358" MODIFIED="1605005560489" TEXT="Listar os links criados:">
+<icon BUILTIN="full-2"/>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_729142588" MODIFIED="1605005565286" TEXT="ip link"/>
+</node>
+<node CREATED="1605005585020" ID="Freemind_Link_58567858" MODIFIED="1605005594744" TEXT="Detalhar o link escolhido:">
+<icon BUILTIN="full-3"/>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_328560194" MODIFIED="1605005620419" TEXT="ip addr show &lt;nome_link_escolhido&gt;"/>
+<node CREATED="1605005622020" ID="Freemind_Link_1640981757" MODIFIED="1605005623058" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1615324469" MODIFIED="1605005628967" TEXT="ip addr show weave"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1605009418633" ID="Freemind_Link_666010251" MODIFIED="1605009421092" TEXT="Manifestos">
+<node CREATED="1605009431361" ID="Freemind_Link_1721385596" MODIFIED="1605009444437" TEXT="Manifestos s&#xe3;o os arquivos yaml dos objetos do cluster"/>
+<node CREATED="1605009421744" ID="Freemind_Link_1363955307" MODIFIED="1605009455677" TEXT="Para ver os manifestos do cluster:">
+<node CREATED="1605009456737" ID="Freemind_Link_297964561" MODIFIED="1605009489135" TEXT="Acessar a pasta /etc/kubernetes/manifests">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1605009473871" ID="Freemind_Link_89011869" MODIFIED="1605009492991" TEXT="Abrir o yaml do objeto desejado">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1605009493808" ID="Freemind_Link_1275833251" MODIFIED="1605009494899" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1605009495833" ID="Freemind_Link_161164918" MODIFIED="1605009551055" TEXT="cd /etc/kubernetes/manifests"/>
+<node COLOR="#0000ff" CREATED="1605009506888" ID="Freemind_Link_115566810" MODIFIED="1605009544220" TEXT="vim kube-apiserver.yaml"/>
 </node>
 </node>
 </node>
