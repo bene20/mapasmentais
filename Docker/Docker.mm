@@ -155,7 +155,7 @@
 <icon BUILTIN="flag"/>
 <node CREATED="1563998982186" ID="Freemind_Link_263503526" MODIFIED="1564001007101" TEXT="Atribui um nome ao seu container"/>
 </node>
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1796651428" MODIFIED="1564001017340" TEXT="--network nomerede">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1796651428" MODIFIED="1605887813228" TEXT="--network &lt;nomerede&gt;">
 <icon BUILTIN="flag"/>
 <node CREATED="1563998982186" ID="Freemind_Link_37631227" MODIFIED="1564001068145" TEXT="Atribui uma rede ao seu container"/>
 <node CREATED="1585940263219" ID="Freemind_Link_1935842675" MODIFIED="1585940268270" TEXT="Redes pr&#xe9;-existentes">
@@ -314,10 +314,20 @@
 <node CREATED="1586036581298" ID="Freemind_Link_343859017" MODIFIED="1586036587964" TEXT="Imagem">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_128992638" MODIFIED="1563999114541" TEXT="docker image">
 <icon BUILTIN="wizard"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_695335" MODIFIED="1605887696593" TEXT="build">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1150363135" MODIFIED="1605887701091" TEXT="&lt;diret&#xf3;rio do arquivo Dockerfile&gt;">
+<node CREATED="1605887650194" ID="Freemind_Link_566606773" MODIFIED="1605887663853" TEXT="Deve ser o &#xfa;ltimo par&#xe2;metro do comando &apos;docker image build&apos;">
+<icon BUILTIN="messagebox_warning"/>
 </node>
-<node CREATED="1563999057905" ID="Freemind_Link_761790446" MODIFIED="1586036867238" TEXT="Exibir informa&#xe7;&#xf5;es de uma imagem">
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1480959532" MODIFIED="1586036878283" TEXT="docker image inspect CONTAINERID">
-<icon BUILTIN="wizard"/>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_534704644" MODIFIED="1605887813228" TEXT="--network &lt;nomerede&gt;">
+<icon BUILTIN="flag"/>
+<node CREATED="1563998982186" ID="Freemind_Link_1859846893" MODIFIED="1564001068145" TEXT="Atribui uma rede ao seu container"/>
+<node CREATED="1605887842913" ID="Freemind_Link_1061933290" LINK="#Freemind_Link_1796651428" MODIFIED="1605887910364" TEXT="Ver documenta&#xe7;&#xe3;o acima"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_334510983" MODIFIED="1605887703554" TEXT="inspect CONTAINERID">
+<node CREATED="1563999057905" ID="Freemind_Link_761790446" MODIFIED="1586036867238" TEXT="Exibir informa&#xe7;&#xf5;es de uma imagem"/>
 </node>
 </node>
 <node CREATED="1586038553757" ID="Freemind_Link_1203663429" MODIFIED="1586038560387" TEXT="Hist&#xf3;rico de comandos para cria&#xe7;&#xe3;o da imagem">

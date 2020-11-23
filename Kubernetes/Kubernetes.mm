@@ -1517,7 +1517,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592315531047" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
+<node CREATED="1592315531047" FOLDED="true" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
 <node CREATED="1592316082413" ID="Freemind_Link_1900255977" MODIFIED="1592316091293" TEXT="Unidade m&#xed;nima do cluster"/>
 <node CREATED="1596637761488" ID="Freemind_Link_557787628" MODIFIED="1596637780453" TEXT="Static Pods:">
 <node CREATED="1596637767688" ID="Freemind_Link_1065461531" LINK="#Freemind_Link_1076101247" MODIFIED="1596637785246" TEXT="Ver documenta&#xe7;&#xe3;o acima"/>
@@ -3578,7 +3578,74 @@
 </node>
 </node>
 </node>
-<node CREATED="1595951529873" ID="Freemind_Link_1784173705" MODIFIED="1595951582089" TEXT="???">
+<node CREATED="1595951529873" ID="Freemind_Link_1784173705" MODIFIED="1606167262951" TEXT="Ingress">
+<node CREATED="1606167268966" FOLDED="true" ID="Freemind_Link_169661906" MODIFIED="1606167272294" TEXT="Ingress controller">
+<node CREATED="1606167293308" ID="Freemind_Link_101227297" MODIFIED="1606167308503" TEXT="&#xc9; a ferramenta que faz o load-balancing"/>
+<node CREATED="1606167454009" ID="Freemind_Link_96593433" MODIFIED="1606168670766" TEXT="O K8s n&#xe3;o vem com um Ingress Controller por default. Deve-se escolher um"/>
+<node CREATED="1606167365827" ID="Freemind_Link_1516630542" MODIFIED="1606167385380" TEXT="Ex: Nginx, HaProxy, Traefik">
+<node CREATED="1606167581874" ID="Freemind_Link_1461755312" MODIFIED="1606167585803" TEXT="Recomendado NGinx"/>
+</node>
+<node CREATED="1606168727340" ID="Freemind_Link_664727722" MODIFIED="1606168730198" TEXT="Componentes">
+<node CREATED="1606168730581" ID="Freemind_Link_910410135" MODIFIED="1606168752530" TEXT="&#xc9; necess&#xe1;rio ter um ConfigMap para configurar o NGinx">
+<icon BUILTIN="full-1"/>
+<node CREATED="1606168741027" ID="Freemind_Link_1520818009" MODIFIED="1606168747744" TEXT="Na verdade &#xe9; muito recomend&#xe1;vel"/>
+</node>
+<node CREATED="1606168756683" ID="Freemind_Link_996426695" MODIFIED="1606168780829" TEXT="O container do NGinx precisa ter acesso &#xe0;s vari&#xe1;veis de ambiente POD_NAME e POD_NAMESPACE">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1606168805977" ID="Freemind_Link_1140376940" MODIFIED="1606168842977" TEXT="&#xc9; necess&#xe1;rio criar um Service do tipo NodePort para expor o Ingress">
+<icon BUILTIN="full-3"/>
+</node>
+<node CREATED="1606168864587" ID="Freemind_Link_420891917" MODIFIED="1606168880144" TEXT="&#xc9; necess&#xe1;rio ter um ServiceAccount definido para o ingress">
+<icon BUILTIN="full-4"/>
+<node CREATED="1606168880874" ID="Freemind_Link_1538741474" MODIFIED="1606169068285" TEXT="O Ingress Controller tem um meacnismo de intelig&#xea;ncia que monitora os recursos do ingress e configura o servidor NGinx quando o cen&#xe1;rio muda"/>
+<node CREATED="1606169080552" ID="Freemind_Link_351215530" MODIFIED="1606169396177" TEXT="O Ingress Controller precisa de um Service Account com o conjunto adequado de permiss&#xf5;es (Roles, ClusterRoles e RoleBindings)"/>
+</node>
+</node>
+<node CREATED="1606167634392" ID="Freemind_Link_564537141" MODIFIED="1606169478704" TEXT="&#xc9; publicado no cluster como&#xa;um componente comum">
+<node CREATED="1606168099204" ID="Freemind_Link_904631880" MODIFIED="1606169514753" TEXT="O container precisa ter acesso &#xe1;s vari&#xe1;veis de ambiente POD_NAME e POD_NAMESPACE">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1606168404888" ID="Freemind_Link_1155704552" MODIFIED="1606169517039" TEXT="&#xc9; necess&#xe1;rio especificar as portas a serem usadas pelo Ingress controle (em geral 80 e 443)">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1606168039649" ID="Freemind_Link_801452614" MODIFIED="1606169511670" TEXT="As configura&#xe7;&#xf5;es deve ser passadas via ConfigMap">
+<icon BUILTIN="button_ok"/>
+<node CREATED="1606168049802" ID="Freemind_Link_1194566765" MODIFIED="1606168061510" TEXT="Isso evitar ter que editar os arquivos de configura&#xe7;&#xe3;o do NGinx"/>
+<node CREATED="1606168066986" ID="Freemind_Link_404263714" MODIFIED="1606168078726" TEXT="Maior facilidade na configura&#xe7;&#xe3;o do NGinx"/>
+<node CREATED="1606168367639" ID="Freemind_Link_1581460753" MODIFIED="1606169557929" TEXT="Ele pode ser criado em branco, inicialmente"/>
+<node CREATED="1606169560613" ID="Freemind_Link_1278524179" MODIFIED="1606169561507" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_360886934" MODIFIED="1606169643680" TEXT="apiVersion: v1&#xa;kind: ConfigMap&#xa;metadata:&#xa;  name: nginx-configuration"/>
+</node>
+</node>
+<node CREATED="1606168492381" ID="Freemind_Link_509556457" MODIFIED="1606169617334" TEXT="Para publicar o Ingress controller &#xa;para o mundo externo &#xe9; necess&#xe1;rio&#xa;criar um Service do tipo NodePort">
+<icon BUILTIN="button_ok"/>
+<node CREATED="1606169560613" ID="Freemind_Link_346578609" MODIFIED="1606169561507" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_1374370555" MODIFIED="1606169632043" TEXT="apiVersion: v1&#xa;kind: Service&#xa;metadata:&#xa;  name: nginx-ingress&#xa;spec:&#xa;  type: NodePort&#xa;  ports:&#xa;    - name: http&#xa;      port: 80&#xa;      targetPort: 80&#xa;      protocol: TCP&#xa;    - name: https&#xa;      port: 443&#xa;      targetPort: 443&#xa;      protocol: TCP&#xa;  selector:&#xa;    name: nginx-ingress&#xa;"/>
+</node>
+</node>
+<node CREATED="1606169124944" ID="Freemind_Link_1215940772" MODIFIED="1606169554105" TEXT="Para que o Ingress Controller monitore recursos do Ingress e configure o NGinx adequadamente &#xe9; necess&#xe1;rio dar-lhe permiss&#xe3;o. Isso &#xe9; feito via objeto ServiceAccount com os devidos Roles, ClusterRoles e RoleBindings.">
+<icon BUILTIN="button_ok"/>
+<node CREATED="1606169560613" ID="Freemind_Link_1652665486" MODIFIED="1606169561507" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_90202884" MODIFIED="1606169638254" TEXT="apiVersion: v1&#xa;kind: ServiceAccount&#xa;metadata:&#xa;  name: nginx-ingress-serviceaccount"/>
+</node>
+</node>
+<node CREATED="1606167654086" ID="Freemind_Link_1463624299" MODIFIED="1606167655247" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_689795879" MODIFIED="1606169668751" TEXT="apiVersion: extensions/v1beta1&#xa;kind: Deployment&#xa;metadata:&#xa;  name: nginx-ingress-controller&#xa;spec:&#xa;  replicas: 1&#xa;  selector:&#xa;    matchLabels:&#xa;      name: nginx-ingress&#xa;  template:&#xa;    metadata:&#xa;      labels:&#xa;        name: nginx-ingress&#xa;    spec:&#xa;      containers:&#xa;        - name: nginx-ingress-controller&#xa;          image: quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.21.0&#xa;      args:&#xa;        - /nginx-ingress-controller&#xa;        - --configmap=$(POD_NAMESPACE)/nginx-configuration&#xa;      env:&#xa;        - name: POD_NAME&#xa;          valueFrom:&#xa;            fieldRef:&#xa;              fieldPath: metadata.name&#xa;        - name: POD_NAMESPACE&#xa;          valueFrom:&#xa;            fieldRef:&#xa;              fieldPath: metadata.namespace&#xa;      ports:&#xa;        - name: http&#xa;          containerPort: 80&#xa;        - name: https&#xa;          containerPort: 443">
+<arrowlink COLOR="#fb1105" DESTINATION="Freemind_Link_1374370555" ENDARROW="Default" ENDINCLINATION="502;0;" ID="Freemind_Arrow_Link_867284927" STARTARROW="None" STARTINCLINATION="502;0;"/>
+<arrowlink COLOR="#1608f7" DESTINATION="Freemind_Link_360886934" ENDARROW="Default" ENDINCLINATION="667;0;" ID="Freemind_Arrow_Link_520398246" STARTARROW="None" STARTINCLINATION="667;0;"/>
+<arrowlink COLOR="#0bc60f" DESTINATION="Freemind_Link_90202884" ENDARROW="Default" ENDINCLINATION="481;0;" ID="Freemind_Arrow_Link_1654635997" STARTARROW="None" STARTINCLINATION="481;0;"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1606167318178" ID="Freemind_Link_348960196" MODIFIED="1606167349285" TEXT="Ingress resources">
+<node CREATED="1606167387381" ID="Freemind_Link_39375100" MODIFIED="1606167415902" TEXT="Conjunto de regras que configuram o Ingress"/>
+<node CREATED="1606167430996" ID="Freemind_Link_1097591189" MODIFIED="1606167441604" TEXT="Criado com um arquivo yaml como os demais objetos do K8S"/>
+<node CREATED="1606167495288" ID="Freemind_Link_1092029190" MODIFIED="1606168670764" TEXT="O Ingress controller n&#xe3;o funcionar&#xe1; se n&#xe3;o houver um Ingress Controller publicado tamb&#xe9;m">
+<arrowlink DESTINATION="Freemind_Link_96593433" ENDARROW="Default" ENDINCLINATION="693;34;" ID="Freemind_Arrow_Link_155950445" STARTARROW="Default" STARTINCLINATION="693;34;"/>
+</node>
+</node>
 <node CREATED="1595868955278" ID="Freemind_Link_1967800627" MODIFIED="1595868961065" TEXT="Linha de comando">
 <node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_297066360" MODIFIED="1595951572386" TEXT="???">
 <node CREATED="1595869017286" ID="Freemind_Link_1460148529" MODIFIED="1595951574305" TEXT="???"/>
@@ -3593,6 +3660,24 @@
 </node>
 <node CREATED="1595951551270" ID="Freemind_Link_1029784249" MODIFIED="1595951552490" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1221866902" MODIFIED="1595951561106" TEXT="???"/>
+</node>
+</node>
+</node>
+<node CREATED="1595951529873" ID="Freemind_Link_407808227" MODIFIED="1595951582089" TEXT="???">
+<node CREATED="1595868955278" ID="Freemind_Link_374774445" MODIFIED="1595868961065" TEXT="Linha de comando">
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_1065740102" MODIFIED="1595951572386" TEXT="???">
+<node CREATED="1595869017286" ID="Freemind_Link_1096107739" MODIFIED="1595951574305" TEXT="???"/>
+</node>
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_736456330" MODIFIED="1595951572386" TEXT="???">
+<node CREATED="1595869017286" ID="Freemind_Link_561337051" MODIFIED="1595951574305" TEXT="???"/>
+</node>
+</node>
+<node CREATED="1595951537400" ID="Freemind_Link_1518674203" MODIFIED="1595951540236" TEXT="YAML">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_896478805" MODIFIED="1595951561106" TEXT="???">
+<node CREATED="1592844989287" ID="Freemind_Link_560470685" MODIFIED="1595951562899" TEXT="???"/>
+</node>
+<node CREATED="1595951551270" ID="Freemind_Link_1365419332" MODIFIED="1595951552490" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_210898070" MODIFIED="1595951561106" TEXT="???"/>
 </node>
 </node>
 </node>
