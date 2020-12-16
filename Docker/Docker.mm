@@ -329,15 +329,8 @@
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_334510983" MODIFIED="1605887703554" TEXT="inspect CONTAINERID">
 <node CREATED="1563999057905" ID="Freemind_Link_761790446" MODIFIED="1586036867238" TEXT="Exibir informa&#xe7;&#xf5;es de uma imagem"/>
 </node>
-</node>
-<node CREATED="1586038553757" ID="Freemind_Link_1203663429" MODIFIED="1586038560387" TEXT="Hist&#xf3;rico de comandos para cria&#xe7;&#xe3;o da imagem">
-<node CREATED="1586038516408" ID="Freemind_Link_1955562511" MODIFIED="1586038577049" TEXT="Mostra os comandos utilizados para criar a imagem(layer) especificada em rela&#xe7;&#xe3;o &#xe0; layer base (a da cl&#xe1;usula FROM de onde partiu a imagem)"/>
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_279984031" MODIFIED="1586038541194" TEXT="docker history imagename">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_14534752" MODIFIED="1607634936375" TEXT="tag">
 <icon BUILTIN="wizard"/>
-</node>
-</node>
-</node>
-<node CREATED="1601571140608" ID="Freemind_Link_1541261038" MODIFIED="1601571142249" TEXT="tag">
 <node CREATED="1601571144230" ID="Freemind_Link_1447508689" MODIFIED="1601571153163" TEXT="Registra tags em imagens"/>
 <node CREATED="1601571587647" ID="Freemind_Link_1964154051" MODIFIED="1601571589598" TEXT="Sintaxe:">
 <node CREATED="1601571590192" MODIFIED="1601571590192" TEXT="docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]"/>
@@ -345,18 +338,16 @@
 <node CREATED="1601571761404" ID="Freemind_Link_1677094464" MODIFIED="1601571821779" TEXT="Para que o push da tag seja feito em um reposit&#xf3;rio &#xa;privado &#xe9; necess&#xe1;rio colocar o host e porta do registry">
 <icon BUILTIN="messagebox_warning"/>
 <node CREATED="1601571802786" ID="Freemind_Link_1557378773" MODIFIED="1601571803696" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_594841568" MODIFIED="1601571815233" TEXT="docker tag 0e5574283393 myregistryhost:5000/fedora/httpd:version1.0">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_594841568" MODIFIED="1607634992745" TEXT="docker image tag 0e5574283393 myregistryhost:5000/fedora/httpd:version1.0">
 <icon BUILTIN="wizard"/>
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_14534752" MODIFIED="1601571532344" TEXT="docker tag">
-<icon BUILTIN="wizard"/>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1796691653" MODIFIED="1601571597607" TEXT="&lt;image-ID&gt; &lt;repository&gt;/tag">
 <node CREATED="1601571195738" ID="Freemind_Link_1707846129" MODIFIED="1601571512185" TEXT="Aplica tag a uma imagem por seu ID"/>
 <node CREATED="1601571451804" ID="Freemind_Link_54709352" MODIFIED="1601571452578" TEXT="Ex:">
 <node CREATED="1601571195738" ID="Freemind_Link_1386487314" MODIFIED="1601571406278" TEXT="Aplica tag &quot;httpd:version1.0&quot; do reposit&#xf3;rio &quot;fedora&quot; &#xe0; imagem local de ID &#x201c;0e5574283393&#x201d;"/>
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1023618686" MODIFIED="1601571167283" TEXT="docker tag 0e5574283393 fedora/httpd:version1.0">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1023618686" MODIFIED="1607635003225" TEXT="docker image tag 0e5574283393 fedora/httpd:version1.0">
 <icon BUILTIN="wizard"/>
 </node>
 </node>
@@ -365,7 +356,7 @@
 <node CREATED="1601571195738" ID="Freemind_Link_639210668" MODIFIED="1601571624659" TEXT="Aplica tag a uma imagem por seu nome"/>
 <node CREATED="1601571451804" ID="Freemind_Link_921572181" MODIFIED="1601571452578" TEXT="Ex:">
 <node CREATED="1601571195738" ID="Freemind_Link_643795124" MODIFIED="1601571636766" TEXT="Aplica tag &quot;httpd:version1.0&quot; do reposit&#xf3;rio &quot;fedora&quot; &#xe0; imagem local de nome &quot;httpd&quot;"/>
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1154023824" MODIFIED="1601571651038" TEXT="docker tag httpd fedora/httpd:version1.0">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1154023824" MODIFIED="1607635010827" TEXT="docker image tag httpd fedora/httpd:version1.0">
 <icon BUILTIN="wizard"/>
 </node>
 </node>
@@ -374,10 +365,17 @@
 <node CREATED="1601571195738" ID="Freemind_Link_1840043996" MODIFIED="1601571673261" TEXT="Aplica tag a uma imagem por seu nome e tag"/>
 <node CREATED="1601571451804" ID="Freemind_Link_251273949" MODIFIED="1601571452578" TEXT="Ex:">
 <node CREATED="1601571195738" ID="Freemind_Link_1758077237" MODIFIED="1601571685671" TEXT="Aplica tag &quot;httpd:version1.0&quot; do reposit&#xf3;rio &quot;fedora&quot; &#xe0; imagem local de nome &quot;httpd&quot; e tag &quot;test&quot;"/>
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_65707308" MODIFIED="1601571712142" TEXT="docker tag httpd:test fedora/httpd:version1.0.test">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_65707308" MODIFIED="1607634984767" TEXT="docker image tag httpd:test fedora/httpd:version1.0.test">
 <icon BUILTIN="wizard"/>
 </node>
 </node>
+</node>
+</node>
+</node>
+<node CREATED="1586038553757" ID="Freemind_Link_1203663429" MODIFIED="1586038560387" TEXT="Hist&#xf3;rico de comandos para cria&#xe7;&#xe3;o da imagem">
+<node CREATED="1586038516408" ID="Freemind_Link_1955562511" MODIFIED="1586038577049" TEXT="Mostra os comandos utilizados para criar a imagem(layer) especificada em rela&#xe7;&#xe3;o &#xe0; layer base (a da cl&#xe1;usula FROM de onde partiu a imagem)"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_279984031" MODIFIED="1586038541194" TEXT="docker history imagename">
+<icon BUILTIN="wizard"/>
 </node>
 </node>
 </node>
@@ -502,7 +500,10 @@
 </node>
 <node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1487280853" MODIFIED="1583414482496" TEXT="LABEL">
 <node CREATED="1563994389535" ID="Freemind_Link_533571335" MODIFIED="1583414506924" TEXT="Especifica metadados para a imagem do container"/>
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_618948832" MODIFIED="1583414536266" TEXT="Ex: LABEL maintainer &apos;Eben&#xe9;zer &lt;ebenezer.botelho@email.com&gt;&apos;">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_618948832" MODIFIED="1607634069677" TEXT="Ex: LABEL maintainer=&apos;Eben&#xe9;zer &lt;ebenezer.botelho@email.com&gt;&apos;">
+<icon BUILTIN="idea"/>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_561456325" MODIFIED="1607634060947" TEXT="Ex: LABEL application=&quot;sca-trt10&quot;">
 <icon BUILTIN="idea"/>
 </node>
 </node>
