@@ -91,6 +91,71 @@
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_71787239" MODIFIED="1609883864614" TEXT="dataset.isnull()"/>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_594354325" MODIFIED="1610041946423" TEXT="fillna">
+<node CREATED="1609876580616" ID="Freemind_Link_1168890455" MODIFIED="1610041967455" TEXT="Preenche campos que estiverem com valor na por um valor definido"/>
+<node CREATED="1609883837322" ID="Freemind_Link_1171884536" MODIFIED="1610041988047" TEXT="Pode ser no pr&#xf3;prio conjunto de dados (inplace)"/>
+<node CREATED="1609876605273" ID="Freemind_Link_521589735" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_706670206" MODIFIED="1610042044648" TEXT="mediana = sts.median(dataset[&apos;Salario&apos;])&#xa;dataset[&apos;Salario&apos;].fillna(mediana, inplace=True)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1087458890" MODIFIED="1610042766118" TEXT="loc">
+<node CREATED="1609876580616" ID="Freemind_Link_1071284837" MODIFIED="1610043135282" TEXT="Localiza valores de dados espec&#xed;ficos do conjunto de dados">
+<node CREATED="1610043139456" ID="Freemind_Link_1475402869" MODIFIED="1610043153084" TEXT="Tamb&#xe9;m permite a altera&#xe7;&#xe3;o do valor dos registros encontrados"/>
+</node>
+<node CREATED="1609883837322" ID="Freemind_Link_948432016" MODIFIED="1610567485509" TEXT="No colchete, indicar o filtro e os labels das linhas e/ou colunas a serem recuperadas">
+<arrowlink COLOR="#0dc316" DESTINATION="Freemind_Link_90805432" ENDARROW="Default" ENDINCLINATION="140;0;" ID="Freemind_Arrow_Link_1030430501" STARTARROW="Default" STARTINCLINATION="140;0;"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_1866618778" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1631935664" MODIFIED="1610042833918" TEXT="dataset.loc[dataset[&apos;Genero&apos;]==&apos;M&apos;, &apos;Genero&apos;] = &apos;Masculino&apos;">
+<node CREATED="1610042841402" ID="Freemind_Link_1447759437" MODIFIED="1610042890836" TEXT="Todo registro da coluna &apos;Genero&apos; cujo valor &#xa;for igual a &apos;M&apos; ser&#xe1; substitu&#xed;do por &apos;Masculino&apos;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_95233279" MODIFIED="1610042837805" TEXT="dataset.loc[dataset[&apos;Genero&apos;].isin([&apos;F&apos;,&apos;Fem&apos;]), &apos;Genero&apos;] = &apos;Feminino&apos;">
+<node CREATED="1610042841402" ID="Freemind_Link_1940049847" MODIFIED="1610042924094" TEXT="Todo registro da coluna &apos;Genero&apos; cujo valor for &#xa;igual a &apos;F&apos; ou &apos;Fem&apos; ser&#xe1; substitu&#xed;do por &apos;Masculino&apos;"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1323812450" MODIFIED="1610564510732" TEXT="iloc">
+<node CREATED="1609876580616" ID="Freemind_Link_1439846781" MODIFIED="1610043135282" TEXT="Localiza valores de dados espec&#xed;ficos do conjunto de dados">
+<node CREATED="1610043139456" ID="Freemind_Link_341857893" MODIFIED="1610043153084" TEXT="Tamb&#xe9;m permite a altera&#xe7;&#xe3;o do valor dos registros encontrados"/>
+</node>
+<node CREATED="1609883837322" ID="Freemind_Link_90805432" MODIFIED="1610567476421" TEXT="No colchete, indicar o filtro e os &#xed;ndices das linhas e/ou colunas a serem recuperadas"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1775854651" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1556885800" MODIFIED="1610564548764" TEXT="datase.iloc[:,1]">
+<node CREATED="1610042841402" ID="Freemind_Link_1595846412" MODIFIED="1610564566064" TEXT="Obt&#xe9;m todas as linhas da coluna 1 de dataset"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1065112341" MODIFIED="1610566483304" TEXT="datase.iloc[(df[&apos;Age&apos;]&lt;30).values, [1,3]]">
+<node CREATED="1610042841402" ID="Freemind_Link_584134793" MODIFIED="1610564587854" TEXT="Obt&#xe9;m o registro da linha 2, coluna 3 do dataset"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_26604882" MODIFIED="1610044002953" TEXT="duplicated">
+<node CREATED="1609883837322" ID="Freemind_Link_1094807250" MODIFIED="1610044104596" TEXT="Obt&#xe9;m a lista dos registros duplicados do conjunto de dados"/>
+<node CREATED="1610044372165" ID="Freemind_Link_499873282" MODIFIED="1610044409661" TEXT="&#xc9; necess&#xe1;rio indocar as colunas que ser&#xe3;o consideradas &#xa;na an&#xe1;lise de unicidade (esp&#xe9;cie de chave prim&#xe1;ria)"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1690856367" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1346807296" MODIFIED="1610044135348" TEXT="dataset.duplicated([&apos;Id&apos;])"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_213074378" MODIFIED="1610044316561" TEXT="dataset[dataset.duplicated([&apos;Id&apos;],keep=False)]">
+<node CREATED="1610044317340" ID="Freemind_Link_494702324" MODIFIED="1610044346862" TEXT="Exibe os dados dos registros duplicados"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_71887836" MODIFIED="1610044499645" TEXT="drop_duplicates">
+<node CREATED="1609883837322" ID="Freemind_Link_1357086379" MODIFIED="1610044505459" TEXT="Remove registros duplicados"/>
+<node CREATED="1610044372165" ID="Freemind_Link_1269145428" MODIFIED="1610044409661" TEXT="&#xc9; necess&#xe1;rio indocar as colunas que ser&#xe3;o consideradas &#xa;na an&#xe1;lise de unicidade (esp&#xe9;cie de chave prim&#xe1;ria)"/>
+<node CREATED="1610044550216" ID="Freemind_Link_489162281" MODIFIED="1610044552211" TEXT="Par&#xe2;metros">
+<node COLOR="#ff0000" CREATED="1610044554190" ID="Freemind_Link_98723439" MODIFIED="1610044601705" TEXT="keep">
+<node CREATED="1610044558360" ID="Freemind_Link_604037972" MODIFIED="1610044566883" TEXT="Indica se voc&#xea; quer manter algum registro, e qual"/>
+</node>
+<node COLOR="#ff0000" CREATED="1610044570405" ID="Freemind_Link_1459855105" MODIFIED="1610044606601" TEXT="inplace">
+<node CREATED="1610044573145" ID="Freemind_Link_1334670878" MODIFIED="1610044590508" TEXT="Indica se a altera&#xe7;&#xe3;o deve ser feita no conjunto de dados original"/>
+</node>
+<node COLOR="#ff0000" CREATED="1610044570405" ID="Freemind_Link_1084367419" MODIFIED="1610044614403" TEXT="subset">
+<node CREATED="1610044573145" ID="Freemind_Link_728171877" MODIFIED="1610044657266" TEXT="Indica qual coluna deve ser analisada em busca das duplicatas (qual coluna diferencia os registros)"/>
+</node>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_1742814530" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1365368353" MODIFIED="1610044541833" TEXT="dataset.drop_duplicates(subset=&quot;Id&quot;, keep=&apos;first&apos;, inplace=True)"/>
+</node>
+</node>
 </node>
 </node>
 <node CREATED="1609882168013" ID="Freemind_Link_443417354" MODIFIED="1609882169290" TEXT="Series">
@@ -148,6 +213,13 @@
 <node CREATED="1609876580616" ID="Freemind_Link_1244539760" MODIFIED="1609883202960" TEXT="Plota o histograma  de um conjuto de dados, mostrando a curva"/>
 <node CREATED="1609876605273" ID="Freemind_Link_851629053" MODIFIED="1609876606302" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_836406576" MODIFIED="1609883231089" TEXT="srn.distplot(dataset[&apos;Score&apos;]).set_title(&apos;Socre&apos;)"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_561866657" MODIFIED="1610572776407" TEXT="srn.distplot(dataset[&apos;Score&apos;], kde=True, &#xa;                   bins=6, hist=True,&#xa;                   hist_kws={&apos;edgecolor&apos;: &apos;blue&apos;}, &#xa;                   color=&apos;blue&apos;).set_title(&apos;Socre&apos;)">
+<node CREATED="1610572460968" ID="Freemind_Link_1914569891" MODIFIED="1610572758606" TEXT="&apos;kde=True&apos; Plota a curva da linha de densidade junto ao histograma"/>
+<node CREATED="1610572779251" ID="Freemind_Link_1584078036" MODIFIED="1610572788838" TEXT="&apos;hist=True&apos; Plota as barras do histograma"/>
+<node CREATED="1610572511447" ID="Freemind_Link_457125700" MODIFIED="1610572528786" TEXT="&apos;bins=6&apos; Seta a quantidade de barras do histograma para 6 (seis eixos)"/>
+<node CREATED="1610572567149" ID="Freemind_Link_1716862480" MODIFIED="1610572580457" TEXT="&quot;color=&apos;blue&apos;&quot; define a cor do gr&#xe1;fico como azul"/>
+<node CREATED="1610572657964" ID="Freemind_Link_1825257974" MODIFIED="1610572687865" TEXT="&quot;hist_kws={&apos;edgecolor&apos;: &apos;blue&apos;}&quot; Define a cor da borda das barras do histograma como azul"/>
+</node>
 </node>
 </node>
 </node>
@@ -165,13 +237,17 @@
 </node>
 </node>
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1990845122" MODIFIED="1609880116495" TEXT="median">
-<node CREATED="1609876580616" ID="Freemind_Link_35170248" MODIFIED="1609880159148" TEXT="Calcula a mediana dos valores de uma lista"/>
+<node CREATED="1609876580616" ID="Freemind_Link_35170248" MODIFIED="1609880159148" TEXT="Calcula a mediana dos valores de uma lista">
+<node CREATED="1610043202159" ID="Freemind_Link_1561765007" MODIFIED="1610043216390" TEXT="A mediana &#xe9; menos sujeita a valores fora do padr&#xe3;o (outliers)"/>
+</node>
 <node CREATED="1609876605273" ID="Freemind_Link_592030005" MODIFIED="1609876606302" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1527696908" MODIFIED="1609880166018" TEXT="x = sts.median(lst)"/>
 </node>
 </node>
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_412274079" MODIFIED="1609881131307" TEXT="mode">
-<node CREATED="1609876580616" ID="Freemind_Link_1902206674" MODIFIED="1609882544644" TEXT="Calcula a moda dos valores de uma lista"/>
+<node CREATED="1609876580616" ID="Freemind_Link_1902206674" MODIFIED="1609882544644" TEXT="Calcula a moda dos valores de uma lista">
+<node CREATED="1610042384485" ID="Freemind_Link_892171664" MODIFIED="1610042391119" TEXT="A moda &#xe9; o valor que mais ocorre"/>
+</node>
 <node CREATED="1609876605273" ID="Freemind_Link_179242398" MODIFIED="1609876606302" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_5417713" MODIFIED="1609881167410" TEXT="x = sts.mode(lst)"/>
 </node>
@@ -186,6 +262,60 @@
 <node CREATED="1609876580616" ID="Freemind_Link_1338272202" MODIFIED="1609881198907" TEXT="Calcula a vari&#xe2;ncia dos valores de uma lista"/>
 <node CREATED="1609876605273" ID="Freemind_Link_873185799" MODIFIED="1609876606302" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1293789533" MODIFIED="1609881207321" TEXT="x = sts.variance(lst)"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1610547824229" ID="Freemind_Link_1400798417" MODIFIED="1610547826796" POSITION="right" TEXT="Numpy">
+<node CREATED="1609876497969" ID="Freemind_Link_1127785882" MODIFIED="1610547875182" TEXT="Trabalho com estat&#xed;stica"/>
+<node CREATED="1610547908748" ID="Freemind_Link_1139902648" MODIFIED="1610547914144" TEXT="Biblioteca cient&#xed;fica"/>
+<node CREATED="1609876661409" ID="Freemind_Link_652425837" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_341612145" MODIFIED="1610547866975" TEXT="import numpy as np"/>
+</node>
+<node CREATED="1610547852579" ID="Freemind_Link_1341626660" MODIFIED="1610547854446" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_961209902" MODIFIED="1610551133897" TEXT="histogram">
+<node CREATED="1609876580616" ID="Freemind_Link_663956981" MODIFIED="1610551149601" TEXT="Gera o array com os pontos do histograma dos dados"/>
+<node CREATED="1610551173790" ID="Freemind_Link_343328552" MODIFIED="1610551177409" TEXT="Argumentos">
+<node CREATED="1610551178934" ID="Freemind_Link_541911818" MODIFIED="1610551180265" TEXT="bins">
+<node CREATED="1610551180614" ID="Freemind_Link_1084757477" MODIFIED="1610551190376" TEXT="Indica quantos eixos (barras) deve ter no histograma"/>
+</node>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_278485905" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_760144888" MODIFIED="1610551170913" TEXT="np.histogram(base.iloc[:,1], bins=6)"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1610547827467" ID="Freemind_Link_1107441332" MODIFIED="1610547831694" POSITION="right" TEXT="Matplotlib">
+<node CREATED="1610550899375" ID="Freemind_Link_390408308" MODIFIED="1610550904355" TEXT=".pyplot">
+<node CREATED="1609876497969" ID="Freemind_Link_1329424061" MODIFIED="1609876508356" TEXT="Trabalho com gr&#xe1;ficos"/>
+<node CREATED="1609876661409" ID="Freemind_Link_579355271" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_360305371" MODIFIED="1610550930427" TEXT="import matplotlib.pyplot as plt"/>
+</node>
+<node CREATED="1610547852579" ID="Freemind_Link_1245451147" MODIFIED="1610547854446" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1771279890" MODIFIED="1610550942698" TEXT="hist">
+<node CREATED="1609876580616" ID="Freemind_Link_1377027773" MODIFIED="1610550950835" TEXT="Plota o histograma dos dados"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1853392264" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1456559388" MODIFIED="1610550972962" TEXT="plt.hist(base.iloc[:,1], bins=6)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_316309538" MODIFIED="1610551028643" TEXT="title">
+<node CREATED="1609876580616" ID="Freemind_Link_1422803735" MODIFIED="1610551038163" TEXT="Define o t&#xed;tulo do gr&#xe1;fico"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1591831169" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_424773552" MODIFIED="1610551050138" TEXT="plt.title(&apos;&#xc1;rvores&apos;)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_789001210" MODIFIED="1610551055977" TEXT="ylabel">
+<node CREATED="1609876580616" ID="Freemind_Link_557929981" MODIFIED="1610551070490" TEXT="Define o texto do eixo das ordenadas do gr&#xe1;fico"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1476136053" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_272446595" MODIFIED="1610551081764" TEXT="plt.ylabel(&apos;Frequencia&apos;)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1317825242" MODIFIED="1610551092161" TEXT="xlabel">
+<node CREATED="1609876580616" ID="Freemind_Link_1567512718" MODIFIED="1610551097721" TEXT="Define o texto do eixo das absci&#xe7;as do gr&#xe1;fico"/>
+<node CREATED="1609876605273" ID="Freemind_Link_604415105" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1315435058" MODIFIED="1610551106514" TEXT="plt.xlabel(&apos;Altura&apos;)"/>
+</node>
 </node>
 </node>
 </node>
