@@ -986,7 +986,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1591997286697" FOLDED="true" ID="Freemind_Link_288764766" MODIFIED="1591997547957" TEXT="minikube">
+<node COLOR="#0000ff" CREATED="1591997286697" ID="Freemind_Link_288764766" MODIFIED="1591997547957" TEXT="minikube">
 <node CREATED="1596205466443" ID="Freemind_Link_1462077979" MODIFIED="1596205477704" TEXT="&#xc9; uma VM que roda um n&#xf3; (o master) do k8s"/>
 <node CREATED="1591997581539" ID="Freemind_Link_1189140737" MODIFIED="1591997588821" TEXT="S&#xf3; funciona se a virtualiza&#xe7;&#xe3;o estiver habilitada">
 <node CREATED="1591997632538" ID="Freemind_Link_1004617445" MODIFIED="1591997724800" TEXT="Para checar, certifique-se de que a execu&#xe7;&#xe3;o&#xa;do comando abaixo n&#xe3;o retorna vazia"/>
@@ -1567,7 +1567,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592315531047" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
+<node CREATED="1592315531047" FOLDED="true" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
 <node CREATED="1592316082413" ID="Freemind_Link_1900255977" MODIFIED="1592316091293" TEXT="Unidade m&#xed;nima do cluster"/>
 <node CREATED="1596637761488" ID="Freemind_Link_557787628" MODIFIED="1596637780453" TEXT="Static Pods:">
 <node CREATED="1596637767688" ID="Freemind_Link_1065461531" LINK="#Freemind_Link_1076101247" MODIFIED="1596637785246" TEXT="Ver documenta&#xe7;&#xe3;o acima"/>
@@ -3732,7 +3732,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1604936438648" ID="Freemind_Link_688879133" MODIFIED="1604936443140" POSITION="right" TEXT="Troubleshooting">
+<node CREATED="1604936438648" FOLDED="true" ID="Freemind_Link_688879133" MODIFIED="1604936443140" POSITION="right" TEXT="Troubleshooting">
 <node CREATED="1604936443694" ID="Freemind_Link_1310028104" MODIFIED="1604936445379" TEXT="Rede">
 <node CREATED="1604936446271" ID="Freemind_Link_1875988166" MODIFIED="1604936457324" TEXT="Verificar a rota default de um n&#xf3; do cluster">
 <node CREATED="1604936458272" ID="Freemind_Link_1218661930" MODIFIED="1604936469963" TEXT="Logar no n&#xf3; (via SSH)">

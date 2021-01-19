@@ -42,7 +42,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1575574182808" FOLDED="true" ID="Freemind_Link_1468390236" MODIFIED="1575574184422" POSITION="right" TEXT="Plugins">
+<node CREATED="1575574182808" ID="Freemind_Link_1468390236" MODIFIED="1575574184422" POSITION="right" TEXT="Plugins">
 <node CREATED="1575574678611" ID="Freemind_Link_821896362" MODIFIED="1575574683130" TEXT="https://maven.apache.org/plugins/index.html">
 <icon BUILTIN="attach"/>
 </node>
@@ -116,9 +116,36 @@
 </node>
 <node COLOR="#0033ff" CREATED="1586039274872" ID="Freemind_Link_165853281" MODIFIED="1586039629940" TEXT="tree">
 <node CREATED="1586039298692" ID="Freemind_Link_267516645" MODIFIED="1586039639425" TEXT="Exibe a &#xe1;rvore de depend&#xea;ncias do projeto"/>
+<node CREATED="1610747823410" ID="Freemind_Link_1269754506" MODIFIED="1610747823410" TEXT="">
+<node CREATED="1610747824651" ID="Freemind_Link_819140610" MODIFIED="1610747851016" TEXT="Muito &#xfa;til para encontrar conflitos entre depend&#xea;ncias">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+<node CREATED="1610744729758" ID="Freemind_Link_134781858" MODIFIED="1610744737910" TEXT="">
+<icon BUILTIN="flag"/>
+<node CREATED="1610744740783" ID="Freemind_Link_257233157" MODIFIED="1610744743389" TEXT="-Dverbose">
+<node CREATED="1610744743907" ID="Freemind_Link_1156107836" MODIFIED="1610744747530" TEXT="Exibe conflitos"/>
+<node CREATED="1610744754362" ID="Freemind_Link_297791298" MODIFIED="1610744760934" TEXT="Ex: ">
+<node COLOR="#0000ff" CREATED="1610744776709" ID="Freemind_Link_316266569" MODIFIED="1610744796637" TEXT="mvn dependency:tree -Dverbose"/>
+</node>
+</node>
+</node>
 </node>
 <node COLOR="#0033ff" CREATED="1586039274872" ID="Freemind_Link_136210012" MODIFIED="1586039745118" TEXT="go-offline">
 <node CREATED="1586039298692" ID="Freemind_Link_1094584831" MODIFIED="1586039824684" TEXT="Resolve todas as depend&#xea;ncias de um projeto com o reposit&#xf3;rio, &#xa;incluindo plugins e reports e suas depend&#xea;ncias recursivamente"/>
+</node>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1575574185200" ID="Freemind_Link_1218816051" MODIFIED="1610731461448" TEXT="versions">
+<node CREATED="1610744533040" ID="Freemind_Link_101708281" MODIFIED="1610744560853" TEXT="Lista plugins e depend&#xea;ncias que podem ser atualizadas (existem vers&#xf5;es mais novas no reposit&#xf3;rio)"/>
+<node CREATED="1610744463812" ID="Freemind_Link_1987292885" MODIFIED="1610744465272" TEXT="Goals">
+<node COLOR="#0000ff" CREATED="1575574418093" ID="Freemind_Link_803292176" MODIFIED="1610744469827" TEXT="display-plugin-updates">
+<node CREATED="1575574536550" ID="Freemind_Link_984780655" MODIFIED="1610731339405" TEXT="Consulta as vers&#xf5;es dos plugins que podem ser atualizados"/>
+<node CREATED="1610731341574" ID="Freemind_Link_1635281653" MODIFIED="1610744519551" TEXT="Requer a instala&#xe7;&#xe3;o do plugin &apos;versions-maven-plugin&apos;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1575574418093" ID="Freemind_Link_587889947" MODIFIED="1610744478236" TEXT="display-dependency-updates">
+<node CREATED="1575574536550" ID="Freemind_Link_980443257" MODIFIED="1610731402756" TEXT="Consulta as vers&#xf5;es das depend&#xea;ncias que podem ser atualizados"/>
+<node CREATED="1610731341574" ID="Freemind_Link_1985129015" MODIFIED="1610744514003" TEXT="Requer a instala&#xe7;&#xe3;o do plugin &apos;versions-maven-plugin&apos;"/>
 </node>
 </node>
 </node>

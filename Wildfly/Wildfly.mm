@@ -532,5 +532,10 @@
 </node>
 </node>
 </node>
+<node CREATED="1610665481788" ID="Freemind_Link_1763114895" MODIFIED="1610665485597" POSITION="right" TEXT="ver vers&#xe3;o">
+<node CREATED="1610665488158" ID="Freemind_Link_816587147" MODIFIED="1610665491249" TEXT="Acessar:">
+<node COLOR="#0000ff" CREATED="1610665498772" ID="Freemind_Link_195069804" MODIFIED="1610665510120" TEXT="http://localhost:9990/console/index.html#standalone-server"/>
+</node>
+</node>
 </node>
 </map>
