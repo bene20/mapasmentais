@@ -418,7 +418,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1591997555354" ID="Freemind_Link_1121402737" MODIFIED="1591997566014" POSITION="right" TEXT="Ferramentas">
+<node CREATED="1591997555354" FOLDED="true" ID="Freemind_Link_1121402737" MODIFIED="1591997566014" POSITION="right" TEXT="Ferramentas">
 <node COLOR="#0000ff" CREATED="1597409823944" FOLDED="true" ID="Freemind_Link_1270117106" MODIFIED="1597409834931" TEXT="kubeadm">
 <node CREATED="1597409873583" ID="Freemind_Link_1028947641" MODIFIED="1597409888010" TEXT="Ferramenta de administra&#xe7;&#xe3;o do cluster (instala&#xe7;&#xe3;o e configura&#xe7;&#xe3;o)"/>
 <node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_588434013" MODIFIED="1597409845241" TEXT="upgrade">
@@ -1534,7 +1534,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592315528094" FOLDED="true" ID="Freemind_Link_1064829192" MODIFIED="1592317218772" POSITION="right" TEXT="Objetos k8s">
+<node CREATED="1592315528094" ID="Freemind_Link_1064829192" MODIFIED="1592317218772" POSITION="right" TEXT="Objetos k8s">
 <node CREATED="1592317521186" ID="Freemind_Link_1956142399" MODIFIED="1592317522903" TEXT="Master">
 <node CREATED="1592317523600" ID="Freemind_Link_755059932" MODIFIED="1592317530400" TEXT="Gerencia o cluster"/>
 <node CREATED="1592317530989" ID="Freemind_Link_1067778424" MODIFIED="1592317540209" TEXT="&#xc9; onde ficam todos os arquivos YAML"/>
@@ -3629,8 +3629,17 @@
 </node>
 </node>
 <node CREATED="1595951529873" ID="Freemind_Link_1784173705" MODIFIED="1606167262951" TEXT="Ingress">
-<node CREATED="1606167268966" FOLDED="true" ID="Freemind_Link_169661906" MODIFIED="1606167272294" TEXT="Ingress controller">
-<node CREATED="1606167293308" ID="Freemind_Link_101227297" MODIFIED="1606167308503" TEXT="&#xc9; a ferramenta que faz o load-balancing"/>
+<node CREATED="1606167268966" ID="Freemind_Link_169661906" MODIFIED="1606167272294" TEXT="Ingress controller">
+<node CREATED="1606167293308" ID="Freemind_Link_101227297" MODIFIED="1606167308503" TEXT="&#xc9; a ferramenta que faz o load-balancing">
+<node COLOR="#ff0000" CREATED="1613052342676" ID="Freemind_Link_787156675" MODIFIED="1613052481578" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/ingress.png&quot;&gt;"/>
+</node>
+<node CREATED="1613051863060" ID="Freemind_Link_300598157" MODIFIED="1613051992845" TEXT="O ingress ajuda os usu&#xe1;rios a acessarem sua aplica&#xe7;&#xe3;o usando uma &#xfa;nica e simples url de acesso externo que n&#xf3;s podemos configurar para rotear diferentes services dentro do cluster, baseado no caminho da url">
+<node CREATED="1613052051379" ID="Freemind_Link_1049689846" MODIFIED="1613052060948" TEXT="O ingress tamb&#xe9;m configura o SSL"/>
+<node CREATED="1613052015484" ID="Freemind_Link_396596416" MODIFIED="1613052016393" TEXT="Ex:">
+<node CREATED="1613052016959" ID="Freemind_Link_55041275" MODIFIED="1613052025406" TEXT="http://minhaurl/watch"/>
+<node CREATED="1613052016959" ID="Freemind_Link_794074358" MODIFIED="1613052033894" TEXT="http://minhaurl/wear"/>
+</node>
+</node>
 <node CREATED="1606167454009" ID="Freemind_Link_96593433" MODIFIED="1606168670766" TEXT="O K8s n&#xe3;o vem com um Ingress Controller por default. Deve-se escolher um"/>
 <node CREATED="1606167365827" ID="Freemind_Link_1516630542" MODIFIED="1606167385380" TEXT="Ex: Nginx, HaProxy, Traefik">
 <node CREATED="1606167581874" ID="Freemind_Link_1461755312" MODIFIED="1606167585803" TEXT="Recomendado NGinx"/>
@@ -3658,12 +3667,21 @@
 </node>
 <node CREATED="1606168404888" ID="Freemind_Link_1155704552" MODIFIED="1606169517039" TEXT="&#xc9; necess&#xe1;rio especificar as portas a serem usadas pelo Ingress controle (em geral 80 e 443)">
 <icon BUILTIN="button_ok"/>
+<node CREATED="1606169560613" ID="Freemind_Link_1417208258" MODIFIED="1606169561507" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_794913301" MODIFIED="1613053695102" TEXT="[...]&#xa;    spec:&#xa;      [...]&#xa;      env:&#xa;        - name: POD_NAME&#xa;          valueFrom:&#xa;            fieldRef:&#xa;              fieldPath: metadata.name&#xa;        - name: POD_NAMESPACE&#xa;          valueFrom:&#xa;            fieldRef:&#xa;              fieldPath: metadata.namespace"/>
+</node>
 </node>
 <node CREATED="1606168039649" ID="Freemind_Link_801452614" MODIFIED="1606169511670" TEXT="As configura&#xe7;&#xf5;es deve ser passadas via ConfigMap">
 <icon BUILTIN="button_ok"/>
 <node CREATED="1606168049802" ID="Freemind_Link_1194566765" MODIFIED="1606168061510" TEXT="Isso evitar ter que editar os arquivos de configura&#xe7;&#xe3;o do NGinx"/>
 <node CREATED="1606168066986" ID="Freemind_Link_404263714" MODIFIED="1606168078726" TEXT="Maior facilidade na configura&#xe7;&#xe3;o do NGinx"/>
 <node CREATED="1606168367639" ID="Freemind_Link_1581460753" MODIFIED="1606169557929" TEXT="Ele pode ser criado em branco, inicialmente"/>
+<node CREATED="1613053496537" ID="Freemind_Link_12065703" MODIFIED="1613053519244" TEXT="Configura&#xe7;&#xf5;es feitas via ConfigMap:">
+<node CREATED="1613053519884" ID="Freemind_Link_296319943" MODIFIED="1613053529237" TEXT="Keep-alive treshold"/>
+<node CREATED="1613053530602" ID="Freemind_Link_835029625" MODIFIED="1613053541431" TEXT="SSL settings"/>
+<node CREATED="1613053543635" ID="Freemind_Link_1914766472" MODIFIED="1613053548150" TEXT="Session timeout"/>
+<node CREATED="1613053555489" ID="Freemind_Link_1440456772" MODIFIED="1613053556439" TEXT="etc."/>
+</node>
 <node CREATED="1606169560613" ID="Freemind_Link_1278524179" MODIFIED="1606169561507" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_360886934" MODIFIED="1606169643680" TEXT="apiVersion: v1&#xa;kind: ConfigMap&#xa;metadata:&#xa;  name: nginx-configuration"/>
 </node>
@@ -3681,6 +3699,12 @@
 </node>
 </node>
 <node CREATED="1606167654086" ID="Freemind_Link_1463624299" MODIFIED="1606167655247" TEXT="Ex:">
+<node CREATED="1613053314888" ID="Freemind_Link_1444634445" MODIFIED="1613053325916" TEXT="Neste exemplo optei por usar o nginx">
+<node CREATED="1613053328232" ID="Freemind_Link_1903238262" MODIFIED="1613053355113" TEXT="O caminho do ingress-controller nesta imagem &#xe9; /nginx-ingress-controller">
+<node CREATED="1613053357583" ID="Freemind_Link_269647609" MODIFIED="1613053387911" TEXT="Este caminho deve ser informado via argumento no Deployment"/>
+<node CREATED="1613053428366" ID="Freemind_Link_1623063480" MODIFIED="1613053441430" TEXT="Ele carrega o nginx-controller-service"/>
+</node>
+</node>
 <node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_689795879" MODIFIED="1606169668751" TEXT="apiVersion: extensions/v1beta1&#xa;kind: Deployment&#xa;metadata:&#xa;  name: nginx-ingress-controller&#xa;spec:&#xa;  replicas: 1&#xa;  selector:&#xa;    matchLabels:&#xa;      name: nginx-ingress&#xa;  template:&#xa;    metadata:&#xa;      labels:&#xa;        name: nginx-ingress&#xa;    spec:&#xa;      containers:&#xa;        - name: nginx-ingress-controller&#xa;          image: quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.21.0&#xa;      args:&#xa;        - /nginx-ingress-controller&#xa;        - --configmap=$(POD_NAMESPACE)/nginx-configuration&#xa;      env:&#xa;        - name: POD_NAME&#xa;          valueFrom:&#xa;            fieldRef:&#xa;              fieldPath: metadata.name&#xa;        - name: POD_NAMESPACE&#xa;          valueFrom:&#xa;            fieldRef:&#xa;              fieldPath: metadata.namespace&#xa;      ports:&#xa;        - name: http&#xa;          containerPort: 80&#xa;        - name: https&#xa;          containerPort: 443">
 <arrowlink COLOR="#fb1105" DESTINATION="Freemind_Link_1374370555" ENDARROW="Default" ENDINCLINATION="502;0;" ID="Freemind_Arrow_Link_867284927" STARTARROW="None" STARTINCLINATION="502;0;"/>
 <arrowlink COLOR="#1608f7" DESTINATION="Freemind_Link_360886934" ENDARROW="Default" ENDINCLINATION="667;0;" ID="Freemind_Arrow_Link_520398246" STARTARROW="None" STARTINCLINATION="667;0;"/>
@@ -3692,24 +3716,106 @@
 <node CREATED="1606167318178" ID="Freemind_Link_348960196" MODIFIED="1606167349285" TEXT="Ingress resources">
 <node CREATED="1606167387381" ID="Freemind_Link_39375100" MODIFIED="1606167415902" TEXT="Conjunto de regras que configuram o Ingress"/>
 <node CREATED="1606167430996" ID="Freemind_Link_1097591189" MODIFIED="1606167441604" TEXT="Criado com um arquivo yaml como os demais objetos do K8S"/>
-<node CREATED="1606167495288" ID="Freemind_Link_1092029190" MODIFIED="1606168670764" TEXT="O Ingress controller n&#xe3;o funcionar&#xe1; se n&#xe3;o houver um Ingress Controller publicado tamb&#xe9;m">
+<node CREATED="1606167495288" ID="Freemind_Link_1092029190" MODIFIED="1613052764736" TEXT="O Ingress resources n&#xe3;o funcionar&#xe1; se n&#xe3;o houver um Ingress Controller publicado tamb&#xe9;m">
 <arrowlink DESTINATION="Freemind_Link_96593433" ENDARROW="Default" ENDINCLINATION="693;34;" ID="Freemind_Arrow_Link_155950445" STARTARROW="Default" STARTINCLINATION="693;34;"/>
 </node>
+<node CREATED="1613054312170" ID="Freemind_Link_1763442518" MODIFIED="1613054318149" TEXT="YAML">
+<node COLOR="#ff00ff" CREATED="1596640550496" ID="Freemind_Link_742565328" MODIFIED="1596640557605" TEXT="apiVersion">
+<node COLOR="#ff00ff" CREATED="1596640550496" ID="Freemind_Link_187618010" MODIFIED="1613054436731" TEXT="extensions/v1beta1"/>
 </node>
-<node CREATED="1595868955278" ID="Freemind_Link_1967800627" MODIFIED="1595868961065" TEXT="Linha de comando">
-<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_297066360" MODIFIED="1595951572386" TEXT="???">
-<node CREATED="1595869017286" ID="Freemind_Link_1460148529" MODIFIED="1595951574305" TEXT="???"/>
+<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_1604867185" MODIFIED="1596640539515" TEXT="kind">
+<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_1729120660" MODIFIED="1613054439589" TEXT="Ingress"/>
 </node>
-<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_817320764" MODIFIED="1595951572386" TEXT="???">
-<node CREATED="1595869017286" ID="Freemind_Link_18069954" MODIFIED="1595951574305" TEXT="???"/>
+<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_1359448550" MODIFIED="1596640528662" TEXT="metadata">
+<node CREATED="1596640559628" ID="Freemind_Link_858489574" LINK="#Freemind_Link_1894393993" MODIFIED="1596640572495" TEXT="Ver notas acima"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_1692600868" MODIFIED="1613054468279" TEXT="spec">
+<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_1014218720" MODIFIED="1613054473287" TEXT="backend">
+<node CREATED="1613054318661" ID="Freemind_Link_1785978707" MODIFIED="1613054339339" TEXT="A se&#xe7;&#xe3;o &apos;backend&apos; define para qual service a requisi&#xe7;&#xe3;o dever&#xe1; ser roteada"/>
+<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_1989914885" MODIFIED="1613054752027" TEXT="rules">
+<node CREATED="1613054492851" ID="Freemind_Link_1745754579" MODIFIED="1613054875584" TEXT="Usado quando se tem mais de um backend como alvo de roteamentos">
+<arrowlink COLOR="#0c960d" DESTINATION="Freemind_Link_767057966" ENDARROW="Default" ENDINCLINATION="286;-19;" ID="Freemind_Arrow_Link_771115255" STARTARROW="Default" STARTINCLINATION="224;0;"/>
+</node>
+<node CREATED="1613054916552" ID="Freemind_Link_753137663" MODIFIED="1613055095747" TEXT="O caminho dos roteamentos ser&#xe1; definido&#xa;de acordo com a url da requisi&#xe7;&#xe3;o">
+<node CREATED="1613055098992" ID="Freemind_Link_517085258" MODIFIED="1613055106909" TEXT="Pode ser usado subdom&#xed;nios">
+<node CREATED="1613054932591" ID="Freemind_Link_1492498345" MODIFIED="1613054933405" TEXT="Ex:">
+<node CREATED="1613054934458" ID="Freemind_Link_470231657" MODIFIED="1613054940970" TEXT="www.mystore.com"/>
+<node CREATED="1613054934458" ID="Freemind_Link_900107159" MODIFIED="1613054953484" TEXT="www.wear.mystore.com"/>
+<node CREATED="1613054934458" ID="Freemind_Link_1365180783" MODIFIED="1613054965221" TEXT="www.watch.mystore.com"/>
+<node CREATED="1613054982378" ID="Freemind_Link_152380458" MODIFIED="1613054987100" TEXT="Outro caso (else)"/>
 </node>
 </node>
-<node CREATED="1595951537400" ID="Freemind_Link_1458020013" MODIFIED="1595951540236" TEXT="YAML">
-<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_653186480" MODIFIED="1595951561106" TEXT="???">
-<node CREATED="1592844989287" ID="Freemind_Link_36652104" MODIFIED="1595951562899" TEXT="???"/>
+<node CREATED="1613055107881" ID="Freemind_Link_48439510" MODIFIED="1613055120964" TEXT="Pode ser usadas barras (&apos;/&apos;) no final da url">
+<node CREATED="1613054932591" ID="Freemind_Link_1310685305" MODIFIED="1613054933405" TEXT="Ex:">
+<node CREATED="1613054934458" ID="Freemind_Link_1320262321" MODIFIED="1613054940970" TEXT="www.mystore.com"/>
+<node CREATED="1613054934458" ID="Freemind_Link_1199570361" MODIFIED="1613055148898" TEXT="www.mystore.com/wear"/>
+<node CREATED="1613054934458" ID="Freemind_Link_1308674901" MODIFIED="1613055154557" TEXT="www.mystore.com/watch"/>
 </node>
-<node CREATED="1595951551270" ID="Freemind_Link_1029784249" MODIFIED="1595951552490" TEXT="Ex:">
-<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1221866902" MODIFIED="1595951561106" TEXT="???"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_1293112047" MODIFIED="1613056666835" TEXT="- (item)">
+<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_381975243" MODIFIED="1613056675777" TEXT="host">
+<node CREATED="1613054492851" ID="Freemind_Link_1048604188" MODIFIED="1613056697719" TEXT="Identifica o host para o qual a requisi&#xe7;&#xe3;o ser&#xe1; roteada"/>
+<node CREATED="1613056698707" ID="Freemind_Link_1303937710" MODIFIED="1613056707286" TEXT="Quando n&#xe3;o for informado, ser&#xe1; assumido &apos;*&apos;"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_1672791239" MODIFIED="1613056719430" TEXT="http">
+<node CREATED="1613054492851" ID="Freemind_Link_776561585" MODIFIED="1613056748592" TEXT="Configura o roteamento das requisi&#xe7;&#xf5;es http"/>
+<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_1660004070" MODIFIED="1613056833750" TEXT="paths">
+<node CREATED="1613054492851" ID="Freemind_Link_55081281" MODIFIED="1613056845854" TEXT="Configura cada uma das rotas conforme a url"/>
+<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_330665345" MODIFIED="1613056857879" TEXT="- (item)">
+<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_1687985370" MODIFIED="1613056863392" TEXT="path">
+<node CREATED="1613054492851" ID="Freemind_Link_742174346" MODIFIED="1613056876190" TEXT="Configura o roteamento de uma url espec&#xed;fica"/>
+<node CREATED="1613056877422" ID="Freemind_Link_1415686901" MODIFIED="1613056890430" TEXT="Se n&#xe3;o for informado, ser&#xe3;o tomadas todas as urls"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_662998871" MODIFIED="1613056915359" TEXT="backend">
+<node CREATED="1613054492851" ID="Freemind_Link_793948982" MODIFIED="1613056943551" TEXT="Identifica o service para o qual a requisi&#xe7;&#xe3;o ser&#xe1; roteada"/>
+<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_307565395" MODIFIED="1613056953975" TEXT="serviceName">
+<node CREATED="1613054492851" ID="Freemind_Link_474935300" MODIFIED="1613056992592" TEXT="Identifica o nome do servi&#xe7;o para onde rotear a requisi&#xe7;&#xe3;o desta rule"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_1290091161" MODIFIED="1613054491836" TEXT="servicePort">
+<node CREATED="1613054492851" ID="Freemind_Link_1006201911" MODIFIED="1613056996399" TEXT="Identifica a porta do servi&#xe7;o para onde rotear a requisi&#xe7;&#xe3;o desta rule"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_1152214368" MODIFIED="1613054486994" TEXT="serviceName">
+<node CREATED="1613054543617" ID="Freemind_Link_767057966" MODIFIED="1613054875586" TEXT="Quando se usa um &#xfa;nico backend, n&#xe3;o ser&#xe1; necess&#xe1;rio definir rules. Poder&#xe1; ser utilizado o serviceName diretamente&#xa;">
+<node CREATED="1613054840073" ID="Freemind_Link_121338413" MODIFIED="1613054858787" TEXT="Nesse caso, toda requisi&#xe7;&#xe3;o recebida ser&#xe1; encaminhada a este &#xfa;nico service"/>
+</node>
+<node CREATED="1613054492851" ID="Freemind_Link_1695651030" MODIFIED="1613054509419" TEXT="Identifica o nome do servi&#xe7;o para onde rotear a requisi&#xe7;&#xe3;o"/>
+<node CREATED="1606169560613" ID="Freemind_Link_807284292" MODIFIED="1606169561507" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_1053244246" MODIFIED="1613055214545" TEXT="[...]&#xa;spec:&#xa;  backend:&#xa;    serviceName: wear-service&#xa;    servicePort: 80"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_664845003" MODIFIED="1613054491836" TEXT="servicePort">
+<node CREATED="1613054492851" ID="Freemind_Link_382668935" MODIFIED="1613054521107" TEXT="Identifica a porta do servi&#xe7;o para onde rotear a requisi&#xe7;&#xe3;o"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1606169560613" ID="Freemind_Link_1835581511" MODIFIED="1606169561507" TEXT="Ex:">
+<node CREATED="1613055906285" ID="Freemind_Link_113796021" MODIFIED="1613055910618" TEXT="Backend &#xfa;nico">
+<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_480403443" MODIFIED="1613054232763" TEXT="apiVersion: extensions/v1beta1&#xa;kind: Ingress&#xa;metadata:&#xa;  name: ingress-wear&#xa;spec:&#xa;  backend:&#xa;    serviceName: wear-service&#xa;    servicePort: 80"/>
+</node>
+<node CREATED="1613055602564" ID="Freemind_Link_974407009" MODIFIED="1613055608521" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/ingress_rules.png&quot;&gt;">
+<node CREATED="1613055702237" ID="Freemind_Link_1151915870" MODIFIED="1613055713882" TEXT="Neste exemplo temos 1 rule e 2 paths"/>
+<node CREATED="1613055968740" ID="Freemind_Link_1568521549" MODIFIED="1613056011088" TEXT="Com o &apos;Ingress&apos; deste exemplo, quando a url n&#xe3;o coincidir com nenhuma das rules, ser&#xe1; direcionada para &apos;default-http-backend:80&apos;">
+<node CREATED="1613056011799" ID="Freemind_Link_386245217" MODIFIED="1613056024640" TEXT="Voc&#xea; deve se certificar de criar esse servi&#xe7;o"/>
+<node CREATED="1613056070415" ID="Freemind_Link_359112105" MODIFIED="1613056084511" TEXT="Ex: www.my-online-store/eat"/>
+</node>
+<node CREATED="1613056490062" ID="Freemind_Link_1375594232" MODIFIED="1613056526744" TEXT="Quando n&#xe3;o se especifica o campo &apos;host&apos;, ser&#xe1; considerado &apos;*&apos; (todos)"/>
+<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_1932240532" MODIFIED="1613056338358" TEXT="apiVersion: extensions/v1beta1&#xa;kind: Ingress&#xa;metadata:&#xa;  name: ingress-wear-watch&#xa;spec:&#xa;  rules:&#xa;    - http:&#xa;        paths:&#xa;          - path: /wear&#xa;            backend:&#xa;              serviceName: wear-service&#xa;              servicePort: 80&#xa;          - path: /watch&#xa;            backend:&#xa;              serviceName: watch-service&#xa;              servicePort: 80"/>
+</node>
+<node CREATED="1613056209307" ID="Freemind_Link_1153511502" MODIFIED="1613056215996" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/ingress_rules2.png&quot;&gt;">
+<node CREATED="1613056236132" ID="Freemind_Link_1412107325" MODIFIED="1613056246041" TEXT="Neste exemplo temos 2 rules, 1 patch cada"/>
+<node CREATED="1613056508916" ID="Freemind_Link_713818658" MODIFIED="1613056539774" TEXT="Neste caso deve-se especificar o campo &apos;host&apos;">
+<arrowlink COLOR="#f68a0a" DESTINATION="Freemind_Link_1375594232" ENDARROW="Default" ENDINCLINATION="309;0;" ID="Freemind_Arrow_Link_1267558534" STARTARROW="Default" STARTINCLINATION="309;0;"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_1368732999" MODIFIED="1613056478162" TEXT="apiVersion: extensions/v1beta1&#xa;kind: Ingress&#xa;metadata:&#xa;  name: ingress-wear-watch&#xa;spec:&#xa;  rules:&#xa;    - host: wear.my-online-store.com&#xa;      http:&#xa;        paths:&#xa;          - backend:&#xa;              serviceName: wear-service&#xa;              servicePort: 80&#xa;    - host: wear.my-online-store.com&#xa;      http:&#xa;        paths:&#xa;          - backend:&#xa;              serviceName: watch-service&#xa;              servicePort: 80"/>
+</node>
 </node>
 </node>
 </node>

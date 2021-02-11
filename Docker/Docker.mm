@@ -62,7 +62,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1563998723358" ID="Freemind_Link_1353472525" MODIFIED="1563998725467" POSITION="right" TEXT="A&#xe7;&#xf5;es">
+<node CREATED="1563998723358" FOLDED="true" ID="Freemind_Link_1353472525" MODIFIED="1563998725467" POSITION="right" TEXT="A&#xe7;&#xf5;es">
 <node CREATED="1586036574169" ID="Freemind_Link_1039136497" MODIFIED="1586036580439" TEXT="Container">
 <node CREATED="1563998741165" ID="Freemind_Link_1874998913" MODIFIED="1587400429560" TEXT="Baixar e carregar &#xa;uma imagem">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1511048246" MODIFIED="1586036628804" TEXT="docker container run nomeimagem">
@@ -470,7 +470,7 @@
 <node CREATED="1587400461142" ID="Freemind_Link_81422714" MODIFIED="1587400507747" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/docker_client_action_verbs_edx.png&quot;&gt;"/>
 </node>
 </node>
-<node CREATED="1563994368647" FOLDED="true" ID="_" MODIFIED="1563994372275" POSITION="right" TEXT="Dockerfile">
+<node CREATED="1563994368647" ID="_" MODIFIED="1563994372275" POSITION="right" TEXT="Dockerfile">
 <node CREATED="1563998221736" ID="Freemind_Link_368230737" MODIFIED="1568727208485" TEXT="Build">
 <node CREATED="1563998249496" ID="Freemind_Link_1953836887" MODIFIED="1563998261491" TEXT="Criar uma imagem a partir de um Dockerfile">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1375815715" MODIFIED="1563998864816" TEXT="docker build -f Dockerfile">
@@ -593,6 +593,7 @@
 </node>
 <node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1449117917" MODIFIED="1568727047527" TEXT="ARG">
 <node CREATED="1563994389535" ID="Freemind_Link_143746373" MODIFIED="1568727069862" TEXT="Par&#xe2;metros que podem ser passados para o Docker na fase de build"/>
+<node CREATED="1611156136389" ID="Freemind_Link_856492247" MODIFIED="1611156184370" TEXT="Os valores definidos em ARG tamb&#xe9;m ser&#xe3;o vis&#xed;veis para scripts &#xa;executados na fase de build como se fossem vari&#xe1;veis de ambiente"/>
 <node CREATED="1568727117050" ID="Freemind_Link_289175241" MODIFIED="1568727150853" TEXT="Se nenhum valor padr&#xe3;o for determinado e n&#xe3;o &#xa;for passado o valor no build, ser&#xe1; gerado um erro"/>
 <node CREATED="1592834998146" ID="Freemind_Link_282540081" MODIFIED="1592835003494" TEXT="Pode ser usado antes do FROM">
 <node CREATED="1592835007722" ID="Freemind_Link_1058588061" MODIFIED="1592835264273" TEXT="Nesse caso, n&#xe3;o estar&#xe1; acess&#xed;vel depois do FROM">
@@ -605,7 +606,7 @@
 <node COLOR="#0000ff" CREATED="1592835106246" ID="Freemind_Link_1705258844" MODIFIED="1592835124116" TEXT="ARG VERSION=latest&#xa;FROM busybox:$VERSION&#xa;ARG VERSION&#xa;RUN echo $VERSION &gt; image_version"/>
 </node>
 </node>
-<node CREATED="1568728785930" FOLDED="true" ID="Freemind_Link_260693326" MODIFIED="1568728792757" TEXT="Imagem:">
+<node CREATED="1568728785930" ID="Freemind_Link_260693326" MODIFIED="1568728792757" TEXT="Imagem:">
 <node CREATED="1568728793827" ID="Freemind_Link_1743632444" MODIFIED="1568728886715" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/docker_environment_build_args_overview.png&quot;&gt;"/>
 </node>
 <node CREATED="1568727278453" ID="Freemind_Link_1409774537" MODIFIED="1568727698125" TEXT="O valor do argumento deve ser passado no buil da imagem">
