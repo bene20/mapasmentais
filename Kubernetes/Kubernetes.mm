@@ -2916,6 +2916,9 @@
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_930784207" MODIFIED="1594064021491" TEXT="selector">
 <node CREATED="1592844030528" ID="Freemind_Link_500784098" MODIFIED="1594064046416" TEXT="Seleciona os Pods aos quais ser&#xe3;o aplicados esse service">
 <node CREATED="1594064048583" ID="Freemind_Link_970445923" MODIFIED="1594064054571" TEXT="Via bind dos labels"/>
+<node CREATED="1613576606706" ID="Freemind_Link_1234761293" MODIFIED="1613576625054" TEXT="A sele&#xe7;&#xe3;o &#xe9; do POD, n&#xe3;o  n&#xe3;o do container">
+<icon BUILTIN="messagebox_warning"/>
+</node>
 </node>
 </node>
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1035068113" MODIFIED="1592844987282" TEXT="ports">
@@ -3505,6 +3508,14 @@
 </node>
 </node>
 </node>
+<node CREATED="1595868955278" ID="Freemind_Link_556510613" MODIFIED="1595868961065" TEXT="Linha de comando">
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_635716279" MODIFIED="1613575533960" TEXT="kubectl get roles --namespace &lt;namespace&gt;">
+<node CREATED="1595869017286" ID="Freemind_Link_899130560" MODIFIED="1613575543992" TEXT="Lista as roles de um namespace espec&#xed;fico"/>
+</node>
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_494930380" MODIFIED="1613575586077" TEXT="kubectl get roles,rolebindings --namespace &lt;namespace&gt;">
+<node CREATED="1595869017286" ID="Freemind_Link_1297606048" MODIFIED="1613575597359" TEXT="Lista as roles e rolebindings de um namespace espec&#xed;fico"/>
+</node>
+</node>
 </node>
 <node CREATED="1595951529873" FOLDED="true" ID="Freemind_Link_1689365564" MODIFIED="1599242918620" TEXT="NetworkPolicy">
 <node CREATED="1599242920542" ID="Freemind_Link_813974365" MODIFIED="1599242950068" TEXT="Usado para liberar/barrar tr&#xe1;fego  de entrada e sa&#xed;da de um Pod">
@@ -3628,8 +3639,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1595951529873" ID="Freemind_Link_1784173705" MODIFIED="1606167262951" TEXT="Ingress">
-<node CREATED="1606167268966" ID="Freemind_Link_169661906" MODIFIED="1606167272294" TEXT="Ingress controller">
+<node CREATED="1595951529873" FOLDED="true" ID="Freemind_Link_1784173705" MODIFIED="1606167262951" TEXT="Ingress">
+<node CREATED="1606167268966" FOLDED="true" ID="Freemind_Link_169661906" MODIFIED="1606167272294" TEXT="Ingress controller">
 <node CREATED="1606167293308" ID="Freemind_Link_101227297" MODIFIED="1606167308503" TEXT="&#xc9; a ferramenta que faz o load-balancing">
 <node COLOR="#ff0000" CREATED="1613052342676" ID="Freemind_Link_787156675" MODIFIED="1613052481578" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/ingress.png&quot;&gt;"/>
 </node>
@@ -3705,7 +3716,7 @@
 <node CREATED="1613053428366" ID="Freemind_Link_1623063480" MODIFIED="1613053441430" TEXT="Ele carrega o nginx-controller-service"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_689795879" MODIFIED="1606169668751" TEXT="apiVersion: extensions/v1beta1&#xa;kind: Deployment&#xa;metadata:&#xa;  name: nginx-ingress-controller&#xa;spec:&#xa;  replicas: 1&#xa;  selector:&#xa;    matchLabels:&#xa;      name: nginx-ingress&#xa;  template:&#xa;    metadata:&#xa;      labels:&#xa;        name: nginx-ingress&#xa;    spec:&#xa;      containers:&#xa;        - name: nginx-ingress-controller&#xa;          image: quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.21.0&#xa;      args:&#xa;        - /nginx-ingress-controller&#xa;        - --configmap=$(POD_NAMESPACE)/nginx-configuration&#xa;      env:&#xa;        - name: POD_NAME&#xa;          valueFrom:&#xa;            fieldRef:&#xa;              fieldPath: metadata.name&#xa;        - name: POD_NAMESPACE&#xa;          valueFrom:&#xa;            fieldRef:&#xa;              fieldPath: metadata.namespace&#xa;      ports:&#xa;        - name: http&#xa;          containerPort: 80&#xa;        - name: https&#xa;          containerPort: 443">
+<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_689795879" MODIFIED="1613575977772" TEXT="apiVersion: extensions/v1beta1&#xa;kind: Deployment&#xa;metadata:&#xa;  name: nginx-ingress-controller&#xa;spec:&#xa;  replicas: 1&#xa;  selector:&#xa;    matchLabels:&#xa;      name: nginx-ingress&#xa;  template:&#xa;    metadata:&#xa;      labels:&#xa;        name: nginx-ingress&#xa;    spec:&#xa;      ServiceAccountName: nginx-ingress-serviceaccount&#xa;      containers:&#xa;        - name: nginx-ingress-controller&#xa;          image: quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.21.0&#xa;      args:&#xa;        - /nginx-ingress-controller&#xa;        - --configmap=$(POD_NAMESPACE)/nginx-configuration&#xa;      env:&#xa;        - name: POD_NAME&#xa;          valueFrom:&#xa;            fieldRef:&#xa;              fieldPath: metadata.name&#xa;        - name: POD_NAMESPACE&#xa;          valueFrom:&#xa;            fieldRef:&#xa;              fieldPath: metadata.namespace&#xa;      ports:&#xa;        - name: http&#xa;          containerPort: 80&#xa;        - name: https&#xa;          containerPort: 443">
 <arrowlink COLOR="#fb1105" DESTINATION="Freemind_Link_1374370555" ENDARROW="Default" ENDINCLINATION="502;0;" ID="Freemind_Arrow_Link_867284927" STARTARROW="None" STARTINCLINATION="502;0;"/>
 <arrowlink COLOR="#1608f7" DESTINATION="Freemind_Link_360886934" ENDARROW="Default" ENDINCLINATION="667;0;" ID="Freemind_Arrow_Link_520398246" STARTARROW="None" STARTINCLINATION="667;0;"/>
 <arrowlink COLOR="#0bc60f" DESTINATION="Freemind_Link_90202884" ENDARROW="Default" ENDINCLINATION="481;0;" ID="Freemind_Arrow_Link_1654635997" STARTARROW="None" STARTINCLINATION="481;0;"/>
@@ -3718,6 +3729,39 @@
 <node CREATED="1606167430996" ID="Freemind_Link_1097591189" MODIFIED="1606167441604" TEXT="Criado com um arquivo yaml como os demais objetos do K8S"/>
 <node CREATED="1606167495288" ID="Freemind_Link_1092029190" MODIFIED="1613052764736" TEXT="O Ingress resources n&#xe3;o funcionar&#xe1; se n&#xe3;o houver um Ingress Controller publicado tamb&#xe9;m">
 <arrowlink DESTINATION="Freemind_Link_96593433" ENDARROW="Default" ENDINCLINATION="693;34;" ID="Freemind_Arrow_Link_155950445" STARTARROW="Default" STARTINCLINATION="693;34;"/>
+</node>
+<node CREATED="1613152638215" ID="Freemind_Link_71408203" MODIFIED="1613152673181" TEXT="NGinx-Ingress">
+<node CREATED="1613152640682" ID="Freemind_Link_976459178" MODIFIED="1613152659533" TEXT="O NGins possui diversas op&#xe7;&#xf5;es espec&#xed;ficas"/>
+<node CREATED="1613152917024" ID="Freemind_Link_632317116" MODIFIED="1613152920368" TEXT="https://kubernetes.github.io/ingress-nginx/">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1613152681425" ID="Freemind_Link_141868219" MODIFIED="1613577812362" TEXT="REWRITE">
+<node CREATED="1613152888746" ID="Freemind_Link_1335462445" MODIFIED="1613152901774" TEXT="https://kubernetes.github.io/ingress-nginx/examples/rewrite/">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1613577798729" ID="Freemind_Link_1000479822" MODIFIED="1613577803452" TEXT="rewrite-target">
+<node CREATED="1613152687586" ID="Freemind_Link_1019817105" MODIFIED="1613153180629" TEXT="Esta op&#xe7;&#xe3;o reescreve a url recebida na requisi&#xe7;&#xe3;o &#xa;antes de repass&#xe1;-la para o service destino">
+<node CREATED="1613153182088" ID="Freemind_Link_895575733" MODIFIED="1613153222059" TEXT="Em alguns casos essa reescrita &#xe9; indispens&#xe1;vel pois o service &#xa;para o qual a requisi&#xe7;&#xe3;o for roteada pode rejeitar a url recebida"/>
+</node>
+<node CREATED="1613152705627" ID="Freemind_Link_910724210" MODIFIED="1613152707894" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1596640550496" ID="Freemind_Link_1289044472" MODIFIED="1613153018828" TEXT="[...]&#xa;metadata:&#xa;  annotations:&#xa;    nginx.ingress.kubernetes.io/rewrite-target: /&#xa;spec:&#xa;  [...]&#xa;    - path: /pay&#xa;      [...]">
+<node CREATED="1613152837756" ID="Freemind_Link_1679766983" MODIFIED="1613152981966" TEXT="Substituir&#xe1;  &apos;/pay&apos; por &apos;/&apos; na url"/>
+<node CREATED="1613152787353" ID="Freemind_Link_906381080" MODIFIED="1613152987243" TEXT="Equivalente a aplicar  replace(&quot;/pay&quot;,&quot;/&quot;) &#xe0; url"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1596640550496" ID="Freemind_Link_56838032" MODIFIED="1613573553687" TEXT="[...]&#xa;metadata:&#xa;  annotations:&#xa;    nginx.ingress.kubernetes.io/rewrite-target: /$2&#xa;spec:&#xa;  [...]&#xa;    - path: /something(/|$)(.*)&#xa;      [...]">
+<node CREATED="1613152837756" ID="Freemind_Link_231575173" MODIFIED="1613152871335" TEXT="Substituir&#xe1;  &apos;/path&apos; por &apos;/&apos; na url"/>
+<node CREATED="1613152787353" ID="Freemind_Link_30408535" MODIFIED="1613152968179" TEXT="Equivalente a aplicar  replace(&quot;/something(/|$)(.*)&quot;, &quot;/$2&quot;) &#xe0; url"/>
+</node>
+</node>
+</node>
+<node CREATED="1613577814263" ID="Freemind_Link_242138467" MODIFIED="1613577816921" TEXT="ssl-redirect">
+<node CREATED="1613152705627" ID="Freemind_Link_1748115338" MODIFIED="1613152707894" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1596640550496" ID="Freemind_Link_350268501" MODIFIED="1613577156393" TEXT="[...]&#xa;metadata:&#xa;  annotations:&#xa;    nginx.ingress.kubernetes.io/ssl-redirect: &quot;false&quot;&#xa;spec:&#xa;  [...]">
+<node CREATED="1613577646829" ID="Freemind_Link_1183162314" MODIFIED="1613577751858" TEXT="Indica se o caminho ser&#xe1; acess&#xed;vel apenas via SSL (por padr&#xe3;o &#xe9; &quot;true&quot; quando o Ingress tem um certificado)"/>
+</node>
+</node>
+</node>
+</node>
 </node>
 <node CREATED="1613054312170" ID="Freemind_Link_1763442518" MODIFIED="1613054318149" TEXT="YAML">
 <node COLOR="#ff00ff" CREATED="1596640550496" ID="Freemind_Link_742565328" MODIFIED="1596640557605" TEXT="apiVersion">
@@ -3796,6 +3840,11 @@
 </node>
 </node>
 </node>
+<node CREATED="1592494489359" ID="Freemind_Link_905444970" MODIFIED="1592494490927" TEXT="Comandos">
+<node COLOR="#0000ff" CREATED="1592494514735" ID="Freemind_Link_568519117" MODIFIED="1613146240060" TEXT="kubectl describe ingress --all-namespaces">
+<node CREATED="1592494527569" ID="Freemind_Link_1347221311" MODIFIED="1613146247852" TEXT="Apresenta os ingress do cluster"/>
+</node>
+</node>
 <node CREATED="1606169560613" ID="Freemind_Link_1835581511" MODIFIED="1606169561507" TEXT="Ex:">
 <node CREATED="1613055906285" ID="Freemind_Link_113796021" MODIFIED="1613055910618" TEXT="Backend &#xfa;nico">
 <node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_480403443" MODIFIED="1613054232763" TEXT="apiVersion: extensions/v1beta1&#xa;kind: Ingress&#xa;metadata:&#xa;  name: ingress-wear&#xa;spec:&#xa;  backend:&#xa;    serviceName: wear-service&#xa;    servicePort: 80"/>
@@ -3819,21 +3868,42 @@
 </node>
 </node>
 </node>
-<node CREATED="1595951529873" ID="Freemind_Link_407808227" MODIFIED="1595951582089" TEXT="???">
+<node CREATED="1595951529873" FOLDED="true" ID="Freemind_Link_407808227" MODIFIED="1613574834687" TEXT="ServiceAccount">
 <node CREATED="1595868955278" ID="Freemind_Link_374774445" MODIFIED="1595868961065" TEXT="Linha de comando">
-<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_1065740102" MODIFIED="1595951572386" TEXT="???">
-<node CREATED="1595869017286" ID="Freemind_Link_1096107739" MODIFIED="1595951574305" TEXT="???"/>
-</node>
-<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_736456330" MODIFIED="1595951572386" TEXT="???">
-<node CREATED="1595869017286" ID="Freemind_Link_561337051" MODIFIED="1595951574305" TEXT="???"/>
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_1065740102" MODIFIED="1613575303632" TEXT="kubectl create serviceaccount &lt;nomeconta&gt; --namespace=&lt;namespace&gt;">
+<node CREATED="1595869017286" ID="Freemind_Link_1096107739" MODIFIED="1613575320554" TEXT="Cria um service account no cluster K8s"/>
 </node>
 </node>
 <node CREATED="1595951537400" ID="Freemind_Link_1518674203" MODIFIED="1595951540236" TEXT="YAML">
-<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_896478805" MODIFIED="1595951561106" TEXT="???">
-<node CREATED="1592844989287" ID="Freemind_Link_560470685" MODIFIED="1595951562899" TEXT="???"/>
+<node COLOR="#ff00ff" CREATED="1596640550496" ID="Freemind_Link_802480304" MODIFIED="1596640557605" TEXT="apiVersion">
+<node COLOR="#ff00ff" CREATED="1596640550496" ID="Freemind_Link_1601361790" MODIFIED="1596640742655" TEXT="v1"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_658891306" MODIFIED="1596640539515" TEXT="kind">
+<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_347382298" MODIFIED="1613575364090" TEXT="ServiceAccount"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_1829895489" MODIFIED="1596640528662" TEXT="metadata">
+<node CREATED="1596640559628" ID="Freemind_Link_977705980" LINK="#Freemind_Link_1894393993" MODIFIED="1596640572495" TEXT="Ver notas acima"/>
 </node>
 <node CREATED="1595951551270" ID="Freemind_Link_1365419332" MODIFIED="1595951552490" TEXT="Ex:">
-<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_210898070" MODIFIED="1595951561106" TEXT="???"/>
+<node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_50068824" MODIFIED="1606169638254" TEXT="apiVersion: v1&#xa;kind: ServiceAccount&#xa;metadata:&#xa;  name: nginx-ingress-serviceaccount"/>
+</node>
+</node>
+</node>
+<node CREATED="1595951529873" ID="Freemind_Link_1782704174" MODIFIED="1595951582089" TEXT="???">
+<node CREATED="1595868955278" ID="Freemind_Link_1201480272" MODIFIED="1595868961065" TEXT="Linha de comando">
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_1909608440" MODIFIED="1595951572386" TEXT="???">
+<node CREATED="1595869017286" ID="Freemind_Link_105241163" MODIFIED="1595951574305" TEXT="???"/>
+</node>
+<node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_1027704792" MODIFIED="1595951572386" TEXT="???">
+<node CREATED="1595869017286" ID="Freemind_Link_1612638051" MODIFIED="1595951574305" TEXT="???"/>
+</node>
+</node>
+<node CREATED="1595951537400" ID="Freemind_Link_56499469" MODIFIED="1595951540236" TEXT="YAML">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1752615769" MODIFIED="1595951561106" TEXT="???">
+<node CREATED="1592844989287" ID="Freemind_Link_987338362" MODIFIED="1595951562899" TEXT="???"/>
+</node>
+<node CREATED="1595951551270" ID="Freemind_Link_906128641" MODIFIED="1595951552490" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_626947124" MODIFIED="1595951561106" TEXT="???"/>
 </node>
 </node>
 </node>
