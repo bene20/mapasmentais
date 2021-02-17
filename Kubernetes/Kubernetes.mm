@@ -433,7 +433,7 @@
 <node CREATED="1613589503266" ID="Freemind_Link_571233238" MODIFIED="1613590176426" TEXT="Cola a chave p&#xfa;blica do n&#xf3; master na m&#xe1;quina destino"/>
 </node>
 </node>
-<node CREATED="1613590228258" ID="Freemind_Link_1250973771" MODIFIED="1613591414290" TEXT="Baixar e instalar o &apos;kubectl&apos; em todos os n&#xf3;s do cluster">
+<node CREATED="1613590228258" FOLDED="true" ID="Freemind_Link_1250973771" MODIFIED="1613599332548" TEXT="Baixar e instalar o &apos;kubectl&apos; em cada n&#xf3; do cluster">
 <icon BUILTIN="full-1"/>
 <node COLOR="#0000ff" CREATED="1613590282677" ID="Freemind_Link_778596521" MODIFIED="1613590382547" TEXT="wget https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kubectl">
 <icon BUILTIN="full-1"/>
@@ -445,7 +445,7 @@
 <icon BUILTIN="full-3"/>
 </node>
 </node>
-<node CREATED="1613591425247" ID="Freemind_Link_1688402065" MODIFIED="1613593585603" TEXT="Criar os certificados">
+<node CREATED="1613591425247" FOLDED="true" ID="Freemind_Link_1688402065" MODIFIED="1613593585603" TEXT="Criar os certificados">
 <icon BUILTIN="full-2"/>
 <node CREATED="1613592801102" ID="Freemind_Link_567017246" MODIFIED="1613592806657" TEXT="https://github.com/mmumshad/kubernetes-the-hard-way/blob/master/docs/04-certificate-authority.md">
 <icon BUILTIN="attach"/>
@@ -477,7 +477,7 @@
 <node CREATED="1613592070289" ID="Freemind_Link_681567338" MODIFIED="1613592083917" TEXT="Auto assinar o CSR usando a pr&#xf3;pria chave privada"/>
 </node>
 </node>
-<node CREATED="1613592166633" FOLDED="true" ID="Freemind_Link_915467436" MODIFIED="1613592168292" TEXT="Admin">
+<node CREATED="1613592166633" FOLDED="true" ID="Freemind_Link_915467436" MODIFIED="1613598706231" TEXT="Usu&#xe1;rio admin">
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_487977472" MODIFIED="1613592188573" TEXT="openssl  genrsa -out admin.key 2048">
 <icon BUILTIN="full-1"/>
 <node CREATED="1613591493305" ID="Freemind_Link_1462225971" MODIFIED="1613592697321" TEXT="Gera a chave prim&#xe1;ria do admin"/>
@@ -591,6 +591,56 @@
 <icon BUILTIN="full-3"/>
 <node CREATED="1613592070289" ID="Freemind_Link_773084622" MODIFIED="1613593040783" TEXT="Assinar o certificado usando o par de chaves CA"/>
 </node>
+</node>
+</node>
+<node CREATED="1613598490622" FOLDED="true" ID="Freemind_Link_1477675800" MODIFIED="1613598514476" TEXT="Criar os arquivos de &#xa;configura&#xe7;&#xe3;o kubeconfig">
+<icon BUILTIN="full-3"/>
+<node CREATED="1613598529142" ID="Freemind_Link_1475873908" MODIFIED="1613598532693" TEXT="https://github.com/mmumshad/kubernetes-the-hard-way/blob/master/docs/05-kubernetes-configuration-files.md">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1613598545711" ID="Freemind_Link_1579207118" MODIFIED="1613598587908" TEXT="Antes de criar os arquivos, defina o IP do Load balancer">
+<icon BUILTIN="messagebox_warning"/>
+<node COLOR="#0000ff" CREATED="1613594548469" ID="Freemind_Link_1970820596" MODIFIED="1613598581529" TEXT="LOADBALANCER_ADDRESS=192.168.5.30"/>
+</node>
+<node CREATED="1613594319020" ID="Freemind_Link_97452708" MODIFIED="1613599186686" TEXT="Ap&#xf3;s criar os arquivos, &#xa;distribua-os da seguinte forma:">
+<icon BUILTIN="forward"/>
+<node CREATED="1613594345427" ID="Freemind_Link_1472837498" MODIFIED="1613598752625" TEXT="Workers">
+<node COLOR="#0000ff" CREATED="1613594350126" ID="Freemind_Link_1151818935" MODIFIED="1613598779280" TEXT="cp kube-proxy.kubeconfig ~/"/>
+</node>
+<node CREATED="1613594345427" ID="Freemind_Link_1691906064" MODIFIED="1613598759544" TEXT="Masters">
+<node COLOR="#0000ff" CREATED="1613594350126" ID="Freemind_Link_1636084011" MODIFIED="1613598793848" TEXT="cp admin.kubeconfig kube-controller-manager.kubeconfig kube-scheduler.kubeconfig ~/"/>
+</node>
+</node>
+<node CREATED="1613598595558" FOLDED="true" ID="Freemind_Link_1988831333" MODIFIED="1613598604975" TEXT="Kube-proxy">
+<node COLOR="#0000ff" CREATED="1613594548469" ID="Freemind_Link_881089344" MODIFIED="1613598628818" TEXT="{&#xa;  kubectl config set-cluster kubernetes-the-hard-way \&#xa;    --certificate-authority=ca.crt \&#xa;    --embed-certs=true \&#xa;    --server=https://${LOADBALANCER_ADDRESS}:6443 \&#xa;    --kubeconfig=kube-proxy.kubeconfig&#xa;&#xa;  kubectl config set-credentials system:kube-proxy \&#xa;    --client-certificate=kube-proxy.crt \&#xa;    --client-key=kube-proxy.key \&#xa;    --embed-certs=true \&#xa;    --kubeconfig=kube-proxy.kubeconfig&#xa;&#xa;  kubectl config set-context default \&#xa;    --cluster=kubernetes-the-hard-way \&#xa;    --user=system:kube-proxy \&#xa;    --kubeconfig=kube-proxy.kubeconfig&#xa;&#xa;  kubectl config use-context default --kubeconfig=kube-proxy.kubeconfig&#xa;}"/>
+</node>
+<node CREATED="1613598639013" FOLDED="true" ID="Freemind_Link_1802501223" MODIFIED="1613598643104" TEXT="Controller manager">
+<node COLOR="#0000ff" CREATED="1613594548469" ID="Freemind_Link_1576379169" MODIFIED="1613598652127" TEXT="{&#xa;  kubectl config set-cluster kubernetes-the-hard-way \&#xa;    --certificate-authority=ca.crt \&#xa;    --embed-certs=true \&#xa;    --server=https://127.0.0.1:6443 \&#xa;    --kubeconfig=kube-controller-manager.kubeconfig&#xa;&#xa;  kubectl config set-credentials system:kube-controller-manager \&#xa;    --client-certificate=kube-controller-manager.crt \&#xa;    --client-key=kube-controller-manager.key \&#xa;    --embed-certs=true \&#xa;    --kubeconfig=kube-controller-manager.kubeconfig&#xa;&#xa;  kubectl config set-context default \&#xa;    --cluster=kubernetes-the-hard-way \&#xa;    --user=system:kube-controller-manager \&#xa;    --kubeconfig=kube-controller-manager.kubeconfig&#xa;&#xa;  kubectl config use-context default --kubeconfig=kube-controller-manager.kubeconfig&#xa;}"/>
+</node>
+<node CREATED="1613598639013" FOLDED="true" ID="Freemind_Link_872029079" MODIFIED="1613598673137" TEXT="Kube-scheduler">
+<node COLOR="#0000ff" CREATED="1613594548469" ID="Freemind_Link_149740861" MODIFIED="1613598680462" TEXT="{&#xa;  kubectl config set-cluster kubernetes-the-hard-way \&#xa;    --certificate-authority=ca.crt \&#xa;    --embed-certs=true \&#xa;    --server=https://127.0.0.1:6443 \&#xa;    --kubeconfig=kube-scheduler.kubeconfig&#xa;&#xa;  kubectl config set-credentials system:kube-scheduler \&#xa;    --client-certificate=kube-scheduler.crt \&#xa;    --client-key=kube-scheduler.key \&#xa;    --embed-certs=true \&#xa;    --kubeconfig=kube-scheduler.kubeconfig&#xa;&#xa;  kubectl config set-context default \&#xa;    --cluster=kubernetes-the-hard-way \&#xa;    --user=system:kube-scheduler \&#xa;    --kubeconfig=kube-scheduler.kubeconfig&#xa;&#xa;  kubectl config use-context default --kubeconfig=kube-scheduler.kubeconfig&#xa;}"/>
+</node>
+<node CREATED="1613598639013" FOLDED="true" ID="Freemind_Link_82567960" MODIFIED="1613598700279" TEXT="Usu&#xe1;rio Admin">
+<node COLOR="#0000ff" CREATED="1613594548469" ID="Freemind_Link_1322495100" MODIFIED="1613598722403" TEXT="{&#xa;  kubectl config set-cluster kubernetes-the-hard-way \&#xa;    --certificate-authority=ca.crt \&#xa;    --embed-certs=true \&#xa;    --server=https://127.0.0.1:6443 \&#xa;    --kubeconfig=admin.kubeconfig&#xa;&#xa;  kubectl config set-credentials admin \&#xa;    --client-certificate=admin.crt \&#xa;    --client-key=admin.key \&#xa;    --embed-certs=true \&#xa;    --kubeconfig=admin.kubeconfig&#xa;&#xa;  kubectl config set-context default \&#xa;    --cluster=kubernetes-the-hard-way \&#xa;    --user=admin \&#xa;    --kubeconfig=admin.kubeconfig&#xa;&#xa;  kubectl config use-context default --kubeconfig=admin.kubeconfig&#xa;}"/>
+</node>
+</node>
+<node CREATED="1613599059944" FOLDED="true" ID="Freemind_Link_747533599" MODIFIED="1613599067520" TEXT="Gerar a chave de criptografia">
+<icon BUILTIN="full-4"/>
+<node CREATED="1613599078185" ID="Freemind_Link_1238076618" MODIFIED="1613599081286" TEXT="https://github.com/mmumshad/kubernetes-the-hard-way/blob/master/docs/06-data-encryption-keys.md">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1613598545711" ID="Freemind_Link_393273987" MODIFIED="1613599104970" TEXT="Antes de criar o arquivo, defina a chave">
+<icon BUILTIN="messagebox_warning"/>
+<node COLOR="#0000ff" CREATED="1613594548469" ID="Freemind_Link_1867382280" MODIFIED="1613599111227" TEXT="ENCRYPTION_KEY=$(head -c 32 /dev/urandom | base64)"/>
+</node>
+<node CREATED="1613594319020" ID="Freemind_Link_1838033460" MODIFIED="1613599181493" TEXT="Ap&#xf3;s criar o arquivo, &#xa;distribua-o da seguinte forma:">
+<icon BUILTIN="forward"/>
+<node CREATED="1613594345427" ID="Freemind_Link_1806266766" MODIFIED="1613598759544" TEXT="Masters">
+<node COLOR="#0000ff" CREATED="1613594350126" ID="Freemind_Link_476580935" MODIFIED="1613599201409" TEXT="cp encryption-config.yaml ~/"/>
+</node>
+</node>
+<node CREATED="1613599130191" ID="Freemind_Link_1349163415" MODIFIED="1613599132978" TEXT="Crie o arquivo">
+<node COLOR="#0000ff" CREATED="1613594548469" ID="Freemind_Link_247577557" MODIFIED="1613599141877" TEXT="cat &gt; encryption-config.yaml &lt;&lt;EOF&#xa;kind: EncryptionConfig&#xa;apiVersion: v1&#xa;resources:&#xa;  - resources:&#xa;      - secrets&#xa;    providers:&#xa;      - aescbc:&#xa;          keys:&#xa;            - name: key1&#xa;              secret: ${ENCRYPTION_KEY}&#xa;      - identity: {}&#xa;EOF"/>
 </node>
 </node>
 </node>
