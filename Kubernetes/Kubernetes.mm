@@ -30,7 +30,7 @@
 <icon BUILTIN="full-4"/>
 </node>
 </node>
-<node CREATED="1597409965716" FOLDED="true" ID="Freemind_Link_1903822424" MODIFIED="1597409969522" TEXT="Atualiza&#xe7;&#xe3;o do cluser">
+<node CREATED="1597409965716" ID="Freemind_Link_1903822424" MODIFIED="1597409969522" TEXT="Atualiza&#xe7;&#xe3;o do cluser">
 <node CREATED="1597410188637" ID="Freemind_Link_1625455322" MODIFIED="1597410193801" TEXT="Usar a ferramenta &apos;kubeadm&apos;">
 <node CREATED="1597410196980" ID="Freemind_Link_1769973743" LINK="#Freemind_Link_1270117106" MODIFIED="1597410208212" TEXT="Ver anota&#xe7;&#xf5;es abaixo"/>
 </node>
@@ -417,8 +417,187 @@
 <node CREATED="1599064101162" ID="Freemind_Link_853204876" LINK="#Freemind_Link_1755709500" MODIFIED="1599064119292" TEXT="Ver objeto Config em anota&#xe7;&#xf5;es abaixo"/>
 </node>
 </node>
+<node CREATED="1613589359874" ID="Freemind_Link_1303181181" MODIFIED="1613589369127" TEXT="Instala&#xe7;&#xe3;o">
+<node CREATED="1613589369797" ID="Freemind_Link_1687393185" MODIFIED="1613589371694" TEXT="Na m&#xe3;o">
+<node CREATED="1613589442307" ID="Freemind_Link_1739600886" MODIFIED="1613589466193" TEXT="&#xc9; necess&#xe1;rio que a m&#xe1;quina master tenha&#xa;acesso SSH a todos os n&#xf3;s do cluster">
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_805722803" MODIFIED="1613589500991" TEXT="ssh-keygen">
+<icon BUILTIN="full-1"/>
+<node CREATED="1613589503266" ID="Freemind_Link_1723820230" MODIFIED="1613589508502" TEXT="Executar no n&#xf3; master"/>
 </node>
-<node CREATED="1591997555354" FOLDED="true" ID="Freemind_Link_1121402737" MODIFIED="1591997566014" POSITION="right" TEXT="Ferramentas">
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_75480331" MODIFIED="1613590131586" TEXT="cat .ssh/id_rsa.pub">
+<icon BUILTIN="full-2"/>
+<node CREATED="1613589503266" ID="Freemind_Link_734083407" MODIFIED="1613590147978" TEXT="Copiar a chave p&#xfa;blica do n&#xf3; master"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_990063179" MODIFIED="1613590192236" TEXT="vi .ssh/authorized_keys">
+<icon BUILTIN="full-3"/>
+<node CREATED="1613589503266" ID="Freemind_Link_571233238" MODIFIED="1613590176426" TEXT="Cola a chave p&#xfa;blica do n&#xf3; master na m&#xe1;quina destino"/>
+</node>
+</node>
+<node CREATED="1613590228258" ID="Freemind_Link_1250973771" MODIFIED="1613591414290" TEXT="Baixar e instalar o &apos;kubectl&apos; em todos os n&#xf3;s do cluster">
+<icon BUILTIN="full-1"/>
+<node COLOR="#0000ff" CREATED="1613590282677" ID="Freemind_Link_778596521" MODIFIED="1613590382547" TEXT="wget https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kubectl">
+<icon BUILTIN="full-1"/>
+</node>
+<node COLOR="#0000ff" CREATED="1613590282677" ID="Freemind_Link_1263328619" MODIFIED="1613590388786" TEXT="chmod +x kubectl">
+<icon BUILTIN="full-2"/>
+</node>
+<node COLOR="#0000ff" CREATED="1613590282677" ID="Freemind_Link_1055602837" MODIFIED="1613590393658" TEXT="sudo mv kubectl /usr/local/bin/">
+<icon BUILTIN="full-3"/>
+</node>
+</node>
+<node CREATED="1613591425247" ID="Freemind_Link_1688402065" MODIFIED="1613593585603" TEXT="Criar os certificados">
+<icon BUILTIN="full-2"/>
+<node CREATED="1613592801102" ID="Freemind_Link_567017246" MODIFIED="1613592806657" TEXT="https://github.com/mmumshad/kubernetes-the-hard-way/blob/master/docs/04-certificate-authority.md">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1613594319020" ID="Freemind_Link_1715667109" MODIFIED="1613594580542" TEXT="Ap&#xf3;s criar os certificados:">
+<icon BUILTIN="forward"/>
+<node CREATED="1613594302805" ID="Freemind_Link_1646385502" MODIFIED="1613594405670" TEXT="Apenas os arquivos .crt e .key importam">
+<node COLOR="#0000ff" CREATED="1613594548469" ID="Freemind_Link_402438356" MODIFIED="1613594557307" TEXT="rm *.csr *.srl"/>
+</node>
+<node CREATED="1613594583429" ID="Freemind_Link_970196971" MODIFIED="1613594592774" TEXT="Distribua-os da seguinte forma:">
+<node CREATED="1613594345427" ID="Freemind_Link_742803458" MODIFIED="1613594349642" TEXT="N&#xf3;s master:">
+<node COLOR="#0000ff" CREATED="1613594350126" ID="Freemind_Link_1950151625" MODIFIED="1613594379257" TEXT="cp ca.crt ca.key kube-apiserver.key kube-apiserver.crt service-account.key service-account.crt etcd-server.key etcd-server.crt ~/"/>
+</node>
+</node>
+</node>
+<node CREATED="1613592161376" FOLDED="true" ID="Freemind_Link_405106177" MODIFIED="1613592163197" TEXT="CA">
+<node CREATED="1613592766072" ID="Freemind_Link_313861228" MODIFIED="1613592774237" TEXT="Essa ser&#xe1; a unidade certificadora do cluster"/>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1465068619" MODIFIED="1613591530117" TEXT="openssl  genrsa -out ca.key 2048">
+<icon BUILTIN="full-1"/>
+<node CREATED="1613591493305" ID="Freemind_Link_1733103334" MODIFIED="1613591499092" TEXT="Gera a chave prim&#xe1;ria do master"/>
+<node CREATED="1613589503266" ID="Freemind_Link_801301327" MODIFIED="1613589508502" TEXT="Executar no n&#xf3; master"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_151736814" MODIFIED="1613592094510" TEXT="openssl req -new -key ca.key -subj &quot;/CN=KUBERNETES-CA&quot; -out ca.csr">
+<icon BUILTIN="full-2"/>
+<node CREATED="1613592055121" ID="Freemind_Link_1971052983" MODIFIED="1613592066012" TEXT="Criar o CSR usando a chave privada"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_651044053" MODIFIED="1613592098950" TEXT="openssl x509 -req -in ca.csr -signkey ca.key -CAcreateserial -out ca.crt -days 1000">
+<icon BUILTIN="full-3"/>
+<node CREATED="1613592070289" ID="Freemind_Link_681567338" MODIFIED="1613592083917" TEXT="Auto assinar o CSR usando a pr&#xf3;pria chave privada"/>
+</node>
+</node>
+<node CREATED="1613592166633" FOLDED="true" ID="Freemind_Link_915467436" MODIFIED="1613592168292" TEXT="Admin">
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_487977472" MODIFIED="1613592188573" TEXT="openssl  genrsa -out admin.key 2048">
+<icon BUILTIN="full-1"/>
+<node CREATED="1613591493305" ID="Freemind_Link_1462225971" MODIFIED="1613592697321" TEXT="Gera a chave prim&#xe1;ria do admin"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1562426760" MODIFIED="1613592239196" TEXT="openssl req -new -key admin.key -subj &quot;/CN=admin/O=system:masters&quot; -out admin.csr">
+<icon BUILTIN="full-2"/>
+<node CREATED="1613592055121" ID="Freemind_Link_1451522211" MODIFIED="1613592066012" TEXT="Criar o CSR usando a chave privada"/>
+<node CREATED="1613592413160" ID="Freemind_Link_320887643" MODIFIED="1613592429510" TEXT="Repare que o admin &#xe9; parte do grupo system:masters"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_40565837" MODIFIED="1613592336675" TEXT="openssl x509 -req -in admin.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out admin.crt">
+<icon BUILTIN="full-3"/>
+<node CREATED="1613592070289" ID="Freemind_Link_109828499" MODIFIED="1613592610521" TEXT="Assinar o certificado do admin usando o par de chaves CA"/>
+</node>
+</node>
+<node CREATED="1613592166633" FOLDED="true" ID="Freemind_Link_962836698" MODIFIED="1613592658181" TEXT="Controller manager">
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1975303779" MODIFIED="1613592689397" TEXT="openssl genrsa -out kube-controller-manager.key 2048">
+<icon BUILTIN="full-1"/>
+<node CREATED="1613591493305" ID="Freemind_Link_858070983" MODIFIED="1613592704220" TEXT="Gera a chave prim&#xe1;ria do controller manager"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_994714167" MODIFIED="1613592717675" TEXT="openssl req -new -key kube-controller-manager.key -subj &quot;/CN=system:kube-controller-manager&quot; -out kube-controller-manager.csr">
+<icon BUILTIN="full-2"/>
+<node CREATED="1613592055121" ID="Freemind_Link_1437581570" MODIFIED="1613592066012" TEXT="Criar o CSR usando a chave privada"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1142758652" MODIFIED="1613592753700" TEXT="openssl x509 -req -in kube-controller-manager.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out kube-controller-manager.crt -days 1000">
+<icon BUILTIN="full-3"/>
+<node CREATED="1613592070289" ID="Freemind_Link_431413837" MODIFIED="1613593040783" TEXT="Assinar o certificado usando o par de chaves CA"/>
+</node>
+</node>
+<node CREATED="1613592166633" FOLDED="true" ID="Freemind_Link_917287029" MODIFIED="1613593104063" TEXT="Kube-proxy">
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_72373846" MODIFIED="1613593006991" TEXT="openssl genrsa -out kube-proxy.key 2048">
+<icon BUILTIN="full-1"/>
+<node CREATED="1613591493305" ID="Freemind_Link_1548517776" MODIFIED="1613592993972" TEXT="Gera a chave prim&#xe1;ria do kube-proxy"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1638444564" MODIFIED="1613593017920" TEXT="openssl req -new -key kube-proxy.key -subj &quot;/CN=system:kube-proxy&quot; -out kube-proxy.csr">
+<icon BUILTIN="full-2"/>
+<node CREATED="1613592055121" ID="Freemind_Link_1532283778" MODIFIED="1613592066012" TEXT="Criar o CSR usando a chave privada"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_438311344" MODIFIED="1613593027706" TEXT="openssl x509 -req -in kube-proxy.csr -CA ca.crt -CAkey ca.key -CAcreateserial  -out kube-proxy.crt -days 1000">
+<icon BUILTIN="full-3"/>
+<node CREATED="1613592070289" ID="Freemind_Link_402896420" MODIFIED="1613593040783" TEXT="Assinar o certificado usando o par de chaves CA"/>
+</node>
+</node>
+<node CREATED="1613592166633" FOLDED="true" ID="Freemind_Link_797019744" MODIFIED="1613593106993" TEXT="Kube-scheduler">
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1163872016" MODIFIED="1613593079971" TEXT="openssl genrsa -out kube-scheduler.key 2048">
+<icon BUILTIN="full-1"/>
+<node CREATED="1613591493305" ID="Freemind_Link_234042960" MODIFIED="1613593564472" TEXT="Gera a chave prim&#xe1;ria do kube-scheduler"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_569676714" MODIFIED="1613593088586" TEXT="openssl req -new -key kube-scheduler.key -subj &quot;/CN=system:kube-scheduler&quot; -out kube-scheduler.csr">
+<icon BUILTIN="full-2"/>
+<node CREATED="1613592055121" ID="Freemind_Link_1402974501" MODIFIED="1613592066012" TEXT="Criar o CSR usando a chave privada"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1442920282" MODIFIED="1613593097137" TEXT="openssl x509 -req -in kube-scheduler.csr -CA ca.crt -CAkey ca.key -CAcreateserial  -out kube-scheduler.crt -days 1000">
+<icon BUILTIN="full-3"/>
+<node CREATED="1613592070289" ID="Freemind_Link_1582248081" MODIFIED="1613593040783" TEXT="Assinar o certificado usando o par de chaves CA"/>
+</node>
+</node>
+<node CREATED="1613592166633" FOLDED="true" ID="Freemind_Link_1716393046" MODIFIED="1613593248941" TEXT="Kube-apiserver">
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1147664039" MODIFIED="1613593513869" TEXT="vi openssl.cnf">
+<icon BUILTIN="full-1"/>
+<node CREATED="1613591493305" ID="Freemind_Link_1686812343" MODIFIED="1613593428208" TEXT="O certificado kube-apiserver precisa de todos os poss&#xed;veis nomes que os componentes do cluster possam alcan&#xe7;ar. Isso inclui diferentes nomes DNS, endere&#xe7;os IP etc."/>
+<node CREATED="1613593433813" ID="Freemind_Link_1499479220" MODIFIED="1613593469743" TEXT="Para o openssl lidar com nomes alternativos, &#xe9; necess&#xe1;rio criar o arquivo conf para ele"/>
+<node CREATED="1613593482330" ID="Freemind_Link_499029403" MODIFIED="1613593483585" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_940669817" MODIFIED="1613593502447" TEXT="cat &gt; openssl.cnf &lt;&lt;EOF&#xa;[req]&#xa;req_extensions = v3_req&#xa;distinguished_name = req_distinguished_name&#xa;[req_distinguished_name]&#xa;[ v3_req ]&#xa;basicConstraints = CA:FALSE&#xa;keyUsage = nonRepudiation, digitalSignature, keyEncipherment&#xa;subjectAltName = @alt_names&#xa;[alt_names]&#xa;DNS.1 = kubernetes&#xa;DNS.2 = kubernetes.default&#xa;DNS.3 = kubernetes.default.svc&#xa;DNS.4 = kubernetes.default.svc.cluster.local&#xa;IP.1 = 10.96.0.1&#xa;IP.2 = 192.168.5.11&#xa;IP.3 = 192.168.5.12&#xa;IP.4 = 192.168.5.30&#xa;IP.5 = 127.0.0.1&#xa;EOF"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_702774772" MODIFIED="1613594244146" TEXT="openssl genrsa -out kube-apiserver.key 2048">
+<icon BUILTIN="full-2"/>
+<node CREATED="1613591493305" ID="Freemind_Link_1717680538" MODIFIED="1613593553975" TEXT="Gera a chave prim&#xe1;ria do kube-apiserver"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_167923631" MODIFIED="1613594246874" TEXT="openssl req -new -key kube-apiserver.key -subj &quot;/CN=kube-apiserver&quot; -out kube-apiserver.csr -config openssl.cnf">
+<icon BUILTIN="full-3"/>
+<node CREATED="1613592055121" ID="Freemind_Link_947001807" MODIFIED="1613592066012" TEXT="Criar o CSR usando a chave privada"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1095830654" MODIFIED="1613594250056" TEXT="openssl x509 -req -in kube-apiserver.csr -CA ca.crt -CAkey ca.key -CAcreateserial  -out kube-apiserver.crt -extensions v3_req -extfile openssl.cnf -days 1000">
+<icon BUILTIN="full-4"/>
+<node CREATED="1613592070289" ID="Freemind_Link_1628906387" MODIFIED="1613593040783" TEXT="Assinar o certificado usando o par de chaves CA"/>
+</node>
+</node>
+<node CREATED="1613592166633" FOLDED="true" ID="Freemind_Link_1254284752" MODIFIED="1613593707981" TEXT="etcd server">
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_922318164" MODIFIED="1613593721443" TEXT="vi openssl-etcd.cnf">
+<icon BUILTIN="full-1"/>
+<node CREATED="1613591493305" ID="Freemind_Link_92173951" MODIFIED="1613593786179" TEXT="O certificado etcd-server precisa do endere&#xe7;o de todos os servidores que fa&#xe7;am parte do cluster ETCD"/>
+<node CREATED="1613593433813" ID="Freemind_Link_857617805" MODIFIED="1613593469743" TEXT="Para o openssl lidar com nomes alternativos, &#xe9; necess&#xe1;rio criar o arquivo conf para ele"/>
+<node CREATED="1613593482330" ID="Freemind_Link_152325894" MODIFIED="1613593483585" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_239104420" MODIFIED="1613593801092" TEXT="cat &gt; openssl-etcd.cnf &lt;&lt;EOF&#xa;[req]&#xa;req_extensions = v3_req&#xa;distinguished_name = req_distinguished_name&#xa;[req_distinguished_name]&#xa;[ v3_req ]&#xa;basicConstraints = CA:FALSE&#xa;keyUsage = nonRepudiation, digitalSignature, keyEncipherment&#xa;subjectAltName = @alt_names&#xa;[alt_names]&#xa;IP.1 = 192.168.5.11&#xa;IP.2 = 192.168.5.12&#xa;IP.3 = 127.0.0.1&#xa;EOF"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1109077183" MODIFIED="1613594253818" TEXT="openssl genrsa -out etcd-server.key 2048">
+<icon BUILTIN="full-2"/>
+<node CREATED="1613591493305" ID="Freemind_Link_1557062754" MODIFIED="1613593810386" TEXT="Gera a chave prim&#xe1;ria do etcd-server"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1411227117" MODIFIED="1613594256736" TEXT="openssl req -new -key etcd-server.key -subj &quot;/CN=etcd-server&quot; -out etcd-server.csr -config openssl-etcd.cnf">
+<icon BUILTIN="full-3"/>
+<node CREATED="1613592055121" ID="Freemind_Link_1329695299" MODIFIED="1613592066012" TEXT="Criar o CSR usando a chave privada"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_781350946" MODIFIED="1613594259426" TEXT="openssl x509 -req -in etcd-server.csr -CA ca.crt -CAkey ca.key -CAcreateserial  -out etcd-server.crt -extensions v3_req -extfile openssl-etcd.cnf -days 1000">
+<icon BUILTIN="full-4"/>
+<node CREATED="1613592070289" ID="Freemind_Link_1093063219" MODIFIED="1613593040783" TEXT="Assinar o certificado usando o par de chaves CA"/>
+</node>
+</node>
+<node CREATED="1613592166633" FOLDED="true" ID="Freemind_Link_1323039341" MODIFIED="1613593930042" TEXT="service-account">
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_217590028" MODIFIED="1613593937758" TEXT="openssl genrsa -out service-account.key 2048">
+<icon BUILTIN="full-1"/>
+<node CREATED="1613591493305" ID="Freemind_Link_1091085006" MODIFIED="1613593943357" TEXT="Gera a chave prim&#xe1;ria do service-account"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_429150095" MODIFIED="1613593951482" TEXT="openssl req -new -key service-account.key -subj &quot;/CN=service-accounts&quot; -out service-account.csr">
+<icon BUILTIN="full-2"/>
+<node CREATED="1613592055121" ID="Freemind_Link_48527994" MODIFIED="1613592066012" TEXT="Criar o CSR usando a chave privada"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1998156715" MODIFIED="1613593964676" TEXT="openssl x509 -req -in service-account.csr -CA ca.crt -CAkey ca.key -CAcreateserial  -out service-account.crt -days 1000">
+<icon BUILTIN="full-3"/>
+<node CREATED="1613592070289" ID="Freemind_Link_773084622" MODIFIED="1613593040783" TEXT="Assinar o certificado usando o par de chaves CA"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1613589372531" ID="Freemind_Link_1092549628" MODIFIED="1613589375442" TEXT="Via Kubeadm"/>
+</node>
+</node>
+<node CREATED="1591997555354" ID="Freemind_Link_1121402737" MODIFIED="1591997566014" POSITION="right" TEXT="Ferramentas">
 <node COLOR="#0000ff" CREATED="1597409823944" FOLDED="true" ID="Freemind_Link_1270117106" MODIFIED="1597409834931" TEXT="kubeadm">
 <node CREATED="1597409873583" ID="Freemind_Link_1028947641" MODIFIED="1597409888010" TEXT="Ferramenta de administra&#xe7;&#xe3;o do cluster (instala&#xe7;&#xe3;o e configura&#xe7;&#xe3;o)"/>
 <node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_588434013" MODIFIED="1597409845241" TEXT="upgrade">
@@ -427,7 +606,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1591997283387" ID="Freemind_Link_461602891" MODIFIED="1598276866576" TEXT="kubectl">
+<node COLOR="#0000ff" CREATED="1591997283387" FOLDED="true" ID="Freemind_Link_461602891" MODIFIED="1598276866576" TEXT="kubectl">
 <node CREATED="1592317124854" ID="Freemind_Link_1986325000" MODIFIED="1592317142693" TEXT="&#xc9; uma interface de linha de comandos para gerenciar k8s"/>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1145737261" MODIFIED="1591997526134" TEXT="version">
 <node CREATED="1591997501435" ID="Freemind_Link_885210971" MODIFIED="1591997537374" TEXT="Exibe a vers&#xe3;o do kubectl instalada"/>
@@ -986,7 +1165,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1591997286697" ID="Freemind_Link_288764766" MODIFIED="1591997547957" TEXT="minikube">
+<node COLOR="#0000ff" CREATED="1591997286697" FOLDED="true" ID="Freemind_Link_288764766" MODIFIED="1591997547957" TEXT="minikube">
 <node CREATED="1596205466443" ID="Freemind_Link_1462077979" MODIFIED="1596205477704" TEXT="&#xc9; uma VM que roda um n&#xf3; (o master) do k8s"/>
 <node CREATED="1591997581539" ID="Freemind_Link_1189140737" MODIFIED="1591997588821" TEXT="S&#xf3; funciona se a virtualiza&#xe7;&#xe3;o estiver habilitada">
 <node CREATED="1591997632538" ID="Freemind_Link_1004617445" MODIFIED="1591997724800" TEXT="Para checar, certifique-se de que a execu&#xe7;&#xe3;o&#xa;do comando abaixo n&#xe3;o retorna vazia"/>
@@ -1534,7 +1713,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592315528094" ID="Freemind_Link_1064829192" MODIFIED="1592317218772" POSITION="right" TEXT="Objetos k8s">
+<node CREATED="1592315528094" FOLDED="true" ID="Freemind_Link_1064829192" MODIFIED="1592317218772" POSITION="right" TEXT="Objetos k8s">
 <node CREATED="1592317521186" ID="Freemind_Link_1956142399" MODIFIED="1592317522903" TEXT="Master">
 <node CREATED="1592317523600" ID="Freemind_Link_755059932" MODIFIED="1592317530400" TEXT="Gerencia o cluster"/>
 <node CREATED="1592317530989" ID="Freemind_Link_1067778424" MODIFIED="1592317540209" TEXT="&#xc9; onde ficam todos os arquivos YAML"/>
