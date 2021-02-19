@@ -30,7 +30,7 @@
 <icon BUILTIN="full-4"/>
 </node>
 </node>
-<node CREATED="1597409965716" ID="Freemind_Link_1903822424" MODIFIED="1597409969522" TEXT="Atualiza&#xe7;&#xe3;o do cluser">
+<node CREATED="1597409965716" FOLDED="true" ID="Freemind_Link_1903822424" MODIFIED="1597409969522" TEXT="Atualiza&#xe7;&#xe3;o do cluser">
 <node CREATED="1597410188637" ID="Freemind_Link_1625455322" MODIFIED="1597410193801" TEXT="Usar a ferramenta &apos;kubeadm&apos;">
 <node CREATED="1597410196980" ID="Freemind_Link_1769973743" LINK="#Freemind_Link_1270117106" MODIFIED="1597410208212" TEXT="Ver anota&#xe7;&#xf5;es abaixo"/>
 </node>
@@ -116,7 +116,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1597756577370" ID="Freemind_Link_1326851633" MODIFIED="1597756582454" TEXT="Seguran&#xe7;a">
+<node CREATED="1597756577370" FOLDED="true" ID="Freemind_Link_1326851633" MODIFIED="1597756582454" TEXT="Seguran&#xe7;a">
 <node CREATED="1597756583128" ID="Freemind_Link_141401221" MODIFIED="1597756599307" TEXT="O k8s n&#xe3;o cria usu&#xe1;rios de acesso ao cluster">
 <node CREATED="1597756601155" ID="Freemind_Link_1820649453" MODIFIED="1597756606501" TEXT="Mas cria contas de servi&#xe7;o">
 <node CREATED="1597756606946" ID="Freemind_Link_1302044043" MODIFIED="1597756624015" TEXT="Contas de servi&#xe7;o s&#xe3;o usadas por rob&#xf4;s (ou outros sistemas)"/>
@@ -126,8 +126,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1597757022260" FOLDED="true" ID="Freemind_Link_458808886" MODIFIED="1597757121665" TEXT="Autentica&#xe7;&#xe3;o (ou)">
-<node CREATED="1597757122424" ID="Freemind_Link_371342487" MODIFIED="1597758011157" TEXT="Static password file">
+<node CREATED="1597757022260" ID="Freemind_Link_458808886" MODIFIED="1597757121665" TEXT="Autentica&#xe7;&#xe3;o (ou)">
+<node CREATED="1597757122424" FOLDED="true" ID="Freemind_Link_371342487" MODIFIED="1597758011157" TEXT="Static password file">
 <icon BUILTIN="forward"/>
 <node CREATED="1597757955411" ID="Freemind_Link_1591848982" MODIFIED="1597757966686" TEXT="N&#xe3;o &#xe9; uma abordagem segura!">
 <icon BUILTIN="messagebox_warning"/>
@@ -162,7 +162,7 @@
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_605796468" MODIFIED="1597757578361" TEXT="curl -v -k https://master-node-ip:6443/api/v1/pods -u &quot;user1:password123&quot;"/>
 </node>
 </node>
-<node CREATED="1597757130696" ID="Freemind_Link_574247200" MODIFIED="1597758014533" TEXT="Static token file">
+<node CREATED="1597757130696" FOLDED="true" ID="Freemind_Link_574247200" MODIFIED="1597758014533" TEXT="Static token file">
 <icon BUILTIN="forward"/>
 <node CREATED="1597757955411" ID="Freemind_Link_278891880" MODIFIED="1597757966686" TEXT="N&#xe3;o &#xe9; uma abordagem segura!">
 <icon BUILTIN="messagebox_warning"/>
@@ -175,7 +175,7 @@
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1770517074" MODIFIED="1597757815178" TEXT="curl -v -k https://master-node-ip:6443/api/v1/pods --header &quot;Authorization: Bearer &lt;token-aqui&gt;&quot;"/>
 </node>
 </node>
-<node CREATED="1597757140368" ID="Freemind_Link_901682722" MODIFIED="1597758018151" TEXT="Certificates">
+<node CREATED="1597757140368" FOLDED="true" ID="Freemind_Link_901682722" MODIFIED="1597758018151" TEXT="Certificates">
 <icon BUILTIN="forward"/>
 <node CREATED="1597841330290" ID="Freemind_Link_1071842695" MODIFIED="1597841331711" TEXT="CA">
 <node CREATED="1597841359845" ID="Freemind_Link_1403634719" MODIFIED="1597841367457" TEXT="&#xc9; exigido um CA para o cluster"/>
@@ -268,7 +268,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1597842315445" ID="Freemind_Link_1623000098" MODIFIED="1597842317369" TEXT="Admin user">
+<node CREATED="1597842315445" FOLDED="true" ID="Freemind_Link_1623000098" MODIFIED="1597842317369" TEXT="Admin user">
 <node CREATED="1597841482623" ID="Freemind_Link_952174397" MODIFIED="1597841485870" TEXT="Keys">
 <node COLOR="#0000ff" CREATED="1597841487189" ID="Freemind_Link_330246094" MODIFIED="1597842345753" TEXT="openssl genrsa -out admin.key 2048">
 <node CREATED="1597841518795" ID="Freemind_Link_1132337179" MODIFIED="1597842351377" TEXT="Gera o admin.key"/>
@@ -340,7 +340,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1597844903227" ID="Freemind_Link_80734919" MODIFIED="1597844910030" TEXT="Kube-Api-Server">
+<node CREATED="1597844903227" FOLDED="true" ID="Freemind_Link_80734919" MODIFIED="1597844910030" TEXT="Kube-Api-Server">
 <node CREATED="1597844913045" ID="Freemind_Link_1190837589" MODIFIED="1597845028611" TEXT="Precisa ter todos os nomes &#xa;alternativos registrados no certificado">
 <node CREATED="1597845017072" ID="Freemind_Link_261553801" MODIFIED="1597845019447" TEXT="Lista:">
 <node CREATED="1597844926683" ID="Freemind_Link_909800739" MODIFIED="1597844929231" TEXT="kubernetes"/>
@@ -419,6 +419,9 @@
 </node>
 <node CREATED="1613589359874" ID="Freemind_Link_1303181181" MODIFIED="1613589369127" TEXT="Instala&#xe7;&#xe3;o">
 <node CREATED="1613589369797" ID="Freemind_Link_1687393185" MODIFIED="1613589371694" TEXT="Na m&#xe3;o">
+<node CREATED="1613735818463" ID="Freemind_Link_1373035147" MODIFIED="1613735823015" TEXT="https://www.youtube.com/playlist?list=PL2We04F3Y_41jYdadX55fdJplDvgNGENo">
+<icon BUILTIN="attach"/>
+</node>
 <node CREATED="1613589442307" ID="Freemind_Link_1739600886" MODIFIED="1613589466193" TEXT="&#xc9; necess&#xe1;rio que a m&#xe1;quina master tenha&#xa;acesso SSH a todos os n&#xf3;s do cluster">
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_805722803" MODIFIED="1613589500991" TEXT="ssh-keygen">
 <icon BUILTIN="full-1"/>
@@ -433,8 +436,8 @@
 <node CREATED="1613589503266" ID="Freemind_Link_571233238" MODIFIED="1613590176426" TEXT="Cola a chave p&#xfa;blica do n&#xf3; master na m&#xe1;quina destino"/>
 </node>
 </node>
-<node CREATED="1613590228258" FOLDED="true" ID="Freemind_Link_1250973771" MODIFIED="1613599332548" TEXT="Baixar e instalar o &apos;kubectl&apos; em cada n&#xf3; do cluster">
-<icon BUILTIN="full-1"/>
+<node CREATED="1613590228258" FOLDED="true" ID="Freemind_Link_1250973771" MODIFIED="1613746419865" TEXT="1 - Baixar e instalar o &apos;kubectl&apos; em cada n&#xf3; do cluster">
+<icon BUILTIN="forward"/>
 <node COLOR="#0000ff" CREATED="1613590282677" ID="Freemind_Link_778596521" MODIFIED="1613590382547" TEXT="wget https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kubectl">
 <icon BUILTIN="full-1"/>
 </node>
@@ -445,8 +448,8 @@
 <icon BUILTIN="full-3"/>
 </node>
 </node>
-<node CREATED="1613591425247" FOLDED="true" ID="Freemind_Link_1688402065" MODIFIED="1613593585603" TEXT="Criar os certificados">
-<icon BUILTIN="full-2"/>
+<node CREATED="1613591425247" FOLDED="true" ID="Freemind_Link_1688402065" MODIFIED="1613746422821" TEXT="2 - Criar os certificados">
+<icon BUILTIN="forward"/>
 <node CREATED="1613592801102" ID="Freemind_Link_567017246" MODIFIED="1613592806657" TEXT="https://github.com/mmumshad/kubernetes-the-hard-way/blob/master/docs/04-certificate-authority.md">
 <icon BUILTIN="attach"/>
 </node>
@@ -593,8 +596,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1613598490622" FOLDED="true" ID="Freemind_Link_1477675800" MODIFIED="1613598514476" TEXT="Criar os arquivos de &#xa;configura&#xe7;&#xe3;o kubeconfig">
-<icon BUILTIN="full-3"/>
+<node CREATED="1613598490622" FOLDED="true" ID="Freemind_Link_1477675800" MODIFIED="1613746428478" TEXT="3 - Criar os arquivos de &#xa;configura&#xe7;&#xe3;o kubeconfig">
+<icon BUILTIN="forward"/>
 <node CREATED="1613598529142" ID="Freemind_Link_1475873908" MODIFIED="1613598532693" TEXT="https://github.com/mmumshad/kubernetes-the-hard-way/blob/master/docs/05-kubernetes-configuration-files.md">
 <icon BUILTIN="attach"/>
 </node>
@@ -624,8 +627,8 @@
 <node COLOR="#0000ff" CREATED="1613594548469" ID="Freemind_Link_1322495100" MODIFIED="1613598722403" TEXT="{&#xa;  kubectl config set-cluster kubernetes-the-hard-way \&#xa;    --certificate-authority=ca.crt \&#xa;    --embed-certs=true \&#xa;    --server=https://127.0.0.1:6443 \&#xa;    --kubeconfig=admin.kubeconfig&#xa;&#xa;  kubectl config set-credentials admin \&#xa;    --client-certificate=admin.crt \&#xa;    --client-key=admin.key \&#xa;    --embed-certs=true \&#xa;    --kubeconfig=admin.kubeconfig&#xa;&#xa;  kubectl config set-context default \&#xa;    --cluster=kubernetes-the-hard-way \&#xa;    --user=admin \&#xa;    --kubeconfig=admin.kubeconfig&#xa;&#xa;  kubectl config use-context default --kubeconfig=admin.kubeconfig&#xa;}"/>
 </node>
 </node>
-<node CREATED="1613599059944" FOLDED="true" ID="Freemind_Link_747533599" MODIFIED="1613599067520" TEXT="Gerar a chave de criptografia">
-<icon BUILTIN="full-4"/>
+<node CREATED="1613599059944" FOLDED="true" ID="Freemind_Link_747533599" MODIFIED="1613746433314" TEXT="4 - Gerar a chave de criptografia">
+<icon BUILTIN="forward"/>
 <node CREATED="1613599078185" ID="Freemind_Link_1238076618" MODIFIED="1613599081286" TEXT="https://github.com/mmumshad/kubernetes-the-hard-way/blob/master/docs/06-data-encryption-keys.md">
 <icon BUILTIN="attach"/>
 </node>
@@ -641,6 +644,186 @@
 </node>
 <node CREATED="1613599130191" ID="Freemind_Link_1349163415" MODIFIED="1613599132978" TEXT="Crie o arquivo">
 <node COLOR="#0000ff" CREATED="1613594548469" ID="Freemind_Link_247577557" MODIFIED="1613599141877" TEXT="cat &gt; encryption-config.yaml &lt;&lt;EOF&#xa;kind: EncryptionConfig&#xa;apiVersion: v1&#xa;resources:&#xa;  - resources:&#xa;      - secrets&#xa;    providers:&#xa;      - aescbc:&#xa;          keys:&#xa;            - name: key1&#xa;              secret: ${ENCRYPTION_KEY}&#xa;      - identity: {}&#xa;EOF"/>
+</node>
+</node>
+<node CREATED="1613735995801" ID="Freemind_Link_478051772" MODIFIED="1613746443956" TEXT="5 - Subir o cluster ETCD nos n&#xf3;s master">
+<icon BUILTIN="forward"/>
+<node CREATED="1613736456575" ID="Freemind_Link_915119009" MODIFIED="1613736464331" TEXT="Fazer essas opera&#xe7;&#xf5;es em cada um dos n&#xf3;s master"/>
+<node CREATED="1613736025914" FOLDED="true" ID="Freemind_Link_1291740489" MODIFIED="1613736048346" TEXT="Baixar os bin&#xe1;rios do ETCD">
+<icon BUILTIN="full-1"/>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_1955069479" MODIFIED="1613736078947" TEXT="wget -q --show-progress --https-only --timestamping \   &quot;https://github.com/coreos/etcd/releases/download/v3.3.9/etcd-v3.3.9-linux-amd64.tar.gz&quot;"/>
+</node>
+<node CREATED="1613736445734" FOLDED="true" ID="Freemind_Link_479498064" MODIFIED="1613736452712" TEXT="Instalar o etcd">
+<icon BUILTIN="full-2"/>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_460693369" MODIFIED="1613736492568" TEXT="{&#xa;  tar -xvf etcd-v3.3.9-linux-amd64.tar.gz&#xa;  sudo mv etcd-v3.3.9-linux-amd64/etcd* /usr/local/bin/&#xa;}"/>
+</node>
+<node CREATED="1613736531057" FOLDED="true" ID="Freemind_Link_1362656038" MODIFIED="1613736542004" TEXT="Colocar os certificados do etcd">
+<icon BUILTIN="full-3"/>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_639498236" MODIFIED="1613736552837" TEXT="{&#xa;  sudo mkdir -p /etc/etcd /var/lib/etcd&#xa;  sudo cp ca.crt etcd-server.key etcd-server.crt /etc/etcd/&#xa;}"/>
+</node>
+<node CREATED="1613736565589" FOLDED="true" ID="Freemind_Link_779892425" MODIFIED="1613736577544" TEXT="Criar o arquivo de configura&#xe7;&#xe3;o do etcd">
+<icon BUILTIN="full-4"/>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_1933588958" MODIFIED="1613736606580" TEXT="INTERNAL_IP=$(ip addr show enp0s8 | grep &quot;inet &quot; | awk &apos;{print $2}&apos; | cut -d / -f 1)&#xa;ETCD_NAME=$(hostname -s)&#xa;&#xa;cat &lt;&lt;EOF | sudo tee /etc/systemd/system/etcd.service&#xa;[Unit]&#xa;Description=etcd&#xa;Documentation=https://github.com/coreos&#xa;&#xa;[Service]&#xa;ExecStart=/usr/local/bin/etcd \\&#xa;  --name ${ETCD_NAME} \\&#xa;  --cert-file=/etc/etcd/etcd-server.crt \\&#xa;  --key-file=/etc/etcd/etcd-server.key \\&#xa;  --peer-cert-file=/etc/etcd/etcd-server.crt \\&#xa;  --peer-key-file=/etc/etcd/etcd-server.key \\&#xa;  --trusted-ca-file=/etc/etcd/ca.crt \\&#xa;  --peer-trusted-ca-file=/etc/etcd/ca.crt \\&#xa;  --peer-client-cert-auth \\&#xa;  --client-cert-auth \\&#xa;  --initial-advertise-peer-urls https://${INTERNAL_IP}:2380 \\&#xa;  --listen-peer-urls https://${INTERNAL_IP}:2380 \\&#xa;  --listen-client-urls https://${INTERNAL_IP}:2379,https://127.0.0.1:2379 \\&#xa;  --advertise-client-urls https://${INTERNAL_IP}:2379 \\&#xa;  --initial-cluster-token etcd-cluster-0 \\&#xa;  --initial-cluster master-1=https://192.168.5.11:2380,master-2=https://192.168.5.12:2380 \\&#xa;  --initial-cluster-state new \\&#xa;  --data-dir=/var/lib/etcd&#xa;Restart=on-failure&#xa;RestartSec=5&#xa;&#xa;[Install]&#xa;WantedBy=multi-user.target&#xa;EOF"/>
+</node>
+<node CREATED="1613736624686" FOLDED="true" ID="Freemind_Link_1312829689" MODIFIED="1613736634358" TEXT="Iniciar o etcd server">
+<icon BUILTIN="full-5"/>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_49979231" MODIFIED="1613736647671" TEXT="{&#xa;  sudo systemctl daemon-reload&#xa;  sudo systemctl enable etcd&#xa;  sudo systemctl start etcd&#xa;}"/>
+</node>
+<node CREATED="1613736662462" FOLDED="true" ID="Freemind_Link_1600943813" MODIFIED="1613736671287" TEXT="Testar cluster etcd">
+<icon BUILTIN="full-6"/>
+<node CREATED="1613736672743" ID="Freemind_Link_1536897862" MODIFIED="1613736694983" TEXT="Ap&#xf3;s a execu&#xe7;&#xe3;o dos passos acima em todos os n&#xf3;s master, executar o comando abaixo"/>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_487154231" MODIFIED="1613736704196" TEXT="sudo ETCDCTL_API=3 etcdctl member list \&#xa;  --endpoints=https://127.0.0.1:2379 \&#xa;  --cacert=/etc/etcd/ca.crt \&#xa;  --cert=/etc/etcd/etcd-server.crt \&#xa;  --key=/etc/etcd/etcd-server.key"/>
+<node CREATED="1613736712199" ID="Freemind_Link_363002872" MODIFIED="1613736715502" TEXT="Resultado esperado:">
+<node CREATED="1613736716965" ID="Freemind_Link_439796312" MODIFIED="1613736737443" TEXT="45bf9ccad8d8900a, started, master-2, https://192.168.5.12:2380, https://192.168.5.12:2379&#xa;54a5796a6803f252, started, master-1, https://192.168.5.11:2380, https://192.168.5.11:2379"/>
+</node>
+</node>
+</node>
+<node CREATED="1613737743096" FOLDED="true" ID="Freemind_Link_282502194" MODIFIED="1613746446778" TEXT="6 - Subir o Control Plane nos n&#xf3;s master">
+<icon BUILTIN="forward"/>
+<node CREATED="1613737811359" ID="Freemind_Link_30804953" MODIFIED="1613737855701" TEXT="O Control Plane &#xe9; formado pelo Kubernetes API Server, Scheduler e Controller Manager"/>
+<node CREATED="1613736456575" ID="Freemind_Link_88500899" MODIFIED="1613736464331" TEXT="Fazer essas opera&#xe7;&#xf5;es em cada um dos n&#xf3;s master"/>
+<node CREATED="1613737892257" FOLDED="true" ID="Freemind_Link_864877378" MODIFIED="1613738082673" TEXT="Baixar e instalar os bin&#xe1;rios">
+<icon BUILTIN="full-1"/>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_1445032433" MODIFIED="1613738163442" TEXT="sudo mkdir -p /etc/kubernetes/config">
+<icon BUILTIN="full-1"/>
+</node>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_1512960891" MODIFIED="1613738167148" TEXT="wget -q --show-progress --https-only --timestamping \&#xa;  &quot;https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kube-apiserver&quot; \&#xa;  &quot;https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kube-controller-manager&quot; \&#xa;  &quot;https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kube-scheduler&quot; \&#xa;  &quot;https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kubectl&quot;&#xa;">
+<icon BUILTIN="full-2"/>
+</node>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_1554498924" MODIFIED="1613738169771" TEXT="{&#xa;  chmod +x kube-apiserver kube-controller-manager kube-scheduler kubectl&#xa;  sudo mv kube-apiserver kube-controller-manager kube-scheduler kubectl /usr/local/bin/&#xa;}">
+<icon BUILTIN="full-3"/>
+</node>
+</node>
+<node CREATED="1613738171292" FOLDED="true" ID="Freemind_Link_560337314" MODIFIED="1613738188667" TEXT="Colocar os certificados ">
+<icon BUILTIN="full-2"/>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_506677848" MODIFIED="1613738212366" TEXT="{&#xa;  sudo mkdir -p /var/lib/kubernetes/&#xa;&#xa;  sudo cp ca.crt ca.key kube-apiserver.crt kube-apiserver.key \&#xa;    service-account.key service-account.crt \&#xa;    etcd-server.key etcd-server.crt \&#xa;    encryption-config.yaml /var/lib/kubernetes/&#xa;}"/>
+</node>
+<node CREATED="1613736565589" FOLDED="true" ID="Freemind_Link_1053268538" MODIFIED="1613738322821" TEXT="Criar os arquivos de configura&#xe7;&#xe3;o">
+<icon BUILTIN="full-3"/>
+<node CREATED="1613738328558" FOLDED="true" ID="Freemind_Link_687014048" MODIFIED="1613738332063" TEXT="API Server">
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_215315011" MODIFIED="1613738282061" TEXT="INTERNAL_IP=$(ip addr show enp0s8 | grep &quot;inet &quot; | awk &apos;{print $2}&apos; | cut -d / -f 1)&#xa;&#xa;cat &lt;&lt;EOF | sudo tee /etc/systemd/system/kube-apiserver.service&#xa;[Unit]&#xa;Description=Kubernetes API Server&#xa;Documentation=https://github.com/kubernetes/kubernetes&#xa;&#xa;[Service]&#xa;ExecStart=/usr/local/bin/kube-apiserver \\&#xa;  --advertise-address=${INTERNAL_IP} \\&#xa;  --allow-privileged=true \\&#xa;  --apiserver-count=3 \\&#xa;  --audit-log-maxage=30 \\&#xa;  --audit-log-maxbackup=3 \\&#xa;  --audit-log-maxsize=100 \\&#xa;  --audit-log-path=/var/log/audit.log \\&#xa;  --authorization-mode=Node,RBAC \\&#xa;  --bind-address=0.0.0.0 \\&#xa;  --client-ca-file=/var/lib/kubernetes/ca.crt \\&#xa;  --enable-admission-plugins=NodeRestriction,ServiceAccount \\&#xa;  --enable-swagger-ui=true \\&#xa;  --enable-bootstrap-token-auth=true \\&#xa;  --etcd-cafile=/var/lib/kubernetes/ca.crt \\&#xa;  --etcd-certfile=/var/lib/kubernetes/etcd-server.crt \\&#xa;  --etcd-keyfile=/var/lib/kubernetes/etcd-server.key \\&#xa;  --etcd-servers=https://192.168.5.11:2379,https://192.168.5.12:2379 \\&#xa;  --event-ttl=1h \\&#xa;  --encryption-provider-config=/var/lib/kubernetes/encryption-config.yaml \\&#xa;  --kubelet-certificate-authority=/var/lib/kubernetes/ca.crt \\&#xa;  --kubelet-client-certificate=/var/lib/kubernetes/kube-apiserver.crt \\&#xa;  --kubelet-client-key=/var/lib/kubernetes/kube-apiserver.key \\&#xa;  --kubelet-https=true \\&#xa;  --runtime-config=api/all \\&#xa;  --service-account-key-file=/var/lib/kubernetes/service-account.crt \\&#xa;  --service-cluster-ip-range=10.96.0.0/24 \\&#xa;  --service-node-port-range=30000-32767 \\&#xa;  --tls-cert-file=/var/lib/kubernetes/kube-apiserver.crt \\&#xa;  --tls-private-key-file=/var/lib/kubernetes/kube-apiserver.key \\&#xa;  --v=2&#xa;Restart=on-failure&#xa;RestartSec=5&#xa;&#xa;[Install]&#xa;WantedBy=multi-user.target&#xa;EOF"/>
+</node>
+<node CREATED="1613738385226" FOLDED="true" ID="Freemind_Link_1069654403" MODIFIED="1613738389310" TEXT="Controller Manager">
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_801504349" MODIFIED="1613738422017" TEXT="sudo cp kube-controller-manager.kubeconfig /var/lib/kubernetes/"/>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_889748828" MODIFIED="1613738434966" TEXT="cat &lt;&lt;EOF | sudo tee /etc/systemd/system/kube-controller-manager.service&#xa;[Unit]&#xa;Description=Kubernetes Controller Manager&#xa;Documentation=https://github.com/kubernetes/kubernetes&#xa;&#xa;[Service]&#xa;ExecStart=/usr/local/bin/kube-controller-manager \\&#xa;  --address=0.0.0.0 \\&#xa;  --cluster-cidr=192.168.5.0/24 \\&#xa;  --cluster-name=kubernetes \\&#xa;  --cluster-signing-cert-file=/var/lib/kubernetes/ca.crt \\&#xa;  --cluster-signing-key-file=/var/lib/kubernetes/ca.key \\&#xa;  --kubeconfig=/var/lib/kubernetes/kube-controller-manager.kubeconfig \\&#xa;  --leader-elect=true \\&#xa;  --root-ca-file=/var/lib/kubernetes/ca.crt \\&#xa;  --service-account-private-key-file=/var/lib/kubernetes/service-account.key \\&#xa;  --service-cluster-ip-range=10.96.0.0/24 \\&#xa;  --use-service-account-credentials=true \\&#xa;  --v=2&#xa;Restart=on-failure&#xa;RestartSec=5&#xa;&#xa;[Install]&#xa;WantedBy=multi-user.target&#xa;EOF"/>
+</node>
+<node CREATED="1613738448657" ID="Freemind_Link_57646555" MODIFIED="1613738451775" TEXT="Scheduler">
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_586443526" MODIFIED="1613738469020" TEXT="sudo cp kube-scheduler.kubeconfig /var/lib/kubernetes/"/>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_904174152" MODIFIED="1613738479790" TEXT="cat &lt;&lt;EOF | sudo tee /etc/systemd/system/kube-scheduler.service&#xa;[Unit]&#xa;Description=Kubernetes Scheduler&#xa;Documentation=https://github.com/kubernetes/kubernetes&#xa;&#xa;[Service]&#xa;ExecStart=/usr/local/bin/kube-scheduler \\&#xa;  --kubeconfig=/var/lib/kubernetes/kube-scheduler.kubeconfig \\&#xa;  --address=127.0.0.1 \\&#xa;  --leader-elect=true \\&#xa;  --v=2&#xa;Restart=on-failure&#xa;RestartSec=5&#xa;&#xa;[Install]&#xa;WantedBy=multi-user.target&#xa;EOF"/>
+</node>
+</node>
+<node CREATED="1613738495418" FOLDED="true" ID="Freemind_Link_1547355027" MODIFIED="1613738506100" TEXT="Iniciar os servi&#xe7;os">
+<icon BUILTIN="full-4"/>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_1297122760" MODIFIED="1613738537115" TEXT="{&#xa;  sudo systemctl daemon-reload&#xa;  sudo systemctl enable kube-apiserver kube-controller-manager kube-scheduler&#xa;  sudo systemctl start kube-apiserver kube-controller-manager kube-scheduler&#xa;}"/>
+</node>
+<node CREATED="1613736662462" ID="Freemind_Link_1684328710" MODIFIED="1613738567133" TEXT="Testar os servi&#xe7;os">
+<icon BUILTIN="full-5"/>
+<node CREATED="1613736672743" ID="Freemind_Link_871974816" MODIFIED="1613736694983" TEXT="Ap&#xf3;s a execu&#xe7;&#xe3;o dos passos acima em todos os n&#xf3;s master, executar o comando abaixo"/>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_1773509208" MODIFIED="1613738588186" TEXT="kubectl get componentstatuses --kubeconfig admin.kubeconfig"/>
+<node CREATED="1613736712199" ID="Freemind_Link_196770555" MODIFIED="1613736715502" TEXT="Resultado esperado:">
+<node CREATED="1613736716965" ID="Freemind_Link_1104923280" MODIFIED="1613738598091" TEXT="NAME                 STATUS    MESSAGE              ERROR&#xa;controller-manager   Healthy   ok&#xa;scheduler            Healthy   ok&#xa;etcd-0               Healthy   {&quot;health&quot;: &quot;true&quot;}&#xa;etcd-1               Healthy   {&quot;health&quot;: &quot;true&quot;}"/>
+</node>
+</node>
+</node>
+<node CREATED="1613738968855" FOLDED="true" ID="Freemind_Link_1887463979" MODIFIED="1613746449506" TEXT="7 - Subir o Load Balancer">
+<icon BUILTIN="forward"/>
+<node CREATED="1613745471264" ID="Freemind_Link_1513531739" MODIFIED="1613745486854" TEXT="As a&#xe7;&#xf5;es abaixo devem ser feitas na m&#xe1;quina destinada a ser o LoadBalancer"/>
+<node CREATED="1613745498079" ID="Freemind_Link_360097817" MODIFIED="1613745531888" TEXT="Instalar e configurar o HAProxy">
+<icon BUILTIN="full-1"/>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_54886067" MODIFIED="1613745587800" TEXT="sudo apt-get update &amp;&amp; sudo apt-get install -y haproxy">
+<icon BUILTIN="full-1"/>
+</node>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_1957406250" MODIFIED="1613745591991" TEXT="cat &lt;&lt;EOF | sudo tee /etc/haproxy/haproxy.cfg &#xa;frontend kubernetes&#xa;    bind 192.168.5.30:6443&#xa;    option tcplog&#xa;    mode tcp&#xa;    default_backend kubernetes-master-nodes&#xa;&#xa;backend kubernetes-master-nodes&#xa;    mode tcp&#xa;    balance roundrobin&#xa;    option tcp-check&#xa;    server master-1 192.168.5.11:6443 check fall 3 rise 2&#xa;    server master-2 192.168.5.12:6443 check fall 3 rise 2&#xa;EOF">
+<icon BUILTIN="full-2"/>
+</node>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_137430518" MODIFIED="1613745594902" TEXT="sudo service haproxy restart">
+<icon BUILTIN="full-3"/>
+</node>
+</node>
+<node CREATED="1613745615454" ID="Freemind_Link_268142014" MODIFIED="1613745633734" TEXT="Testar o servi&#xe7;o">
+<icon BUILTIN="full-2"/>
+<node CREATED="1613736672743" ID="Freemind_Link_537348399" MODIFIED="1613745659962" TEXT="Ap&#xf3;s a execu&#xe7;&#xe3;o dos passos acima, executar o comando abaixo"/>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_1690089173" MODIFIED="1613745667769" TEXT="curl  https://192.168.5.30:6443/version -k"/>
+<node CREATED="1613736712199" ID="Freemind_Link_1449230242" MODIFIED="1613736715502" TEXT="Resultado esperado:">
+<node CREATED="1613736716965" ID="Freemind_Link_1826935960" MODIFIED="1613745675951" TEXT="{&#xa;  &quot;major&quot;: &quot;1&quot;,&#xa;  &quot;minor&quot;: &quot;13&quot;,&#xa;  &quot;gitVersion&quot;: &quot;v1.13.0&quot;,&#xa;  &quot;gitCommit&quot;: &quot;ddf47ac13c1a9483ea035a79cd7c10005ff21a6d&quot;,&#xa;  &quot;gitTreeState&quot;: &quot;clean&quot;,&#xa;  &quot;buildDate&quot;: &quot;2018-12-03T20:56:12Z&quot;,&#xa;  &quot;goVersion&quot;: &quot;go1.11.2&quot;,&#xa;  &quot;compiler&quot;: &quot;gc&quot;,&#xa;  &quot;platform&quot;: &quot;linux/amd64&quot;&#xa;}"/>
+</node>
+</node>
+</node>
+<node CREATED="1613746307872" ID="Freemind_Link_964554818" MODIFIED="1613746452442" TEXT="8 - Subir os workers">
+<icon BUILTIN="forward"/>
+<node CREATED="1613749502753" FOLDED="true" ID="Freemind_Link_1012254842" MODIFIED="1613749506252" TEXT="Forma 1">
+<node CREATED="1613749509273" ID="Freemind_Link_836619757" MODIFIED="1613749520606" TEXT="Emiss&#xe3;o e renova&#xe7;&#xe3;o dos certificados manual"/>
+<node CREATED="1613749587915" ID="Freemind_Link_1002145580" MODIFIED="1613749603348" TEXT="Gerar certificados do worker">
+<icon BUILTIN="full-1"/>
+<node CREATED="1613749604392" ID="Freemind_Link_820471712" MODIFIED="1613749612451" TEXT="Devem ser asinados pelo CA"/>
+<node CREATED="1613589503266" ID="Freemind_Link_1390837692" MODIFIED="1613589508502" TEXT="Executar no n&#xf3; master"/>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_463742414" MODIFIED="1613749702011" TEXT="cat &gt; openssl-worker-1.cnf &lt;&lt;EOF&#xa;[req]&#xa;req_extensions = v3_req&#xa;distinguished_name = req_distinguished_name&#xa;[req_distinguished_name]&#xa;[ v3_req ]&#xa;basicConstraints = CA:FALSE&#xa;keyUsage = nonRepudiation, digitalSignature, keyEncipherment&#xa;subjectAltName = @alt_names&#xa;[alt_names]&#xa;DNS.1 = worker-1&#xa;IP.1 = 192.168.5.21&#xa;EOF&#xa;&#xa;openssl genrsa -out worker-1.key 2048&#xa;openssl req -new -key worker-1.key -subj &quot;/CN=system:node:worker-1/O=system:nodes&quot; -out worker-1.csr -config openssl-worker-1.cnf&#xa;openssl x509 -req -in worker-1.csr -CA ca.crt -CAkey ca.key -CAcreateserial  -out worker-1.crt -extensions v3_req -extfile openssl-worker-1.cnf -days 1000"/>
+</node>
+<node CREATED="1613749724350" ID="Freemind_Link_829128547" MODIFIED="1613749744495" TEXT="Gerar arquivo kubeconfig do worker">
+<icon BUILTIN="full-2"/>
+<node CREATED="1613589503266" ID="Freemind_Link_572920426" MODIFIED="1613589508502" TEXT="Executar no n&#xf3; master"/>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_693539774" MODIFIED="1613749788010" TEXT="LOADBALANCER_ADDRESS=192.168.5.30&#xa;{&#xa;  kubectl config set-cluster kubernetes-the-hard-way \&#xa;    --certificate-authority=ca.crt \&#xa;    --embed-certs=true \&#xa;    --server=https://${LOADBALANCER_ADDRESS}:6443 \&#xa;    --kubeconfig=worker-1.kubeconfig&#xa;&#xa;  kubectl config set-credentials system:node:worker-1 \&#xa;    --client-certificate=worker-1.crt \&#xa;    --client-key=worker-1.key \&#xa;    --embed-certs=true \&#xa;    --kubeconfig=worker-1.kubeconfig&#xa;&#xa;  kubectl config set-context default \&#xa;    --cluster=kubernetes-the-hard-way \&#xa;    --user=system:node:worker-1 \&#xa;    --kubeconfig=worker-1.kubeconfig&#xa;&#xa;  kubectl config use-context default --kubeconfig=worker-1.kubeconfig&#xa;}"/>
+</node>
+<node CREATED="1613749724350" ID="Freemind_Link_685265535" MODIFIED="1613749851498" TEXT="Copiar certificados e kubeconfig para o worker">
+<icon BUILTIN="full-3"/>
+<node CREATED="1613589503266" ID="Freemind_Link_1670864225" MODIFIED="1613589508502" TEXT="Executar no n&#xf3; master"/>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_844056475" MODIFIED="1613749860287" TEXT="scp ca.crt worker-1.crt worker-1.key worker-1.kubeconfig worker-1:~/"/>
+</node>
+<node CREATED="1613749724350" ID="Freemind_Link_1459216966" MODIFIED="1613752590967" TEXT="Instalar os bin&#xe1;rios">
+<icon BUILTIN="full-4"/>
+<node CREATED="1613589503266" ID="Freemind_Link_1013044969" MODIFIED="1613752612861" TEXT="Executar no n&#xf3; worker"/>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1051753414" MODIFIED="1613752619652" TEXT="wget -q --show-progress --https-only --timestamping \   https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kubectl \   https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kube-proxy \   https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kubelet">
+<icon BUILTIN="full-1"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1426324746" MODIFIED="1613752696233" TEXT="sudo mkdir -p \&#xa;  /etc/cni/net.d \&#xa;  /opt/cni/bin \&#xa;  /var/lib/kubelet \&#xa;  /var/lib/kube-proxy \&#xa;  /var/lib/kubernetes \&#xa;  /var/run/kubernetes">
+<icon BUILTIN="full-2"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1174948572" MODIFIED="1613752698579" TEXT="{&#xa;  chmod +x kubectl kube-proxy kubelet&#xa;  sudo mv kubectl kube-proxy kubelet /usr/local/bin/&#xa;}">
+<icon BUILTIN="full-3"/>
+</node>
+</node>
+<node CREATED="1613753076860" ID="Freemind_Link_1247468503" MODIFIED="1613753663817" TEXT="Configurar servi&#xe7;os do worker">
+<icon BUILTIN="full-5"/>
+<node CREATED="1613753217002" FOLDED="true" ID="Freemind_Link_705521302" MODIFIED="1613753592805" TEXT="Kubelet">
+<icon BUILTIN="full-1"/>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1318239715" MODIFIED="1613753244418" TEXT="{&#xa;  sudo mv ${HOSTNAME}.key ${HOSTNAME}.crt /var/lib/kubelet/&#xa;  sudo mv ${HOSTNAME}.kubeconfig /var/lib/kubelet/kubeconfig&#xa;  sudo mv ca.crt /var/lib/kubernetes/&#xa;}">
+<icon BUILTIN="full-1"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_831906768" MODIFIED="1613753262608" TEXT="cat &lt;&lt;EOF | sudo tee /var/lib/kubelet/kubelet-config.yaml&#xa;kind: KubeletConfiguration&#xa;apiVersion: kubelet.config.k8s.io/v1beta1&#xa;authentication:&#xa;  anonymous:&#xa;    enabled: false&#xa;  webhook:&#xa;    enabled: true&#xa;  x509:&#xa;    clientCAFile: &quot;/var/lib/kubernetes/ca.crt&quot;&#xa;authorization:&#xa;  mode: Webhook&#xa;clusterDomain: &quot;cluster.local&quot;&#xa;clusterDNS:&#xa;  - &quot;10.96.0.10&quot;&#xa;resolvConf: &quot;/run/systemd/resolve/resolv.conf&quot;&#xa;runtimeRequestTimeout: &quot;15m&quot;&#xa;EOF">
+<icon BUILTIN="full-2"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_522355022" MODIFIED="1613753287685" TEXT="cat &lt;&lt;EOF | sudo tee /etc/systemd/system/kubelet.service&#xa;[Unit]&#xa;Description=Kubernetes Kubelet&#xa;Documentation=https://github.com/kubernetes/kubernetes&#xa;After=docker.service&#xa;Requires=docker.service&#xa;&#xa;[Service]&#xa;ExecStart=/usr/local/bin/kubelet \\&#xa;  --config=/var/lib/kubelet/kubelet-config.yaml \\&#xa;  --image-pull-progress-deadline=2m \\&#xa;  --kubeconfig=/var/lib/kubelet/kubeconfig \\&#xa;  --tls-cert-file=/var/lib/kubelet/${HOSTNAME}.crt \\&#xa;  --tls-private-key-file=/var/lib/kubelet/${HOSTNAME}.key \\&#xa;  --network-plugin=cni \\&#xa;  --register-node=true \\&#xa;  --v=2&#xa;Restart=on-failure&#xa;RestartSec=5&#xa;&#xa;[Install]&#xa;WantedBy=multi-user.target&#xa;EOF">
+<icon BUILTIN="full-3"/>
+</node>
+</node>
+<node CREATED="1613753217002" FOLDED="true" ID="Freemind_Link_1245616910" MODIFIED="1613753596393" TEXT="KubeProxy">
+<icon BUILTIN="full-2"/>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1193985219" MODIFIED="1613753307803" TEXT="sudo mv kube-proxy.kubeconfig /var/lib/kube-proxy/kubeconfig">
+<icon BUILTIN="full-1"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1114095976" MODIFIED="1613753315655" TEXT="cat &lt;&lt;EOF | sudo tee /var/lib/kube-proxy/kube-proxy-config.yaml&#xa;kind: KubeProxyConfiguration&#xa;apiVersion: kubeproxy.config.k8s.io/v1alpha1&#xa;clientConnection:&#xa;  kubeconfig: &quot;/var/lib/kube-proxy/kubeconfig&quot;&#xa;mode: &quot;iptables&quot;&#xa;clusterCIDR: &quot;192.168.5.0/24&quot;&#xa;EOF">
+<icon BUILTIN="full-2"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1741434896" MODIFIED="1613753335257" TEXT="cat &lt;&lt;EOF | sudo tee /etc/systemd/system/kube-proxy.service&#xa;[Unit]&#xa;Description=Kubernetes Kube Proxy&#xa;Documentation=https://github.com/kubernetes/kubernetes&#xa;&#xa;[Service]&#xa;ExecStart=/usr/local/bin/kube-proxy \\&#xa;  --config=/var/lib/kube-proxy/kube-proxy-config.yaml&#xa;Restart=on-failure&#xa;RestartSec=5&#xa;&#xa;[Install]&#xa;WantedBy=multi-user.target&#xa;EOF">
+<icon BUILTIN="full-3"/>
+</node>
+</node>
+<node CREATED="1613753525375" ID="Freemind_Link_1065456672" MODIFIED="1613753600755" TEXT="Subir os servi&#xe7;os">
+<icon BUILTIN="full-3"/>
+<node COLOR="#0000ff" CREATED="1613753537536" ID="Freemind_Link_1613527360" MODIFIED="1613753560242" TEXT="{&#xa;  sudo systemctl daemon-reload&#xa;  sudo systemctl enable kubelet kube-proxy&#xa;  sudo systemctl start kubelet kube-proxy&#xa;}"/>
+</node>
+<node CREATED="1613736662462" ID="Freemind_Link_713073606" MODIFIED="1613753618017" TEXT="Testar os servi&#xe7;os">
+<icon BUILTIN="full-4"/>
+<node CREATED="1613736672743" ID="Freemind_Link_303063039" MODIFIED="1613753636516" TEXT="Ap&#xf3;s a execu&#xe7;&#xe3;o dos passos acima em todos os n&#xf3;s worker, executar o comando abaixo"/>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_48752062" MODIFIED="1613753628530" TEXT="kubectl get nodes --kubeconfig admin.kubeconfig"/>
+<node CREATED="1613736712199" ID="Freemind_Link_1132364807" MODIFIED="1613736715502" TEXT="Resultado esperado:">
+<node CREATED="1613736716965" ID="Freemind_Link_1316042984" MODIFIED="1613753649432" TEXT="NAME       STATUS     ROLES    AGE   VERSION&#xa;worker-1   NotReady   &lt;none&gt;   93s   v1.13.0"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1613749506913" ID="Freemind_Link_1962703592" MODIFIED="1613749508492" TEXT="Forma 2">
+<node CREATED="1613749509273" ID="Freemind_Link_1671958297" MODIFIED="1613749536532" TEXT="Emiss&#xe3;o e renova&#xe7;&#xe3;o dos certificados autom&#xe1;tica, feita pelos masters"/>
 </node>
 </node>
 </node>
@@ -4198,6 +4381,7 @@
 </node>
 </node>
 </node>
+<node CREATED="1613745571445" MODIFIED="1613745571445" TEXT="sudo service haproxy restart"/>
 </node>
 </node>
 </map>
