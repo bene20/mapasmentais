@@ -422,7 +422,7 @@
 <node CREATED="1613735818463" ID="Freemind_Link_1373035147" MODIFIED="1613735823015" TEXT="https://www.youtube.com/playlist?list=PL2We04F3Y_41jYdadX55fdJplDvgNGENo">
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1613589442307" ID="Freemind_Link_1739600886" MODIFIED="1613589466193" TEXT="&#xc9; necess&#xe1;rio que a m&#xe1;quina master tenha&#xa;acesso SSH a todos os n&#xf3;s do cluster">
+<node CREATED="1613589442307" FOLDED="true" ID="Freemind_Link_1739600886" MODIFIED="1613589466193" TEXT="&#xc9; necess&#xe1;rio que a m&#xe1;quina master tenha&#xa;acesso SSH a todos os n&#xf3;s do cluster">
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_805722803" MODIFIED="1613589500991" TEXT="ssh-keygen">
 <icon BUILTIN="full-1"/>
 <node CREATED="1613589503266" ID="Freemind_Link_1723820230" MODIFIED="1613589508502" TEXT="Executar no n&#xf3; master"/>
@@ -646,7 +646,7 @@
 <node COLOR="#0000ff" CREATED="1613594548469" ID="Freemind_Link_247577557" MODIFIED="1613599141877" TEXT="cat &gt; encryption-config.yaml &lt;&lt;EOF&#xa;kind: EncryptionConfig&#xa;apiVersion: v1&#xa;resources:&#xa;  - resources:&#xa;      - secrets&#xa;    providers:&#xa;      - aescbc:&#xa;          keys:&#xa;            - name: key1&#xa;              secret: ${ENCRYPTION_KEY}&#xa;      - identity: {}&#xa;EOF"/>
 </node>
 </node>
-<node CREATED="1613735995801" ID="Freemind_Link_478051772" MODIFIED="1613746443956" TEXT="5 - Subir o cluster ETCD nos n&#xf3;s master">
+<node CREATED="1613735995801" FOLDED="true" ID="Freemind_Link_478051772" MODIFIED="1613746443956" TEXT="5 - Subir o cluster ETCD nos n&#xf3;s master">
 <icon BUILTIN="forward"/>
 <node CREATED="1613736456575" ID="Freemind_Link_915119009" MODIFIED="1613736464331" TEXT="Fazer essas opera&#xe7;&#xf5;es em cada um dos n&#xf3;s master"/>
 <node CREATED="1613736025914" FOLDED="true" ID="Freemind_Link_1291740489" MODIFIED="1613736048346" TEXT="Baixar os bin&#xe1;rios do ETCD">
@@ -753,23 +753,23 @@
 <icon BUILTIN="forward"/>
 <node CREATED="1613749502753" FOLDED="true" ID="Freemind_Link_1012254842" MODIFIED="1613749506252" TEXT="Forma 1">
 <node CREATED="1613749509273" ID="Freemind_Link_836619757" MODIFIED="1613749520606" TEXT="Emiss&#xe3;o e renova&#xe7;&#xe3;o dos certificados manual"/>
-<node CREATED="1613749587915" ID="Freemind_Link_1002145580" MODIFIED="1613749603348" TEXT="Gerar certificados do worker">
+<node CREATED="1613749587915" FOLDED="true" ID="Freemind_Link_1002145580" MODIFIED="1613749603348" TEXT="Gerar certificados do worker">
 <icon BUILTIN="full-1"/>
 <node CREATED="1613749604392" ID="Freemind_Link_820471712" MODIFIED="1613749612451" TEXT="Devem ser asinados pelo CA"/>
 <node CREATED="1613589503266" ID="Freemind_Link_1390837692" MODIFIED="1613589508502" TEXT="Executar no n&#xf3; master"/>
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_463742414" MODIFIED="1613749702011" TEXT="cat &gt; openssl-worker-1.cnf &lt;&lt;EOF&#xa;[req]&#xa;req_extensions = v3_req&#xa;distinguished_name = req_distinguished_name&#xa;[req_distinguished_name]&#xa;[ v3_req ]&#xa;basicConstraints = CA:FALSE&#xa;keyUsage = nonRepudiation, digitalSignature, keyEncipherment&#xa;subjectAltName = @alt_names&#xa;[alt_names]&#xa;DNS.1 = worker-1&#xa;IP.1 = 192.168.5.21&#xa;EOF&#xa;&#xa;openssl genrsa -out worker-1.key 2048&#xa;openssl req -new -key worker-1.key -subj &quot;/CN=system:node:worker-1/O=system:nodes&quot; -out worker-1.csr -config openssl-worker-1.cnf&#xa;openssl x509 -req -in worker-1.csr -CA ca.crt -CAkey ca.key -CAcreateserial  -out worker-1.crt -extensions v3_req -extfile openssl-worker-1.cnf -days 1000"/>
 </node>
-<node CREATED="1613749724350" ID="Freemind_Link_829128547" MODIFIED="1613749744495" TEXT="Gerar arquivo kubeconfig do worker">
+<node CREATED="1613749724350" FOLDED="true" ID="Freemind_Link_829128547" MODIFIED="1613749744495" TEXT="Gerar arquivo kubeconfig do worker">
 <icon BUILTIN="full-2"/>
 <node CREATED="1613589503266" ID="Freemind_Link_572920426" MODIFIED="1613589508502" TEXT="Executar no n&#xf3; master"/>
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_693539774" MODIFIED="1613749788010" TEXT="LOADBALANCER_ADDRESS=192.168.5.30&#xa;{&#xa;  kubectl config set-cluster kubernetes-the-hard-way \&#xa;    --certificate-authority=ca.crt \&#xa;    --embed-certs=true \&#xa;    --server=https://${LOADBALANCER_ADDRESS}:6443 \&#xa;    --kubeconfig=worker-1.kubeconfig&#xa;&#xa;  kubectl config set-credentials system:node:worker-1 \&#xa;    --client-certificate=worker-1.crt \&#xa;    --client-key=worker-1.key \&#xa;    --embed-certs=true \&#xa;    --kubeconfig=worker-1.kubeconfig&#xa;&#xa;  kubectl config set-context default \&#xa;    --cluster=kubernetes-the-hard-way \&#xa;    --user=system:node:worker-1 \&#xa;    --kubeconfig=worker-1.kubeconfig&#xa;&#xa;  kubectl config use-context default --kubeconfig=worker-1.kubeconfig&#xa;}"/>
 </node>
-<node CREATED="1613749724350" ID="Freemind_Link_685265535" MODIFIED="1613749851498" TEXT="Copiar certificados e kubeconfig para o worker">
+<node CREATED="1613749724350" FOLDED="true" ID="Freemind_Link_685265535" MODIFIED="1613749851498" TEXT="Copiar certificados e kubeconfig para o worker">
 <icon BUILTIN="full-3"/>
 <node CREATED="1613589503266" ID="Freemind_Link_1670864225" MODIFIED="1613589508502" TEXT="Executar no n&#xf3; master"/>
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_844056475" MODIFIED="1613749860287" TEXT="scp ca.crt worker-1.crt worker-1.key worker-1.kubeconfig worker-1:~/"/>
 </node>
-<node CREATED="1613749724350" ID="Freemind_Link_1459216966" MODIFIED="1613752590967" TEXT="Instalar os bin&#xe1;rios">
+<node CREATED="1613749724350" FOLDED="true" ID="Freemind_Link_1459216966" MODIFIED="1613752590967" TEXT="Instalar os bin&#xe1;rios">
 <icon BUILTIN="full-4"/>
 <node CREATED="1613589503266" ID="Freemind_Link_1013044969" MODIFIED="1613752612861" TEXT="Executar no n&#xf3; worker"/>
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1051753414" MODIFIED="1613752619652" TEXT="wget -q --show-progress --https-only --timestamping \   https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kubectl \   https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kube-proxy \   https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kubelet">
@@ -782,8 +782,9 @@
 <icon BUILTIN="full-3"/>
 </node>
 </node>
-<node CREATED="1613753076860" ID="Freemind_Link_1247468503" MODIFIED="1613753663817" TEXT="Configurar servi&#xe7;os do worker">
+<node CREATED="1613753076860" FOLDED="true" ID="Freemind_Link_1247468503" MODIFIED="1613753663817" TEXT="Configurar servi&#xe7;os do worker">
 <icon BUILTIN="full-5"/>
+<node CREATED="1614015034459" ID="Freemind_Link_1900260096" MODIFIED="1614015039966" TEXT="Executar no n&#xf3; worker"/>
 <node CREATED="1613753217002" FOLDED="true" ID="Freemind_Link_705521302" MODIFIED="1613753592805" TEXT="Kubelet">
 <icon BUILTIN="full-1"/>
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1318239715" MODIFIED="1613753244418" TEXT="{&#xa;  sudo mv ${HOSTNAME}.key ${HOSTNAME}.crt /var/lib/kubelet/&#xa;  sudo mv ${HOSTNAME}.kubeconfig /var/lib/kubelet/kubeconfig&#xa;  sudo mv ca.crt /var/lib/kubernetes/&#xa;}">
@@ -796,7 +797,7 @@
 <icon BUILTIN="full-3"/>
 </node>
 </node>
-<node CREATED="1613753217002" FOLDED="true" ID="Freemind_Link_1245616910" MODIFIED="1613753596393" TEXT="KubeProxy">
+<node CREATED="1613753217002" ID="Freemind_Link_1245616910" MODIFIED="1613753596393" TEXT="KubeProxy">
 <icon BUILTIN="full-2"/>
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1193985219" MODIFIED="1613753307803" TEXT="sudo mv kube-proxy.kubeconfig /var/lib/kube-proxy/kubeconfig">
 <icon BUILTIN="full-1"/>
@@ -822,8 +823,165 @@
 </node>
 </node>
 </node>
-<node CREATED="1613749506913" ID="Freemind_Link_1962703592" MODIFIED="1613749508492" TEXT="Forma 2">
+<node CREATED="1613749506913" FOLDED="true" ID="Freemind_Link_1962703592" MODIFIED="1614013449612" TEXT="Forma 2">
 <node CREATED="1613749509273" ID="Freemind_Link_1671958297" MODIFIED="1613749536532" TEXT="Emiss&#xe3;o e renova&#xe7;&#xe3;o dos certificados autom&#xe1;tica, feita pelos masters"/>
+<node CREATED="1614005193679" FOLDED="true" ID="Freemind_Link_1818325623" MODIFIED="1614007244837" TEXT="&#xc9; necess&#xe1;rio criar permiss&#xf5;es nos n&#xf3;s &#xa;master para permit&#xed;-lo atender as &#xa;requisi&#xe7;&#xf5;es de renova&#xe7;&#xe3;o dos certificados &#xa;dos workers">
+<node CREATED="1614005345009" ID="Freemind_Link_1895123032" MODIFIED="1614007341168" TEXT="Criar o token Bootstrap e associ&#xe1;-lo &#xa;ao grupo system:bootstrapers">
+<node CREATED="1614005637473" ID="Freemind_Link_1213902222" MODIFIED="1614005673550" TEXT="O system:bootstrapers &#xe9; um token especial, criado com o prop&#xf3;sito de autentica&#xe7;&#xe3;o"/>
+<node CREATED="1614005403097" ID="Freemind_Link_1282125835" MODIFIED="1614005419439" TEXT="Depois deve-se configurar o Kubelet para usar esse token para se autenticar no API Server">
+<node CREATED="1614006592622" ID="Freemind_Link_1053278687" MODIFIED="1614006658833" TEXT="Substituir a flag --kubeconfig=&quot;/var/lib/...&quot; pela flag --bootstrap-kubeconfig=&quot;/var/lib/...&quot;"/>
+</node>
+<node CREATED="1614005430073" ID="Freemind_Link_1913331157" MODIFIED="1614005445512" TEXT="Pode-se usar o mesmo token para todos os workers ou usar um para cada um"/>
+</node>
+<node CREATED="1614005517400" ID="Freemind_Link_338296033" MODIFIED="1614007320863" TEXT="Atribuir a role system:node-bootstraper &#xa;ao grupo system:bootstrapers">
+<node CREATED="1614005734960" ID="Freemind_Link_1941558251" MODIFIED="1614005745077" TEXT="Inicialmente o token n&#xe3;o tem nenhuma permiss&#xe3;o atribu&#xed;da a ele"/>
+<node CREATED="1614005748968" ID="Freemind_Link_1567690569" MODIFIED="1614005772979" TEXT="&#xc9; necess&#xe1;rio atribuir as roles necess&#xe1;rias para permitir as requisi&#xe7;&#xf5;es ao API Server"/>
+<node CREATED="1614005795863" ID="Freemind_Link_1311151769" MODIFIED="1614007330691" TEXT="system:node-bootstrapers &#xe9; uma &#xa;role default, j&#xe1; existente no cluster">
+<node CREATED="1614005879433" ID="Freemind_Link_1001950989" MODIFIED="1614005934627" TEXT="Essa role permite ao Kubelet fazer requisi&#xe7;&#xf5;es de assinatura de certificados ao API Server"/>
+<node CREATED="1614005962984" ID="Freemind_Link_227521342" MODIFIED="1614006030946" TEXT="Ao atribuir essa role, o Kubelet &#xe9; autorizado a gerar o par de certificados e a enviar o pedido de assinatura do certificado ao API Server"/>
+</node>
+<node COLOR="#0000ff" CREATED="1614006071303" ID="Freemind_Link_1022169291" MODIFIED="1614006086787" TEXT="kubectl get csr">
+<node CREATED="1614006090114" ID="Freemind_Link_1177849226" MODIFIED="1614006110485" TEXT="Exibir&#xe1; o pedido de requisi&#xe7;&#xe3;o de assinatura de certificado recebido do worker"/>
+</node>
+</node>
+<node CREATED="1614006159326" ID="Freemind_Link_665215051" MODIFIED="1614007354646" TEXT="Atribuir a role system:certificates.k8s.io:certificatesigningrequest:nodeclient &#xa;ao grupo system:bootstrapers">
+<node CREATED="1614006206185" ID="Freemind_Link_1874084863" MODIFIED="1614006236163" TEXT="Com essa role, o API server poder&#xe1; aprovar o pedido de assinatura do certificado do worker de forma autom&#xe1;tica"/>
+<node CREATED="1614006261408" ID="Freemind_Link_630798439" MODIFIED="1614006495901" TEXT="Uma vez que o certificado &#xe9; aceito e assinado, o n&#xf3; passa a fazer parte do cluster. Assim que isso acontece, o n&#xf3; passa a fazer parte do grupo system:nodes, e portanto n&#xe3;o precisar&#xe1; mais do token de bootstrap"/>
+</node>
+<node CREATED="1614006439387" ID="Freemind_Link_320707778" MODIFIED="1614007365484" TEXT="Atribuir a role system:certificates.k8s.io:certificatesigningrequests:selfnodeclient &#xa;ao grupo system:nodes">
+<node CREATED="1614006501750" ID="Freemind_Link_1522288214" MODIFIED="1614006526370" TEXT="Com essa role, o kubelet poder&#xe1; requisitar renova&#xe7;&#xe3;o do certificado de forma autom&#xe1;tica quando este expirar"/>
+</node>
+<node CREATED="1614007207828" ID="Freemind_Link_996911823" MODIFIED="1614007216037" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/TLS-bootstrap.png&quot;&gt;"/>
+</node>
+<node CREATED="1614008006855" ID="Freemind_Link_943595580" MODIFIED="1614008043120" TEXT="Para habilitar a renova&#xe7;&#xe3;o autom&#xe1;tica dos certificados do Kubelet, adicione a flag --rotate-certificates=true"/>
+<node CREATED="1614008104675" ID="Freemind_Link_493321658" MODIFIED="1614008145487" TEXT="Para habilitar o kubelet para requisitar e rotacionar os certificados do API server, adicione a flag --rotate-server-certificate=true">
+<node CREATED="1614008178932" ID="Freemind_Link_123361495" MODIFIED="1614008206807" TEXT="As requisi&#xe7;&#xf5;es de renova&#xe7;&#xe3;o de certificados do server n&#xe3;o s&#xe3;o aprovadas automaticamente por raz&#xf5;es de seguran&#xe7;a">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node COLOR="#0000ff" CREATED="1614006071303" ID="Freemind_Link_1967489786" MODIFIED="1614008255816" TEXT="kubectl certificate approve &lt;nome do certificado&gt;">
+<node CREATED="1614006090114" ID="Freemind_Link_297428339" MODIFIED="1614008266328" TEXT="Aprova um certificado (um CSR)"/>
+</node>
+</node>
+<node CREATED="1614009301782" FOLDED="true" ID="Freemind_Link_1062249345" MODIFIED="1614009404053" TEXT="Certifique-se de que o server est&#xe1; configurado">
+<icon BUILTIN="full-1"/>
+<node CREATED="1614009404031" ID="Freemind_Link_671821052" MODIFIED="1614009418277" TEXT="Kube-apiserver">
+<node CREATED="1614009322374" ID="Freemind_Link_1316517161" MODIFIED="1614009434969" TEXT="Deve estar com a flag  &apos; --enable-bootstrap-token-auth=true&apos; setada"/>
+<node COLOR="#0000ff" CREATED="1614006071303" ID="Freemind_Link_778082980" MODIFIED="1614009379032" TEXT="cat /etc/systemd/system/kube-apiserver.service">
+<node CREATED="1614006090114" ID="Freemind_Link_1217707212" MODIFIED="1614009385402" TEXT="Executar no n&#xf3; master"/>
+</node>
+</node>
+<node CREATED="1614009419302" ID="Freemind_Link_204334921" MODIFIED="1614009424716" TEXT="Kube-controller-manager">
+<node CREATED="1614009437142" ID="Freemind_Link_1471725933" MODIFIED="1614009484306" TEXT="Deve estar com as flags &apos;--cluster-signing-cert-file=/var/lib/kubernetes/ca.crt&apos; e &apos;--cluster-signing-key-file=/var/lib/kubernetes/ca.key&apos; setadas"/>
+<node COLOR="#0000ff" CREATED="1614006071303" ID="Freemind_Link_1005158957" MODIFIED="1614009510345" TEXT="cat /etc/systemd/system/kube-controller-manager.service">
+<node CREATED="1614006090114" ID="Freemind_Link_1195877355" MODIFIED="1614009385402" TEXT="Executar no n&#xf3; master"/>
+</node>
+</node>
+</node>
+<node CREATED="1613749724350" FOLDED="true" ID="Freemind_Link_1756506670" MODIFIED="1614009642793" TEXT="Instalar e configurar os bin&#xe1;rios">
+<icon BUILTIN="full-2"/>
+<node CREATED="1613589503266" ID="Freemind_Link_482560166" MODIFIED="1613752612861" TEXT="Executar no n&#xf3; worker"/>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1181306872" MODIFIED="1613752619652" TEXT="wget -q --show-progress --https-only --timestamping \   https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kubectl \   https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kube-proxy \   https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kubelet">
+<icon BUILTIN="full-1"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1356692376" MODIFIED="1613752696233" TEXT="sudo mkdir -p \&#xa;  /etc/cni/net.d \&#xa;  /opt/cni/bin \&#xa;  /var/lib/kubelet \&#xa;  /var/lib/kube-proxy \&#xa;  /var/lib/kubernetes \&#xa;  /var/run/kubernetes">
+<icon BUILTIN="full-2"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_387755554" MODIFIED="1613752698579" TEXT="{&#xa;  chmod +x kubectl kube-proxy kubelet&#xa;  sudo mv kubectl kube-proxy kubelet /usr/local/bin/&#xa;}">
+<icon BUILTIN="full-3"/>
+</node>
+<node COLOR="#0000ff" CREATED="1614006071303" ID="Freemind_Link_1827355601" MODIFIED="1614012949385" TEXT="mv ca.crt /var/lib/kubernetes">
+<icon BUILTIN="full-4"/>
+</node>
+</node>
+<node CREATED="1614012665165" FOLDED="true" ID="Freemind_Link_1677873472" MODIFIED="1614012672911" TEXT="Criar o token Bootstrap">
+<icon BUILTIN="full-3"/>
+<node COLOR="#0000ff" CREATED="1614012681924" ID="Freemind_Link_594618303" MODIFIED="1614012716557" TEXT="cat &gt; bootstrap-token-07401b.yaml &lt;&lt;EOF&#xa;apiVersion: v1&#xa;kind: Secret&#xa;metadata:&#xa;  # Name MUST be of form &quot;bootstrap-token-&lt;token id&gt;&quot;&#xa;  name: bootstrap-token-07401b&#xa;  namespace: kube-system&#xa;&#xa;# Type MUST be &apos;bootstrap.kubernetes.io/token&apos;&#xa;type: bootstrap.kubernetes.io/token&#xa;stringData:&#xa;  # Human readable description. Optional.&#xa;  description: &quot;The default bootstrap token generated by &apos;kubeadm init&apos;.&quot;&#xa;&#xa;  # Token ID and secret. Required.&#xa;  token-id: 07401b&#xa;  token-secret: f395accd246ae52d&#xa;&#xa;  # Expiration. Optional.&#xa;  expiration: 2021-03-10T03:22:11Z&#xa;&#xa;  # Allowed usages.&#xa;  usage-bootstrap-authentication: &quot;true&quot;&#xa;  usage-bootstrap-signing: &quot;true&quot;&#xa;&#xa;  # Extra groups to authenticate the token as. Must start with &quot;system:bootstrappers:&quot;&#xa;  auth-extra-groups: system:bootstrappers:worker&#xa;EOF&#xa;&#xa;&#xa;kubectl create -f bootstrap-token-07401b.yaml">
+<node CREATED="1614012929596" ID="Freemind_Link_506181694" MODIFIED="1614012939160" TEXT="Deve ser executado no n&#xf3; master"/>
+<node CREATED="1614012726812" ID="Freemind_Link_779923183" MODIFIED="1614012742320" TEXT="Certifique-se de que a data de expira&#xe7;&#xe3;o seja futura"/>
+<node CREATED="1614012756812" ID="Freemind_Link_1927553409" MODIFIED="1614012783856" TEXT="&apos;auth-extra-groups&apos; &#xe9; um grupo ao qual o n&#xf3; faz parte">
+<node CREATED="1614012784420" ID="Freemind_Link_1924041983" MODIFIED="1614012799039" TEXT="Deve iniciar com &apos;system:bootstrapers:&quot;"/>
+<node CREATED="1614012799748" ID="Freemind_Link_1155570934" MODIFIED="1614012814199" TEXT="Esse grupo n&#xe3;o existe ainda"/>
+<node CREATED="1614012814780" ID="Freemind_Link_475184591" MODIFIED="1614012823456" TEXT="Esse grupo ser&#xe1; associado ao token"/>
+</node>
+<node CREATED="1614012829331" ID="Freemind_Link_344518379" MODIFIED="1614012889615" TEXT="&apos;07401b.f395accd246ae52d&apos; &#xe9; o id do token seguido do hash secreto do token">
+<node CREATED="1614012976100" ID="Freemind_Link_1303070082" MODIFIED="1614012982750" TEXT="https://kubernetes.io/docs/reference/access-authn-authz/bootstrap-tokens/#bootstrap-token-secret-format">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1614012897124" ID="Freemind_Link_898335458" MODIFIED="1614012912322" TEXT="Deve seguir o formato regex  [a-z0-9]{6}.[a-z0-9]{16}"/>
+</node>
+</node>
+</node>
+<node CREATED="1614013449580" FOLDED="true" ID="Freemind_Link_1350803844" MODIFIED="1614013481809" TEXT="Conceder as devidas autoriza&#xe7;&#xf5;es aos workers">
+<icon BUILTIN="full-4"/>
+<node CREATED="1614012929596" ID="Freemind_Link_72079559" MODIFIED="1614012939160" TEXT="Deve ser executado no n&#xf3; master"/>
+<node CREATED="1614013481779" ID="Freemind_Link_61606044" MODIFIED="1614013485303" TEXT="Criar CSR">
+<node COLOR="#0000ff" CREATED="1614006071303" ID="Freemind_Link_1132854741" MODIFIED="1614013420814" TEXT="kubectl create clusterrolebinding create-csrs-for-bootstrapping --clusterrole=system:node-bootstrapper --group=system:bootstrappers"/>
+</node>
+<node CREATED="1614013487988" ID="Freemind_Link_1055115176" MODIFIED="1614013489951" TEXT="Aprovar CSR">
+<node COLOR="#0000ff" CREATED="1614006071303" ID="Freemind_Link_7257727" MODIFIED="1614013503024" TEXT="kubectl create clusterrolebinding auto-approve-csrs-for-group --clusterrole=system:certificates.k8s.io:certificatesigningrequests:nodeclient --group=system:bootstrappers"/>
+</node>
+<node CREATED="1614013535686" ID="Freemind_Link_118268827" MODIFIED="1614013543784" TEXT="Auto renovar certificados expirados">
+<node COLOR="#0000ff" CREATED="1614006071303" ID="Freemind_Link_981961667" MODIFIED="1614013553517" TEXT="kubectl create clusterrolebinding auto-approve-renewals-for-nodes --clusterrole=system:certificates.k8s.io:certificatesigningrequests:selfnodeclient --group=system:nodes"/>
+</node>
+</node>
+<node CREATED="1614013660461" FOLDED="true" ID="Freemind_Link_814094128" MODIFIED="1614013690280" TEXT="Configurar o Kubelet para o TLS Bootstrap">
+<icon BUILTIN="full-5"/>
+<node CREATED="1614012929596" ID="Freemind_Link_949248875" MODIFIED="1614013726353" TEXT="Deve ser executado no n&#xf3; worker"/>
+<node CREATED="1614013827404" ID="Freemind_Link_1476719084" MODIFIED="1614013848343" TEXT="Configura o worker para usar o token gerado nos passos anteriores"/>
+<node COLOR="#0000ff" CREATED="1614006071303" ID="Freemind_Link_1193520588" MODIFIED="1614013716025" TEXT="sudo kubectl config --kubeconfig=/var/lib/kubelet/bootstrap-kubeconfig set-cluster bootstrap --server=&apos;https://192.168.5.30:6443&apos; --certificate-authority=/var/lib/kubernetes/ca.crt&#xa;sudo kubectl config --kubeconfig=/var/lib/kubelet/bootstrap-kubeconfig set-credentials kubelet-bootstrap --token=07401b.f395accd246ae52d&#xa;sudo kubectl config --kubeconfig=/var/lib/kubelet/bootstrap-kubeconfig set-context bootstrap --user=kubelet-bootstrap --cluster=bootstrap&#xa;sudo kubectl config --kubeconfig=/var/lib/kubelet/bootstrap-kubeconfig use-context bootstrap"/>
+<node CREATED="1614013769894" ID="Freemind_Link_942816441" MODIFIED="1614013772607" TEXT="Verificar:">
+<node COLOR="#0000ff" CREATED="1614013773139" ID="Freemind_Link_1121177012" MODIFIED="1614013782479" TEXT="sudo cat /var/lib/kubelet/bootstrap-kubeconfig"/>
+</node>
+</node>
+<node CREATED="1613753076860" ID="Freemind_Link_1760533803" MODIFIED="1614013959416" TEXT="Configurar servi&#xe7;os do worker">
+<icon BUILTIN="full-6"/>
+<node CREATED="1614015034459" ID="Freemind_Link_1992391192" MODIFIED="1614015039966" TEXT="Executar no n&#xf3; worker"/>
+<node CREATED="1613753217002" FOLDED="true" ID="Freemind_Link_1316190292" MODIFIED="1613753592805" TEXT="Kubelet">
+<icon BUILTIN="full-1"/>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_844700510" MODIFIED="1614014033911" TEXT="cat &lt;&lt;EOF | sudo tee /var/lib/kubelet/kubelet-config.yaml&#xa;kind: KubeletConfiguration&#xa;apiVersion: kubelet.config.k8s.io/v1beta1&#xa;authentication:&#xa;  anonymous:&#xa;    enabled: false&#xa;  webhook:&#xa;    enabled: true&#xa;  x509:&#xa;    clientCAFile: &quot;/var/lib/kubernetes/ca.crt&quot;&#xa;authorization:&#xa;  mode: Webhook&#xa;clusterDomain: &quot;cluster.local&quot;&#xa;clusterDNS:&#xa;  - &quot;10.96.0.10&quot;&#xa;resolvConf: &quot;/run/systemd/resolve/resolv.conf&quot;&#xa;runtimeRequestTimeout: &quot;15m&quot;&#xa;EOF">
+<icon BUILTIN="full-1"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_89989715" MODIFIED="1614014040672" TEXT="cat &lt;&lt;EOF | sudo tee /etc/systemd/system/kubelet.service&#xa;[Unit]&#xa;Description=Kubernetes Kubelet&#xa;Documentation=https://github.com/kubernetes/kubernetes&#xa;After=docker.service&#xa;Requires=docker.service&#xa;&#xa;[Service]&#xa;ExecStart=/usr/local/bin/kubelet \\&#xa;  --bootstrap-kubeconfig=&quot;/var/lib/kubelet/bootstrap-kubeconfig&quot; \\&#xa;  --config=/var/lib/kubelet/kubelet-config.yaml \\&#xa;  --image-pull-progress-deadline=2m \\&#xa;  --kubeconfig=/var/lib/kubelet/kubeconfig \\&#xa;  --cert-dir=/var/lib/kubelet/pki/ \\&#xa;  --rotate-certificates=true \\&#xa;  --rotate-server-certificates=true \\&#xa;  --network-plugin=cni \\&#xa;  --register-node=true \\&#xa;  --v=2&#xa;Restart=on-failure&#xa;RestartSec=5&#xa;&#xa;[Install]&#xa;WantedBy=multi-user.target&#xa;EOF">
+<icon BUILTIN="full-2"/>
+<node CREATED="1614014078460" ID="Freemind_Link_1881422762" MODIFIED="1614014089088" TEXT="bootstrap-kubeconfig: Location of the bootstrap-kubeconfig file."/>
+<node CREATED="1614014090121" ID="Freemind_Link_1578481941" MODIFIED="1614014094943" TEXT="bootstrap-kubeconfig: Location of the bootstrap-kubeconfig file."/>
+<node CREATED="1614014102195" ID="Freemind_Link_1783225075" MODIFIED="1614014102935" TEXT="rotate-certificates: Rotates client certificates when they expire."/>
+<node CREATED="1614014108593" ID="Freemind_Link_1599365166" MODIFIED="1614014109561" TEXT="rotate-server-certificates: Requests for server certificates on bootstrap and rotates them when they expire."/>
+</node>
+</node>
+<node CREATED="1613753217002" FOLDED="true" ID="Freemind_Link_1035057256" MODIFIED="1613753596393" TEXT="KubeProxy">
+<icon BUILTIN="full-2"/>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1319882725" MODIFIED="1613753307803" TEXT="sudo mv kube-proxy.kubeconfig /var/lib/kube-proxy/kubeconfig">
+<icon BUILTIN="full-1"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_303077408" MODIFIED="1613753315655" TEXT="cat &lt;&lt;EOF | sudo tee /var/lib/kube-proxy/kube-proxy-config.yaml&#xa;kind: KubeProxyConfiguration&#xa;apiVersion: kubeproxy.config.k8s.io/v1alpha1&#xa;clientConnection:&#xa;  kubeconfig: &quot;/var/lib/kube-proxy/kubeconfig&quot;&#xa;mode: &quot;iptables&quot;&#xa;clusterCIDR: &quot;192.168.5.0/24&quot;&#xa;EOF">
+<icon BUILTIN="full-2"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1488804616" MODIFIED="1613753335257" TEXT="cat &lt;&lt;EOF | sudo tee /etc/systemd/system/kube-proxy.service&#xa;[Unit]&#xa;Description=Kubernetes Kube Proxy&#xa;Documentation=https://github.com/kubernetes/kubernetes&#xa;&#xa;[Service]&#xa;ExecStart=/usr/local/bin/kube-proxy \\&#xa;  --config=/var/lib/kube-proxy/kube-proxy-config.yaml&#xa;Restart=on-failure&#xa;RestartSec=5&#xa;&#xa;[Install]&#xa;WantedBy=multi-user.target&#xa;EOF">
+<icon BUILTIN="full-3"/>
+</node>
+</node>
+<node CREATED="1613753525375" FOLDED="true" ID="Freemind_Link_124362172" MODIFIED="1613753600755" TEXT="Subir os servi&#xe7;os">
+<icon BUILTIN="full-3"/>
+<node COLOR="#0000ff" CREATED="1613753537536" ID="Freemind_Link_615006403" MODIFIED="1613753560242" TEXT="{&#xa;  sudo systemctl daemon-reload&#xa;  sudo systemctl enable kubelet kube-proxy&#xa;  sudo systemctl start kubelet kube-proxy&#xa;}"/>
+</node>
+<node CREATED="1614014199235" FOLDED="true" ID="Freemind_Link_294139855" MODIFIED="1614014213383" TEXT="Aprovar o Server CSR">
+<icon BUILTIN="full-4"/>
+<node CREATED="1614015005002" ID="Freemind_Link_1731395820" MODIFIED="1614015032373" TEXT="Executar no n&#xf3; master">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node COLOR="#0000ff" CREATED="1613753537536" ID="Freemind_Link_550118447" MODIFIED="1614014232460" TEXT="kubectl get csr"/>
+<node COLOR="#0000ff" CREATED="1613753537536" ID="Freemind_Link_1622009056" MODIFIED="1614014246535" TEXT="kubectl certificate approve csr-95bv6"/>
+</node>
+<node CREATED="1613736662462" FOLDED="true" ID="Freemind_Link_1585368170" MODIFIED="1614014219167" TEXT="Testar os servi&#xe7;os">
+<icon BUILTIN="full-5"/>
+<node CREATED="1613736672743" ID="Freemind_Link_441832234" MODIFIED="1613753636516" TEXT="Ap&#xf3;s a execu&#xe7;&#xe3;o dos passos acima em todos os n&#xf3;s worker, executar o comando abaixo"/>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_57983607" MODIFIED="1613753628530" TEXT="kubectl get nodes --kubeconfig admin.kubeconfig"/>
+<node CREATED="1613736712199" ID="Freemind_Link_1042638406" MODIFIED="1613736715502" TEXT="Resultado esperado:">
+<node CREATED="1613736716965" ID="Freemind_Link_1473311438" MODIFIED="1614014268862" TEXT="NAME       STATUS   ROLES    AGE   VERSION&#xa;worker-1   NotReady   &lt;none&gt;   93s   v1.13.0&#xa;worker-2   NotReady   &lt;none&gt;   93s   v1.13.0"/>
+</node>
+</node>
+</node>
 </node>
 </node>
 </node>
