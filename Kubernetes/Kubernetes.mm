@@ -984,6 +984,91 @@
 </node>
 </node>
 </node>
+<node CREATED="1614604781915" FOLDED="true" ID="Freemind_Link_222127531" MODIFIED="1614604821644" TEXT="9 - Configurar o kubectl baseado &#xa;nas credenciais do user admin">
+<icon BUILTIN="forward"/>
+<node COLOR="#0000ff" CREATED="1614604829617" ID="Freemind_Link_1867527767" MODIFIED="1614604848206" TEXT="{&#xa;  KUBERNETES_LB_ADDRESS=192.168.5.30&#xa;&#xa;  kubectl config set-cluster kubernetes-the-hard-way \&#xa;    --certificate-authority=ca.crt \&#xa;    --embed-certs=true \&#xa;    --server=https://${KUBERNETES_LB_ADDRESS}:6443&#xa;&#xa;  kubectl config set-credentials admin \&#xa;    --client-certificate=admin.crt \&#xa;    --client-key=admin.key&#xa;&#xa;  kubectl config set-context kubernetes-the-hard-way \&#xa;    --cluster=kubernetes-the-hard-way \&#xa;    --user=admin&#xa;&#xa;  kubectl config use-context kubernetes-the-hard-way&#xa;}"/>
+<node CREATED="1614604864885" ID="Freemind_Link_112083267" MODIFIED="1614604870322" TEXT="Verifique o resultado:">
+<node COLOR="#0000ff" CREATED="1614604878380" ID="Freemind_Link_968329974" MODIFIED="1614604903653" TEXT="kubectl get componentstatuses"/>
+<node COLOR="#0000ff" CREATED="1614604887951" ID="Freemind_Link_1003741267" MODIFIED="1614604899137" TEXT="kubectl get nodes"/>
+<node COLOR="#0000ff" CREATED="1614604947031" ID="Freemind_Link_504990457" MODIFIED="1614604952915" TEXT="cat .kube/config"/>
+</node>
+</node>
+<node CREATED="1614605202045" FOLDED="true" ID="Freemind_Link_342011630" MODIFIED="1614605211307" TEXT="10 - Configurar a rede do cluster">
+<icon BUILTIN="forward"/>
+<node CREATED="1614605224546" ID="Freemind_Link_1472131042" MODIFIED="1614605232606" TEXT="Usaremos o plugin Weave"/>
+<node CREATED="1614605233370" ID="Freemind_Link_995415005" MODIFIED="1614605238854" TEXT="Baixar o plugin">
+<icon BUILTIN="full-1"/>
+<node CREATED="1614605435152" ID="Freemind_Link_1750056348" MODIFIED="1614605453726" TEXT="Executar nos n&#xf3;s workers"/>
+<node COLOR="#0000ff" CREATED="1614605257066" ID="Freemind_Link_1379883220" MODIFIED="1614605268195" TEXT="wget https://github.com/containernetworking/plugins/releases/download/v0.7.5/cni-plugins-amd64-v0.7.5.tgz"/>
+</node>
+<node CREATED="1614605287601" ID="Freemind_Link_550081131" MODIFIED="1614605298487" TEXT="Descompactar o conte&#xfa;do">
+<icon BUILTIN="full-2"/>
+<node CREATED="1614605435152" ID="Freemind_Link_616701565" MODIFIED="1614605453726" TEXT="Executar nos n&#xf3;s workers"/>
+<node COLOR="#0000ff" CREATED="1614605257066" ID="Freemind_Link_1852513919" MODIFIED="1614605309020" TEXT="sudo tar -xzvf cni-plugins-amd64-v0.7.5.tgz --directory /opt/cni/bin/"/>
+</node>
+<node CREATED="1614605313856" ID="Freemind_Link_671102903" MODIFIED="1614605336277" TEXT="Aplicar o YAML adequado">
+<icon BUILTIN="full-3"/>
+<node CREATED="1614605435152" ID="Freemind_Link_1993423272" MODIFIED="1614605440357" TEXT="Executar no n&#xf3; master"/>
+<node COLOR="#0000ff" CREATED="1614605257066" ID="Freemind_Link_1958418724" MODIFIED="1614605346816" TEXT="kubectl apply -f &quot;https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d &apos;\n&apos;)&quot;"/>
+</node>
+<node CREATED="1614605703632" ID="Freemind_Link_1529447062" MODIFIED="1614605712002" TEXT="Aguarde a rede subir">
+<icon BUILTIN="full-4"/>
+<node COLOR="#0000ff" CREATED="1614605257066" ID="Freemind_Link_800453876" MODIFIED="1614605725120" TEXT="kubectl get pods -n kube-system --watch"/>
+</node>
+<node CREATED="1613745615454" ID="Freemind_Link_1998427236" MODIFIED="1614605758914" TEXT="Testar o servi&#xe7;o">
+<icon BUILTIN="full-5"/>
+<node CREATED="1613736672743" ID="Freemind_Link_565733599" MODIFIED="1613745659962" TEXT="Ap&#xf3;s a execu&#xe7;&#xe3;o dos passos acima, executar o comando abaixo"/>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_1843416345" MODIFIED="1614605779176" TEXT="kubectl get nodes"/>
+<node CREATED="1613736712199" ID="Freemind_Link_672401795" MODIFIED="1613736715502" TEXT="Resultado esperado:">
+<node CREATED="1613736716965" ID="Freemind_Link_25683562" MODIFIED="1614605791243" TEXT="NAME       STATUS   ROLES    AGE     VERSION&#xa;worker-1   Ready    &lt;none&gt;   9d      v1.13.0&#xa;worker-2   Ready    &lt;none&gt;   6d20h   v1.13.0&#xa;"/>
+</node>
+</node>
+</node>
+<node CREATED="1614606163633" FOLDED="true" ID="Freemind_Link_1315282367" MODIFIED="1614606202003" TEXT="11 - Conceder permiss&#xe3;o ao &#xa;Kubeapi para conex&#xe3;o ao kubelet">
+<icon BUILTIN="forward"/>
+<node CREATED="1614606214965" ID="Freemind_Link_1549483143" MODIFIED="1614606235808" TEXT="Por padr&#xe3;o, o kubeapi n&#xe3;o tem permiss&#xe3;o de conex&#xe3;o ao kubelet">
+<node CREATED="1614606248540" ID="Freemind_Link_327559672" MODIFIED="1614606309670" TEXT="Comprove isso tentando ver os logs de algum dos Pods de rede (Weave)"/>
+<node CREATED="1614606466610" ID="Freemind_Link_1416415424" MODIFIED="1614606467350" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1614606467900" ID="Freemind_Link_483117222" MODIFIED="1614607201225" TEXT="kubectl logs weave-net-khvsb weave -n kube-system"/>
+</node>
+</node>
+<node CREATED="1614606706962" ID="Freemind_Link_1016232426" MODIFIED="1614606717352" TEXT="Criar a role">
+<icon BUILTIN="full-1"/>
+<node CREATED="1614607549269" ID="Freemind_Link_1098104076" MODIFIED="1614607614150" TEXT="Esta role dar&#xe1; permiss&#xe3;o de acesso aos logs, m&#xe9;tricas, especifica&#xe7;&#xf5;es etc. dos n&#xf3;s a quem ela for atribu&#xed;da"/>
+<node COLOR="#0000ff" CREATED="1614606467900" ID="Freemind_Link_413645466" MODIFIED="1614606731510" TEXT="cat &lt;&lt;EOF | kubectl apply --kubeconfig admin.kubeconfig -f -&#xa;apiVersion: rbac.authorization.k8s.io/v1beta1&#xa;kind: ClusterRole&#xa;metadata:&#xa;  annotations:&#xa;    rbac.authorization.kubernetes.io/autoupdate: &quot;true&quot;&#xa;  labels:&#xa;    kubernetes.io/bootstrapping: rbac-defaults&#xa;  name: system:kube-apiserver-to-kubelet&#xa;rules:&#xa;  - apiGroups:&#xa;      - &quot;&quot;&#xa;    resources:&#xa;      - nodes/proxy&#xa;      - nodes/stats&#xa;      - nodes/log&#xa;      - nodes/spec&#xa;      - nodes/metrics&#xa;    verbs:&#xa;      - &quot;*&quot;&#xa;EOF"/>
+</node>
+<node CREATED="1614606770482" ID="Freemind_Link_1830196097" MODIFIED="1614607646708" TEXT="Atribuir a role ao user &apos;kube-apiserver&apos;">
+<icon BUILTIN="full-2"/>
+<node CREATED="1614606786707" ID="Freemind_Link_1632465596" MODIFIED="1614606814743" TEXT="Com isso o kubeapi ter&#xe1; o acesso que precisa"/>
+<node COLOR="#0000ff" CREATED="1614606467900" ID="Freemind_Link_68247827" MODIFIED="1614606832432" TEXT="cat &lt;&lt;EOF | kubectl apply --kubeconfig admin.kubeconfig -f -&#xa;apiVersion: rbac.authorization.k8s.io/v1beta1&#xa;kind: ClusterRoleBinding&#xa;metadata:&#xa;  name: system:kube-apiserver&#xa;  namespace: &quot;&quot;&#xa;roleRef:&#xa;  apiGroup: rbac.authorization.k8s.io&#xa;  kind: ClusterRole&#xa;  name: system:kube-apiserver-to-kubelet&#xa;subjects:&#xa;  - apiGroup: rbac.authorization.k8s.io&#xa;    kind: User&#xa;    name: kube-apiserver&#xa;EOF"/>
+</node>
+</node>
+<node CREATED="1614607872929" FOLDED="true" ID="Freemind_Link_405709953" MODIFIED="1614607973571" TEXT="12 - Subir o DNS do cluster">
+<icon BUILTIN="forward"/>
+<node CREATED="1614607973558" ID="Freemind_Link_665851458" MODIFIED="1614607990428" TEXT="Fazer deploy do DNS">
+<icon BUILTIN="full-1"/>
+<node COLOR="#0000ff" CREATED="1614607906815" ID="Freemind_Link_415511543" MODIFIED="1614607916532" TEXT="kubectl apply -f https://raw.githubusercontent.com/mmumshad/kubernetes-the-hard-way/master/deployments/coredns.yaml"/>
+</node>
+<node CREATED="1613745615454" ID="Freemind_Link_1287756697" MODIFIED="1614608013173" TEXT="Testar o servi&#xe7;o">
+<icon BUILTIN="full-2"/>
+<node CREATED="1613736672743" ID="Freemind_Link_1542103574" MODIFIED="1613745659962" TEXT="Ap&#xf3;s a execu&#xe7;&#xe3;o dos passos acima, executar o comando abaixo"/>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_1652868961" MODIFIED="1614608460216" TEXT="kubectl run --generator=run-pod/v1  busybox --image=busybox:1.28 --command -- sleep 3600">
+<icon BUILTIN="full-1"/>
+<node CREATED="1614608053993" ID="Freemind_Link_1694437877" MODIFIED="1614608068567" TEXT="Isso faz deploy de um POD busybox"/>
+</node>
+<node CREATED="1613736712199" ID="Freemind_Link_1375715585" MODIFIED="1614608463478" TEXT="Verifique se o container subiu:">
+<icon BUILTIN="full-2"/>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_279848635" MODIFIED="1614608303310" TEXT="kubectl get pods"/>
+</node>
+<node CREATED="1614608336961" ID="Freemind_Link_94778464" MODIFIED="1614608466758" TEXT="Verifique se o DNS resolve o IP do service &apos;kubernetes&apos;">
+<icon BUILTIN="full-3"/>
+<node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_1581148048" MODIFIED="1614608421550" TEXT="kubectl exec -ti busybox -- nslookup kubernetes"/>
+</node>
+<node CREATED="1613736712199" ID="Freemind_Link_1687825032" MODIFIED="1613736715502" TEXT="Resultado esperado:">
+<node CREATED="1613736716965" ID="Freemind_Link_830825906" MODIFIED="1614608448072" TEXT="Server:    10.96.0.10&#xa;Address 1: 10.96.0.10 kube-dns.kube-system.svc.cluster.local&#xa;&#xa;Name:      kubernetes&#xa;Address 1: 10.96.0.1 kubernetes.default.svc.cluster.local&#xa;"/>
+</node>
+</node>
+</node>
 </node>
 <node CREATED="1613589372531" ID="Freemind_Link_1092549628" MODIFIED="1613589375442" TEXT="Via Kubeadm"/>
 </node>
