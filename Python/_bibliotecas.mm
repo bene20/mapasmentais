@@ -80,6 +80,30 @@
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1669975070" MODIFIED="1609882675388" TEXT="dataset[&apos;Score&apos;].describe()"/>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_835936171" MODIFIED="1620065364396" TEXT="unique">
+<node CREATED="1609876580616" ID="Freemind_Link_701683568" MODIFIED="1620065416359" TEXT="Apresenta o conjunto dos valores de uma coluna (sem repeti&#xe7;&#xe3;o)"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1430627416" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_362971638" MODIFIED="1620065422728" TEXT="dataset[&apos;Score&apos;].unique()"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_300310493" MODIFIED="1620072333029" TEXT="nunique">
+<node CREATED="1609876580616" ID="Freemind_Link_627922814" MODIFIED="1620072348061" TEXT="Apresenta a quantidade de valores distintos de uma coluna"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1414610338" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_388073470" MODIFIED="1620072354669" TEXT="dataset[&apos;Score&apos;].nunique()"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_923502539" MODIFIED="1620067130976" TEXT="value_counts">
+<node CREATED="1609876580616" ID="Freemind_Link_1257984805" MODIFIED="1620067176260" TEXT="Apresenta o conjunto dos valores de uma coluna (sem repeti&#xe7;&#xe3;o) com suas respectivas quantidades de ocorr&#xea;ncias"/>
+<node CREATED="1620068020280" ID="Freemind_Link_839475274" MODIFIED="1620068024824" TEXT="https://pandas.pydata.org/docs/reference/api/pandas.Series.value_counts.html#pandas.Series.value_counts">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_1084040700" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1566270355" MODIFIED="1620067139040" TEXT="dataset[&apos;Score&apos;].value_counts()"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1026185801" MODIFIED="1620068000917" TEXT="dataset[&apos;Score&apos;].value_counts(normalize=&apos;true&apos;)">
+<node CREATED="1620068001841" ID="Freemind_Link_1043403791" MODIFIED="1620068006957" TEXT="Mostra a propor&#xe7;&#xe3;o dos dados"/>
+</node>
+</node>
+</node>
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1222350569" MODIFIED="1609883817856" TEXT="isnull()">
 <node CREATED="1609876580616" ID="Freemind_Link_1361280474" MODIFIED="1609883830717" TEXT="Apresenta os valores nulos do conjunto de dados"/>
 <node CREATED="1609883837322" ID="Freemind_Link_1109888949" MODIFIED="1609883841701" TEXT="Pode ser sumarizado:">
@@ -101,6 +125,20 @@
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1087458890" MODIFIED="1610042766118" TEXT="loc">
 <node CREATED="1609876580616" ID="Freemind_Link_1071284837" MODIFIED="1610043135282" TEXT="Localiza valores de dados espec&#xed;ficos do conjunto de dados">
 <node CREATED="1610043139456" ID="Freemind_Link_1475402869" MODIFIED="1610043153084" TEXT="Tamb&#xe9;m permite a altera&#xe7;&#xe3;o do valor dos registros encontrados"/>
+</node>
+<node CREATED="1620146761647" ID="Freemind_Link_745987915" MODIFIED="1620146770520" TEXT="Pode ser usado para obter se&#xe7;&#xf5;es do Dataframe">
+<node CREATED="1620146813502" ID="Freemind_Link_652564431" MODIFIED="1620146814754" TEXT="Ex:">
+<node CREATED="1620146837117" ID="Freemind_Link_792780377" MODIFIED="1620146849275" TEXT="x:n indica um intervalo de x a n">
+<node CREATED="1620146849669" ID="Freemind_Link_445402263" MODIFIED="1620146861474" TEXT="Se x for omitido, assume-se &quot;o primeiro registro&quot;"/>
+<node CREATED="1620146862064" ID="Freemind_Link_1119969896" MODIFIED="1620146876721" TEXT="Se n for omitido, assume-se o &#xfa;ltimo registro"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1462957299" MODIFIED="1620146835355" TEXT="dataset.loc[:,&apos;g-0&apos;]">
+<node CREATED="1620146994478" ID="Freemind_Link_323255381" MODIFIED="1620147003310" TEXT="Traz todas as linhas da coluna g-0"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_140922732" MODIFIED="1620147045871" TEXT="dataset.loc[:,&apos;g-0&apos;:&apos;g-770&apos;:]">
+<node CREATED="1620146994478" ID="Freemind_Link_955697446" MODIFIED="1620147033688" TEXT="Traz todas as linhas das colunas g-0 &#xe0; coluna g-770"/>
+</node>
+</node>
 </node>
 <node CREATED="1609883837322" ID="Freemind_Link_948432016" MODIFIED="1610567485509" TEXT="No colchete, indicar o filtro e os labels das linhas e/ou colunas a serem recuperadas">
 <arrowlink COLOR="#0dc316" DESTINATION="Freemind_Link_90805432" ENDARROW="Default" ENDINCLINATION="140;0;" ID="Freemind_Arrow_Link_1030430501" STARTARROW="Default" STARTINCLINATION="140;0;"/>
@@ -130,7 +168,7 @@
 </node>
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_26604882" MODIFIED="1610044002953" TEXT="duplicated">
 <node CREATED="1609883837322" ID="Freemind_Link_1094807250" MODIFIED="1610044104596" TEXT="Obt&#xe9;m a lista dos registros duplicados do conjunto de dados"/>
-<node CREATED="1610044372165" ID="Freemind_Link_499873282" MODIFIED="1610044409661" TEXT="&#xc9; necess&#xe1;rio indocar as colunas que ser&#xe3;o consideradas &#xa;na an&#xe1;lise de unicidade (esp&#xe9;cie de chave prim&#xe1;ria)"/>
+<node CREATED="1610044372165" ID="Freemind_Link_499873282" MODIFIED="1620065341613" TEXT="&#xc9; necess&#xe1;rio indicar as colunas que ser&#xe3;o consideradas &#xa;na an&#xe1;lise de unicidade (esp&#xe9;cie de chave prim&#xe1;ria)"/>
 <node CREATED="1609876605273" ID="Freemind_Link_1690856367" MODIFIED="1609876606302" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1346807296" MODIFIED="1610044135348" TEXT="dataset.duplicated([&apos;Id&apos;])"/>
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_213074378" MODIFIED="1610044316561" TEXT="dataset[dataset.duplicated([&apos;Id&apos;],keep=False)]">
@@ -156,9 +194,77 @@
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1365368353" MODIFIED="1610044541833" TEXT="dataset.drop_duplicates(subset=&quot;Id&quot;, keep=&apos;first&apos;, inplace=True)"/>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1277940897" MODIFIED="1620072432373" TEXT="query">
+<node CREATED="1609876580616" ID="Freemind_Link_428498797" MODIFIED="1620072444198" TEXT="Aplica filtros a um Dataframe"/>
+<node CREATED="1620072447602" ID="Freemind_Link_658745113" MODIFIED="1620072463851" TEXT="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.query.html">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_1735577989" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1741420954" MODIFIED="1620072478902" TEXT="dados.query(&apos;tempo == 24&apos;)"/>
+<node COLOR="#0000ff" CREATED="1620132142347" ID="Freemind_Link_1324226356" MODIFIED="1620132156854" TEXT="cod_compostos = dados[&apos;composto&apos;].value_counts().index[0:5]&#xa;dados.query(&apos;composto in @cod_compostos&apos;)">
+<node CREATED="1620132162409" ID="Freemind_Link_1644115205" MODIFIED="1620132183356" TEXT="&#xc9; necess&#xe1;rio usar o @ quando o dado que se quer usar &#xe9; de uma vari&#xe1;vel declarada no Python"/>
 </node>
 </node>
-<node CREATED="1609882168013" ID="Freemind_Link_443417354" MODIFIED="1609882169290" TEXT="Series">
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_256649636" MODIFIED="1620131232202" TEXT="rename">
+<node CREATED="1609876580616" ID="Freemind_Link_696526553" MODIFIED="1620131237645" TEXT="Permite renomear colunas"/>
+<node CREATED="1609876605273" ID="Freemind_Link_8444115" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_520483922" MODIFIED="1620131267742" TEXT="dados.rename(columns={&apos;droga&apos;:&apos;composto&apos;}, inplace=True)">
+<node CREATED="1620131287982" ID="Freemind_Link_166414811" MODIFIED="1620131298980" TEXT="Renomeia a coluna de nome &apos;drogas&apos; para &apos;composto&apos;"/>
+<node CREATED="1620131304120" ID="Freemind_Link_101960385" MODIFIED="1620131317186" TEXT="inplace True diz para alterar o pr&#xf3;prio Dataframe dados"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1430022111" MODIFIED="1620131614202" TEXT="[x:n]">
+<node CREATED="1609876580616" ID="Freemind_Link_1312655093" MODIFIED="1620131641555" TEXT="Pega do x-&#xe9;simo ao n-&#xe9;simo (n&#xe3;o incluso) elemento do dataframe"/>
+<node CREATED="1609876605273" ID="Freemind_Link_407301969" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_294757221" MODIFIED="1620131654026" TEXT="dados[0:5]">
+<node CREATED="1620131287982" ID="Freemind_Link_1337586703" MODIFIED="1620131661114" TEXT="Pega do elemento 0 ao 4"/>
+<node CREATED="1620131666893" ID="Freemind_Link_1255779751" MODIFIED="1620131688394" TEXT="Alternativa:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1384093228" MODIFIED="1620131683586" TEXT="dados[:5]"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_465906873" MODIFIED="1620147176877" TEXT="T">
+<node CREATED="1609876580616" ID="Freemind_Link_65049959" MODIFIED="1620147185297" TEXT="Faz a transposi&#xe7;&#xe3;o do Dataframe">
+<node CREATED="1620147187526" ID="Freemind_Link_608032366" MODIFIED="1620147194943" TEXT="Troca linhas por colunas e viceversa"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_82347505" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1764186325" MODIFIED="1620147200608" TEXT="dados.T"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_250144851" MODIFIED="1620235375326" TEXT="corr">
+<node CREATED="1609876580616" ID="Freemind_Link_1106981114" MODIFIED="1620235387117" TEXT="Calcula a correla&#xe7;&#xe3;o entre os valores da tabela"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1703576447" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1748423421" MODIFIED="1620235403630" TEXT="dados.loc[:,&apos;g0&apos;:&apos;g771&apos;].corr()"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_607870708" MODIFIED="1620324223658" TEXT="select_dtypes">
+<node CREATED="1609876580616" ID="Freemind_Link_1873444302" MODIFIED="1620324237709" TEXT="Usado para selecionar as colunas de um Dataframe pelo tipo de dados"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1881874485" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_174814044" MODIFIED="1620324250424" TEXT="dados.select_dtypes(&apos;int64&apos;)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1784785668" MODIFIED="1620324823477" TEXT="info">
+<node CREATED="1609876580616" ID="Freemind_Link_1021690987" MODIFIED="1620324844580" TEXT="Apresenta informa&#xe7;&#xf5;es da arquitetura do Dataframe (tipos das colunas etc.)"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1787884020" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_470556983" MODIFIED="1620324854683" TEXT="dados.info()"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_690749619" MODIFIED="1620328712241" TEXT="merge">
+<node CREATED="1609876580616" ID="Freemind_Link_700216009" MODIFIED="1620328728114" TEXT="Faz ao merge (uni&#xe3;o) de dois dataframes por um campo em comum"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1234500556" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_432108521" MODIFIED="1620328733193" TEXT="dados_combinados = pd.merge(dados, dados_resultados[[&apos;id&apos;,&apos;n_moa&apos;, &apos;ativo_moa&apos;]], on=&apos;id&apos;)">
+<node CREATED="1620328738147" ID="Freemind_Link_1709228641" MODIFIED="1620328748708" TEXT="Combina os dataframes &apos;dados&apos; e dados_resultados&apos;"/>
+<node CREATED="1620328754311" ID="Freemind_Link_827602303" MODIFIED="1620328768525" TEXT="O campo em comum para o merge &#xe9; definido no par&#xe2;metro on"/>
+<node CREATED="1620328772613" ID="Freemind_Link_1354010955" MODIFIED="1620328788648" TEXT="No exemplo foram selecionadas apenas 3 colunas do dataframe dados_resultados"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1609882168013" FOLDED="true" ID="Freemind_Link_443417354" MODIFIED="1609882169290" TEXT="Series">
 <node CREATED="1609882192733" ID="Freemind_Link_236792102" MODIFIED="1609882219593" TEXT="Obtido apartir da fun&#xe7;&#xe3;o &apos;groupby&apos; de Dataframe">
 <arrowlink COLOR="#f80b0b" DESTINATION="Freemind_Link_1966830136" ENDARROW="Default" ENDINCLINATION="129;0;" ID="Freemind_Arrow_Link_507154169" STARTARROW="None" STARTINCLINATION="129;0;"/>
 <node CREATED="1609882228389" ID="Freemind_Link_293226400" MODIFIED="1609882229353" TEXT="Ex:">
@@ -176,6 +282,21 @@
 </node>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_883387897" MODIFIED="1620131897292" TEXT="index">
+<node CREATED="1609876580616" ID="Freemind_Link_1363275888" MODIFIED="1620131912013" TEXT="Pega apenas a coluna dos &#xed;ndices de uma s&#xe9;rie"/>
+<node CREATED="1609876605273" ID="Freemind_Link_369116747" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1522127173" MODIFIED="1620131937683" TEXT="dados[&apos;composto&apos;].value_counts().index"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_386653524" MODIFIED="1620140501232" TEXT="hist">
+<node CREATED="1609876580616" ID="Freemind_Link_817450652" MODIFIED="1620140507410" TEXT="Plota o histograma da s&#xe9;rie"/>
+<node CREATED="1609876605273" ID="Freemind_Link_625933666" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1927264077" MODIFIED="1620140514890" TEXT="dados[&apos;composto&apos;].hist()"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_745903326" MODIFIED="1620140521347" TEXT="dados[&apos;composto&apos;].hist(bins=50)">
+<node CREATED="1620140522007" ID="Freemind_Link_684797128" MODIFIED="1620140530607" TEXT="For&#xe7;a o histograma a ter 50 barras"/>
+</node>
+</node>
+</node>
 </node>
 </node>
 </node>
@@ -184,6 +305,32 @@
 <node CREATED="1609876580616" ID="Freemind_Link_1959272963" MODIFIED="1609876600115" TEXT="L&#xea; um arquivo csv e o carrega em um dataframe"/>
 <node CREATED="1609876605273" ID="Freemind_Link_731917052" MODIFIED="1609876606302" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1922227970" MODIFIED="1609876643994" TEXT="dataset = pd.read_csv(&quot;arquivo.csv&quot;, sep=&quot;;&quot;)"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_147188232" MODIFIED="1620064695950" TEXT="dataset = pd.read_csv(&quot;arquivo.zip&quot;, compression = &apos;zip&apos;)">
+<node CREATED="1620064698179" ID="Freemind_Link_1309747334" MODIFIED="1620064710293" TEXT="Descompacta, abre e processa um arquivo csv zipado"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1945162804" MODIFIED="1620219371524" TEXT="crosstab">
+<node CREATED="1609876580616" ID="Freemind_Link_20381812" MODIFIED="1620219380262" TEXT="Ferramenta para correlacionar dados"/>
+<node CREATED="1609876605273" ID="Freemind_Link_396889972" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1706011566" MODIFIED="1620219422171" TEXT="pd.crosstab(dados[&apos;dose&apos;], dados[&apos;tempo&apos;])">
+<node CREATED="1620219534905" ID="Freemind_Link_699006398" MODIFIED="1620219550778" TEXT="Correlaciona a coluna &apos;dose&apos; com a coluna &apos;tempo&apos;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_564193541" MODIFIED="1620221151591" TEXT="pd.crosstab([dados[&apos;dose&apos;], dados[&apos;tempo&apos;]], dados[&apos;tratamento&apos;])">
+<node CREATED="1620219534905" ID="Freemind_Link_40399548" MODIFIED="1620221186981" TEXT="Correlaciona as coluna &apos;dose&apos;, &apos;tempo&apos; e &apos;tratamento&apos;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_855245377" MODIFIED="1620221485748" TEXT="pd.crosstab([dados[&apos;dose&apos;], dados[&apos;tempo&apos;]], dados[&apos;tratamento&apos;], normalize=True)">
+<node CREATED="1620219534905" ID="Freemind_Link_1756567330" MODIFIED="1620221493541" TEXT="Correlaciona as coluna &apos;dose&apos;, &apos;tempo&apos; e &apos;tratamento&apos; normalizando os resultados"/>
+<node CREATED="1620221666046" ID="Freemind_Link_1551264277" MODIFIED="1620221679628" TEXT="Essa normaliza&#xe7;&#xe3;o ser&#xe1; de toda a tabela (a soma global d&#xe1; 1)"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_769617048" MODIFIED="1620221686618" TEXT="pd.crosstab([dados[&apos;dose&apos;], dados[&apos;tempo&apos;]], dados[&apos;tratamento&apos;], normalize=&apos;index&apos;)">
+<node CREATED="1620219534905" ID="Freemind_Link_753531227" MODIFIED="1620221493541" TEXT="Correlaciona as coluna &apos;dose&apos;, &apos;tempo&apos; e &apos;tratamento&apos; normalizando os resultados"/>
+<node CREATED="1620221666046" ID="Freemind_Link_274414675" MODIFIED="1620221709635" TEXT="Essa normaliza&#xe7;&#xe3;o ser&#xe1; por linha (a soma de cada linha d&#xe1; 1)"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_477134776" MODIFIED="1620222988924" TEXT="pd.crosstab([dados[&apos;dose&apos;], dados[&apos;tempo&apos;]], dados[&apos;tratamento&apos;], values=dados[&apos;g0&apos;], aggfunc=&apos;mean&apos;)">
+<node CREATED="1620219534905" ID="Freemind_Link_1292844698" MODIFIED="1620223022526" TEXT="Correlaciona as coluna &apos;dose&apos;, &apos;tempo&apos; e &apos;tratamento&apos; para a coluna g0 do Dataframe"/>
+<node CREATED="1620221666046" ID="Freemind_Link_601315959" MODIFIED="1620223102124" TEXT="Essa tabela mostra a m&#xe9;dia de &apos;g0&apos; para uma determinada &apos;dose&apos;, &apos;tempo&apos; e &apos;tratamento&apos;"/>
+</node>
 </node>
 </node>
 </node>
@@ -201,6 +348,9 @@
 <node CREATED="1609883403816" ID="Freemind_Link_1412234597" MODIFIED="1609883424823" TEXT="&#xc9; &#xfa;til para detectar dados com anomalia (muito diferentes dos demais)"/>
 <node CREATED="1609876605273" ID="Freemind_Link_1015457990" MODIFIED="1609876606302" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_210989238" MODIFIED="1609882931548" TEXT="srn.boxplot(dataset[&apos;Score&apos;]).set_title(&apos;Socre&apos;)"/>
+<node COLOR="#0000ff" CREATED="1620330254688" ID="Freemind_Link_858436948" MODIFIED="1620330266292" TEXT="sns.boxplot(data=dados_combinados.query(&apos;composto in @composto_principal&apos;), y=&apos;g0&apos;, x=&apos;composto&apos;, hue=&apos;ativo_moa&apos;)">
+<node CREATED="1620330268078" ID="Freemind_Link_377450744" MODIFIED="1620330284202" TEXT="O par&#xe2;metro &apos;hue&apos; separa os gr&#xe1;ficos por uma coluna espec&#xed;fica"/>
+</node>
 </node>
 </node>
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_483671004" MODIFIED="1609883209159" TEXT="histplot">
@@ -222,9 +372,42 @@
 </node>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_127267203" MODIFIED="1620133012934" TEXT="countplot">
+<node CREATED="1609876580616" ID="Freemind_Link_625879051" MODIFIED="1620133029607" TEXT="Plota a quantidade de ocorr&#xea;ncias dos valores de uma coluna">
+<node CREATED="1620133030962" ID="Freemind_Link_1532099101" MODIFIED="1620133053782" TEXT="Como se fosse um gr&#xe1;fico do value_counts()"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_1848200368" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_783953365" MODIFIED="1620133094496" TEXT="ax = sns.countplot(x=&apos;composto&apos;, data=top5compostos)&#xa;ax.set_title(&apos;Top 5 compostos&apos;)&#xa;plt.show()">
+<node CREATED="1610572460968" ID="Freemind_Link_1300383396" MODIFIED="1620133110967" TEXT="plt.show() &#xe9; s&#xf3; para evitar a exibi&#xe7;&#xe3;o das informa&#xe7;&#xf5;es do gr&#xe1;fico"/>
+<node CREATED="1620133201385" ID="Freemind_Link_1486227328" MODIFIED="1620133213615" TEXT="O eixo &apos;y&apos; por padr&#xe3;o ser&#xe1; o count dos valores da coluna X indicada"/>
+<node CREATED="1620133129068" ID="Freemind_Link_232618730" MODIFIED="1620133195120" TEXT="x=&apos;composto&apos; diz que o eixo X ser&#xe1; formado com os dados da coluna &apos;composto&apos;"/>
+<node CREATED="1620133144668" ID="Freemind_Link_925097907" MODIFIED="1620133151999" TEXT="data &#xe9; o dataframe com os dados"/>
 </node>
 </node>
-<node CREATED="1609876477873" ID="Freemind_Link_1702268812" MODIFIED="1609876480160" POSITION="right" TEXT="Statistics">
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1814610093" MODIFIED="1620225017399" TEXT="scatterplot">
+<node CREATED="1609876580616" ID="Freemind_Link_550166617" MODIFIED="1620226213419" TEXT="Plota o gr&#xe1;fico de dispers&#xe3;o">
+<arrowlink DESTINATION="Freemind_Link_1776037724" ENDARROW="Default" ENDINCLINATION="140;0;" ID="Freemind_Arrow_Link_543973926" STARTARROW="Default" STARTINCLINATION="140;0;"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_865619323" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_585799444" MODIFIED="1620224966570" TEXT="sns.scatterplot(x=&apos;g0&apos;, y=&apos;g3&apos;, data=dados[[&apos;g0&apos;,&apos;g3&apos;]])">
+<node CREATED="1610572460968" ID="Freemind_Link_1327182029" MODIFIED="1620225003870" TEXT="dados[[&apos;g0&apos;,&apos;g3&apos;]] &#xe9; uma se&#xe7;&#xe3;o do dataframe dados, pegando apenas as colunas g0 e g3"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1054850281" MODIFIED="1620226186735" TEXT="lmplot">
+<node CREATED="1609876580616" ID="Freemind_Link_1776037724" MODIFIED="1620226213420" TEXT="Plota o gr&#xe1;fico de dispers&#xe3;o com a linha de tend&#xea;ncia"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1732158613" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1800153088" MODIFIED="1620226201387" TEXT="sns.lmplot(x=&apos;g0&apos;, y=&apos;g3&apos;, data=dados[[&apos;g0&apos;,&apos;g3&apos;]])">
+<node CREATED="1610572460968" ID="Freemind_Link_1050349181" MODIFIED="1620225003870" TEXT="dados[[&apos;g0&apos;,&apos;g3&apos;]] &#xe9; uma se&#xe7;&#xe3;o do dataframe dados, pegando apenas as colunas g0 e g3"/>
+<node CREATED="1620231476729" ID="Freemind_Link_506953787" MODIFIED="1620231488277" TEXT="A cor da linha pode ser alterada. Ex: line_kws={&apos;color&apos;:&apos;red&apos;}"/>
+<node CREATED="1620232369021" ID="Freemind_Link_1941163901" MODIFIED="1620232432063" TEXT="O gr&#xe1;fico pode ser partido por mais colunas. Ex: col=&apos;tratamento, row=&apos;tempo&apos;"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1609876477873" FOLDED="true" ID="Freemind_Link_1702268812" MODIFIED="1609876480160" POSITION="right" TEXT="Statistics">
 <node CREATED="1609876509241" ID="Freemind_Link_1456077688" MODIFIED="1609876523892" TEXT="Ferramentas estat&#xed;sticas"/>
 <node CREATED="1609876661409" ID="Freemind_Link_1920224202" MODIFIED="1609876666051" TEXT="Uso">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1416899252" MODIFIED="1609876706066" TEXT="import statistics as sts"/>
@@ -266,7 +449,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1610547824229" ID="Freemind_Link_1400798417" MODIFIED="1610547826796" POSITION="right" TEXT="Numpy">
+<node CREATED="1610547824229" FOLDED="true" ID="Freemind_Link_1400798417" MODIFIED="1610547826796" POSITION="right" TEXT="Numpy">
 <node CREATED="1609876497969" ID="Freemind_Link_1127785882" MODIFIED="1610547875182" TEXT="Trabalho com estat&#xed;stica"/>
 <node CREATED="1610547908748" ID="Freemind_Link_1139902648" MODIFIED="1610547914144" TEXT="Biblioteca cient&#xed;fica"/>
 <node CREATED="1609876661409" ID="Freemind_Link_652425837" MODIFIED="1609876666051" TEXT="Uso">

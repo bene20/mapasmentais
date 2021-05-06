@@ -1,7 +1,7 @@
 <map version="0.8.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1587588035937" ID="Freemind_Link_179599812" LINK="../Mapas.mm" MODIFIED="1587588110544" TEXT="Kubernetes">
-<node CREATED="1587588278670" ID="_" MODIFIED="1596638881260" POSITION="right" TEXT="Instala&#xe7;&#xe3;o/configura&#xe7;&#xe3;o">
+<node CREATED="1587588278670" FOLDED="true" ID="_" MODIFIED="1596638881260" POSITION="right" TEXT="Instala&#xe7;&#xe3;o/configura&#xe7;&#xe3;o">
 <node CREATED="1587588396290" ID="Freemind_Link_1993121344" MODIFIED="1587588399504" TEXT="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/">
 <icon BUILTIN="attach"/>
 </node>
@@ -418,7 +418,7 @@
 </node>
 </node>
 <node CREATED="1613589359874" ID="Freemind_Link_1303181181" MODIFIED="1613589369127" TEXT="Instala&#xe7;&#xe3;o">
-<node CREATED="1613589369797" ID="Freemind_Link_1687393185" MODIFIED="1613589371694" TEXT="Na m&#xe3;o">
+<node CREATED="1613589369797" FOLDED="true" ID="Freemind_Link_1687393185" MODIFIED="1613589371694" TEXT="Na m&#xe3;o">
 <node CREATED="1613735818463" ID="Freemind_Link_1373035147" MODIFIED="1613735823015" TEXT="https://www.youtube.com/playlist?list=PL2We04F3Y_41jYdadX55fdJplDvgNGENo">
 <icon BUILTIN="attach"/>
 </node>
@@ -1070,10 +1070,169 @@
 </node>
 </node>
 </node>
-<node CREATED="1613589372531" ID="Freemind_Link_1092549628" MODIFIED="1613589375442" TEXT="Via Kubeadm"/>
+<node CREATED="1613589372531" ID="Freemind_Link_1092549628" MODIFIED="1613589375442" TEXT="Via Kubeadm">
+<node CREATED="1617047083844" ID="Freemind_Link_1856785728" MODIFIED="1617047088951" TEXT="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1617048273293" FOLDED="true" ID="Freemind_Link_1271644823" MODIFIED="1617048330494" TEXT="Configurar o IP tables nos n&#xf3;s">
+<icon BUILTIN="full-1"/>
+<node CREATED="1617050461584" ID="Freemind_Link_1235484946" MODIFIED="1617050466528" TEXT="Executar em todos os n&#xf3;s"/>
+<node CREATED="1617048330478" ID="Freemind_Link_878075803" MODIFIED="1617048345422" TEXT="Carregar o m&#xf3;dulo br_netfilter">
+<icon BUILTIN="full-1"/>
+<node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_1692074528" MODIFIED="1617048361850" TEXT="sudo modprobe br_netfilter"/>
+</node>
+<node CREATED="1617048330478" ID="Freemind_Link_1224735255" MODIFIED="1617048386479" TEXT="Testar carregamento do m&#xf3;dulo br_netfilter">
+<icon BUILTIN="full-2"/>
+<node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_1496457659" MODIFIED="1617048396914" TEXT="lsmod | grep br_netfilter"/>
+</node>
+<node CREATED="1617048330478" ID="Freemind_Link_91057680" MODIFIED="1617050506933" TEXT="Configurar o IPTables">
+<icon BUILTIN="full-3"/>
+<node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_978373970" MODIFIED="1617050514883" TEXT="cat &lt;&lt;EOF | sudo tee /etc/modules-load.d/k8s.conf&#xa;br_netfilter&#xa;EOF&#xa;&#xa;cat &lt;&lt;EOF | sudo tee /etc/sysctl.d/k8s.conf&#xa;net.bridge.bridge-nf-call-ip6tables = 1&#xa;net.bridge.bridge-nf-call-iptables = 1&#xa;EOF&#xa;sudo sysctl --system"/>
 </node>
 </node>
-<node CREATED="1591997555354" ID="Freemind_Link_1121402737" MODIFIED="1591997566014" POSITION="right" TEXT="Ferramentas">
+<node CREATED="1617050609758" FOLDED="true" ID="Freemind_Link_247399929" MODIFIED="1617050719184" TEXT="Instalar o Docker runtime nos n&#xf3;s">
+<icon BUILTIN="full-2"/>
+<node CREATED="1617050790427" ID="Freemind_Link_8525605" MODIFIED="1617050791159" TEXT="https://docs.docker.com/engine/install/debian/"/>
+<node CREATED="1617050940725" ID="Freemind_Link_309989933" MODIFIED="1617051027613" TEXT="Atualizar a lista do reposit&#xf3;rio">
+<icon BUILTIN="full-1"/>
+<node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_110835740" MODIFIED="1617050983621" TEXT="sudo apt-get update"/>
+</node>
+<node CREATED="1617050940725" ID="Freemind_Link_1978813903" MODIFIED="1617051030953" TEXT="Instalar requisitos para o Docker">
+<icon BUILTIN="full-2"/>
+<node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_1239464181" MODIFIED="1617051021435" TEXT="sudo apt-get install -y \&#xa;    apt-transport-https \&#xa;    ca-certificates \&#xa;    curl \&#xa;    gnupg \&#xa;    lsb-release"/>
+</node>
+<node CREATED="1617051134511" ID="Freemind_Link_1747082893" MODIFIED="1617051253695" TEXT="Adicionar chave GPG  oficial do Docker">
+<icon BUILTIN="full-3"/>
+<node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_422172423" MODIFIED="1617051298435" TEXT="sudo curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg"/>
+</node>
+<node CREATED="1617051452367" ID="Freemind_Link_1705603128" MODIFIED="1617051467883" TEXT="Adicionar o reposit&#xf3;rio Docker">
+<icon BUILTIN="full-4"/>
+<node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_437419517" MODIFIED="1617051482492" TEXT="echo \&#xa;  &quot;deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \&#xa;  $(lsb_release -cs) stable&quot; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null"/>
+</node>
+<node CREATED="1617050940725" ID="Freemind_Link_1939151557" MODIFIED="1617051606139" TEXT="Instalar os pacotes do Docker">
+<icon BUILTIN="full-5"/>
+<node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_86775611" MODIFIED="1617051599587" TEXT="sudo apt update"/>
+<node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_497410808" MODIFIED="1617051555442" TEXT="sudo apt-get install -y docker-ce docker-ce-cli containerd.io"/>
+</node>
+<node CREATED="1617048330478" ID="Freemind_Link_494967090" MODIFIED="1617052820649" TEXT="Configurar o Daemon do Docker">
+<icon BUILTIN="full-6"/>
+<node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_947132397" MODIFIED="1617052875713" TEXT="sudo mkdir /etc/docker&#xa;cat &lt;&lt;EOF | sudo tee /etc/docker/daemon.json&#xa;{&#xa;  &quot;exec-opts&quot;: [&quot;native.cgroupdriver=systemd&quot;],&#xa;  &quot;log-driver&quot;: &quot;json-file&quot;,&#xa;  &quot;log-opts&quot;: {&#xa;    &quot;max-size&quot;: &quot;100m&quot;&#xa;  },&#xa;  &quot;storage-driver&quot;: &quot;overlay2&quot;&#xa;}&#xa;EOF"/>
+<node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_1999367493" MODIFIED="1617052910497" TEXT="sudo systemctl enable docker&#xa;sudo systemctl daemon-reload&#xa;sudo systemctl restart docker"/>
+</node>
+<node CREATED="1617048330478" ID="Freemind_Link_603438596" MODIFIED="1617052883538" TEXT="Verificar instala&#xe7;&#xe3;o do Docker">
+<icon BUILTIN="full-7"/>
+<node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_1081289393" MODIFIED="1617051729440" TEXT="sudo docker run hello-world"/>
+</node>
+</node>
+<node CREATED="1617054265114" FOLDED="true" ID="Freemind_Link_1250625972" MODIFIED="1617054280110" TEXT="Instalar os componentes do Kubernetes">
+<icon BUILTIN="full-3"/>
+<node CREATED="1617054291977" ID="Freemind_Link_139999990" MODIFIED="1617054317680" TEXT="Baixar a chave p&#xfa;blica do GoogleCloud">
+<icon BUILTIN="full-1"/>
+<node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_1040166317" MODIFIED="1617054340102" TEXT="sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg"/>
+</node>
+<node CREATED="1617054291977" ID="Freemind_Link_935086793" MODIFIED="1617054414224" TEXT="Adicionar o reposit&#xf3;rio do Kubernetes">
+<icon BUILTIN="full-2"/>
+<node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_312854887" MODIFIED="1617054379135" TEXT="echo &quot;deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main&quot; | sudo tee /etc/apt/sources.list.d/kubernetes.list"/>
+</node>
+<node CREATED="1617054291977" ID="Freemind_Link_542718060" MODIFIED="1617054416967" TEXT="Instalar os pacotes do Kubernetes">
+<icon BUILTIN="full-3"/>
+<node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_1142972321" MODIFIED="1617054399688" TEXT="sudo apt-get update&#xa;sudo apt-get install -y kubelet kubeadm kubectl&#xa;sudo apt-mark hold kubelet kubeadm kubectl"/>
+</node>
+</node>
+<node CREATED="1617054631584" FOLDED="true" ID="Freemind_Link_1469029711" MODIFIED="1617054645390" TEXT="Criar o cluster com o Kubeadm">
+<icon BUILTIN="full-4"/>
+<node CREATED="1617054826521" ID="Freemind_Link_407261574" MODIFIED="1617054843691" TEXT="Iniciar o cluster">
+<icon BUILTIN="full-1"/>
+<node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_818390690" MODIFIED="1617055011711" TEXT="kubeadm init --pod-network-cidr 10.244.0.0/16 --apiserver-advertise-address=192.168.56.2">
+<node CREATED="1617055082979" ID="Freemind_Link_298879345" MODIFIED="1617055091242" TEXT="Executar como root">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node CREATED="1617054955661" ID="Freemind_Link_681378433" MODIFIED="1617054980772" TEXT="--apiserver-advertise-address">
+<node CREATED="1617054963360" ID="Freemind_Link_467570483" MODIFIED="1617054974912" TEXT=" &#xe9; o IP est&#xe1;tico do n&#xf3; master"/>
+</node>
+</node>
+</node>
+<node CREATED="1617055345441" ID="Freemind_Link_221032844" MODIFIED="1617055366869" TEXT="Executar os comandos exibidos no &apos;kubeadm init&apos;">
+<icon BUILTIN="full-2"/>
+<node CREATED="1617056862044" ID="Freemind_Link_1585427638" MODIFIED="1617056869225" TEXT="Executar como usu&#xe1;rio comum"/>
+<node CREATED="1617056875926" ID="Freemind_Link_485251257" MODIFIED="1617056876702" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1617056877447" ID="Freemind_Link_119616273" MODIFIED="1617056887517" TEXT=" mkdir -p $HOME/.kube&#xa;  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config&#xa;  sudo chown $(id -u):$(id -g) $HOME/.kube/config&#xa;"/>
+</node>
+</node>
+<node CREATED="1617057001642" ID="Freemind_Link_102028132" MODIFIED="1617057014556" TEXT="Fazer deploy da rede do cluster">
+<icon BUILTIN="full-3"/>
+<node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_1821026297" MODIFIED="1617057124612" TEXT="kubectl apply -f &quot;https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d &apos;\n&apos;)&quot;">
+<node CREATED="1617057446286" ID="Freemind_Link_1086496503" MODIFIED="1617057464753" TEXT="Ser&#xe3;o criadas roles, rolebindings etc."/>
+</node>
+</node>
+<node CREATED="1617058250804" ID="Freemind_Link_1660598667" MODIFIED="1617058268818" TEXT="Adicionar demais n&#xf3;s ao cluster">
+<icon BUILTIN="full-4"/>
+<node CREATED="1617058278915" ID="Freemind_Link_1858681465" MODIFIED="1617058303761" TEXT="Executar o comando &apos;kubeadm join&apos; exibido ap&#xf3;s o in&#xed;cio do cluster"/>
+<node CREATED="1617058337228" ID="Freemind_Link_1867582842" MODIFIED="1617058341247" TEXT="Para ver o comando join:">
+<node CREATED="1617058357298" ID="Freemind_Link_124346364" MODIFIED="1617058361878" TEXT="Executar no n&#xf3; master"/>
+<node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_1996476236" MODIFIED="1617058350913" TEXT="kubeadm token create --print-join-command"/>
+</node>
+</node>
+<node CREATED="1617057975418" ID="Freemind_Link_1826575060" MODIFIED="1617058148713" TEXT="Testar o cluster criado">
+<icon BUILTIN="full-5"/>
+<node CREATED="1617057995394" ID="Freemind_Link_1790647426" MODIFIED="1617058004652" TEXT="Veja os n&#xf3;s do cluster">
+<icon BUILTIN="full-1"/>
+<node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_1330852670" MODIFIED="1617058019987" TEXT="kubectl get nodes"/>
+</node>
+<node CREATED="1617057995394" ID="Freemind_Link_1271834231" MODIFIED="1617058040261" TEXT="Suba um container do NGinx">
+<icon BUILTIN="full-2"/>
+<node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_36428735" MODIFIED="1617058050627" TEXT="kubectl run nginx --image=nginx"/>
+</node>
+<node CREATED="1617058064683" ID="Freemind_Link_295202623" MODIFIED="1617058088179" TEXT="Verifique o container rodando">
+<icon BUILTIN="full-3"/>
+<node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_1921790050" MODIFIED="1617058084091" TEXT="kubectl get pods"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1615137450610" FOLDED="true" ID="Freemind_Link_605835687" MODIFIED="1615137452400" TEXT="Testes">
+<node CREATED="1615137452936" ID="Freemind_Link_1897850631" MODIFIED="1615137454941" TEXT="Smoke test">
+<node CREATED="1615137457114" ID="Freemind_Link_1372965961" MODIFIED="1615137463022" TEXT="https://github.com/mmumshad/kubernetes-the-hard-way/blob/master/docs/15-smoke-test.md">
+<icon BUILTIN="attach"/>
+</node>
+</node>
+<node CREATED="1615069952569" ID="Freemind_Link_861950781" MODIFIED="1615137469861" TEXT="Kubetest">
+<node CREATED="1615220992805" ID="Freemind_Link_1745663639" MODIFIED="1615220996680" TEXT="https://github.com/mmumshad/kubernetes-the-hard-way/blob/master/docs/16-e2e-tests.md">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1615069959758" ID="Freemind_Link_1372820457" MODIFIED="1615070188475" TEXT="Faz milhares de testes contra o cluster">
+<node CREATED="1615070209807" ID="Freemind_Link_612186511" MODIFIED="1615070236939" TEXT="Pode ser executado apenas um subconjunto dos testes"/>
+<node CREATED="1615070209807" ID="Freemind_Link_1602767383" MODIFIED="1615070270028" TEXT="Opcionalmente pode-se testar apenas algumas features espec&#xed;ficas do cluster"/>
+</node>
+<node CREATED="1615070189367" ID="Freemind_Link_311360367" MODIFIED="1615070193539" TEXT="Leva cerca de 12 horas"/>
+<node CREATED="1615070038605" ID="Freemind_Link_361869281" MODIFIED="1615070044697" TEXT="&#xc9; necess&#xe1;rio informar o provider">
+<node CREATED="1615070045798" ID="Freemind_Link_658589612" MODIFIED="1615070051242" TEXT="Se cluster local ou em cloud"/>
+<node CREATED="1615070058374" ID="Freemind_Link_771083659" MODIFIED="1615070061595" TEXT="skeleton">
+<node CREATED="1615070061934" ID="Freemind_Link_1308260589" MODIFIED="1615070128509" TEXT="Para usar o &apos;skeleton&apos; &#xe9; ncess&#xe1;rio informar&#xa;o KUBE_MASTER_IP e KUBE_MASTER">
+<node COLOR="#0000ff" CREATED="1615070091959" ID="Freemind_Link_101210184" MODIFIED="1615070118338" TEXT="export KUBE_MASTER_IP=&quot;192.168.26.10:6443&quot;"/>
+<node COLOR="#0000ff" CREATED="1615070091959" ID="Freemind_Link_95811990" MODIFIED="1615070144260" TEXT="export KUBE_MASTER=kube-master"/>
+</node>
+</node>
+</node>
+<node CREATED="1615071107767" ID="Freemind_Link_1497309198" MODIFIED="1615071210666" TEXT="&#xc9; necess&#xe1;rio ter a linguagem &apos;golang&apos; instalada no master"/>
+<node CREATED="1615466819405" ID="Freemind_Link_380405883" MODIFIED="1615466833850" TEXT="Instalar o Go">
+<icon BUILTIN="full-1"/>
+<node COLOR="#0000ff" CREATED="1615466823163" ID="Freemind_Link_1092438343" MODIFIED="1615466844960" TEXT="wget https://dl.google.com/go/go1.12.1.linux-amd64.tar.gz&#xa;&#xa;sudo tar -C /usr/local -xzf go1.12.1.linux-amd64.tar.gz&#xa;export GOPATH=&quot;/home/vagrant/go&quot;&#xa;export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin"/>
+</node>
+<node CREATED="1615466819405" ID="Freemind_Link_1466905274" MODIFIED="1615466864747" TEXT="Instalar o Kubetest">
+<icon BUILTIN="full-2"/>
+<node COLOR="#0000ff" CREATED="1615466823163" ID="Freemind_Link_1587138697" MODIFIED="1615466873508" TEXT="git clone https://github.com/kubernetes/test-infra.git&#xa;cd test-infra/&#xa;GO111MODULE=on go install ./kubetest"/>
+</node>
+<node CREATED="1615466819405" ID="Freemind_Link_1988832438" MODIFIED="1615466892863" TEXT="Rodar o teste">
+<icon BUILTIN="full-3"/>
+<node CREATED="1615466893836" ID="Freemind_Link_985390634" MODIFIED="1615466903787" TEXT="Deve-se usar a vers&#xe3;o espec&#xed;fica do seu cluster"/>
+<node COLOR="#0000ff" CREATED="1615466823163" ID="Freemind_Link_1042816252" MODIFIED="1615466916358" TEXT="K8S_VERSION=$(kubectl version -o json | jq -r &apos;.serverVersion.gitVersion&apos;)&#xa;export KUBERNETES_CONFORMANCE_TEST=y&#xa;export KUBECONFIG=&quot;$HOME/.kube/config&quot;&#xa;&#xa;kubetest --provider=skeleton --test --test_args=&#x201d;--ginkgo.focus=\[Conformance\]&#x201d; --extract ${K8S_VERSION} | tee test.out"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1591997555354" FOLDED="true" ID="Freemind_Link_1121402737" MODIFIED="1591997566014" POSITION="right" TEXT="Ferramentas">
 <node COLOR="#0000ff" CREATED="1597409823944" FOLDED="true" ID="Freemind_Link_1270117106" MODIFIED="1597409834931" TEXT="kubeadm">
 <node CREATED="1597409873583" ID="Freemind_Link_1028947641" MODIFIED="1597409888010" TEXT="Ferramenta de administra&#xe7;&#xe3;o do cluster (instala&#xe7;&#xe3;o e configura&#xe7;&#xe3;o)"/>
 <node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_588434013" MODIFIED="1597409845241" TEXT="upgrade">
@@ -4563,7 +4722,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1604936438648" FOLDED="true" ID="Freemind_Link_688879133" MODIFIED="1604936443140" POSITION="right" TEXT="Troubleshooting">
+<node CREATED="1604936438648" ID="Freemind_Link_688879133" MODIFIED="1604936443140" POSITION="right" TEXT="Troubleshooting">
 <node CREATED="1604936443694" ID="Freemind_Link_1310028104" MODIFIED="1604936445379" TEXT="Rede">
 <node CREATED="1604936446271" ID="Freemind_Link_1875988166" MODIFIED="1604936457324" TEXT="Verificar a rota default de um n&#xf3; do cluster">
 <node CREATED="1604936458272" ID="Freemind_Link_1218661930" MODIFIED="1604936469963" TEXT="Logar no n&#xf3; (via SSH)">
@@ -4625,6 +4784,48 @@
 </node>
 </node>
 <node CREATED="1613745571445" MODIFIED="1613745571445" TEXT="sudo service haproxy restart"/>
+<node CREATED="1617886708377" ID="Freemind_Link_1990626368" MODIFIED="1617886711696" TEXT="Falha de aplica&#xe7;&#xe3;o">
+<node CREATED="1617886723358" ID="Freemind_Link_866978362" MODIFIED="1617886739991" TEXT="Desenhar a arquitetura K8s da aplica&#xe7;&#xe3;o">
+<node CREATED="1617886740552" ID="Freemind_Link_839565773" MODIFIED="1617886743886" TEXT="Ex:">
+<node CREATED="1617887557211" ID="Freemind_Link_569736997" MODIFIED="1617887568102" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/arquitetura_aplicacao_k8s.jpg&quot;&gt;"/>
+</node>
+</node>
+<node CREATED="1617888018703" ID="Freemind_Link_1126281116" MODIFIED="1617888028705" TEXT="Testar acessibilidades">
+<node CREATED="1617888029222" ID="Freemind_Link_1918908139" MODIFIED="1617888031930" TEXT="Dos servi&#xe7;os">
+<node CREATED="1617888033287" ID="Freemind_Link_1426898295" MODIFIED="1617888034022" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1605009506888" ID="Freemind_Link_1480499451" MODIFIED="1617888057457" TEXT="curl http://web-service-ip:node-port"/>
+</node>
+<node CREATED="1617888091647" ID="Freemind_Link_911067099" MODIFIED="1617888099546" TEXT="Se falhou:">
+<node CREATED="1617888103228" ID="Freemind_Link_1947913923" MODIFIED="1617888107647" TEXT="Analise o service">
+<node COLOR="#0000ff" CREATED="1605009506888" ID="Freemind_Link_586771579" MODIFIED="1617888120175" TEXT="kubectl describe service web-service"/>
+</node>
+<node CREATED="1617888127781" ID="Freemind_Link_984292780" MODIFIED="1617888135777" TEXT="Analise o arquivo yaml de deploy do service">
+<node COLOR="#0000ff" CREATED="1605009506888" ID="Freemind_Link_713517319" MODIFIED="1617888147514" TEXT="cat web-service.yml"/>
+</node>
+<node CREATED="1617888154788" ID="Freemind_Link_1744861984" MODIFIED="1617888169222" TEXT="Verifique se o seletor do service coincide com o label do pod"/>
+<node CREATED="1619443463452" ID="Freemind_Link_1049763374" MODIFIED="1619443480553" TEXT="Checar se o service tem um endpoint">
+<node CREATED="1619443501008" ID="Freemind_Link_1036810977" MODIFIED="1619443506687" TEXT="I.e., um IP atribu&#xed;do"/>
+<node CREATED="1619443560617" ID="Freemind_Link_1534300681" MODIFIED="1619443577190" TEXT="Se n&#xe3;o tiver, quer dizer que o POD selecionado por ele n&#xe3;o est&#xe1; UP"/>
+<node COLOR="#0000ff" CREATED="1605009506888" ID="Freemind_Link_200846197" MODIFIED="1619443492594" TEXT="kubectl get ep"/>
+</node>
+</node>
+</node>
+<node CREATED="1617888193854" ID="Freemind_Link_731123989" MODIFIED="1617888195455" TEXT="Dos Pods">
+<node CREATED="1617888196186" ID="Freemind_Link_1078907018" MODIFIED="1617888238852" TEXT="Verifique se est&#xe3;o no estado &quot;Running&quot;">
+<node COLOR="#0000ff" CREATED="1605009506888" ID="Freemind_Link_1710084120" MODIFIED="1617888306902" TEXT="kubectl get pod web"/>
+</node>
+<node CREATED="1617888271122" ID="Freemind_Link_1441734948" MODIFIED="1617888283542" TEXT="Verifique os detalhes de execu&#xe7;&#xe3;o do Pod">
+<node COLOR="#0000ff" CREATED="1605009506888" ID="Freemind_Link_528737834" MODIFIED="1617888296966" TEXT="kubectl describe pod web"/>
+</node>
+<node CREATED="1617888271122" ID="Freemind_Link_1612239652" MODIFIED="1617888318725" TEXT="Analise os logs da aplica&#xe7;&#xe3;o do pod">
+<node COLOR="#0000ff" CREATED="1605009506888" ID="Freemind_Link_666864543" MODIFIED="1617888371133" TEXT="kubectl logs web">
+<node CREATED="1617888379642" ID="Freemind_Link_468318093" MODIFIED="1617888388955" TEXT="Adicione a flag -f se quiser acompanhar o log em tempo real"/>
+<node CREATED="1617888391073" ID="Freemind_Link_1525911072" MODIFIED="1617888421155" TEXT="Adicione a tag --previous se quiser ver os logs de pods anteriores"/>
+</node>
+</node>
+</node>
+</node>
+</node>
 </node>
 </node>
 </map>
