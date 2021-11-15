@@ -19,7 +19,7 @@
 <node CREATED="1636742967257" ID="Freemind_Link_55047505" MODIFIED="1636742980694" TEXT="Permite diferentes provedores a se comunicarem com os reposit&#xf3;rios Maven"/>
 <node CREATED="1636742988465" ID="Freemind_Link_907718674" MODIFIED="1636743007660" TEXT="N&#xe3;o precisa ser configurado, exceto em caso de uso de Proxys em ambientes corporativos"/>
 </node>
-<node CREATED="1636745511834" ID="Freemind_Link_1286683745" MODIFIED="1636745532959" TEXT="Estrutura de diret&#xf3;rios">
+<node CREATED="1636745511834" FOLDED="true" ID="Freemind_Link_1286683745" MODIFIED="1636745532959" TEXT="Estrutura de diret&#xf3;rios">
 <node CREATED="1636745977333" ID="Freemind_Link_73760647" LINK="https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html" MODIFIED="1636745977333" TEXT="https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html"/>
 <node CREATED="1636745538595" ID="Freemind_Link_757420399" MODIFIED="1636745575037" TEXT="/">
 <node CREATED="1636745546547" ID="Freemind_Link_71995489" MODIFIED="1636745556343" TEXT="Pasta raiz do projeto, onde se encontra o arquivo pom.xml"/>
@@ -61,7 +61,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1636742002175" ID="Freemind_Link_1926614245" MODIFIED="1636742004636" TEXT="Reposit&#xf3;rios">
+<node CREATED="1636742002175" FOLDED="true" ID="Freemind_Link_1926614245" MODIFIED="1636742004636" TEXT="Reposit&#xf3;rios">
 <node CREATED="1636742073533" ID="Freemind_Link_1789747832" MODIFIED="1636742093874" TEXT="O Maven busca os artefatos na seguinte ordem">
 <node CREATED="1636742094463" ID="Freemind_Link_1022358467" MODIFIED="1636742104534" TEXT="Reposit&#xf3;rio local">
 <icon BUILTIN="full-1"/>
@@ -92,7 +92,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1636740717660" ID="Freemind_Link_867852049" MODIFIED="1636740719672" TEXT="Vers&#xf5;es">
+<node CREATED="1636740717660" FOLDED="true" ID="Freemind_Link_867852049" MODIFIED="1636740719672" TEXT="Vers&#xf5;es">
 <node CREATED="1636740720158" ID="Freemind_Link_1410965192" MODIFIED="1636740722353" TEXT="Snapshot">
 <node CREATED="1636740722861" ID="Freemind_Link_502454356" MODIFIED="1636740729677" TEXT="Diz ao maven que a vers&#xe3;o &#xe9; de desenvolvimento"/>
 <node CREATED="1636740741445" ID="Freemind_Link_1492978610" MODIFIED="1636740754024" TEXT="&#xc9; n&#xe3;o est&#xe1;vel: for&#xe7;a o Maven a checar por novas vers&#xf5;es">
@@ -102,7 +102,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1636747973987" ID="Freemind_Link_519382116" MODIFIED="1636747976352" TEXT="Life cicle">
+<node CREATED="1636747973987" FOLDED="true" ID="Freemind_Link_519382116" MODIFIED="1636747976352" TEXT="Life cicle">
 <node CREATED="1636747981573" ID="Freemind_Link_1453548844" MODIFIED="1636748007840" TEXT="O maven tem 3 ciclos pr&#xe9;-definidos:">
 <node CREATED="1636747998419" ID="Freemind_Link_1719311990" MODIFIED="1636748000376" TEXT="clean"/>
 <node CREATED="1636748000580" ID="Freemind_Link_222824002" MODIFIED="1636748002135" TEXT="default"/>
@@ -212,6 +212,10 @@
 <icon BUILTIN="forward"/>
 <node CREATED="1636748822512" ID="Freemind_Link_1841788123" MODIFIED="1636748838082" TEXT="Publica os artefatos do projeto no reposit&#xf3;rio remoto"/>
 </node>
+</node>
+<node CREATED="1637007045146" ID="Freemind_Link_1075025929" MODIFIED="1637007049990" TEXT="Archetype">
+<node CREATED="1637007167050" ID="Freemind_Link_1035545124" LINK="https://maven.apache.org/guides/introduction/introduction-to-archetypes.html" MODIFIED="1637007167050" TEXT="https://maven.apache.org/guides/introduction/introduction-to-archetypes.html"/>
+<node CREATED="1637007055049" ID="Freemind_Link_1934736776" MODIFIED="1637007059790" TEXT="Templates de projetos Maven"/>
 </node>
 </node>
 <node CREATED="1575574393725" ID="Freemind_Link_1714564050" MODIFIED="1575574398009" POSITION="right" TEXT="Configura&#xe7;&#xe3;o">
@@ -338,6 +342,128 @@
 <node CREATED="1575574182808" ID="Freemind_Link_1468390236" MODIFIED="1575574184422" POSITION="right" TEXT="Plugins">
 <node CREATED="1575574678611" ID="Freemind_Link_821896362" MODIFIED="1575574683130" TEXT="https://maven.apache.org/plugins/index.html">
 <icon BUILTIN="attach"/>
+</node>
+<node CREATED="1637008865601" ID="Freemind_Link_1609400078" MODIFIED="1637009939902" TEXT="Build Lifecycle">
+<node CREATED="1637009946050" ID="Freemind_Link_149145873" MODIFIED="1637009947894" TEXT="clean">
+<node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_1373832113" MODIFIED="1637008890821" TEXT="clean">
+<node CREATED="1637008913641" ID="Freemind_Link_217045423" MODIFIED="1637008927750" TEXT="Criado para remover os arquivos gerados durante o build do projeto"/>
+<node CREATED="1575575372600" ID="Freemind_Link_417663243" MODIFIED="1575575374443" TEXT="Goals">
+<node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_407353658" MODIFIED="1637008894917" TEXT="clean">
+<node CREATED="1575575378349" ID="Freemind_Link_235790967" MODIFIED="1637008904310" TEXT="Remove todos os arquivos de build gerados pelo maven"/>
+<node CREATED="1637008940297" ID="Freemind_Link_1495083688" MODIFIED="1637008953444" TEXT="Por default remove a pasta &apos;target&apos;"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1637009962419" ID="Freemind_Link_1587726804" MODIFIED="1637009963783" TEXT="default">
+<node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_322712863" MODIFIED="1637008932221" TEXT="compile">
+<node CREATED="1637008913641" ID="Freemind_Link_1974082563" MODIFIED="1637009248202" TEXT="Criado para gerar os .class do projeto">
+<node CREATED="1637009072424" ID="Freemind_Link_1595680247" MODIFIED="1637009088124" TEXT="Por padr&#xe3;o usa o compilador javax.tools.javaCompiler"/>
+<node CREATED="1637009058136" ID="Freemind_Link_330280660" MODIFIED="1637009071900" TEXT="Pode ser configurado para usar o javac se necess&#xe1;rio"/>
+<node CREATED="1637009249287" ID="Freemind_Link_723469052" MODIFIED="1637009281403" TEXT="Por padr&#xe3;o gera bytecodes para a vers&#xe3;o 1.6 do java">
+<node CREATED="1637009287550" ID="Freemind_Link_1090248660" MODIFIED="1637009293682" TEXT="Pode ser configurado para outra vers&#xe3;o"/>
+</node>
+</node>
+<node CREATED="1637009123551" ID="Freemind_Link_791447050" MODIFIED="1637009132795" TEXT="jar lifecycle">
+<node CREATED="1575575372600" ID="Freemind_Link_1856371951" MODIFIED="1575575374443" TEXT="Goals">
+<node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_1853784496" MODIFIED="1637009006102" TEXT="compile">
+<node CREATED="1575575378349" ID="Freemind_Link_1815141883" MODIFIED="1637009171091" TEXT="Gera os arquivos .class das classes do projeto"/>
+</node>
+<node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_1870160387" MODIFIED="1637009011436" TEXT="testCompile">
+<node CREATED="1575575378349" ID="Freemind_Link_583236366" MODIFIED="1637009181933" TEXT="Gera os arquivos .class das classes de teste do projeto"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_581572708" MODIFIED="1637009335805" TEXT="resources">
+<node CREATED="1637009383505" ID="Freemind_Link_1703229324" MODIFIED="1637009415722" TEXT="Criado para copiar os resources do projeto para o diret&#xf3;rio de sa&#xed;da (a pasta target)">
+<node CREATED="1637009427023" ID="Freemind_Link_618340139" MODIFIED="1637009441553" TEXT="Tamb&#xe9;m pode ser configurado para fazer c&#xf3;pias de arquivos durante a fase de build do projeto"/>
+</node>
+<node CREATED="1575575372600" ID="Freemind_Link_1251327416" MODIFIED="1575575374443" TEXT="Goals">
+<node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_827507113" MODIFIED="1637009361371" TEXT="resources">
+<node CREATED="1575575378349" ID="Freemind_Link_832089807" MODIFIED="1637009484048" TEXT="Copia os resources do projeto para a pasta de sa&#xed;da (pasta target)"/>
+</node>
+<node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_1333821142" MODIFIED="1637009367023" TEXT="testResources">
+<node CREATED="1575575378349" ID="Freemind_Link_1671721441" MODIFIED="1637009498830" TEXT="Copia os resources de teste do projeto para a pasta de sa&#xed;da (pasta target)"/>
+</node>
+<node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_815779059" MODIFIED="1637009373385" TEXT="copy-resources">
+<node CREATED="1575575378349" ID="Freemind_Link_959188923" MODIFIED="1637009550872" TEXT="Usado para copiar arquivos de um lugar para outro (casos de personaliza&#xe7;&#xe3;o de builds complexos)"/>
+<node CREATED="1637009598164" ID="Freemind_Link_1505489872" MODIFIED="1637009648999" TEXT="Pode ser configurado para fazer encoding de c&#xf3;digo fonte e do target"/>
+</node>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_1829209595" MODIFIED="1637009663185" TEXT="surefire">
+<node CREATED="1637009383505" ID="Freemind_Link_209752431" MODIFIED="1637009685777" TEXT="Criado para disparar testes de unidade do projeto"/>
+<node CREATED="1575575372600" ID="Freemind_Link_257278780" MODIFIED="1575575374443" TEXT="Goals">
+<node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_528297073" MODIFIED="1637009670080" TEXT="test">
+<node CREATED="1575575378349" ID="Freemind_Link_360148668" MODIFIED="1637009697817" TEXT="Executa os testes de unidade do projeto"/>
+<node CREATED="1637009805555" ID="Freemind_Link_803230619" MODIFIED="1637009813266" TEXT="Por padr&#xe3;o inclui classes de nome">
+<node CREATED="1637009814189" ID="Freemind_Link_1186822130" MODIFIED="1637009897758" TEXT="**/Test*.java"/>
+<node CREATED="1637009814189" ID="Freemind_Link_429971714" MODIFIED="1637009902918" TEXT="**/*Test.java"/>
+<node CREATED="1637009814189" ID="Freemind_Link_1345129309" MODIFIED="1637009905046" TEXT="**/*Tests.java"/>
+<node CREATED="1637009814189" ID="Freemind_Link_715425055" MODIFIED="1637009907438" TEXT="**/*TestCase.java"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_1856251090" MODIFIED="1637009923934" TEXT="jar">
+<node CREATED="1637009383505" ID="Freemind_Link_389439345" MODIFIED="1637010041358" TEXT="Criado para fazer o build de jar&apos;s dos arquivos compilados e dos resources do projeto"/>
+<node CREATED="1575575372600" ID="Freemind_Link_1021384462" MODIFIED="1575575374443" TEXT="Goals">
+<node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_213743204" MODIFIED="1637010001156" TEXT="jar">
+<node CREATED="1575575378349" ID="Freemind_Link_1633315626" MODIFIED="1637010056092" TEXT="Gerar o jar do projeto"/>
+<node CREATED="1637010098689" ID="Freemind_Link_1580040373" MODIFIED="1637010105877" TEXT="Pode ser configurado para gerar jar execut&#xe1;vel"/>
+</node>
+<node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_1281949576" MODIFIED="1637010004846" TEXT="test-jar">
+<node CREATED="1575575378349" ID="Freemind_Link_80492512" MODIFIED="1637010114133" TEXT="Executa os testes no jar gerado"/>
+</node>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_88582737" MODIFIED="1637010159597" TEXT="deploy">
+<node CREATED="1637009383505" ID="Freemind_Link_1684820257" MODIFIED="1637010184836" TEXT="Criado para fazer o deploy do projeto em reposit&#xf3;rios Maven remotos"/>
+<node CREATED="1637010203088" ID="Freemind_Link_1070121038" MODIFIED="1637010217605" TEXT="Geralmente usado em pipelines (CI)"/>
+<node CREATED="1575575372600" ID="Freemind_Link_752165549" MODIFIED="1575575374443" TEXT="Goals">
+<node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_1613038787" MODIFIED="1637010163789" TEXT="deploy">
+<node CREATED="1575575378349" ID="Freemind_Link_154098327" MODIFIED="1637010193957" TEXT="Faz o deploy do projeto no reposit&#xf3;rio remoto"/>
+</node>
+<node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_316195854" MODIFIED="1637010166781" TEXT="deploy-file">
+<node CREATED="1575575378349" ID="Freemind_Link_1157678247" MODIFIED="1637010254860" TEXT="faz o deploy de um arquivo espec&#xed;fico no reposit&#xf3;rio remoto do maven"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1637010322672" ID="Freemind_Link_681414258" MODIFIED="1637010324132" TEXT="site">
+<node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_306160243" MODIFIED="1637010330499" TEXT="site">
+<node CREATED="1637008913641" ID="Freemind_Link_854992617" MODIFIED="1637010339099" TEXT="Criado para gerar um site do projeto"/>
+<node CREATED="1575575372600" ID="Freemind_Link_1442789935" MODIFIED="1575575374443" TEXT="Goals">
+<node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_1064167032" MODIFIED="1637010342603" TEXT="site">
+<node CREATED="1575575378349" ID="Freemind_Link_977054086" MODIFIED="1637010346661" TEXT="Gera o site do projeto"/>
+</node>
+<node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_220165455" MODIFIED="1637010357892" TEXT="deploy">
+<node CREATED="1575575378349" ID="Freemind_Link_864113615" LINK="#Freemind_Link_1029040247" MODIFIED="1637010408242" TEXT="Publica o site via Wagon"/>
+</node>
+<node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_1519858430" MODIFIED="1637010440716" TEXT="run">
+<node CREATED="1575575378349" ID="Freemind_Link_1775947109" MODIFIED="1637010453947" TEXT="Executa o site localmente usando o Jetty como web server"/>
+</node>
+<node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_759969626" MODIFIED="1637010457019" TEXT="stage">
+<node CREATED="1575575378349" ID="Freemind_Link_547919257" MODIFIED="1637010474795" TEXT="Gera o site para um diret&#xf3;rio local de staging"/>
+</node>
+<node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_601442226" MODIFIED="1637010484444" TEXT="stage-deploy">
+<node CREATED="1575575378349" ID="Freemind_Link_1909089446" MODIFIED="1637010499235" TEXT="Publica o site para um staging remoto"/>
+</node>
+<node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_456316259" MODIFIED="1637010621594" TEXT="attach-descriptor">
+<node CREATED="1637010640158" ID="Freemind_Link_171380142" MODIFIED="1637010687449" TEXT="Adiciona site.xml (site map) aos arquivos para deploy">
+<node CREATED="1637010741166" ID="Freemind_Link_41153082" MODIFIED="1637010746345" TEXT="&#xda;til para sites de pesquisa"/>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_944654091" MODIFIED="1637010629979" TEXT="jar">
+<node CREATED="1637010692382" ID="Freemind_Link_570912733" MODIFIED="1637010707562" TEXT="Gera o site em um jar para deploy em um reposit&#xf3;rio"/>
+</node>
+<node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_1114165466" MODIFIED="1637010635426" TEXT="effective-site">
+<node CREATED="1637010711325" ID="Freemind_Link_1247268351" MODIFIED="1637010719761" TEXT="Gera o arquivo site.xml (site map)"/>
+</node>
+</node>
+</node>
+</node>
 </node>
 <node COLOR="#0033ff" CREATED="1575574185200" ID="Freemind_Link_1583955425" MODIFIED="1586039466890" TEXT="exec">
 <node CREATED="1575574188001" ID="Freemind_Link_885082661" MODIFIED="1575574198701" TEXT="Configurar a execu&#xe7;&#xe3;o de um jar">
