@@ -62,7 +62,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1563998723358" ID="Freemind_Link_1353472525" MODIFIED="1563998725467" POSITION="right" TEXT="A&#xe7;&#xf5;es">
+<node CREATED="1563998723358" FOLDED="true" ID="Freemind_Link_1353472525" MODIFIED="1563998725467" POSITION="right" TEXT="A&#xe7;&#xf5;es">
 <node CREATED="1586036574169" ID="Freemind_Link_1039136497" MODIFIED="1586036580439" TEXT="Container">
 <node CREATED="1563998741165" ID="Freemind_Link_1874998913" MODIFIED="1587400429560" TEXT="Baixar e carregar &#xa;uma imagem">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1511048246" MODIFIED="1586036628804" TEXT="docker container run nomeimagem">
@@ -470,7 +470,7 @@
 <node CREATED="1587400461142" ID="Freemind_Link_81422714" MODIFIED="1587400507747" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/docker_client_action_verbs_edx.png&quot;&gt;"/>
 </node>
 </node>
-<node CREATED="1563994368647" ID="_" MODIFIED="1563994372275" POSITION="right" TEXT="Dockerfile">
+<node CREATED="1563994368647" FOLDED="true" ID="_" MODIFIED="1563994372275" POSITION="right" TEXT="Dockerfile">
 <node CREATED="1563998221736" ID="Freemind_Link_368230737" MODIFIED="1568727208485" TEXT="Build">
 <node CREATED="1563998249496" ID="Freemind_Link_1953836887" MODIFIED="1563998261491" TEXT="Criar uma imagem a partir de um Dockerfile">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1375815715" MODIFIED="1563998864816" TEXT="docker build -f Dockerfile">
@@ -680,7 +680,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1564003157733" FOLDED="true" ID="Freemind_Link_95353128" MODIFIED="1588539942378" POSITION="right" TEXT="Compose">
+<node CREATED="1564003157733" ID="Freemind_Link_95353128" MODIFIED="1588539942378" POSITION="right" TEXT="Compose">
 <node CREATED="1564003164413" ID="Freemind_Link_332229" MODIFIED="1564003171627" TEXT="Usa o padr&#xe3;o yaml">
 <node CREATED="1564074495999" ID="Freemind_Link_389868139" MODIFIED="1564074516932" TEXT="Arquivo com extens&#xe3;o yml ou yaml">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_924072677" MODIFIED="1564003205056" TEXT="Ex: arquivo docker-compose.yml">
@@ -819,6 +819,38 @@
 <arrowlink DESTINATION="Freemind_Link_172018679" ENDARROW="Default" ENDINCLINATION="993;0;" ID="Freemind_Arrow_Link_760945075" STARTARROW="None" STARTINCLINATION="993;0;"/>
 </node>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_323570270" MODIFIED="1586037555760" TEXT="Ex: networks:&#xa;        - rede1&#xa;        - rede2">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1426581546" MODIFIED="1625505034759" TEXT="volumes">
+<node CREATED="1568727361188" ID="Freemind_Link_1674247358" MODIFIED="1568727365723" TEXT="=&gt;">
+<node CREATED="1563994389535" ID="Freemind_Link_977959312" MODIFIED="1625505045316" TEXT="Monta um ou mais volumes para o container"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_27746000" MODIFIED="1625505176771" TEXT="version: &quot;3.9&quot;&#xa;services:&#xa;  frontend:&#xa;    image: node:lts&#xa;    volumes:&#xa;      - myapp:/home/node/app&#xa;volumes:&#xa;  myapp:">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1199887368" MODIFIED="1625505217307" TEXT="dns">
+<node CREATED="1568727361188" ID="Freemind_Link_875115547" MODIFIED="1568727365723" TEXT="=&gt;">
+<node CREATED="1563994389535" ID="Freemind_Link_376469113" MODIFIED="1625505235618" TEXT="Configura um ou mais dns no arquivo /etc/resolv.conf do container"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_718647261" MODIFIED="1625505291722" TEXT="version: &quot;3.9&quot;&#xa;services:&#xa;  frontend:&#xa;    image: node:lts&#xa;    dns:&#xa;      - 8.8.8.8&#xa;      - 9.9.9.9">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1658858757" MODIFIED="1625505317227" TEXT="dns_search">
+<node CREATED="1568727361188" ID="Freemind_Link_683260453" MODIFIED="1568727365723" TEXT="=&gt;">
+<node CREATED="1563994389535" ID="Freemind_Link_1287878264" MODIFIED="1625505342602" TEXT="Configura um ou mais dns_search do container"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1611951603" MODIFIED="1625505355002" TEXT="  dns_search:&#xa;    - dc1.example.com&#xa;    - dc2.example.com ">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_580230002" MODIFIED="1625505365570" TEXT="extra_hosts">
+<node CREATED="1568727361188" ID="Freemind_Link_763000450" MODIFIED="1568727365723" TEXT="=&gt;">
+<node CREATED="1563994389535" ID="Freemind_Link_792162340" MODIFIED="1625505378750" TEXT="Configura um ou mais hosts no /etc/hosts do container"/>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1921312723" MODIFIED="1625505404186" TEXT="    extra_hosts:&#xa;      - &quot;somehost:162.242.195.82&quot;&#xa;      - &quot;otherhost:50.31.209.229&quot;">
 <icon BUILTIN="idea"/>
 </node>
 </node>

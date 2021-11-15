@@ -30,7 +30,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1609876470660" ID="_" MODIFIED="1609876472574" POSITION="right" TEXT="Pandas">
+<node CREATED="1609876470660" FOLDED="true" ID="_" MODIFIED="1609876472574" POSITION="right" TEXT="Pandas">
 <node CREATED="1609876530394" ID="Freemind_Link_1873829830" MODIFIED="1609876539885" TEXT="Biblioteca usada para ci&#xea;ncia de dados"/>
 <node CREATED="1609876485809" ID="Freemind_Link_1068423036" MODIFIED="1609876493740" TEXT="Trata dados como um dataframe"/>
 <node CREATED="1609876661409" ID="Freemind_Link_1492860145" MODIFIED="1609876666051" TEXT="Uso">
@@ -262,9 +262,17 @@
 </node>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_827721769" MODIFIED="1620413904030" TEXT="drop">
+<node CREATED="1609876580616" ID="Freemind_Link_337953230" MODIFIED="1620413915681" TEXT="Elimina linhas ou colunas do Dataframe"/>
+<node CREATED="1609876605273" ID="Freemind_Link_593089935" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_300400224" MODIFIED="1620413931533" TEXT="dados_combinados.drop([&apos;id&apos;,&apos;n_moa&apos;,&apos;ativo_moa&apos;], axis=1)">
+<node CREATED="1620413932413" ID="Freemind_Link_1499452417" MODIFIED="1620413947166" TEXT="axis=1 indica que na lista [...] estou passando nomes de colunas"/>
 </node>
 </node>
-<node CREATED="1609882168013" FOLDED="true" ID="Freemind_Link_443417354" MODIFIED="1609882169290" TEXT="Series">
+</node>
+</node>
+</node>
+<node CREATED="1609882168013" ID="Freemind_Link_443417354" MODIFIED="1609882169290" TEXT="Series">
 <node CREATED="1609882192733" ID="Freemind_Link_236792102" MODIFIED="1609882219593" TEXT="Obtido apartir da fun&#xe7;&#xe3;o &apos;groupby&apos; de Dataframe">
 <arrowlink COLOR="#f80b0b" DESTINATION="Freemind_Link_1966830136" ENDARROW="Default" ENDINCLINATION="129;0;" ID="Freemind_Arrow_Link_507154169" STARTARROW="None" STARTINCLINATION="129;0;"/>
 <node CREATED="1609882228389" ID="Freemind_Link_293226400" MODIFIED="1609882229353" TEXT="Ex:">
@@ -279,6 +287,14 @@
 <node CREATED="1609876605273" ID="Freemind_Link_444109190" MODIFIED="1609876606302" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1005569062" MODIFIED="1609882316513" TEXT="agrupado.plot.bar()"/>
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_529676507" MODIFIED="1609882343994" TEXT="agrupado.plot.bar(color=&apos;gray&apos;)"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1583521231" MODIFIED="1621970456059" TEXT="agrupado.plot.bar(color = [&apos;blue&apos;,&apos;yellow&apos;,&apos;red&apos;,&apos;green&apos;,&apos;pink&apos;,&apos;orange&apos;])"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1406374327" MODIFIED="1621970422083" TEXT="pie">
+<node CREATED="1609876580616" ID="Freemind_Link_554021376" MODIFIED="1621970427317" TEXT="Plota uma s&#xe9;rie em um gr&#xe1;fico de pizza"/>
+<node CREATED="1609882319991" ID="Freemind_Link_474153805" MODIFIED="1609882332272" TEXT="&#xc9; poss&#xed;vel alterar as cores do gr&#xe1;fico"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1506592975" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_525116538" MODIFIED="1621970478682" TEXT="agrupado.plot.pie()"/>
 </node>
 </node>
 </node>
@@ -300,8 +316,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1609876566896" ID="Freemind_Link_809366542" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_780340590" MODIFIED="1609882126360" TEXT="read_csv">
+<node CREATED="1609876566896" FOLDED="true" ID="Freemind_Link_809366542" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_780340590" MODIFIED="1624298928630" TEXT="read_csv">
 <node CREATED="1609876580616" ID="Freemind_Link_1959272963" MODIFIED="1609876600115" TEXT="L&#xea; um arquivo csv e o carrega em um dataframe"/>
 <node CREATED="1609876605273" ID="Freemind_Link_731917052" MODIFIED="1609876606302" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1922227970" MODIFIED="1609876643994" TEXT="dataset = pd.read_csv(&quot;arquivo.csv&quot;, sep=&quot;;&quot;)"/>
@@ -333,9 +349,25 @@
 </node>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1167864741" MODIFIED="1620414134812" TEXT="get_dummies">
+<node CREATED="1609876580616" ID="Freemind_Link_1828567504" MODIFIED="1620414167721" TEXT="Ferramenta para criar colunas adicionais com valores booleanos (1 ou 0)"/>
+<node CREATED="1620414169169" ID="Freemind_Link_489380301" MODIFIED="1620414261451" TEXT="Se voc&#xea; tem uma coluna que assume 3 valores &#xa;poss&#xed;ves, esse m&#xe9;todo criar&#xe1; tr&#xea;s colunas:">
+<node CREATED="1620414193919" ID="Freemind_Link_833483233" MODIFIED="1620414202147" TEXT="O nome de cada coluna ser&#xe1; um dos tr&#xea;s valores poss&#xed;veis"/>
+<node CREATED="1620414202688" ID="Freemind_Link_916223463" MODIFIED="1620414248129" TEXT="O valor da coluna ser&#xe1; 1 quando o nome da coluna dummie coincidir com o valor da coluna original e 0 caso contr&#xe1;rio&#xa;&#xa;"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_574627530" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1544099635" MODIFIED="1620414281924" TEXT="pd.get_dummies(dados[&apos;tratamento&apos;])">
+<node CREATED="1620219534905" ID="Freemind_Link_1542035333" MODIFIED="1620414299361" TEXT="A coluna &apos;tratamento&apos; assume dois valores: com_droga e sem_droga"/>
+<node CREATED="1620414299957" ID="Freemind_Link_1498811388" MODIFIED="1620414316442" TEXT="Ser&#xe3;o criadas duas colunas: uma com nome &apos;com_droga&apos; e outra com o nome &apos;sem_droga&apos;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1620414490029" ID="Freemind_Link_660585527" MODIFIED="1620414514920" TEXT="pd.get_dummies(dados, columns=[&apos;tratamento&apos;, &apos;dose&apos;, &apos;tempo&apos;])">
+<node CREATED="1620414495874" ID="Freemind_Link_1564002187" MODIFIED="1620414510006" TEXT="Neste exemplo fa&#xe7;o o processo para diversas colunas de uma s&#xf3; vez"/>
 </node>
 </node>
-<node CREATED="1609876474357" ID="Freemind_Link_1789216705" MODIFIED="1609876476133" POSITION="right" TEXT="Seaborn">
+</node>
+</node>
+</node>
+<node CREATED="1609876474357" FOLDED="true" ID="Freemind_Link_1789216705" MODIFIED="1609876476133" POSITION="right" TEXT="Seaborn">
 <node CREATED="1609876497969" ID="Freemind_Link_1276270964" MODIFIED="1609876508356" TEXT="Trabalho com gr&#xe1;ficos"/>
 <node CREATED="1609876661409" ID="Freemind_Link_601053903" MODIFIED="1609876666051" TEXT="Uso">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1272709758" MODIFIED="1609876699099" TEXT="import seaborn as srn"/>
@@ -346,6 +378,9 @@
 <node CREATED="1609882881600" ID="Freemind_Link_1216372047" MODIFIED="1609882893744" TEXT="M&#xed;n, M&#xe1;x, mediana, 1o e 3o quart&#xed;s"/>
 </node>
 <node CREATED="1609883403816" ID="Freemind_Link_1412234597" MODIFIED="1609883424823" TEXT="&#xc9; &#xfa;til para detectar dados com anomalia (muito diferentes dos demais)"/>
+<node CREATED="1621971250590" ID="Freemind_Link_1210408420" MODIFIED="1621971257657" TEXT="&#xc9; poss&#xed;vel passar um Dataframe como data">
+<node CREATED="1621971258289" ID="Freemind_Link_1275026395" MODIFIED="1621971271128" TEXT="Nesse caso ser&#xe3;o plotados os boxplots de todas as colunas (Series)"/>
+</node>
 <node CREATED="1609876605273" ID="Freemind_Link_1015457990" MODIFIED="1609876606302" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_210989238" MODIFIED="1609882931548" TEXT="srn.boxplot(dataset[&apos;Score&apos;]).set_title(&apos;Socre&apos;)"/>
 <node COLOR="#0000ff" CREATED="1620330254688" ID="Freemind_Link_858436948" MODIFIED="1620330266292" TEXT="sns.boxplot(data=dados_combinados.query(&apos;composto in @composto_principal&apos;), y=&apos;g0&apos;, x=&apos;composto&apos;, hue=&apos;ativo_moa&apos;)">
@@ -405,6 +440,134 @@
 </node>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1111473303" MODIFIED="1621959852579" TEXT="regplot">
+<node CREATED="1609876580616" ID="Freemind_Link_198942965" MODIFIED="1621959877802" TEXT="Plota o gr&#xe1;fico de dispers&#xe3;o com &apos;afastamento&apos; dos dados">
+<node CREATED="1621959879443" ID="Freemind_Link_1946218424" MODIFIED="1621960007187" TEXT="Provoca uma &quot;tremula&#xe7;&#xe3;o&quot; nos dados"/>
+<node CREATED="1621960008134" ID="Freemind_Link_944771900" MODIFIED="1621960020761" TEXT="&#xda;til quando os dados s&#xe3;o muito sobrepostos"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_1785238199" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1506137475" MODIFIED="1621959899404" TEXT="sns.regplot(x=base.Girth, y=base.Volume, data = base, x_jitter = 0.3, fit_reg = False)">
+<node CREATED="1621959915126" ID="Freemind_Link_364341515" MODIFIED="1621959927396" TEXT="fit_reg indica se a linha de tend&#x1ebd;ncia deve ser plotada"/>
+<node CREATED="1621959950457" ID="Freemind_Link_201895190" MODIFIED="1621959963386" TEXT="x_jitter indica a perturba&#xe7;&#xe3;o que se quer causar"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1702296804" MODIFIED="1620413221155" TEXT="lineplot">
+<node CREATED="1609876580616" ID="Freemind_Link_1057117392" MODIFIED="1620413228597" TEXT="Plota gr&#xe1;fico de linhas"/>
+<node CREATED="1609876605273" ID="Freemind_Link_847917726" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1678871589" MODIFIED="1620413273550" TEXT="sns.lineplot(x=range(1,15), y=teste, label=&apos;Teste&apos;)  &#xa;sns.lineplot(x=range(1,15), y=treino, label=&apos;Treino&apos;)  ">
+<node CREATED="1610572460968" ID="Freemind_Link_1825043756" MODIFIED="1620413284042" TEXT="Neste exemplo ploto duas curvas no mesmo gr&#xe1;fico"/>
+<node CREATED="1620133201385" ID="Freemind_Link_1356340744" MODIFIED="1620413293371" TEXT="O label ser&#xe1; usado para criar a legenda de cada curva"/>
+<node CREATED="1620413300665" ID="Freemind_Link_684324431" MODIFIED="1620413545142" TEXT="&apos;teste&apos; e &apos;treino&apos; s&#xe3;o dados do tipo &apos;list&apos;"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1984879221" MODIFIED="1622477286617" TEXT="catplot">
+<node CREATED="1609876580616" ID="Freemind_Link_354665620" MODIFIED="1622477291538" TEXT="Plota o gr&#xe1;fico de dispers&#xe3;o ">
+<node CREATED="1621959879443" ID="Freemind_Link_286068364" MODIFIED="1622477301385" TEXT="Permite agrupamento por uma coluna espec&#xed;fica"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_821806327" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_118223083" MODIFIED="1622477322165" TEXT="srn.catplot(x=&apos;alcgp&apos;, y=&apos;ncontrols&apos;, data=base2)"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1879841269" MODIFIED="1622477315325" TEXT="srn.catplot(x=&apos;alcgp&apos;, y=&apos;ncontrols&apos;, data=base2, col=&apos;tobgp&apos;)">
+<node CREATED="1621959915126" ID="Freemind_Link_1964583362" MODIFIED="1622477340414" TEXT="col indica por qual coluna o gr&#xe1;fico deve ser agrupado"/>
+<node CREATED="1622477344344" ID="Freemind_Link_1265424939" MODIFIED="1622477351927" TEXT="Ser&#xe1; exibida uma imagem para cada valor de &apos;col&apos;"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1620403423143" ID="Freemind_Link_1085356855" MODIFIED="1620403428510" POSITION="right" TEXT="Scikit Learn">
+<node CREATED="1620403429149" ID="Freemind_Link_457040450" MODIFIED="1620403431728" TEXT="Instala&#xe7;&#xe3;o:">
+<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_1086810015" MODIFIED="1620403487584" TEXT="pip install -U scikit-learn"/>
+</node>
+<node CREATED="1620404289756" ID="Freemind_Link_1079043038" MODIFIED="1620404714145" TEXT="TestSplit">
+<node CREATED="1620404714996" ID="Freemind_Link_1428431798" MODIFIED="1620404741640" TEXT="Ferramenta usado para dividir a base de dados em 2 bases: uma para treinamento e outra para testes do treinamento"/>
+<node CREATED="1620403709963" ID="Freemind_Link_1383367794" MODIFIED="1620403749607" TEXT="Import">
+<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_1289129197" MODIFIED="1620404785591" TEXT="from sklearn.model_selection import train_test_split"/>
+</node>
+<node CREATED="1620404790681" ID="Freemind_Link_397114474" MODIFIED="1620404794299" TEXT="train_test_split">
+<node CREATED="1620410146053" ID="Freemind_Link_979008172" MODIFIED="1620410162168" TEXT="Para evitar varia&#xe7;&#xf5;es nos treinamentos, use o par&#xe2;metro random_state">
+<node CREATED="1620410162829" ID="Freemind_Link_1650653250" MODIFIED="1620410165568" TEXT="Ex: ">
+<node COLOR="#0000ff" CREATED="1620410173347" ID="Freemind_Link_1703686563" MODIFIED="1620410178444" TEXT="x_treino, x_teste, y_treino, y_teste =  train_test_split(x,y, test_size=0.2, random_state=376)"/>
+</node>
+</node>
+<node CREATED="1620410146053" ID="Freemind_Link_1155116835" MODIFIED="1620410650765" TEXT="Para fazer a extra&#xe7;&#xe3;o o mais fidedigna &#xa;poss&#xed;vel, podemos usar o par&#xe2;metro stratify">
+<node CREATED="1620410520450" ID="Freemind_Link_1192768428" MODIFIED="1620410550995" TEXT="O stratify obt&#xe9;m a base de testes e de treino o mais pr&#xf3;ximo da realidade poss&#xed;vel"/>
+<node CREATED="1620410551955" ID="Freemind_Link_1049693058" MODIFIED="1620410618198" TEXT="Isso evitaria, por exemplo, que a base de treino sejam os registros com resposta &apos;false&apos; e a base de testes sejam os registros com resposta &apos;true&apos;"/>
+<node CREATED="1620410652072" ID="Freemind_Link_1769029633" MODIFIED="1620410680378" TEXT="Devemos informar a ele a coluna que ser&#xe1; usada como refer&#xea;ncia para dividir os valores nos dois grupos (de treino e de teste)"/>
+<node CREATED="1620410162829" ID="Freemind_Link_988874123" MODIFIED="1620410165568" TEXT="Ex: ">
+<node COLOR="#0000ff" CREATED="1620410173347" ID="Freemind_Link_837167063" MODIFIED="1620410643155" TEXT="x_treino, x_teste, y_treino, y_teste =  train_test_split(x,y, test_size=0.2, stratify=y)"/>
+</node>
+</node>
+<node CREATED="1620404799030" ID="Freemind_Link_1773579674" MODIFIED="1620404803314" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_1072935429" MODIFIED="1620404838904" TEXT="x = dados_combinados.select_dtypes(&apos;float64&apos;)&#xa;y = dados_combinados.[&apos;ativo_moa&apos;]&#xa;x_treino, x_teste, y_treino, y_teste =  train_test_split(x,y)">
+<arrowlink DESTINATION="Freemind_Link_925702199" ENDARROW="Default" ENDINCLINATION="135;0;" ID="Freemind_Arrow_Link_1767827382" STARTARROW="Default" STARTINCLINATION="135;0;"/>
+<node CREATED="1620403943587" ID="Freemind_Link_1178370626" MODIFIED="1620403953032" TEXT="x &#xe9; o dado de entrada (assinatura)"/>
+<node CREATED="1620403953645" ID="Freemind_Link_1836530372" MODIFIED="1620403970569" TEXT="y &#xe9; o dado de sa&#xed;da"/>
+</node>
+<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_406378394" MODIFIED="1620404875698" TEXT="x_treino, x_teste, y_treino, y_teste =  train_test_split(x,y, test_size=0.2)">
+<node CREATED="1620404876304" ID="Freemind_Link_970531738" MODIFIED="1620404889772" TEXT="&#xc9; poss&#xed;vel determinar o tamanho da base de testes com o par&#xe2;metro test_size"/>
+<node CREATED="1620404890286" ID="Freemind_Link_151514903" MODIFIED="1620404905475" TEXT="O valor &#xe9; passado em porcentagem (ex de 20%)"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1620404271015" ID="Freemind_Link_1031224714" MODIFIED="1620404275292" TEXT="LogisticRegression">
+<node CREATED="1620410843846" ID="Freemind_Link_509407978" MODIFIED="1620410860785" TEXT="&#xc9; um modelo de treinamento"/>
+<node CREATED="1620403709963" ID="Freemind_Link_561022995" MODIFIED="1620403749607" TEXT="Import">
+<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_161444242" MODIFIED="1620403763096" TEXT="from sklearn.linear_model import LogisticRegression"/>
+</node>
+<node CREATED="1620403709963" ID="Freemind_Link_1560090570" MODIFIED="1620403712945" TEXT="In&#xed;cio:">
+<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_1137530556" MODIFIED="1620403743387" TEXT="modelo_rlogistica = LogisticRegression()"/>
+<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_92663607" MODIFIED="1620405265213" TEXT="modelo_rlogistica = LogisticRegression(max_iter=1000)">
+<node CREATED="1620405235960" ID="Freemind_Link_842654189" MODIFIED="1620405252798" TEXT="&#xc9; poss&#xed;vel pasar o ar&#xe2;metro max_iter quando o modelo n&#xe3;o converge no treinamento"/>
+</node>
+</node>
+<node CREATED="1620405094364" ID="Freemind_Link_3338287" MODIFIED="1620405095944" TEXT="fit">
+<node CREATED="1620405051798" ID="Freemind_Link_1250153196" MODIFIED="1620405059723" TEXT="Usado para treinar o modelo"/>
+<node CREATED="1620403980261" ID="Freemind_Link_1330514758" MODIFIED="1620403983799" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_925702199" MODIFIED="1620404838908" TEXT="x = dados_combinados.select_dtypes(&apos;float64&apos;)&#xa;y = dados_combinados.[&apos;ativo_moa&apos;]&#xa;modelo_rlogistica.fit(x, y)">
+<node CREATED="1620403943587" ID="Freemind_Link_1763009455" MODIFIED="1620403953032" TEXT="x &#xe9; o dado de entrada (assinatura)"/>
+<node CREATED="1620403953645" ID="Freemind_Link_1012542585" MODIFIED="1620403970569" TEXT="y &#xe9; o dado de sa&#xed;da"/>
+</node>
+</node>
+</node>
+<node CREATED="1620405102101" ID="Freemind_Link_1943030908" MODIFIED="1620405106920" TEXT="score">
+<node CREATED="1620405107415" ID="Freemind_Link_1774056505" MODIFIED="1620405119160" TEXT="Analisa o modelo para ver a acur&#xe1;cia (p&#xf3;s treinamento)"/>
+<node CREATED="1620405122284" ID="Freemind_Link_20373339" MODIFIED="1620405123007" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_1485452712" MODIFIED="1620405133906" TEXT="modelo_rlogistica.score(x_teste, y_teste)">
+<node CREATED="1620405135082" ID="Freemind_Link_1592403271" MODIFIED="1620405141046" TEXT="x s&#xe3;o os dados de teste de entrada"/>
+<node CREATED="1620405135082" ID="Freemind_Link_1479698749" MODIFIED="1620405153861" TEXT="y s&#xe3;o os dados de teste de sa&#xed;da"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1620409235563" ID="Freemind_Link_1184119184" MODIFIED="1620409241401" TEXT="DummyClassifier">
+<node CREATED="1620410843846" ID="Freemind_Link_539100420" MODIFIED="1620410860785" TEXT="&#xc9; um modelo de treinamento"/>
+<node CREATED="1620409241993" ID="Freemind_Link_1875843428" MODIFIED="1620409255315" TEXT="Classificador que usa algoritmos ing&#xea;nuas"/>
+<node CREATED="1620409255927" ID="Freemind_Link_259391750" MODIFIED="1620409277740" TEXT="Usado para testar vaagamente o modelo e comparar com os resultados de um modelo mais &apos;profissional&apos;"/>
+<node CREATED="1620409281479" ID="Freemind_Link_1830960273" MODIFIED="1620409285393" TEXT="https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1620409564874" ID="Freemind_Link_1932817068" MODIFIED="1620409566143" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1100407205" MODIFIED="1620409578933" TEXT="from sklearn.dummy import DummyClassifier&#xa;from sklearn.metrics import accuracy_score&#xa;&#xa;modelo_dummy = DummyClassifier(&apos;most_frequent&apos;)&#xa;modelo_dummy.fit(x_treino, y_treino)&#xa;previsao_dummy = modelo_dummy.predict(x_teste)&#xa;accuracy_score(y_teste, previsao_dummy)">
+<node CREATED="1620409581548" ID="Freemind_Link_1952479439" MODIFIED="1620409597740" TEXT="o &apos;predict&apos; obtem apenas a previs&#xe3;o gerada pelo teste do modelo"/>
+<node CREATED="1620409599065" ID="Freemind_Link_650373930" MODIFIED="1620409621990" TEXT="o &apos;accuracy_store&apos; verifica a acur&#xe1;cia da previs&#xe3;o obtida"/>
+<node CREATED="1620409623531" ID="Freemind_Link_1361489966" MODIFIED="1620409662461" TEXT="a obten&#xe7;&#xe3;o da acur&#xe1;cia poderia ter sido obtida diretamente via comando modelo_dummy.score(x_teste, y_teste)"/>
+</node>
+</node>
+</node>
+<node CREATED="1620410827551" ID="Freemind_Link_1002758899" MODIFIED="1620410828251" TEXT="DecisionTreeClassifier">
+<node CREATED="1620410843846" ID="Freemind_Link_620488860" MODIFIED="1620410860785" TEXT="&#xc9; um modelo de treinamento"/>
+<node CREATED="1620410940247" ID="Freemind_Link_1747374113" MODIFIED="1620410940993" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1620410941529" ID="Freemind_Link_1230116453" MODIFIED="1620411019880" TEXT="from sklearn.tree import DecisionTreeClassifier&#xa;&#xa;x = dados_combinados.select_dtypes(&apos;float64&apos;)&#xa;y = dados_combinados[&apos;ativo_moa&apos;]&#xa;x_treino, x_teste, y_treino, y_teste =  train_test_split(x,y, test_size=0.2, random_state=376, stratify=y)&#xa;modelo_tree = DecisionTreeClassifier(max_depth=3)&#xa;modelo_tree.fit(x_treino, y_treino)&#xa;modelo_tree.score(x_teste, y_teste)"/>
+</node>
+</node>
+<node CREATED="1620410827551" ID="Freemind_Link_1666015041" MODIFIED="1620419317938" TEXT="RandomForest">
+<node CREATED="1620410843846" ID="Freemind_Link_1940291073" MODIFIED="1620419335272" TEXT="&#xc9; um modelo de treinamento que simula v&#xe1;rias &#xe1;rvores e obtem um estimador"/>
+<node CREATED="1620410940247" ID="Freemind_Link_211628050" MODIFIED="1620410940993" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1620410941529" ID="Freemind_Link_589566906" MODIFIED="1620419348040" TEXT="from sklearn.ensemble import RandomForestClassifier&#xa;&#xa;x = dados_combinados.drop([&apos;id&apos;,&apos;n_moa&apos;,&apos;ativo_moa&apos;,&apos;composto&apos;], axis=True) #axis=1 indica que estou passando nomes de colunas&#xa;x = pd.get_dummies(x, columns=[&apos;tratamento&apos;, &apos;dose&apos;, &apos;tempo&apos;]) #Aqui &quot;transformo&quot; colunas de texto em colunas do tipo booleana (0 ou 1)&#xa;&#xa;y = dados_combinados[&apos;ativo_moa&apos;]&#xa;x_treino, x_teste, y_treino, y_teste =  train_test_split(x,y, test_size=0.2, random_state=376, stratify=y)&#xa;modelo_randforest = RandomForestClassifier()&#xa;modelo_randforest.fit(x_treino, y_treino)&#xa;modelo_randforest.score(x_teste, y_teste)"/>
+</node>
 </node>
 </node>
 <node CREATED="1609876477873" FOLDED="true" ID="Freemind_Link_1702268812" MODIFIED="1609876480160" POSITION="right" TEXT="Statistics">
@@ -449,7 +612,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1610547824229" FOLDED="true" ID="Freemind_Link_1400798417" MODIFIED="1610547826796" POSITION="right" TEXT="Numpy">
+<node CREATED="1610547824229" ID="Freemind_Link_1400798417" MODIFIED="1610547826796" POSITION="right" TEXT="Numpy">
 <node CREATED="1609876497969" ID="Freemind_Link_1127785882" MODIFIED="1610547875182" TEXT="Trabalho com estat&#xed;stica"/>
 <node CREATED="1610547908748" ID="Freemind_Link_1139902648" MODIFIED="1610547914144" TEXT="Biblioteca cient&#xed;fica"/>
 <node CREATED="1609876661409" ID="Freemind_Link_652425837" MODIFIED="1609876666051" TEXT="Uso">
@@ -467,19 +630,76 @@
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_760144888" MODIFIED="1610551170913" TEXT="np.histogram(base.iloc[:,1], bins=6)"/>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_538388295" MODIFIED="1624299157237" TEXT="random">
+<node CREATED="1609876580616" ID="Freemind_Link_205747894" MODIFIED="1624299228479" TEXT="Ferramenta de gera&#xe7;&#xe3;o de n&#xfa;meros aleat&#xf3;rios"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_959713467" MODIFIED="1624299162224" TEXT="seed">
+<node CREATED="1609876580616" ID="Freemind_Link_1793702219" MODIFIED="1624299190605" TEXT="Determina a semente para gera&#xe7;&#xe3;o de n&#xfa;meros aleat&#xf3;rios"/>
+<node CREATED="1610551173790" ID="Freemind_Link_1705330443" MODIFIED="1624299209548" TEXT="Indicado para casos em que se quer reproduzir os mesmos resultados em outro momento/local"/>
+<node CREATED="1609876605273" ID="Freemind_Link_329909402" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_74792002" MODIFIED="1624299174830" TEXT="np.random.seed(2345)"/>
 </node>
 </node>
-<node CREATED="1610547827467" ID="Freemind_Link_1107441332" MODIFIED="1610547831694" POSITION="right" TEXT="Matplotlib">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1703104480" MODIFIED="1624299233796" TEXT="choice">
+<node CREATED="1609876580616" ID="Freemind_Link_507321608" MODIFIED="1624299257814" TEXT="Escolha aleat&#xf3;ria de registro de uma base de dados"/>
+<node CREATED="1609876605273" ID="Freemind_Link_73593545" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_876606390" MODIFIED="1624299287165" TEXT="np.random.choice(a=[0,1], size=150, replace=True, p=[0.7,0.3])">
+<node CREATED="1624299290820" ID="Freemind_Link_1158308820" MODIFIED="1624299337702" TEXT="150 amostras, de 0&apos;s e 1&apos;s, com reposi&#xe7;&#xe3;o e com probabilidades 0.7 e 0.3 respectv//"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1610547827467" FOLDED="true" ID="Freemind_Link_1107441332" MODIFIED="1610547831694" POSITION="right" TEXT="Matplotlib">
 <node CREATED="1610550899375" ID="Freemind_Link_390408308" MODIFIED="1610550904355" TEXT=".pyplot">
 <node CREATED="1609876497969" ID="Freemind_Link_1329424061" MODIFIED="1609876508356" TEXT="Trabalho com gr&#xe1;ficos"/>
 <node CREATED="1609876661409" ID="Freemind_Link_579355271" MODIFIED="1609876666051" TEXT="Uso">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_360305371" MODIFIED="1610550930427" TEXT="import matplotlib.pyplot as plt"/>
 </node>
+<node CREATED="1609876470660" ID="Freemind_Link_1590228585" MODIFIED="1622477591016" TEXT="Axes3d">
+<node CREATED="1609876530394" ID="Freemind_Link_1146171283" MODIFIED="1622477668464" TEXT="Biblioteca  que estende o matplotlib para plotagem de gr&#xe1;ficos 3D">
+<node CREATED="1622477992976" ID="Freemind_Link_1885478212" MODIFIED="1622478000915" TEXT="O gr&#xe1;fico &#xe9; est&#xe1;tico, n&#xe3;o interativo"/>
+</node>
+<node CREATED="1609876661409" ID="Freemind_Link_105819182" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1659405731" MODIFIED="1622477617393" TEXT="from mpl_toolkits.mplot3d import axes3d"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_825982932" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1252166022" MODIFIED="1622477892397" TEXT="base = pd.read_csv(&apos;../dados/orchard.csv&apos;)&#xa;figura = plt.figure()&#xa;eixo = figura.add_subplot(1,1,1,projection=&apos;3d&apos;)&#xa;eixo.scatter(base.decrease, base.rowpos, base.colpos)&#xa;eixo.set_xlabel(&apos;decrease&apos;)&#xa;eixo.set_ylabel(&apos;rowpos&apos;)&#xa;eixo.set_zlabel(&apos;colpos&apos;)"/>
+</node>
+</node>
 <node CREATED="1610547852579" ID="Freemind_Link_1245451147" MODIFIED="1610547854446" TEXT="Fun&#xe7;&#xf5;es">
+<node CREATED="1621967313007" ID="Freemind_Link_1695300122" MODIFIED="1621967368153" TEXT="Chamadas sucessivas a fun&#xe7;&#xf5;es que plotam gr&#xe1;ficos &#xa;colocam todos os gr&#xe1;ficos na mesma imagem">
+<icon BUILTIN="messagebox_warning"/>
+</node>
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1771279890" MODIFIED="1610550942698" TEXT="hist">
 <node CREATED="1609876580616" ID="Freemind_Link_1377027773" MODIFIED="1610550950835" TEXT="Plota o histograma dos dados"/>
 <node CREATED="1609876605273" ID="Freemind_Link_1853392264" MODIFIED="1609876606302" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1456559388" MODIFIED="1610550972962" TEXT="plt.hist(base.iloc[:,1], bins=6)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_834850550" MODIFIED="1621959378695" TEXT="scatter">
+<node CREATED="1609876580616" ID="Freemind_Link_65899650" MODIFIED="1621959386151" TEXT="Plota o gr&#xe1;fico de dispers&#xe3;o"/>
+<node CREATED="1609876605273" ID="Freemind_Link_468586942" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1035541194" MODIFIED="1621959487519" TEXT="plt.scatter(base.Girth, base.Volume, color=&apos;blue&apos;, facecolors = &apos;none&apos;, marker =&apos;*&apos;)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_278505610" MODIFIED="1621959585578" TEXT="plot">
+<node CREATED="1609876580616" ID="Freemind_Link_685007593" MODIFIED="1621959592433" TEXT="Plota o gr&#xe1;fico de linha"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1414377437" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_582990258" MODIFIED="1621959605266" TEXT="plt.scatter(base.Girth, base.Volume)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1589998173" MODIFIED="1621969311443" TEXT="boxplot">
+<node CREATED="1609876580616" ID="Freemind_Link_1007673313" MODIFIED="1621969316260" TEXT="Plota o gr&#xe1;fico de boxplot"/>
+<node CREATED="1609876605273" ID="Freemind_Link_321688190" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_841066044" MODIFIED="1621969336410" TEXT="plt.boxplot(base.Volume, vert = False, showfliers = False, notch = True,patch_artist = True)">
+<node CREATED="1621969443198" ID="Freemind_Link_1175545910" MODIFIED="1621969455146" TEXT="Pode ser passado mais de uma s&#xe9;rie">
+<node CREATED="1621969455456" ID="Freemind_Link_373075507" MODIFIED="1621969467488" TEXT="Ex: [base.Volume, base.Girth]"/>
+</node>
+<node CREATED="1621969347495" ID="Freemind_Link_933430766" MODIFIED="1621969378594" TEXT="showFliers mostra os outliers"/>
+<node CREATED="1621969357345" ID="Freemind_Link_1093264047" MODIFIED="1621969578416" TEXT="notch faz um talho na linha da mediana"/>
+<node CREATED="1621969390261" ID="Freemind_Link_980197597" MODIFIED="1621969399448" TEXT="patch_artist preenche o boxplot"/>
+</node>
 </node>
 </node>
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_316309538" MODIFIED="1610551028643" TEXT="title">
@@ -500,19 +720,35 @@
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1315435058" MODIFIED="1610551106514" TEXT="plt.xlabel(&apos;Altura&apos;)"/>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1312925747" MODIFIED="1621967091014" TEXT="legend">
+<node CREATED="1609876580616" ID="Freemind_Link_1414442478" MODIFIED="1621967098680" TEXT="Adiciona uma legenda ao gr&#xe1;fico"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1316301920" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1568610033" MODIFIED="1621967108488" TEXT="plt.legend(loc = &apos;lower right&apos;)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_7735739" MODIFIED="1621969006068" TEXT="subplot">
+<node CREATED="1609876580616" ID="Freemind_Link_1527844656" MODIFIED="1621969026138" TEXT="Usado para plotar v&#xe1;rios gr&#xe1;ficos (magens) como um grid de imagens">
+<node CREATED="1621969027580" ID="Freemind_Link_557149359" MODIFIED="1621969039980" TEXT="Como o &apos;screen&apos; do linux"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_1699643791" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1200952483" MODIFIED="1621969050212" TEXT="plt.figure(1)&#xa;plt.subplot(2,2,1)&#xa;plt.scatter(base.Girth, base.Volume)&#xa;plt.subplot(2,2,2)&#xa;plt.scatter(base.Girth, base.Height)&#xa;plt.subplot(2,2,3)&#xa;plt.scatter(base.Height, base.Volume, marker = &apos;*&apos;)&#xa;plt.subplot(2,2,4)&#xa;plt.hist(base.Volume)">
+<node CREATED="1621969052416" ID="Freemind_Link_789785944" MODIFIED="1621969066931" TEXT="2,2 =&gt; qtd de linhas e colunas"/>
 </node>
 </node>
 </node>
-<node CREATED="1609876470660" ID="Freemind_Link_1590228585" MODIFIED="1609876747404" POSITION="right" TEXT="???">
-<node CREATED="1609876530394" ID="Freemind_Link_1146171283" MODIFIED="1609876749434" TEXT="???"/>
-<node CREATED="1609876661409" ID="Freemind_Link_105819182" MODIFIED="1609876666051" TEXT="Uso">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1659405731" MODIFIED="1609876759581" TEXT="import ??? as ??"/>
 </node>
-<node CREATED="1609876566896" ID="Freemind_Link_706888812" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_455573382" MODIFIED="1609876761667" TEXT="???">
-<node CREATED="1609876580616" ID="Freemind_Link_615805785" MODIFIED="1609876767449" TEXT="???"/>
-<node CREATED="1609876605273" ID="Freemind_Link_390208512" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1301778319" MODIFIED="1609876764389" TEXT="???"/>
+</node>
+</node>
+<node CREATED="1609876470660" ID="Freemind_Link_1868837144" MODIFIED="1609876747404" POSITION="right" TEXT="???">
+<node CREATED="1609876530394" ID="Freemind_Link_249712244" MODIFIED="1609876749434" TEXT="???"/>
+<node CREATED="1609876661409" ID="Freemind_Link_1356362143" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1086489164" MODIFIED="1609876759581" TEXT="import ??? as ??"/>
+</node>
+<node CREATED="1609876566896" ID="Freemind_Link_32324062" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_804525595" MODIFIED="1609876761667" TEXT="???">
+<node CREATED="1609876580616" ID="Freemind_Link_1504571454" MODIFIED="1609876767449" TEXT="???"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1029678701" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_112137638" MODIFIED="1609876764389" TEXT="???"/>
 </node>
 </node>
 </node>

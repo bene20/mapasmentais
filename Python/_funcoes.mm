@@ -114,5 +114,13 @@
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_353116913" MODIFIED="1609880930122" TEXT="def intervalo(inic=1, fim=10):&#xa;  for inic in range(1, fim+1):&#xa;    print(inic)"/>
 </node>
 </node>
+<node CREATED="1609876470660" ID="Freemind_Link_63062271" MODIFIED="1624282549725" POSITION="right" TEXT="dbinom">
+<node CREATED="1609876530394" ID="Freemind_Link_920360920" MODIFIED="1624282567826" TEXT="C&#xe1;lculo de permuta&#xe7;&#xe3;o"/>
+<node CREATED="1609876605273" ID="Freemind_Link_747415883" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1131089234" MODIFIED="1624282589501" TEXT="dbinom(8,10,0.5)&#xa;">
+<node CREATED="1624282592482" ID="Freemind_Link_1157140573" MODIFIED="1624282607578" TEXT="Probabiliade de se obter 8 caras ao lan&#xe7;ar uma moeda 10 vezes"/>
+</node>
+</node>
+</node>
 </node>
 </map>
