@@ -343,6 +343,12 @@
 <node CREATED="1575574678611" ID="Freemind_Link_821896362" MODIFIED="1575574683130" TEXT="https://maven.apache.org/plugins/index.html">
 <icon BUILTIN="attach"/>
 </node>
+<node CREATED="1637620073799" ID="Freemind_Link_1759189418" MODIFIED="1637620315108" TEXT="Lista dos plugins embutidos no Maven 3.6.0:">
+<node CREATED="1637620082472" LINK="https://maven.apache.org/plugins/maven-clean-plugin/plugin-management.html" MODIFIED="1637620082472" TEXT="https://maven.apache.org/plugins/maven-clean-plugin/plugin-management.html"/>
+<node CREATED="1637620316383" ID="Freemind_Link_126114984" MODIFIED="1637620334975" TEXT="Existem muitos outros plugins que n&#xe3;o s&#xe3;o da Apache">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
 <node CREATED="1637008865601" ID="Freemind_Link_1609400078" MODIFIED="1637009939902" TEXT="Build Lifecycle">
 <node CREATED="1637009946050" ID="Freemind_Link_149145873" MODIFIED="1637009947894" TEXT="clean">
 <node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_1373832113" MODIFIED="1637008890821" TEXT="clean">
@@ -351,6 +357,11 @@
 <node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_407353658" MODIFIED="1637008894917" TEXT="clean">
 <node CREATED="1575575378349" ID="Freemind_Link_235790967" MODIFIED="1637008904310" TEXT="Remove todos os arquivos de build gerados pelo maven"/>
 <node CREATED="1637008940297" ID="Freemind_Link_1495083688" MODIFIED="1637008953444" TEXT="Por default remove a pasta &apos;target&apos;"/>
+</node>
+</node>
+<node CREATED="1637085003367" ID="Freemind_Link_1545637131" MODIFIED="1637085026342" TEXT="Ex: efetuar o clean sempre &#xa;que for fazer o build do projeto">
+<node CREATED="1637085028527" ID="Freemind_Link_1987434401" MODIFIED="1637085031696" TEXT="pom.xml">
+<node COLOR="#0000ff" CREATED="1637085042565" ID="Freemind_Link_30480017" MODIFIED="1637085232522" TEXT="&lt;build&gt;&#xa;  &lt;plugins&gt;&#xa;    &lt;plugin&gt;&#xa;      &lt;artifactId&gt;maven-clean-plugin&lt;/artifactId&gt;&#xa;      &lt;version&gt;3.1.0&lt;/version&gt;&#xa;      &lt;executions&gt;&#xa;        &lt;execution&gt;&#xa;          &lt;id&gt;auto-clean&lt;/id&gt;&#xa;          &lt;phase&gt;initialize&lt;/phase&gt;&#xa;          &lt;goals&gt;&#xa;            &lt;goal&gt;clean&lt;/goal&gt;&#xa;          &lt;/goals&gt;&#xa;        &lt;/execution&gt;&#xa;      &lt;/executions&gt;&#xa;    &lt;/plugin&gt;&#xa;  &lt;/plugins&gt;&#xa;&lt;/build&gt;"/>
 </node>
 </node>
 </node>
@@ -376,6 +387,7 @@
 </node>
 </node>
 <node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_581572708" MODIFIED="1637009335805" TEXT="resources">
+<node CREATED="1637086935198" ID="Freemind_Link_734237616" LINK="https://maven.apache.org/plugins/maven-resources-plugin/" MODIFIED="1637086935198" TEXT="https://maven.apache.org/plugins/maven-resources-plugin/"/>
 <node CREATED="1637009383505" ID="Freemind_Link_1703229324" MODIFIED="1637009415722" TEXT="Criado para copiar os resources do projeto para o diret&#xf3;rio de sa&#xed;da (a pasta target)">
 <node CREATED="1637009427023" ID="Freemind_Link_618340139" MODIFIED="1637009441553" TEXT="Tamb&#xe9;m pode ser configurado para fazer c&#xf3;pias de arquivos durante a fase de build do projeto"/>
 </node>
@@ -417,6 +429,13 @@
 <node CREATED="1575575378349" ID="Freemind_Link_80492512" MODIFIED="1637010114133" TEXT="Executa os testes no jar gerado"/>
 </node>
 </node>
+<node CREATED="1637088818870" ID="Freemind_Link_1446022651" MODIFIED="1637088832419" TEXT="Ex: gerar um jar execut&#xe1;vel">
+<node CREATED="1637088846679" ID="Freemind_Link_229543838" MODIFIED="1637088910177" TEXT="Para isso configura-se o plugin para&#xa; alterar o manifesto do arquivo jar">
+<node CREATED="1637088876496" ID="Freemind_Link_1234747934" MODIFIED="1637088901747" TEXT="Adicionando o classpath"/>
+<node CREATED="1637088882007" ID="Freemind_Link_918553285" MODIFIED="1637088893426" TEXT="Declarando a classe que tem o m&#xe9;todo main"/>
+</node>
+<node COLOR="#0000ff" CREATED="1637088834759" ID="Freemind_Link_422708842" MODIFIED="1637088842994" TEXT="  &lt;build&gt;&#xa;    &lt;plugins&gt;&#xa;      &lt;plugin&gt;&#xa;        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;&#xa;        &lt;artifactId&gt;maven-jar-plugin&lt;/artifactId&gt;&#xa;        ...&#xa;        &lt;configuration&gt;&#xa;          &lt;archive&gt;&#xa;            &lt;manifest&gt;&#xa;              &lt;addClasspath&gt;true&lt;/addClasspath&gt;&#xa;            &lt;/manifest&gt;&#xa;          &lt;/archive&gt;&#xa;        &lt;/configuration&gt;&#xa;        ...&#xa;      &lt;/plugin&gt;&#xa;    &lt;/plugins&gt;&#xa;  &lt;/build&gt;"/>
+</node>
 </node>
 <node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_88582737" MODIFIED="1637010159597" TEXT="deploy">
 <node CREATED="1637009383505" ID="Freemind_Link_1684820257" MODIFIED="1637010184836" TEXT="Criado para fazer o deploy do projeto em reposit&#xf3;rios Maven remotos"/>
@@ -424,6 +443,14 @@
 <node CREATED="1575575372600" ID="Freemind_Link_752165549" MODIFIED="1575575374443" TEXT="Goals">
 <node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_1613038787" MODIFIED="1637010163789" TEXT="deploy">
 <node CREATED="1575575378349" ID="Freemind_Link_154098327" MODIFIED="1637010193957" TEXT="Faz o deploy do projeto no reposit&#xf3;rio remoto"/>
+<node CREATED="1637616224682" ID="Freemind_Link_771400712" MODIFIED="1637616400246" TEXT="A configura&#xe7;&#xe3;o &#xe9; conjunta entre os &#xa;oarquivos pom.xml e settings.xml">
+<node CREATED="1637616402426" ID="Freemind_Link_1685897190" MODIFIED="1637616462166" TEXT="pom.xml">
+<node CREATED="1637616417754" ID="Freemind_Link_1760622744" MODIFIED="1637616430928" TEXT="  &lt;distributionManagement&gt;&#xa;    &lt;repository&gt;&#xa;      &lt;id&gt;internal.repo&lt;/id&gt;&#xa;      &lt;name&gt;MyCo Internal Repository&lt;/name&gt;&#xa;      &lt;url&gt;Host to Company Repository&lt;/url&gt;&#xa;    &lt;/repository&gt;&#xa;  &lt;/distributionManagement&gt;"/>
+</node>
+<node CREATED="1637616406787" ID="Freemind_Link_183743804" MODIFIED="1637616465324" TEXT="settings.xml">
+<node CREATED="1637616440370" ID="Freemind_Link_1178321177" MODIFIED="1637616447043" TEXT="    &lt;server&gt;&#xa;      &lt;id&gt;internal.repo&lt;/id&gt;&#xa;      &lt;username&gt;maven&lt;/username&gt;&#xa;      &lt;password&gt;foobar&lt;/password&gt;&#xa;    &lt;/server&gt;"/>
+</node>
+</node>
 </node>
 <node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_316195854" MODIFIED="1637010166781" TEXT="deploy-file">
 <node CREATED="1575575378349" ID="Freemind_Link_1157678247" MODIFIED="1637010254860" TEXT="faz o deploy de um arquivo espec&#xed;fico no reposit&#xf3;rio remoto do maven"/>
@@ -602,7 +629,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1583775083679" FOLDED="true" ID="Freemind_Link_1407337968" MODIFIED="1583775085572" POSITION="right" TEXT="Nexus">
+<node CREATED="1583775083679" ID="Freemind_Link_1407337968" MODIFIED="1583775085572" POSITION="right" TEXT="Nexus">
 <node CREATED="1583775107310" ID="Freemind_Link_772301783" MODIFIED="1583775111178" TEXT="Docker">
 <node CREATED="1583775112167" ID="Freemind_Link_1582618485" MODIFIED="1583775141416" TEXT="docker run -d -p 8081:8081 --name nexus -v nexus-data:/nexus-data sonatype/nexus3"/>
 <node CREATED="1583775527038" ID="Freemind_Link_1217327943" MODIFIED="1586814044255" TEXT="Senha inicial:">
