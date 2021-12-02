@@ -221,6 +221,9 @@
 <node CREATED="1575574393725" ID="Freemind_Link_1714564050" MODIFIED="1575574398009" POSITION="right" TEXT="Configura&#xe7;&#xe3;o">
 <node CREATED="1575574398672" ID="Freemind_Link_1644666598" MODIFIED="1575574405716" TEXT="Arquivo settings.xml">
 <node CREATED="1575574406024" ID="Freemind_Link_1643492551" MODIFIED="1575574411179" TEXT="Dentro da pasta .m2"/>
+<node CREATED="1638218911239" ID="Freemind_Link_446067676" MODIFIED="1638218920188" TEXT="Para saber qual &#xe9; o settings.xml efetivo sendo usado:">
+<node COLOR="#0000ff" CREATED="1638218920825" ID="Freemind_Link_1893773803" MODIFIED="1638218929804" TEXT="mvn help: effective-settings"/>
+</node>
 </node>
 </node>
 <node CREATED="1575574414424" ID="Freemind_Link_1184486385" MODIFIED="1575574417491" POSITION="right" TEXT="Comando">
@@ -349,7 +352,11 @@
 <icon BUILTIN="messagebox_warning"/>
 </node>
 </node>
-<node CREATED="1637008865601" ID="Freemind_Link_1609400078" MODIFIED="1637009939902" TEXT="Build Lifecycle">
+<node CREATED="1638471840751" ID="Freemind_Link_1967325746" MODIFIED="1638471878720" TEXT="Caso use plugins de fora do reposit&#xf3;rio central do&#xa;maven, deve-se declarar o local desses reposit&#xf3;rios">
+<node CREATED="1638472158320" ID="Freemind_Link_1976183419" MODIFIED="1638472161451" TEXT="Use: pluginRepository"/>
+<node CREATED="1638472166896" ID="Freemind_Link_1018997388" MODIFIED="1638472175447" TEXT="pluginRepository &#xe9; semelhante &#xe0; tag repository"/>
+</node>
+<node CREATED="1637008865601" FOLDED="true" ID="Freemind_Link_1609400078" MODIFIED="1637009939902" TEXT="Build Lifecycle">
 <node CREATED="1637009946050" ID="Freemind_Link_149145873" MODIFIED="1637009947894" TEXT="clean">
 <node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_1373832113" MODIFIED="1637008890821" TEXT="clean">
 <node CREATED="1637008913641" ID="Freemind_Link_217045423" MODIFIED="1637008927750" TEXT="Criado para remover os arquivos gerados durante o build do projeto"/>
@@ -361,7 +368,9 @@
 </node>
 <node CREATED="1637085003367" ID="Freemind_Link_1545637131" MODIFIED="1637085026342" TEXT="Ex: efetuar o clean sempre &#xa;que for fazer o build do projeto">
 <node CREATED="1637085028527" ID="Freemind_Link_1987434401" MODIFIED="1637085031696" TEXT="pom.xml">
-<node COLOR="#0000ff" CREATED="1637085042565" ID="Freemind_Link_30480017" MODIFIED="1637085232522" TEXT="&lt;build&gt;&#xa;  &lt;plugins&gt;&#xa;    &lt;plugin&gt;&#xa;      &lt;artifactId&gt;maven-clean-plugin&lt;/artifactId&gt;&#xa;      &lt;version&gt;3.1.0&lt;/version&gt;&#xa;      &lt;executions&gt;&#xa;        &lt;execution&gt;&#xa;          &lt;id&gt;auto-clean&lt;/id&gt;&#xa;          &lt;phase&gt;initialize&lt;/phase&gt;&#xa;          &lt;goals&gt;&#xa;            &lt;goal&gt;clean&lt;/goal&gt;&#xa;          &lt;/goals&gt;&#xa;        &lt;/execution&gt;&#xa;      &lt;/executions&gt;&#xa;    &lt;/plugin&gt;&#xa;  &lt;/plugins&gt;&#xa;&lt;/build&gt;"/>
+<node COLOR="#0000ff" CREATED="1637085042565" ID="Freemind_Link_30480017" MODIFIED="1637085232522" TEXT="&lt;build&gt;&#xa;  &lt;plugins&gt;&#xa;    &lt;plugin&gt;&#xa;      &lt;artifactId&gt;maven-clean-plugin&lt;/artifactId&gt;&#xa;      &lt;version&gt;3.1.0&lt;/version&gt;&#xa;      &lt;executions&gt;&#xa;        &lt;execution&gt;&#xa;          &lt;id&gt;auto-clean&lt;/id&gt;&#xa;          &lt;phase&gt;initialize&lt;/phase&gt;&#xa;          &lt;goals&gt;&#xa;            &lt;goal&gt;clean&lt;/goal&gt;&#xa;          &lt;/goals&gt;&#xa;        &lt;/execution&gt;&#xa;      &lt;/executions&gt;&#xa;    &lt;/plugin&gt;&#xa;  &lt;/plugins&gt;&#xa;&lt;/build&gt;">
+<node CREATED="1638217195302" ID="Freemind_Link_1114590120" MODIFIED="1638217215371" TEXT="Configuro para invocar o goal &apos;clean&apos; do plugin &apos;clean&apos; na fase &apos;initialize&apos;"/>
+</node>
 </node>
 </node>
 </node>
@@ -382,6 +391,16 @@
 </node>
 <node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_1870160387" MODIFIED="1637009011436" TEXT="testCompile">
 <node CREATED="1575575378349" ID="Freemind_Link_583236366" MODIFIED="1637009181933" TEXT="Gera os arquivos .class das classes de teste do projeto"/>
+</node>
+</node>
+</node>
+<node CREATED="1638468321001" ID="Freemind_Link_1111087165" MODIFIED="1638468345375" TEXT="Pode ser configurado para processar &#xa;as anota&#xe7;&#xf5;es das classes Java">
+<node CREATED="1638468348123" ID="Freemind_Link_1184904020" MODIFIED="1638468351315" TEXT="MapStruct">
+<node CREATED="1638468513159" ID="Freemind_Link_1943740350" LINK="https://mapstruct.org/" MODIFIED="1638468513159" TEXT="https://mapstruct.org/"/>
+<node CREATED="1638468353608" ID="Freemind_Link_829726833" MODIFIED="1638468375878" TEXT="&#xda;til para converter Entidades JPA para DTO e vice versa"/>
+<node CREATED="1638468378965" ID="Freemind_Link_1337027327" MODIFIED="1638468383552" TEXT="Usa anota&#xe7;&#xf5;es na interface"/>
+<node CREATED="1638468387420" ID="Freemind_Link_1723000541" MODIFIED="1638468422511" TEXT="Para processar as anota&#xe7;&#xf5;es, deve-se&#xa;declarar na configura&#xe7;&#xe3;o do plugin compile">
+<node COLOR="#0000ff" CREATED="1638468430349" ID="Freemind_Link_484649894" MODIFIED="1638468498258" TEXT="        &lt;plugin&gt;&#xa;            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;&#xa;            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;&#xa;            &lt;version&gt;3.8.1&lt;/version&gt;&#xa;            &lt;configuration&gt;&#xa;                &lt;source&gt;1.8&lt;/source&gt; &lt;!-- depending on your project --&gt;&#xa;                &lt;target&gt;1.8&lt;/target&gt; &lt;!-- depending on your project --&gt;&#xa;                &lt;annotationProcessorPaths&gt;&#xa;                    &lt;path&gt;&#xa;                        &lt;groupId&gt;org.mapstruct&lt;/groupId&gt;&#xa;                        &lt;artifactId&gt;mapstruct-processor&lt;/artifactId&gt;&#xa;                        &lt;version&gt;${org.mapstruct.version}&lt;/version&gt;&#xa;                    &lt;/path&gt;&#xa;                    &lt;!-- other annotation processors --&gt;&#xa;                &lt;/annotationProcessorPaths&gt;&#xa;            &lt;/configuration&gt;&#xa;        &lt;/plugin&gt;"/>
 </node>
 </node>
 </node>
@@ -614,9 +633,36 @@
 </node>
 </node>
 </node>
+<node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_833901028" MODIFIED="1638215810599" TEXT="jaxb">
+<node CREATED="1637006327708" ID="Freemind_Link_31447746" MODIFIED="1638215828002" TEXT="Gera classes java a partir de arquivos XSD"/>
+<node CREATED="1638216400924" ID="Freemind_Link_1427232090" MODIFIED="1638216410131" TEXT="Compat&#xed;vel com java 8 em diante"/>
+<node CREATED="1638216436485" ID="Freemind_Link_14566986" MODIFIED="1638216462999" TEXT="Antes o jaxb fazia parte do core do java, agora n&#xe3;o mais">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1638216447716" ID="Freemind_Link_45303434" MODIFIED="1638216477739" TEXT="&#xc9; necess&#xe1;rio adicionar as depend&#xea;ncias do jaxb para usar este plugin"/>
+</node>
+<node CREATED="1638215836355" ID="Freemind_Link_152341567" LINK="https://mvnrepository.com/artifact/org.jvnet.jaxb2.maven2/maven-jaxb2-plugin/0.14.0" MODIFIED="1638215836355" TEXT="https://mvnrepository.com/artifact/org.jvnet.jaxb2.maven2/maven-jaxb2-plugin/0.14.0"/>
+<node CREATED="1638216329365" ID="Freemind_Link_1458773392" MODIFIED="1638216332374" TEXT="Configura&#xe7;&#xe3;o:">
+<node CREATED="1638216333330" LINK="https://github.com/highsource/maven-jaxb2-plugin" MODIFIED="1638216333330" TEXT="https://github.com/highsource/maven-jaxb2-plugin"/>
+</node>
+<node CREATED="1637006283263" ID="Freemind_Link_1105352209" MODIFIED="1637006284537" TEXT="Ex:">
+<node CREATED="1638215914519" ID="Freemind_Link_3962568" MODIFIED="1638215917822" TEXT="Exemplo de XSD:">
+<node CREATED="1638215918387" LINK="https://github.com/highsource/maven-jaxb2-plugin/blob/master/samples/jaxbplugins/src/main/resources/purchaseorder.xsd" MODIFIED="1638215918387" TEXT="https://github.com/highsource/maven-jaxb2-plugin/blob/master/samples/jaxbplugins/src/main/resources/purchaseorder.xsd"/>
 </node>
 </node>
-<node CREATED="1635195517092" ID="Freemind_Link_994009935" MODIFIED="1635195519275" POSITION="right" TEXT="Profiles">
+</node>
+<node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_1441521977" MODIFIED="1638218137154" TEXT="jsonschema2pojo">
+<node CREATED="1637006327708" ID="Freemind_Link_1209539641" MODIFIED="1638218143057" TEXT="Gera classes java a partir de arquivos Jason"/>
+<node CREATED="1638216436485" ID="Freemind_Link_1448623103" MODIFIED="1638218160529" TEXT="necess&#xe1;rio adicionar algumas depend&#xea;ncias para o plugin funcionar">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node CREATED="1638218170605" ID="Freemind_Link_1966707908" LINK="https://mvnrepository.com/artifact/org.jsonschema2pojo/jsonschema2pojo-maven-plugin/1.1.1" MODIFIED="1638218170605" TEXT="https://mvnrepository.com/artifact/org.jsonschema2pojo/jsonschema2pojo-maven-plugin/1.1.1"/>
+<node CREATED="1638216329365" ID="Freemind_Link_1138778579" MODIFIED="1638218235379" TEXT="Configura&#xe7;&#xe3;o: e exemplos">
+<node CREATED="1638218182931" LINK="https://github.com/joelittlejohn/jsonschema2pojo" MODIFIED="1638218182931" TEXT="https://github.com/joelittlejohn/jsonschema2pojo"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1635195517092" FOLDED="true" ID="Freemind_Link_994009935" MODIFIED="1635195519275" POSITION="right" TEXT="Profiles">
 <node CREATED="1635195524429" ID="Freemind_Link_598833124" MODIFIED="1635195535396" TEXT="http://maven.apache.org/guides/introduction/introduction-to-profiles.html">
 <icon BUILTIN="attach"/>
 </node>
@@ -629,7 +675,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1583775083679" ID="Freemind_Link_1407337968" MODIFIED="1583775085572" POSITION="right" TEXT="Nexus">
+<node CREATED="1583775083679" FOLDED="true" ID="Freemind_Link_1407337968" MODIFIED="1583775085572" POSITION="right" TEXT="Nexus">
 <node CREATED="1583775107310" ID="Freemind_Link_772301783" MODIFIED="1583775111178" TEXT="Docker">
 <node CREATED="1583775112167" ID="Freemind_Link_1582618485" MODIFIED="1583775141416" TEXT="docker run -d -p 8081:8081 --name nexus -v nexus-data:/nexus-data sonatype/nexus3"/>
 <node CREATED="1583775527038" ID="Freemind_Link_1217327943" MODIFIED="1586814044255" TEXT="Senha inicial:">
