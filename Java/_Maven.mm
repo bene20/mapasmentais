@@ -259,6 +259,57 @@
 <node COLOR="#0000ff" CREATED="1636743464219" ID="Freemind_Link_939800006" MODIFIED="1636743664488" TEXT="mvn help:effective-pom"/>
 </node>
 </node>
+<node CREATED="1638901110940" ID="Freemind_Link_1684960984" MODIFIED="1638901336450" TEXT="Propriedades">
+<node CREATED="1638901336439" ID="Freemind_Link_858693528" MODIFIED="1638901349467" TEXT="Podem ser ">
+<node CREATED="1638901360412" ID="Freemind_Link_324284178" MODIFIED="1638901601468" TEXT="Nativas do Maven">
+<node CREATED="1638901426028" ID="Freemind_Link_553623718" MODIFIED="1638901444968" TEXT="Vari&#xe1;veis precedidas de &apos;env&apos; retornam vari&#xe1;veis do shell">
+<node CREATED="1638901449382" ID="Freemind_Link_1296077503" MODIFIED="1638901450856" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1636743464219" ID="Freemind_Link_1499832364" MODIFIED="1638901460080" TEXT="${env.PATH}"/>
+</node>
+</node>
+<node CREATED="1638901601461" ID="Freemind_Link_1654039752" MODIFIED="1638901604792" TEXT="Ver lista aqui:">
+<node CREATED="1638901594702" ID="Freemind_Link_48965789" LINK="https://github.com/cko/predefined_maven_properties/blob/master/README.md" MODIFIED="1638901594702" TEXT="https://github.com/cko/predefined_maven_properties/blob/master/README.md"/>
+<node CREATED="1638902019290" LINK="https://web.archive.org/web/20150520200505/https://docs.codehaus.org/display/MAVENUSER/MavenPropertiesGuide" MODIFIED="1638902019290" TEXT="https://web.archive.org/web/20150520200505/https://docs.codehaus.org/display/MAVENUSER/MavenPropertiesGuide"/>
+</node>
+<node COLOR="#0000ff" CREATED="1636743464219" ID="Freemind_Link_1913448387" MODIFIED="1638901673632" TEXT="basedir">
+<node CREATED="1638901674141" ID="Freemind_Link_1384067373" MODIFIED="1638901685424" TEXT="Representa o diret&#xf3;rio que cont&#xe9;m o pom.xml"/>
+</node>
+<node COLOR="#0000ff" CREATED="1636743464219" ID="Freemind_Link_1093325037" MODIFIED="1638901699072" TEXT="version">
+<node CREATED="1638901728035" ID="Freemind_Link_350526420" MODIFIED="1638901733328" TEXT="Referencia a vers&#xe3;o do projeto"/>
+<node CREATED="1638901674141" ID="Freemind_Link_1493990080" MODIFIED="1638901718351" TEXT="Equivalente a  ${project.version}"/>
+</node>
+<node COLOR="#0000ff" CREATED="1636743464219" ID="Freemind_Link_1500055620" MODIFIED="1638901753504" TEXT="settings.localRepository">
+<node CREATED="1638901674141" ID="Freemind_Link_1654371779" MODIFIED="1638901766288" TEXT="Referencia o caminho do reposit&#xf3;rio local do usu&#xe1;rio"/>
+</node>
+<node COLOR="#0000ff" CREATED="1636743464219" ID="Freemind_Link_696105078" MODIFIED="1638901779296" TEXT="env.M2_HOME">
+<node CREATED="1638901674141" ID="Freemind_Link_477305237" MODIFIED="1638901798640" TEXT="Referencia o caminho de instala&#xe7;&#xe3;o do Maven"/>
+</node>
+</node>
+<node CREATED="1638901115685" ID="Freemind_Link_206853826" MODIFIED="1638902137670" TEXT="Definidas na &#xa;se&#xe7;&#xe3;o &#xb4;properties&apos;">
+<node CREATED="1638901132355" ID="Freemind_Link_718045936" MODIFIED="1638901133432" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1636743464219" ID="Freemind_Link_1783949220" MODIFIED="1638901207039" TEXT="...&#xa;&lt;properties&gt;&#xa;  &lt;junit.version&gt;5.3.2&lt;/junit.version&gt;&#xa;&lt;/properties&gt;&#xa;...">
+<node CREATED="1638902156349" ID="Freemind_Link_1589515467" MODIFIED="1638902174319" TEXT="Defini&#xe7;&#xe3;o da propriedade &apos;junit.version&apos;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1636743464219" ID="Freemind_Link_1899591304" MODIFIED="1638902187109" TEXT="    &lt;property&gt;&#xa;        &lt;site.links&gt;&#xa;            &lt;![CDATA[&lt;links&gt;&#xa;                &lt;item name=&quot;Helio Home&quot; href=&quot;http://www.helio-vo.eu/&quot; /&gt;&#xa;                &lt;item name=&quot;Wiki&quot; href=&quot;http://ourwiki.com&quot; /&gt;&#xa;                &lt;item name=&quot;Helio Dev&quot; href=&quot;http://ourdevserver.com&quot; /&gt;&#xa;            &lt;/links&gt;]]&gt;&#xa;        &lt;/site.links&gt;&#xa;    &lt;property&gt;">
+<node CREATED="1638902156349" ID="Freemind_Link_448408095" MODIFIED="1638902200503" TEXT="Defini&#xe7;&#xe3;o da propriedade &apos;site.links&apos; do tipo lista"/>
+<node CREATED="1638902259316" ID="Freemind_Link_196088217" MODIFIED="1638902262743" TEXT="Refer&#xea;ncia:">
+<node COLOR="#0000ff" CREATED="1636743464219" ID="Freemind_Link_311263086" MODIFIED="1638902290143" TEXT="${site.links.0}"/>
+<node COLOR="#0000ff" CREATED="1636743464219" ID="Freemind_Link_1792587228" MODIFIED="1638902310758" TEXT="${site.links.1}"/>
+<node COLOR="#0000ff" CREATED="1636743464219" ID="Freemind_Link_251743663" MODIFIED="1638902313071" TEXT="${site.links.2}"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1638901286084" ID="Freemind_Link_1693711626" MODIFIED="1638901297096" TEXT="Devem ser usadas para evitar duplica&#xe7;&#xe3;o de configura&#xe7;&#xf5;es/dados">
+<node CREATED="1638901303693" ID="Freemind_Link_646471733" MODIFIED="1638901321208" TEXT="Muito &#xfa;til para definir vers&#xf5;es"/>
+</node>
+<node CREATED="1638901125099" ID="Freemind_Link_355572816" MODIFIED="1638901130991" TEXT="Referenciadas via ${...}">
+<node CREATED="1638901137251" ID="Freemind_Link_374778337" MODIFIED="1638902087135" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1636743464219" ID="Freemind_Link_990209114" MODIFIED="1638901270288" TEXT="...&#xa;&lt;dependencies&gt;&#xa;  &lt;dependency&gt;&#xa;    ...&#xa;    &lt;version&gt;${junit.version}&lt;/version&gt;&#xa;  &lt;/dependency&gt;&#xa;&lt;dependencies&gt;&#xa;..."/>
+</node>
+</node>
+</node>
 <node CREATED="1586963821978" ID="Freemind_Link_125063372" MODIFIED="1586963826509" TEXT="Depend&#xea;ncias">
 <node CREATED="1636743912976" ID="Freemind_Link_132533147" MODIFIED="1636743925017" TEXT="&#xc9; um artefato Maven do qual o seu projeto depende">
 <node CREATED="1636743895040" ID="Freemind_Link_1260511707" MODIFIED="1636743905155" TEXT="Tipicamente um jar ou um pom"/>
@@ -356,7 +407,7 @@
 <node CREATED="1638472158320" ID="Freemind_Link_1976183419" MODIFIED="1638472161451" TEXT="Use: pluginRepository"/>
 <node CREATED="1638472166896" ID="Freemind_Link_1018997388" MODIFIED="1638472175447" TEXT="pluginRepository &#xe9; semelhante &#xe0; tag repository"/>
 </node>
-<node CREATED="1637008865601" FOLDED="true" ID="Freemind_Link_1609400078" MODIFIED="1637009939902" TEXT="Build Lifecycle">
+<node CREATED="1637008865601" ID="Freemind_Link_1609400078" MODIFIED="1637009939902" TEXT="Build Lifecycle">
 <node CREATED="1637009946050" ID="Freemind_Link_149145873" MODIFIED="1637009947894" TEXT="clean">
 <node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_1373832113" MODIFIED="1637008890821" TEXT="clean">
 <node CREATED="1637008913641" ID="Freemind_Link_217045423" MODIFIED="1637008927750" TEXT="Criado para remover os arquivos gerados durante o build do projeto"/>
@@ -376,7 +427,7 @@
 </node>
 </node>
 <node CREATED="1637009962419" ID="Freemind_Link_1587726804" MODIFIED="1637009963783" TEXT="default">
-<node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_322712863" MODIFIED="1637008932221" TEXT="compile">
+<node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_322712863" MODIFIED="1638896985875" TEXT="compile">
 <node CREATED="1637008913641" ID="Freemind_Link_1974082563" MODIFIED="1637009248202" TEXT="Criado para gerar os .class do projeto">
 <node CREATED="1637009072424" ID="Freemind_Link_1595680247" MODIFIED="1637009088124" TEXT="Por padr&#xe3;o usa o compilador javax.tools.javaCompiler"/>
 <node CREATED="1637009058136" ID="Freemind_Link_330280660" MODIFIED="1637009071900" TEXT="Pode ser configurado para usar o javac se necess&#xe1;rio"/>
@@ -394,7 +445,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1638468321001" ID="Freemind_Link_1111087165" MODIFIED="1638468345375" TEXT="Pode ser configurado para processar &#xa;as anota&#xe7;&#xf5;es das classes Java">
+<node CREATED="1638896986787" ID="Freemind_Link_1290547245" MODIFIED="1638897033712" TEXT="Pode ser &#xa;configurado para">
+<node CREATED="1638468321001" ID="Freemind_Link_1111087165" MODIFIED="1638897023784" TEXT="processar as anota&#xe7;&#xf5;es&#xa;das classes Java">
 <node CREATED="1638468348123" ID="Freemind_Link_1184904020" MODIFIED="1638468351315" TEXT="MapStruct">
 <node CREATED="1638468513159" ID="Freemind_Link_1943740350" LINK="https://mapstruct.org/" MODIFIED="1638468513159" TEXT="https://mapstruct.org/"/>
 <node CREATED="1638468353608" ID="Freemind_Link_829726833" MODIFIED="1638468375878" TEXT="&#xda;til para converter Entidades JPA para DTO e vice versa"/>
@@ -402,6 +454,21 @@
 <node CREATED="1638468387420" ID="Freemind_Link_1723000541" MODIFIED="1638468422511" TEXT="Para processar as anota&#xe7;&#xf5;es, deve-se&#xa;declarar na configura&#xe7;&#xe3;o do plugin compile">
 <node COLOR="#0000ff" CREATED="1638468430349" ID="Freemind_Link_484649894" MODIFIED="1638468498258" TEXT="        &lt;plugin&gt;&#xa;            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;&#xa;            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;&#xa;            &lt;version&gt;3.8.1&lt;/version&gt;&#xa;            &lt;configuration&gt;&#xa;                &lt;source&gt;1.8&lt;/source&gt; &lt;!-- depending on your project --&gt;&#xa;                &lt;target&gt;1.8&lt;/target&gt; &lt;!-- depending on your project --&gt;&#xa;                &lt;annotationProcessorPaths&gt;&#xa;                    &lt;path&gt;&#xa;                        &lt;groupId&gt;org.mapstruct&lt;/groupId&gt;&#xa;                        &lt;artifactId&gt;mapstruct-processor&lt;/artifactId&gt;&#xa;                        &lt;version&gt;${org.mapstruct.version}&lt;/version&gt;&#xa;                    &lt;/path&gt;&#xa;                    &lt;!-- other annotation processors --&gt;&#xa;                &lt;/annotationProcessorPaths&gt;&#xa;            &lt;/configuration&gt;&#xa;        &lt;/plugin&gt;"/>
 </node>
+</node>
+</node>
+<node CREATED="1638896826034" ID="Freemind_Link_1465535659" MODIFIED="1638896984421" TEXT="compilar c&#xf3;digos groovy">
+<node CREATED="1638896772089" ID="Freemind_Link_1248240908" LINK="https://github.com/groovy/groovy-eclipse/wiki/Groovy-Eclipse-Maven-plugin" MODIFIED="1638896772089" TEXT="https://github.com/groovy/groovy-eclipse/wiki/Groovy-Eclipse-Maven-plugin"/>
+<node CREATED="1638896756547" ID="Freemind_Link_388372543" LINK="https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-eclipse-compiler/3.7.0" MODIFIED="1638896756547" TEXT="https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-eclipse-compiler/3.7.0"/>
+<node CREATED="1638896848132" ID="Freemind_Link_1255182235" MODIFIED="1638896856990" TEXT="Requer a adi&#xe7;&#xe3;o de um reposit&#xf3;rio externo">
+<node CREATED="1638896857300" ID="Freemind_Link_258464691" MODIFIED="1638896869449" TEXT="Usando pluginRepositories"/>
+</node>
+</node>
+<node CREATED="1638897053209" ID="Freemind_Link_1935258251" MODIFIED="1638897058387" TEXT="compilar c&#xf3;digos kotlin">
+<node CREATED="1638897226889" LINK="https://kotlinlang.org/docs/maven.html" MODIFIED="1638897226889" TEXT="https://kotlinlang.org/docs/maven.html"/>
+<node CREATED="1638897336183" ID="Freemind_Link_276690584" MODIFIED="1638897348651" TEXT="O kotlin requer a adi&#xe7;&#xe3;o de um plugin pr&#xf3;prio tamb&#xe9;m. Ver documenta&#xe7;&#xe3;o"/>
+</node>
+<node CREATED="1638897053209" ID="Freemind_Link_1790344153" MODIFIED="1638897769859" TEXT="compilar c&#xf3;digos scala">
+<node CREATED="1638897866505" ID="Freemind_Link_1751534065" MODIFIED="1638897873619" TEXT="Por hora s&#xf3; suporta at&#xe9; o java 8"/>
 </node>
 </node>
 </node>
@@ -425,6 +492,22 @@
 </node>
 <node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_1829209595" MODIFIED="1637009663185" TEXT="surefire">
 <node CREATED="1637009383505" ID="Freemind_Link_209752431" MODIFIED="1637009685777" TEXT="Criado para disparar testes de unidade do projeto"/>
+<node CREATED="1638912648684" ID="Freemind_Link_39036193" MODIFIED="1638913268094" TEXT="Existe um plugin de &#xa;relat&#xf3;rios do surefire">
+<node CREATED="1638913272810" ID="Freemind_Link_1730964715" MODIFIED="1638913285135" TEXT="Ele &#xe9; executado na fase &apos;site&apos; do ciclo de vida do Maven"/>
+<node CREATED="1638912657372" ID="Freemind_Link_281935404" MODIFIED="1638912668376" TEXT="Cobertura de teste etc."/>
+<node CREATED="1638912907867" ID="Freemind_Link_1231088060" MODIFIED="1638912977853" TEXT="Este plugin deve estar na mesma vers&#xe3;o &#xa;que o plugin &apos;maven-surefire-plugin">
+<node CREATED="1638912930436" ID="Freemind_Link_923350218" MODIFIED="1638912970806" TEXT="Caso n&#xe3;o esteja, redeclare o plugin &#xa;surefire e especifique a vers&#xe3;o na m&#xe3;o"/>
+</node>
+<node CREATED="1638913085987" ID="Freemind_Link_1593725397" MODIFIED="1638913150981" TEXT="Este plugin usar&#xe1; o plugin &apos;maven-site-plugin&apos; &#xa;para gerar o relat&#xf3;rio">
+<node CREATED="1638913103156" ID="Freemind_Link_1367918614" MODIFIED="1638913119671" TEXT="Ser&#xe1; criado na pasta target um site com o relat&#xf3;rio"/>
+<node CREATED="1638913123403" ID="Freemind_Link_1723466213" MODIFIED="1638913144917" TEXT="A vers&#xe3;o do plugin do site deve ser compat&#xed;vel &#xa;com a vers&#xe3;o do plugin de relat&#xf3;rio do surefire">
+<node CREATED="1638912930436" ID="Freemind_Link_1462001434" MODIFIED="1638913162870" TEXT="Caso n&#xe3;o esteja, redeclare o plugin &#xa;site e especifique a vers&#xe3;o na m&#xe3;o"/>
+</node>
+</node>
+<node CREATED="1638912738332" ID="Freemind_Link_1093842529" MODIFIED="1638912739775" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1637088834759" ID="Freemind_Link_1696622116" MODIFIED="1638912902606" TEXT="&lt;reporting&gt;&#xa;  &lt;plugins&gt;&#xa;    &lt;plugin&gt;&#xa;      &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;&#xa;      &lt;artifactId&gt;maven-surefire-report-plugin&lt;/artifactId&gt;&#xa;      &lt;version&gt;${surefire.version}&lt;/version&gt;&#xa;    &lt;/plugin&gt;&#xa;  &lt;/plugins&gt;&#xa;&lt;/reporting&gt;"/>
+</node>
+</node>
 <node CREATED="1575575372600" ID="Freemind_Link_257278780" MODIFIED="1575575374443" TEXT="Goals">
 <node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_528297073" MODIFIED="1637009670080" TEXT="test">
 <node CREATED="1575575378349" ID="Freemind_Link_360148668" MODIFIED="1637009697817" TEXT="Executa os testes de unidade do projeto"/>
@@ -464,10 +547,10 @@
 <node CREATED="1575575378349" ID="Freemind_Link_154098327" MODIFIED="1637010193957" TEXT="Faz o deploy do projeto no reposit&#xf3;rio remoto"/>
 <node CREATED="1637616224682" ID="Freemind_Link_771400712" MODIFIED="1637616400246" TEXT="A configura&#xe7;&#xe3;o &#xe9; conjunta entre os &#xa;oarquivos pom.xml e settings.xml">
 <node CREATED="1637616402426" ID="Freemind_Link_1685897190" MODIFIED="1637616462166" TEXT="pom.xml">
-<node CREATED="1637616417754" ID="Freemind_Link_1760622744" MODIFIED="1637616430928" TEXT="  &lt;distributionManagement&gt;&#xa;    &lt;repository&gt;&#xa;      &lt;id&gt;internal.repo&lt;/id&gt;&#xa;      &lt;name&gt;MyCo Internal Repository&lt;/name&gt;&#xa;      &lt;url&gt;Host to Company Repository&lt;/url&gt;&#xa;    &lt;/repository&gt;&#xa;  &lt;/distributionManagement&gt;"/>
+<node COLOR="#0000ff" CREATED="1637616417754" ID="Freemind_Link_1760622744" MODIFIED="1638896619310" TEXT="  &lt;distributionManagement&gt;&#xa;    &lt;repository&gt;&#xa;      &lt;id&gt;internal.repo&lt;/id&gt;&#xa;      &lt;name&gt;MyCo Internal Repository&lt;/name&gt;&#xa;      &lt;url&gt;Host to Company Repository&lt;/url&gt;&#xa;    &lt;/repository&gt;&#xa;  &lt;/distributionManagement&gt;"/>
 </node>
 <node CREATED="1637616406787" ID="Freemind_Link_183743804" MODIFIED="1637616465324" TEXT="settings.xml">
-<node CREATED="1637616440370" ID="Freemind_Link_1178321177" MODIFIED="1637616447043" TEXT="    &lt;server&gt;&#xa;      &lt;id&gt;internal.repo&lt;/id&gt;&#xa;      &lt;username&gt;maven&lt;/username&gt;&#xa;      &lt;password&gt;foobar&lt;/password&gt;&#xa;    &lt;/server&gt;"/>
+<node COLOR="#0000ff" CREATED="1637616440370" ID="Freemind_Link_1178321177" MODIFIED="1638896625417" TEXT="    &lt;server&gt;&#xa;      &lt;id&gt;internal.repo&lt;/id&gt;&#xa;      &lt;username&gt;maven&lt;/username&gt;&#xa;      &lt;password&gt;foobar&lt;/password&gt;&#xa;    &lt;/server&gt;"/>
 </node>
 </node>
 </node>
@@ -611,6 +694,15 @@
 <node COLOR="#0000ff" CREATED="1575574418093" ID="Freemind_Link_587889947" MODIFIED="1610744478236" TEXT="display-dependency-updates">
 <node CREATED="1575574536550" ID="Freemind_Link_980443257" MODIFIED="1610731402756" TEXT="Consulta as vers&#xf5;es das depend&#xea;ncias que podem ser atualizados"/>
 <node CREATED="1610731341574" ID="Freemind_Link_1985129015" MODIFIED="1610744514003" TEXT="Requer a instala&#xe7;&#xe3;o do plugin &apos;versions-maven-plugin&apos;"/>
+</node>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_462382642" MODIFIED="1638898326306" TEXT="failsafe">
+<node CREATED="1637009383505" ID="Freemind_Link_529850265" MODIFIED="1638898339050" TEXT="Criado para disparar testes de integra&#xe7;&#xe3;o do projeto"/>
+<node CREATED="1638898412405" ID="Freemind_Link_1633481179" MODIFIED="1638898419482" TEXT="Requer alguma configura&#xe7;&#xe3;o para ser habilitado"/>
+<node CREATED="1575575372600" ID="Freemind_Link_226486210" MODIFIED="1575575374443" TEXT="Goals">
+<node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_370830069" MODIFIED="1638898376626" TEXT="???">
+<node CREATED="1575575378349" ID="Freemind_Link_1047659160" MODIFIED="1638898380498" TEXT="???"/>
 </node>
 </node>
 </node>
