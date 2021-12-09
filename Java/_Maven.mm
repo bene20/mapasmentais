@@ -245,12 +245,18 @@
 <node COLOR="#0000ff" CREATED="1575574418093" ID="Freemind_Link_1329850712" MODIFIED="1586324657945" TEXT="-Dmaven.wagon.http.ssl.insecure=true">
 <node CREATED="1575574536550" ID="Freemind_Link_1031321467" MODIFIED="1586324678757" TEXT="Instrui o maven a ignorar problemas de certificado"/>
 </node>
+<node COLOR="#0000ff" CREATED="1575574418093" ID="Freemind_Link_850297830" MODIFIED="1639069853220" TEXT="-DskipTests">
+<node CREATED="1575574536550" ID="Freemind_Link_467302567" MODIFIED="1639069755293" TEXT="Instrui o maven a n&#xe3;o fazer os testes de c&#xf3;digo (nem de unidade nem de integra&#xe7;&#xe3;o"/>
+</node>
+<node COLOR="#0000ff" CREATED="1575574418093" ID="Freemind_Link_1730562044" MODIFIED="1639069785621" TEXT="-DskipITs">
+<node CREATED="1575574536550" ID="Freemind_Link_841754321" MODIFIED="1639069825653" TEXT="Instrui o maven a n&#xe3;o fazer os testes de integra&#xe7;&#xe3;o (mas ainda faz os testes de unidade)"/>
+</node>
 <node COLOR="#0000ff" CREATED="1588880717993" ID="Freemind_Link_106328896" MODIFIED="1588880753494" TEXT="deploy:deploy-file -DrepositoryId=trt10-public -Durl=http://nexus.trt10.jus.br:8081/repository/trt10-release/ \&#xa;                       -DpomFile=$pomXML -Dfile=$jarFile">
 <node CREATED="1588880755270" ID="Freemind_Link_842396406" MODIFIED="1588880768089" TEXT="Publica um jar no reposit&#xf3;rio remoto"/>
 </node>
 </node>
 </node>
-<node CREATED="1586963818695" FOLDED="true" ID="Freemind_Link_204344341" MODIFIED="1636743379448" POSITION="right" TEXT="POM">
+<node CREATED="1586963818695" ID="Freemind_Link_204344341" MODIFIED="1636743379448" POSITION="right" TEXT="POM">
 <node CREATED="1636743384294" ID="Freemind_Link_680633735" MODIFIED="1636743391089" TEXT="Project Object Model"/>
 <node CREATED="1636743380270" ID="Freemind_Link_1235427665" MODIFIED="1636743383504" TEXT="Arquivo pom.xml">
 <node CREATED="1636743399805" ID="Freemind_Link_456615519" MODIFIED="1636743415706" TEXT="Precisa estar em conformidade com o maven-4.0.0.xsd"/>
@@ -392,8 +398,18 @@
 </node>
 </node>
 </node>
+<node CREATED="1639064752636" ID="Freemind_Link_677220966" MODIFIED="1639064755760" TEXT="Relat&#xf3;rios">
+<node CREATED="1639064756469" ID="Freemind_Link_962057834" MODIFIED="1639064762720" TEXT="Tag &apos;reporting&apos;"/>
+<node CREATED="1639064763397" ID="Freemind_Link_1038422468" MODIFIED="1639064791800" TEXT="Ativa/configura plugins de gera&#xe7;&#xe3;o de relat&#xf3;rios diversos">
+<node CREATED="1639065024821" ID="Freemind_Link_634619538" MODIFIED="1639065037720" TEXT="S&#xe3;o as p&#xe1;ginas do site do projeto, gerada pelo Maven"/>
 </node>
-<node CREATED="1575574182808" ID="Freemind_Link_1468390236" MODIFIED="1575574184422" POSITION="right" TEXT="Plugins">
+<node CREATED="1639064795213" ID="Freemind_Link_350480703" MODIFIED="1639064796408" TEXT="Ex:">
+<node CREATED="1639064797085" ID="Freemind_Link_1960827807" LINK="#Freemind_Link_1531385460" MODIFIED="1639064885974" TEXT="jacoco"/>
+<node CREATED="1639064803643" ID="Freemind_Link_1997293841" LINK="#Freemind_Link_1711237851" MODIFIED="1639064897566" TEXT="spotbugs"/>
+</node>
+</node>
+</node>
+<node CREATED="1575574182808" FOLDED="true" ID="Freemind_Link_1468390236" MODIFIED="1575574184422" POSITION="right" TEXT="Plugins">
 <node CREATED="1575574678611" ID="Freemind_Link_821896362" MODIFIED="1575574683130" TEXT="https://maven.apache.org/plugins/index.html">
 <icon BUILTIN="attach"/>
 </node>
@@ -563,6 +579,7 @@
 <node CREATED="1637010322672" ID="Freemind_Link_681414258" MODIFIED="1637010324132" TEXT="site">
 <node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_306160243" MODIFIED="1637010330499" TEXT="site">
 <node CREATED="1637008913641" ID="Freemind_Link_854992617" MODIFIED="1637010339099" TEXT="Criado para gerar um site do projeto"/>
+<node CREATED="1639064987780" ID="Freemind_Link_382613780" LINK="#Freemind_Link_677220966" MODIFIED="1639065017766" TEXT="Os plugins que geram/alimentam o site s&#xe3;o configurados na se&#xe7;&#xe3;o &apos;reporting&apos;"/>
 <node CREATED="1575575372600" ID="Freemind_Link_1442789935" MODIFIED="1575575374443" TEXT="Goals">
 <node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_1064167032" MODIFIED="1637010342603" TEXT="site">
 <node CREATED="1575575378349" ID="Freemind_Link_977054086" MODIFIED="1637010346661" TEXT="Gera o site do projeto"/>
@@ -699,10 +716,23 @@
 </node>
 <node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_462382642" MODIFIED="1638898326306" TEXT="failsafe">
 <node CREATED="1637009383505" ID="Freemind_Link_529850265" MODIFIED="1638898339050" TEXT="Criado para disparar testes de integra&#xe7;&#xe3;o do projeto"/>
-<node CREATED="1638898412405" ID="Freemind_Link_1633481179" MODIFIED="1638898419482" TEXT="Requer alguma configura&#xe7;&#xe3;o para ser habilitado"/>
-<node CREATED="1575575372600" ID="Freemind_Link_226486210" MODIFIED="1575575374443" TEXT="Goals">
-<node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_370830069" MODIFIED="1638898376626" TEXT="???">
-<node CREATED="1575575378349" ID="Freemind_Link_1047659160" MODIFIED="1638898380498" TEXT="???"/>
+<node CREATED="1638898412405" ID="Freemind_Link_1633481179" MODIFIED="1638898419482" TEXT="Requer alguma configura&#xe7;&#xe3;o para ser habilitado">
+<node CREATED="1639060121698" ID="Freemind_Link_1253618787" MODIFIED="1639060136963" TEXT="O Maven n&#xe3;o executa o teste de integra&#xe7;&#xe3;o por padr&#xe3;o no ciclo de vida do Maven"/>
+<node CREATED="1639060142552" ID="Freemind_Link_1011466586" MODIFIED="1639060143611" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1610744776709" ID="Freemind_Link_87855607" MODIFIED="1639060168979" TEXT="&lt;project&gt;&#xa;  [...]&#xa;  &lt;build&gt;&#xa;    &lt;plugins&gt;&#xa;      &lt;plugin&gt;&#xa;        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;&#xa;        &lt;artifactId&gt;maven-failsafe-plugin&lt;/artifactId&gt;&#xa;        &lt;version&gt;3.0.0-M5&lt;/version&gt;&#xa;        &lt;executions&gt;&#xa;          &lt;execution&gt;&#xa;            &lt;goals&gt;&#xa;              &lt;goal&gt;integration-test&lt;/goal&gt;&#xa;              &lt;goal&gt;verify&lt;/goal&gt;&#xa;            &lt;/goals&gt;&#xa;          &lt;/execution&gt;&#xa;        &lt;/executions&gt;&#xa;      &lt;/plugin&gt;&#xa;    &lt;/plugins&gt;&#xa;  &lt;/build&gt;&#xa;  [...]&#xa;&lt;/project&gt;">
+<node CREATED="1639060217849" ID="Freemind_Link_309093708" MODIFIED="1639060234939" TEXT="Incluindo o teste de integra&#xe7;&#xe3;o nas fases &apos;verify&apos; e &apos;integration-test&apos;"/>
+</node>
+</node>
+</node>
+<node CREATED="1639060020252" ID="Freemind_Link_1174917410" LINK="https://maven.apache.org/surefire/maven-failsafe-plugin/usage.html" MODIFIED="1639060020252" TEXT="https://maven.apache.org/surefire/maven-failsafe-plugin/usage.html"/>
+<node CREATED="1575575372600" ID="Freemind_Link_1086611793" MODIFIED="1575575374443" TEXT="Goals">
+<node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_1769538847" MODIFIED="1639060435395" TEXT="verify">
+<node CREATED="1575575378349" ID="Freemind_Link_1228844816" MODIFIED="1639060446228" TEXT="Executa os testes de integra&#xe7;&#xe3;o"/>
+<node CREATED="1637009805555" ID="Freemind_Link_1382208406" MODIFIED="1637009813266" TEXT="Por padr&#xe3;o inclui classes de nome">
+<node CREATED="1637009814189" ID="Freemind_Link_1228255030" MODIFIED="1639059914171" TEXT="**/IT*.java"/>
+<node CREATED="1637009814189" ID="Freemind_Link_1747918559" MODIFIED="1639059920580" TEXT="**/*IT.java"/>
+<node CREATED="1637009814189" ID="Freemind_Link_1372642033" MODIFIED="1639059938228" TEXT="**/*ITCase.java"/>
+</node>
 </node>
 </node>
 </node>
@@ -750,6 +780,19 @@
 <node CREATED="1638218170605" ID="Freemind_Link_1966707908" LINK="https://mvnrepository.com/artifact/org.jsonschema2pojo/jsonschema2pojo-maven-plugin/1.1.1" MODIFIED="1638218170605" TEXT="https://mvnrepository.com/artifact/org.jsonschema2pojo/jsonschema2pojo-maven-plugin/1.1.1"/>
 <node CREATED="1638216329365" ID="Freemind_Link_1138778579" MODIFIED="1638218235379" TEXT="Configura&#xe7;&#xe3;o: e exemplos">
 <node CREATED="1638218182931" LINK="https://github.com/joelittlejohn/jsonschema2pojo" MODIFIED="1638218182931" TEXT="https://github.com/joelittlejohn/jsonschema2pojo"/>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_1531385460" MODIFIED="1639064865494" TEXT="jacoco">
+<node CREATED="1637006327708" ID="Freemind_Link_1965069859" MODIFIED="1639060596177" TEXT="Gera relat&#xf3;rio de cobertura de testes do projeto"/>
+<node CREATED="1639060604867" ID="Freemind_Link_397307438" MODIFIED="1639060608171" TEXT="Configura&#xe7;&#xe3;o:">
+<node CREATED="1639060703733" LINK="https://www.petrikainulainen.net/programming/maven/creating-code-coverage-reports-for-unit-and-integration-tests-with-the-jacoco-maven-plugin/" MODIFIED="1639060703733" TEXT="https://www.petrikainulainen.net/programming/maven/creating-code-coverage-reports-for-unit-and-integration-tests-with-the-jacoco-maven-plugin/"/>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_1711237851" MODIFIED="1639064594233" TEXT="spotbugs">
+<node CREATED="1637006327708" ID="Freemind_Link_1839939045" MODIFIED="1639064614824" TEXT="Gera relat&#xf3;rio de bugs e m&#xe1;s pr&#xe1;ticas detectadas no c&#xf3;digo do projeto"/>
+<node CREATED="1639060604867" ID="Freemind_Link_260219119" MODIFIED="1639060608171" TEXT="Configura&#xe7;&#xe3;o:">
+<node CREATED="1639064651959" ID="Freemind_Link_869865015" LINK="https://spotbugs.readthedocs.io/en/latest/maven.html" MODIFIED="1639064651959" TEXT="https://spotbugs.readthedocs.io/en/latest/maven.html"/>
+<node CREATED="1639065114045" ID="Freemind_Link_1909457933" MODIFIED="1639065133128" TEXT="Pode ser configurado para eliminar falsos positivos ou n&#xe3;o exibir alertas espec&#xed;ficos"/>
 </node>
 </node>
 </node>
