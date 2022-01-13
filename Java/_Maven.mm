@@ -316,7 +316,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1586963821978" ID="Freemind_Link_125063372" MODIFIED="1586963826509" TEXT="Depend&#xea;ncias">
+<node CREATED="1586963821978" FOLDED="true" ID="Freemind_Link_125063372" MODIFIED="1586963826509" TEXT="Depend&#xea;ncias">
 <node CREATED="1636743912976" ID="Freemind_Link_132533147" MODIFIED="1636743925017" TEXT="&#xc9; um artefato Maven do qual o seu projeto depende">
 <node CREATED="1636743895040" ID="Freemind_Link_1260511707" MODIFIED="1636743905155" TEXT="Tipicamente um jar ou um pom"/>
 </node>
@@ -406,6 +406,51 @@
 <node CREATED="1639064795213" ID="Freemind_Link_350480703" MODIFIED="1639064796408" TEXT="Ex:">
 <node CREATED="1639064797085" ID="Freemind_Link_1960827807" LINK="#Freemind_Link_1531385460" MODIFIED="1639064885974" TEXT="jacoco"/>
 <node CREATED="1639064803643" ID="Freemind_Link_1997293841" LINK="#Freemind_Link_1711237851" MODIFIED="1639064897566" TEXT="spotbugs"/>
+</node>
+</node>
+</node>
+<node CREATED="1642086629517" ID="Freemind_Link_1712719312" MODIFIED="1642086642848" POSITION="right" TEXT="Multi Module">
+<node CREATED="1642086643728" ID="Freemind_Link_928490327" MODIFIED="1642086658242" TEXT="Um projeto pode ter subprojetos"/>
+<node CREATED="1642086658917" ID="Freemind_Link_1143824216" MODIFIED="1642086674107" TEXT="Cada m&#xf3;dulo (sub projeto) tem seu pr&#xf3;prio pom.xml"/>
+<node CREATED="1642086675823" ID="Freemind_Link_1118442436" MODIFIED="1642086691778" TEXT="O pom.xml de cada subprojeto herda as proriedades do pom.xml ancestral"/>
+<node CREATED="1642086694039" ID="Freemind_Link_96856291" MODIFIED="1642086697696" TEXT="The Reactor">
+<node CREATED="1642086700487" ID="Freemind_Link_1954743096" MODIFIED="1642086713936" TEXT="Respons&#xe1;vel por gerar o build de cada m&#xf3;dulo do projeto"/>
+<node CREATED="1642086721311" ID="Freemind_Link_1335078676" MODIFIED="1642086873742" TEXT="Determina a ordem&#xa;de build dos m&#xf3;dulos">
+<node CREATED="1642086730502" ID="Freemind_Link_1816636022" MODIFIED="1642086737410" TEXT="Por padr&#xe3;o &#xe9; sequencial"/>
+<node CREATED="1642086740333" ID="Freemind_Link_106996246" MODIFIED="1642086753512" TEXT="Opcionalmente podem ser usadas threads para buils paralelos"/>
+<node CREATED="1642086881941" ID="Freemind_Link_397818038" MODIFIED="1642086890785" TEXT="Fatores de ordena&#xe7;&#xe3;o:">
+<node CREATED="1642086891451" ID="Freemind_Link_1156552350" MODIFIED="1642086901854" TEXT="Depend&#xea;ncias dos projetos">
+<node CREATED="1642086902163" ID="Freemind_Link_722791001" MODIFIED="1642086922160" TEXT="M&#xf3;dulos usados por outros m&#xf3;dulos ser&#xe3;o priorizados"/>
+</node>
+<node CREATED="1642086926485" ID="Freemind_Link_780126725" MODIFIED="1642086954899" TEXT="Declara&#xe7;&#xe3;o de plugins">
+<node CREATED="1642086934573" ID="Freemind_Link_1551684734" MODIFIED="1642086950183" TEXT="Caso em que um m&#xf3;dulo &#xe9; um plugin usado por outros m&#xf3;dulos"/>
+</node>
+<node CREATED="1642086959859" ID="Freemind_Link_1898887639" MODIFIED="1642086973569" TEXT="Ordem declarada na se&#xe7;&#xe3;o de m&#xf3;dulos do POM"/>
+</node>
+</node>
+</node>
+<node CREATED="1642092721810" ID="Freemind_Link_405919791" MODIFIED="1642094724548" TEXT="Projeto pai">
+<node CREATED="1642092725340" ID="Freemind_Link_729897374" MODIFIED="1642092743414" TEXT="Deve usar o empacotamento do tipo &apos;pom&apos;">
+<node CREATED="1638901137251" ID="Freemind_Link_984732316" MODIFIED="1638902087135" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1636743464219" ID="Freemind_Link_1631941260" MODIFIED="1642092810653" TEXT="...&#xa;&lt;project ...&gt;...&#xa;  ...&#xa;  &lt;packaging&gt;pom&lt;/packaging&gt;&#xa;  ...&#xa;&lt;/project&gt;"/>
+</node>
+</node>
+<node CREATED="1642094769544" ID="Freemind_Link_853965019" MODIFIED="1642094775968" TEXT="Deve declarar os m&#xf3;dulos filhos">
+<node CREATED="1638901137251" ID="Freemind_Link_31956832" MODIFIED="1638902087135" TEXT="Ex:">
+<node CREATED="1642095143792" ID="Freemind_Link_1855745063" MODIFIED="1642095157045" TEXT="A tag &apos;module&apos; deve conter o artifactId do projeto filho"/>
+<node COLOR="#0000ff" CREATED="1636743464219" ID="Freemind_Link_1792260997" MODIFIED="1642094833992" TEXT="...&#xa;&lt;project ...&gt;&#xa;  ...&#xa;  &lt;modules&gt;&#xa;    &lt;module&gt;jpa-entities&lt;/module&gt;&#xa;  &lt;/modules&gt;&#xa;  ...&#xa;&lt;/project&gt;"/>
+</node>
+</node>
+</node>
+<node CREATED="1642094701056" ID="Freemind_Link_1780264424" MODIFIED="1642094708979" TEXT="M&#xf3;dulo">
+<node CREATED="1642094711086" ID="Freemind_Link_1323306869" MODIFIED="1642094724550" TEXT="Heradar&#xe1; as propriedades do projeto pai">
+<arrowlink DESTINATION="Freemind_Link_405919791" ENDARROW="Default" ENDINCLINATION="265;0;" ID="Freemind_Arrow_Link_313009408" STARTARROW="None" STARTINCLINATION="265;0;"/>
+</node>
+<node CREATED="1642092725340" ID="Freemind_Link_345081668" MODIFIED="1642094925593" TEXT="Deve declarar a tag &apos;parent&apos;&#xa;que referencia o projeto pai">
+<node CREATED="1638901137251" ID="Freemind_Link_49318502" MODIFIED="1638902087135" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1636743464219" ID="Freemind_Link_1834201996" MODIFIED="1642095506826" TEXT="...&#xa;&lt;project ...&gt;...&#xa;  ...&#xa;  &lt;parent&gt;&#xa;    &lt;groupId&gt;guru.springframework&lt;/groupId&gt;&#xa;    &lt;artifactId&gt;mb2g-maven&lt;/artifactId&gt;&#xa;    &lt;version&gt;1.0&lt;/version&gt;&#xa;  &lt;/parent&gt;&#xa;  &lt;packaging&gt;jar&lt;/packaging&gt;&#xa;  ...&#xa;&lt;/project&gt;"/>
+</node>
+<node CREATED="1642094932701" ID="Freemind_Link_1281874938" MODIFIED="1642094966046" TEXT="Nesta tag deve ter as tags &apos;groupId&apos;, &apos;artifactId&apos; e &apos;version&apos; do projeto pai"/>
 </node>
 </node>
 </node>
