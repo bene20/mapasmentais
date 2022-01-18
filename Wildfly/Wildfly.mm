@@ -137,6 +137,9 @@
 <node CREATED="1573670037212" ID="Freemind_Link_261718946" MODIFIED="1588693532068" TEXT="Faz deploy de uma aplica&#xe7;&#xe3;o no modo domain nos server-groups especificados"/>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1573669995752" ID="Freemind_Link_1951000610" MODIFIED="1642162011561" TEXT="/core-service=platform-mbean/type=runtime:read-attribute(name=input-arguments,include-defaults=true)">
+<node CREATED="1573670037212" ID="Freemind_Link_673751285" MODIFIED="1642162032098" TEXT="Lista os VM Arguments configurados para o Wildfly"/>
+</node>
 </node>
 <node CREATED="1574124006315" ID="Freemind_Link_109907071" MODIFIED="1574124010051" TEXT="par&#xe2;metros">
 <node COLOR="#0000ff" CREATED="1574124014754" ID="Freemind_Link_133115331" MODIFIED="1574124035548" TEXT="-c --controller=172.16.100.100">

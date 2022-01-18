@@ -256,7 +256,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1586963818695" ID="Freemind_Link_204344341" MODIFIED="1636743379448" POSITION="right" TEXT="POM">
+<node CREATED="1586963818695" FOLDED="true" ID="Freemind_Link_204344341" MODIFIED="1636743379448" POSITION="right" TEXT="POM">
 <node CREATED="1636743384294" ID="Freemind_Link_680633735" MODIFIED="1636743391089" TEXT="Project Object Model"/>
 <node CREATED="1636743380270" ID="Freemind_Link_1235427665" MODIFIED="1636743383504" TEXT="Arquivo pom.xml">
 <node CREATED="1636743399805" ID="Freemind_Link_456615519" MODIFIED="1636743415706" TEXT="Precisa estar em conformidade com o maven-4.0.0.xsd"/>
@@ -282,6 +282,7 @@
 </node>
 <node COLOR="#0000ff" CREATED="1636743464219" ID="Freemind_Link_1093325037" MODIFIED="1638901699072" TEXT="version">
 <node CREATED="1638901728035" ID="Freemind_Link_350526420" MODIFIED="1638901733328" TEXT="Referencia a vers&#xe3;o do projeto"/>
+<node CREATED="1642185521692" ID="Freemind_Link_1374540048" MODIFIED="1642185538598" TEXT="Em projetos filhos (m&#xf3;dulos), este valor &#xe9; herdado do projeto pai"/>
 <node CREATED="1638901674141" ID="Freemind_Link_1493990080" MODIFIED="1638901718351" TEXT="Equivalente a  ${project.version}"/>
 </node>
 <node COLOR="#0000ff" CREATED="1636743464219" ID="Freemind_Link_1500055620" MODIFIED="1638901753504" TEXT="settings.localRepository">
@@ -409,10 +410,33 @@
 </node>
 </node>
 </node>
+<node CREATED="1642531386528" ID="Freemind_Link_616584117" MODIFIED="1642531389062" POSITION="right" TEXT="BOM">
+<node CREATED="1642531389744" ID="Freemind_Link_1790183288" MODIFIED="1642531414004" TEXT="Bill of Material">
+<node CREATED="1642531414873" ID="Freemind_Link_1638386967" MODIFIED="1642531423525" TEXT="Lista de materiais"/>
+</node>
+<node CREATED="1642531885433" ID="Freemind_Link_1689057913" MODIFIED="1642531905179" TEXT="Depend&#xea;ncias declaradas na se&#xe7;&#xe3;o dependencyManagement do POM"/>
+<node CREATED="1642531932769" ID="Freemind_Link_297214081" MODIFIED="1642531965988" TEXT="Depend&#xea;ncias qualificadas s&#xe3;o listadas na se&#xe7;&#xe3;o dependencyManagement do POM"/>
+<node CREATED="1642531967881" ID="Freemind_Link_1040702217" MODIFIED="1642532000996" TEXT="Depend&#xea;ncias declaradas na se&#xe7;&#xe3;o dependencies herdam da se&#xe7;&#xe3;o dependencyManagement (version / packaging)"/>
+<node CREATED="1642532005656" ID="Freemind_Link_1397361053" MODIFIED="1642532014964" TEXT="Tipicamente usado para padronizar vers&#xf5;es"/>
+<node CREATED="1642532162239" ID="Freemind_Link_68252568" MODIFIED="1642532258738" TEXT="Depend&#xea;ncias declarada na se&#xe7;&#xe3;o dependencyManagement N&#xc3;O se tornam depend&#xea;ncias transitivas do artefato"/>
+<node CREATED="1642532162239" ID="Freemind_Link_685236191" MODIFIED="1642532252322" TEXT="Depend&#xea;ncias declarada na se&#xe7;&#xe3;o dependencies SE TORNAM depend&#xea;ncias transitivas do artefato">
+<node CREATED="1642532279495" ID="Freemind_Link_1676689158" MODIFIED="1642532296762" TEXT="Elas herdam os atributos da se&#xe7;&#xe3;o dependencyManagement, como version"/>
+</node>
+<node CREATED="1642532573373" ID="Freemind_Link_1603134728" MODIFIED="1642532708257" TEXT="Geralmente declarado na se&#xe7;&#xe3;o &#xa;dependencyManagement do POM do projeto pai">
+<node CREATED="1642532596165" ID="Freemind_Link_91511503" MODIFIED="1642532608273" TEXT="Tamb&#xe9;m pode ser definido em um POM ancestral remoto">
+<node CREATED="1642532608656" ID="Freemind_Link_891103172" MODIFIED="1642532616882" TEXT="Esta &#xe9; a abordagem usada pelo Spring Boot"/>
+</node>
+<node CREATED="1642532620397" ID="Freemind_Link_1841115799" MODIFIED="1642532716713" TEXT="Tamb&#xe9;m pode ser definido como um POM isolado e &#xa;ent&#xe3;o importado na se&#xe7;&#xe3;o dependencyManagement">
+<node CREATED="1642532670412" ID="Freemind_Link_490897174" MODIFIED="1642532696881" TEXT="Esta &#xe9; a abordagem usada pelo Spring Cloud"/>
+</node>
+</node>
+</node>
 <node CREATED="1642086629517" ID="Freemind_Link_1712719312" MODIFIED="1642086642848" POSITION="right" TEXT="Multi Module">
 <node CREATED="1642086643728" ID="Freemind_Link_928490327" MODIFIED="1642086658242" TEXT="Um projeto pode ter subprojetos"/>
 <node CREATED="1642086658917" ID="Freemind_Link_1143824216" MODIFIED="1642086674107" TEXT="Cada m&#xf3;dulo (sub projeto) tem seu pr&#xf3;prio pom.xml"/>
-<node CREATED="1642086675823" ID="Freemind_Link_1118442436" MODIFIED="1642086691778" TEXT="O pom.xml de cada subprojeto herda as proriedades do pom.xml ancestral"/>
+<node CREATED="1642086675823" ID="Freemind_Link_1118442436" MODIFIED="1642086691778" TEXT="O pom.xml de cada subprojeto herda as proriedades do pom.xml ancestral">
+<node CREATED="1642516811876" ID="Freemind_Link_1753493372" LINK="#Freemind_Link_1481488248" MODIFIED="1642516834903" TEXT="Recomendado usar o plugin flatten nesse caso"/>
+</node>
 <node CREATED="1642086694039" ID="Freemind_Link_96856291" MODIFIED="1642086697696" TEXT="The Reactor">
 <node CREATED="1642086700487" ID="Freemind_Link_1954743096" MODIFIED="1642086713936" TEXT="Respons&#xe1;vel por gerar o build de cada m&#xf3;dulo do projeto"/>
 <node CREATED="1642086721311" ID="Freemind_Link_1335078676" MODIFIED="1642086873742" TEXT="Determina a ordem&#xa;de build dos m&#xf3;dulos">
@@ -468,7 +492,7 @@
 <node CREATED="1638472158320" ID="Freemind_Link_1976183419" MODIFIED="1638472161451" TEXT="Use: pluginRepository"/>
 <node CREATED="1638472166896" ID="Freemind_Link_1018997388" MODIFIED="1638472175447" TEXT="pluginRepository &#xe9; semelhante &#xe0; tag repository"/>
 </node>
-<node CREATED="1637008865601" ID="Freemind_Link_1609400078" MODIFIED="1637009939902" TEXT="Build Lifecycle">
+<node CREATED="1637008865601" FOLDED="true" ID="Freemind_Link_1609400078" MODIFIED="1637009939902" TEXT="Build Lifecycle">
 <node CREATED="1637009946050" ID="Freemind_Link_149145873" MODIFIED="1637009947894" TEXT="clean">
 <node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_1373832113" MODIFIED="1637008890821" TEXT="clean">
 <node CREATED="1637008913641" ID="Freemind_Link_217045423" MODIFIED="1637008927750" TEXT="Criado para remover os arquivos gerados durante o build do projeto"/>
@@ -838,6 +862,50 @@
 <node CREATED="1639060604867" ID="Freemind_Link_260219119" MODIFIED="1639060608171" TEXT="Configura&#xe7;&#xe3;o:">
 <node CREATED="1639064651959" ID="Freemind_Link_869865015" LINK="https://spotbugs.readthedocs.io/en/latest/maven.html" MODIFIED="1639064651959" TEXT="https://spotbugs.readthedocs.io/en/latest/maven.html"/>
 <node CREATED="1639065114045" ID="Freemind_Link_1909457933" MODIFIED="1639065133128" TEXT="Pode ser configurado para eliminar falsos positivos ou n&#xe3;o exibir alertas espec&#xed;ficos"/>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_1481488248" MODIFIED="1642516322983" TEXT="flatten">
+<node CREATED="1637006327708" ID="Freemind_Link_562154431" MODIFIED="1642516793757" TEXT="Ideal quando se usa subm&#xf3;dulos combinado com o uso de&#xa;proriedades din&#xe2;micas declaradas no pom.xml do projeto pai">
+<node CREATED="1642516729930" ID="Freemind_Link_635814008" MODIFIED="1642516749725" TEXT="Isso impede a distribui&#xe7;&#xe3;o dos m&#xf3;dulos para outras aplica&#xe7;&#xf5;es"/>
+<node CREATED="1642516760199" ID="Freemind_Link_1991040446" MODIFIED="1642516773292" TEXT="Quem n&#xe3;o tiver a vari&#xe1;vel declarada n&#xe3;o poder&#xe1; usar seus subm&#xf3;dulos"/>
+</node>
+<node CREATED="1642516350697" ID="Freemind_Link_1339608704" MODIFIED="1642516624646" TEXT="O que resolve?">
+<node CREATED="1642516567774" ID="Freemind_Link_1272054312" MODIFIED="1642516568986" TEXT="https://www.udemy.com/course/apache-maven-beginner-to-guru/learn/lecture/12953568#overview"/>
+<node CREATED="1642516359094" ID="Freemind_Link_417107339" MODIFIED="1642516559060" TEXT="Se no pom.xml do projeto pai voc&#xea; declarar uma propriedade &apos;revision&apos;, que cont&#xe9;m o n&#xfa;mero da vers&#xe3;o do projeto e nos pom.xml dos projetos filhos voc&#xea; faz uso da propriedade declarada no pom.xml do projeto pai ent&#xe3;o quando voc&#xea; fizer um &quot;mvn install&quot;, esses pom.xml ser&#xe3;o colocados no reposit&#xf3;rio local com o uso dessas vari&#xe1;veis. Qualquer um que usar algum desses m&#xf3;dulos isoladamente experimentar&#xe1; um problema caso n&#xe3;o tenha a vari&#xe1;vel declarada no pom.xml de seu projeto."/>
+</node>
+<node CREATED="1642517265961" ID="Freemind_Link_359715749" MODIFIED="1642517323824" TEXT="Esse plugin gera arquivos pom.xml substituindo o uso das propriedaes din&#xe2;micas pelos seus respectivos valores e esses pom.xml alterados (flattened) &#xe9; que v&#xe3;o para o reposit&#xf3;rio local na fase de &apos;install&apos;"/>
+<node CREATED="1639060604867" ID="Freemind_Link_954783595" MODIFIED="1639060608171" TEXT="Configura&#xe7;&#xe3;o:">
+<node CREATED="1642517103797" ID="Freemind_Link_1083635149" MODIFIED="1642517104813" TEXT="https://www.mojohaus.org/flatten-maven-plugin/"/>
+<node CREATED="1642517125409" ID="Freemind_Link_1046536774" MODIFIED="1642517126085" TEXT="https://www.mojohaus.org/flatten-maven-plugin/usage.html">
+<node CREATED="1642518542236" ID="Freemind_Link_1758292273" MODIFIED="1642518700409" TEXT="Ao habilitarmos o flattening, ele se vincula &#xe0; phase &apos;process-resources&apos; e executa o goal &apos;flatten&apos; do plugin"/>
+<node CREATED="1642518542236" ID="Freemind_Link_1263821980" MODIFIED="1642518690185" TEXT="Ao habilitarmos o flatten.clean, ele se vincula &#xe0; phase &apos;clean&apos; e executa o goal &apos;clean&apos; do plugin"/>
+</node>
+<node CREATED="1642517935834" ID="Freemind_Link_1824733916" MODIFIED="1642518034820" TEXT="Na tag &apos;configuration&apos;, use a configura&#xe7;&#xe3;o&#xa;&apos;flattenMode&apos; com o valor &apos;bom&apos;">
+<node COLOR="#0000ff" CREATED="1642517966450" ID="Freemind_Link_1633367936" MODIFIED="1642518019332" TEXT="&lt;configuration&gt;&#xa;    &lt;flattenMode&gt;bom&lt;/flattenMode&gt;&#xa;&lt;/configuration&gt;"/>
+</node>
+<node CREATED="1642518312351" ID="Freemind_Link_885427754" MODIFIED="1642518347541" TEXT="&#xc9; uma boa pr&#xe1;tica adicionar &apos;.flattened-pom.xml&apos; ao &apos;.gitignore&apos; do seu projeto"/>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_1357833659" MODIFIED="1642526196984" TEXT="enforcer">
+<node CREATED="1642526283706" ID="Freemind_Link_1515252263" MODIFIED="1642526284710" TEXT="https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-enforcer-plugin"/>
+<node CREATED="1642530585477" ID="Freemind_Link_1962240290" MODIFIED="1642530586113" TEXT="https://www.udemy.com/course/apache-maven-beginner-to-guru/learn/lecture/12953570#overview"/>
+<node CREATED="1637006327708" ID="Freemind_Link_484572183" MODIFIED="1642526214785" TEXT="For&#xe7;a algumas regras no build. Caso falhem, o build &#xe9; falhado for&#xe7;adamente">
+<node CREATED="1642526218603" ID="Freemind_Link_1696985067" MODIFIED="1642526236911" TEXT="Ex: ">
+<node CREATED="1642526238213" ID="Freemind_Link_1541904810" MODIFIED="1642526248382" TEXT="For&#xe7;ar vers&#xe3;o espec&#xed;fica do Java">
+<node CREATED="1642530334266" ID="Freemind_Link_364169944" MODIFIED="1642530335042" TEXT="requireJavaVersion "/>
+</node>
+<node CREATED="1642526238213" ID="Freemind_Link_197809870" MODIFIED="1642526266353" TEXT="For&#xe7;ar intervalo de vers&#xf5;es v&#xe1;lidas para o Java">
+<node CREATED="1642530334266" ID="Freemind_Link_685050523" MODIFIED="1642530335042" TEXT="requireJavaVersion "/>
+</node>
+<node CREATED="1642526238213" ID="Freemind_Link_1323202205" MODIFIED="1642526273069" TEXT="For&#xe7;ar intervalo de vers&#xf5;es v&#xe1;lidas para o Maven">
+<node CREATED="1642530344182" MODIFIED="1642530344182" TEXT="requireMavenVersion"/>
+</node>
+</node>
+</node>
+<node CREATED="1639060604867" ID="Freemind_Link_194850307" MODIFIED="1639060608171" TEXT="Configura&#xe7;&#xe3;o:">
+<node CREATED="1642530204849" ID="Freemind_Link_1809291327" MODIFIED="1642530205582" TEXT="https://maven.apache.org/enforcer/maven-enforcer-plugin/"/>
+<node CREATED="1642530210544" ID="Freemind_Link_1092182780" MODIFIED="1642530211396" TEXT="https://maven.apache.org/enforcer/maven-enforcer-plugin/usage.html"/>
+<node CREATED="1642530662396" ID="Freemind_Link_1278923953" MODIFIED="1642530663031" TEXT="https://maven.apache.org/enforcer/enforcer-rules/versionRanges.html"/>
 </node>
 </node>
 </node>
