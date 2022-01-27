@@ -410,12 +410,11 @@
 </node>
 </node>
 </node>
-<node CREATED="1642531386528" ID="Freemind_Link_616584117" MODIFIED="1642531389062" POSITION="right" TEXT="BOM">
+<node CREATED="1642531386528" FOLDED="true" ID="Freemind_Link_616584117" MODIFIED="1642531389062" POSITION="right" TEXT="BOM">
 <node CREATED="1642531389744" ID="Freemind_Link_1790183288" MODIFIED="1642531414004" TEXT="Bill of Material">
 <node CREATED="1642531414873" ID="Freemind_Link_1638386967" MODIFIED="1642531423525" TEXT="Lista de materiais"/>
 </node>
 <node CREATED="1642531885433" ID="Freemind_Link_1689057913" MODIFIED="1642531905179" TEXT="Depend&#xea;ncias declaradas na se&#xe7;&#xe3;o dependencyManagement do POM"/>
-<node CREATED="1642531932769" ID="Freemind_Link_297214081" MODIFIED="1642531965988" TEXT="Depend&#xea;ncias qualificadas s&#xe3;o listadas na se&#xe7;&#xe3;o dependencyManagement do POM"/>
 <node CREATED="1642531967881" ID="Freemind_Link_1040702217" MODIFIED="1642532000996" TEXT="Depend&#xea;ncias declaradas na se&#xe7;&#xe3;o dependencies herdam da se&#xe7;&#xe3;o dependencyManagement (version / packaging)"/>
 <node CREATED="1642532005656" ID="Freemind_Link_1397361053" MODIFIED="1642532014964" TEXT="Tipicamente usado para padronizar vers&#xf5;es"/>
 <node CREATED="1642532162239" ID="Freemind_Link_68252568" MODIFIED="1642532258738" TEXT="Depend&#xea;ncias declarada na se&#xe7;&#xe3;o dependencyManagement N&#xc3;O se tornam depend&#xea;ncias transitivas do artefato"/>
@@ -478,7 +477,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1575574182808" FOLDED="true" ID="Freemind_Link_1468390236" MODIFIED="1575574184422" POSITION="right" TEXT="Plugins">
+<node CREATED="1575574182808" ID="Freemind_Link_1468390236" MODIFIED="1575574184422" POSITION="right" TEXT="Plugins">
 <node CREATED="1575574678611" ID="Freemind_Link_821896362" MODIFIED="1575574683130" TEXT="https://maven.apache.org/plugins/index.html">
 <icon BUILTIN="attach"/>
 </node>
@@ -906,6 +905,14 @@
 <node CREATED="1642530204849" ID="Freemind_Link_1809291327" MODIFIED="1642530205582" TEXT="https://maven.apache.org/enforcer/maven-enforcer-plugin/"/>
 <node CREATED="1642530210544" ID="Freemind_Link_1092182780" MODIFIED="1642530211396" TEXT="https://maven.apache.org/enforcer/maven-enforcer-plugin/usage.html"/>
 <node CREATED="1642530662396" ID="Freemind_Link_1278923953" MODIFIED="1642530663031" TEXT="https://maven.apache.org/enforcer/enforcer-rules/versionRanges.html"/>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_1867162085" MODIFIED="1643243950880" TEXT="git-commit-id-plugin">
+<node CREATED="1642526283706" ID="Freemind_Link_579115989" MODIFIED="1643243734176" TEXT="Gera informa&#xe7;&#xf5;es da revis&#xe3;o atual do c&#xf3;digo segundo o Git"/>
+<node CREATED="1642530585477" ID="Freemind_Link_1854442001" MODIFIED="1643243727890" TEXT="S&#xf3; serve para projetos versionados pelo Git"/>
+<node CREATED="1643243860006" ID="Freemind_Link_885686613" MODIFIED="1643243890937" TEXT="Ser&#xe1; gerado um arquivo de nome git.properties na pasta target do projeto na fase de build do Maven"/>
+<node CREATED="1642530204849" ID="Freemind_Link_761767407" MODIFIED="1643243744961" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1642517966450" ID="Freemind_Link_103636324" MODIFIED="1643243856729" TEXT="  &lt;plugin&gt;&#xa;    &lt;groupId&gt;pl.project13.maven&lt;/groupId&gt;&#xa;    &lt;artifactId&gt;git-commit-id-plugin&lt;/artifactId&gt;&#xa;  &lt;/plugin&gt;"/>
 </node>
 </node>
 </node>

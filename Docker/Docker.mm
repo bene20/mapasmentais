@@ -62,7 +62,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1563998723358" FOLDED="true" ID="Freemind_Link_1353472525" MODIFIED="1563998725467" POSITION="right" TEXT="A&#xe7;&#xf5;es">
+<node CREATED="1563998723358" ID="Freemind_Link_1353472525" MODIFIED="1563998725467" POSITION="right" TEXT="A&#xe7;&#xf5;es">
 <node CREATED="1586036574169" ID="Freemind_Link_1039136497" MODIFIED="1586036580439" TEXT="Container">
 <node CREATED="1563998741165" ID="Freemind_Link_1874998913" MODIFIED="1587400429560" TEXT="Baixar e carregar &#xa;uma imagem">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1511048246" MODIFIED="1586036628804" TEXT="docker container run nomeimagem">
@@ -295,7 +295,12 @@
 </node>
 <node CREATED="1587400246272" ID="Freemind_Link_1258651073" MODIFIED="1587400270545" TEXT="Exportar o container &#xa;para arquivo tar">
 <node CREATED="1587400289509" ID="Freemind_Link_949848612" MODIFIED="1587400310339" TEXT="Diferente do commit pois n&#xe3;o salva a imagem no repo local"/>
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_94124432" MODIFIED="1587400287925" TEXT="docker container export CONTAINERID">
+<node CREATED="1643146342231" ID="Freemind_Link_1863930628" MODIFIED="1643146353564" TEXT="A exporta&#xe7;&#xe3;o &#xe9; feita como uma imagem">
+<node CREATED="1643146307001" ID="Freemind_Link_1744752447" MODIFIED="1643156967684" TEXT="A importa&#xe7;&#xe3;o ser&#xe1; feita via &apos;docker import nomearquivo.tar&apos;">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_94124432" MODIFIED="1643142788412" TEXT="docker container export CONTAINERID --output nomearquivo.tar">
 <icon BUILTIN="wizard"/>
 </node>
 </node>
@@ -680,7 +685,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1564003157733" ID="Freemind_Link_95353128" MODIFIED="1588539942378" POSITION="right" TEXT="Compose">
+<node CREATED="1564003157733" FOLDED="true" ID="Freemind_Link_95353128" MODIFIED="1588539942378" POSITION="right" TEXT="Compose">
 <node CREATED="1564003164413" ID="Freemind_Link_332229" MODIFIED="1564003171627" TEXT="Usa o padr&#xe3;o yaml">
 <node CREATED="1564074495999" ID="Freemind_Link_389868139" MODIFIED="1564074516932" TEXT="Arquivo com extens&#xe3;o yml ou yaml">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_924072677" MODIFIED="1564003205056" TEXT="Ex: arquivo docker-compose.yml">
