@@ -1,7 +1,7 @@
 <map version="0.8.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1553000049733" ID="Freemind_Link_683934292" LINK="../Mapas.mm" MODIFIED="1553774808576" TEXT="Git">
-<node CREATED="1553000786261" ID="Freemind_Link_1938373102" MODIFIED="1587911575833" POSITION="right" TEXT="Configura&#xe7;&#xe3;o">
+<node CREATED="1553000786261" FOLDED="true" ID="Freemind_Link_1938373102" MODIFIED="1587911575833" POSITION="right" TEXT="Configura&#xe7;&#xe3;o">
 <node CREATED="1587911443049" ID="Freemind_Link_1059939909" MODIFIED="1587911453210" TEXT="Estrutura de &#xa;configura&#xe7;&#xe3;o do Git">
 <node CREATED="1587911456291" ID="Freemind_Link_1246184340" MODIFIED="1587911512140" TEXT="&#xc9; hier&#xe1;rquica"/>
 <node CREATED="1587911460801" ID="Freemind_Link_504979270" MODIFIED="1587911518553" TEXT="Local (Repository)">
@@ -190,7 +190,7 @@
 <node CREATED="1554816200010" ID="Freemind_Link_938335308" MODIFIED="1554816219389" TEXT="Atualiza o stage e a working directory"/>
 </node>
 </node>
-<node CREATED="1553000895340" ID="Freemind_Link_2401123" MODIFIED="1553000897632" POSITION="right" TEXT="Consultas">
+<node CREATED="1553000895340" FOLDED="true" ID="Freemind_Link_2401123" MODIFIED="1553000897632" POSITION="right" TEXT="Consultas">
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_498123252" MODIFIED="1553000902888" TEXT="git ls-files">
 <icon BUILTIN="wizard"/>
 <node CREATED="1553000483439" ID="Freemind_Link_1748635380" MODIFIED="1553000912752" TEXT="Lista os arquivos versionados pelo git"/>
@@ -498,6 +498,11 @@
 <icon BUILTIN="clanbomber"/>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1554442024" MODIFIED="1643932000758" TEXT="--orphan">
+<icon BUILTIN="flag"/>
+<node CREATED="1554299422163" ID="Freemind_Link_1494133338" MODIFIED="1643932040179" TEXT="Cria uma branch  como se fosse um novo reposit&#xf3;rio (n&#xe3;o tem um ancestral comum)"/>
+<node CREATED="1643932048857" ID="Freemind_Link_1308440978" MODIFIED="1643932075972" TEXT="Exemplo de uso: ter m&#xfa;ltiplos projetos em um &#xfa;nico reposit&#xf3;rio, um em cada branch"/>
+</node>
 </node>
 <node COLOR="#0000ff" CREATED="1553000479465" FOLDED="true" ID="Freemind_Link_1691917367" MODIFIED="1553603468778" TEXT="git rebase">
 <icon BUILTIN="wizard"/>
@@ -650,7 +655,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1554811725334" ID="Freemind_Link_931340485" MODIFIED="1554811728168" POSITION="right" TEXT="Resets">
+<node CREATED="1554811725334" FOLDED="true" ID="Freemind_Link_931340485" MODIFIED="1554811728168" POSITION="right" TEXT="Resets">
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_465375070" MODIFIED="1553607301551" TEXT="git checkout">
 <icon BUILTIN="wizard"/>
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_625984500" MODIFIED="1554811738078" TEXT="nomeDoArquivo">
@@ -715,7 +720,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1595536084713" ID="Freemind_Link_836478549" MODIFIED="1595536087048" POSITION="right" TEXT="Hooks">
+<node CREATED="1595536084713" FOLDED="true" ID="Freemind_Link_836478549" MODIFIED="1595536087048" POSITION="right" TEXT="Hooks">
 <node CREATED="1595536095172" ID="Freemind_Link_1651522755" MODIFIED="1595536109465" TEXT="Para definir um hook globalmente:">
 <node COLOR="#0000ff" CREATED="1595536117196" ID="Freemind_Link_1891744897" MODIFIED="1595536148671" TEXT="git config --global core.hooksPath /pat/to/global/hooks"/>
 </node>
@@ -915,7 +920,7 @@
 </node>
 <node CREATED="1554813494951" FOLDED="true" ID="Freemind_Link_1682701067" MODIFIED="1554813500139" POSITION="right" TEXT="Ciclos">
 <node CREATED="1554813799092" ID="Freemind_Link_630822716" MODIFIED="1554813801352" TEXT="Fonte: http://marklodato.github.io/visual-git-guide/index-en.html"/>
-<node CREATED="1554813624670" ID="Freemind_Link_1186048994" MODIFIED="1554813627618" TEXT="Uso b&#xe1;sico">
+<node CREATED="1554813624670" FOLDED="true" ID="Freemind_Link_1186048994" MODIFIED="1554813627618" TEXT="Uso b&#xe1;sico">
 <node CREATED="1554813633662" ID="Freemind_Link_1414012358" MODIFIED="1554813642226" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/UsoBasico.png&quot;&gt;"/>
 <node CREATED="1554813728988" ID="Freemind_Link_573517664" MODIFIED="1554813740129" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/UsoBasico2.png&quot;&gt;"/>
 </node>
@@ -925,8 +930,46 @@
 <node CREATED="1554813828292" FOLDED="true" ID="Freemind_Link_1445877899" MODIFIED="1554813829999" TEXT="Diff">
 <node CREATED="1554813845443" ID="Freemind_Link_880786557" MODIFIED="1554813850367" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/Diff.png&quot;&gt;"/>
 </node>
-<node CREATED="1554818634075" ID="Freemind_Link_369526872" MODIFIED="1554818635679" TEXT="Reset">
+<node CREATED="1554818634075" FOLDED="true" ID="Freemind_Link_369526872" MODIFIED="1554818635679" TEXT="Reset">
 <node CREATED="1554818697123" ID="Freemind_Link_1943799486" MODIFIED="1554818701463" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/Reset.png&quot;&gt;"/>
+</node>
+</node>
+<node CREATED="1643932131400" ID="Freemind_Link_1673995076" MODIFIED="1643945186639" POSITION="right" TEXT="Situa&#xe7;&#xf5;es&#xa;peculiares">
+<icon BUILTIN="idea"/>
+<node CREATED="1643932136070" FOLDED="true" ID="Freemind_Link_1995554900" MODIFIED="1643932143962" TEXT="Resetar um reposit&#xf3;rio">
+<node CREATED="1643932144519" ID="Freemind_Link_1964665779" MODIFIED="1643932154618" TEXT="Apagando todos os commits mas mantendo a vers&#xe3;o atual do c&#xf3;digo"/>
+<node CREATED="1643932157550" ID="Freemind_Link_730451589" MODIFIED="1643932158698" TEXT="Passos">
+<node CREATED="1643932170567" ID="Freemind_Link_1701497881" MODIFIED="1643932194230" TEXT="Checkout">
+<icon BUILTIN="full-1"/>
+<node CREATED="1643944878550" ID="Freemind_Link_781813962" MODIFIED="1643944894561" TEXT="Cria uma nova branch &#xf3;rf&#xe3; (sem ancestral comum)"/>
+<node COLOR="#0000ff" CREATED="1643932180405" ID="Freemind_Link_1972073417" MODIFIED="1643932189994" TEXT="git checkout --orphan latest_branch"/>
+</node>
+<node CREATED="1643932170567" ID="Freemind_Link_396554749" MODIFIED="1643944842204" TEXT="Add files">
+<icon BUILTIN="full-2"/>
+<node CREATED="1643944899730" ID="Freemind_Link_1042917420" MODIFIED="1643944931882" TEXT="Adiciona todos os arquivos da pasta de trabalho &#xe0; nova branch "/>
+<node COLOR="#0000ff" CREATED="1643932180405" ID="Freemind_Link_897610289" MODIFIED="1643944871507" TEXT="git add -A"/>
+</node>
+<node CREATED="1643932170567" ID="Freemind_Link_929467128" MODIFIED="1643944852203" TEXT="Commit">
+<icon BUILTIN="full-3"/>
+<node CREATED="1643944919693" ID="Freemind_Link_888983729" MODIFIED="1643944928121" TEXT="Comita as mudan&#xe7;as na nova branch"/>
+<node COLOR="#0000ff" CREATED="1643932180405" ID="Freemind_Link_639242048" MODIFIED="1643944959724" TEXT="git commit -am &quot;Mensagem de commit&quot;"/>
+</node>
+<node CREATED="1643932170567" ID="Freemind_Link_899882596" MODIFIED="1643944972225" TEXT="Deleta branch velha">
+<icon BUILTIN="full-4"/>
+<node CREATED="1643945000743" ID="Freemind_Link_1130253451" MODIFIED="1643945025432" TEXT="Deleta a antiga branch principal,&#xa;com todo o seu hist&#xf3;rico de commits"/>
+<node COLOR="#0000ff" CREATED="1643932180405" ID="Freemind_Link_409495571" MODIFIED="1643945151815" TEXT="git branch -D master"/>
+</node>
+<node CREATED="1643932170567" ID="Freemind_Link_1008265090" MODIFIED="1643944996754" TEXT="Renomeia branch nova">
+<icon BUILTIN="full-5"/>
+<node CREATED="1643945030405" ID="Freemind_Link_1521569359" MODIFIED="1643945056601" TEXT="Renomeia a nova branch &#xf3;rf&#xe3; para &#xa;main (ela passar&#xe1; a ser a brnach principal)"/>
+<node COLOR="#0000ff" CREATED="1643932180405" ID="Freemind_Link_1537610368" MODIFIED="1643945100227" TEXT="git branch -m master"/>
+</node>
+<node CREATED="1643932170567" ID="Freemind_Link_1649250177" MODIFIED="1643945084504" TEXT="Atualiza o reposit&#xf3;rio remoto">
+<icon BUILTIN="full-6"/>
+<node CREATED="1643945116117" ID="Freemind_Link_948375227" MODIFIED="1643945137226" TEXT="Finalmente for&#xe7;a a atualiza&#xe7;&#xe3;o da&#xa;branch master no reposit&#xf3;rio remoto"/>
+<node COLOR="#0000ff" CREATED="1643932180405" ID="Freemind_Link_1445254005" MODIFIED="1643945096216" TEXT="git push -f origin master"/>
+</node>
+</node>
 </node>
 </node>
 </node>

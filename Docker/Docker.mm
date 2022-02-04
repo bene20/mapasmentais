@@ -293,15 +293,41 @@
 <icon BUILTIN="wizard"/>
 </node>
 </node>
-<node CREATED="1587400246272" ID="Freemind_Link_1258651073" MODIFIED="1587400270545" TEXT="Exportar o container &#xa;para arquivo tar">
+<node CREATED="1587400246272" ID="Freemind_Link_1258651073" MODIFIED="1643289586018" TEXT="Exporta&#xe7;&#xe3;o de container &#xa;para arquivo tar">
 <node CREATED="1587400289509" ID="Freemind_Link_949848612" MODIFIED="1587400310339" TEXT="Diferente do commit pois n&#xe3;o salva a imagem no repo local"/>
-<node CREATED="1643146342231" ID="Freemind_Link_1863930628" MODIFIED="1643146353564" TEXT="A exporta&#xe7;&#xe3;o &#xe9; feita como uma imagem">
-<node CREATED="1643146307001" ID="Freemind_Link_1744752447" MODIFIED="1643156967684" TEXT="A importa&#xe7;&#xe3;o ser&#xe1; feita via &apos;docker import nomearquivo.tar&apos;">
-<icon BUILTIN="messagebox_warning"/>
-</node>
-</node>
+<node CREATED="1643146342231" ID="Freemind_Link_1863930628" MODIFIED="1643289162998" TEXT="N&#xe3;o se pode combinar &apos;export&apos; com &apos;&apos;load&apos; e nem &apos;save&apos; com &apos;import&apos;"/>
+<node CREATED="1643289013149" ID="Freemind_Link_77092394" MODIFIED="1643289018818" TEXT="import/export">
+<node COLOR="#0000ff" CREATED="1643289065289" ID="Freemind_Link_1490893420" MODIFIED="1643289485715" TEXT="export">
+<node CREATED="1643289027812" ID="Freemind_Link_1088422058" MODIFIED="1643289073592" TEXT="Salva o container atual como uma imagem e o exporta em um arquivo tar"/>
+<node CREATED="1643289076163" ID="Freemind_Link_1913022604" MODIFIED="1643289097918" TEXT="N&#xe3;o &#xe9; salvo o hist&#xf3;rico das imagens (layers)"/>
+<node CREATED="1643289102692" ID="Freemind_Link_1780110736" MODIFIED="1643289104991" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_94124432" MODIFIED="1643142788412" TEXT="docker container export CONTAINERID --output nomearquivo.tar">
 <icon BUILTIN="wizard"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1643289110331" ID="Freemind_Link_1889703145" MODIFIED="1643289490368" TEXT="import">
+<node CREATED="1643289374213" ID="Freemind_Link_932680374" MODIFIED="1643289386699" TEXT="Carrega uma imagem gerada pelo comando export"/>
+<node CREATED="1643289102692" ID="Freemind_Link_592089304" MODIFIED="1643289104991" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_259402822" MODIFIED="1643289627582" TEXT="docker image import nomearquivo.tar nomeimagem:tag">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1643289019667" ID="Freemind_Link_1681670069" MODIFIED="1643289026454" TEXT="load/save">
+<node COLOR="#0000ff" CREATED="1643289468135" ID="Freemind_Link_18072814" MODIFIED="1643289495819" TEXT="save">
+<node CREATED="1643289027812" ID="Freemind_Link_1324697510" MODIFIED="1643289073592" TEXT="Salva o container atual como uma imagem e o exporta em um arquivo tar"/>
+<node CREATED="1643289076163" ID="Freemind_Link_537973203" MODIFIED="1643289536955" TEXT="Todo o hist&#xf3;rico das imagens (layers) &#xe9; salvo no arquivo tar"/>
+</node>
+<node COLOR="#0000ff" CREATED="1643289470510" ID="Freemind_Link_367904531" MODIFIED="1643289500192" TEXT="load">
+<node CREATED="1643289374213" ID="Freemind_Link_99795737" MODIFIED="1643289549155" TEXT="Carrega uma imagem gerada pelo comando save"/>
+<node CREATED="1643289102692" ID="Freemind_Link_1922108364" MODIFIED="1643289104991" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_852287512" MODIFIED="1643289560538" TEXT="docker image load nomearquivo.tar">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
+</node>
 </node>
 </node>
 <node CREATED="1587559794682" ID="Freemind_Link_429092731" MODIFIED="1587559801800" TEXT="Comparar dois containers">
