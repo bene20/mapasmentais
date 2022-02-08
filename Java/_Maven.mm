@@ -220,13 +220,177 @@
 </node>
 <node CREATED="1575574393725" ID="Freemind_Link_1714564050" MODIFIED="1575574398009" POSITION="right" TEXT="Configura&#xe7;&#xe3;o">
 <node CREATED="1575574398672" ID="Freemind_Link_1644666598" MODIFIED="1575574405716" TEXT="Arquivo settings.xml">
-<node CREATED="1575574406024" ID="Freemind_Link_1643492551" MODIFIED="1575574411179" TEXT="Dentro da pasta .m2"/>
+<node CREATED="1575574406024" ID="Freemind_Link_1643492551" MODIFIED="1644347620183" TEXT="Dentro da pasta .m2 da pasta home de seu usu&#xe1;rio">
+<node CREATED="1644347620171" ID="Freemind_Link_493190628" MODIFIED="1644347621647" TEXT="Ex:">
+<node CREATED="1644347605860" ID="Freemind_Link_1969588536" MODIFIED="1644347624854" TEXT="/home/meuusuario/.m2">
+<node CREATED="1644347612793" ID="Freemind_Link_1395149688" MODIFIED="1644347615855" TEXT="No Linux"/>
+</node>
+<node CREATED="1644347626466" ID="Freemind_Link_1750495959" MODIFIED="1644347639023" TEXT="c:\Users\meuusuario\.m2">
+<node CREATED="1644347639547" ID="Freemind_Link_1264089470" MODIFIED="1644347641797" TEXT="No Windows"/>
+</node>
+</node>
+</node>
 <node CREATED="1638218911239" ID="Freemind_Link_446067676" MODIFIED="1638218920188" TEXT="Para saber qual &#xe9; o settings.xml efetivo sendo usado:">
-<node COLOR="#0000ff" CREATED="1638218920825" ID="Freemind_Link_1893773803" MODIFIED="1638218929804" TEXT="mvn help: effective-settings"/>
+<node COLOR="#0000ff" CREATED="1638218920825" ID="Freemind_Link_1893773803" MODIFIED="1644343639045" TEXT="&apos;"/>
+</node>
+</node>
+<node CREATED="1643992100612" ID="Freemind_Link_1587062240" MODIFIED="1643992103571" TEXT="Reposit&#xf3;rios">
+<node CREATED="1643992211376" ID="Freemind_Link_1689073745" MODIFIED="1643992217734" TEXT="Ordem padr&#xe3;o do Maven">
+<node CREATED="1643992218023" ID="Freemind_Link_1262376282" MODIFIED="1643992251635" TEXT="Checar o reposit&#xf3;rio local">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1643992231880" ID="Freemind_Link_1655601081" MODIFIED="1643992255999" TEXT="Checar o reposit&#xf3;rio central do maven">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1643992240143" ID="Freemind_Link_399525428" MODIFIED="1643992258286" TEXT="Checar reposit&#xf3;rios adicionais configurados">
+<icon BUILTIN="full-3"/>
+</node>
+</node>
+<node CREATED="1643992326999" ID="Freemind_Link_555563592" MODIFIED="1643992332749" TEXT="Mirrors">
+<node CREATED="1643994431514" ID="Freemind_Link_327513572" LINK="https://maven.apache.org/guides/mini/guide-mirror-settings.html" MODIFIED="1643994431514" TEXT="https://maven.apache.org/guides/mini/guide-mirror-settings.html"/>
+<node CREATED="1643994413731" ID="Freemind_Link_552196360" MODIFIED="1644342327053" TEXT="Lista dos mirrors do Maven central">
+<node CREATED="1643994418351" LINK="https://repo.maven.apache.org/maven2/.meta/repository-metadata.xml" MODIFIED="1643994418351" TEXT="https://repo.maven.apache.org/maven2/.meta/repository-metadata.xml"/>
+</node>
+<node CREATED="1643992333232" ID="Freemind_Link_864036000" MODIFIED="1643992355748" TEXT="S&#xe3;o usados para sobrescrever os reposit&#xf3;rios default"/>
+<node CREATED="1643992362593" ID="Freemind_Link_360427945" MODIFIED="1643992371741" TEXT="S&#xe3;o configurados no settings.xml">
+<node CREATED="1644345318362" ID="Freemind_Link_1309958892" MODIFIED="1644345358135" TEXT="Note que embora o pom efetivo n&#xe3;o mostre o mirror como reposit&#xf3;rio a ser usado, &#xe9; o mirror que &#xe9; usado ao se fazer os downloads">
+<icon BUILTIN="messagebox_warning"/>
 </node>
 </node>
 </node>
-<node CREATED="1575574414424" ID="Freemind_Link_1184486385" MODIFIED="1575574417491" POSITION="right" TEXT="Comando">
+<node CREATED="1643992454561" ID="Freemind_Link_1477602033" MODIFIED="1643992462741" TEXT="Podem ser definidos">
+<node CREATED="1643992463078" ID="Freemind_Link_1671256370" MODIFIED="1643992470509" TEXT="no pom do projeto">
+<node CREATED="1643992484800" ID="Freemind_Link_1454677500" MODIFIED="1643992498130" TEXT="O reposit&#xf3;rio ser&#xe1; espec&#xed;fico para o projeto em quest&#xe3;o"/>
+</node>
+<node CREATED="1643992470969" ID="Freemind_Link_418488072" MODIFIED="1643992482813" TEXT="na lista de reposit&#xf3;rios do settings.xml">
+<node CREATED="1643992500065" ID="Freemind_Link_1945621972" MODIFIED="1643992520557" TEXT="O reposit&#xf3;rio ser&#xe1; definido para todos os projetos do sistema"/>
+</node>
+</node>
+<node CREATED="1643992600305" ID="Freemind_Link_973693740" MODIFIED="1643992601886" TEXT="Elementos">
+<node CREATED="1643992602303" ID="Freemind_Link_851543874" MODIFIED="1643993021536" TEXT="id">
+<icon BUILTIN="forward"/>
+<node CREATED="1643992618817" ID="Freemind_Link_92826639" MODIFIED="1643992627019" TEXT="Valor obrigat&#xf3;rio"/>
+<node CREATED="1643992628350" ID="Freemind_Link_1811805822" MODIFIED="1643992632603" TEXT="Identifica o reposit&#xf3;rio"/>
+<node CREATED="1643992633976" ID="Freemind_Link_1627300953" MODIFIED="1643992655367" TEXT="Por padr&#xe3;o o Maven consultar&#xe1; os reposit&#xf3;rios por ordem alfab&#xe9;tica do id">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+<node CREATED="1643992604480" ID="Freemind_Link_745686569" MODIFIED="1643993019909" TEXT="name">
+<icon BUILTIN="forward"/>
+<node CREATED="1643992658361" ID="Freemind_Link_391052421" MODIFIED="1643992671251" TEXT="Nome amig&#xe1;vel"/>
+</node>
+<node CREATED="1643992606264" ID="Freemind_Link_1378112737" MODIFIED="1643993018326" TEXT="url">
+<icon BUILTIN="forward"/>
+<node CREATED="1643992672867" ID="Freemind_Link_1666479852" MODIFIED="1643992677547" TEXT="URL do reposit&#xf3;rio"/>
+</node>
+<node CREATED="1643992608135" ID="Freemind_Link_1049154189" MODIFIED="1643993016743" TEXT="layout">
+<icon BUILTIN="forward"/>
+<node CREATED="1643992703610" ID="Freemind_Link_1166063637" MODIFIED="1643992720685" TEXT="Existe apenas por quest&#xf5;es de compatibilidades com projetos muito antigos"/>
+<node CREATED="1643992727336" ID="Freemind_Link_894061408" MODIFIED="1643992731347" TEXT="Pouco prov&#xe1;vel de ser usado"/>
+<node CREATED="1643992689256" ID="Freemind_Link_993865791" MODIFIED="1643993073277" TEXT="Valores">
+<node CREATED="1643992692152" ID="Freemind_Link_1158426910" MODIFIED="1643992693806" TEXT="legado"/>
+<node CREATED="1643992695297" ID="Freemind_Link_942407495" MODIFIED="1643992696935" TEXT="default">
+<node CREATED="1643992698832" ID="Freemind_Link_97564398" MODIFIED="1643992702083" TEXT="Valor padr&#xe3;o"/>
+</node>
+</node>
+</node>
+<node CREATED="1643992611531" ID="Freemind_Link_1584859244" MODIFIED="1643993013525" TEXT="releases">
+<icon BUILTIN="forward"/>
+<node CREATED="1643992739874" ID="Freemind_Link_1042199783" MODIFIED="1643992753740" TEXT="Pol&#xed;tica para lidar com downloads de releases"/>
+<node CREATED="1643992883897" ID="Freemind_Link_200084978" MODIFIED="1643993153596" TEXT="enabled">
+<icon BUILTIN="forward"/>
+<node CREATED="1643993195820" ID="Freemind_Link_1823867434" MODIFIED="1643993244568" TEXT="Habilita/desabilita os downloads"/>
+<node CREATED="1643992887456" ID="Freemind_Link_1484337110" MODIFIED="1643992890670" TEXT="true ou false"/>
+</node>
+<node CREATED="1643992893523" ID="Freemind_Link_298523545" MODIFIED="1643993159380" TEXT="updatePolicy">
+<icon BUILTIN="forward"/>
+<node CREATED="1643992921113" ID="Freemind_Link_115878177" MODIFIED="1643992927787" TEXT="O padr&#xe3;o &#xe9; daily"/>
+<node CREATED="1643992929418" ID="Freemind_Link_1793782139" MODIFIED="1643992951798" TEXT="O xxx de interval &#xe9; fornecido em minutos"/>
+<node CREATED="1643993089862" ID="Freemind_Link_823145670" MODIFIED="1643993092983" TEXT="Valores">
+<node CREATED="1643992899985" ID="Freemind_Link_954052955" MODIFIED="1643992914118" TEXT="always, daily, interval:XXX, never"/>
+</node>
+</node>
+<node CREATED="1643992960730" ID="Freemind_Link_431253252" MODIFIED="1643993163372" TEXT="checksumPolicy">
+<icon BUILTIN="forward"/>
+<node CREATED="1643992967630" ID="Freemind_Link_1389973121" MODIFIED="1643992978012" TEXT="O que fazer se a verifica&#xe7;&#xe3;o do artefato falhar"/>
+<node CREATED="1643993103364" ID="Freemind_Link_289126032" MODIFIED="1643993105295" TEXT="Valores">
+<node CREATED="1643992978994" ID="Freemind_Link_364762792" MODIFIED="1643992987662" TEXT="ignore, fail ou warn"/>
+</node>
+</node>
+</node>
+<node CREATED="1643992613278" ID="Freemind_Link_1942998349" MODIFIED="1643993010553" TEXT="snapshots">
+<icon BUILTIN="forward"/>
+<node CREATED="1643992739874" ID="Freemind_Link_576947918" MODIFIED="1643992778584" TEXT="Pol&#xed;tica para lidar com downloads de snapshots"/>
+<node CREATED="1643992883897" ID="Freemind_Link_656604736" MODIFIED="1643993153597" TEXT="enabled">
+<arrowlink DESTINATION="Freemind_Link_200084978" ENDARROW="Default" ENDINCLINATION="159;0;" ID="Freemind_Arrow_Link_808671372" STARTARROW="None" STARTINCLINATION="159;0;"/>
+<icon BUILTIN="forward"/>
+</node>
+<node CREATED="1643992893523" ID="Freemind_Link_406017600" MODIFIED="1643993159382" TEXT="updatePolicy">
+<arrowlink DESTINATION="Freemind_Link_298523545" ENDARROW="Default" ENDINCLINATION="136;0;" ID="Freemind_Arrow_Link_1244013825" STARTARROW="None" STARTINCLINATION="136;0;"/>
+<icon BUILTIN="forward"/>
+</node>
+<node CREATED="1643992960730" ID="Freemind_Link_968920269" MODIFIED="1643993163374" TEXT="checksumPolicy">
+<arrowlink DESTINATION="Freemind_Link_431253252" ENDARROW="Default" ENDINCLINATION="102;0;" ID="Freemind_Arrow_Link_502654258" STARTARROW="None" STARTINCLINATION="102;0;"/>
+<icon BUILTIN="forward"/>
+</node>
+</node>
+</node>
+<node CREATED="1644345468595" ID="Freemind_Link_179741778" MODIFIED="1644345577484" TEXT="Os principais">
+<node CREATED="1644345471561" ID="Freemind_Link_68920932" MODIFIED="1644345472980" TEXT="Central">
+<node CREATED="1644345538705" ID="Freemind_Link_1334583697" MODIFIED="1644345551007" TEXT="URL: http://central.maven.org/maven2/"/>
+<node CREATED="1644345473504" ID="Freemind_Link_1828708914" MODIFIED="1644345487884" TEXT="Reposit&#xf3;rio oficial do Maven (o principal)"/>
+<node CREATED="1644345517547" ID="Freemind_Link_1677896529" MODIFIED="1644345532070" TEXT="Reposit&#xf3;rio default usado pelo Apache maven"/>
+<node CREATED="1644345493592" ID="Freemind_Link_1380907087" MODIFIED="1644345503717" TEXT="Considerado o &apos;grand-daddy&apos; dos reposit&#xf3;rios Maven"/>
+</node>
+<node CREATED="1644345595003" ID="Freemind_Link_1891276204" MODIFIED="1644345598680" TEXT="Sonatype">
+<node CREATED="1644345638185" ID="Freemind_Link_1415509569" MODIFIED="1644345672654" TEXT="URL: https://oss.sonatype.org/content/repositories/releases/"/>
+<node CREATED="1644345602431" ID="Freemind_Link_987030150" MODIFIED="1644345948810" TEXT="Reposit&#xf3;rio de staging(ensaio) usado para publicar os artefatos do Maven Central"/>
+<node CREATED="1644345627642" ID="Freemind_Link_420750739" MODIFIED="1644345637206" TEXT="Geralmente n&#xe3;o &#xe9; usado diretamente"/>
+<node CREATED="1644345992462" ID="Freemind_Link_564181746" MODIFIED="1644346039456" TEXT="&#xc9; o reposit&#xf3;rio usado quando se quer fazer push dos&#xa;projetos particulares para o maven Central">
+<node CREATED="1644346010173" ID="Freemind_Link_1530393709" MODIFIED="1644346085840" TEXT="Faz-se o push para este reposit&#xf3;rio e a Sonatype &#xe9; que o migra&#xa;para o reposit&#xf3;rio central depois, ap&#xf3;s fazer suas an&#xe1;lises"/>
+</node>
+</node>
+<node CREATED="1644346200524" ID="Freemind_Link_445505715" MODIFIED="1644346201991" TEXT="JCenter">
+<node CREATED="1644346202931" ID="Freemind_Link_228751723" MODIFIED="1644346220111" TEXT="URL: https://jcenter.bintray.com/"/>
+<node CREATED="1644346231195" ID="Freemind_Link_1661424176" MODIFIED="1644346239255" TEXT="Tem o que tem no Maven Central e mais"/>
+<node CREATED="1644346239685" ID="Freemind_Link_1649010724" MODIFIED="1644346288617" TEXT="Reposit&#xf3;rio padr&#xe3;o para Android Studio e Gradle"/>
+<node CREATED="1644346350517" ID="Freemind_Link_559321510" MODIFIED="1644346356167" TEXT="Tem suporte para https"/>
+</node>
+<node CREATED="1644346371362" ID="Freemind_Link_1623323376" MODIFIED="1644346373272" TEXT="JBoss">
+<node CREATED="1644346375508" ID="Freemind_Link_287109145" MODIFIED="1644346397190" TEXT="URL: https://repository.jboss.org/nexus/content/repositories/releases/"/>
+<node CREATED="1644346400476" ID="Freemind_Link_486208407" MODIFIED="1644346411246" TEXT="Artefatos da comunidade JBoss">
+<node CREATED="1644346482955" ID="Freemind_Link_730526620" MODIFIED="1644346498028" TEXT="Artefatos opensource da JBoss"/>
+</node>
+<node CREATED="1644346412594" ID="Freemind_Link_1944140537" MODIFIED="1644346464405" TEXT="Tem reposit&#xf3;rios de releaes, lan&#xe7;amentos de terceiros e snapshots"/>
+</node>
+<node CREATED="1644346522410" ID="Freemind_Link_285879860" MODIFIED="1644346528331" TEXT="Atlassian">
+<node CREATED="1644346531071" ID="Freemind_Link_1146304593" MODIFIED="1644346550395" TEXT="URL: https://packages.atlassian.com/maven/public"/>
+<node CREATED="1644346559079" ID="Freemind_Link_1980887610" MODIFIED="1644346574894" TEXT="Artefatos para desenvolvedores de plugin Atlassian"/>
+</node>
+<node CREATED="1644346606222" ID="Freemind_Link_1215127003" MODIFIED="1644346607442" TEXT="Oracle">
+<node CREATED="1644346613921" ID="Freemind_Link_386343717" MODIFIED="1644346623586" TEXT="URL: https://maven.oracle.com/"/>
+<node CREATED="1644346625705" ID="Freemind_Link_1370988931" MODIFIED="1644346657948" TEXT="Prov&#xea; jars para produtos Oracle e jars de JDBC dos bancos Oracle"/>
+<node CREATED="1644346658870" ID="Freemind_Link_36052151" MODIFIED="1644346668595" TEXT="Requer registro">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+<node CREATED="1644346722596" ID="Freemind_Link_565470651" MODIFIED="1644346729056" TEXT="Spring Framework">
+<node CREATED="1644346730726" ID="Freemind_Link_545732258" MODIFIED="1644346739585" TEXT="URL: https://repo.spring.io"/>
+<node CREATED="1644346751332" ID="Freemind_Link_444449149" MODIFIED="1644346763928" TEXT="Os releases tamb&#xe9;m s&#xe3;o publicados no Maven Central"/>
+<node CREATED="1644346764885" ID="Freemind_Link_11937038" MODIFIED="1644346812977" TEXT="&#xda;til para desenvolvimento com componentes rec&#xe9;m lan&#xe7;ados (de ponta)"/>
+</node>
+</node>
+<node CREATED="1644347139185" ID="Freemind_Link_293786681" MODIFIED="1644347140580" TEXT="Ex:">
+<node CREATED="1644347269575" ID="Freemind_Link_523093689" MODIFIED="1644347287752" TEXT="Esta depend&#xea;ncia">
+<node COLOR="#0000ff" CREATED="1644347373188" ID="Freemind_Link_972019090" MODIFIED="1644347380144" TEXT="&lt;dependecies&gt;&#xa;  &lt;dependecy&gt;&#xa;    &lt;groupId&gt;org.jboss.ejb3&lt;/groupId&gt;&#xa;    &lt;artifactId&gt;jboss-ejb3-api&lt;/artifactId&gt;&#xa;    &lt;version&gt;3.1.0&lt;/version&gt;&#xa;  &lt;/dependecy&gt;&#xa;&lt;/dependecies&gt;"/>
+</node>
+<node CREATED="1644347288838" ID="Freemind_Link_1253729964" MODIFIED="1644347293026" TEXT="Requer este reposit&#xf3;rio">
+<node COLOR="#0000ff" CREATED="1644347247573" ID="Freemind_Link_1525473104" MODIFIED="1644347262259" TEXT="&lt;repositories&gt;&#xa;  &lt;repository&gt;&#xa;    &lt;id&gt;redhat-ga&lt;/id&gt;&#xa;    &lt;url&gt;https://maven.repository.redhat.com/ga/&lt;/url&gt;&#xa;    &lt;snapshots&gt;&#xa;      &lt;enabled&gt;false&lt;/enabled&gt;&#xa;    &lt;/snapshots&gt;&#xa;  &lt;/repository&gt;&#xa;&lt;/repositories&gt;"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1575574414424" FOLDED="true" ID="Freemind_Link_1184486385" MODIFIED="1575574417491" POSITION="right" TEXT="Comando">
 <node CREATED="1575574441581" ID="Freemind_Link_458587887" MODIFIED="1575574464820" TEXT="Sintaxe: ">
 <node CREATED="1575574465265" ID="Freemind_Link_948673463" MODIFIED="1575574466321" TEXT="mvn &lt;plugin&gt;:&lt;goal&gt;"/>
 <node CREATED="1575574466927" ID="Freemind_Link_50492687" MODIFIED="1575574471896" TEXT="Ex: mvn exec:exec"/>
@@ -430,7 +594,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1642086629517" ID="Freemind_Link_1712719312" MODIFIED="1642086642848" POSITION="right" TEXT="Multi Module">
+<node CREATED="1642086629517" FOLDED="true" ID="Freemind_Link_1712719312" MODIFIED="1642086642848" POSITION="right" TEXT="Multi Module">
 <node CREATED="1642086643728" ID="Freemind_Link_928490327" MODIFIED="1642086658242" TEXT="Um projeto pode ter subprojetos"/>
 <node CREATED="1642086658917" ID="Freemind_Link_1143824216" MODIFIED="1642086674107" TEXT="Cada m&#xf3;dulo (sub projeto) tem seu pr&#xf3;prio pom.xml"/>
 <node CREATED="1642086675823" ID="Freemind_Link_1118442436" MODIFIED="1642086691778" TEXT="O pom.xml de cada subprojeto herda as proriedades do pom.xml ancestral">
@@ -477,7 +641,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1575574182808" ID="Freemind_Link_1468390236" MODIFIED="1575574184422" POSITION="right" TEXT="Plugins">
+<node CREATED="1575574182808" FOLDED="true" ID="Freemind_Link_1468390236" MODIFIED="1575574184422" POSITION="right" TEXT="Plugins">
 <node CREATED="1575574678611" ID="Freemind_Link_821896362" MODIFIED="1575574683130" TEXT="https://maven.apache.org/plugins/index.html">
 <icon BUILTIN="attach"/>
 </node>
@@ -769,7 +933,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1575574185200" ID="Freemind_Link_1218816051" MODIFIED="1610731461448" TEXT="versions">
+<node COLOR="#0033ff" CREATED="1575574185200" FOLDED="true" ID="Freemind_Link_1218816051" MODIFIED="1610731461448" TEXT="versions">
 <node CREATED="1610744533040" ID="Freemind_Link_101708281" MODIFIED="1610744560853" TEXT="Lista plugins e depend&#xea;ncias que podem ser atualizadas (existem vers&#xf5;es mais novas no reposit&#xf3;rio)"/>
 <node CREATED="1610744463812" ID="Freemind_Link_1987292885" MODIFIED="1610744465272" TEXT="Goals">
 <node COLOR="#0000ff" CREATED="1575574418093" ID="Freemind_Link_803292176" MODIFIED="1610744469827" TEXT="display-plugin-updates">
@@ -782,7 +946,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_462382642" MODIFIED="1638898326306" TEXT="failsafe">
+<node COLOR="#0033ff" CREATED="1575575354164" FOLDED="true" ID="Freemind_Link_462382642" MODIFIED="1638898326306" TEXT="failsafe">
 <node CREATED="1637009383505" ID="Freemind_Link_529850265" MODIFIED="1638898339050" TEXT="Criado para disparar testes de integra&#xe7;&#xe3;o do projeto"/>
 <node CREATED="1638898412405" ID="Freemind_Link_1633481179" MODIFIED="1638898419482" TEXT="Requer alguma configura&#xe7;&#xe3;o para ser habilitado">
 <node CREATED="1639060121698" ID="Freemind_Link_1253618787" MODIFIED="1639060136963" TEXT="O Maven n&#xe3;o executa o teste de integra&#xe7;&#xe3;o por padr&#xe3;o no ciclo de vida do Maven"/>
