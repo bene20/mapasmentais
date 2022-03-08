@@ -1,7 +1,7 @@
 <map version="0.8.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1553000049733" ID="Freemind_Link_683934292" LINK="../Mapas.mm" MODIFIED="1553774808576" TEXT="Git">
-<node CREATED="1553000786261" FOLDED="true" ID="Freemind_Link_1938373102" MODIFIED="1587911575833" POSITION="right" TEXT="Configura&#xe7;&#xe3;o">
+<node CREATED="1553000786261" ID="Freemind_Link_1938373102" MODIFIED="1587911575833" POSITION="right" TEXT="Configura&#xe7;&#xe3;o">
 <node CREATED="1587911443049" ID="Freemind_Link_1059939909" MODIFIED="1587911453210" TEXT="Estrutura de &#xa;configura&#xe7;&#xe3;o do Git">
 <node CREATED="1587911456291" ID="Freemind_Link_1246184340" MODIFIED="1587911512140" TEXT="&#xc9; hier&#xe1;rquica"/>
 <node CREATED="1587911460801" ID="Freemind_Link_504979270" MODIFIED="1587911518553" TEXT="Local (Repository)">
@@ -156,6 +156,27 @@
 <node CREATED="1587912336549" ID="Freemind_Link_548180831" MODIFIED="1587912338649" TEXT="Ignore">
 <node CREATED="1587912287918" ID="Freemind_Link_1796324902" MODIFIED="1587912345176" TEXT="Arquivo .gitignore"/>
 <node CREATED="1587912372472" ID="Freemind_Link_818186201" MODIFIED="1587912382987" TEXT="Determina quais arquivos dever&#xe3;o ser ignorados pelo repo"/>
+<node CREATED="1645116030859" ID="Freemind_Link_830049268" MODIFIED="1645116538451" TEXT="&#xc9; poss&#xed;vel checar se um arquivo ser&#xe1; ignorado&#xa;(ou porque ele est&#xe1; sendo ignorado):">
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_500477660" MODIFIED="1645116054098" TEXT="git check-ignore -v -- /path/do/arquivo/ignorado">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
+<node CREATED="1645116068488" LINK="https://gist.github.com/jstnlvns/ebaa046fae16543cc9efc7f24bcd0e31" MODIFIED="1645116068488" TEXT="https://gist.github.com/jstnlvns/ebaa046fae16543cc9efc7f24bcd0e31"/>
+<node CREATED="1645116030859" ID="Freemind_Link_994758906" MODIFIED="1645116371736" TEXT="Ignorar um arquivo j&#xe1; comitado anteriormente&#xa;mantendo-o na pasta de trabalho">
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1732996717" MODIFIED="1645116330740" TEXT="git rm --cached arquivo_a_ser_ignorado">
+<icon BUILTIN="wizard"/>
+</node>
+<node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_886169867" MODIFIED="1645116357036" TEXT="git rm -r --cached pasta_a_ser_ignorada_recursivamente">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
+<node CREATED="1645116798803" ID="Freemind_Link_1757173688" MODIFIED="1645116919125" TEXT="Setando a vari&#xe1;vel de ambiente &apos;GIT_TRACE_EXCLUDE&apos; para 1 ajudar&#xe1; a debugar o arquivo&#xa;.gitignore. Mensagens ser&#xe3;o exibidas informando quais regras se aplicam a quais arquivos&#xa;ao se executar &apos;git status&apos;"/>
+<node CREATED="1645116949363" ID="Freemind_Link_370816264" MODIFIED="1645116964670" TEXT="Para listar a quantidade de arquivos sendo ignorados por filtro do .gitignore:">
+<node COLOR="#0000ff" CREATED="1645116971977" ID="Freemind_Link_1609928237" MODIFIED="1645116991013" TEXT="#!/bin/bash&#xa;set -o noglob&#xa;for file in `cat .gitignore | grep -v \#`&#xa;do&#xa;    printf &quot;$file&quot;&#xa;    find . -name &quot;$file&quot; | wc -l&#xa;done"/>
+</node>
+</node>
+<node CREATED="1645116884490" ID="Freemind_Link_1401657300" MODIFIED="1645116886269" TEXT="Avan&#xe7;adas">
+<node CREATED="1645116887279" LINK="https://github.com/git/git/blob/bac65a2be598811d944c846bdf61580f5c1af927/Documentation/git.txt#L1067-L1070" MODIFIED="1645116887279" TEXT="https://github.com/git/git/blob/bac65a2be598811d944c846bdf61580f5c1af927/Documentation/git.txt#L1067-L1070"/>
 </node>
 </node>
 <node CREATED="1553004297942" FOLDED="true" ID="Freemind_Link_1244511039" MODIFIED="1553004299073" POSITION="right" TEXT="Clone">

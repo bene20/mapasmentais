@@ -219,8 +219,9 @@
 </node>
 </node>
 <node CREATED="1575574393725" ID="Freemind_Link_1714564050" MODIFIED="1575574398009" POSITION="right" TEXT="Configura&#xe7;&#xe3;o">
-<node CREATED="1575574398672" ID="Freemind_Link_1644666598" MODIFIED="1575574405716" TEXT="Arquivo settings.xml">
-<node CREATED="1575574406024" ID="Freemind_Link_1643492551" MODIFIED="1644347620183" TEXT="Dentro da pasta .m2 da pasta home de seu usu&#xe1;rio">
+<node CREATED="1575574398672" ID="Freemind_Link_1644666598" MODIFIED="1644349418756" TEXT="Arquivo settings.xml">
+<node CREATED="1644349418727" ID="Freemind_Link_1500968683" MODIFIED="1644349422454" TEXT="De usu&#xe1;rio">
+<node CREATED="1575574406024" ID="Freemind_Link_1643492551" MODIFIED="1644349437097" TEXT="Dentro da pasta .m2 da&#xa;pasta home de seu usu&#xe1;rio">
 <node CREATED="1644347620171" ID="Freemind_Link_493190628" MODIFIED="1644347621647" TEXT="Ex:">
 <node CREATED="1644347605860" ID="Freemind_Link_1969588536" MODIFIED="1644347624854" TEXT="/home/meuusuario/.m2">
 <node CREATED="1644347612793" ID="Freemind_Link_1395149688" MODIFIED="1644347615855" TEXT="No Linux"/>
@@ -230,8 +231,16 @@
 </node>
 </node>
 </node>
+<node CREATED="1644349484819" ID="Freemind_Link_318732252" MODIFIED="1644349514396" TEXT="Pode ser sobrecarregado com a op&#xe7;&#xe3;o -s &lt;caminho do arquivo&gt;"/>
+</node>
+<node CREATED="1644349424538" ID="Freemind_Link_1502706095" MODIFIED="1644349427661" TEXT="Global">
+<node CREATED="1644349440225" ID="Freemind_Link_1818733351" MODIFIED="1644349454870" TEXT="Dentro da pasta /conf/settings.xml doa instala&#xe7;&#xe3;o do Maven"/>
+<node CREATED="1644349459618" ID="Freemind_Link_607163780" MODIFIED="1644349483380" TEXT="Aplicado a todos os usu&#xe1;rios usando o Maven desse diret&#xf3;rio"/>
+<node CREATED="1644349484819" ID="Freemind_Link_1521405506" MODIFIED="1644349502815" TEXT="Pode ser sobrecarregado com a op&#xe7;&#xe3;o -gs &lt;caminho do arquivo&gt;"/>
+<node CREATED="1644349523121" ID="Freemind_Link_1436378301" MODIFIED="1644349533222" TEXT="Raramente usado. Geralmente usa-se o settings.xml de usu&#xe1;rio"/>
+</node>
 <node CREATED="1638218911239" ID="Freemind_Link_446067676" MODIFIED="1638218920188" TEXT="Para saber qual &#xe9; o settings.xml efetivo sendo usado:">
-<node COLOR="#0000ff" CREATED="1638218920825" ID="Freemind_Link_1893773803" MODIFIED="1644343639045" TEXT="&apos;"/>
+<node COLOR="#0000ff" CREATED="1638218920825" ID="Freemind_Link_1893773803" MODIFIED="1644349102909" TEXT="mvn help:effective-settings"/>
 </node>
 </node>
 <node CREATED="1643992100612" ID="Freemind_Link_1587062240" MODIFIED="1643992103571" TEXT="Reposit&#xf3;rios">
@@ -333,6 +342,64 @@
 <arrowlink DESTINATION="Freemind_Link_431253252" ENDARROW="Default" ENDINCLINATION="102;0;" ID="Freemind_Arrow_Link_502654258" STARTARROW="None" STARTINCLINATION="102;0;"/>
 <icon BUILTIN="forward"/>
 </node>
+</node>
+<node CREATED="1644349812471" ID="Freemind_Link_1755106768" MODIFIED="1644349828099" TEXT="localRepository">
+<icon BUILTIN="forward"/>
+<node CREATED="1644349828936" ID="Freemind_Link_888593015" MODIFIED="1644349850481" TEXT="Permite redefinir o local do reposit&#xf3;rioo local do maven"/>
+</node>
+<node CREATED="1644349812471" ID="Freemind_Link_1941419932" MODIFIED="1644349872601" TEXT="interactiveMode">
+<icon BUILTIN="forward"/>
+<node CREATED="1644349855230" ID="Freemind_Link_1373572708" MODIFIED="1644349888522" TEXT="Permite setar o modo interativo em lote">
+<node CREATED="1644349889552" ID="Freemind_Link_586367811" MODIFIED="1644349894874" TEXT="O default &#xe9; ser interativo"/>
+</node>
+<node CREATED="1644350095467" ID="Freemind_Link_1399295205" MODIFIED="1644350108856" TEXT="No caso de setado como true, o maven tentar&#xe1; adivinhar as repostas do usu&#xe1;rio"/>
+</node>
+<node CREATED="1644349812471" ID="Freemind_Link_1446412365" MODIFIED="1644349904617" TEXT="usePluginRegistry">
+<icon BUILTIN="forward"/>
+<node CREATED="1644349911134" ID="Freemind_Link_1711663278" MODIFIED="1644349919451" TEXT="N&#xe3;o &#xe9; mais usado no Maven 3.0"/>
+<node CREATED="1644349919942" ID="Freemind_Link_351581360" MODIFIED="1644349926144" TEXT="Para fins de legado (Maven 2.0)"/>
+</node>
+<node CREATED="1644349812471" ID="Freemind_Link_412061353" MODIFIED="1644349929931" TEXT="offline">
+<icon BUILTIN="forward"/>
+<node CREATED="1644349933503" ID="Freemind_Link_1899713695" MODIFIED="1644349938380" TEXT="Default &#xe9; false"/>
+<node CREATED="1644349939814" ID="Freemind_Link_1467939919" MODIFIED="1644349958345" TEXT="Se definido como true far&#xe1; com que o Maven n&#xe3;o se conecte a reposit&#xf3;rios remotos"/>
+</node>
+<node CREATED="1644349812471" ID="Freemind_Link_660245312" MODIFIED="1644349969488" TEXT="pluginGroups">
+<icon BUILTIN="forward"/>
+<node CREATED="1644349975821" ID="Freemind_Link_421723489" MODIFIED="1644349997297" TEXT="Lista dos id&apos;s de grupos de plugin"/>
+<node CREATED="1644349999782" ID="Freemind_Link_427841744" MODIFIED="1644436413649" TEXT="Usado para abreviar goals de plugins nos pom.xml&apos;s dos projetos">
+<node CREATED="1644436415511" ID="Freemind_Link_392932422" MODIFIED="1644436426648" TEXT="N&#xe3;o precisar&#xe3;o fornecer todos os dados do plugin"/>
+<node CREATED="1644436435449" ID="Freemind_Link_985184693" MODIFIED="1644436447035" TEXT="Funciona como um atalho para uso posterior desses plugins pelos projetos"/>
+</node>
+</node>
+<node CREATED="1644349812471" ID="Freemind_Link_919515943" MODIFIED="1644350012825" TEXT="servers">
+<icon BUILTIN="forward"/>
+<node CREATED="1644350015349" ID="Freemind_Link_331682570" MODIFIED="1644350030232" TEXT="Permite definir credenciais de servidores com os quais o Maven se conecta"/>
+<node CREATED="1644436491528" ID="Freemind_Link_1166127006" MODIFIED="1644436492902" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1644436493455" ID="Freemind_Link_1095171783" MODIFIED="1644436543051" TEXT="&lt;servers&gt;&#xa;    &lt;server&gt;&#xa;      &lt;id&gt;trt10-public&lt;/id&gt;&#xa;      &lt;username&gt;deploy&lt;/username&gt;&#xa;      &lt;password&gt;deploy&lt;/password&gt;&#xa;    &lt;/server&gt;&#xa;&lt;/servers&gt;"/>
+</node>
+</node>
+<node CREATED="1644349812471" ID="Freemind_Link_26873202" MODIFIED="1644350034400" TEXT="mirrors">
+<icon BUILTIN="forward"/>
+<node CREATED="1644350040492" ID="Freemind_Link_1458627365" MODIFIED="1644350049787" TEXT="Permite configurar os mirrors dos reposit&#xf3;rios"/>
+<node CREATED="1644436491528" ID="Freemind_Link_1219513851" MODIFIED="1644436492902" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1644436493455" ID="Freemind_Link_1139337270" MODIFIED="1644437367693" TEXT="  &lt;mirrors&gt;&#xa;    &lt;mirror&gt;&#xa;      &lt;id&gt;trt10-public&lt;/id&gt;&#xa;      &lt;name&gt;TRT10 without ssl&lt;/name&gt;&#xa;      &lt;mirrorOf&gt;*&lt;/mirrorOf&gt;&#xa;      &lt;url&gt;http://prd-docker.trt10.jus.br:8081/repository/trt10-public/&lt;/url&gt;&#xa;    &lt;/mirror&gt;&#xa;  &lt;/mirrors&gt;"/>
+</node>
+</node>
+<node CREATED="1644349812471" ID="Freemind_Link_1991619121" MODIFIED="1644437000735" TEXT="proxies">
+<icon BUILTIN="forward"/>
+<node CREATED="1644350040492" ID="Freemind_Link_1366171891" MODIFIED="1644437012830" TEXT="Define informa&#xe7;&#xf5;es de proxy"/>
+<node CREATED="1644436491528" ID="Freemind_Link_876453068" MODIFIED="1644436492902" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1644436493455" ID="Freemind_Link_696458506" MODIFIED="1644437296991" TEXT="&lt;proxies&gt;&#xa;    &lt;proxy&gt;&#xa;      &lt;id&gt;proxy-trt10s&lt;/id&gt;&#xa;      &lt;active&gt;true&lt;/active&gt;&#xa;      &lt;protocol&gt;https&lt;/protocol&gt;&#xa;      &lt;host&gt;gateway.sde.trt10.jus.br&lt;/host&gt;&#xa;      &lt;port&gt;3128&lt;/port&gt;&#xa;      &lt;nonProxyHosts&gt;localhost|local.net|some.host.com&lt;/nonProxyHosts&gt;&#xa;    &lt;/proxy&gt;&#xa;&lt;/proxies&gt;"/>
+</node>
+</node>
+<node CREATED="1644349812471" ID="Freemind_Link_1921679728" MODIFIED="1644437019430" TEXT="profiles">
+<icon BUILTIN="forward"/>
+<node CREATED="1644350040492" ID="Freemind_Link_1188091210" MODIFIED="1644437025686" TEXT="Define profiles de build"/>
+</node>
+<node CREATED="1644349812471" ID="Freemind_Link_516920906" MODIFIED="1644437033031" TEXT="activeProfiles">
+<icon BUILTIN="forward"/>
+<node CREATED="1644350040492" ID="Freemind_Link_509059131" MODIFIED="1644437053767" TEXT="Define os profiles de build ativos"/>
 </node>
 </node>
 <node CREATED="1644345468595" ID="Freemind_Link_179741778" MODIFIED="1644345577484" TEXT="Os principais">
