@@ -457,7 +457,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1575574414424" FOLDED="true" ID="Freemind_Link_1184486385" MODIFIED="1575574417491" POSITION="right" TEXT="Comando">
+<node CREATED="1575574414424" ID="Freemind_Link_1184486385" MODIFIED="1575574417491" POSITION="right" TEXT="Comando">
 <node CREATED="1575574441581" ID="Freemind_Link_458587887" MODIFIED="1575574464820" TEXT="Sintaxe: ">
 <node CREATED="1575574465265" ID="Freemind_Link_948673463" MODIFIED="1575574466321" TEXT="mvn &lt;plugin&gt;:&lt;goal&gt;"/>
 <node CREATED="1575574466927" ID="Freemind_Link_50492687" MODIFIED="1575574471896" TEXT="Ex: mvn exec:exec"/>
@@ -485,9 +485,47 @@
 <node COLOR="#0000ff" CREATED="1588880717993" ID="Freemind_Link_106328896" MODIFIED="1588880753494" TEXT="deploy:deploy-file -DrepositoryId=trt10-public -Durl=http://nexus.trt10.jus.br:8081/repository/trt10-release/ \&#xa;                       -DpomFile=$pomXML -Dfile=$jarFile">
 <node CREATED="1588880755270" ID="Freemind_Link_842396406" MODIFIED="1588880768089" TEXT="Publica um jar no reposit&#xf3;rio remoto"/>
 </node>
+<node COLOR="#0000ff" CREATED="1575574418093" ID="Freemind_Link_1002315408" MODIFIED="1646757204687" TEXT="install">
+<node CREATED="1575574536550" ID="Freemind_Link_91800100" MODIFIED="1646757219851" TEXT="Instala um recurso no reposit&#xf3;rio local"/>
+<node CREATED="1646757225040" ID="Freemind_Link_1990008909" MODIFIED="1646757226307" TEXT="Ex:">
+<node CREATED="1646757226627" ID="Freemind_Link_424086348" MODIFIED="1646757254716" TEXT="Considere que voc&#xea; tenha o arquivo jdbc do Oracle cujo nome &#xe9; ojdbc7.jar e a vers&#xe3;o dele seja 12-1-0-1"/>
+<node COLOR="#0000ff" CREATED="1575574418093" ID="Freemind_Link_184695611" MODIFIED="1646757322765" TEXT="mvn install:install-file -Dfile=./ojdbc7.jar -DgroupId=com.oracle -DartifactId=ojdbc7 -Dversion=12.1.0.1 -Dpackaging=jar"/>
 </node>
 </node>
-<node CREATED="1586963818695" FOLDED="true" ID="Freemind_Link_204344341" MODIFIED="1636743379448" POSITION="right" TEXT="POM">
+<node COLOR="#0000ff" CREATED="1575574418093" ID="Freemind_Link_1781627942" MODIFIED="1646760222403" TEXT="--encrypt-master-password">
+<node CREATED="1575574536550" ID="Freemind_Link_414239181" MODIFIED="1646759648454" TEXT="Gera o hash da senha fornecida. &#xda;til para cadastrar uma senha no maven que ser&#xe1; usada para criptografar e descriptografar senhas de reposit&#xf3;rios autenticados (ex: oracle)"/>
+<node CREATED="1646760302208" ID="Freemind_Link_1360370478" MODIFIED="1646760317156" TEXT="Este comando habilita o uso do comando &apos;mvn --encrypt-password&apos;"/>
+<node CREATED="1646759770655" ID="Freemind_Link_876089606" MODIFIED="1646759771839" TEXT="https://maven.apache.org/guides/mini/guide-encryption.html"/>
+<node CREATED="1646759672974" ID="Freemind_Link_30960196" MODIFIED="1646760112535" TEXT="O resultado deve ser colocado no arquivo settings-security.xml">
+<node COLOR="#0000ff" CREATED="1575574418093" ID="Freemind_Link_326407008" MODIFIED="1646759725300" TEXT="&lt;settingsSecurity&gt;&#xa;    &lt;master&gt;...resultado_do_hash_aqui...&lt;/master&gt;&#xa;&lt;/settingsSecurity&gt;"/>
+</node>
+<node CREATED="1646759651184" ID="Freemind_Link_1402379871" MODIFIED="1646759651953" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1646759652785" ID="Freemind_Link_478110061" MODIFIED="1646760293121" TEXT="mvn --encrypt-master-password minhasenha"/>
+<node COLOR="#0000ff" CREATED="1646759652785" ID="Freemind_Link_795576901" MODIFIED="1646761036390" TEXT="mvn --encrypt-master-password ">
+<node CREATED="1646761036830" ID="Freemind_Link_1850699202" MODIFIED="1646761042711" TEXT="Nesse caso a senha ser&#xe1; solicitada"/>
+<node CREATED="1646761043342" ID="Freemind_Link_78236314" MODIFIED="1646761060671" TEXT="&#xc9; mais indicado pois assim sua senha n&#xe3;o ficar&#xe1; no history do shell"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1575574418093" ID="Freemind_Link_782017371" MODIFIED="1646760161017" TEXT="--encrypt-password">
+<node CREATED="1575574536550" ID="Freemind_Link_227305401" MODIFIED="1646760180635" TEXT="Gera o hash da senha fornecida. &#xda;til para cadastrar senhas dos servidores"/>
+<node CREATED="1646760181750" ID="Freemind_Link_1381635923" MODIFIED="1646760229147" TEXT="Antes de usar este comando, &#xe9; necess&#xe1;rio ter gerado o hash master (via --encrypt-master-password)">
+<arrowlink DESTINATION="Freemind_Link_1781627942" ENDARROW="Default" ENDINCLINATION="588;0;" ID="Freemind_Arrow_Link_32914765" STARTARROW="None" STARTINCLINATION="588;0;"/>
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node CREATED="1646759672974" ID="Freemind_Link_1064706415" MODIFIED="1646760249178" TEXT="O resultado deve ser colocado no arquivo settings.xml">
+<node COLOR="#0000ff" CREATED="1575574418093" ID="Freemind_Link_1568023397" MODIFIED="1646760274436" TEXT="    &lt;server&gt;&#xa;      &lt;id&gt;my.server&lt;/id&gt;&#xa;      &lt;username&gt;foo&lt;/username&gt;&#xa;      &lt;password&gt;...resultado_do_hash_aqui...&lt;/password&gt;&#xa;    &lt;/server&gt;"/>
+</node>
+<node CREATED="1646759651184" ID="Freemind_Link_24993592" MODIFIED="1646759651953" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1646759652785" ID="Freemind_Link_1707385689" MODIFIED="1646760288368" TEXT="mvn --encrypt-password minhasenha">
+<node CREATED="1646761036830" ID="Freemind_Link_794647892" MODIFIED="1646761042711" TEXT="Nesse caso a senha ser&#xe1; solicitada"/>
+<node CREATED="1646761043342" ID="Freemind_Link_1573506735" MODIFIED="1646761060671" TEXT="&#xc9; mais indicado pois assim sua senha n&#xe3;o ficar&#xe1; no history do shell"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1586963818695" ID="Freemind_Link_204344341" MODIFIED="1636743379448" POSITION="right" TEXT="POM">
 <node CREATED="1636743384294" ID="Freemind_Link_680633735" MODIFIED="1636743391089" TEXT="Project Object Model"/>
 <node CREATED="1636743380270" ID="Freemind_Link_1235427665" MODIFIED="1636743383504" TEXT="Arquivo pom.xml">
 <node CREATED="1636743399805" ID="Freemind_Link_456615519" MODIFIED="1636743415706" TEXT="Precisa estar em conformidade com o maven-4.0.0.xsd"/>
@@ -548,7 +586,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1586963821978" FOLDED="true" ID="Freemind_Link_125063372" MODIFIED="1586963826509" TEXT="Depend&#xea;ncias">
+<node CREATED="1586963821978" ID="Freemind_Link_125063372" MODIFIED="1586963826509" TEXT="Depend&#xea;ncias">
 <node CREATED="1636743912976" ID="Freemind_Link_132533147" MODIFIED="1636743925017" TEXT="&#xc9; um artefato Maven do qual o seu projeto depende">
 <node CREATED="1636743895040" ID="Freemind_Link_1260511707" MODIFIED="1636743905155" TEXT="Tipicamente um jar ou um pom"/>
 </node>
@@ -708,7 +746,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1575574182808" FOLDED="true" ID="Freemind_Link_1468390236" MODIFIED="1575574184422" POSITION="right" TEXT="Plugins">
+<node CREATED="1575574182808" ID="Freemind_Link_1468390236" MODIFIED="1575574184422" POSITION="right" TEXT="Plugins">
 <node CREATED="1575574678611" ID="Freemind_Link_821896362" MODIFIED="1575574683130" TEXT="https://maven.apache.org/plugins/index.html">
 <icon BUILTIN="attach"/>
 </node>
@@ -1032,6 +1070,15 @@
 <node CREATED="1637009814189" ID="Freemind_Link_1747918559" MODIFIED="1639059920580" TEXT="**/*IT.java"/>
 <node CREATED="1637009814189" ID="Freemind_Link_1372642033" MODIFIED="1639059938228" TEXT="**/*ITCase.java"/>
 </node>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1646757348978" ID="Freemind_Link_1758465952" MODIFIED="1646757360404" TEXT="install">
+<node CREATED="1646757362226" ID="Freemind_Link_1802034299" MODIFIED="1646757369877" TEXT="Permite instalar recursos no reposit&#xf3;rio local"/>
+<node CREATED="1646757419198" ID="Freemind_Link_387669391" MODIFIED="1646757435423" TEXT="Uma vez instalado no reposit&#xf3;rio local, o recurso pode ser usado livremente no pom.xml do projeto"/>
+<node CREATED="1646757373615" ID="Freemind_Link_302912574" MODIFIED="1646757377573" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1575574418093" ID="Freemind_Link_1229349978" MODIFIED="1646757322765" TEXT="mvn install:install-file -Dfile=./ojdbc7.jar -DgroupId=com.oracle -DartifactId=ojdbc7 -Dversion=12.1.0.1 -Dpackaging=jar">
+<node CREATED="1646757393838" ID="Freemind_Link_205140091" MODIFIED="1646757412534" TEXT="Instala o arquivo ojdbc7.jar, cuja vers&#xe3;o &#xe9; 12.1.0.1, no reposit&#xf3;rio local"/>
 </node>
 </node>
 </node>
