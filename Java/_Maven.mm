@@ -4,6 +4,7 @@
 <node CREATED="1575574164540" ID="_" MODIFIED="1575574177364" POSITION="right" TEXT="Gerenciador de depend&#xea;ncias e build de projetos Java"/>
 <node CREATED="1636742925381" ID="Freemind_Link_767562101" MODIFIED="1636742927326" POSITION="right" TEXT="Conceitos">
 <node CREATED="1636742927706" ID="Freemind_Link_1029040247" MODIFIED="1636742929438" TEXT="Wagon">
+<node CREATED="1646867785356" ID="Freemind_Link_400116024" MODIFIED="1646867793380" TEXT="&#xc9; basicamente um mecanismo de transporte"/>
 <node CREATED="1636742930098" ID="Freemind_Link_1110697608" MODIFIED="1636742938448" TEXT="API unificada do maven">
 <node CREATED="1636743197631" ID="Freemind_Link_714425172" MODIFIED="1636743204477" TEXT="Providers suportados:">
 <node CREATED="1636743204950" ID="Freemind_Link_699813415" MODIFIED="1636743206948" TEXT="File"/>
@@ -218,7 +219,7 @@
 <node CREATED="1637007055049" ID="Freemind_Link_1934736776" MODIFIED="1637007059790" TEXT="Templates de projetos Maven"/>
 </node>
 </node>
-<node CREATED="1575574393725" ID="Freemind_Link_1714564050" MODIFIED="1575574398009" POSITION="right" TEXT="Configura&#xe7;&#xe3;o">
+<node CREATED="1575574393725" FOLDED="true" ID="Freemind_Link_1714564050" MODIFIED="1575574398009" POSITION="right" TEXT="Configura&#xe7;&#xe3;o">
 <node CREATED="1575574398672" ID="Freemind_Link_1644666598" MODIFIED="1644349418756" TEXT="Arquivo settings.xml">
 <node CREATED="1644349418727" ID="Freemind_Link_1500968683" MODIFIED="1644349422454" TEXT="De usu&#xe1;rio">
 <node CREATED="1575574406024" ID="Freemind_Link_1643492551" MODIFIED="1644349437097" TEXT="Dentro da pasta .m2 da&#xa;pasta home de seu usu&#xe1;rio">
@@ -484,6 +485,12 @@
 </node>
 <node COLOR="#0000ff" CREATED="1588880717993" ID="Freemind_Link_106328896" MODIFIED="1588880753494" TEXT="deploy:deploy-file -DrepositoryId=trt10-public -Durl=http://nexus.trt10.jus.br:8081/repository/trt10-release/ \&#xa;                       -DpomFile=$pomXML -Dfile=$jarFile">
 <node CREATED="1588880755270" ID="Freemind_Link_842396406" MODIFIED="1588880768089" TEXT="Publica um jar no reposit&#xf3;rio remoto"/>
+<node CREATED="1646869537142" ID="Freemind_Link_1865736535" MODIFIED="1646869553049" TEXT="Se o jar j&#xe1; existir no reposit&#xf3;rio, ser&#xe1; sobrescrito ou o deploy ser&#xe1; abortado pelo nexus">
+<node CREATED="1646869554414" ID="Freemind_Link_1695961627" MODIFIED="1646869557825" TEXT="Depende da configura&#xe7;&#xe3;o"/>
+</node>
+<node CREATED="1646868884910" ID="Freemind_Link_921020004" MODIFIED="1646868930449" TEXT="Se a vers&#xe3;o do projeto, no pom.xml, contiver o termo &apos;-SNAPSHOT&apos;, o deploy ser&#xe1; feito no reposit&#xf3;rio &apos;snapshot&apos;. Caso contr&#xe1;rio o deploy ser&#xe1; feito no reposit&#xf3;rio &apos;release&apos;.">
+<icon BUILTIN="messagebox_warning"/>
+</node>
 </node>
 <node COLOR="#0000ff" CREATED="1575574418093" ID="Freemind_Link_1002315408" MODIFIED="1646757204687" TEXT="install">
 <node CREATED="1575574536550" ID="Freemind_Link_91800100" MODIFIED="1646757219851" TEXT="Instala um recurso no reposit&#xf3;rio local"/>
