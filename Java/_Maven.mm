@@ -458,7 +458,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1575574414424" ID="Freemind_Link_1184486385" MODIFIED="1575574417491" POSITION="right" TEXT="Comando">
+<node CREATED="1575574414424" FOLDED="true" ID="Freemind_Link_1184486385" MODIFIED="1575574417491" POSITION="right" TEXT="Comando">
 <node CREATED="1575574441581" ID="Freemind_Link_458587887" MODIFIED="1575574464820" TEXT="Sintaxe: ">
 <node CREATED="1575574465265" ID="Freemind_Link_948673463" MODIFIED="1575574466321" TEXT="mvn &lt;plugin&gt;:&lt;goal&gt;"/>
 <node CREATED="1575574466927" ID="Freemind_Link_50492687" MODIFIED="1575574471896" TEXT="Ex: mvn exec:exec"/>
@@ -532,7 +532,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1586963818695" ID="Freemind_Link_204344341" MODIFIED="1636743379448" POSITION="right" TEXT="POM">
+<node CREATED="1586963818695" FOLDED="true" ID="Freemind_Link_204344341" MODIFIED="1636743379448" POSITION="right" TEXT="POM">
 <node CREATED="1636743384294" ID="Freemind_Link_680633735" MODIFIED="1636743391089" TEXT="Project Object Model"/>
 <node CREATED="1636743380270" ID="Freemind_Link_1235427665" MODIFIED="1636743383504" TEXT="Arquivo pom.xml">
 <node CREATED="1636743399805" ID="Freemind_Link_456615519" MODIFIED="1636743415706" TEXT="Precisa estar em conformidade com o maven-4.0.0.xsd"/>
@@ -753,7 +753,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1575574182808" ID="Freemind_Link_1468390236" MODIFIED="1575574184422" POSITION="right" TEXT="Plugins">
+<node CREATED="1575574182808" FOLDED="true" ID="Freemind_Link_1468390236" MODIFIED="1575574184422" POSITION="right" TEXT="Plugins">
 <node CREATED="1575574678611" ID="Freemind_Link_821896362" MODIFIED="1575574683130" TEXT="https://maven.apache.org/plugins/index.html">
 <icon BUILTIN="attach"/>
 </node>
@@ -1202,16 +1202,90 @@
 </node>
 </node>
 </node>
-<node CREATED="1635195517092" FOLDED="true" ID="Freemind_Link_994009935" MODIFIED="1635195519275" POSITION="right" TEXT="Profiles">
+<node CREATED="1635195517092" ID="Freemind_Link_994009935" MODIFIED="1635195519275" POSITION="right" TEXT="Profiles">
 <node CREATED="1635195524429" ID="Freemind_Link_598833124" MODIFIED="1635195535396" TEXT="http://maven.apache.org/guides/introduction/introduction-to-profiles.html">
 <icon BUILTIN="attach"/>
 </node>
 <node CREATED="1635195565665" ID="Freemind_Link_1357549274" MODIFIED="1635195567491" TEXT="Comandos">
 <node COLOR="#0000ff" CREATED="1635195576868" ID="Freemind_Link_517804825" MODIFIED="1635195607393" TEXT="mvn help:active-profiles">
 <node CREATED="1635195578272" ID="Freemind_Link_960228346" MODIFIED="1635195597406" TEXT="Lista os profiles efetivamente ativos para o build"/>
+<node CREATED="1648157670722" ID="Freemind_Link_130425477" MODIFIED="1648157700966" TEXT="Se um profile s&#xf3; &#xe9; ativado via argumento -P da linha de comando, voc&#xea; deve especific&#xe1;-lo neste comando para saber se ele ser&#xe1; ativo">
+<node CREATED="1648157707763" ID="Freemind_Link_1480051814" MODIFIED="1648157709054" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1635195576868" ID="Freemind_Link_763162647" MODIFIED="1648157719928" TEXT="mvn help:active-profiles -P &lt;profile-1&gt;"/>
+</node>
+</node>
 </node>
 <node COLOR="#0000ff" CREATED="1635195576868" ID="Freemind_Link_1998814431" MODIFIED="1635195780206" TEXT="mvn help:effective-pom">
 <node CREATED="1635195578272" ID="Freemind_Link_643544985" MODIFIED="1635195803046" TEXT="Apresenta o pom.xml efetivamente sendo usado. &#xda;til quando n&#xe3;o se sabe o efeito final da combina&#xe7;&#xe3;o de uso de diversos profiles"/>
+</node>
+</node>
+<node CREATED="1648156092958" ID="Freemind_Link_329284222" MODIFIED="1648156136757" TEXT="N&#xe3;o existe prioriza&#xe7;&#xe3;o para m&#xfa;ltiplos profiles ativos">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1648156111162" ID="Freemind_Link_1938125475" MODIFIED="1648156134570" TEXT="A solu&#xe7;&#xe3;o de qual proprieade ser&#xe1; utilizada &#xe9; rand&#xf4;mica!"/>
+</node>
+<node CREATED="1648156543115" ID="Freemind_Link_1106002849" MODIFIED="1648156570040" TEXT="O descritor de profiles (arquivo profiles.xml) n&#xe3;o &#xe9; mais suportado desde a vers&#xe3;o 3.0 do maven">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node CREATED="1648156211794" ID="Freemind_Link_1687837249" MODIFIED="1648156229190" TEXT="Usado para definir o comportamento&#xa;do maven na gera&#xe7;&#xe3;o de builds">
+<node CREATED="1648156231400" ID="Freemind_Link_1095871144" MODIFIED="1648156254094" TEXT="Automaticamente baseado no ambiente de execu&#xe7;&#xe3;o do Maven"/>
+<node CREATED="1648156231400" ID="Freemind_Link_1638222806" MODIFIED="1648156268926" TEXT="Automaticamente baseado no ambiente de execu&#xe7;&#xe3;o da aplica&#xe7;&#xe3;o"/>
+<node CREATED="1648156273499" ID="Freemind_Link_707704997" MODIFIED="1648156286698" TEXT="Permite acionar/ativar plugins espec&#xed;ficos"/>
+<node CREATED="1648156289132" ID="Freemind_Link_308509457" MODIFIED="1648156304226" TEXT="Permite configura&#xe7;&#xf5;es alternativas para a gera&#xe7;&#xe3;o do build"/>
+</node>
+<node CREATED="1648156368272" ID="Freemind_Link_1396345826" MODIFIED="1648156370959" TEXT="Podem ser">
+<node CREATED="1648156371255" ID="Freemind_Link_97697571" MODIFIED="1648156374424" TEXT="Por projeto">
+<node CREATED="1648156457381" ID="Freemind_Link_710426917" MODIFIED="1648156460209" TEXT="Uso mais comum"/>
+<node CREATED="1648156735341" ID="Freemind_Link_83811965" MODIFIED="1648156762597" TEXT="&#xda;til quando voc&#xea; precisa que o build do seu projeto seja port&#xe1;vel para outros computadores (ex: CI server, outros devs)"/>
+<node CREATED="1648156382292" ID="Freemind_Link_498497937" MODIFIED="1648156386585" TEXT="Definido no pom.xml"/>
+<node CREATED="1648156388205" ID="Freemind_Link_841906126" MODIFIED="1648156392355" TEXT="Linha de comando:">
+<node COLOR="#0000ff" CREATED="1635195576868" ID="Freemind_Link_246889572" MODIFIED="1648156416474" TEXT="mvn package -S &lt;path do settings.xml&gt;"/>
+</node>
+</node>
+<node CREATED="1648156375335" ID="Freemind_Link_434952117" MODIFIED="1648156378121" TEXT="Por usu&#xe1;rio">
+<node CREATED="1648156667374" ID="Freemind_Link_75718743" MODIFIED="1648156724322" TEXT="&#xda;til quando, por exemplo, voc&#xea; precisa definir algumas normas espec&#xed;ficas para a sua m&#xe1;quina ao gerarem buils (ex: voc&#xea; usa windows e os demais do seu time usam Linux)"/>
+<node CREATED="1648156783911" ID="Freemind_Link_597343806" MODIFIED="1648156795936" TEXT="Ideal para registrar os passwords usados na gera&#xe7;&#xe3;o dos builds"/>
+<node CREATED="1648156422743" ID="Freemind_Link_898321261" MODIFIED="1648156435520" TEXT="Definido no &lt;user home&gt;/.m2/settings.xml"/>
+</node>
+<node CREATED="1648156378548" ID="Freemind_Link_799125241" MODIFIED="1648156380314" TEXT="Global">
+<node CREATED="1648156439069" ID="Freemind_Link_652851780" MODIFIED="1648156452161" TEXT="Definido no &lt;Maven home&gt;/conf/settings.xml"/>
+</node>
+</node>
+<node CREATED="1648156881262" ID="Freemind_Link_1119725208" MODIFIED="1648157185470" TEXT="Modos de ativa&#xe7;&#xe3;o&#xa;dos profiles">
+<node CREATED="1648156887101" ID="Freemind_Link_898824486" MODIFIED="1648156912880" TEXT="Setando a propriedade &apos;activeByDefault&apos; do profile como &apos;true&apos;"/>
+<node CREATED="1648156918567" ID="Freemind_Link_880492480" MODIFIED="1648156948835" TEXT="Ativa&#xe7;&#xe3;o default para sistemas operacionais espec&#xed;ficos, vers&#xf5;es espec&#xed;ficas de JDK etc."/>
+<node CREATED="1648156953150" ID="Freemind_Link_35608139" MODIFIED="1648156964967" TEXT="Exist&#xea;ncia ou n&#xe3;o de propriedades de sistema"/>
+<node CREATED="1648156968989" ID="Freemind_Link_884694150" MODIFIED="1648156980507" TEXT="Valores espec&#xed;ficos de propriedades de sistema"/>
+<node CREATED="1648156983935" ID="Freemind_Link_1062644056" MODIFIED="1648156996030" TEXT="Aus&#xea;ncia ou n&#xe3;o de arquivos espec&#xed;ficos"/>
+<node CREATED="1648157000838" ID="Freemind_Link_961879589" MODIFIED="1648157018793" TEXT="For&#xe7;ada, via linha de comando">
+<node CREATED="1648157023886" ID="Freemind_Link_363284622" MODIFIED="1648157024519" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1635195576868" ID="Freemind_Link_68775503" MODIFIED="1648157046840" TEXT="mvn package -P &lt;profile-1&gt;,&lt;profile-2&gt;"/>
+</node>
+</node>
+<node CREATED="1648157056971" ID="Freemind_Link_1915073076" MODIFIED="1648157087022" TEXT="Definindo na se&#xe7;&#xe3;o &apos;activeProfiles&apos; do arquivo &apos;settings.xml&apos;"/>
+</node>
+<node CREATED="1648157166259" ID="Freemind_Link_923649196" MODIFIED="1648157206998" TEXT="Modos de desativa&#xe7;&#xe3;o&#xa;dos profiles">
+<node CREATED="1648157000838" ID="Freemind_Link_1972417919" MODIFIED="1648157018793" TEXT="For&#xe7;ada, via linha de comando">
+<node CREATED="1648157023886" ID="Freemind_Link_1693110936" MODIFIED="1648157024519" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1635195576868" ID="Freemind_Link_736907281" MODIFIED="1648157241443" TEXT="mvn package -P !&lt;profile-1&gt;,!&lt;profile-2&gt;"/>
+<node COLOR="#0000ff" CREATED="1635195576868" ID="Freemind_Link_1135525482" MODIFIED="1648157263910" TEXT="mvn package -P -&lt;profile-1&gt;,-&lt;profile-2&gt;"/>
+</node>
+</node>
+</node>
+<node CREATED="1648157304559" ID="Freemind_Link_1733018256" MODIFIED="1648157322818" TEXT="Elementos POM em profiles">
+<node CREATED="1648157323904" ID="Freemind_Link_1054320294" MODIFIED="1648157329008" TEXT="repositories"/>
+<node CREATED="1648157330561" ID="Freemind_Link_1343658455" MODIFIED="1648157337443" TEXT="pluginRepositories"/>
+<node CREATED="1648157337935" ID="Freemind_Link_1139797214" MODIFIED="1648157340769" TEXT="dependencies"/>
+<node CREATED="1648157341007" ID="Freemind_Link_682796067" MODIFIED="1648157343154" TEXT="plugins"/>
+<node CREATED="1648157343357" ID="Freemind_Link_910992198" MODIFIED="1648157345395" TEXT="properties"/>
+<node CREATED="1648157345607" ID="Freemind_Link_542972591" MODIFIED="1648157346850" TEXT="modules"/>
+<node CREATED="1648157347077" ID="Freemind_Link_538931554" MODIFIED="1648157350736" TEXT="reporting"/>
+<node CREATED="1648157352800" ID="Freemind_Link_1025610248" MODIFIED="1648157358007" TEXT="dependencyManagement"/>
+<node CREATED="1648157362092" ID="Freemind_Link_1736914762" MODIFIED="1648157367129" TEXT="distributionManagement"/>
+<node CREATED="1648157435702" ID="Freemind_Link_1549278695" MODIFIED="1648157493373" TEXT="Elementos do&#xa;elemento build">
+<node CREATED="1648157448228" ID="Freemind_Link_1958837181" MODIFIED="1648157451760" TEXT="defaultGoal"/>
+<node CREATED="1648157451970" ID="Freemind_Link_317609518" MODIFIED="1648157455222" TEXT="resources"/>
+<node CREATED="1648157455453" ID="Freemind_Link_1374388747" MODIFIED="1648157459103" TEXT="testResources"/>
+<node CREATED="1648157460836" ID="Freemind_Link_1747093766" MODIFIED="1648157463127" TEXT="finalName"/>
 </node>
 </node>
 </node>
@@ -1359,7 +1433,7 @@
 <node CREATED="1583783241808" ID="Freemind_Link_735657526" MODIFIED="1583783245660" TEXT="Comando: mvn deploy"/>
 </node>
 </node>
-<node CREATED="1583783114158" ID="Freemind_Link_638873313" MODIFIED="1586040411966" TEXT="Downloads de &#xa;artefatos do nexus">
+<node CREATED="1583783114158" ID="Freemind_Link_638873313" MODIFIED="1646953478964" TEXT="Downloads de &#xa;artefatos do nexus&#xa;(em substitui&#xe7;&#xe3;o ao Maven Central)">
 <node CREATED="1583783119975" ID="Freemind_Link_673429366" MODIFIED="1583783362609" TEXT="Modificar pom.xml do projeto">
 <icon BUILTIN="full-1"/>
 <node CREATED="1583783363250" ID="Freemind_Link_437811522" MODIFIED="1583783375540" TEXT="Definir as depend&#xea;ncias (tag dependency)"/>
