@@ -126,7 +126,7 @@
 <node CREATED="1573670037212" ID="Freemind_Link_1148801400" MODIFIED="1574191275237" TEXT="Encerra o servidor"/>
 </node>
 <node COLOR="#000000" CREATED="1573669995752" ID="Freemind_Link_786326805" MODIFIED="1574278464412" TEXT="deploy">
-<node CREATED="1573670037212" ID="Freemind_Link_220917296" MODIFIED="1574278398268" TEXT="Realiza de ploy de uma aplica&#xe7;&#xe3;o"/>
+<node CREATED="1573670037212" ID="Freemind_Link_220917296" MODIFIED="1653672052855" TEXT="Realiza deploy de uma aplica&#xe7;&#xe3;o"/>
 <node COLOR="#0000ff" CREATED="1573669995752" ID="Freemind_Link_1365391599" MODIFIED="1574278244716" TEXT="deploy caminhoCompleto/arquivo.war">
 <node CREATED="1573670037212" ID="Freemind_Link_1858680704" MODIFIED="1574278256283" TEXT="Faz deploy de uma aplica&#xe7;&#xe3;o no modo standalone"/>
 </node>
@@ -139,6 +139,9 @@
 </node>
 <node COLOR="#0000ff" CREATED="1573669995752" ID="Freemind_Link_1951000610" MODIFIED="1642162011561" TEXT="/core-service=platform-mbean/type=runtime:read-attribute(name=input-arguments,include-defaults=true)">
 <node CREATED="1573670037212" ID="Freemind_Link_673751285" MODIFIED="1642162032098" TEXT="Lista os VM Arguments configurados para o Wildfly"/>
+</node>
+<node COLOR="#0000ff" CREATED="1573669995752" ID="Freemind_Link_1032589296" MODIFIED="1653934315042" TEXT="/interface=public/:undefine-attribute(name=inet-address)&#xa;/interface=management/:undefine-attribute(name=inet-address)&#xa;/interface=public/:write-attribute(name=any-address, value=true)&#xa;/interface=management/:write-attribute(name=any-address, value=true)&#xa;">
+<node CREATED="1573670037212" ID="Freemind_Link_1008806038" MODIFIED="1653934333506" TEXT="Configura o server para receber conex&#xf5;es de quaisquer IPs de origem"/>
 </node>
 </node>
 <node CREATED="1574124006315" ID="Freemind_Link_109907071" MODIFIED="1574124010051" TEXT="par&#xe2;metros">

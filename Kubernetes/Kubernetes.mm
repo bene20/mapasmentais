@@ -34,7 +34,7 @@
 <node CREATED="1597410188637" ID="Freemind_Link_1625455322" MODIFIED="1597410193801" TEXT="Usar a ferramenta &apos;kubeadm&apos;">
 <node CREATED="1597410196980" ID="Freemind_Link_1769973743" LINK="#Freemind_Link_1270117106" MODIFIED="1597410208212" TEXT="Ver anota&#xe7;&#xf5;es abaixo"/>
 </node>
-<node CREATED="1597411453696" FOLDED="true" ID="Freemind_Link_1273837279" MODIFIED="1597411639505" TEXT="Compatibilidade entre vers&#xf5;es dos componentes:">
+<node CREATED="1597411453696" ID="Freemind_Link_1273837279" MODIFIED="1597411639505" TEXT="Compatibilidade entre vers&#xf5;es dos componentes:">
 <node CREATED="1597411625669" ID="Freemind_Link_48127004" MODIFIED="1597411631178" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/versoescomponentes.jpg&quot;&gt;"/>
 </node>
 <node CREATED="1597409970078" ID="Freemind_Link_1225686618" MODIFIED="1597409972098" TEXT="Etapas:">
@@ -116,7 +116,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1597756577370" FOLDED="true" ID="Freemind_Link_1326851633" MODIFIED="1597756582454" TEXT="Seguran&#xe7;a">
+<node CREATED="1597756577370" ID="Freemind_Link_1326851633" MODIFIED="1597756582454" TEXT="Seguran&#xe7;a">
 <node CREATED="1597756583128" ID="Freemind_Link_141401221" MODIFIED="1597756599307" TEXT="O k8s n&#xe3;o cria usu&#xe1;rios de acesso ao cluster">
 <node CREATED="1597756601155" ID="Freemind_Link_1820649453" MODIFIED="1597756606501" TEXT="Mas cria contas de servi&#xe7;o">
 <node CREATED="1597756606946" ID="Freemind_Link_1302044043" MODIFIED="1597756624015" TEXT="Contas de servi&#xe7;o s&#xe3;o usadas por rob&#xf4;s (ou outros sistemas)"/>
@@ -154,7 +154,7 @@
 </node>
 <node CREATED="1597758179359" ID="Freemind_Link_292893367" MODIFIED="1597758191162" TEXT="Requer configura&#xe7;&#xe3;o de roles de acesso para os usu&#xe1;rios">
 <node CREATED="1597758191767" ID="Freemind_Link_1325667311" MODIFIED="1597758208626" TEXT="Objeto &apos;Role&apos; e &apos;RoleBinding&apos; do k8s"/>
-<node CREATED="1597757191265" FOLDED="true" ID="Freemind_Link_1325946927" MODIFIED="1597757193037" TEXT="Ex:">
+<node CREATED="1597757191265" ID="Freemind_Link_1325946927" MODIFIED="1597757193037" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1597757203793" ID="Freemind_Link_561417927" MODIFIED="1597758239138" TEXT="---&#xa;kind: Role&#xa;apiVersion: rbac.authorization.k8s.io/v1&#xa;metadata:&#xa;  namespace: default&#xa;  name: pod-reader&#xa;rules:&#xa;- apiGroups: [&quot;&quot;] # &quot;&quot; indicates the core API group&#xa;  resources: [&quot;pods&quot;]&#xa;  verbs: [&quot;get&quot;, &quot;watch&quot;, &quot;list&quot;]&#xa; &#xa;---&#xa;# This role binding allows &quot;jane&quot; to read pods in the &quot;default&quot; namespace.&#xa;kind: RoleBinding&#xa;apiVersion: rbac.authorization.k8s.io/v1&#xa;metadata:&#xa;  name: read-pods&#xa;  namespace: default&#xa;subjects:&#xa;- kind: User&#xa;  name: user1 # Name is case sensitive&#xa;  apiGroup: rbac.authorization.k8s.io&#xa;roleRef:&#xa;  kind: Role #this must be Role or ClusterRole&#xa;  name: pod-reader # this must match the name of the Role or ClusterRole you wish to bind to&#xa;  apiGroup: rbac.authorization.k8s.io"/>
 </node>
 </node>
@@ -230,7 +230,7 @@
 </node>
 <node CREATED="1597841443492" ID="Freemind_Link_923058260" MODIFIED="1597841446734" TEXT="Gera&#xe7;&#xe3;o">
 <node CREATED="1597841447915" ID="Freemind_Link_1339550608" MODIFIED="1597841458718" TEXT="Usando OPENSSL"/>
-<node CREATED="1597842293879" FOLDED="true" ID="Freemind_Link_1450756864" MODIFIED="1597842295387" TEXT="CA">
+<node CREATED="1597842293879" ID="Freemind_Link_1450756864" MODIFIED="1597842295387" TEXT="CA">
 <node CREATED="1597843043455" ID="Freemind_Link_1973722335" MODIFIED="1597843054690" TEXT="Passos para gerar a autoridade certificadora do K8S"/>
 <node CREATED="1597841482623" ID="Freemind_Link_1297192667" MODIFIED="1597841485870" TEXT="Keys">
 <node COLOR="#0000ff" CREATED="1597841487189" ID="Freemind_Link_984238018" MODIFIED="1597841511814" TEXT="openssl genrsa -out ca.key 2048">
@@ -268,7 +268,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1597842315445" FOLDED="true" ID="Freemind_Link_1623000098" MODIFIED="1597842317369" TEXT="Admin user">
+<node CREATED="1597842315445" ID="Freemind_Link_1623000098" MODIFIED="1597842317369" TEXT="Admin user">
 <node CREATED="1597841482623" ID="Freemind_Link_952174397" MODIFIED="1597841485870" TEXT="Keys">
 <node COLOR="#0000ff" CREATED="1597841487189" ID="Freemind_Link_330246094" MODIFIED="1597842345753" TEXT="openssl genrsa -out admin.key 2048">
 <node CREATED="1597841518795" ID="Freemind_Link_1132337179" MODIFIED="1597842351377" TEXT="Gera o admin.key"/>
@@ -308,7 +308,7 @@
 <node CREATED="1597844211472" ID="Freemind_Link_1971616785" MODIFIED="1597844249830" TEXT="Uso o &apos;key&apos;, o certificado (&apos;crt&apos;) e o certificado CA (&apos;ca.crt&apos;) em vez de usar o par usu&#xe1;rio-senha"/>
 <node CREATED="1597844300356" ID="Freemind_Link_667409525" MODIFIED="1597844670846" TEXT="Uma alternativa mais definitiva &#xe9; definir &#xa;esses certificados no objeto &apos;Config&apos; do K8s">
 <node CREATED="1597844719137" ID="Freemind_Link_1153867130" MODIFIED="1597844727197" TEXT="Arquivo kube-config.yaml"/>
-<node CREATED="1597844484968" ID="Freemind_Link_1423101798" MODIFIED="1597844485788" TEXT="Ex:">
+<node CREATED="1597844484968" FOLDED="true" ID="Freemind_Link_1423101798" MODIFIED="1597844485788" TEXT="Ex:">
 <node CREATED="1597844676872" ID="Freemind_Link_554714753" LINK="#Freemind_Link_1755709500" MODIFIED="1597844695987" TEXT="Ver anota&#xe7;&#xf5;es"/>
 <node COLOR="#ff00ff" CREATED="1597844489517" ID="Freemind_Link_140686834" MODIFIED="1597844632089" TEXT="apiVersion: v1&#xa;kind: Config&#xa;clusters:&#xa;  - cluster:&#xa;      certificate-authority: ca.crt&#xa;      server: https://kube-apiserver:6443&#xa;    name: kubernetes&#xa;users:&#xa;  - name: kubernetes-admin&#xa;    user:&#xa;      client-certificate: admin.crt&#xa;      client-key: admin.key"/>
 </node>
@@ -316,7 +316,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1597843811937" FOLDED="true" ID="Freemind_Link_1160534058" MODIFIED="1597843816461" TEXT="Kube-scheduler">
+<node CREATED="1597843811937" ID="Freemind_Link_1160534058" MODIFIED="1597843816461" TEXT="Kube-scheduler">
 <node CREATED="1597843816912" ID="Freemind_Link_838717667" MODIFIED="1597843878434" TEXT="Por ser um componente de sistema, o nome no certificado precisa ser prefixado com a palavra &apos;SYSTEM&apos;">
 <node CREATED="1597843960612" ID="Freemind_Link_1497974701" MODIFIED="1597843965688" TEXT="Ex:">
 <node CREATED="1597846380792" ID="Freemind_Link_1741809367" MODIFIED="1597846384916" TEXT="Comando de cria&#xe7;&#xe3;o do CSR"/>
@@ -324,7 +324,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1597843811937" FOLDED="true" ID="Freemind_Link_1223525935" MODIFIED="1597843855524" TEXT="Kube-Controller-Manager">
+<node CREATED="1597843811937" ID="Freemind_Link_1223525935" MODIFIED="1597843855524" TEXT="Kube-Controller-Manager">
 <node CREATED="1597843816912" ID="Freemind_Link_799190334" MODIFIED="1597843878434" TEXT="Por ser um componente de sistema, o nome no certificado precisa ser prefixado com a palavra &apos;SYSTEM&apos;">
 <node CREATED="1597843960612" ID="Freemind_Link_1411967922" MODIFIED="1597843965688" TEXT="Ex:">
 <node CREATED="1597846380792" ID="Freemind_Link_1816265264" MODIFIED="1597846384916" TEXT="Comando de cria&#xe7;&#xe3;o do CSR"/>
@@ -332,7 +332,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1597843898814" FOLDED="true" ID="Freemind_Link_1496098383" MODIFIED="1597843902161" TEXT="Kube-Proxy">
+<node CREATED="1597843898814" ID="Freemind_Link_1496098383" MODIFIED="1597843902161" TEXT="Kube-Proxy">
 <node CREATED="1597843816912" ID="Freemind_Link_352026721" MODIFIED="1597843878434" TEXT="Por ser um componente de sistema, o nome no certificado precisa ser prefixado com a palavra &apos;SYSTEM&apos;">
 <node CREATED="1597843960612" ID="Freemind_Link_1409379819" MODIFIED="1597843965688" TEXT="Ex:">
 <node CREATED="1597846380792" ID="Freemind_Link_1404323302" MODIFIED="1597846384916" TEXT="Comando de cria&#xe7;&#xe3;o do CSR"/>
@@ -340,7 +340,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1597844903227" FOLDED="true" ID="Freemind_Link_80734919" MODIFIED="1597844910030" TEXT="Kube-Api-Server">
+<node CREATED="1597844903227" ID="Freemind_Link_80734919" MODIFIED="1597844910030" TEXT="Kube-Api-Server">
 <node CREATED="1597844913045" ID="Freemind_Link_1190837589" MODIFIED="1597845028611" TEXT="Precisa ter todos os nomes &#xa;alternativos registrados no certificado">
 <node CREATED="1597845017072" ID="Freemind_Link_261553801" MODIFIED="1597845019447" TEXT="Lista:">
 <node CREATED="1597844926683" ID="Freemind_Link_909800739" MODIFIED="1597844929231" TEXT="kubernetes"/>
@@ -362,13 +362,13 @@
 </node>
 </node>
 </node>
-<node CREATED="1597846497679" FOLDED="true" ID="Freemind_Link_130040694" MODIFIED="1597846500291" TEXT="Kubelet">
+<node CREATED="1597846497679" ID="Freemind_Link_130040694" MODIFIED="1597846500291" TEXT="Kubelet">
 <node CREATED="1597846055481" ID="Freemind_Link_1122971506" MODIFIED="1597846057149" TEXT="Server">
 <node CREATED="1597846060618" ID="Freemind_Link_1116551935" MODIFIED="1597846074469" TEXT="Comportamento do Kubelet enquanto Server do Kube-API"/>
 <node CREATED="1597845875029" ID="Freemind_Link_542804128" MODIFIED="1597845885370" TEXT="H&#xe1; um Kubelet para cada n&#xf3; do cluster">
 <node CREATED="1597845791934" ID="Freemind_Link_1108710515" MODIFIED="1597845900351" TEXT="O nome nos certificados deve &#xa;ser o nome do n&#xf3;, e n&#xe3;o &apos;kubelet&apos;">
 <icon BUILTIN="messagebox_warning"/>
-<node CREATED="1597843960612" ID="Freemind_Link_553263369" MODIFIED="1597843965688" TEXT="Ex:">
+<node CREATED="1597843960612" FOLDED="true" ID="Freemind_Link_553263369" MODIFIED="1597843965688" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1597841487189" ID="Freemind_Link_1617020962" MODIFIED="1597845828409" TEXT="openssl [...] -subj &quot;/CN=node01&quot; [...]"/>
 </node>
 </node>
@@ -418,11 +418,11 @@
 </node>
 </node>
 <node CREATED="1613589359874" ID="Freemind_Link_1303181181" MODIFIED="1613589369127" TEXT="Instala&#xe7;&#xe3;o">
-<node CREATED="1613589369797" FOLDED="true" ID="Freemind_Link_1687393185" MODIFIED="1613589371694" TEXT="Na m&#xe3;o">
+<node CREATED="1613589369797" ID="Freemind_Link_1687393185" MODIFIED="1613589371694" TEXT="Na m&#xe3;o">
 <node CREATED="1613735818463" ID="Freemind_Link_1373035147" MODIFIED="1613735823015" TEXT="https://www.youtube.com/playlist?list=PL2We04F3Y_41jYdadX55fdJplDvgNGENo">
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1613589442307" FOLDED="true" ID="Freemind_Link_1739600886" MODIFIED="1613589466193" TEXT="&#xc9; necess&#xe1;rio que a m&#xe1;quina master tenha&#xa;acesso SSH a todos os n&#xf3;s do cluster">
+<node CREATED="1613589442307" ID="Freemind_Link_1739600886" MODIFIED="1613589466193" TEXT="&#xc9; necess&#xe1;rio que a m&#xe1;quina master tenha&#xa;acesso SSH a todos os n&#xf3;s do cluster">
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_805722803" MODIFIED="1613589500991" TEXT="ssh-keygen">
 <icon BUILTIN="full-1"/>
 <node CREATED="1613589503266" ID="Freemind_Link_1723820230" MODIFIED="1613589508502" TEXT="Executar no n&#xf3; master"/>
@@ -464,7 +464,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1613592161376" FOLDED="true" ID="Freemind_Link_405106177" MODIFIED="1613592163197" TEXT="CA">
+<node CREATED="1613592161376" ID="Freemind_Link_405106177" MODIFIED="1613592163197" TEXT="CA">
 <node CREATED="1613592766072" ID="Freemind_Link_313861228" MODIFIED="1613592774237" TEXT="Essa ser&#xe1; a unidade certificadora do cluster"/>
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1465068619" MODIFIED="1613591530117" TEXT="openssl  genrsa -out ca.key 2048">
 <icon BUILTIN="full-1"/>
@@ -480,7 +480,7 @@
 <node CREATED="1613592070289" ID="Freemind_Link_681567338" MODIFIED="1613592083917" TEXT="Auto assinar o CSR usando a pr&#xf3;pria chave privada"/>
 </node>
 </node>
-<node CREATED="1613592166633" FOLDED="true" ID="Freemind_Link_915467436" MODIFIED="1613598706231" TEXT="Usu&#xe1;rio admin">
+<node CREATED="1613592166633" ID="Freemind_Link_915467436" MODIFIED="1613598706231" TEXT="Usu&#xe1;rio admin">
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_487977472" MODIFIED="1613592188573" TEXT="openssl  genrsa -out admin.key 2048">
 <icon BUILTIN="full-1"/>
 <node CREATED="1613591493305" ID="Freemind_Link_1462225971" MODIFIED="1613592697321" TEXT="Gera a chave prim&#xe1;ria do admin"/>
@@ -495,7 +495,7 @@
 <node CREATED="1613592070289" ID="Freemind_Link_109828499" MODIFIED="1613592610521" TEXT="Assinar o certificado do admin usando o par de chaves CA"/>
 </node>
 </node>
-<node CREATED="1613592166633" FOLDED="true" ID="Freemind_Link_962836698" MODIFIED="1613592658181" TEXT="Controller manager">
+<node CREATED="1613592166633" ID="Freemind_Link_962836698" MODIFIED="1613592658181" TEXT="Controller manager">
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1975303779" MODIFIED="1613592689397" TEXT="openssl genrsa -out kube-controller-manager.key 2048">
 <icon BUILTIN="full-1"/>
 <node CREATED="1613591493305" ID="Freemind_Link_858070983" MODIFIED="1613592704220" TEXT="Gera a chave prim&#xe1;ria do controller manager"/>
@@ -509,7 +509,7 @@
 <node CREATED="1613592070289" ID="Freemind_Link_431413837" MODIFIED="1613593040783" TEXT="Assinar o certificado usando o par de chaves CA"/>
 </node>
 </node>
-<node CREATED="1613592166633" FOLDED="true" ID="Freemind_Link_917287029" MODIFIED="1613593104063" TEXT="Kube-proxy">
+<node CREATED="1613592166633" ID="Freemind_Link_917287029" MODIFIED="1613593104063" TEXT="Kube-proxy">
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_72373846" MODIFIED="1613593006991" TEXT="openssl genrsa -out kube-proxy.key 2048">
 <icon BUILTIN="full-1"/>
 <node CREATED="1613591493305" ID="Freemind_Link_1548517776" MODIFIED="1613592993972" TEXT="Gera a chave prim&#xe1;ria do kube-proxy"/>
@@ -523,7 +523,7 @@
 <node CREATED="1613592070289" ID="Freemind_Link_402896420" MODIFIED="1613593040783" TEXT="Assinar o certificado usando o par de chaves CA"/>
 </node>
 </node>
-<node CREATED="1613592166633" FOLDED="true" ID="Freemind_Link_797019744" MODIFIED="1613593106993" TEXT="Kube-scheduler">
+<node CREATED="1613592166633" ID="Freemind_Link_797019744" MODIFIED="1613593106993" TEXT="Kube-scheduler">
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1163872016" MODIFIED="1613593079971" TEXT="openssl genrsa -out kube-scheduler.key 2048">
 <icon BUILTIN="full-1"/>
 <node CREATED="1613591493305" ID="Freemind_Link_234042960" MODIFIED="1613593564472" TEXT="Gera a chave prim&#xe1;ria do kube-scheduler"/>
@@ -537,7 +537,7 @@
 <node CREATED="1613592070289" ID="Freemind_Link_1582248081" MODIFIED="1613593040783" TEXT="Assinar o certificado usando o par de chaves CA"/>
 </node>
 </node>
-<node CREATED="1613592166633" FOLDED="true" ID="Freemind_Link_1716393046" MODIFIED="1613593248941" TEXT="Kube-apiserver">
+<node CREATED="1613592166633" ID="Freemind_Link_1716393046" MODIFIED="1613593248941" TEXT="Kube-apiserver">
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1147664039" MODIFIED="1613593513869" TEXT="vi openssl.cnf">
 <icon BUILTIN="full-1"/>
 <node CREATED="1613591493305" ID="Freemind_Link_1686812343" MODIFIED="1613593428208" TEXT="O certificado kube-apiserver precisa de todos os poss&#xed;veis nomes que os componentes do cluster possam alcan&#xe7;ar. Isso inclui diferentes nomes DNS, endere&#xe7;os IP etc."/>
@@ -559,7 +559,7 @@
 <node CREATED="1613592070289" ID="Freemind_Link_1628906387" MODIFIED="1613593040783" TEXT="Assinar o certificado usando o par de chaves CA"/>
 </node>
 </node>
-<node CREATED="1613592166633" FOLDED="true" ID="Freemind_Link_1254284752" MODIFIED="1613593707981" TEXT="etcd server">
+<node CREATED="1613592166633" ID="Freemind_Link_1254284752" MODIFIED="1613593707981" TEXT="etcd server">
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_922318164" MODIFIED="1613593721443" TEXT="vi openssl-etcd.cnf">
 <icon BUILTIN="full-1"/>
 <node CREATED="1613591493305" ID="Freemind_Link_92173951" MODIFIED="1613593786179" TEXT="O certificado etcd-server precisa do endere&#xe7;o de todos os servidores que fa&#xe7;am parte do cluster ETCD"/>
@@ -581,7 +581,7 @@
 <node CREATED="1613592070289" ID="Freemind_Link_1093063219" MODIFIED="1613593040783" TEXT="Assinar o certificado usando o par de chaves CA"/>
 </node>
 </node>
-<node CREATED="1613592166633" FOLDED="true" ID="Freemind_Link_1323039341" MODIFIED="1613593930042" TEXT="service-account">
+<node CREATED="1613592166633" ID="Freemind_Link_1323039341" MODIFIED="1613593930042" TEXT="service-account">
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_217590028" MODIFIED="1613593937758" TEXT="openssl genrsa -out service-account.key 2048">
 <icon BUILTIN="full-1"/>
 <node CREATED="1613591493305" ID="Freemind_Link_1091085006" MODIFIED="1613593943357" TEXT="Gera a chave prim&#xe1;ria do service-account"/>
@@ -614,16 +614,16 @@
 <node COLOR="#0000ff" CREATED="1613594350126" ID="Freemind_Link_1636084011" MODIFIED="1613598793848" TEXT="cp admin.kubeconfig kube-controller-manager.kubeconfig kube-scheduler.kubeconfig ~/"/>
 </node>
 </node>
-<node CREATED="1613598595558" FOLDED="true" ID="Freemind_Link_1988831333" MODIFIED="1613598604975" TEXT="Kube-proxy">
+<node CREATED="1613598595558" ID="Freemind_Link_1988831333" MODIFIED="1613598604975" TEXT="Kube-proxy">
 <node COLOR="#0000ff" CREATED="1613594548469" ID="Freemind_Link_881089344" MODIFIED="1613598628818" TEXT="{&#xa;  kubectl config set-cluster kubernetes-the-hard-way \&#xa;    --certificate-authority=ca.crt \&#xa;    --embed-certs=true \&#xa;    --server=https://${LOADBALANCER_ADDRESS}:6443 \&#xa;    --kubeconfig=kube-proxy.kubeconfig&#xa;&#xa;  kubectl config set-credentials system:kube-proxy \&#xa;    --client-certificate=kube-proxy.crt \&#xa;    --client-key=kube-proxy.key \&#xa;    --embed-certs=true \&#xa;    --kubeconfig=kube-proxy.kubeconfig&#xa;&#xa;  kubectl config set-context default \&#xa;    --cluster=kubernetes-the-hard-way \&#xa;    --user=system:kube-proxy \&#xa;    --kubeconfig=kube-proxy.kubeconfig&#xa;&#xa;  kubectl config use-context default --kubeconfig=kube-proxy.kubeconfig&#xa;}"/>
 </node>
-<node CREATED="1613598639013" FOLDED="true" ID="Freemind_Link_1802501223" MODIFIED="1613598643104" TEXT="Controller manager">
+<node CREATED="1613598639013" ID="Freemind_Link_1802501223" MODIFIED="1613598643104" TEXT="Controller manager">
 <node COLOR="#0000ff" CREATED="1613594548469" ID="Freemind_Link_1576379169" MODIFIED="1613598652127" TEXT="{&#xa;  kubectl config set-cluster kubernetes-the-hard-way \&#xa;    --certificate-authority=ca.crt \&#xa;    --embed-certs=true \&#xa;    --server=https://127.0.0.1:6443 \&#xa;    --kubeconfig=kube-controller-manager.kubeconfig&#xa;&#xa;  kubectl config set-credentials system:kube-controller-manager \&#xa;    --client-certificate=kube-controller-manager.crt \&#xa;    --client-key=kube-controller-manager.key \&#xa;    --embed-certs=true \&#xa;    --kubeconfig=kube-controller-manager.kubeconfig&#xa;&#xa;  kubectl config set-context default \&#xa;    --cluster=kubernetes-the-hard-way \&#xa;    --user=system:kube-controller-manager \&#xa;    --kubeconfig=kube-controller-manager.kubeconfig&#xa;&#xa;  kubectl config use-context default --kubeconfig=kube-controller-manager.kubeconfig&#xa;}"/>
 </node>
-<node CREATED="1613598639013" FOLDED="true" ID="Freemind_Link_872029079" MODIFIED="1613598673137" TEXT="Kube-scheduler">
+<node CREATED="1613598639013" ID="Freemind_Link_872029079" MODIFIED="1613598673137" TEXT="Kube-scheduler">
 <node COLOR="#0000ff" CREATED="1613594548469" ID="Freemind_Link_149740861" MODIFIED="1613598680462" TEXT="{&#xa;  kubectl config set-cluster kubernetes-the-hard-way \&#xa;    --certificate-authority=ca.crt \&#xa;    --embed-certs=true \&#xa;    --server=https://127.0.0.1:6443 \&#xa;    --kubeconfig=kube-scheduler.kubeconfig&#xa;&#xa;  kubectl config set-credentials system:kube-scheduler \&#xa;    --client-certificate=kube-scheduler.crt \&#xa;    --client-key=kube-scheduler.key \&#xa;    --embed-certs=true \&#xa;    --kubeconfig=kube-scheduler.kubeconfig&#xa;&#xa;  kubectl config set-context default \&#xa;    --cluster=kubernetes-the-hard-way \&#xa;    --user=system:kube-scheduler \&#xa;    --kubeconfig=kube-scheduler.kubeconfig&#xa;&#xa;  kubectl config use-context default --kubeconfig=kube-scheduler.kubeconfig&#xa;}"/>
 </node>
-<node CREATED="1613598639013" FOLDED="true" ID="Freemind_Link_82567960" MODIFIED="1613598700279" TEXT="Usu&#xe1;rio Admin">
+<node CREATED="1613598639013" ID="Freemind_Link_82567960" MODIFIED="1613598700279" TEXT="Usu&#xe1;rio Admin">
 <node COLOR="#0000ff" CREATED="1613594548469" ID="Freemind_Link_1322495100" MODIFIED="1613598722403" TEXT="{&#xa;  kubectl config set-cluster kubernetes-the-hard-way \&#xa;    --certificate-authority=ca.crt \&#xa;    --embed-certs=true \&#xa;    --server=https://127.0.0.1:6443 \&#xa;    --kubeconfig=admin.kubeconfig&#xa;&#xa;  kubectl config set-credentials admin \&#xa;    --client-certificate=admin.crt \&#xa;    --client-key=admin.key \&#xa;    --embed-certs=true \&#xa;    --kubeconfig=admin.kubeconfig&#xa;&#xa;  kubectl config set-context default \&#xa;    --cluster=kubernetes-the-hard-way \&#xa;    --user=admin \&#xa;    --kubeconfig=admin.kubeconfig&#xa;&#xa;  kubectl config use-context default --kubeconfig=admin.kubeconfig&#xa;}"/>
 </node>
 </node>
@@ -649,27 +649,27 @@
 <node CREATED="1613735995801" FOLDED="true" ID="Freemind_Link_478051772" MODIFIED="1613746443956" TEXT="5 - Subir o cluster ETCD nos n&#xf3;s master">
 <icon BUILTIN="forward"/>
 <node CREATED="1613736456575" ID="Freemind_Link_915119009" MODIFIED="1613736464331" TEXT="Fazer essas opera&#xe7;&#xf5;es em cada um dos n&#xf3;s master"/>
-<node CREATED="1613736025914" FOLDED="true" ID="Freemind_Link_1291740489" MODIFIED="1613736048346" TEXT="Baixar os bin&#xe1;rios do ETCD">
+<node CREATED="1613736025914" ID="Freemind_Link_1291740489" MODIFIED="1613736048346" TEXT="Baixar os bin&#xe1;rios do ETCD">
 <icon BUILTIN="full-1"/>
 <node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_1955069479" MODIFIED="1613736078947" TEXT="wget -q --show-progress --https-only --timestamping \   &quot;https://github.com/coreos/etcd/releases/download/v3.3.9/etcd-v3.3.9-linux-amd64.tar.gz&quot;"/>
 </node>
-<node CREATED="1613736445734" FOLDED="true" ID="Freemind_Link_479498064" MODIFIED="1613736452712" TEXT="Instalar o etcd">
+<node CREATED="1613736445734" ID="Freemind_Link_479498064" MODIFIED="1613736452712" TEXT="Instalar o etcd">
 <icon BUILTIN="full-2"/>
 <node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_460693369" MODIFIED="1613736492568" TEXT="{&#xa;  tar -xvf etcd-v3.3.9-linux-amd64.tar.gz&#xa;  sudo mv etcd-v3.3.9-linux-amd64/etcd* /usr/local/bin/&#xa;}"/>
 </node>
-<node CREATED="1613736531057" FOLDED="true" ID="Freemind_Link_1362656038" MODIFIED="1613736542004" TEXT="Colocar os certificados do etcd">
+<node CREATED="1613736531057" ID="Freemind_Link_1362656038" MODIFIED="1613736542004" TEXT="Colocar os certificados do etcd">
 <icon BUILTIN="full-3"/>
 <node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_639498236" MODIFIED="1613736552837" TEXT="{&#xa;  sudo mkdir -p /etc/etcd /var/lib/etcd&#xa;  sudo cp ca.crt etcd-server.key etcd-server.crt /etc/etcd/&#xa;}"/>
 </node>
-<node CREATED="1613736565589" FOLDED="true" ID="Freemind_Link_779892425" MODIFIED="1613736577544" TEXT="Criar o arquivo de configura&#xe7;&#xe3;o do etcd">
+<node CREATED="1613736565589" ID="Freemind_Link_779892425" MODIFIED="1613736577544" TEXT="Criar o arquivo de configura&#xe7;&#xe3;o do etcd">
 <icon BUILTIN="full-4"/>
 <node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_1933588958" MODIFIED="1613736606580" TEXT="INTERNAL_IP=$(ip addr show enp0s8 | grep &quot;inet &quot; | awk &apos;{print $2}&apos; | cut -d / -f 1)&#xa;ETCD_NAME=$(hostname -s)&#xa;&#xa;cat &lt;&lt;EOF | sudo tee /etc/systemd/system/etcd.service&#xa;[Unit]&#xa;Description=etcd&#xa;Documentation=https://github.com/coreos&#xa;&#xa;[Service]&#xa;ExecStart=/usr/local/bin/etcd \\&#xa;  --name ${ETCD_NAME} \\&#xa;  --cert-file=/etc/etcd/etcd-server.crt \\&#xa;  --key-file=/etc/etcd/etcd-server.key \\&#xa;  --peer-cert-file=/etc/etcd/etcd-server.crt \\&#xa;  --peer-key-file=/etc/etcd/etcd-server.key \\&#xa;  --trusted-ca-file=/etc/etcd/ca.crt \\&#xa;  --peer-trusted-ca-file=/etc/etcd/ca.crt \\&#xa;  --peer-client-cert-auth \\&#xa;  --client-cert-auth \\&#xa;  --initial-advertise-peer-urls https://${INTERNAL_IP}:2380 \\&#xa;  --listen-peer-urls https://${INTERNAL_IP}:2380 \\&#xa;  --listen-client-urls https://${INTERNAL_IP}:2379,https://127.0.0.1:2379 \\&#xa;  --advertise-client-urls https://${INTERNAL_IP}:2379 \\&#xa;  --initial-cluster-token etcd-cluster-0 \\&#xa;  --initial-cluster master-1=https://192.168.5.11:2380,master-2=https://192.168.5.12:2380 \\&#xa;  --initial-cluster-state new \\&#xa;  --data-dir=/var/lib/etcd&#xa;Restart=on-failure&#xa;RestartSec=5&#xa;&#xa;[Install]&#xa;WantedBy=multi-user.target&#xa;EOF"/>
 </node>
-<node CREATED="1613736624686" FOLDED="true" ID="Freemind_Link_1312829689" MODIFIED="1613736634358" TEXT="Iniciar o etcd server">
+<node CREATED="1613736624686" ID="Freemind_Link_1312829689" MODIFIED="1613736634358" TEXT="Iniciar o etcd server">
 <icon BUILTIN="full-5"/>
 <node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_49979231" MODIFIED="1613736647671" TEXT="{&#xa;  sudo systemctl daemon-reload&#xa;  sudo systemctl enable etcd&#xa;  sudo systemctl start etcd&#xa;}"/>
 </node>
-<node CREATED="1613736662462" FOLDED="true" ID="Freemind_Link_1600943813" MODIFIED="1613736671287" TEXT="Testar cluster etcd">
+<node CREATED="1613736662462" ID="Freemind_Link_1600943813" MODIFIED="1613736671287" TEXT="Testar cluster etcd">
 <icon BUILTIN="full-6"/>
 <node CREATED="1613736672743" ID="Freemind_Link_1536897862" MODIFIED="1613736694983" TEXT="Ap&#xf3;s a execu&#xe7;&#xe3;o dos passos acima em todos os n&#xf3;s master, executar o comando abaixo"/>
 <node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_487154231" MODIFIED="1613736704196" TEXT="sudo ETCDCTL_API=3 etcdctl member list \&#xa;  --endpoints=https://127.0.0.1:2379 \&#xa;  --cacert=/etc/etcd/ca.crt \&#xa;  --cert=/etc/etcd/etcd-server.crt \&#xa;  --key=/etc/etcd/etcd-server.key"/>
@@ -682,7 +682,7 @@
 <icon BUILTIN="forward"/>
 <node CREATED="1613737811359" ID="Freemind_Link_30804953" MODIFIED="1613737855701" TEXT="O Control Plane &#xe9; formado pelo Kubernetes API Server, Scheduler e Controller Manager"/>
 <node CREATED="1613736456575" ID="Freemind_Link_88500899" MODIFIED="1613736464331" TEXT="Fazer essas opera&#xe7;&#xf5;es em cada um dos n&#xf3;s master"/>
-<node CREATED="1613737892257" FOLDED="true" ID="Freemind_Link_864877378" MODIFIED="1613738082673" TEXT="Baixar e instalar os bin&#xe1;rios">
+<node CREATED="1613737892257" ID="Freemind_Link_864877378" MODIFIED="1613738082673" TEXT="Baixar e instalar os bin&#xe1;rios">
 <icon BUILTIN="full-1"/>
 <node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_1445032433" MODIFIED="1613738163442" TEXT="sudo mkdir -p /etc/kubernetes/config">
 <icon BUILTIN="full-1"/>
@@ -694,16 +694,16 @@
 <icon BUILTIN="full-3"/>
 </node>
 </node>
-<node CREATED="1613738171292" FOLDED="true" ID="Freemind_Link_560337314" MODIFIED="1613738188667" TEXT="Colocar os certificados ">
+<node CREATED="1613738171292" ID="Freemind_Link_560337314" MODIFIED="1613738188667" TEXT="Colocar os certificados ">
 <icon BUILTIN="full-2"/>
 <node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_506677848" MODIFIED="1613738212366" TEXT="{&#xa;  sudo mkdir -p /var/lib/kubernetes/&#xa;&#xa;  sudo cp ca.crt ca.key kube-apiserver.crt kube-apiserver.key \&#xa;    service-account.key service-account.crt \&#xa;    etcd-server.key etcd-server.crt \&#xa;    encryption-config.yaml /var/lib/kubernetes/&#xa;}"/>
 </node>
-<node CREATED="1613736565589" FOLDED="true" ID="Freemind_Link_1053268538" MODIFIED="1613738322821" TEXT="Criar os arquivos de configura&#xe7;&#xe3;o">
+<node CREATED="1613736565589" ID="Freemind_Link_1053268538" MODIFIED="1613738322821" TEXT="Criar os arquivos de configura&#xe7;&#xe3;o">
 <icon BUILTIN="full-3"/>
-<node CREATED="1613738328558" FOLDED="true" ID="Freemind_Link_687014048" MODIFIED="1613738332063" TEXT="API Server">
+<node CREATED="1613738328558" ID="Freemind_Link_687014048" MODIFIED="1613738332063" TEXT="API Server">
 <node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_215315011" MODIFIED="1613738282061" TEXT="INTERNAL_IP=$(ip addr show enp0s8 | grep &quot;inet &quot; | awk &apos;{print $2}&apos; | cut -d / -f 1)&#xa;&#xa;cat &lt;&lt;EOF | sudo tee /etc/systemd/system/kube-apiserver.service&#xa;[Unit]&#xa;Description=Kubernetes API Server&#xa;Documentation=https://github.com/kubernetes/kubernetes&#xa;&#xa;[Service]&#xa;ExecStart=/usr/local/bin/kube-apiserver \\&#xa;  --advertise-address=${INTERNAL_IP} \\&#xa;  --allow-privileged=true \\&#xa;  --apiserver-count=3 \\&#xa;  --audit-log-maxage=30 \\&#xa;  --audit-log-maxbackup=3 \\&#xa;  --audit-log-maxsize=100 \\&#xa;  --audit-log-path=/var/log/audit.log \\&#xa;  --authorization-mode=Node,RBAC \\&#xa;  --bind-address=0.0.0.0 \\&#xa;  --client-ca-file=/var/lib/kubernetes/ca.crt \\&#xa;  --enable-admission-plugins=NodeRestriction,ServiceAccount \\&#xa;  --enable-swagger-ui=true \\&#xa;  --enable-bootstrap-token-auth=true \\&#xa;  --etcd-cafile=/var/lib/kubernetes/ca.crt \\&#xa;  --etcd-certfile=/var/lib/kubernetes/etcd-server.crt \\&#xa;  --etcd-keyfile=/var/lib/kubernetes/etcd-server.key \\&#xa;  --etcd-servers=https://192.168.5.11:2379,https://192.168.5.12:2379 \\&#xa;  --event-ttl=1h \\&#xa;  --encryption-provider-config=/var/lib/kubernetes/encryption-config.yaml \\&#xa;  --kubelet-certificate-authority=/var/lib/kubernetes/ca.crt \\&#xa;  --kubelet-client-certificate=/var/lib/kubernetes/kube-apiserver.crt \\&#xa;  --kubelet-client-key=/var/lib/kubernetes/kube-apiserver.key \\&#xa;  --kubelet-https=true \\&#xa;  --runtime-config=api/all \\&#xa;  --service-account-key-file=/var/lib/kubernetes/service-account.crt \\&#xa;  --service-cluster-ip-range=10.96.0.0/24 \\&#xa;  --service-node-port-range=30000-32767 \\&#xa;  --tls-cert-file=/var/lib/kubernetes/kube-apiserver.crt \\&#xa;  --tls-private-key-file=/var/lib/kubernetes/kube-apiserver.key \\&#xa;  --v=2&#xa;Restart=on-failure&#xa;RestartSec=5&#xa;&#xa;[Install]&#xa;WantedBy=multi-user.target&#xa;EOF"/>
 </node>
-<node CREATED="1613738385226" FOLDED="true" ID="Freemind_Link_1069654403" MODIFIED="1613738389310" TEXT="Controller Manager">
+<node CREATED="1613738385226" ID="Freemind_Link_1069654403" MODIFIED="1613738389310" TEXT="Controller Manager">
 <node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_801504349" MODIFIED="1613738422017" TEXT="sudo cp kube-controller-manager.kubeconfig /var/lib/kubernetes/"/>
 <node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_889748828" MODIFIED="1613738434966" TEXT="cat &lt;&lt;EOF | sudo tee /etc/systemd/system/kube-controller-manager.service&#xa;[Unit]&#xa;Description=Kubernetes Controller Manager&#xa;Documentation=https://github.com/kubernetes/kubernetes&#xa;&#xa;[Service]&#xa;ExecStart=/usr/local/bin/kube-controller-manager \\&#xa;  --address=0.0.0.0 \\&#xa;  --cluster-cidr=192.168.5.0/24 \\&#xa;  --cluster-name=kubernetes \\&#xa;  --cluster-signing-cert-file=/var/lib/kubernetes/ca.crt \\&#xa;  --cluster-signing-key-file=/var/lib/kubernetes/ca.key \\&#xa;  --kubeconfig=/var/lib/kubernetes/kube-controller-manager.kubeconfig \\&#xa;  --leader-elect=true \\&#xa;  --root-ca-file=/var/lib/kubernetes/ca.crt \\&#xa;  --service-account-private-key-file=/var/lib/kubernetes/service-account.key \\&#xa;  --service-cluster-ip-range=10.96.0.0/24 \\&#xa;  --use-service-account-credentials=true \\&#xa;  --v=2&#xa;Restart=on-failure&#xa;RestartSec=5&#xa;&#xa;[Install]&#xa;WantedBy=multi-user.target&#xa;EOF"/>
 </node>
@@ -712,7 +712,7 @@
 <node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_904174152" MODIFIED="1613738479790" TEXT="cat &lt;&lt;EOF | sudo tee /etc/systemd/system/kube-scheduler.service&#xa;[Unit]&#xa;Description=Kubernetes Scheduler&#xa;Documentation=https://github.com/kubernetes/kubernetes&#xa;&#xa;[Service]&#xa;ExecStart=/usr/local/bin/kube-scheduler \\&#xa;  --kubeconfig=/var/lib/kubernetes/kube-scheduler.kubeconfig \\&#xa;  --address=127.0.0.1 \\&#xa;  --leader-elect=true \\&#xa;  --v=2&#xa;Restart=on-failure&#xa;RestartSec=5&#xa;&#xa;[Install]&#xa;WantedBy=multi-user.target&#xa;EOF"/>
 </node>
 </node>
-<node CREATED="1613738495418" FOLDED="true" ID="Freemind_Link_1547355027" MODIFIED="1613738506100" TEXT="Iniciar os servi&#xe7;os">
+<node CREATED="1613738495418" ID="Freemind_Link_1547355027" MODIFIED="1613738506100" TEXT="Iniciar os servi&#xe7;os">
 <icon BUILTIN="full-4"/>
 <node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_1297122760" MODIFIED="1613738537115" TEXT="{&#xa;  sudo systemctl daemon-reload&#xa;  sudo systemctl enable kube-apiserver kube-controller-manager kube-scheduler&#xa;  sudo systemctl start kube-apiserver kube-controller-manager kube-scheduler&#xa;}"/>
 </node>
@@ -749,27 +749,27 @@
 </node>
 </node>
 </node>
-<node CREATED="1613746307872" ID="Freemind_Link_964554818" MODIFIED="1613746452442" TEXT="8 - Subir os workers">
+<node CREATED="1613746307872" FOLDED="true" ID="Freemind_Link_964554818" MODIFIED="1613746452442" TEXT="8 - Subir os workers">
 <icon BUILTIN="forward"/>
-<node CREATED="1613749502753" FOLDED="true" ID="Freemind_Link_1012254842" MODIFIED="1613749506252" TEXT="Forma 1">
+<node CREATED="1613749502753" ID="Freemind_Link_1012254842" MODIFIED="1613749506252" TEXT="Forma 1">
 <node CREATED="1613749509273" ID="Freemind_Link_836619757" MODIFIED="1613749520606" TEXT="Emiss&#xe3;o e renova&#xe7;&#xe3;o dos certificados manual"/>
-<node CREATED="1613749587915" FOLDED="true" ID="Freemind_Link_1002145580" MODIFIED="1613749603348" TEXT="Gerar certificados do worker">
+<node CREATED="1613749587915" ID="Freemind_Link_1002145580" MODIFIED="1613749603348" TEXT="Gerar certificados do worker">
 <icon BUILTIN="full-1"/>
 <node CREATED="1613749604392" ID="Freemind_Link_820471712" MODIFIED="1613749612451" TEXT="Devem ser asinados pelo CA"/>
 <node CREATED="1613589503266" ID="Freemind_Link_1390837692" MODIFIED="1613589508502" TEXT="Executar no n&#xf3; master"/>
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_463742414" MODIFIED="1613749702011" TEXT="cat &gt; openssl-worker-1.cnf &lt;&lt;EOF&#xa;[req]&#xa;req_extensions = v3_req&#xa;distinguished_name = req_distinguished_name&#xa;[req_distinguished_name]&#xa;[ v3_req ]&#xa;basicConstraints = CA:FALSE&#xa;keyUsage = nonRepudiation, digitalSignature, keyEncipherment&#xa;subjectAltName = @alt_names&#xa;[alt_names]&#xa;DNS.1 = worker-1&#xa;IP.1 = 192.168.5.21&#xa;EOF&#xa;&#xa;openssl genrsa -out worker-1.key 2048&#xa;openssl req -new -key worker-1.key -subj &quot;/CN=system:node:worker-1/O=system:nodes&quot; -out worker-1.csr -config openssl-worker-1.cnf&#xa;openssl x509 -req -in worker-1.csr -CA ca.crt -CAkey ca.key -CAcreateserial  -out worker-1.crt -extensions v3_req -extfile openssl-worker-1.cnf -days 1000"/>
 </node>
-<node CREATED="1613749724350" FOLDED="true" ID="Freemind_Link_829128547" MODIFIED="1613749744495" TEXT="Gerar arquivo kubeconfig do worker">
+<node CREATED="1613749724350" ID="Freemind_Link_829128547" MODIFIED="1613749744495" TEXT="Gerar arquivo kubeconfig do worker">
 <icon BUILTIN="full-2"/>
 <node CREATED="1613589503266" ID="Freemind_Link_572920426" MODIFIED="1613589508502" TEXT="Executar no n&#xf3; master"/>
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_693539774" MODIFIED="1613749788010" TEXT="LOADBALANCER_ADDRESS=192.168.5.30&#xa;{&#xa;  kubectl config set-cluster kubernetes-the-hard-way \&#xa;    --certificate-authority=ca.crt \&#xa;    --embed-certs=true \&#xa;    --server=https://${LOADBALANCER_ADDRESS}:6443 \&#xa;    --kubeconfig=worker-1.kubeconfig&#xa;&#xa;  kubectl config set-credentials system:node:worker-1 \&#xa;    --client-certificate=worker-1.crt \&#xa;    --client-key=worker-1.key \&#xa;    --embed-certs=true \&#xa;    --kubeconfig=worker-1.kubeconfig&#xa;&#xa;  kubectl config set-context default \&#xa;    --cluster=kubernetes-the-hard-way \&#xa;    --user=system:node:worker-1 \&#xa;    --kubeconfig=worker-1.kubeconfig&#xa;&#xa;  kubectl config use-context default --kubeconfig=worker-1.kubeconfig&#xa;}"/>
 </node>
-<node CREATED="1613749724350" FOLDED="true" ID="Freemind_Link_685265535" MODIFIED="1613749851498" TEXT="Copiar certificados e kubeconfig para o worker">
+<node CREATED="1613749724350" ID="Freemind_Link_685265535" MODIFIED="1613749851498" TEXT="Copiar certificados e kubeconfig para o worker">
 <icon BUILTIN="full-3"/>
 <node CREATED="1613589503266" ID="Freemind_Link_1670864225" MODIFIED="1613589508502" TEXT="Executar no n&#xf3; master"/>
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_844056475" MODIFIED="1613749860287" TEXT="scp ca.crt worker-1.crt worker-1.key worker-1.kubeconfig worker-1:~/"/>
 </node>
-<node CREATED="1613749724350" FOLDED="true" ID="Freemind_Link_1459216966" MODIFIED="1613752590967" TEXT="Instalar os bin&#xe1;rios">
+<node CREATED="1613749724350" ID="Freemind_Link_1459216966" MODIFIED="1613752590967" TEXT="Instalar os bin&#xe1;rios">
 <icon BUILTIN="full-4"/>
 <node CREATED="1613589503266" ID="Freemind_Link_1013044969" MODIFIED="1613752612861" TEXT="Executar no n&#xf3; worker"/>
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1051753414" MODIFIED="1613752619652" TEXT="wget -q --show-progress --https-only --timestamping \   https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kubectl \   https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kube-proxy \   https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kubelet">
@@ -782,10 +782,10 @@
 <icon BUILTIN="full-3"/>
 </node>
 </node>
-<node CREATED="1613753076860" FOLDED="true" ID="Freemind_Link_1247468503" MODIFIED="1613753663817" TEXT="Configurar servi&#xe7;os do worker">
+<node CREATED="1613753076860" ID="Freemind_Link_1247468503" MODIFIED="1613753663817" TEXT="Configurar servi&#xe7;os do worker">
 <icon BUILTIN="full-5"/>
 <node CREATED="1614015034459" ID="Freemind_Link_1900260096" MODIFIED="1614015039966" TEXT="Executar no n&#xf3; worker"/>
-<node CREATED="1613753217002" FOLDED="true" ID="Freemind_Link_705521302" MODIFIED="1613753592805" TEXT="Kubelet">
+<node CREATED="1613753217002" ID="Freemind_Link_705521302" MODIFIED="1613753592805" TEXT="Kubelet">
 <icon BUILTIN="full-1"/>
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1318239715" MODIFIED="1613753244418" TEXT="{&#xa;  sudo mv ${HOSTNAME}.key ${HOSTNAME}.crt /var/lib/kubelet/&#xa;  sudo mv ${HOSTNAME}.kubeconfig /var/lib/kubelet/kubeconfig&#xa;  sudo mv ca.crt /var/lib/kubernetes/&#xa;}">
 <icon BUILTIN="full-1"/>
@@ -823,9 +823,9 @@
 </node>
 </node>
 </node>
-<node CREATED="1613749506913" FOLDED="true" ID="Freemind_Link_1962703592" MODIFIED="1614013449612" TEXT="Forma 2">
+<node CREATED="1613749506913" ID="Freemind_Link_1962703592" MODIFIED="1614013449612" TEXT="Forma 2">
 <node CREATED="1613749509273" ID="Freemind_Link_1671958297" MODIFIED="1613749536532" TEXT="Emiss&#xe3;o e renova&#xe7;&#xe3;o dos certificados autom&#xe1;tica, feita pelos masters"/>
-<node CREATED="1614005193679" FOLDED="true" ID="Freemind_Link_1818325623" MODIFIED="1614007244837" TEXT="&#xc9; necess&#xe1;rio criar permiss&#xf5;es nos n&#xf3;s &#xa;master para permit&#xed;-lo atender as &#xa;requisi&#xe7;&#xf5;es de renova&#xe7;&#xe3;o dos certificados &#xa;dos workers">
+<node CREATED="1614005193679" ID="Freemind_Link_1818325623" MODIFIED="1614007244837" TEXT="&#xc9; necess&#xe1;rio criar permiss&#xf5;es nos n&#xf3;s &#xa;master para permit&#xed;-lo atender as &#xa;requisi&#xe7;&#xf5;es de renova&#xe7;&#xe3;o dos certificados &#xa;dos workers">
 <node CREATED="1614005345009" ID="Freemind_Link_1895123032" MODIFIED="1614007341168" TEXT="Criar o token Bootstrap e associ&#xe1;-lo &#xa;ao grupo system:bootstrapers">
 <node CREATED="1614005637473" ID="Freemind_Link_1213902222" MODIFIED="1614005673550" TEXT="O system:bootstrapers &#xe9; um token especial, criado com o prop&#xf3;sito de autentica&#xe7;&#xe3;o"/>
 <node CREATED="1614005403097" ID="Freemind_Link_1282125835" MODIFIED="1614005419439" TEXT="Depois deve-se configurar o Kubelet para usar esse token para se autenticar no API Server">
@@ -862,7 +862,7 @@
 <node CREATED="1614006090114" ID="Freemind_Link_297428339" MODIFIED="1614008266328" TEXT="Aprova um certificado (um CSR)"/>
 </node>
 </node>
-<node CREATED="1614009301782" FOLDED="true" ID="Freemind_Link_1062249345" MODIFIED="1614009404053" TEXT="Certifique-se de que o server est&#xe1; configurado">
+<node CREATED="1614009301782" ID="Freemind_Link_1062249345" MODIFIED="1614009404053" TEXT="Certifique-se de que o server est&#xe1; configurado">
 <icon BUILTIN="full-1"/>
 <node CREATED="1614009404031" ID="Freemind_Link_671821052" MODIFIED="1614009418277" TEXT="Kube-apiserver">
 <node CREATED="1614009322374" ID="Freemind_Link_1316517161" MODIFIED="1614009434969" TEXT="Deve estar com a flag  &apos; --enable-bootstrap-token-auth=true&apos; setada"/>
@@ -877,7 +877,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1613749724350" FOLDED="true" ID="Freemind_Link_1756506670" MODIFIED="1614009642793" TEXT="Instalar e configurar os bin&#xe1;rios">
+<node CREATED="1613749724350" ID="Freemind_Link_1756506670" MODIFIED="1614009642793" TEXT="Instalar e configurar os bin&#xe1;rios">
 <icon BUILTIN="full-2"/>
 <node CREATED="1613589503266" ID="Freemind_Link_482560166" MODIFIED="1613752612861" TEXT="Executar no n&#xf3; worker"/>
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1181306872" MODIFIED="1613752619652" TEXT="wget -q --show-progress --https-only --timestamping \   https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kubectl \   https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kube-proxy \   https://storage.googleapis.com/kubernetes-release/release/v1.13.0/bin/linux/amd64/kubelet">
@@ -893,7 +893,7 @@
 <icon BUILTIN="full-4"/>
 </node>
 </node>
-<node CREATED="1614012665165" FOLDED="true" ID="Freemind_Link_1677873472" MODIFIED="1614012672911" TEXT="Criar o token Bootstrap">
+<node CREATED="1614012665165" ID="Freemind_Link_1677873472" MODIFIED="1614012672911" TEXT="Criar o token Bootstrap">
 <icon BUILTIN="full-3"/>
 <node COLOR="#0000ff" CREATED="1614012681924" ID="Freemind_Link_594618303" MODIFIED="1614012716557" TEXT="cat &gt; bootstrap-token-07401b.yaml &lt;&lt;EOF&#xa;apiVersion: v1&#xa;kind: Secret&#xa;metadata:&#xa;  # Name MUST be of form &quot;bootstrap-token-&lt;token id&gt;&quot;&#xa;  name: bootstrap-token-07401b&#xa;  namespace: kube-system&#xa;&#xa;# Type MUST be &apos;bootstrap.kubernetes.io/token&apos;&#xa;type: bootstrap.kubernetes.io/token&#xa;stringData:&#xa;  # Human readable description. Optional.&#xa;  description: &quot;The default bootstrap token generated by &apos;kubeadm init&apos;.&quot;&#xa;&#xa;  # Token ID and secret. Required.&#xa;  token-id: 07401b&#xa;  token-secret: f395accd246ae52d&#xa;&#xa;  # Expiration. Optional.&#xa;  expiration: 2021-03-10T03:22:11Z&#xa;&#xa;  # Allowed usages.&#xa;  usage-bootstrap-authentication: &quot;true&quot;&#xa;  usage-bootstrap-signing: &quot;true&quot;&#xa;&#xa;  # Extra groups to authenticate the token as. Must start with &quot;system:bootstrappers:&quot;&#xa;  auth-extra-groups: system:bootstrappers:worker&#xa;EOF&#xa;&#xa;&#xa;kubectl create -f bootstrap-token-07401b.yaml">
 <node CREATED="1614012929596" ID="Freemind_Link_506181694" MODIFIED="1614012939160" TEXT="Deve ser executado no n&#xf3; master"/>
@@ -911,7 +911,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1614013449580" FOLDED="true" ID="Freemind_Link_1350803844" MODIFIED="1614013481809" TEXT="Conceder as devidas autoriza&#xe7;&#xf5;es aos workers">
+<node CREATED="1614013449580" ID="Freemind_Link_1350803844" MODIFIED="1614013481809" TEXT="Conceder as devidas autoriza&#xe7;&#xf5;es aos workers">
 <icon BUILTIN="full-4"/>
 <node CREATED="1614012929596" ID="Freemind_Link_72079559" MODIFIED="1614012939160" TEXT="Deve ser executado no n&#xf3; master"/>
 <node CREATED="1614013481779" ID="Freemind_Link_61606044" MODIFIED="1614013485303" TEXT="Criar CSR">
@@ -924,7 +924,7 @@
 <node COLOR="#0000ff" CREATED="1614006071303" ID="Freemind_Link_981961667" MODIFIED="1614013553517" TEXT="kubectl create clusterrolebinding auto-approve-renewals-for-nodes --clusterrole=system:certificates.k8s.io:certificatesigningrequests:selfnodeclient --group=system:nodes"/>
 </node>
 </node>
-<node CREATED="1614013660461" FOLDED="true" ID="Freemind_Link_814094128" MODIFIED="1614013690280" TEXT="Configurar o Kubelet para o TLS Bootstrap">
+<node CREATED="1614013660461" ID="Freemind_Link_814094128" MODIFIED="1614013690280" TEXT="Configurar o Kubelet para o TLS Bootstrap">
 <icon BUILTIN="full-5"/>
 <node CREATED="1614012929596" ID="Freemind_Link_949248875" MODIFIED="1614013726353" TEXT="Deve ser executado no n&#xf3; worker"/>
 <node CREATED="1614013827404" ID="Freemind_Link_1476719084" MODIFIED="1614013848343" TEXT="Configura o worker para usar o token gerado nos passos anteriores"/>
@@ -936,7 +936,7 @@
 <node CREATED="1613753076860" ID="Freemind_Link_1760533803" MODIFIED="1614013959416" TEXT="Configurar servi&#xe7;os do worker">
 <icon BUILTIN="full-6"/>
 <node CREATED="1614015034459" ID="Freemind_Link_1992391192" MODIFIED="1614015039966" TEXT="Executar no n&#xf3; worker"/>
-<node CREATED="1613753217002" FOLDED="true" ID="Freemind_Link_1316190292" MODIFIED="1613753592805" TEXT="Kubelet">
+<node CREATED="1613753217002" ID="Freemind_Link_1316190292" MODIFIED="1613753592805" TEXT="Kubelet">
 <icon BUILTIN="full-1"/>
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_844700510" MODIFIED="1614014033911" TEXT="cat &lt;&lt;EOF | sudo tee /var/lib/kubelet/kubelet-config.yaml&#xa;kind: KubeletConfiguration&#xa;apiVersion: kubelet.config.k8s.io/v1beta1&#xa;authentication:&#xa;  anonymous:&#xa;    enabled: false&#xa;  webhook:&#xa;    enabled: true&#xa;  x509:&#xa;    clientCAFile: &quot;/var/lib/kubernetes/ca.crt&quot;&#xa;authorization:&#xa;  mode: Webhook&#xa;clusterDomain: &quot;cluster.local&quot;&#xa;clusterDNS:&#xa;  - &quot;10.96.0.10&quot;&#xa;resolvConf: &quot;/run/systemd/resolve/resolv.conf&quot;&#xa;runtimeRequestTimeout: &quot;15m&quot;&#xa;EOF">
 <icon BUILTIN="full-1"/>
@@ -949,7 +949,7 @@
 <node CREATED="1614014108593" ID="Freemind_Link_1599365166" MODIFIED="1614014109561" TEXT="rotate-server-certificates: Requests for server certificates on bootstrap and rotates them when they expire."/>
 </node>
 </node>
-<node CREATED="1613753217002" FOLDED="true" ID="Freemind_Link_1035057256" MODIFIED="1613753596393" TEXT="KubeProxy">
+<node CREATED="1613753217002" ID="Freemind_Link_1035057256" MODIFIED="1613753596393" TEXT="KubeProxy">
 <icon BUILTIN="full-2"/>
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1319882725" MODIFIED="1613753307803" TEXT="sudo mv kube-proxy.kubeconfig /var/lib/kube-proxy/kubeconfig">
 <icon BUILTIN="full-1"/>
@@ -961,11 +961,11 @@
 <icon BUILTIN="full-3"/>
 </node>
 </node>
-<node CREATED="1613753525375" FOLDED="true" ID="Freemind_Link_124362172" MODIFIED="1613753600755" TEXT="Subir os servi&#xe7;os">
+<node CREATED="1613753525375" ID="Freemind_Link_124362172" MODIFIED="1613753600755" TEXT="Subir os servi&#xe7;os">
 <icon BUILTIN="full-3"/>
 <node COLOR="#0000ff" CREATED="1613753537536" ID="Freemind_Link_615006403" MODIFIED="1613753560242" TEXT="{&#xa;  sudo systemctl daemon-reload&#xa;  sudo systemctl enable kubelet kube-proxy&#xa;  sudo systemctl start kubelet kube-proxy&#xa;}"/>
 </node>
-<node CREATED="1614014199235" FOLDED="true" ID="Freemind_Link_294139855" MODIFIED="1614014213383" TEXT="Aprovar o Server CSR">
+<node CREATED="1614014199235" ID="Freemind_Link_294139855" MODIFIED="1614014213383" TEXT="Aprovar o Server CSR">
 <icon BUILTIN="full-4"/>
 <node CREATED="1614015005002" ID="Freemind_Link_1731395820" MODIFIED="1614015032373" TEXT="Executar no n&#xf3; master">
 <icon BUILTIN="messagebox_warning"/>
@@ -973,7 +973,7 @@
 <node COLOR="#0000ff" CREATED="1613753537536" ID="Freemind_Link_550118447" MODIFIED="1614014232460" TEXT="kubectl get csr"/>
 <node COLOR="#0000ff" CREATED="1613753537536" ID="Freemind_Link_1622009056" MODIFIED="1614014246535" TEXT="kubectl certificate approve csr-95bv6"/>
 </node>
-<node CREATED="1613736662462" FOLDED="true" ID="Freemind_Link_1585368170" MODIFIED="1614014219167" TEXT="Testar os servi&#xe7;os">
+<node CREATED="1613736662462" ID="Freemind_Link_1585368170" MODIFIED="1614014219167" TEXT="Testar os servi&#xe7;os">
 <icon BUILTIN="full-5"/>
 <node CREATED="1613736672743" ID="Freemind_Link_441832234" MODIFIED="1613753636516" TEXT="Ap&#xf3;s a execu&#xe7;&#xe3;o dos passos acima em todos os n&#xf3;s worker, executar o comando abaixo"/>
 <node COLOR="#0000ff" CREATED="1613736050002" ID="Freemind_Link_57983607" MODIFIED="1613753628530" TEXT="kubectl get nodes --kubeconfig admin.kubeconfig"/>
@@ -1070,11 +1070,11 @@
 </node>
 </node>
 </node>
-<node CREATED="1613589372531" ID="Freemind_Link_1092549628" MODIFIED="1613589375442" TEXT="Via Kubeadm">
+<node CREATED="1613589372531" FOLDED="true" ID="Freemind_Link_1092549628" MODIFIED="1613589375442" TEXT="Via Kubeadm">
 <node CREATED="1617047083844" ID="Freemind_Link_1856785728" MODIFIED="1617047088951" TEXT="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/">
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1617048273293" FOLDED="true" ID="Freemind_Link_1271644823" MODIFIED="1617048330494" TEXT="Configurar o IP tables nos n&#xf3;s">
+<node CREATED="1617048273293" ID="Freemind_Link_1271644823" MODIFIED="1617048330494" TEXT="Configurar o IP tables nos n&#xf3;s">
 <icon BUILTIN="full-1"/>
 <node CREATED="1617050461584" ID="Freemind_Link_1235484946" MODIFIED="1617050466528" TEXT="Executar em todos os n&#xf3;s"/>
 <node CREATED="1617048330478" ID="Freemind_Link_878075803" MODIFIED="1617048345422" TEXT="Carregar o m&#xf3;dulo br_netfilter">
@@ -1090,7 +1090,7 @@
 <node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_978373970" MODIFIED="1617050514883" TEXT="cat &lt;&lt;EOF | sudo tee /etc/modules-load.d/k8s.conf&#xa;br_netfilter&#xa;EOF&#xa;&#xa;cat &lt;&lt;EOF | sudo tee /etc/sysctl.d/k8s.conf&#xa;net.bridge.bridge-nf-call-ip6tables = 1&#xa;net.bridge.bridge-nf-call-iptables = 1&#xa;EOF&#xa;sudo sysctl --system"/>
 </node>
 </node>
-<node CREATED="1617050609758" FOLDED="true" ID="Freemind_Link_247399929" MODIFIED="1617050719184" TEXT="Instalar o Docker runtime nos n&#xf3;s">
+<node CREATED="1617050609758" ID="Freemind_Link_247399929" MODIFIED="1617050719184" TEXT="Instalar o Docker runtime nos n&#xf3;s">
 <icon BUILTIN="full-2"/>
 <node CREATED="1617050790427" ID="Freemind_Link_8525605" MODIFIED="1617050791159" TEXT="https://docs.docker.com/engine/install/debian/"/>
 <node CREATED="1617050940725" ID="Freemind_Link_309989933" MODIFIED="1617051027613" TEXT="Atualizar a lista do reposit&#xf3;rio">
@@ -1124,7 +1124,7 @@
 <node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_1081289393" MODIFIED="1617051729440" TEXT="sudo docker run hello-world"/>
 </node>
 </node>
-<node CREATED="1617054265114" FOLDED="true" ID="Freemind_Link_1250625972" MODIFIED="1617054280110" TEXT="Instalar os componentes do Kubernetes">
+<node CREATED="1617054265114" ID="Freemind_Link_1250625972" MODIFIED="1617054280110" TEXT="Instalar os componentes do Kubernetes">
 <icon BUILTIN="full-3"/>
 <node CREATED="1617054291977" ID="Freemind_Link_139999990" MODIFIED="1617054317680" TEXT="Baixar a chave p&#xfa;blica do GoogleCloud">
 <icon BUILTIN="full-1"/>
@@ -1139,7 +1139,7 @@
 <node COLOR="#0000ff" CREATED="1617048318133" ID="Freemind_Link_1142972321" MODIFIED="1617054399688" TEXT="sudo apt-get update&#xa;sudo apt-get install -y kubelet kubeadm kubectl&#xa;sudo apt-mark hold kubelet kubeadm kubectl"/>
 </node>
 </node>
-<node CREATED="1617054631584" FOLDED="true" ID="Freemind_Link_1469029711" MODIFIED="1617054645390" TEXT="Criar o cluster com o Kubeadm">
+<node CREATED="1617054631584" ID="Freemind_Link_1469029711" MODIFIED="1617054645390" TEXT="Criar o cluster com o Kubeadm">
 <icon BUILTIN="full-4"/>
 <node CREATED="1617054826521" ID="Freemind_Link_407261574" MODIFIED="1617054843691" TEXT="Iniciar o cluster">
 <icon BUILTIN="full-1"/>
@@ -1232,8 +1232,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1591997555354" FOLDED="true" ID="Freemind_Link_1121402737" MODIFIED="1591997566014" POSITION="right" TEXT="Ferramentas">
-<node COLOR="#0000ff" CREATED="1597409823944" FOLDED="true" ID="Freemind_Link_1270117106" MODIFIED="1597409834931" TEXT="kubeadm">
+<node CREATED="1591997555354" ID="Freemind_Link_1121402737" MODIFIED="1591997566014" POSITION="right" TEXT="Ferramentas">
+<node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_1270117106" MODIFIED="1597409834931" TEXT="kubeadm">
 <node CREATED="1597409873583" ID="Freemind_Link_1028947641" MODIFIED="1597409888010" TEXT="Ferramenta de administra&#xe7;&#xe3;o do cluster (instala&#xe7;&#xe3;o e configura&#xe7;&#xe3;o)"/>
 <node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_588434013" MODIFIED="1597409845241" TEXT="upgrade">
 <node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_579109195" MODIFIED="1597409848265" TEXT="plan">
@@ -1271,7 +1271,7 @@
 <node CREATED="1597756834965" ID="Freemind_Link_1816258564" MODIFIED="1597756862740" TEXT="Lista todas as contas de servi&#xe7;o criadas no k8s"/>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1591997498699" FOLDED="true" ID="Freemind_Link_1841282645" MODIFIED="1592316012408" TEXT="get">
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1841282645" MODIFIED="1592316012408" TEXT="get">
 <node CREATED="1591997501435" ID="Freemind_Link_1618155496" MODIFIED="1592316177570" TEXT="Lista recursos ativos do cluster"/>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1862005678" MODIFIED="1592316026697" TEXT="pods">
 <node CREATED="1591997501435" ID="Freemind_Link_1691489598" MODIFIED="1592316187023" TEXT="Lista os pods ativos do cluster"/>
@@ -1953,13 +1953,13 @@
 </node>
 <node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_216157916" MODIFIED="1597680895615" TEXT="save">
 <node CREATED="1597409850231" ID="Freemind_Link_1385931346" MODIFIED="1597680912908" TEXT="Tira uma foto (snapshot) da base do ETCD"/>
-<node CREATED="1597683007803" FOLDED="true" ID="Freemind_Link_824296740" MODIFIED="1597683008705" TEXT="Ex:">
+<node CREATED="1597683007803" ID="Freemind_Link_824296740" MODIFIED="1597683008705" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1597683010301" ID="Freemind_Link_430144178" MODIFIED="1597683016279" TEXT="ETCDCTL_API=3 etcdctl snapshot save /tmp/snapshot-pre-boot.db --endpoints=https://127.0.0.1:2379 --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key"/>
 </node>
 </node>
 <node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_625269280" MODIFIED="1597681284571" TEXT="restore">
 <node CREATED="1597409850231" ID="Freemind_Link_1689375019" MODIFIED="1597681236316" TEXT="Restaura uma foto tirada anteriormente da base do ETCD"/>
-<node CREATED="1597683007803" FOLDED="true" ID="Freemind_Link_918853104" MODIFIED="1597683008705" TEXT="Ex:">
+<node CREATED="1597683007803" ID="Freemind_Link_918853104" MODIFIED="1597683008705" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1597683010301" ID="Freemind_Link_805270534" MODIFIED="1597686145434" TEXT="ETCDCTL_API=3 etcdctl --endpoints=https://[127.0.0.1]:2379 --cacert=/etc/kubernetes/pki/etcd/ca.crt \&#xa;     --name=master \&#xa;     --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key \&#xa;     --data-dir /var/lib/etcd-from-backup \&#xa;     --initial-cluster=master=https://127.0.0.1:2380 \&#xa;     --initial-cluster-token=etcd-cluster-1 \&#xa;     --initial-advertise-peer-urls=https://127.0.0.1:2380 \&#xa;     snapshot restore /tmp/snapshot-pre-boot.db"/>
 </node>
 </node>
@@ -2031,7 +2031,7 @@
 <node CREATED="1596119531049" ID="Freemind_Link_1778475563" MODIFIED="1596119532984" TEXT="Binding">
 <node CREATED="1596119534181" ID="Freemind_Link_107543601" LINK="#Freemind_Link_824110118" MODIFIED="1596119554565" TEXT="Ver objeto &apos;Binding&apos;"/>
 </node>
-<node CREATED="1596119775395" FOLDED="true" ID="Freemind_Link_1227534434" MODIFIED="1596119780766" TEXT="Taints e Tolerations">
+<node CREATED="1596119775395" ID="Freemind_Link_1227534434" MODIFIED="1596119780766" TEXT="Taints e Tolerations">
 <node CREATED="1596122547884" ID="Freemind_Link_570508055" MODIFIED="1596122549854" TEXT="Taints">
 <node CREATED="1596122277403" ID="Freemind_Link_1903864533" MODIFIED="1596122557934" TEXT="S&#xe3;o aplicadas aos N&#xf3;s"/>
 <node CREATED="1596122307493" ID="Freemind_Link_419801390" MODIFIED="1596122315351" TEXT="Funciona como repelente"/>
@@ -2103,7 +2103,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1596462670997" FOLDED="true" ID="Freemind_Link_1920130177" MODIFIED="1596462672529" TEXT="Labels">
+<node CREATED="1596462670997" ID="Freemind_Link_1920130177" MODIFIED="1596462672529" TEXT="Labels">
 <node CREATED="1596462673127" ID="Freemind_Link_983056364" MODIFIED="1596462689713" TEXT="&#xc9; poss&#xed;vel atribuir Labels a n&#xf3;s e vincular Pods a eles por meio desses labels"/>
 <node CREATED="1596463007538" ID="Freemind_Link_1861830151" MODIFIED="1596463012382" TEXT="&#xc9; limitado">
 <node CREATED="1596463013339" ID="Freemind_Link_952203354" MODIFIED="1596463022703" TEXT="N&#xe3;o permite express&#xf5;es">
@@ -2135,7 +2135,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1596461359201" FOLDED="true" ID="Freemind_Link_1108347021" MODIFIED="1596461365047" TEXT="Node affinity">
+<node CREATED="1596461359201" ID="Freemind_Link_1108347021" MODIFIED="1596461365047" TEXT="Node affinity">
 <node CREATED="1596462276713" ID="Freemind_Link_360611897" MODIFIED="1596462287359" TEXT="Aplicada aos Pods"/>
 <node CREATED="1596463123205" ID="Freemind_Link_797035873" MODIFIED="1596463129311" TEXT="Requer aplica&#xe7;&#xe3;o de labels aos n&#xf3;s">
 <node CREATED="1596463133116" ID="Freemind_Link_690792585" LINK="#Freemind_Link_1920130177" MODIFIED="1596463165609" TEXT="Ver se&#xe7;&#xe3;o anterior"/>
@@ -2348,7 +2348,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592315528094" FOLDED="true" ID="Freemind_Link_1064829192" MODIFIED="1592317218772" POSITION="right" TEXT="Objetos k8s">
+<node CREATED="1592315528094" ID="Freemind_Link_1064829192" MODIFIED="1592317218772" POSITION="right" TEXT="Objetos k8s">
 <node CREATED="1592317521186" ID="Freemind_Link_1956142399" MODIFIED="1592317522903" TEXT="Master">
 <node CREATED="1592317523600" ID="Freemind_Link_755059932" MODIFIED="1592317530400" TEXT="Gerencia o cluster"/>
 <node CREATED="1592317530989" ID="Freemind_Link_1067778424" MODIFIED="1592317540209" TEXT="&#xc9; onde ficam todos os arquivos YAML"/>
@@ -2362,7 +2362,7 @@
 <node CREATED="1595532051386" ID="Freemind_Link_1962448922" MODIFIED="1595532053686" TEXT="Estrutura">
 <node CREATED="1595532054884" ID="Freemind_Link_1767773898" MODIFIED="1595532244379" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/estruturaK8s.png&quot;&gt;"/>
 </node>
-<node COLOR="#ff00ff" CREATED="1596039896690" FOLDED="true" ID="Freemind_Link_1894393993" MODIFIED="1596040170780" TEXT="metadata">
+<node COLOR="#ff00ff" CREATED="1596039896690" ID="Freemind_Link_1894393993" MODIFIED="1596040170780" TEXT="metadata">
 <node CREATED="1596039899475" ID="Freemind_Link_714215144" MODIFIED="1596039925590" TEXT="Se&#xe7;&#xe3;o dos arquivos YAML que adiciona labels, nomes e outros dados comuns a todos os tpos de objetos do k8s"/>
 <node COLOR="#ff00ff" CREATED="1596039929587" ID="Freemind_Link_1621783044" MODIFIED="1596040054477" TEXT="name">
 <node CREATED="1596040077177" ID="Freemind_Link_1871479056" MODIFIED="1596040084755" TEXT="Declara o nome do objeto k8s"/>
@@ -2381,7 +2381,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592315531047" FOLDED="true" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
+<node CREATED="1592315531047" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
 <node CREATED="1592316082413" ID="Freemind_Link_1900255977" MODIFIED="1592316091293" TEXT="Unidade m&#xed;nima do cluster"/>
 <node CREATED="1596637761488" ID="Freemind_Link_557787628" MODIFIED="1596637780453" TEXT="Static Pods:">
 <node CREATED="1596637767688" ID="Freemind_Link_1065461531" LINK="#Freemind_Link_1076101247" MODIFIED="1596637785246" TEXT="Ver documenta&#xe7;&#xe3;o acima"/>
@@ -2445,7 +2445,7 @@
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1831529541" MODIFIED="1593785549685" TEXT="image: nginx:alpine"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1596558511032" FOLDED="true" ID="Freemind_Link_1711259549" MODIFIED="1596558528839" TEXT="imagePullPolicy">
+<node COLOR="#ff00ff" CREATED="1596558511032" ID="Freemind_Link_1711259549" MODIFIED="1596558528839" TEXT="imagePullPolicy">
 <node CREATED="1596558532836" ID="Freemind_Link_76255214" MODIFIED="1596558548445" TEXT="Determina a pol&#xed;tica utilizada para pull da imagem dos containers"/>
 <node CREATED="1596558551041" ID="Freemind_Link_1690473365" MODIFIED="1596558553438" TEXT="Possibilidades:">
 <node COLOR="#ff00ff" CREATED="1596558554419" ID="Freemind_Link_597605283" MODIFIED="1596558573579" TEXT="IfNotPresent">
@@ -2458,11 +2458,11 @@
 <node CREATED="1596558645362" ID="Freemind_Link_1283223412" MODIFIED="1596558657588" TEXT="&#xc9; assumido que a imagem j&#xe1; exista localmente, portanto nunca ser&#xe1; baixada"/>
 </node>
 <node CREATED="1596558591635" ID="Freemind_Link_706802252" MODIFIED="1596558596631" TEXT="N&#xe3;o declarado">
-<node CREATED="1596558665904" ID="Freemind_Link_1905739032" MODIFIED="1596558752007" TEXT="Se a imagem tem a tag &apos;:latest&apos;">
+<node CREATED="1596558665904" FOLDED="true" ID="Freemind_Link_1905739032" MODIFIED="1596558752007" TEXT="Se a imagem tem a tag &apos;:latest&apos;">
 <icon BUILTIN="forward"/>
 <node CREATED="1596558714943" ID="Freemind_Link_82785082" MODIFIED="1596558722589" TEXT="Ser&#xe1; aplicado &apos;Always&apos;"/>
 </node>
-<node CREATED="1596558681577" ID="Freemind_Link_94590233" MODIFIED="1596558758140" TEXT="Se a imagem tem tag diferente de &apos;:latest&apos;">
+<node CREATED="1596558681577" FOLDED="true" ID="Freemind_Link_94590233" MODIFIED="1596558758140" TEXT="Se a imagem tem tag diferente de &apos;:latest&apos;">
 <icon BUILTIN="forward"/>
 <node CREATED="1596558725339" ID="Freemind_Link_1412184501" MODIFIED="1596558745366" TEXT="Ser&#xe1; aplicado &apos;IfNotPresent&apos;"/>
 </node>
@@ -2500,7 +2500,7 @@
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_531405664" MODIFIED="1596644172428" TEXT="command:&#xa;  - my-command&#xa;  - --my-parameter1&#xa;  - --my-parameter2"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1593615267316" FOLDED="true" ID="Freemind_Link_1681454867" MODIFIED="1593615469345" TEXT="lifecycle">
+<node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_1681454867" MODIFIED="1593615469345" TEXT="lifecycle">
 <font NAME="SansSerif" SIZE="13"/>
 <node CREATED="1593615285135" ID="Freemind_Link_1078079804" MODIFIED="1595881504841" TEXT="Permite definir a&#xe7;&#xf5;es a serem tomadas no ciclo de vida do POD"/>
 <node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_1774213623" MODIFIED="1593615498319" TEXT="postStart">
@@ -2510,10 +2510,10 @@
 <font NAME="SansSerif" SIZE="13"/>
 <node CREATED="1593620843841" ID="Freemind_Link_186185933" MODIFIED="1593620850730" TEXT="Handler do evento "/>
 <node CREATED="1593615500010" ID="Freemind_Link_1032068845" MODIFIED="1593615559077" TEXT="Indica o que deve ser executado"/>
-<node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_1299930038" MODIFIED="1593615562215" TEXT="command">
+<node COLOR="#ff00ff" CREATED="1593615267316" FOLDED="true" ID="Freemind_Link_1299930038" MODIFIED="1593615562215" TEXT="command">
 <font NAME="SansSerif" SIZE="13"/>
 <node CREATED="1593615500010" ID="Freemind_Link_945826182" MODIFIED="1593615576204" TEXT="Indica que deve ser executado um comando"/>
-<node CREATED="1593615581795" ID="Freemind_Link_1431505299" MODIFIED="1593615582565" TEXT="Ex:">
+<node CREATED="1593615581795" FOLDED="true" ID="Freemind_Link_1431505299" MODIFIED="1593615582565" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_546174628" MODIFIED="1593615600782" TEXT="command: [&quot;sh&quot;,&quot;meuscript.sh&quot;]">
 <font NAME="SansSerif" SIZE="13"/>
 </node>
@@ -2532,10 +2532,10 @@
 <font NAME="SansSerif" SIZE="13"/>
 <node CREATED="1593620843841" ID="Freemind_Link_1894014428" MODIFIED="1593620850730" TEXT="Handler do evento "/>
 <node CREATED="1593615500010" ID="Freemind_Link_1820240395" MODIFIED="1593615559077" TEXT="Indica o que deve ser executado"/>
-<node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_414097623" MODIFIED="1593615562215" TEXT="command">
+<node COLOR="#ff00ff" CREATED="1593615267316" FOLDED="true" ID="Freemind_Link_414097623" MODIFIED="1593615562215" TEXT="command">
 <font NAME="SansSerif" SIZE="13"/>
 <node CREATED="1593615500010" ID="Freemind_Link_1954879052" MODIFIED="1593615576204" TEXT="Indica que deve ser executado um comando"/>
-<node CREATED="1593615581795" ID="Freemind_Link_242244439" MODIFIED="1593615582565" TEXT="Ex:">
+<node CREATED="1593615581795" FOLDED="true" ID="Freemind_Link_242244439" MODIFIED="1593615582565" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_434177768" MODIFIED="1593615600782" TEXT="command: [&quot;sh&quot;,&quot;meuscript.sh&quot;]">
 <font NAME="SansSerif" SIZE="13"/>
 </node>
@@ -2548,7 +2548,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1593615267316" FOLDED="true" ID="Freemind_Link_1026654734" MODIFIED="1593623984951" TEXT="resources">
+<node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_1026654734" MODIFIED="1593623984951" TEXT="resources">
 <font NAME="SansSerif" SIZE="13"/>
 <node CREATED="1593615285135" ID="Freemind_Link_252754275" MODIFIED="1593624070225" TEXT="Define a capacidade dos recursos do container"/>
 <node CREATED="1596548366232" ID="Freemind_Link_520245172" MODIFIED="1596557829274" TEXT="Para definir o padr&#xe3;o de &apos;request&apos; e &apos;limit&apos; dos Pods de forma global (por namespace), use o &apos;LimitRange&apos;">
@@ -2561,13 +2561,13 @@
 <node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_1034951929" MODIFIED="1593624094917" TEXT="cpu">
 <font NAME="SansSerif" SIZE="13"/>
 <node CREATED="1593615285135" ID="Freemind_Link_1524722292" MODIFIED="1593624116732" TEXT="Define a capacidade em Mhz da cpu dispensada ao container"/>
-<node CREATED="1596547911819" ID="Freemind_Link_837362512" MODIFIED="1596548112805" TEXT="Por padr&#xe3;o o K8s determina que cada Pod usa 0.5 de CPU">
+<node CREATED="1596547911819" FOLDED="true" ID="Freemind_Link_837362512" MODIFIED="1596548112805" TEXT="Por padr&#xe3;o o K8s determina que cada Pod usa 0.5 de CPU">
 <icon BUILTIN="messagebox_warning"/>
 <node CREATED="1596548119079" ID="Freemind_Link_1684057994" MODIFIED="1596548134334" TEXT="1 CPU = 1000m (milicors)"/>
 <node CREATED="1596548113186" ID="Freemind_Link_1733401617" MODIFIED="1596548116668" TEXT="Equivale a 500m"/>
 </node>
-<node CREATED="1593624117985" ID="Freemind_Link_251334047" MODIFIED="1593624118782" TEXT="Ex:">
-<node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_312308389" MODIFIED="1593624128640" TEXT="cpu: 400m">
+<node CREATED="1593624117985" FOLDED="true" ID="Freemind_Link_251334047" MODIFIED="1593624118782" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1593615267316" FOLDED="true" ID="Freemind_Link_312308389" MODIFIED="1593624128640" TEXT="cpu: 400m">
 <font NAME="SansSerif" SIZE="13"/>
 <node CREATED="1593624130148" ID="Freemind_Link_1719152635" MODIFIED="1596557777907" TEXT="Equivale a um uso de 400 milicors"/>
 </node>
@@ -2576,27 +2576,27 @@
 <node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_305835305" MODIFIED="1593706385400" TEXT="memory">
 <font NAME="SansSerif" SIZE="13"/>
 <node CREATED="1593615285135" ID="Freemind_Link_350184327" MODIFIED="1593706408606" TEXT="Define a capacidade em megabytes da mem&#xf3;ria dispensada ao container"/>
-<node CREATED="1596548209749" ID="Freemind_Link_277111085" MODIFIED="1596548213137" TEXT="Tamanhos:">
-<node CREATED="1596548213789" ID="Freemind_Link_463968958" MODIFIED="1596548227088" TEXT="1G (Gigabyte)">
+<node CREATED="1596548209749" FOLDED="true" ID="Freemind_Link_277111085" MODIFIED="1596548213137" TEXT="Tamanhos:">
+<node CREATED="1596548213789" FOLDED="true" ID="Freemind_Link_463968958" MODIFIED="1596548227088" TEXT="1G (Gigabyte)">
 <node CREATED="1596548286082" ID="Freemind_Link_1076806200" MODIFIED="1596548294481" TEXT="1.000.000.000 bytes"/>
 </node>
-<node CREATED="1596548213789" ID="Freemind_Link_26744389" MODIFIED="1596548240396" TEXT="1M (Megabyte)">
+<node CREATED="1596548213789" FOLDED="true" ID="Freemind_Link_26744389" MODIFIED="1596548240396" TEXT="1M (Megabyte)">
 <node CREATED="1596548286082" ID="Freemind_Link_958215507" MODIFIED="1596548301734" TEXT="1.000.000 bytes"/>
 </node>
-<node CREATED="1596548213789" ID="Freemind_Link_133772210" MODIFIED="1596548247010" TEXT="1K (Kilobyte)">
+<node CREATED="1596548213789" FOLDED="true" ID="Freemind_Link_133772210" MODIFIED="1596548247010" TEXT="1K (Kilobyte)">
 <node CREATED="1596548286082" ID="Freemind_Link_955761021" MODIFIED="1596548308944" TEXT="1.000 bytes"/>
 </node>
-<node CREATED="1596548213789" ID="Freemind_Link_1943992772" MODIFIED="1596548256687" TEXT="1Gi (Gibibyte)">
+<node CREATED="1596548213789" FOLDED="true" ID="Freemind_Link_1943992772" MODIFIED="1596548256687" TEXT="1Gi (Gibibyte)">
 <node CREATED="1596548313842" ID="Freemind_Link_471696186" MODIFIED="1596548321135" TEXT="1.073.741.824 bytes"/>
 </node>
-<node CREATED="1596548213789" ID="Freemind_Link_231824187" MODIFIED="1596548272271" TEXT="1 Mi (mebibyte)">
+<node CREATED="1596548213789" FOLDED="true" ID="Freemind_Link_231824187" MODIFIED="1596548272271" TEXT="1 Mi (mebibyte)">
 <node CREATED="1596548325139" ID="Freemind_Link_1366810111" MODIFIED="1596548331651" TEXT="1.048.576 bytes"/>
 </node>
-<node CREATED="1596548213789" ID="Freemind_Link_842606470" MODIFIED="1596548280386" TEXT="1 Ki (Kibibyte)">
+<node CREATED="1596548213789" FOLDED="true" ID="Freemind_Link_842606470" MODIFIED="1596548280386" TEXT="1 Ki (Kibibyte)">
 <node CREATED="1596548332551" ID="Freemind_Link_1676155083" MODIFIED="1596548336805" TEXT="1.024 bytes"/>
 </node>
 </node>
-<node CREATED="1593624117985" ID="Freemind_Link_1346308093" MODIFIED="1593624118782" TEXT="Ex:">
+<node CREATED="1593624117985" FOLDED="true" ID="Freemind_Link_1346308093" MODIFIED="1593624118782" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_938754634" MODIFIED="1593706420650" TEXT="memory: &quot;32Mi&quot;">
 <font NAME="SansSerif" SIZE="13"/>
 </node>
@@ -2613,12 +2613,12 @@
 </node>
 <node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_1545301465" MODIFIED="1593624094917" TEXT="cpu">
 <font NAME="SansSerif" SIZE="13"/>
-<node CREATED="1593615285135" ID="Freemind_Link_1798631570" MODIFIED="1593706548679" TEXT="Define a capacidade m&#xe1;xima em Mhz da cpu dispensada ao container">
+<node CREATED="1593615285135" FOLDED="true" ID="Freemind_Link_1798631570" MODIFIED="1593706548679" TEXT="Define a capacidade m&#xe1;xima em Mhz da cpu dispensada ao container">
 <node CREATED="1596548795760" ID="Freemind_Link_576348223" MODIFIED="1596548795760" TEXT=""/>
 </node>
 <node CREATED="1596549004156" ID="Freemind_Link_667612969" MODIFIED="1596549057778" TEXT="Caso o container tente usar mais CPU do que o fornecido, ele ser&#xe1; reprimido e n&#xe3;o conseguir&#xe1; CPU extra (mas continuar&#xe1; rodando)"/>
-<node CREATED="1593624117985" ID="Freemind_Link_1513316282" MODIFIED="1593624118782" TEXT="Ex:">
-<node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_700143983" MODIFIED="1593624128640" TEXT="cpu: 400m">
+<node CREATED="1593624117985" FOLDED="true" ID="Freemind_Link_1513316282" MODIFIED="1593624118782" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1593615267316" FOLDED="true" ID="Freemind_Link_700143983" MODIFIED="1593624128640" TEXT="cpu: 400m">
 <font NAME="SansSerif" SIZE="13"/>
 <node CREATED="1593624130148" ID="Freemind_Link_1362254399" MODIFIED="1593624141206" TEXT="Equivale a um processador de 400Mhz"/>
 </node>
@@ -2628,7 +2628,7 @@
 <font NAME="SansSerif" SIZE="13"/>
 <node CREATED="1593615285135" ID="Freemind_Link_1838374831" MODIFIED="1593706571862" TEXT="Define a capacidade m&#xe1;xima em megabytes da mem&#xf3;ria dispensada ao container"/>
 <node CREATED="1596549004156" ID="Freemind_Link_1739958621" MODIFIED="1596549115574" TEXT="Caso o container tente usar mais mem&#xf3;ria do que o fornecido, ele conseguir&#xe1; fazer isso por algum tempo. Caso isso permane&#xe7;a por muito tempo (ou seja constante), ele ser&#xe1; eliminado pelo k8s"/>
-<node CREATED="1593624117985" ID="Freemind_Link_1077703935" MODIFIED="1593624118782" TEXT="Ex:">
+<node CREATED="1593624117985" FOLDED="true" ID="Freemind_Link_1077703935" MODIFIED="1593624118782" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593615267316" ID="Freemind_Link_107398413" MODIFIED="1593706420650" TEXT="memory: &quot;32Mi&quot;">
 <font NAME="SansSerif" SIZE="13"/>
 </node>
@@ -2648,32 +2648,32 @@
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1672948180" MODIFIED="1593798744289" TEXT="host">
 <node CREATED="1593785242110" ID="Freemind_Link_1518011208" MODIFIED="1593798756329" TEXT="Especifica o host a ser acessado"/>
 <node CREATED="1593798758214" ID="Freemind_Link_124057534" MODIFIED="1593798790278" TEXT="Quando n&#xe3;o especificado, ser&#xe1; usado &apos;PodIP&apos;"/>
-<node CREATED="1593785504539" ID="Freemind_Link_521691050" MODIFIED="1593785505278" TEXT="Ex:">
+<node CREATED="1593785504539" FOLDED="true" ID="Freemind_Link_521691050" MODIFIED="1593785505278" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1260787810" MODIFIED="1593798892368" TEXT="host: my-host"/>
 </node>
 </node>
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_900914266" MODIFIED="1593798823481" TEXT="scheme">
 <node CREATED="1593785242110" ID="Freemind_Link_1197425918" MODIFIED="1593798866304" TEXT="Define o protocolo a ser usado. Apenas &apos;HTTP&apos; e &apos;HTTPS&apos; s&#xe3;o permitidos"/>
 <node CREATED="1593798758214" ID="Freemind_Link_815157131" MODIFIED="1593798847864" TEXT="Quando n&#xe3;o especificado, ser&#xe1; usado &apos;HTTP&apos;"/>
-<node CREATED="1593785504539" ID="Freemind_Link_1238249623" MODIFIED="1593785505278" TEXT="Ex:">
+<node CREATED="1593785504539" FOLDED="true" ID="Freemind_Link_1238249623" MODIFIED="1593785505278" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1095357142" MODIFIED="1593798902574" TEXT="scheme: HTTP"/>
 </node>
 </node>
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_868335406" MODIFIED="1593785758550" TEXT="path">
 <node CREATED="1593785242110" ID="Freemind_Link_206089774" MODIFIED="1593785768403" TEXT="Indica a URL do recurso que deve ser acessado"/>
-<node CREATED="1593785504539" ID="Freemind_Link_76455569" MODIFIED="1593785505278" TEXT="Ex:">
+<node CREATED="1593785504539" FOLDED="true" ID="Freemind_Link_76455569" MODIFIED="1593785505278" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_190186740" MODIFIED="1593785782957" TEXT="path: /index.html"/>
 </node>
 </node>
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1382436205" MODIFIED="1593785799922" TEXT="port">
 <node CREATED="1593785242110" ID="Freemind_Link_208700392" MODIFIED="1593785833380" TEXT="Indica em qual porta deve ser feita a requisi&#xe7;&#xe3;o"/>
-<node CREATED="1593785504539" ID="Freemind_Link_1798116955" MODIFIED="1593785505278" TEXT="Ex:">
+<node CREATED="1593785504539" FOLDED="true" ID="Freemind_Link_1798116955" MODIFIED="1593785505278" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1486152415" MODIFIED="1593785809900" TEXT="port: 80"/>
 </node>
 </node>
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_403600673" MODIFIED="1593798919375" TEXT="httpHeaders">
 <node CREATED="1593785242110" ID="Freemind_Link_1326923621" MODIFIED="1593798933596" TEXT="Especifica cabe&#xe7;alhos http que ser&#xe3;o adicionados &#xe0; requisi&#xe7;&#xe3;o"/>
-<node CREATED="1593785504539" ID="Freemind_Link_1478772848" MODIFIED="1593785505278" TEXT="Ex:">
+<node CREATED="1593785504539" FOLDED="true" ID="Freemind_Link_1478772848" MODIFIED="1593785505278" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1930943808" MODIFIED="1593798972934" TEXT="httpHeaders:&#xa;  - name: X-Custom_Header&#xa;    value: Awesome"/>
 </node>
 </node>
@@ -2685,7 +2685,7 @@
 <node CREATED="1593785242110" ID="Freemind_Link_1679005958" MODIFIED="1593785705082" TEXT="Executa uma a&#xe7;&#xe3;o no container"/>
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_117710184" MODIFIED="1593786223832" TEXT="command">
 <node CREATED="1593785242110" ID="Freemind_Link_1414313428" MODIFIED="1593786249006" TEXT="Array com a&#xe7;&#xf5;es a serem executadas"/>
-<node CREATED="1593785504539" ID="Freemind_Link_336458621" MODIFIED="1593785505278" TEXT="Ex:">
+<node CREATED="1593785504539" FOLDED="true" ID="Freemind_Link_336458621" MODIFIED="1593785505278" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_894660814" MODIFIED="1593786277544" TEXT="command:&#xa;  - cat&#xa;  - /tmp/healthy"/>
 </node>
 </node>
@@ -2722,7 +2722,7 @@
 <node CREATED="1593785242110" ID="Freemind_Link_918604412" MODIFIED="1593788333808" TEXT="Serve para determinar se um container est&#xe1; pronto para receber requisi&#xe7;&#xf5;es"/>
 <node CREATED="1593788183249" ID="Freemind_Link_1951492614" MODIFIED="1593788198089" TEXT="Quanto aos par&#xe2;metros, ver &apos;livenessProbe (acima)&apos;"/>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_1565150061" MODIFIED="1596819407145" TEXT="env">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1565150061" MODIFIED="1596819407145" TEXT="env">
 <node CREATED="1593785242110" ID="Freemind_Link_388794987" MODIFIED="1596819418894" TEXT="Usado para declarar vari&#xe1;veis de ambiente do Pod"/>
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1540150337" MODIFIED="1596819437169" TEXT="- (item)">
 <node CREATED="1593785242110" ID="Freemind_Link_1371328312" MODIFIED="1596819472038" TEXT="Cada vari&#xe1;vel faz parte de um item do array"/>
@@ -2734,37 +2734,37 @@
 </node>
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_492633976" MODIFIED="1596819574326" TEXT="valueFrom">
 <node CREATED="1593785242110" ID="Freemind_Link_985658766" MODIFIED="1596819599991" TEXT="Usado no lugar de &apos;value&apos; para obter vari&#xe1;veis de &apos;ConfigMaps&apos; ou de &apos;Secrets&apos;"/>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_873616000" MODIFIED="1596819611982" TEXT="configMapKeyRef">
-<node CREATED="1593785242110" ID="Freemind_Link_715878320" MODIFIED="1596819933970" TEXT="Usado para pegar um valor espec&#xed;fico de um ConfigMap">
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_873616000" MODIFIED="1596819611982" TEXT="configMapKeyRef">
+<node CREATED="1593785242110" FOLDED="true" ID="Freemind_Link_715878320" MODIFIED="1596819933970" TEXT="Usado para pegar um valor espec&#xed;fico de um ConfigMap">
 <node CREATED="1596819761338" ID="Freemind_Link_1315770735" LINK="#Freemind_Link_918501028" MODIFIED="1596819779032" TEXT="Ver anota&#xe7;&#xf5;es abaixo"/>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_279496766" MODIFIED="1596821174070" TEXT="name">
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_279496766" MODIFIED="1596821174070" TEXT="name">
 <node CREATED="1593785242110" ID="Freemind_Link_382690207" MODIFIED="1596821191384" TEXT="Nome do ConfigMap que tem a vari&#xe1;vel de ambiente declarada"/>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_425294733" MODIFIED="1596821201156" TEXT="key">
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_425294733" MODIFIED="1596821201156" TEXT="key">
 <node CREATED="1593785242110" ID="Freemind_Link_1265583024" MODIFIED="1596821210416" TEXT="Nome da vari&#xe1;vel a ser injetada"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1625843757" MODIFIED="1596819687734" TEXT="secretKeyRef">
-<node CREATED="1593785242110" ID="Freemind_Link_1193468412" MODIFIED="1596819946674" TEXT="Usado para pegar um valor espec&#xed;fico de um Secret">
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_1625843757" MODIFIED="1596819687734" TEXT="secretKeyRef">
+<node CREATED="1593785242110" FOLDED="true" ID="Freemind_Link_1193468412" MODIFIED="1596819946674" TEXT="Usado para pegar um valor espec&#xed;fico de um Secret">
 <node CREATED="1596819761338" ID="Freemind_Link_1468075239" LINK="#Freemind_Link_890756444" MODIFIED="1596819784666" TEXT="Ver anota&#xe7;&#xf5;es abaixo"/>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1213844548" MODIFIED="1596821174070" TEXT="name">
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_1213844548" MODIFIED="1596821174070" TEXT="name">
 <node CREATED="1593785242110" ID="Freemind_Link_795503316" MODIFIED="1596821230309" TEXT="Nome do Secret que tem a vari&#xe1;vel de ambiente declarada"/>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1185218955" MODIFIED="1596821201156" TEXT="key">
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_1185218955" MODIFIED="1596821201156" TEXT="key">
 <node CREATED="1593785242110" ID="Freemind_Link_147847278" MODIFIED="1596821210416" TEXT="Nome da vari&#xe1;vel a ser injetada"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1137430281" MODIFIED="1597328429820" TEXT="fieldRef">
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_1137430281" MODIFIED="1597328429820" TEXT="fieldRef">
 <node CREATED="1593785242110" ID="Freemind_Link_458875831" MODIFIED="1597328458885" TEXT="Usado para expor informa&#xe7;&#xf5;es do Pod para o container"/>
 <node CREATED="1597328901819" ID="Freemind_Link_105724415" MODIFIED="1597328906388" TEXT="https://kubernetes.io/docs/tasks/inject-data-application/environment-variable-expose-pod-information/">
 <icon BUILTIN="attach"/>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1193406668" MODIFIED="1597328480726" TEXT="fieldPath">
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_1193406668" MODIFIED="1597328480726" TEXT="fieldPath">
 <node CREATED="1593785242110" ID="Freemind_Link_1489820645" MODIFIED="1597328525073" TEXT="Caminho do campo que se quer expor em vari&#xe1;vel de ambiente"/>
 </node>
-<node CREATED="1593785504539" ID="Freemind_Link_842882743" MODIFIED="1593785505278" TEXT="Ex:">
+<node CREATED="1593785504539" FOLDED="true" ID="Freemind_Link_842882743" MODIFIED="1593785505278" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1735288808" MODIFIED="1597328632417" TEXT="env:&#xa;  - name: MY_NODE_NAME&#xa;    valueFrom:&#xa;      fieldRef:&#xa;        fieldPath: spec.nodeName&#xa;  - name: MY_POD_NAME&#xa;    valueFrom:&#xa;      fieldRef:&#xa;        fieldPath: metadata.name&#xa;  - name: MY_POD_NAMESPACE&#xa;    valueFrom:&#xa;      fieldRef:&#xa;        fieldPath: metadata.namespace&#xa;  - name: MY_POD_IP&#xa;    valueFrom:&#xa;      fieldRef:&#xa;        fieldPath: status.podIP&#xa;  - name: MY_POD_SERVICE_ACCOUNT&#xa;    valueFrom:&#xa;      fieldRef:&#xa;        fieldPath: spec.serviceAccountName"/>
 </node>
 </node>
@@ -2774,18 +2774,18 @@
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1366261519" MODIFIED="1596819539952" TEXT="env:&#xa;  - name: APP_COLOR&#xa;    value: pink"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_1879616432" MODIFIED="1596820023795" TEXT="envFrom">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1879616432" MODIFIED="1596820023795" TEXT="envFrom">
 <node CREATED="1593785242110" ID="Freemind_Link_893351373" MODIFIED="1596820078747" TEXT="Usado para declarar vari&#xe1;veis de ambiente do Pod a partir de ConfigMap&apos;s ou Secret&apos;s"/>
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_419337972" MODIFIED="1596819437169" TEXT="- (item)">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1835789969" MODIFIED="1596820105722" TEXT="configMapRef">
 <node CREATED="1593785242110" ID="Freemind_Link_811456173" MODIFIED="1596820113231" TEXT="Especifica o uso de um ConfigMap"/>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_412136363" MODIFIED="1596820219128" TEXT="name">
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_412136363" MODIFIED="1596820219128" TEXT="name">
 <node CREATED="1593785242110" ID="Freemind_Link_1847679334" MODIFIED="1596820238209" TEXT="Name do ConfigMap a ser injetado no Pod"/>
 </node>
 </node>
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1924397323" MODIFIED="1596820124103" TEXT="secretRef">
 <node CREATED="1593785242110" ID="Freemind_Link_1240309915" MODIFIED="1596820214918" TEXT="Especifica o uso de um Secret"/>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1828997565" MODIFIED="1596820219128" TEXT="name">
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_1828997565" MODIFIED="1596820219128" TEXT="name">
 <node CREATED="1593785242110" ID="Freemind_Link_1256226751" MODIFIED="1596820229681" TEXT="Name do Secret a ser injetado no Pod"/>
 </node>
 </node>
@@ -2795,7 +2795,7 @@
 <node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_108858090" MODIFIED="1596820303088" TEXT="...&#xa;spec:&#xa;  containers: &#xa;    - name ...&#xa;      envFrom:&#xa;        - secretRef:&#xa;            name: app-secret-settings"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_487957306" MODIFIED="1599771392818" TEXT="volumeMounts">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_487957306" MODIFIED="1599771392818" TEXT="volumeMounts">
 <node CREATED="1599771407754" ID="Freemind_Link_73451198" MODIFIED="1599772237664" TEXT="Monta volumes no container"/>
 <node CREATED="1599772660064" ID="Freemind_Link_691185238" MODIFIED="1599772674283" TEXT="Requer que os volumes tenham sido declarados previamente na se&#xe7;&#xe3;o &apos;volumes&apos; do Pod">
 <node CREATED="1599772307273" ID="Freemind_Link_527302162" LINK="#Freemind_Link_504683107" MODIFIED="1599772314001" TEXT="Ver anota&#xe7;&#xf5;es"/>
@@ -2803,17 +2803,17 @@
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1813417811" MODIFIED="1599772228689" TEXT="- (Item)">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_985802847" MODIFIED="1599772253540" TEXT="mountPath">
 <node CREATED="1599772261230" ID="Freemind_Link_787508698" MODIFIED="1599772267177" TEXT="Ponto de montagem do volume no container"/>
-<node CREATED="1599772269351" ID="Freemind_Link_1332116426" MODIFIED="1599772270235" TEXT="Ex:">
+<node CREATED="1599772269351" FOLDED="true" ID="Freemind_Link_1332116426" MODIFIED="1599772270235" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1712358369" MODIFIED="1599772281304" TEXT="mountPath: /test-pd"/>
 </node>
 </node>
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1337770104" MODIFIED="1599772259791" TEXT="name">
-<node CREATED="1599772286453" ID="Freemind_Link_1345993807" MODIFIED="1599772292217" TEXT="Nome dado ao volume">
-<node CREATED="1599772293035" ID="Freemind_Link_1363472792" MODIFIED="1599772304667" TEXT="Tem que ser o mesmo definido na se&#xe7;&#xe3;o &apos;volumes&apos; do Pod">
+<node CREATED="1599772286453" FOLDED="true" ID="Freemind_Link_1345993807" MODIFIED="1599772292217" TEXT="Nome dado ao volume">
+<node CREATED="1599772293035" FOLDED="true" ID="Freemind_Link_1363472792" MODIFIED="1599772304667" TEXT="Tem que ser o mesmo definido na se&#xe7;&#xe3;o &apos;volumes&apos; do Pod">
 <node CREATED="1599772307273" ID="Freemind_Link_529343737" LINK="#Freemind_Link_504683107" MODIFIED="1599772314001" TEXT="Ver anota&#xe7;&#xf5;es"/>
 </node>
 </node>
-<node CREATED="1599772269351" ID="Freemind_Link_87193616" MODIFIED="1599772270235" TEXT="Ex:">
+<node CREATED="1599772269351" FOLDED="true" ID="Freemind_Link_87193616" MODIFIED="1599772270235" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_42459587" MODIFIED="1599772281304" TEXT="mountPath: /test-pd"/>
 </node>
 </node>
@@ -2824,7 +2824,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_504683107" MODIFIED="1599771479262" TEXT="volumes">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_504683107" MODIFIED="1599771479262" TEXT="volumes">
 <node CREATED="1599772841672" ID="Freemind_Link_1692926934" MODIFIED="1599772856917" TEXT="Usado para criar um volume no N&#xf3; (host) que roda os Pods"/>
 <node CREATED="1599771479857" ID="Freemind_Link_1710567878" MODIFIED="1599771502190" TEXT="Configura os volumes a serem disponibilizados aos containers do Pod"/>
 <node CREATED="1599774672732" ID="Freemind_Link_332693502" MODIFIED="1599776132625" TEXT="A alternativa &#xa;adequada &#xe9; o PV">
@@ -2851,9 +2851,9 @@
 <node CREATED="1599775844893" ID="Freemind_Link_916176637" MODIFIED="1599776328930" TEXT="Possibilidades:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1313813937" MODIFIED="1599771550043" TEXT="hostPath">
 <node CREATED="1599771479857" ID="Freemind_Link_865662361" MODIFIED="1599771605298" TEXT="Configura&#xe7;&#xf5;es no host onde ser&#xe1; montado o volume"/>
-<node CREATED="1599772916734" ID="Freemind_Link_876722080" MODIFIED="1599774685453" TEXT="N&#xe3;o &#xe9; a solu&#xe7;&#xe3;o adequada para cluster &#xa;pois cada N&#xf3; ter&#xe1; seu pr&#xf3;prio volume">
+<node CREATED="1599772916734" FOLDED="true" ID="Freemind_Link_876722080" MODIFIED="1599774685453" TEXT="N&#xe3;o &#xe9; a solu&#xe7;&#xe3;o adequada para cluster &#xa;pois cada N&#xf3; ter&#xe1; seu pr&#xf3;prio volume">
 <icon BUILTIN="messagebox_warning"/>
-<node CREATED="1599774672732" ID="Freemind_Link_1648153013" MODIFIED="1599777283180" TEXT="A alternativa &#xa;adequada &#xe9; o PV">
+<node CREATED="1599774672732" FOLDED="true" ID="Freemind_Link_1648153013" MODIFIED="1599777283180" TEXT="A alternativa &#xa;adequada &#xe9; o PV">
 <arrowlink DESTINATION="Freemind_Link_160780292" ENDARROW="Default" ENDINCLINATION="767;0;" ID="Freemind_Arrow_Link_1625537097" STARTARROW="None" STARTINCLINATION="767;0;"/>
 <icon BUILTIN="messagebox_warning"/>
 <node CREATED="1599776477204" ID="Freemind_Link_1947720729" MODIFIED="1599776482370" TEXT="O PV &#xe9; cluster-wide"/>
@@ -2862,60 +2862,60 @@
 <node CREATED="1599771746998" ID="Freemind_Link_981391976" MODIFIED="1599771752174" TEXT="https://kubernetes.io/docs/concepts/storage/volumes/#hostpath">
 <icon BUILTIN="attach"/>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_91687699" MODIFIED="1599771582542" TEXT="path">
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_91687699" MODIFIED="1599771582542" TEXT="path">
 <node CREATED="1599771479857" ID="Freemind_Link_1506110558" MODIFIED="1599771652402" TEXT="Caminho completo no host (no N&#xf3;) onde ser&#xe1; montado o volume"/>
-<node CREATED="1599771531120" ID="Freemind_Link_1703121800" MODIFIED="1599771531926" TEXT="Ex:">
+<node CREATED="1599771531120" FOLDED="true" ID="Freemind_Link_1703121800" MODIFIED="1599771531926" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1581587951" MODIFIED="1599771665136" TEXT="path: /data"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1287614510" MODIFIED="1599771584379" TEXT="type">
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_1287614510" MODIFIED="1599771584379" TEXT="type">
 <node CREATED="1599771627471" ID="Freemind_Link_1112041728" MODIFIED="1599771634066" TEXT="Tipo de volume a ser montado"/>
-<node CREATED="1599771774479" ID="Freemind_Link_151901850" MODIFIED="1599771777587" TEXT="Possibilidades:">
-<node COLOR="#ff00ff" CREATED="1599771778230" ID="Freemind_Link_45355945" MODIFIED="1599771953932" TEXT="DirectoryOrCreate">
+<node CREATED="1599771774479" FOLDED="true" ID="Freemind_Link_151901850" MODIFIED="1599771777587" TEXT="Possibilidades:">
+<node COLOR="#ff00ff" CREATED="1599771778230" FOLDED="true" ID="Freemind_Link_45355945" MODIFIED="1599771953932" TEXT="DirectoryOrCreate">
 <node CREATED="1599771780391" ID="Freemind_Link_1130167451" MODIFIED="1599771994278" TEXT="Se o caminho n&#xe3;o existir, ser&#xe1; criado um diret&#xf3;rio vazio &#xa;com permiss&#xe3;o 0755 com mesmo grupo e owner do kubelet"/>
 </node>
-<node COLOR="#ff00ff" CREATED="1599771778230" ID="Freemind_Link_1449581453" MODIFIED="1599771800084" TEXT="Directory">
+<node COLOR="#ff00ff" CREATED="1599771778230" FOLDED="true" ID="Freemind_Link_1449581453" MODIFIED="1599771800084" TEXT="Directory">
 <node CREATED="1599771780391" ID="Freemind_Link_674990917" MODIFIED="1599771789243" TEXT="O diret&#xf3;rio deve existir no caminho informado"/>
 </node>
-<node COLOR="#ff00ff" CREATED="1599771778230" ID="Freemind_Link_119949181" MODIFIED="1599772029599" TEXT="File">
+<node COLOR="#ff00ff" CREATED="1599771778230" FOLDED="true" ID="Freemind_Link_119949181" MODIFIED="1599772029599" TEXT="File">
 <node CREATED="1599771780391" ID="Freemind_Link_928693419" MODIFIED="1599772033980" TEXT="O arquivo deve existir no caminho informado"/>
 </node>
-<node COLOR="#ff00ff" CREATED="1599771778230" ID="Freemind_Link_826357434" MODIFIED="1599772044326" TEXT="FileOrCreate">
+<node COLOR="#ff00ff" CREATED="1599771778230" FOLDED="true" ID="Freemind_Link_826357434" MODIFIED="1599772044326" TEXT="FileOrCreate">
 <node CREATED="1599771780391" ID="Freemind_Link_1499916368" MODIFIED="1599772069427" TEXT="Se o caminho n&#xe3;o existir, ser&#xe1; criado um arquivo vazio &#xa;com permiss&#xe3;o 0644 com mesmo grupo e owner do kubelet"/>
 </node>
-<node COLOR="#ff00ff" CREATED="1599771778230" ID="Freemind_Link_1778224549" MODIFIED="1599772094851" TEXT="Socket">
+<node COLOR="#ff00ff" CREATED="1599771778230" FOLDED="true" ID="Freemind_Link_1778224549" MODIFIED="1599772094851" TEXT="Socket">
 <node CREATED="1599771780391" ID="Freemind_Link_1529217878" MODIFIED="1599772109701" TEXT="Um socket Unix deve existir no caminho informado"/>
 </node>
 <node CREATED="1599772118526" ID="Freemind_Link_1416117316" MODIFIED="1599772119721" TEXT="Outros"/>
 </node>
-<node CREATED="1599771531120" ID="Freemind_Link_366673713" MODIFIED="1599771531926" TEXT="Ex:">
+<node CREATED="1599771531120" FOLDED="true" ID="Freemind_Link_366673713" MODIFIED="1599771531926" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1801148680" MODIFIED="1599771673074" TEXT="type: Directory"/>
 </node>
 </node>
-<node CREATED="1599772356466" ID="Freemind_Link_16334664" MODIFIED="1599772357385" TEXT="Ex:">
+<node CREATED="1599772356466" FOLDED="true" ID="Freemind_Link_16334664" MODIFIED="1599772357385" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1424847052" MODIFIED="1599775915427" TEXT="  ...&#xa;  volumes:&#xa;    - name: test-volume&#xa;      hostPath:&#xa;        path: /data&#xa;        type: Directory"/>
 </node>
 </node>
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1601932479" MODIFIED="1599774397021" TEXT="awsElasticBlockStore">
 <node CREATED="1599774397796" ID="Freemind_Link_215027662" MODIFIED="1599774406812" TEXT="Substitui o &apos;hostPath&apos; acima"/>
 <node CREATED="1599774408981" ID="Freemind_Link_1199894059" MODIFIED="1599774418196" TEXT="Usado para montar volumes na Amazon (AWS)"/>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_417158296" MODIFIED="1599774440729" TEXT="volumeID">
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_417158296" MODIFIED="1599774440729" TEXT="volumeID">
 <node CREATED="1599774397796" ID="Freemind_Link_1544435189" MODIFIED="1599774448078" TEXT="ID do volume na Amazon"/>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1105477980" MODIFIED="1599774456438" TEXT="fsType">
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_1105477980" MODIFIED="1599774456438" TEXT="fsType">
 <node CREATED="1599774397796" ID="Freemind_Link_1864583526" MODIFIED="1599774465045" TEXT="Sistema de arquivos a ser utilizado"/>
-<node CREATED="1599771531120" ID="Freemind_Link_1366931662" MODIFIED="1599771531926" TEXT="Ex:">
+<node CREATED="1599771531120" FOLDED="true" ID="Freemind_Link_1366931662" MODIFIED="1599771531926" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_755902561" MODIFIED="1599774476693" TEXT="fsType: ext4"/>
 </node>
 </node>
-<node CREATED="1599772356466" ID="Freemind_Link_1256056047" MODIFIED="1599772357385" TEXT="Ex:">
+<node CREATED="1599772356466" FOLDED="true" ID="Freemind_Link_1256056047" MODIFIED="1599772357385" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1703044806" MODIFIED="1599775966008" TEXT="  ...&#xa;  volumes:&#xa;    - name: test-volume&#xa;      awsElasticBlockStore:&#xa;        volumeID: &lt;ID do volume na AWS&gt;&#xa;        fsType: ext4"/>
 </node>
 </node>
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_160780292" MODIFIED="1599777283176" TEXT="persistentVolumeClaim">
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1524442023" MODIFIED="1599777301432" TEXT="claimName">
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_1524442023" MODIFIED="1599777301432" TEXT="claimName">
 <node CREATED="1599777301948" ID="Freemind_Link_17059834" MODIFIED="1599777315082" TEXT="Nome do PVC a ser utilizado"/>
-<node CREATED="1599777318545" ID="Freemind_Link_819439984" MODIFIED="1599777319313" TEXT="Ex:">
+<node CREATED="1599777318545" FOLDED="true" ID="Freemind_Link_819439984" MODIFIED="1599777319313" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1522040655" MODIFIED="1599777338434" TEXT="claimName: myclaim"/>
 </node>
 </node>
@@ -2927,7 +2927,7 @@
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_573527381" MODIFIED="1599772639260" TEXT="...&#xa;spec:&#xa;  containers:&#xa;    - image: test-webserver&#xa;      volumeMounts:&#xa;        - mountPath: /test-pd&#xa;          name: test-volume&#xa;  volumes:&#xa;    - name: test-volume&#xa;      hostPath:&#xa;        path: /data&#xa;        type: Directory"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1597272709128" FOLDED="true" ID="Freemind_Link_545629209" MODIFIED="1597272721689" TEXT="initContainers">
+<node COLOR="#ff00ff" CREATED="1597272709128" ID="Freemind_Link_545629209" MODIFIED="1597272721689" TEXT="initContainers">
 <node CREATED="1597272724031" ID="Freemind_Link_37702925" MODIFIED="1597272781097" TEXT="Usado em casos em que se quer executar um container que faz uma tarefa espec&#xed;fica e que n&#xe3;o precisa ficar rodando para sempre"/>
 <node CREATED="1597272782093" ID="Freemind_Link_406340228" MODIFIED="1597272807588" TEXT="Usado para criar containers tempor&#xe1;rios que fazem atividades pontuais de apoio ao container principal"/>
 <node CREATED="1597272815007" ID="Freemind_Link_1496403376" MODIFIED="1597272857388" TEXT="Toda a configura&#xe7;&#xe3;o &#xe9; semelhante &#xe0; configura&#xe7;&#xe3;o da se&#xe7;&#xe3;o &apos;containers&apos; (acima)"/>
@@ -2939,7 +2939,7 @@
 <node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_1328955710" MODIFIED="1597273009360" TEXT="...&#xa;spec:&#xa;  containers:&#xa;  - name: myapp-container&#xa;    image: busybox:1.28&#xa;    command: [&apos;sh&apos;, &apos;-c&apos;, &apos;echo The app is running! &amp;&amp; sleep 3600&apos;]&#xa;  initContainers:&#xa;  - name: init-myservice&#xa;    image: busybox:1.28&#xa;    command: [&apos;sh&apos;, &apos;-c&apos;, &apos;until nslookup myservice; do echo waiting for myservice; sleep 2; done;&apos;]&#xa;  - name: init-mydb&#xa;    image: busybox:1.28&#xa;    command: [&apos;sh&apos;, &apos;-c&apos;, &apos;until nslookup mydb; do echo waiting for mydb; sleep 2; done;&apos;]"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_336050288" MODIFIED="1595884388104" TEXT="hostAliases">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_336050288" MODIFIED="1595884388104" TEXT="hostAliases">
 <node CREATED="1595884413397" ID="Freemind_Link_1386650454" MODIFIED="1595884431174" TEXT="Permite adicionar hosts ao arquivo /etc/hosts do container"/>
 <node CREATED="1595884393584" ID="Freemind_Link_527535554" MODIFIED="1595884394465" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_361562461" MODIFIED="1595884454698" TEXT="...&#xa;spec:&#xa;  hostAliases:&#xa;  - ip: &quot;127.0.0.1&quot;&#xa;    hostnames:&#xa;    - &quot;foo.local&quot;&#xa;    - &quot;bar.local&quot;&#xa;  - ip: &quot;10.1.2.3&quot;&#xa;    hostnames:&#xa;    - &quot;foo.remote&quot;&#xa;    - &quot;bar.remote&quot;">
@@ -2950,21 +2950,22 @@
 </node>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_1196258973" MODIFIED="1596030189775" TEXT="nodeName">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1196258973" MODIFIED="1596030189775" TEXT="nodeName">
 <node CREATED="1595884413397" ID="Freemind_Link_754328525" MODIFIED="1596031112482" TEXT="For&#xe7;a o Pod a rodar em um n&#xf3; espec&#xed;fico"/>
 <node CREATED="1596031192077" ID="Freemind_Link_1068698440" LINK="#Freemind_Link_824110118" MODIFIED="1596031621540" TEXT="Alternativa: &apos;Binding&apos;"/>
 <node CREATED="1595884393584" ID="Freemind_Link_1287287816" MODIFIED="1595884394465" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1872568259" MODIFIED="1596030243491" TEXT="...&#xa;spec:&#xa;  containers: ...&#xa;  nodeName: node02"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_1341733396" MODIFIED="1596203358494" TEXT="dnsPolicy">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1341733396" MODIFIED="1596203358494" TEXT="dnsPolicy">
 <node CREATED="1595884413397" ID="Freemind_Link_764016063" MODIFIED="1596203374418" TEXT="Define a pol&#xed;tica de DNS a ser usada"/>
 <node CREATED="1596203866481" ID="Freemind_Link_269925098" MODIFIED="1596203868974" TEXT="Possibilidades">
 <node COLOR="#ff00ff" CREATED="1596203872043" ID="Freemind_Link_161149398" MODIFIED="1596203949141" TEXT="Default">
 <node CREATED="1596203995453" ID="Freemind_Link_445050115" MODIFIED="1596204016174" TEXT="O Pod herda a configura&#xe7;&#xe3;o de resolu&#xe7;&#xe3;o de nome do n&#xf3; em que &#xe9; executado"/>
 </node>
 <node COLOR="#ff00ff" CREATED="1596203880245" ID="Freemind_Link_1220004709" MODIFIED="1596203943853" TEXT="ClusterFirst">
-<node CREATED="1596204180579" ID="Freemind_Link_1649453574" MODIFIED="1596204234571" TEXT="Toda consulta DNS que n&#xe3;o correpsonda ao sufixo do dom&#xed;nio do cluster (ex: www.kubernetes.io), ser&#xe1; reencaminhada para o servidor de nomes herdado do n&#xf3;"/>
+<node CREATED="1596204180579" ID="Freemind_Link_1649453574" MODIFIED="1652463431055" TEXT="Toda consulta DNS que n&#xe3;o corresponda ao sufixo do dom&#xed;nio do cluster (ex: www.kubernetes.io), ser&#xe1; reencaminhada para o servidor de nomes herdado do n&#xf3;"/>
+<node CREATED="1652463433377" ID="Freemind_Link_1891357368" MODIFIED="1652463577007" TEXT="Ao usar o ClusterFirst, o arquivo /etc/resolv.conf do POD ter&#xe1; o dns do cluster na primeira linha e em seguida o dns configurado na se&#xe7;&#xe3;o dnsConfig (caso esteja presente no spec do pod)"/>
 </node>
 <node COLOR="#ff00ff" CREATED="1596203885613" ID="Freemind_Link_121852504" MODIFIED="1596203937568" TEXT="ClusterFirstWithHostNet">
 <node CREATED="1596204249227" ID="Freemind_Link_439487805" MODIFIED="1596204275618" TEXT="Todo Pod rodando em modo &apos;hostNetwork&apos; deve usar esta pol&#xed;tica de DNS"/>
@@ -2972,6 +2973,9 @@
 <node COLOR="#ff00ff" CREATED="1596203891996" ID="Freemind_Link_760488659" MODIFIED="1596203929775" TEXT="None">
 <node CREATED="1596204282126" ID="Freemind_Link_1174874424" MODIFIED="1596204303332" TEXT="Permite ao Pod ignorar as configura&#xe7;&#xf5;es de DNS do K8S">
 <node CREATED="1596204306975" ID="Freemind_Link_198504427" MODIFIED="1596204317420" TEXT="Requer que a configura&#xe7;&#xe3;o seja feita manualmente"/>
+</node>
+<node CREATED="1652463433377" ID="Freemind_Link_379352469" MODIFIED="1652463589803" TEXT="Ao usar o Nome, o arquivo /etc/resolv.conf do POD ter&#xe1; apenas o dns configurado na se&#xe7;&#xe3;o dnsConfig (que neste caso &#xe9; obrigat&#xf3;rio estar presente no spec do pod). O dns do cluster n&#xe3;o constar&#xe1; no /etc/resolv.conf do POD">
+<arrowlink COLOR="#ff0000" DESTINATION="Freemind_Link_1891357368" ENDARROW="Default" ENDINCLINATION="116;0;" ID="Freemind_Arrow_Link_869707412" STARTARROW="Default" STARTINCLINATION="116;0;"/>
 </node>
 <node CREATED="1596203374794" ID="Freemind_Link_1916320832" MODIFIED="1596203915703" TEXT="Quando escolhido, ser&#xe1; obrigat&#xf3;rio declarar a se&#xe7;&#xe3;o &apos;dnsConfig&apos; (ver abaixo)">
 <arrowlink DESTINATION="Freemind_Link_1708794795" ENDARROW="Default" ENDINCLINATION="206;0;" ID="Freemind_Arrow_Link_246891786" STARTARROW="Default" STARTINCLINATION="206;0;"/>
@@ -2982,7 +2986,7 @@
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_442183114" MODIFIED="1596203985280" TEXT="...&#xa;spec:&#xa;  containers: ...&#xa;  dnsPolicy: &quot;Default&quot;"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_939318344" MODIFIED="1596203405350" TEXT="dnsConfig">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_939318344" MODIFIED="1596203405350" TEXT="dnsConfig">
 <node CREATED="1595884413397" ID="Freemind_Link_532089958" MODIFIED="1596203420727" TEXT="Define as configura&#xe7;&#xf5;es de DNS espec&#xed;ficas para o Pod"/>
 <node CREATED="1596203791013" ID="Freemind_Link_1708794795" MODIFIED="1596203817648" TEXT="Necess&#xe1;rio quando o valor de &apos;dnsPolicy&apos; for &quot;None&quot;">
 <icon BUILTIN="messagebox_warning"/>
@@ -3005,6 +3009,7 @@
 <node CREATED="1596204396288" ID="Freemind_Link_1713539383" MODIFIED="1596204411211" TEXT="/etc/resolv.conf resultado:">
 <node CREATED="1596204413808" ID="Freemind_Link_1303099863" MODIFIED="1596204562509" TEXT="nameserver 10.10.12.10&#xa;nameserver 192.168.0.2&#xa;search meudominio.com.br&#xa;options ndots:2 edns0"/>
 </node>
+<node CREATED="1652463207994" ID="Freemind_Link_1696746696" MODIFIED="1652463730932" TEXT="Com o dnsPolicy desta forma, o /etc/resolv.conf do POD conter&#xe1; apenas os DNS&apos;s configurados na se&#xe7;&#xe3;o dnsConfig. Caso queira manter, tamb&#xe9;m, o DNS do cluster no /etc/resolv.conf do POD, use ClusterFirst"/>
 </node>
 </node>
 </node>
@@ -3018,7 +3023,7 @@
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1139097285" MODIFIED="1596213818587" TEXT="...&#xa;spec:&#xa;  containers: ...&#xa;  imagePullSecrets:&#xa;    - name: regcred"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1596641733042" FOLDED="true" ID="Freemind_Link_1615171536" MODIFIED="1596641741551" TEXT="schedulerName">
+<node COLOR="#ff00ff" CREATED="1596641733042" ID="Freemind_Link_1615171536" MODIFIED="1596641741551" TEXT="schedulerName">
 <node CREATED="1596641743396" ID="Freemind_Link_176333411" MODIFIED="1596641753831" TEXT="Indica o nome do scheduler, caso n&#xe3;o se queira usar o padr&#xe3;o"/>
 <node CREATED="1596641800572" ID="Freemind_Link_677025905" MODIFIED="1596642085918" TEXT="Para carregar um scheduler personalizado &#xa;&#xe9; necess&#xe1;rio usar configurar o kube-scheduler">
 <node CREATED="1596641839482" ID="Freemind_Link_1293646742" LINK="#Freemind_Link_844029011" MODIFIED="1596641867733" TEXT="Ver anota&#xe7;&#xe3;o acima"/>
@@ -3070,13 +3075,13 @@
 </node>
 </node>
 </node>
-<node CREATED="1592320466495" FOLDED="true" ID="Freemind_Link_625607988" MODIFIED="1592320470618" TEXT="Replication Controller">
+<node CREATED="1592320466495" ID="Freemind_Link_625607988" MODIFIED="1592320470618" TEXT="Replication Controller">
 <node CREATED="1592320471216" ID="Freemind_Link_1774168972" MODIFIED="1592320496273" TEXT="Descontinuado!">
 <icon BUILTIN="button_cancel"/>
 </node>
 <node CREATED="1592320475126" ID="Freemind_Link_983240483" MODIFIED="1592320484767" TEXT="Deve-se usar o &apos;Deployment&apos; em seu lugar"/>
 </node>
-<node CREATED="1592318588142" FOLDED="true" ID="Freemind_Link_1350939554" MODIFIED="1592841149334" TEXT="Deployment">
+<node CREATED="1592318588142" ID="Freemind_Link_1350939554" MODIFIED="1592841149334" TEXT="Deployment">
 <node CREATED="1592319036690" ID="Freemind_Link_1445718489" MODIFIED="1592319046058" TEXT="Monitora os pods">
 <node CREATED="1592319060111" ID="Freemind_Link_151124480" MODIFIED="1592319297508" TEXT="&#xc9; respons&#xe1;vel por subir os pods, controlar a qtdd de r&#xe9;plicas etc."/>
 <node CREATED="1593529217401" ID="Freemind_Link_240641209" MODIFIED="1593529235838" TEXT="&#xc9; um meio declarativo de gerenciar Pods usando ReplicaSet"/>
@@ -3281,8 +3286,8 @@
 </node>
 <node COLOR="#ff00ff" CREATED="1592330030692" ID="Freemind_Link_1328882623" MODIFIED="1594064612171" TEXT="&lt;tipo&gt;">
 <node CREATED="1592843453396" ID="Freemind_Link_59262983" MODIFIED="1594064628828" TEXT="Tipo do volume"/>
-<node CREATED="1592843484848" ID="Freemind_Link_536419091" MODIFIED="1594064621691" TEXT="Possibilidades">
-<node COLOR="#ff00ff" CREATED="1592841087435" ID="Freemind_Link_1430193151" MODIFIED="1594064668644" TEXT="emptyDir">
+<node CREATED="1592843484848" FOLDED="true" ID="Freemind_Link_536419091" MODIFIED="1594064621691" TEXT="Possibilidades">
+<node COLOR="#ff00ff" CREATED="1592841087435" FOLDED="true" ID="Freemind_Link_1430193151" MODIFIED="1594064668644" TEXT="emptyDir">
 <node CREATED="1592841110596" ID="Freemind_Link_1435365624" MODIFIED="1594064687227" TEXT="Diret&#xf3;rio vazio para dados transientes"/>
 <node CREATED="1594064687697" ID="Freemind_Link_1432567573" MODIFIED="1594064697923" TEXT="&#xda;til quando se quer compartilhar dados entre containers de um mesmo Pod"/>
 <node CREATED="1594064900206" ID="Freemind_Link_715920336" MODIFIED="1594064931329" TEXT="Para usar, o container deve referenciar o nome em sua se&#xe7;&#xe3;o volumeMounts"/>
@@ -3290,14 +3295,14 @@
 <node CREATED="1594065186841" ID="Freemind_Link_92927253" MODIFIED="1594065194073" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/emptyDir.jpg&quot;&gt;"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1592841087435" ID="Freemind_Link_1949982665" MODIFIED="1594064709876" TEXT="hostPath">
+<node COLOR="#ff00ff" CREATED="1592841087435" FOLDED="true" ID="Freemind_Link_1949982665" MODIFIED="1594064709876" TEXT="hostPath">
 <node CREATED="1594064687697" ID="Freemind_Link_735919650" MODIFIED="1594064730623" TEXT="O volume montado ficar&#xe1; no n&#xf3; em que o Pod &#xe9; executado"/>
-<node COLOR="#ff00ff" CREATED="1592841087435" ID="Freemind_Link_991636334" MODIFIED="1594065455198" TEXT="type">
+<node COLOR="#ff00ff" CREATED="1592841087435" FOLDED="true" ID="Freemind_Link_991636334" MODIFIED="1594065455198" TEXT="type">
 <node CREATED="1594064687697" ID="Freemind_Link_851933969" MODIFIED="1594065465045" TEXT="Tipo de volume a ser montado no n&#xf3;"/>
-<node CREATED="1594065469067" ID="Freemind_Link_238490758" MODIFIED="1594065471203" TEXT="Possibilidades">
-<node CREATED="1594065474836" ID="Freemind_Link_12199958" MODIFIED="1594065480564" TEXT="Socket">
+<node CREATED="1594065469067" FOLDED="true" ID="Freemind_Link_238490758" MODIFIED="1594065471203" TEXT="Possibilidades">
+<node CREATED="1594065474836" FOLDED="true" ID="Freemind_Link_12199958" MODIFIED="1594065480564" TEXT="Socket">
 <node CREATED="1594065675928" ID="Freemind_Link_1160263114" MODIFIED="1594065691796" TEXT="&#xda;til quando se quer conectar ao socket do Docker do n&#xf3;"/>
-<node CREATED="1594065693458" ID="Freemind_Link_1591981660" MODIFIED="1594065694094" TEXT="Ex:">
+<node CREATED="1594065693458" FOLDED="true" ID="Freemind_Link_1591981660" MODIFIED="1594065694094" TEXT="Ex:">
 <node CREATED="1594065694945" ID="Freemind_Link_946112717" MODIFIED="1594065738813" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/volumeSocket.png&quot;&gt;"/>
 </node>
 </node>
@@ -3311,18 +3316,18 @@
 <node CREATED="1594065374232" ID="Freemind_Link_536177728" MODIFIED="1594065384335" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/hostPath.jpg&quot;&gt;"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1592841087435" ID="Freemind_Link_95774713" MODIFIED="1594064743682" TEXT="nfs">
+<node COLOR="#ff00ff" CREATED="1592841087435" FOLDED="true" ID="Freemind_Link_95774713" MODIFIED="1594064743682" TEXT="nfs">
 <node CREATED="1594064687697" ID="Freemind_Link_1261483888" MODIFIED="1594064771792" TEXT="Monta um volume NFS compartilhado para o Pod"/>
 </node>
-<node COLOR="#ff00ff" CREATED="1592841087435" ID="Freemind_Link_1394541594" MODIFIED="1594064841186" TEXT="configMap/secret">
-<node CREATED="1594064687697" ID="Freemind_Link_841569485" MODIFIED="1594064801481" TEXT="Tipo especial de volume">
+<node COLOR="#ff00ff" CREATED="1592841087435" FOLDED="true" ID="Freemind_Link_1394541594" MODIFIED="1594064841186" TEXT="configMap/secret">
+<node CREATED="1594064687697" FOLDED="true" ID="Freemind_Link_841569485" MODIFIED="1594064801481" TEXT="Tipo especial de volume">
 <node CREATED="1594064801742" ID="Freemind_Link_423745093" MODIFIED="1594064805807" TEXT="Arquivos de configura&#xe7;&#xe3;o"/>
 <node CREATED="1594064807193" ID="Freemind_Link_1475742812" MODIFIED="1594064811475" TEXT="Par chave-valor"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1592330030692" ID="Freemind_Link_366100960" MODIFIED="1592843403694" TEXT="persistentVolumeClaim">
+<node COLOR="#ff00ff" CREATED="1592330030692" FOLDED="true" ID="Freemind_Link_366100960" MODIFIED="1592843403694" TEXT="persistentVolumeClaim">
 <node CREATED="1592843442916" ID="Freemind_Link_1141539187" MODIFIED="1592845632602" TEXT="Sess&#xe3;o que define as permiss&#xf5;es e o tamanho do volume"/>
-<node COLOR="#ff00ff" CREATED="1592330030692" ID="Freemind_Link_294535621" MODIFIED="1594066712958" TEXT="claimName">
+<node COLOR="#ff00ff" CREATED="1592330030692" FOLDED="true" ID="Freemind_Link_294535621" MODIFIED="1594066712958" TEXT="claimName">
 <node CREATED="1592843417254" ID="Freemind_Link_1929120389" MODIFIED="1592843427999" TEXT="Nome do arquivo que cont&#xe9;m as defini&#xe7;&#xf5;es das permiss&#xf5;es do volume"/>
 <node CREATED="1592843750061" ID="Freemind_Link_1147742699" MODIFIED="1592844107676" TEXT="Esse arquivo ser&#xe1; um YAML do tipo PersistentVolumeClaim">
 <arrowlink DESTINATION="Freemind_Link_462714548" ENDARROW="Default" ENDINCLINATION="965;0;" ID="Freemind_Arrow_Link_442148361" STARTARROW="None" STARTINCLINATION="180;0;"/>
@@ -3332,8 +3337,8 @@
 <node CREATED="1594066619840" ID="Freemind_Link_928017198" MODIFIED="1594066644949" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/PVC_using.png&quot;&gt;"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1592841087435" ID="Freemind_Link_1422556872" MODIFIED="1594064849191" TEXT="cloud">
-<node CREATED="1594064687697" ID="Freemind_Link_40768625" MODIFIED="1594064859723" TEXT="Storage em cluster ">
+<node COLOR="#ff00ff" CREATED="1592841087435" FOLDED="true" ID="Freemind_Link_1422556872" MODIFIED="1594064849191" TEXT="cloud">
+<node CREATED="1594064687697" FOLDED="true" ID="Freemind_Link_40768625" MODIFIED="1594064859723" TEXT="Storage em cluster ">
 <node CREATED="1594064801742" ID="Freemind_Link_888574041" MODIFIED="1594064868935" TEXT="Ex: Amazon, Azure etc."/>
 </node>
 </node>
@@ -4140,7 +4145,7 @@
 <node CREATED="1599065401832" ID="Freemind_Link_1289411504" MODIFIED="1599065405683" TEXT="deployment"/>
 </node>
 </node>
-<node CREATED="1595951529873" FOLDED="true" ID="Freemind_Link_1392265144" MODIFIED="1598537171816" TEXT="Role">
+<node CREATED="1595951529873" ID="Freemind_Link_1392265144" MODIFIED="1598537171816" TEXT="Role">
 <node CREATED="1599064918684" ID="Freemind_Link_1503653179" MODIFIED="1599064993931" TEXT="Role s&#xe3;o aplicados apenas aos &apos;Namespaced resources&apos;">
 <icon BUILTIN="messagebox_warning"/>
 <node CREATED="1599064939456" ID="Freemind_Link_1127090765" MODIFIED="1599064990032" TEXT="Apenas os recursos que obrigatoriamente s&#xe3;o vinculados a um namespace &#xe9; que s&#xe3;o manipulados em um &apos;Role&apos;"/>
@@ -4190,10 +4195,10 @@
 </node>
 <node CREATED="1598539669003" ID="Freemind_Link_416660485" MODIFIED="1598539707006" TEXT="Pode-se especificar os nomes dos recursos aos quais a role se aplica (mais restritivo)"/>
 <node CREATED="1598538393114" ID="Freemind_Link_27255044" MODIFIED="1598538393759" TEXT="Ex:">
-<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_202972353" MODIFIED="1598539744486" TEXT="resources: [&quot;pods&quot;]&#xa;resourceNames: [&quot;blue&quot;,&quot;orange&quot;]">
+<node COLOR="#ff00ff" CREATED="1592843866864" FOLDED="true" ID="Freemind_Link_202972353" MODIFIED="1598539744486" TEXT="resources: [&quot;pods&quot;]&#xa;resourceNames: [&quot;blue&quot;,&quot;orange&quot;]">
 <node CREATED="1598539748081" ID="Freemind_Link_1186016065" MODIFIED="1598539812302" TEXT="Neste exemplo, a role se aplica aos Pods cujo nome seja blue ou orange"/>
 </node>
-<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_270413133" MODIFIED="1598539793488" TEXT="resources: [&quot;deployments&quot;]&#xa;resourceNames: [&quot;service1&quot;,&quot;service2&quot;]">
+<node COLOR="#ff00ff" CREATED="1592843866864" FOLDED="true" ID="Freemind_Link_270413133" MODIFIED="1598539793488" TEXT="resources: [&quot;deployments&quot;]&#xa;resourceNames: [&quot;service1&quot;,&quot;service2&quot;]">
 <node CREATED="1598539748081" ID="Freemind_Link_837327923" MODIFIED="1598539807285" TEXT="Neste exemplo, a role se aplica aos Deployments cujo nome seja service1 ou service2"/>
 </node>
 </node>
@@ -4213,7 +4218,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1595951529873" FOLDED="true" ID="Freemind_Link_1129790239" MODIFIED="1598537176155" TEXT="RoleBinding">
+<node CREATED="1595951529873" ID="Freemind_Link_1129790239" MODIFIED="1598537176155" TEXT="RoleBinding">
 <node CREATED="1599064918684" ID="Freemind_Link_1252110107" MODIFIED="1599065020185" TEXT="RoleBinding s&#xe3;o aplicados apenas aos &apos;Namespaced resources&apos;">
 <icon BUILTIN="messagebox_warning"/>
 <node CREATED="1599064939456" ID="Freemind_Link_2100434" MODIFIED="1599065035311" TEXT="Apenas os recursos que obrigatoriamente s&#xe3;o vinculados a um namespace &#xe9; que s&#xe3;o manipulados em um &apos;RoleBinding&apos;"/>
@@ -4384,9 +4389,9 @@
 <node COLOR="#ff00ff" CREATED="1599243955618" ID="Freemind_Link_73589574" MODIFIED="1599243969235" TEXT="-(item)">
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_225674248" MODIFIED="1599243507525" TEXT="podSelector">
 <node CREATED="1592844989287" ID="Freemind_Link_1001495476" MODIFIED="1599243543542" TEXT="Seleciona os Pods de onde os tr&#xe1;fegos ser&#xe3;o permitidos"/>
-<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1132970037" MODIFIED="1599243196459" TEXT="matchLabels">
+<node COLOR="#ff00ff" CREATED="1592843866864" FOLDED="true" ID="Freemind_Link_1132970037" MODIFIED="1599243196459" TEXT="matchLabels">
 <node CREATED="1592844989287" ID="Freemind_Link_164070757" MODIFIED="1599243595513" TEXT="Rela&#xe7;&#xe3;o do par &apos;label&apos; x &apos;valor&apos; dos Pods a serem selecionados"/>
-<node CREATED="1595951551270" ID="Freemind_Link_555033345" MODIFIED="1595951552490" TEXT="Ex:">
+<node CREATED="1595951551270" FOLDED="true" ID="Freemind_Link_555033345" MODIFIED="1595951552490" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_759021926" MODIFIED="1599243687217" TEXT="...&#xa;spec:&#xa;  ingress:&#xa;    - from:&#xa;      - podSelector:&#xa;        matchLabels:&#xa;          name: api-pod&#xa;..."/>
 </node>
 </node>
@@ -4397,13 +4402,13 @@
 <node CREATED="1592844989287" ID="Freemind_Link_1517772124" MODIFIED="1599243802825" TEXT="Indica quais portas e protocolos ser&#xe3;o aceitos como tr&#xe1;fego de chegada"/>
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_276474468" MODIFIED="1599243807966" TEXT="protocol">
 <node CREATED="1592844989287" ID="Freemind_Link_893705378" MODIFIED="1599243823042" TEXT="Indica o protocolo aceito"/>
-<node CREATED="1599243824119" ID="Freemind_Link_1697603362" MODIFIED="1599243824894" TEXT="Ex:">
+<node CREATED="1599243824119" FOLDED="true" ID="Freemind_Link_1697603362" MODIFIED="1599243824894" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_50987248" MODIFIED="1599243850388" TEXT="ports:&#xa;  - protocol: TCP"/>
 </node>
 </node>
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_950327332" MODIFIED="1599243859002" TEXT="port">
 <node CREATED="1592844989287" ID="Freemind_Link_456068194" MODIFIED="1599243885725" TEXT="Indica a porta de chegada que ser&#xe1; liberada para receber o tr&#xe1;fego"/>
-<node CREATED="1599243824119" ID="Freemind_Link_648589407" MODIFIED="1599243824894" TEXT="Ex:">
+<node CREATED="1599243824119" FOLDED="true" ID="Freemind_Link_648589407" MODIFIED="1599243824894" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1543240810" MODIFIED="1599243896734" TEXT="ports:&#xa;  - port: 3306"/>
 </node>
 </node>
@@ -4419,9 +4424,9 @@
 <node COLOR="#ff00ff" CREATED="1599579979849" ID="Freemind_Link_1798624574" MODIFIED="1599580006465" TEXT="-(Item)">
 <node COLOR="#ff00ff" CREATED="1599579979849" ID="Freemind_Link_750168723" MODIFIED="1599580028584" TEXT="podSelector">
 <node CREATED="1592844989287" ID="Freemind_Link_1036832013" MODIFIED="1599243543542" TEXT="Seleciona os Pods de onde os tr&#xe1;fegos ser&#xe3;o permitidos"/>
-<node COLOR="#ff00ff" CREATED="1599579979849" ID="Freemind_Link_597954403" MODIFIED="1599580038015" TEXT="matchLabels">
+<node COLOR="#ff00ff" CREATED="1599579979849" FOLDED="true" ID="Freemind_Link_597954403" MODIFIED="1599580038015" TEXT="matchLabels">
 <node CREATED="1592844989287" ID="Freemind_Link_1521101621" MODIFIED="1599243595513" TEXT="Rela&#xe7;&#xe3;o do par &apos;label&apos; x &apos;valor&apos; dos Pods a serem selecionados"/>
-<node CREATED="1595951551270" ID="Freemind_Link_899826485" MODIFIED="1595951552490" TEXT="Ex:">
+<node CREATED="1595951551270" FOLDED="true" ID="Freemind_Link_899826485" MODIFIED="1595951552490" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_819214847" MODIFIED="1599580108848" TEXT="...&#xa;spec:&#xa;  egress:&#xa;    - to:&#xa;      - podSelector:&#xa;        matchLabels:&#xa;          name: api-pod&#xa;..."/>
 </node>
 </node>
@@ -4432,13 +4437,13 @@
 <node CREATED="1592844989287" ID="Freemind_Link_749190249" MODIFIED="1599580176966" TEXT="Indica quais portas e protocolos ser&#xe3;o aceitos como tr&#xe1;fego de sa&#xed;da"/>
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1924008078" MODIFIED="1599243807966" TEXT="protocol">
 <node CREATED="1592844989287" ID="Freemind_Link_1799958195" MODIFIED="1599243823042" TEXT="Indica o protocolo aceito"/>
-<node CREATED="1599243824119" ID="Freemind_Link_1083686922" MODIFIED="1599243824894" TEXT="Ex:">
+<node CREATED="1599243824119" FOLDED="true" ID="Freemind_Link_1083686922" MODIFIED="1599243824894" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1263540420" MODIFIED="1599243850388" TEXT="ports:&#xa;  - protocol: TCP"/>
 </node>
 </node>
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_845846240" MODIFIED="1599243859002" TEXT="port">
 <node CREATED="1592844989287" ID="Freemind_Link_982070676" MODIFIED="1599580204476" TEXT="Indica a porta de destino que ser&#xe1; liberada para enviar o tr&#xe1;fego"/>
-<node CREATED="1599243824119" ID="Freemind_Link_1367080856" MODIFIED="1599243824894" TEXT="Ex:">
+<node CREATED="1599243824119" FOLDED="true" ID="Freemind_Link_1367080856" MODIFIED="1599243824894" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1111264923" MODIFIED="1599243896734" TEXT="ports:&#xa;  - port: 3306"/>
 </node>
 </node>
@@ -4454,7 +4459,7 @@
 </node>
 </node>
 <node CREATED="1595951529873" FOLDED="true" ID="Freemind_Link_1784173705" MODIFIED="1606167262951" TEXT="Ingress">
-<node CREATED="1606167268966" FOLDED="true" ID="Freemind_Link_169661906" MODIFIED="1606167272294" TEXT="Ingress controller">
+<node CREATED="1606167268966" ID="Freemind_Link_169661906" MODIFIED="1606167272294" TEXT="Ingress controller">
 <node CREATED="1606167293308" ID="Freemind_Link_101227297" MODIFIED="1606167308503" TEXT="&#xc9; a ferramenta que faz o load-balancing">
 <node COLOR="#ff0000" CREATED="1613052342676" ID="Freemind_Link_787156675" MODIFIED="1613052481578" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/ingress.png&quot;&gt;"/>
 </node>
@@ -4596,7 +4601,7 @@
 </node>
 <node CREATED="1613054916552" ID="Freemind_Link_753137663" MODIFIED="1613055095747" TEXT="O caminho dos roteamentos ser&#xe1; definido&#xa;de acordo com a url da requisi&#xe7;&#xe3;o">
 <node CREATED="1613055098992" ID="Freemind_Link_517085258" MODIFIED="1613055106909" TEXT="Pode ser usado subdom&#xed;nios">
-<node CREATED="1613054932591" ID="Freemind_Link_1492498345" MODIFIED="1613054933405" TEXT="Ex:">
+<node CREATED="1613054932591" FOLDED="true" ID="Freemind_Link_1492498345" MODIFIED="1613054933405" TEXT="Ex:">
 <node CREATED="1613054934458" ID="Freemind_Link_470231657" MODIFIED="1613054940970" TEXT="www.mystore.com"/>
 <node CREATED="1613054934458" ID="Freemind_Link_900107159" MODIFIED="1613054953484" TEXT="www.wear.mystore.com"/>
 <node CREATED="1613054934458" ID="Freemind_Link_1365180783" MODIFIED="1613054965221" TEXT="www.watch.mystore.com"/>
@@ -4604,7 +4609,7 @@
 </node>
 </node>
 <node CREATED="1613055107881" ID="Freemind_Link_48439510" MODIFIED="1613055120964" TEXT="Pode ser usadas barras (&apos;/&apos;) no final da url">
-<node CREATED="1613054932591" ID="Freemind_Link_1310685305" MODIFIED="1613054933405" TEXT="Ex:">
+<node CREATED="1613054932591" FOLDED="true" ID="Freemind_Link_1310685305" MODIFIED="1613054933405" TEXT="Ex:">
 <node CREATED="1613054934458" ID="Freemind_Link_1320262321" MODIFIED="1613054940970" TEXT="www.mystore.com"/>
 <node CREATED="1613054934458" ID="Freemind_Link_1199570361" MODIFIED="1613055148898" TEXT="www.mystore.com/wear"/>
 <node CREATED="1613054934458" ID="Freemind_Link_1308674901" MODIFIED="1613055154557" TEXT="www.mystore.com/watch"/>
@@ -4618,19 +4623,19 @@
 </node>
 <node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_1672791239" MODIFIED="1613056719430" TEXT="http">
 <node CREATED="1613054492851" ID="Freemind_Link_776561585" MODIFIED="1613056748592" TEXT="Configura o roteamento das requisi&#xe7;&#xf5;es http"/>
-<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_1660004070" MODIFIED="1613056833750" TEXT="paths">
+<node COLOR="#ff00ff" CREATED="1596640515246" FOLDED="true" ID="Freemind_Link_1660004070" MODIFIED="1613056833750" TEXT="paths">
 <node CREATED="1613054492851" ID="Freemind_Link_55081281" MODIFIED="1613056845854" TEXT="Configura cada uma das rotas conforme a url"/>
-<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_330665345" MODIFIED="1613056857879" TEXT="- (item)">
-<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_1687985370" MODIFIED="1613056863392" TEXT="path">
+<node COLOR="#ff00ff" CREATED="1596640515246" FOLDED="true" ID="Freemind_Link_330665345" MODIFIED="1613056857879" TEXT="- (item)">
+<node COLOR="#ff00ff" CREATED="1596640515246" FOLDED="true" ID="Freemind_Link_1687985370" MODIFIED="1613056863392" TEXT="path">
 <node CREATED="1613054492851" ID="Freemind_Link_742174346" MODIFIED="1613056876190" TEXT="Configura o roteamento de uma url espec&#xed;fica"/>
 <node CREATED="1613056877422" ID="Freemind_Link_1415686901" MODIFIED="1613056890430" TEXT="Se n&#xe3;o for informado, ser&#xe3;o tomadas todas as urls"/>
 </node>
-<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_662998871" MODIFIED="1613056915359" TEXT="backend">
+<node COLOR="#ff00ff" CREATED="1596640515246" FOLDED="true" ID="Freemind_Link_662998871" MODIFIED="1613056915359" TEXT="backend">
 <node CREATED="1613054492851" ID="Freemind_Link_793948982" MODIFIED="1613056943551" TEXT="Identifica o service para o qual a requisi&#xe7;&#xe3;o ser&#xe1; roteada"/>
-<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_307565395" MODIFIED="1613056953975" TEXT="serviceName">
+<node COLOR="#ff00ff" CREATED="1596640515246" FOLDED="true" ID="Freemind_Link_307565395" MODIFIED="1613056953975" TEXT="serviceName">
 <node CREATED="1613054492851" ID="Freemind_Link_474935300" MODIFIED="1613056992592" TEXT="Identifica o nome do servi&#xe7;o para onde rotear a requisi&#xe7;&#xe3;o desta rule"/>
 </node>
-<node COLOR="#ff00ff" CREATED="1596640515246" ID="Freemind_Link_1290091161" MODIFIED="1613054491836" TEXT="servicePort">
+<node COLOR="#ff00ff" CREATED="1596640515246" FOLDED="true" ID="Freemind_Link_1290091161" MODIFIED="1613054491836" TEXT="servicePort">
 <node CREATED="1613054492851" ID="Freemind_Link_1006201911" MODIFIED="1613056996399" TEXT="Identifica a porta do servi&#xe7;o para onde rotear a requisi&#xe7;&#xe3;o desta rule"/>
 </node>
 </node>
@@ -4722,7 +4727,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1604936438648" ID="Freemind_Link_688879133" MODIFIED="1604936443140" POSITION="right" TEXT="Troubleshooting">
+<node CREATED="1604936438648" FOLDED="true" ID="Freemind_Link_688879133" MODIFIED="1604936443140" POSITION="right" TEXT="Troubleshooting">
 <node CREATED="1604936443694" ID="Freemind_Link_1310028104" MODIFIED="1604936445379" TEXT="Rede">
 <node CREATED="1604936446271" ID="Freemind_Link_1875988166" MODIFIED="1604936457324" TEXT="Verificar a rota default de um n&#xf3; do cluster">
 <node CREATED="1604936458272" ID="Freemind_Link_1218661930" MODIFIED="1604936469963" TEXT="Logar no n&#xf3; (via SSH)">

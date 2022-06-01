@@ -62,7 +62,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1563998723358" ID="Freemind_Link_1353472525" MODIFIED="1563998725467" POSITION="right" TEXT="A&#xe7;&#xf5;es">
+<node CREATED="1563998723358" FOLDED="true" ID="Freemind_Link_1353472525" MODIFIED="1563998725467" POSITION="right" TEXT="A&#xe7;&#xf5;es">
 <node CREATED="1586036574169" ID="Freemind_Link_1039136497" MODIFIED="1586036580439" TEXT="Container">
 <node CREATED="1563998741165" ID="Freemind_Link_1874998913" MODIFIED="1587400429560" TEXT="Baixar e carregar &#xa;uma imagem">
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1511048246" MODIFIED="1586036628804" TEXT="docker container run nomeimagem">
@@ -728,7 +728,7 @@
 <icon BUILTIN="messagebox_warning"/>
 </node>
 </node>
-<node CREATED="1564074095905" ID="Freemind_Link_1246829250" MODIFIED="1564074097903" TEXT="Comandos">
+<node CREATED="1564074095905" FOLDED="true" ID="Freemind_Link_1246829250" MODIFIED="1564074097903" TEXT="Comandos">
 <node COLOR="#0000ff" CREATED="1563994386064" ID="Freemind_Link_1980060614" MODIFIED="1564074110014" TEXT="version">
 <node CREATED="1563994389535" ID="Freemind_Link_483413953" MODIFIED="1564074121798" TEXT="Indica a vers&#xe3;o do Docker compose a ser utilizada"/>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1776307366" MODIFIED="1564074129230" TEXT="Ex: version: &apos;3&apos;">
@@ -939,7 +939,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_587520050" MODIFIED="1564075527385" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1563994459391" FOLDED="true" ID="Freemind_Link_587520050" MODIFIED="1564075527385" TEXT="Ex:">
 <icon BUILTIN="idea"/>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_1179208339" MODIFIED="1569014123108" TEXT="Ex: &#xa;version: &apos;3&apos;&#xa;services:&#xa;  nginx:&#xa;    build:&#xa;      dockerfile: ./docker/nginx.dockerfile&#xa;      context: .&#xa;    image: douglasq/nginx&#xa;    container_name: nginx&#xa;    ports:&#xa;      - &quot;80:80&quot;&#xa;      - &quot;1234:3000&quot;&#xa;    networks:&#xa;      - production-network&#xa;    depends_on:&#xa;      - &quot;node1&quot;&#xa;&#xa;  mongodb:&#xa;    image: mongo&#xa;    networks:&#xa;      - production-network&#xa;    &#xa;  node1:&#xa;    build:&#xa;      dockerfile: ./docker/alurabooks.dockerfile&#xa;      context: .&#xa;    image: douglasq/alura-books&#xa;    container_name: alura-books-1&#xa;    ports:&#xa;      - &quot;3000&quot;&#xa;    networks:&#xa;      - production-network&#xa;    depends_on:&#xa;      - &quot;mongodb&quot;&#xa;    &#xa;networks:&#xa;  production-network:&#xa;    driver: bridge"/>
 </node>

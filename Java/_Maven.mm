@@ -243,8 +243,16 @@
 <node CREATED="1638218911239" ID="Freemind_Link_446067676" MODIFIED="1638218920188" TEXT="Para saber qual &#xe9; o settings.xml efetivo sendo usado:">
 <node COLOR="#0000ff" CREATED="1638218920825" ID="Freemind_Link_1893773803" MODIFIED="1644349102909" TEXT="mvn help:effective-settings"/>
 </node>
+<node CREATED="1654104005501" ID="Freemind_Link_89620213" MODIFIED="1654104007320" TEXT="Elementos">
+<node COLOR="#0000ff" CREATED="1644349812471" ID="Freemind_Link_999911024" MODIFIED="1654104024545" TEXT="servers">
+<node CREATED="1644350015349" ID="Freemind_Link_1185992415" MODIFIED="1644350030232" TEXT="Permite definir credenciais de servidores com os quais o Maven se conecta"/>
+<node CREATED="1644436491528" ID="Freemind_Link_1886597645" MODIFIED="1644436492902" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1644436493455" ID="Freemind_Link_283761434" MODIFIED="1644436543051" TEXT="&lt;servers&gt;&#xa;    &lt;server&gt;&#xa;      &lt;id&gt;trt10-public&lt;/id&gt;&#xa;      &lt;username&gt;deploy&lt;/username&gt;&#xa;      &lt;password&gt;deploy&lt;/password&gt;&#xa;    &lt;/server&gt;&#xa;&lt;/servers&gt;"/>
 </node>
-<node CREATED="1643992100612" ID="Freemind_Link_1587062240" MODIFIED="1643992103571" TEXT="Reposit&#xf3;rios">
+</node>
+</node>
+</node>
+<node CREATED="1643992100612" FOLDED="true" ID="Freemind_Link_1587062240" MODIFIED="1643992103571" TEXT="Reposit&#xf3;rios">
 <node CREATED="1643992211376" ID="Freemind_Link_1689073745" MODIFIED="1643992217734" TEXT="Ordem padr&#xe3;o do Maven">
 <node CREATED="1643992218023" ID="Freemind_Link_1262376282" MODIFIED="1643992251635" TEXT="Checar o reposit&#xf3;rio local">
 <icon BUILTIN="full-1"/>
@@ -753,7 +761,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1575574182808" FOLDED="true" ID="Freemind_Link_1468390236" MODIFIED="1575574184422" POSITION="right" TEXT="Plugins">
+<node CREATED="1575574182808" ID="Freemind_Link_1468390236" MODIFIED="1575574184422" POSITION="right" TEXT="Plugins">
 <node CREATED="1575574678611" ID="Freemind_Link_821896362" MODIFIED="1575574683130" TEXT="https://maven.apache.org/plugins/index.html">
 <icon BUILTIN="attach"/>
 </node>
@@ -1089,7 +1097,154 @@
 </node>
 </node>
 </node>
-<node CREATED="1637006273491" ID="Freemind_Link_1775645039" MODIFIED="1637006275560" TEXT="Externos">
+<node COLOR="#0033ff" CREATED="1575574185200" ID="Freemind_Link_666995145" MODIFIED="1654095046308" TEXT="release">
+<node CREATED="1575574188001" ID="Freemind_Link_575473659" MODIFIED="1654095078078" TEXT="Focado em gerar releases do projeto">
+<node CREATED="1654095691050" ID="Freemind_Link_1820030185" MODIFIED="1654095843748" TEXT="Este plugin prepara o release, faz todos os testes, altera a vers&#xe3;o no pom.xml, faz commit disso e gera uma TAG no git. Depois, na fase seguinte ele faz checkout do c&#xf3;digo para a vers&#xe3;o da TAG criada, faz o deploy da aplica&#xe7;&#xe3;o, gera o site e depois devolve o c&#xf3;digo para a vers&#xe3;o de desenvolvimento fazendo checkout da master"/>
+</node>
+<node CREATED="1654097286420" ID="Freemind_Link_1187153846" LINK="#Freemind_Link_198692849" MODIFIED="1654104701574" TEXT="Usa o plugin SCM para interagir com o controlador &#xa;de vers&#xe3;o usado para o projeto (ex: git)">
+<node CREATED="1654097410413" ID="Freemind_Link_275192170" MODIFIED="1654097428209" TEXT="O plugin SCM &#xe9; configurado na se&#xe7;&#xe3;o SCM do POM do projeto"/>
+</node>
+<node CREATED="1575575361478" ID="Freemind_Link_343437796" MODIFIED="1575575366047" TEXT="Goals">
+<node COLOR="#0000ff" CREATED="1654095083467" ID="Freemind_Link_609071589" MODIFIED="1654096056911" TEXT="prepare">
+<node CREATED="1654095102946" ID="Freemind_Link_1090369134" MODIFIED="1654095114776" TEXT="Checa se h&#xe1; modifica&#xe7;&#xf5;es n&#xe3;o comitadas"/>
+<node CREATED="1654095118259" ID="Freemind_Link_1932404652" MODIFIED="1654095126038" TEXT="Checa se h&#xe1; snapshots">
+<node CREATED="1654095254911" ID="Freemind_Link_1747124248" MODIFIED="1654095278410" TEXT="Nenhuma das depend&#xea;ncias pode ser baseada em uma vers&#xe3;o snapshot"/>
+</node>
+<node CREATED="1654095128843" ID="Freemind_Link_1234279696" MODIFIED="1654095150909" TEXT="Atualiza a vers&#xe3;o para uma vers&#xe3;o de release">
+<node CREATED="1654095304069" ID="Freemind_Link_1709376387" MODIFIED="1654095319327" TEXT="Altera o pom.xml removendo o &apos;-SNAPSHOT&apos; da vers&#xe3;o"/>
+</node>
+<node CREATED="1654095156300" ID="Freemind_Link_636530983" MODIFIED="1654095160087" TEXT="Executa testes"/>
+<node CREATED="1654095160691" ID="Freemind_Link_839628131" MODIFIED="1654095352276" TEXT="Gera TAG no controlador de vers&#xe3;o para a vers&#xe3;o que est&#xe1; no pom.xml"/>
+<node CREATED="1654095177113" ID="Freemind_Link_1441226005" MODIFIED="1654095186756" TEXT="Incrementa a vers&#xe3;o do Snaphot">
+<node CREATED="1654095304069" ID="Freemind_Link_1746873856" MODIFIED="1654096855794" TEXT="Altera o pom.xml adicionando  o &apos;-SNAPSHOT&apos; e incrementando o n&#xfa;mero da vers&#xe3;o"/>
+</node>
+<node CREATED="1654095187246" ID="Freemind_Link_1129269457" MODIFIED="1654095192029" TEXT="Efetua o commit"/>
+<node CREATED="1654096511728" ID="Freemind_Link_1570944520" MODIFIED="1654096829063" TEXT="Este goal gera uma s&#xe9;rie de arquivos tempor&#xe1;rios &#xfa;teis ao trabalho do pr&#xf3;prio plugin">
+<arrowlink COLOR="#12aff8" DESTINATION="Freemind_Link_258093496" ENDARROW="Default" ENDINCLINATION="357;0;" ID="Freemind_Arrow_Link_1390909027" STARTARROW="Default" STARTINCLINATION="330;0;"/>
+</node>
+<node CREATED="1654104851778" ID="Freemind_Link_610039716" MODIFIED="1654104853262" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1654104854325" ID="Freemind_Link_310218059" MODIFIED="1654104866619" TEXT="mvn clean release:prepare">
+<node CREATED="1654105023334" ID="Freemind_Link_1804097207" MODIFIED="1654105038436" TEXT="V&#xe1;rias perguntas ser&#xe3;o feitas. Geralmente aceita-se as op&#xe7;&#xf5;es default de resposta"/>
+<node CREATED="1654104872188" ID="Freemind_Link_1564569378" MODIFIED="1654105044113" TEXT="Ser&#xe1; perguntada a vers&#xe3;o de release a ser criada">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1654104976300" ID="Freemind_Link_69074790" MODIFIED="1654105049076" TEXT="Ser&#xe1; perguntada qual a TAG a ser aplicada no reposit&#xf3;rio">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1654104929460" ID="Freemind_Link_1235128519" MODIFIED="1654105053196" TEXT="Ser&#xe1; perguntada a nova vers&#xe3;o snapshot a ser criada">
+<icon BUILTIN="full-3"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1654095083467" ID="Freemind_Link_1291932932" MODIFIED="1654096757994" TEXT="perform">
+<node CREATED="1654095633451" ID="Freemind_Link_1601334282" MODIFIED="1654096844970" TEXT="Realiza o checkout no controlador de vers&#xe3;o para a TAG criada no goal release:prepare"/>
+<node CREATED="1654095520401" ID="Freemind_Link_1073842423" MODIFIED="1654105233412" TEXT="Gera e publica o release">
+<node CREATED="1654105233984" ID="Freemind_Link_1568079055" MODIFIED="1654105252500" TEXT="Efetua o deploy do artefato no reposit&#xf3;rio (ex: Nexus)"/>
+<node CREATED="1654105255870" ID="Freemind_Link_923615160" MODIFIED="1654105271621" TEXT="Efetua a gera&#xe7;&#xe3;o e deploy do site (mvn site:site)"/>
+</node>
+<node CREATED="1654095555338" ID="Freemind_Link_258093496" MODIFIED="1654096813004" TEXT="Remove os arquivos de release gerados pelo goal release:prepare">
+<node CREATED="1654096770440" ID="Freemind_Link_279914590" MODIFIED="1654096797844" TEXT="A&#xe7;&#xe3;o equivalente ao goal release:clean">
+<arrowlink DESTINATION="Freemind_Link_445247366" ENDARROW="Default" ENDINCLINATION="419;0;" ID="Freemind_Arrow_Link_459926438" STARTARROW="None" STARTINCLINATION="419;0;"/>
+</node>
+</node>
+<node CREATED="1654095633451" ID="Freemind_Link_393734120" MODIFIED="1654095650568" TEXT="Realiza o checkout no controlador de vers&#xe3;o para a master"/>
+<node CREATED="1654104851778" ID="Freemind_Link_850747049" MODIFIED="1654104853262" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1654104854325" ID="Freemind_Link_1592250362" MODIFIED="1654104866619" TEXT="mvn clean release:prepare">
+<node CREATED="1654105023334" ID="Freemind_Link_563012375" MODIFIED="1654105038436" TEXT="V&#xe1;rias perguntas ser&#xe3;o feitas. Geralmente aceita-se as op&#xe7;&#xf5;es default de resposta"/>
+<node CREATED="1654104872188" ID="Freemind_Link_1670452266" MODIFIED="1654105044113" TEXT="Ser&#xe1; perguntada a vers&#xe3;o de release a ser criada">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1654104976300" ID="Freemind_Link_1709984933" MODIFIED="1654105049076" TEXT="Ser&#xe1; perguntada qual a TAG a ser aplicada no reposit&#xf3;rio">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1654104929460" ID="Freemind_Link_833698085" MODIFIED="1654105053196" TEXT="Ser&#xe1; perguntada a nova vers&#xe3;o snapshot a ser criada">
+<icon BUILTIN="full-3"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1654095994312" ID="Freemind_Link_1154112999" MODIFIED="1654096071129" TEXT="rollback">
+<node CREATED="1654096007375" ID="Freemind_Link_7919515" MODIFIED="1654096036187" TEXT="Tipicamente usado quando ocorrem erros no goal release:prepare"/>
+<node CREATED="1654096087607" ID="Freemind_Link_1819310704" MODIFIED="1654096101071" TEXT="Reverte o POM para o estado pr&#xe9;-release"/>
+<node CREATED="1654096104392" ID="Freemind_Link_271388866" MODIFIED="1654096123573" TEXT="Remove a TAG do controlador de vers&#xe3;o">
+<node CREATED="1654096124233" ID="Freemind_Link_1481754999" MODIFIED="1654096143253" TEXT="Dependendo do SCM pode ser que a remo&#xe7;&#xe3;o da TAG n&#xe3;o funcione"/>
+<node CREATED="1654096239852" ID="Freemind_Link_402553259" MODIFIED="1654096250973" TEXT="No Git essa remo&#xe7;&#xe3;o autom&#xe1;tica n&#xe3;o funciona"/>
+</node>
+<node CREATED="1654096153657" ID="Freemind_Link_7333189" MODIFIED="1654096179775" TEXT="N&#xe3;o funcionar&#xe1; se o goal release:clean tiver sido executado">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1654096611128" ID="Freemind_Link_1052025320" MODIFIED="1654096631654" TEXT="Isso acontece pois o rollback usa as informa&#xe7;&#xf5;es contidas nos arquivos tempor&#xe1;rios criadas no goal release:prepare"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1654096560946" ID="Freemind_Link_1429083232" MODIFIED="1654096566858" TEXT="clean">
+<node CREATED="1654096570656" ID="Freemind_Link_445247366" MODIFIED="1654096797843" TEXT="Remove os arquivos tempor&#xe1;rios criados pelo plugin">
+<node CREATED="1654096871428" ID="Freemind_Link_1636647875" MODIFIED="1654096876098" TEXT="POMs de backup"/>
+<node CREATED="1654096877439" ID="Freemind_Link_1196959387" MODIFIED="1654096884770" TEXT="arquivo release.properties"/>
+</node>
+<node CREATED="1654096886894" ID="Freemind_Link_21242165" MODIFIED="1654096897816" TEXT="Normalmente &#xe9; executado pelo goal release:perform"/>
+</node>
+<node COLOR="#0000ff" CREATED="1654096560946" ID="Freemind_Link_998067287" MODIFIED="1654096966778" TEXT="update-versions">
+<node CREATED="1654096886894" ID="Freemind_Link_343815882" MODIFIED="1654096990105" TEXT="Util para atualizar vers&#xf5;es de POM em projetos multi-model">
+<node CREATED="1654097042537" ID="Freemind_Link_433417831" MODIFIED="1654097063516" TEXT="As vers&#xf5;es dos POM&apos;s de cada subm&#xf3;dulo ser&#xe3;o alterados"/>
+<node CREATED="1654097095786" ID="Freemind_Link_1614306640" MODIFIED="1654097112276" TEXT="Ao usar a flag -DautoVersionSubmodules=true, todos os subm&#xf3;dulos ter&#xe3;o a mesma vers&#xe3;o do POM pai"/>
+</node>
+<node CREATED="1654097005319" ID="Freemind_Link_1319876243" MODIFIED="1654097006913" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1654096560946" ID="Freemind_Link_98655331" MODIFIED="1654097031669" TEXT="mvn release:update-versions -DautoVersionSubmodules=true"/>
+</node>
+</node>
+</node>
+<node CREATED="1654104581656" ID="Freemind_Link_1050416565" MODIFIED="1654104582827" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1654104583577" ID="Freemind_Link_758680242" MODIFIED="1654104728455" TEXT="&lt;scm&gt;...&lt;/scm&gt;&#xa;...&#xa;&lt;plugins&gt;&#xa;  &lt;plugin&gt;&#xa;    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;&#xa;    &lt;artifactId&gt;maven-release-plugin&lt;/artifactId&gt;&#xa;    &lt;version&gt;2.5.3&lt;/version&gt;&#xa;  &lt;/plugin&gt;&#xa;&lt;/plugins&gt;"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1654097464557" ID="Freemind_Link_198692849" MODIFIED="1654097699579" TEXT="scm">
+<node CREATED="1654097488241" ID="Freemind_Link_816137288" MODIFIED="1654097519826" TEXT="Plugin de integra&#xe7;&#xe3;o do Maven com o SCM(sistema de controle de vers&#xe3;o) usado pelo projeto"/>
+<node CREATED="1654097526923" ID="Freemind_Link_1059917830" MODIFIED="1654097567083" TEXT="Configurado na se&#xe7;&#xe3;o SCM do POM:">
+<node CREATED="1654097614344" ID="Freemind_Link_843693479" MODIFIED="1654097784520" TEXT="As URL&apos;s s&#xe3;o prefixadas com &apos;scm:[scm-provider]:[SCM URL]&apos;">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1654097643060" ID="Freemind_Link_627665253" MODIFIED="1654097675765" TEXT="Ex: scm:git:git@github.com:springframeworkguru/meuprojeto.git"/>
+</node>
+<node COLOR="#0000ff" CREATED="1654097553481" ID="Freemind_Link_518693037" MODIFIED="1654097575590" TEXT="connection">
+<node CREATED="1654097576442" ID="Freemind_Link_15193511" MODIFIED="1654097932960" TEXT="Define a URL de leitura (fetch)"/>
+</node>
+<node COLOR="#0000ff" CREATED="1654097553481" ID="Freemind_Link_1850899135" MODIFIED="1654097597046" TEXT="developerConnection">
+<node CREATED="1654097576442" ID="Freemind_Link_1125553166" MODIFIED="1654097928474" TEXT="Define a URL de escrita (push)"/>
+</node>
+<node COLOR="#0000ff" CREATED="1654097553481" ID="Freemind_Link_654529842" MODIFIED="1654097726415" TEXT="tag">
+<node CREATED="1654097576442" ID="Freemind_Link_963559130" MODIFIED="1654097758773" TEXT="Define a tag &#xe0; qual o projeto est&#xe1; vinculado">
+<node CREATED="1654097759094" ID="Freemind_Link_776762754" MODIFIED="1654097762255" TEXT="Default &#xe9; HEAD">
+<node CREATED="1654097883487" ID="Freemind_Link_937107468" MODIFIED="1654097891715" TEXT="Raramente &#xe9; necess&#xe1;rio alterar este valor"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1654097553481" ID="Freemind_Link_1907105800" MODIFIED="1654097791960" TEXT="url">
+<node CREATED="1654097576442" ID="Freemind_Link_1136713451" MODIFIED="1654097801510" TEXT="Define a URL p&#xfa;blica do reposit&#xf3;rio">
+<node CREATED="1654103525838" ID="Freemind_Link_1367795105" MODIFIED="1654103537674" TEXT="a p&#xe1;gina do projeto no github, por exemplo"/>
+</node>
+</node>
+</node>
+<node CREATED="1654102486458" ID="Freemind_Link_924959681" MODIFIED="1654102490968" TEXT="Para o Git">
+<node CREATED="1654102519246" ID="Freemind_Link_780451295" MODIFIED="1654102525097" TEXT="Para projetos clonados via https">
+<node CREATED="1654102592448" ID="Freemind_Link_893748149" MODIFIED="1654102756324" TEXT="Modo recomendado oficialmente"/>
+<node CREATED="1654102536388" ID="Freemind_Link_1898835838" MODIFIED="1654103707515" TEXT="Definir a propriedade project.scm.id ">
+<node CREATED="1654103853310" ID="Freemind_Link_754403708" LINK="#Freemind_Link_999911024" MODIFIED="1654104109477" TEXT="O valor deve ser o server id &#xa;configurado no arquivo settings.xml"/>
+</node>
+<node CREATED="1654102566192" ID="Freemind_Link_1090359796" MODIFIED="1654104115613" TEXT="Configurar as credenciais do &#xa;servidor no arquivo settings.xml">
+<node CREATED="1654103646850" ID="Freemind_Link_1036624303" MODIFIED="1654103707513" TEXT="O id do server tem que coincidir com o&#xa;valor da propriedade project.scm.id">
+<arrowlink COLOR="#0fc1f3" DESTINATION="Freemind_Link_1898835838" ENDARROW="Default" ENDINCLINATION="130;0;" ID="Freemind_Arrow_Link_1372971749" STARTARROW="None" STARTINCLINATION="16;-87;"/>
+</node>
+</node>
+</node>
+<node CREATED="1654102519246" ID="Freemind_Link_357654646" MODIFIED="1654102590126" TEXT="Para projetos clonados via ssh">
+<node CREATED="1654102536388" ID="Freemind_Link_1343718591" MODIFIED="1654102617396" TEXT="N&#xe3;o &#xe9; necess&#xe1;ria configura&#xe7;&#xe3;o adicional"/>
+<node CREATED="1654102566192" ID="Freemind_Link_840031877" MODIFIED="1654102641846" TEXT="Dispon&#xed;vel apenas em Linux ou ambientes windows &apos;bash&apos;"/>
+</node>
+<node CREATED="1654104581656" ID="Freemind_Link_1753611121" MODIFIED="1654104582827" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1654104583577" ID="Freemind_Link_627741307" MODIFIED="1654104617590" TEXT="&lt;properties&gt;&#xa;  ...&#xa;  &lt;project.scm.id&gt;github&lt;/project.scm.id&gt;&#xa;&lt;/properties&gt;&#xa;...&#xa;&lt;scm&gt;&#xa;  &lt;developerConnection&gt;scm:git:https://github.com/springframework/meuprojeto.git&lt;/developerConnection&gt;&#xa;  &lt;url&gt;https://github.com/springframework/meuprojeto&lt;/url&gt;&#xa;&lt;/scm&gt;"/>
+</node>
+</node>
+</node>
+<node CREATED="1637006273491" FOLDED="true" ID="Freemind_Link_1775645039" MODIFIED="1637006275560" TEXT="Externos">
 <node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_1016835403" MODIFIED="1637006226467" TEXT="wraper">
 <node CREATED="1637006327708" ID="Freemind_Link_682081669" MODIFIED="1637006354048" TEXT="Encapsula um projeto Maven, criando um script que permite que o build do projeto seja gerado usado o Maven em uma m&#xe1;quina que n&#xe3;o tenha o maven instalado"/>
 <node CREATED="1637006283263" ID="Freemind_Link_1500638049" MODIFIED="1637006284537" TEXT="Ex:">
@@ -1202,7 +1357,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1635195517092" ID="Freemind_Link_994009935" MODIFIED="1635195519275" POSITION="right" TEXT="Profiles">
+<node CREATED="1635195517092" FOLDED="true" ID="Freemind_Link_994009935" MODIFIED="1635195519275" POSITION="right" TEXT="Profiles">
 <node CREATED="1635195524429" ID="Freemind_Link_598833124" MODIFIED="1635195535396" TEXT="http://maven.apache.org/guides/introduction/introduction-to-profiles.html">
 <icon BUILTIN="attach"/>
 </node>
@@ -1221,7 +1376,8 @@
 </node>
 <node CREATED="1648156092958" ID="Freemind_Link_329284222" MODIFIED="1648156136757" TEXT="N&#xe3;o existe prioriza&#xe7;&#xe3;o para m&#xfa;ltiplos profiles ativos">
 <icon BUILTIN="messagebox_warning"/>
-<node CREATED="1648156111162" ID="Freemind_Link_1938125475" MODIFIED="1648156134570" TEXT="A solu&#xe7;&#xe3;o de qual proprieade ser&#xe1; utilizada &#xe9; rand&#xf4;mica!"/>
+<node CREATED="1654086016195" ID="Freemind_Link_454927836" MODIFIED="1654086053839" TEXT="Cuidado com propriedades iguais em profiles distintos. N&#xe3;o se sabe qual delas ser&#xe1; utilizada"/>
+<node CREATED="1648156111162" ID="Freemind_Link_1938125475" MODIFIED="1654085475427" TEXT="A solu&#xe7;&#xe3;o de qual propriedade ser&#xe1; utilizada &#xe9; rand&#xf4;mica!"/>
 </node>
 <node CREATED="1648156543115" ID="Freemind_Link_1106002849" MODIFIED="1648156570040" TEXT="O descritor de profiles (arquivo profiles.xml) n&#xe3;o &#xe9; mais suportado desde a vers&#xe3;o 3.0 do maven">
 <icon BUILTIN="messagebox_warning"/>
@@ -1276,7 +1432,21 @@
 <node CREATED="1648157330561" ID="Freemind_Link_1343658455" MODIFIED="1648157337443" TEXT="pluginRepositories"/>
 <node CREATED="1648157337935" ID="Freemind_Link_1139797214" MODIFIED="1648157340769" TEXT="dependencies"/>
 <node CREATED="1648157341007" ID="Freemind_Link_682796067" MODIFIED="1648157343154" TEXT="plugins"/>
-<node CREATED="1648157343357" ID="Freemind_Link_910992198" MODIFIED="1648157345395" TEXT="properties"/>
+<node CREATED="1648157343357" ID="Freemind_Link_910992198" MODIFIED="1648157345395" TEXT="properties">
+<node CREATED="1654090633595" ID="Freemind_Link_532671931" MODIFIED="1654090634636" TEXT="Ex:">
+<node CREATED="1654090639027" ID="Freemind_Link_1715677071" MODIFIED="1654090643726" TEXT="pom.xml">
+<node COLOR="#0000ff" CREATED="1654088371800" ID="Freemind_Link_1104685140" MODIFIED="1654091086261" TEXT="&lt;properties&gt;&#xa;  &lt;TEST_HOST&gt;localhost&lt;/TEST_HOST&gt;&#xa;&lt;/properties&gt;&#xa;...&#xa;&lt;build&gt;&#xa;  &lt;plugins&gt;&#xa;    &lt;plugin&gt;&#xa;      &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;&#xa;      &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;&#xa;      &lt;version&gt;2.22.0&lt;/version&gt;&#xa;      &lt;configuration&gt;&#xa;        &lt;environmentVariables&gt;&#xa;          &lt;TEST_HOST&gt;${TEST_HOST}&lt;/TEST_HOST&gt;&#xa;        &lt;/environmentVariables&gt;&#xa;      &lt;/configuration&gt;&#xa;    &lt;/plugin&gt;&#xa;  &lt;/plugins&gt;&#xa;&lt;/build&gt;&#xa;...&#xa;&lt;profiles&gt;&#xa;  &lt;profile&gt;&#xa;    &lt;id&gt;teste&lt;/id&gt;&#xa;    &lt;properties&gt;&#xa;      &lt;TEST_HOST&gt;teste.exemplo.com&lt;/TEST_HOST&gt;&#xa;    &lt;/properties&gt;&#xa;  &lt;/profile&gt;&#xa;  &lt;profile&gt;&#xa;    &lt;id&gt;homolog&lt;/id&gt;&#xa;    &lt;properties&gt;&#xa;      &lt;TEST_HOST&gt;hom.exemplo.com&lt;/TEST_HOST&gt;&#xa;    &lt;/properties&gt;&#xa;  &lt;/profile&gt;&#xa;&lt;/profiles&gt;">
+<node CREATED="1654091134944" ID="Freemind_Link_1107135053" MODIFIED="1654091144622" TEXT="Em properties defino a propriedade TEST_HOST"/>
+<node CREATED="1654091148033" ID="Freemind_Link_269717746" MODIFIED="1654091162407" TEXT="Nos profiles eu refedifo a propriedade TEST_HOST"/>
+<node CREATED="1654091106146" ID="Freemind_Link_1633898039" MODIFIED="1654091131653" TEXT="Em build indico que a propriedade TEST_HOST deve ser disponibilziada como vari&#xe1;vel de ambiente para a aplica&#xe7;&#xe3;o"/>
+<node CREATED="1654091222386" ID="Freemind_Link_221653258" MODIFIED="1654091255089" TEXT="Neste cen&#xe1;rio, se n&#xe3;o ativo nenhum profile, a vari&#xe1;vel de ambiente ter&#xe1; o valor&#xa;&apos;localhost&apos;. Caso contr&#xe1;rio ter&#xe1; o valor definido no respectivo profile ativo"/>
+</node>
+</node>
+<node CREATED="1654091259994" ID="Freemind_Link_1652052916" MODIFIED="1654091263109" TEXT="Teste.java">
+<node COLOR="#0000ff" CREATED="1654088371800" ID="Freemind_Link_188311295" MODIFIED="1654091444067" TEXT="class Teste {&#xa;  @Test&#xa;  void getHello() {&#xa;    System.out.println(&quot;#####################&quot;);&#xa;    System.out.println(System.getenv(&quot;TEST_HOST&quot;));&#xa;  }&#xa;}"/>
+</node>
+</node>
+</node>
 <node CREATED="1648157345607" ID="Freemind_Link_542972591" MODIFIED="1648157346850" TEXT="modules"/>
 <node CREATED="1648157347077" ID="Freemind_Link_538931554" MODIFIED="1648157350736" TEXT="reporting"/>
 <node CREATED="1648157352800" ID="Freemind_Link_1025610248" MODIFIED="1648157358007" TEXT="dependencyManagement"/>
@@ -1286,6 +1456,11 @@
 <node CREATED="1648157451970" ID="Freemind_Link_317609518" MODIFIED="1648157455222" TEXT="resources"/>
 <node CREATED="1648157455453" ID="Freemind_Link_1374388747" MODIFIED="1648157459103" TEXT="testResources"/>
 <node CREATED="1648157460836" ID="Freemind_Link_1747093766" MODIFIED="1648157463127" TEXT="finalName"/>
+</node>
+</node>
+<node CREATED="1654088115959" ID="Freemind_Link_1220384576" MODIFIED="1654088117203" TEXT="Ex:">
+<node CREATED="1648157362092" FOLDED="true" ID="Freemind_Link_1250799207" MODIFIED="1648157367129" TEXT="distributionManagement">
+<node COLOR="#0000ff" CREATED="1654088371800" ID="Freemind_Link_1953821838" MODIFIED="1654088386865" TEXT="&lt;profiles&gt;&#xa;  &lt;profile&gt;&#xa;    &lt;id&gt;packagecloud&lt;/id&gt;&#xa;    &lt;distributionManagement&gt;&#xa;      &lt;snapshotRepository&gt;&#xa;        &lt;id&gt;nexus-release&lt;/id&gt;&#xa;        &lt;url&gt;packagecloud+https://packagecloud.io/springframework/snapshot&lt;/url&gt;&#xa;      &lt;/snapshotRepository&gt;      &#xa;      &lt;repository&gt;&#xa;        &lt;id&gt;nexus-release&lt;/id&gt;&#xa;        &lt;url&gt;packagecloud+https://packagecloud.io/springframework/release&lt;/url&gt;&#xa;      &lt;/repository&gt;      &#xa;    &lt;/distributionManagement&gt;    &#xa;  &lt;/profile&gt;&#xa;  &lt;profile&gt;&#xa;    &lt;id&gt;nexus_distro&lt;/id&gt;&#xa;    &lt;distributionManagement&gt;&#xa;      &lt;snapshotRepository&gt;&#xa;        &lt;id&gt;nexus-release&lt;/id&gt;&#xa;        &lt;url&gt;http://localhost:8081/repository/nexus-snapshot&lt;/url&gt;&#xa;      &lt;/snapshotRepository&gt;      &#xa;      &lt;repository&gt;&#xa;        &lt;id&gt;nexus-release&lt;/id&gt;&#xa;        &lt;url&gt;http://localhost:8081/repository/nexus-release&lt;/url&gt;&#xa;      &lt;/repository&gt;      &#xa;    &lt;/distributionManagement&gt;    &#xa;  &lt;/profile&gt;  &#xa;&lt;/profiles&gt;"/>
 </node>
 </node>
 </node>
