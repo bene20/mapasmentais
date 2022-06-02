@@ -1107,7 +1107,7 @@
 <node CREATED="1575575361478" ID="Freemind_Link_343437796" MODIFIED="1575575366047" TEXT="Goals">
 <node COLOR="#0000ff" CREATED="1654095083467" ID="Freemind_Link_609071589" MODIFIED="1654096056911" TEXT="prepare">
 <node CREATED="1654095102946" ID="Freemind_Link_1090369134" MODIFIED="1654095114776" TEXT="Checa se h&#xe1; modifica&#xe7;&#xf5;es n&#xe3;o comitadas"/>
-<node CREATED="1654095118259" ID="Freemind_Link_1932404652" MODIFIED="1654095126038" TEXT="Checa se h&#xe1; snapshots">
+<node CREATED="1654095118259" ID="Freemind_Link_1932404652" MODIFIED="1654191482293" TEXT="Checa se h&#xe1; depend&#xea;ncias de snapshots">
 <node CREATED="1654095254911" ID="Freemind_Link_1747124248" MODIFIED="1654095278410" TEXT="Nenhuma das depend&#xea;ncias pode ser baseada em uma vers&#xe3;o snapshot"/>
 </node>
 <node CREATED="1654095128843" ID="Freemind_Link_1234279696" MODIFIED="1654095150909" TEXT="Atualiza a vers&#xe3;o para uma vers&#xe3;o de release">
@@ -1118,9 +1118,36 @@
 <node CREATED="1654095177113" ID="Freemind_Link_1441226005" MODIFIED="1654095186756" TEXT="Incrementa a vers&#xe3;o do Snaphot">
 <node CREATED="1654095304069" ID="Freemind_Link_1746873856" MODIFIED="1654096855794" TEXT="Altera o pom.xml adicionando  o &apos;-SNAPSHOT&apos; e incrementando o n&#xfa;mero da vers&#xe3;o"/>
 </node>
-<node CREATED="1654095187246" ID="Freemind_Link_1129269457" MODIFIED="1654095192029" TEXT="Efetua o commit"/>
+<node CREATED="1654095187246" ID="Freemind_Link_1129269457" MODIFIED="1654095192029" TEXT="Efetua o commit">
+<node CREATED="1654195045878" ID="Freemind_Link_98720338" MODIFIED="1654195496174" TEXT="&#xc9; importante configurar a mensagem do commit para incluir o termo &apos;[skip ci]&apos; na mensagem do commit caso voc&#xea; esteja usando este plugin em um pipeline">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node CREATED="1654195353582" ID="Freemind_Link_1873010996" MODIFIED="1654195469818" TEXT="O prefixo padr&#xe3;o do texto do &#xa;commit &#xe9; &apos;[maven-release-plugin]&apos;">
+<node CREATED="1654195084627" ID="Freemind_Link_1655428658" MODIFIED="1654195443653" TEXT="pode ser alterado">
+<node CREATED="1654195101440" ID="Freemind_Link_579316626" MODIFIED="1654195102212" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1654104583577" ID="Freemind_Link_1545259525" MODIFIED="1654195550266" TEXT="  &lt;plugin&gt;&#xa;    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;&#xa;    &lt;artifactId&gt;maven-release-plugin&lt;/artifactId&gt;&#xa;    &lt;version&gt;2.5.3&lt;/version&gt;&#xa;    &lt;configuration&gt;&#xa;      &lt;scmCommentPrefix&gt;[maven-release-plugin] [skip ci]&lt;/scmCommentPrefix&gt;&#xa;    &lt;/configuration&gt;&#xa;  &lt;/plugin&gt;"/>
+</node>
+</node>
+</node>
+</node>
 <node CREATED="1654096511728" ID="Freemind_Link_1570944520" MODIFIED="1654096829063" TEXT="Este goal gera uma s&#xe9;rie de arquivos tempor&#xe1;rios &#xfa;teis ao trabalho do pr&#xf3;prio plugin">
 <arrowlink COLOR="#12aff8" DESTINATION="Freemind_Link_258093496" ENDARROW="Default" ENDINCLINATION="357;0;" ID="Freemind_Arrow_Link_1390909027" STARTARROW="Default" STARTINCLINATION="330;0;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1654104854325" ID="Freemind_Link_20901444" MODIFIED="1654191693817" TEXT="-DdryRun=true">
+<node CREATED="1654192055040" ID="Freemind_Link_1986231399" MODIFIED="1654192065410" TEXT="Flag que pode ser usada na execu&#xe7;&#xe3;o do plugin"/>
+<node CREATED="1654105023334" ID="Freemind_Link_974412362" MODIFIED="1654191914594" TEXT="Executa o &apos;release:prepare&apos; sem &#xa;modificar os arquivos locais">
+<node CREATED="1654191950624" ID="Freemind_Link_1567543554" MODIFIED="1654191980580" TEXT="Apenas mostra como ficar&#xe1; o projeto ap&#xf3;s a conclus&#xe3;o do processo de gera&#xe7;&#xe3;o do release"/>
+<node CREATED="1654191724903" ID="Freemind_Link_1746122727" MODIFIED="1654191737685" TEXT="Criar&#xe1; o arquivo pom.xml.tag">
+<node CREATED="1654191759988" ID="Freemind_Link_568320004" MODIFIED="1654191827342" TEXT="Arquivo que ser&#xe1; taggeado no SCM como a nova vers&#xe3;o"/>
+</node>
+<node CREATED="1654191724903" ID="Freemind_Link_1329185898" MODIFIED="1654191752022" TEXT="Criar&#xe1; o arquivo pom.xml.releaseBackup">
+<node CREATED="1654191840515" ID="Freemind_Link_195091391" MODIFIED="1654191852240" TEXT="Arquivo de backup a ser usado no caso de rollback"/>
+</node>
+<node CREATED="1654191724903" ID="Freemind_Link_1471510254" MODIFIED="1654191757396" TEXT="Criar&#xe1; o arquivo pom.xml.next">
+<node CREATED="1654191869684" ID="Freemind_Link_222424535" MODIFIED="1654191900426" TEXT="Arquivo que viria a ser o pr&#xf3;ximo na branch master ap&#xf3;s a conclus&#xe3;o do processo de release"/>
+</node>
+<node CREATED="1654191776572" ID="Freemind_Link_1042824134" MODIFIED="1654191783230" TEXT="Manter&#xe1; o arquivo pom.xml inalterado"/>
+</node>
 </node>
 <node CREATED="1654104851778" ID="Freemind_Link_610039716" MODIFIED="1654104853262" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1654104854325" ID="Freemind_Link_310218059" MODIFIED="1654104866619" TEXT="mvn clean release:prepare">
@@ -1194,7 +1221,15 @@
 </node>
 </node>
 <node CREATED="1654104581656" ID="Freemind_Link_1050416565" MODIFIED="1654104582827" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1654104583577" ID="Freemind_Link_758680242" MODIFIED="1654104728455" TEXT="&lt;scm&gt;...&lt;/scm&gt;&#xa;...&#xa;&lt;plugins&gt;&#xa;  &lt;plugin&gt;&#xa;    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;&#xa;    &lt;artifactId&gt;maven-release-plugin&lt;/artifactId&gt;&#xa;    &lt;version&gt;2.5.3&lt;/version&gt;&#xa;  &lt;/plugin&gt;&#xa;&lt;/plugins&gt;"/>
+<node COLOR="#0000ff" CREATED="1654104583577" ID="Freemind_Link_758680242" MODIFIED="1654195179046" TEXT="&lt;scm&gt;...&lt;/scm&gt;&#xa;...&#xa;&lt;plugins&gt;&#xa;  &lt;plugin&gt;&#xa;    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;&#xa;    &lt;artifactId&gt;maven-release-plugin&lt;/artifactId&gt;&#xa;    &lt;version&gt;2.5.3&lt;/version&gt;&#xa;    &lt;configuration&gt;&#xa;      &lt;scmCommentPrefix&gt;[maven-release-plugin] [skip ci]&lt;/scmCommentPrefix&gt;&#xa;    &lt;/configuration&gt;&#xa;  &lt;/plugin&gt;&#xa;&lt;/plugins&gt;"/>
+<node COLOR="#0000ff" CREATED="1654193797301" ID="Freemind_Link_492815280" MODIFIED="1654193839150" TEXT="mvn --batch-mode release:prepare release:perform -s resources/settings.xml">
+<node CREATED="1654193841093" ID="Freemind_Link_320046772" MODIFIED="1654193861771" TEXT="Exemplo de como gerar o release em um pipeline"/>
+<node CREATED="1654193864316" ID="Freemind_Link_1161943049" MODIFIED="1654193897831" TEXT="O --batch-mode far&#xe1; o maven assumir as resposta padr&#xe3;o&#xa;que o plugin questiona o usu&#xe1;rio ao ser executado"/>
+<node CREATED="1654194886780" ID="Freemind_Link_1779783237" MODIFIED="1654195550263" TEXT="No caso de usar este comando em um pipeline, certifique-se de que a mensagem de commit do plugin tenha o termo &apos;[skip ci]&apos; para que o pipeline n&#xe3;o seja executado novamente por conta desse commit do plugin. Caso contr&#xe1;rio o pipeline entrar&#xe1; em loop.">
+<arrowlink COLOR="#f60e08" DESTINATION="Freemind_Link_1545259525" ENDARROW="Default" ENDINCLINATION="327;-29;" ID="Freemind_Arrow_Link_691677539" STARTARROW="None" STARTINCLINATION="327;-29;"/>
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
 </node>
 </node>
 <node COLOR="#0000ff" CREATED="1654097464557" ID="Freemind_Link_198692849" MODIFIED="1654097699579" TEXT="scm">
