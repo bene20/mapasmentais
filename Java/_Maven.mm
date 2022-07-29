@@ -540,7 +540,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1586963818695" FOLDED="true" ID="Freemind_Link_204344341" MODIFIED="1636743379448" POSITION="right" TEXT="POM">
+<node CREATED="1586963818695" ID="Freemind_Link_204344341" MODIFIED="1636743379448" POSITION="right" TEXT="POM">
 <node CREATED="1636743384294" ID="Freemind_Link_680633735" MODIFIED="1636743391089" TEXT="Project Object Model"/>
 <node CREATED="1636743380270" ID="Freemind_Link_1235427665" MODIFIED="1636743383504" TEXT="Arquivo pom.xml">
 <node CREATED="1636743399805" ID="Freemind_Link_456615519" MODIFIED="1636743415706" TEXT="Precisa estar em conformidade com o maven-4.0.0.xsd"/>
@@ -605,7 +605,7 @@
 <node CREATED="1636743912976" ID="Freemind_Link_132533147" MODIFIED="1636743925017" TEXT="&#xc9; um artefato Maven do qual o seu projeto depende">
 <node CREATED="1636743895040" ID="Freemind_Link_1260511707" MODIFIED="1636743905155" TEXT="Tipicamente um jar ou um pom"/>
 </node>
-<node CREATED="1636743952285" ID="Freemind_Link_1874945743" MODIFIED="1636743955698" TEXT="Pode ser transitiva">
+<node CREATED="1636743952285" ID="Freemind_Link_1874945743" MODIFIED="1659093591352" TEXT="Pode ser transitiva">
 <node CREATED="1636743961070" ID="Freemind_Link_1679017227" MODIFIED="1636743992973" TEXT="A depende de B, B depende de C, C depende de D etc.">
 <icon BUILTIN="button_ok"/>
 </node>
@@ -648,12 +648,12 @@
 <node CREATED="1636744536821" ID="Freemind_Link_226168185" MODIFIED="1636744538441" TEXT="System">
 <node CREATED="1636744676504" ID="Freemind_Link_1982053402" MODIFIED="1636744697122" TEXT="Similar a provided, mas o JAR &#xe9; adicionado ao sistema explicitamente (via file path)"/>
 <node CREATED="1636746800252" ID="Freemind_Link_164116136" MODIFIED="1636746800995" TEXT="Ex:">
-<node CREATED="1636746837300" ID="Freemind_Link_1364282862" MODIFIED="1636746875030" TEXT="Adi&#xe7;&#xe3;o de um jar j&#xe1; baixado, na pasta local, como depend&#xea;ncia do projeto"/>
+<node CREATED="1636746837300" ID="Freemind_Link_1364282862" MODIFIED="1659094180448" TEXT="Adi&#xe7;&#xe3;o de um jar j&#xe1; baixado, na pasta local, como depend&#xea;ncia do projeto"/>
 <node CREATED="1586963827010" ID="Freemind_Link_206224391" MODIFIED="1586963830814" TEXT="External jar">
 <node CREATED="1586963832307" ID="Freemind_Link_981074342" MODIFIED="1586963838008" TEXT="Adicionar tag dependency"/>
 <node CREATED="1575574199634" ID="Freemind_Link_1537366830" MODIFIED="1636746826791" TEXT="pom.xml">
 <node CREATED="1586963913868" ID="Freemind_Link_704721231" MODIFIED="1586963938145" TEXT="Considerando um arquivo .jar colocado manualmente na pasta lib"/>
-<node COLOR="#ff00ff" CREATED="1575574227257" ID="Freemind_Link_1305678966" MODIFIED="1586963899983" TEXT="&lt;dependency&gt;&#xa;    &lt;groupId&gt;csjt-signer-applet&lt;/groupId&gt;&#xa;    &lt;artifactId&gt;csjt-signer-applet&lt;/artifactId&gt;&#xa;    &lt;version&gt;1.0.11&lt;/version&gt;&#xa;    &lt;scope&gt;system&lt;/scope&gt;&#xa;    &lt;systemPath&gt;${basedir}/lib/csjt-signer-applet-1.0.11.jar&lt;/systemPath&gt;&#xa;&lt;/dependency&gt;"/>
+<node COLOR="#0000ff" CREATED="1575574227257" ID="Freemind_Link_1305678966" MODIFIED="1659094192098" TEXT="&lt;dependency&gt;&#xa;    &lt;groupId&gt;csjt-signer-applet&lt;/groupId&gt;&#xa;    &lt;artifactId&gt;csjt-signer-applet&lt;/artifactId&gt;&#xa;    &lt;version&gt;1.0.11&lt;/version&gt;&#xa;    &lt;scope&gt;system&lt;/scope&gt;&#xa;    &lt;systemPath&gt;${basedir}/lib/csjt-signer-applet-1.0.11.jar&lt;/systemPath&gt;&#xa;&lt;/dependency&gt;"/>
 </node>
 </node>
 </node>
@@ -682,6 +682,23 @@
 </node>
 </node>
 </node>
+<node CREATED="1659093426014" ID="Freemind_Link_701362244" MODIFIED="1659093430080" TEXT="Conflito de depend&#xea;ncia">
+<node CREATED="1659093430644" ID="Freemind_Link_1763857505" MODIFIED="1659093447269" TEXT="Pode ser resolvido via tag &apos;exclusions&apos;"/>
+<node CREATED="1659093455913" ID="Freemind_Link_299145132" MODIFIED="1659093502810" TEXT="Cen&#xe1;rio:">
+<node CREATED="1659093455913" ID="Freemind_Link_282013333" MODIFIED="1659093491365" TEXT="Cen&#xe1;rio: voc&#xea; depende do junit vers&#xe3;o 5 mas tamb&#xe9;m tem depend&#xea;ncia do spring-boot que depende transitivamente do junit vers&#xe3;o 4"/>
+<node CREATED="1659093506673" ID="Freemind_Link_1894735423" MODIFIED="1659093521701" TEXT="Nesse caso haver&#xe1; um conflito quando voc&#xea; declarar a depend&#xea;ncia do junit vers&#xe3;o 5"/>
+<node CREATED="1659093523653" ID="Freemind_Link_437635160" MODIFIED="1659093569926" TEXT="Solu&#xe7;&#xe3;o: Na depend&#xea;ncia do spring-boot, use a tag &apos;exclusions&apos; para informar que a depend&#xea;ncia transitiva dele ao junit 4 n&#xe3;o deve ser inclu&#xed;da">
+<node CREATED="1659093570876" ID="Freemind_Link_1340667207" MODIFIED="1659093591353" TEXT="Lembre-se que, por default, o maven baixa todas as depend&#xea;ncias transitivas">
+<arrowlink DESTINATION="Freemind_Link_1874945743" ENDARROW="Default" ENDINCLINATION="1425;0;" ID="Freemind_Arrow_Link_1490551865" STARTARROW="None" STARTINCLINATION="1425;0;"/>
+</node>
+</node>
+</node>
+<node CREATED="1659093597622" ID="Freemind_Link_371038399" MODIFIED="1659093599438" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1575574227257" ID="Freemind_Link_1707217184" MODIFIED="1659094200893" TEXT="&lt;dependency&gt;&#xa;    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#xa;    &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;&#xa;    &lt;scope&gt;test&lt;/scope&gt;&#xa;    &lt;exclusions&gt;&#xa;      &lt;exclusion&gt;&#xa;        &lt;groupId&gt;junit&lt;/groupId&gt;&#xa;        &lt;artifactId&gt;junit&lt;/artifactId&gt;&#xa;      &lt;exclusion&gt;&#xa;    &lt;exclusions&gt;&#xa;&lt;/dependency&gt;">
+<node CREATED="1659093695116" ID="Freemind_Link_689180261" MODIFIED="1659093746180" TEXT="Aqui eu informo que o junit 4, que &#xe9; depend&#xea;ncia transitiva do spring-boot (no escopo de teste), n&#xe3;o deve ser baixado pelo maven"/>
+</node>
+</node>
+</node>
 </node>
 <node CREATED="1639064752636" ID="Freemind_Link_677220966" MODIFIED="1639064755760" TEXT="Relat&#xf3;rios">
 <node CREATED="1639064756469" ID="Freemind_Link_962057834" MODIFIED="1639064762720" TEXT="Tag &apos;reporting&apos;"/>
@@ -705,12 +722,21 @@
 <node CREATED="1642532162239" ID="Freemind_Link_685236191" MODIFIED="1642532252322" TEXT="Depend&#xea;ncias declarada na se&#xe7;&#xe3;o dependencies SE TORNAM depend&#xea;ncias transitivas do artefato">
 <node CREATED="1642532279495" ID="Freemind_Link_1676689158" MODIFIED="1642532296762" TEXT="Elas herdam os atributos da se&#xe7;&#xe3;o dependencyManagement, como version"/>
 </node>
-<node CREATED="1642532573373" ID="Freemind_Link_1603134728" MODIFIED="1642532708257" TEXT="Geralmente declarado na se&#xe7;&#xe3;o &#xa;dependencyManagement do POM do projeto pai">
+<node CREATED="1659094242076" ID="Freemind_Link_1934286518" MODIFIED="1659094245813" TEXT="POM do projeto pai">
+<node CREATED="1642532573373" ID="Freemind_Link_1603134728" MODIFIED="1659094613120" TEXT="Geralmente declara a se&#xe7;&#xe3;o &#xa;dependencyManagement">
 <node CREATED="1642532596165" ID="Freemind_Link_91511503" MODIFIED="1642532608273" TEXT="Tamb&#xe9;m pode ser definido em um POM ancestral remoto">
 <node CREATED="1642532608656" ID="Freemind_Link_891103172" MODIFIED="1642532616882" TEXT="Esta &#xe9; a abordagem usada pelo Spring Boot"/>
 </node>
 <node CREATED="1642532620397" ID="Freemind_Link_1841115799" MODIFIED="1642532716713" TEXT="Tamb&#xe9;m pode ser definido como um POM isolado e &#xa;ent&#xe3;o importado na se&#xe7;&#xe3;o dependencyManagement">
 <node CREATED="1642532670412" ID="Freemind_Link_490897174" MODIFIED="1642532696881" TEXT="Esta &#xe9; a abordagem usada pelo Spring Cloud"/>
+</node>
+</node>
+</node>
+<node CREATED="1659094253933" ID="Freemind_Link_1470914738" MODIFIED="1659094257824" TEXT="POM do projeto filho">
+<node CREATED="1659094260161" ID="Freemind_Link_111463274" MODIFIED="1659094295355" TEXT="Precisa declarar a se&#xe7;&#xe3;o &apos;parent&apos; informando&#xa;de qual POM ele herda as informa&#xe7;&#xf5;es">
+<node CREATED="1659093597622" ID="Freemind_Link_704388234" MODIFIED="1659093599438" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1575574227257" ID="Freemind_Link_1099467661" MODIFIED="1659094406630" TEXT="&lt;parent&gt;&#xa;    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&#xa;    &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;&#xa;    &lt;version&gt;2.1.5&lt;/version&gt;&#xa;    &lt;relativePath /&gt; &lt;!-- vai obter o parent do reposit&#xf3;rio--&gt;&#xa;&lt;/parent&gt;"/>
+</node>
 </node>
 </node>
 </node>
@@ -775,10 +801,14 @@
 <node CREATED="1638472158320" ID="Freemind_Link_1976183419" MODIFIED="1638472161451" TEXT="Use: pluginRepository"/>
 <node CREATED="1638472166896" ID="Freemind_Link_1018997388" MODIFIED="1638472175447" TEXT="pluginRepository &#xe9; semelhante &#xe0; tag repository"/>
 </node>
-<node CREATED="1637008865601" FOLDED="true" ID="Freemind_Link_1609400078" MODIFIED="1637009939902" TEXT="Build Lifecycle">
-<node CREATED="1637009946050" ID="Freemind_Link_149145873" MODIFIED="1637009947894" TEXT="clean">
+<node CREATED="1637008865601" ID="Freemind_Link_1609400078" MODIFIED="1637009939902" TEXT="Build Lifecycle">
+<node CREATED="1637009946050" FOLDED="true" ID="Freemind_Link_149145873" MODIFIED="1637009947894" TEXT="clean">
 <node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_1373832113" MODIFIED="1637008890821" TEXT="clean">
-<node CREATED="1637008913641" ID="Freemind_Link_217045423" MODIFIED="1637008927750" TEXT="Criado para remover os arquivos gerados durante o build do projeto"/>
+<node CREATED="1637008913641" ID="Freemind_Link_217045423" MODIFIED="1637008927750" TEXT="Criado para remover os arquivos gerados durante o build do projeto">
+<node CREATED="1659094816976" ID="Freemind_Link_141662616" MODIFIED="1659094845721" TEXT="&#xc9; uma boa configura&#xe7;&#xe3;o a se ter no seu projeto maven">
+<icon BUILTIN="idea"/>
+</node>
+</node>
 <node CREATED="1575575372600" ID="Freemind_Link_417663243" MODIFIED="1575575374443" TEXT="Goals">
 <node COLOR="#0033ff" CREATED="1575575376091" ID="Freemind_Link_407353658" MODIFIED="1637008894917" TEXT="clean">
 <node CREATED="1575575378349" ID="Freemind_Link_235790967" MODIFIED="1637008904310" TEXT="Remove todos os arquivos de build gerados pelo maven"/>
@@ -795,7 +825,7 @@
 </node>
 </node>
 <node CREATED="1637009962419" ID="Freemind_Link_1587726804" MODIFIED="1637009963783" TEXT="default">
-<node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_322712863" MODIFIED="1638896985875" TEXT="compile">
+<node COLOR="#0033ff" CREATED="1575575354164" FOLDED="true" ID="Freemind_Link_322712863" MODIFIED="1638896985875" TEXT="compile">
 <node CREATED="1637008913641" ID="Freemind_Link_1974082563" MODIFIED="1637009248202" TEXT="Criado para gerar os .class do projeto">
 <node CREATED="1637009072424" ID="Freemind_Link_1595680247" MODIFIED="1637009088124" TEXT="Por padr&#xe3;o usa o compilador javax.tools.javaCompiler"/>
 <node CREATED="1637009058136" ID="Freemind_Link_330280660" MODIFIED="1637009071900" TEXT="Pode ser configurado para usar o javac se necess&#xe1;rio"/>
@@ -820,7 +850,12 @@
 <node CREATED="1638468353608" ID="Freemind_Link_829726833" MODIFIED="1638468375878" TEXT="&#xda;til para converter Entidades JPA para DTO e vice versa"/>
 <node CREATED="1638468378965" ID="Freemind_Link_1337027327" MODIFIED="1638468383552" TEXT="Usa anota&#xe7;&#xf5;es na interface"/>
 <node CREATED="1638468387420" ID="Freemind_Link_1723000541" MODIFIED="1638468422511" TEXT="Para processar as anota&#xe7;&#xf5;es, deve-se&#xa;declarar na configura&#xe7;&#xe3;o do plugin compile">
-<node COLOR="#0000ff" CREATED="1638468430349" ID="Freemind_Link_484649894" MODIFIED="1638468498258" TEXT="        &lt;plugin&gt;&#xa;            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;&#xa;            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;&#xa;            &lt;version&gt;3.8.1&lt;/version&gt;&#xa;            &lt;configuration&gt;&#xa;                &lt;source&gt;1.8&lt;/source&gt; &lt;!-- depending on your project --&gt;&#xa;                &lt;target&gt;1.8&lt;/target&gt; &lt;!-- depending on your project --&gt;&#xa;                &lt;annotationProcessorPaths&gt;&#xa;                    &lt;path&gt;&#xa;                        &lt;groupId&gt;org.mapstruct&lt;/groupId&gt;&#xa;                        &lt;artifactId&gt;mapstruct-processor&lt;/artifactId&gt;&#xa;                        &lt;version&gt;${org.mapstruct.version}&lt;/version&gt;&#xa;                    &lt;/path&gt;&#xa;                    &lt;!-- other annotation processors --&gt;&#xa;                &lt;/annotationProcessorPaths&gt;&#xa;            &lt;/configuration&gt;&#xa;        &lt;/plugin&gt;"/>
+<node COLOR="#0000ff" CREATED="1638468430349" ID="Freemind_Link_484649894" MODIFIED="1638468498258" TEXT="        &lt;plugin&gt;&#xa;            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;&#xa;            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;&#xa;            &lt;version&gt;3.8.1&lt;/version&gt;&#xa;            &lt;configuration&gt;&#xa;                &lt;source&gt;1.8&lt;/source&gt; &lt;!-- depending on your project --&gt;&#xa;                &lt;target&gt;1.8&lt;/target&gt; &lt;!-- depending on your project --&gt;&#xa;                &lt;annotationProcessorPaths&gt;&#xa;                    &lt;path&gt;&#xa;                        &lt;groupId&gt;org.mapstruct&lt;/groupId&gt;&#xa;                        &lt;artifactId&gt;mapstruct-processor&lt;/artifactId&gt;&#xa;                        &lt;version&gt;${org.mapstruct.version}&lt;/version&gt;&#xa;                    &lt;/path&gt;&#xa;                    &lt;!-- other annotation processors --&gt;&#xa;                &lt;/annotationProcessorPaths&gt;&#xa;            &lt;/configuration&gt;&#xa;        &lt;/plugin&gt;">
+<node CREATED="1659094989680" ID="Freemind_Link_1514545642" MODIFIED="1659095005867" TEXT="Exemplo para processar as annotations do mapsctruct"/>
+</node>
+<node COLOR="#0000ff" CREATED="1638468430349" ID="Freemind_Link_1159423513" MODIFIED="1659094974838" TEXT="        &lt;plugin&gt;&#xa;            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;&#xa;            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;&#xa;            &lt;version&gt;3.8.1&lt;/version&gt;&#xa;            &lt;configuration&gt;&#xa;                &lt;annotationProcessorPaths&gt;&#xa;                    &lt;path&gt;&#xa;                        &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;&#xa;                        &lt;artifactId&gt;lombok&lt;/artifactId&gt;&#xa;                        &lt;version&gt;${lombokt.version}&lt;/version&gt;&#xa;                    &lt;/path&gt;&#xa;                &lt;/annotationProcessorPaths&gt;&#xa;            &lt;/configuration&gt;&#xa;        &lt;/plugin&gt;">
+<node CREATED="1659094989680" ID="Freemind_Link_1887782423" MODIFIED="1659095012083" TEXT="Exemplo para processar as annotations do lombok"/>
+</node>
 </node>
 </node>
 </node>
@@ -1097,7 +1132,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1575574185200" ID="Freemind_Link_666995145" MODIFIED="1654095046308" TEXT="release">
+<node COLOR="#0033ff" CREATED="1575574185200" FOLDED="true" ID="Freemind_Link_666995145" MODIFIED="1654095046308" TEXT="release">
 <node CREATED="1575574188001" ID="Freemind_Link_575473659" MODIFIED="1654095078078" TEXT="Focado em gerar releases do projeto">
 <node CREATED="1654095691050" ID="Freemind_Link_1820030185" MODIFIED="1654095843748" TEXT="Este plugin prepara o release, faz todos os testes, altera a vers&#xe3;o no pom.xml, faz commit disso e gera uma TAG no git. Depois, na fase seguinte ele faz checkout do c&#xf3;digo para a vers&#xe3;o da TAG criada, faz o deploy da aplica&#xe7;&#xe3;o, gera o site e depois devolve o c&#xf3;digo para a vers&#xe3;o de desenvolvimento fazendo checkout da master"/>
 </node>
@@ -1232,7 +1267,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1654097464557" ID="Freemind_Link_198692849" MODIFIED="1654097699579" TEXT="scm">
+<node COLOR="#0000ff" CREATED="1654097464557" FOLDED="true" ID="Freemind_Link_198692849" MODIFIED="1654097699579" TEXT="scm">
 <node CREATED="1654097488241" ID="Freemind_Link_816137288" MODIFIED="1654097519826" TEXT="Plugin de integra&#xe7;&#xe3;o do Maven com o SCM(sistema de controle de vers&#xe3;o) usado pelo projeto"/>
 <node CREATED="1654097526923" ID="Freemind_Link_1059917830" MODIFIED="1654097567083" TEXT="Configurado na se&#xe7;&#xe3;o SCM do POM:">
 <node CREATED="1654097614344" ID="Freemind_Link_843693479" MODIFIED="1654097784520" TEXT="As URL&apos;s s&#xe3;o prefixadas com &apos;scm:[scm-provider]:[SCM URL]&apos;">
@@ -1279,7 +1314,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1637006273491" FOLDED="true" ID="Freemind_Link_1775645039" MODIFIED="1637006275560" TEXT="Externos">
+<node CREATED="1637006273491" ID="Freemind_Link_1775645039" MODIFIED="1637006275560" TEXT="Externos">
 <node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_1016835403" MODIFIED="1637006226467" TEXT="wraper">
 <node CREATED="1637006327708" ID="Freemind_Link_682081669" MODIFIED="1637006354048" TEXT="Encapsula um projeto Maven, criando um script que permite que o build do projeto seja gerado usado o Maven em uma m&#xe1;quina que n&#xe3;o tenha o maven instalado"/>
 <node CREATED="1637006283263" ID="Freemind_Link_1500638049" MODIFIED="1637006284537" TEXT="Ex:">
@@ -1380,6 +1415,28 @@
 <node CREATED="1642530204849" ID="Freemind_Link_1809291327" MODIFIED="1642530205582" TEXT="https://maven.apache.org/enforcer/maven-enforcer-plugin/"/>
 <node CREATED="1642530210544" ID="Freemind_Link_1092182780" MODIFIED="1642530211396" TEXT="https://maven.apache.org/enforcer/maven-enforcer-plugin/usage.html"/>
 <node CREATED="1642530662396" ID="Freemind_Link_1278923953" MODIFIED="1642530663031" TEXT="https://maven.apache.org/enforcer/enforcer-rules/versionRanges.html"/>
+</node>
+<node CREATED="1659098560672" ID="Freemind_Link_358967974" MODIFIED="1659098745525" TEXT="Recomendados">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1659098565012" ID="Freemind_Link_409165550" MODIFIED="1659098614510" TEXT="N&#xe3;o aceitar builds quando houver &#xa;depend&#xea;ncias cuja vers&#xe3;o seja snapshot">
+<node CREATED="1659098752451" ID="Freemind_Link_289747685" MODIFIED="1659098765870" TEXT="&#xc9; uma p&#xe9;ssima pr&#xe1;tica usar depend&#xea;ncias em vers&#xe3;o snapshot">
+<node CREATED="1659098784971" ID="Freemind_Link_1556530823" MODIFIED="1659098798503" TEXT="Principalmente aplica&#xe7;&#xf5;es corporativas e em ambiente de produ&#xe7;&#xe3;o"/>
+</node>
+<node COLOR="#0000ff" CREATED="1642517966450" ID="Freemind_Link_1132080778" MODIFIED="1659098707880" TEXT="&lt;requireReleaseDeps&gt;&#xa;    &lt;onlyWhenRelease&gt;true&lt;/onlyWhenRelease&gt;&#xa;    &lt;message&gt;O build de um release n&#xe3;o pode ter depend&#xea;ncias que estejam na vrs&#xe3;o snapshot&lt;/message&gt;&#xa;&lt;/requireReleaseDeps&gt;&#xa;">
+<node CREATED="1659095497247" ID="Freemind_Link_963878832" MODIFIED="1659098741170" TEXT="Neste exemplo o build falhar&#xe1; caso alguma das depend&#xea;ncias &#xa;declaradas do projeto estejam na vers&#xe3;o snapshot"/>
+</node>
+</node>
+</node>
+<node CREATED="1642530204849" ID="Freemind_Link_1076745804" MODIFIED="1643243744961" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1642517966450" ID="Freemind_Link_49953695" MODIFIED="1659098400664" TEXT="  &lt;plugin&gt;&#xa;    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;&#xa;    &lt;artifactId&gt;maven-enforcer-plugin&lt;/artifactId&gt;&#xa;    &lt;executions&gt;&#xa;        &lt;execution&gt;&#xa;            &lt;id&gt;enforce-versions&lt;/id&gt;&#xa;            &lt;goals&gt;&#xa;                &lt;goal&gt;enforce&lt;/goal&gt;&#xa;            &lt;/goals&gt;&#xa;            &lt;configuration&gt;&#xa;                &lt;rules&gt;&#xa;                    &lt;requireMavenVersion&gt;&#xa;                        &lt;version&gt;[3.6.0,)&lt;/version&gt;&#xa;                    &lt;/requireMavenVersion&gt;&#xa;                    &lt;requireJavaVersion&gt;&#xa;                        &lt;version&gt;11&lt;/version&gt;&#xa;                    &lt;/requireJavaVersion&gt;&#xa;                &lt;/rules&gt;&#xa;            &lt;/configuration&gt;&#xa;        &lt;/execution&gt;&#xa;    &lt;/executions&gt;&#xa;  &lt;/plugin&gt;">
+<node CREATED="1659095497247" ID="Freemind_Link_1984703648" MODIFIED="1659098351835" TEXT="Neste exemplo o build falhar&#xe1; caso se use&#xa;o maven em uma vers&#xe3;o anteriore &#xe0; 3.6.0">
+<node CREATED="1659095497247" ID="Freemind_Link_1285527641" MODIFIED="1659098360339" TEXT="Caso eu quisesse explicitamente a vers&#xe3;o&#xa;3.6.0, n&#xe3;o deveria usar &apos;3.6.0&apos; em vez de &apos;[3.6.0,)&apos;"/>
+</node>
+<node CREATED="1659095497247" ID="Freemind_Link_1056491815" MODIFIED="1659098441052" TEXT="Neste exemplo o build falhar&#xe1; caso n&#xe3;o&#xa;se use o java na vers&#xe3;o 11 para a compila&#xe7;&#xe3;o">
+<node CREATED="1659098829100" ID="Freemind_Link_604210166" MODIFIED="1659098841294" TEXT="Usar Java 12 far&#xe1; o build falhar"/>
+<node CREATED="1659098829100" ID="Freemind_Link_1058442729" MODIFIED="1659098849663" TEXT="Usar Java 10 far&#xe1; o build falhar"/>
+</node>
+</node>
 </node>
 </node>
 <node COLOR="#0033ff" CREATED="1575575354164" ID="Freemind_Link_1867162085" MODIFIED="1643243950880" TEXT="git-commit-id-plugin">

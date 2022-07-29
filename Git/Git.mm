@@ -1,7 +1,7 @@
 <map version="0.8.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1553000049733" ID="Freemind_Link_683934292" LINK="../Mapas.mm" MODIFIED="1553774808576" TEXT="Git">
-<node CREATED="1553000786261" ID="Freemind_Link_1938373102" MODIFIED="1587911575833" POSITION="right" TEXT="Configura&#xe7;&#xe3;o">
+<node CREATED="1553000786261" FOLDED="true" ID="Freemind_Link_1938373102" MODIFIED="1587911575833" POSITION="right" TEXT="Configura&#xe7;&#xe3;o">
 <node CREATED="1587911443049" ID="Freemind_Link_1059939909" MODIFIED="1587911453210" TEXT="Estrutura de &#xa;configura&#xe7;&#xe3;o do Git">
 <node CREATED="1587911456291" ID="Freemind_Link_1246184340" MODIFIED="1587911512140" TEXT="&#xc9; hier&#xe1;rquica"/>
 <node CREATED="1587911460801" ID="Freemind_Link_504979270" MODIFIED="1587911518553" TEXT="Local (Repository)">
@@ -955,7 +955,7 @@
 <node CREATED="1554818697123" ID="Freemind_Link_1943799486" MODIFIED="1554818701463" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/Reset.png&quot;&gt;"/>
 </node>
 </node>
-<node CREATED="1643932131400" ID="Freemind_Link_1673995076" MODIFIED="1643945186639" POSITION="right" TEXT="Situa&#xe7;&#xf5;es&#xa;peculiares">
+<node CREATED="1643932131400" ID="Freemind_Link_1673995076" MODIFIED="1655932645645" POSITION="right" TEXT="Situa&#xe7;&#xf5;es peculiares /&#xa;troubleshoot">
 <icon BUILTIN="idea"/>
 <node CREATED="1643932136070" FOLDED="true" ID="Freemind_Link_1995554900" MODIFIED="1643932143962" TEXT="Resetar um reposit&#xf3;rio">
 <node CREATED="1643932144519" ID="Freemind_Link_1964665779" MODIFIED="1643932154618" TEXT="Apagando todos os commits mas mantendo a vers&#xe3;o atual do c&#xf3;digo"/>
@@ -989,6 +989,19 @@
 <icon BUILTIN="full-6"/>
 <node CREATED="1643945116117" ID="Freemind_Link_948375227" MODIFIED="1643945137226" TEXT="Finalmente for&#xe7;a a atualiza&#xe7;&#xe3;o da&#xa;branch master no reposit&#xf3;rio remoto"/>
 <node COLOR="#0000ff" CREATED="1643932180405" ID="Freemind_Link_1445254005" MODIFIED="1643945096216" TEXT="git push -f origin master"/>
+</node>
+</node>
+</node>
+<node CREATED="1655932418295" ID="Freemind_Link_586481669" MODIFIED="1655932609917" TEXT="git status em pasta&#xa;compartilhada via Samba">
+<node CREATED="1655932609889" ID="Freemind_Link_378852284" MODIFIED="1655932612146" TEXT="Problema">
+<node CREATED="1655932458932" ID="Freemind_Link_976435906" MODIFIED="1655932496682" TEXT="Quando se compartilha uma pasta de c&#xf3;digo via Samba, o &apos;git status&apos; mostra os arquivos&#xa; como modificados dependendo de onde voc&#xea; o executa (no Linux ou no Windows)"/>
+</node>
+<node CREATED="1655932590598" ID="Freemind_Link_297212282" MODIFIED="1655932609007" TEXT="Solu&#xe7;&#xe3;o">
+<node COLOR="#0000ff" CREATED="1655932437756" ID="Freemind_Link_475575848" MODIFIED="1655932456368" TEXT="git config core.filemode false">
+<node CREATED="1655932511774" ID="Freemind_Link_1705180952" MODIFIED="1655932525449" TEXT="Eliminar&#xe1; o problema explicado acima"/>
+<node CREATED="1655932526893" ID="Freemind_Link_1124277446" MODIFIED="1655932562699" TEXT="Consequ&#xea;ncia: todos os novos arquivos ser&#xe3;o criados com permiss&#xe3;o 644 no git">
+<icon BUILTIN="messagebox_warning"/>
+</node>
 </node>
 </node>
 </node>

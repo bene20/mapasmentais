@@ -608,6 +608,10 @@
 <icon BUILTIN="idea"/>
 </node>
 </node>
+<node CREATED="1658756243057" ID="Freemind_Link_1275068737" MODIFIED="1658756300785" TEXT="Caso estejas usando uma imagem e queira executar o entrypoint dela manualmente, execute &apos;/usr/local/bin/docker-entrypoint&apos;">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1658756304824" ID="Freemind_Link_466010289" MODIFIED="1658756421033" TEXT="Ex: seu Dockerfile se baseia na imagem XPTO e executa um script &apos;startUp.sh&apos; no CMD. Se  no final da execu&#xe7;&#xe3;o do script vc quer executar o que estava no CMD da imagem XPTO (o enrypoint original)."/>
+</node>
 <node COLOR="#0000ff" CREATED="1563994459391" ID="Freemind_Link_407896168" MODIFIED="1563998853679" TEXT="Ex: ENTRYPOINT npm start">
 <icon BUILTIN="idea"/>
 </node>
