@@ -955,7 +955,7 @@
 <node CREATED="1554818697123" ID="Freemind_Link_1943799486" MODIFIED="1554818701463" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/Reset.png&quot;&gt;"/>
 </node>
 </node>
-<node CREATED="1643932131400" ID="Freemind_Link_1673995076" MODIFIED="1655932645645" POSITION="right" TEXT="Situa&#xe7;&#xf5;es peculiares /&#xa;troubleshoot">
+<node CREATED="1643932131400" FOLDED="true" ID="Freemind_Link_1673995076" MODIFIED="1655932645645" POSITION="right" TEXT="Situa&#xe7;&#xf5;es peculiares /&#xa;troubleshoot">
 <icon BUILTIN="idea"/>
 <node CREATED="1643932136070" FOLDED="true" ID="Freemind_Link_1995554900" MODIFIED="1643932143962" TEXT="Resetar um reposit&#xf3;rio">
 <node CREATED="1643932144519" ID="Freemind_Link_1964665779" MODIFIED="1643932154618" TEXT="Apagando todos os commits mas mantendo a vers&#xe3;o atual do c&#xf3;digo"/>

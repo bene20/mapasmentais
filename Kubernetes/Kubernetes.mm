@@ -1232,7 +1232,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1591997555354" FOLDED="true" ID="Freemind_Link_1121402737" MODIFIED="1591997566014" POSITION="right" TEXT="Ferramentas">
+<node CREATED="1591997555354" ID="Freemind_Link_1121402737" MODIFIED="1591997566014" POSITION="right" TEXT="Ferramentas">
 <node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_1270117106" MODIFIED="1597409834931" TEXT="kubeadm">
 <node CREATED="1597409873583" ID="Freemind_Link_1028947641" MODIFIED="1597409888010" TEXT="Ferramenta de administra&#xe7;&#xe3;o do cluster (instala&#xe7;&#xe3;o e configura&#xe7;&#xe3;o)"/>
 <node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_588434013" MODIFIED="1597409845241" TEXT="upgrade">
@@ -1241,7 +1241,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1591997283387" ID="Freemind_Link_461602891" MODIFIED="1598276866576" TEXT="kubectl">
+<node COLOR="#0000ff" CREATED="1591997283387" FOLDED="true" ID="Freemind_Link_461602891" MODIFIED="1598276866576" TEXT="kubectl">
 <node CREATED="1592317124854" ID="Freemind_Link_1986325000" MODIFIED="1592317142693" TEXT="&#xc9; uma interface de linha de comandos para gerenciar k8s"/>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1145737261" MODIFIED="1591997526134" TEXT="version">
 <node CREATED="1591997501435" ID="Freemind_Link_885210971" MODIFIED="1591997537374" TEXT="Exibe a vers&#xe3;o do kubectl instalada"/>
@@ -2435,7 +2435,7 @@
 </node>
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_692137565" MODIFIED="1593785438824" TEXT="spec">
 <node CREATED="1593785451598" ID="Freemind_Link_749494706" MODIFIED="1593785458727" TEXT="Define as especifica&#xe7;&#xf5;es do Pod"/>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1172709011" MODIFIED="1593785445680" TEXT="containers">
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_1172709011" MODIFIED="1593785445680" TEXT="containers">
 <node CREATED="1593785460534" ID="Freemind_Link_102134197" MODIFIED="1593785465401" TEXT="Lista dos containers do Pod"/>
 <node CREATED="1593790854670" ID="Freemind_Link_287114057" MODIFIED="1593790859711" TEXT="Uso em">
 <node CREATED="1593791003028" ID="Freemind_Link_695080169" LINK="#Freemind_Link_1544273506" MODIFIED="1593791026678" TEXT="Deployment"/>
@@ -2937,7 +2937,7 @@
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_573527381" MODIFIED="1599772639260" TEXT="...&#xa;spec:&#xa;  containers:&#xa;    - image: test-webserver&#xa;      volumeMounts:&#xa;        - mountPath: /test-pd&#xa;          name: test-volume&#xa;  volumes:&#xa;    - name: test-volume&#xa;      hostPath:&#xa;        path: /data&#xa;        type: Directory"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1597272709128" ID="Freemind_Link_545629209" MODIFIED="1597272721689" TEXT="initContainers">
+<node COLOR="#ff00ff" CREATED="1597272709128" FOLDED="true" ID="Freemind_Link_545629209" MODIFIED="1597272721689" TEXT="initContainers">
 <node CREATED="1597272724031" ID="Freemind_Link_37702925" MODIFIED="1597272781097" TEXT="Usado em casos em que se quer executar um container que faz uma tarefa espec&#xed;fica e que n&#xe3;o precisa ficar rodando para sempre"/>
 <node CREATED="1597272782093" ID="Freemind_Link_406340228" MODIFIED="1597272807588" TEXT="Usado para criar containers tempor&#xe1;rios que fazem atividades pontuais de apoio ao container principal"/>
 <node CREATED="1597272815007" ID="Freemind_Link_1496403376" MODIFIED="1597272857388" TEXT="Toda a configura&#xe7;&#xe3;o &#xe9; semelhante &#xe0; configura&#xe7;&#xe3;o da se&#xe7;&#xe3;o &apos;containers&apos; (acima)"/>
@@ -2949,7 +2949,7 @@
 <node COLOR="#ff00ff" CREATED="1592315259357" ID="Freemind_Link_1328955710" MODIFIED="1597273009360" TEXT="...&#xa;spec:&#xa;  containers:&#xa;  - name: myapp-container&#xa;    image: busybox:1.28&#xa;    command: [&apos;sh&apos;, &apos;-c&apos;, &apos;echo The app is running! &amp;&amp; sleep 3600&apos;]&#xa;  initContainers:&#xa;  - name: init-myservice&#xa;    image: busybox:1.28&#xa;    command: [&apos;sh&apos;, &apos;-c&apos;, &apos;until nslookup myservice; do echo waiting for myservice; sleep 2; done;&apos;]&#xa;  - name: init-mydb&#xa;    image: busybox:1.28&#xa;    command: [&apos;sh&apos;, &apos;-c&apos;, &apos;until nslookup mydb; do echo waiting for mydb; sleep 2; done;&apos;]"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_336050288" MODIFIED="1595884388104" TEXT="hostAliases">
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_336050288" MODIFIED="1595884388104" TEXT="hostAliases">
 <node CREATED="1595884413397" ID="Freemind_Link_1386650454" MODIFIED="1595884431174" TEXT="Permite adicionar hosts ao arquivo /etc/hosts do container"/>
 <node CREATED="1595884393584" ID="Freemind_Link_527535554" MODIFIED="1595884394465" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_361562461" MODIFIED="1595884454698" TEXT="...&#xa;spec:&#xa;  hostAliases:&#xa;  - ip: &quot;127.0.0.1&quot;&#xa;    hostnames:&#xa;    - &quot;foo.local&quot;&#xa;    - &quot;bar.local&quot;&#xa;  - ip: &quot;10.1.2.3&quot;&#xa;    hostnames:&#xa;    - &quot;foo.remote&quot;&#xa;    - &quot;bar.remote&quot;">
@@ -2960,14 +2960,14 @@
 </node>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1196258973" MODIFIED="1596030189775" TEXT="nodeName">
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_1196258973" MODIFIED="1596030189775" TEXT="nodeName">
 <node CREATED="1595884413397" ID="Freemind_Link_754328525" MODIFIED="1596031112482" TEXT="For&#xe7;a o Pod a rodar em um n&#xf3; espec&#xed;fico"/>
 <node CREATED="1596031192077" ID="Freemind_Link_1068698440" LINK="#Freemind_Link_824110118" MODIFIED="1596031621540" TEXT="Alternativa: &apos;Binding&apos;"/>
 <node CREATED="1595884393584" ID="Freemind_Link_1287287816" MODIFIED="1595884394465" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1872568259" MODIFIED="1596030243491" TEXT="...&#xa;spec:&#xa;  containers: ...&#xa;  nodeName: node02"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1341733396" MODIFIED="1596203358494" TEXT="dnsPolicy">
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_1341733396" MODIFIED="1596203358494" TEXT="dnsPolicy">
 <node CREATED="1595884413397" ID="Freemind_Link_764016063" MODIFIED="1596203374418" TEXT="Define a pol&#xed;tica de DNS a ser usada"/>
 <node CREATED="1596203866481" ID="Freemind_Link_269925098" MODIFIED="1596203868974" TEXT="Possibilidades">
 <node COLOR="#ff00ff" CREATED="1596203872043" ID="Freemind_Link_161149398" MODIFIED="1596203949141" TEXT="Default">
@@ -2996,7 +2996,7 @@
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_442183114" MODIFIED="1596203985280" TEXT="...&#xa;spec:&#xa;  containers: ...&#xa;  dnsPolicy: &quot;Default&quot;"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_939318344" MODIFIED="1596203405350" TEXT="dnsConfig">
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_939318344" MODIFIED="1596203405350" TEXT="dnsConfig">
 <node CREATED="1595884413397" ID="Freemind_Link_532089958" MODIFIED="1596203420727" TEXT="Define as configura&#xe7;&#xf5;es de DNS espec&#xed;ficas para o Pod"/>
 <node CREATED="1596203791013" ID="Freemind_Link_1708794795" MODIFIED="1596203817648" TEXT="Necess&#xe1;rio quando o valor de &apos;dnsPolicy&apos; for &quot;None&quot;">
 <icon BUILTIN="messagebox_warning"/>
@@ -3023,7 +3023,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_548219744" MODIFIED="1596213936671" TEXT="imagePullSecrets">
+<node COLOR="#ff00ff" CREATED="1593785430156" FOLDED="true" ID="Freemind_Link_548219744" MODIFIED="1596213936671" TEXT="imagePullSecrets">
 <node CREATED="1595884413397" ID="Freemind_Link_670921187" MODIFIED="1596213785631" TEXT="Indica qual secret cont&#xe9;m as credenciais para o &apos;docker login&apos;"/>
 <node CREATED="1596213786134" ID="Freemind_Link_542729878" MODIFIED="1596213797147" TEXT="Requerido quando se usa um registry privado"/>
 <node CREATED="1596213821909" ID="Freemind_Link_533754058" MODIFIED="1596213828047" TEXT="Cria&#xe7;&#xe3;o do secret:">
@@ -3033,7 +3033,7 @@
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1139097285" MODIFIED="1596213818587" TEXT="...&#xa;spec:&#xa;  containers: ...&#xa;  imagePullSecrets:&#xa;    - name: regcred"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1596641733042" ID="Freemind_Link_1615171536" MODIFIED="1596641741551" TEXT="schedulerName">
+<node COLOR="#ff00ff" CREATED="1596641733042" FOLDED="true" ID="Freemind_Link_1615171536" MODIFIED="1596641741551" TEXT="schedulerName">
 <node CREATED="1596641743396" ID="Freemind_Link_176333411" MODIFIED="1596641753831" TEXT="Indica o nome do scheduler, caso n&#xe3;o se queira usar o padr&#xe3;o"/>
 <node CREATED="1596641800572" ID="Freemind_Link_677025905" MODIFIED="1596642085918" TEXT="Para carregar um scheduler personalizado &#xa;&#xe9; necess&#xe1;rio usar configurar o kube-scheduler">
 <node CREATED="1596641839482" ID="Freemind_Link_1293646742" LINK="#Freemind_Link_844029011" MODIFIED="1596641867733" TEXT="Ver anota&#xe7;&#xe3;o acima"/>
@@ -3077,6 +3077,21 @@
 <node CREATED="1596641764356" ID="Freemind_Link_1082690062" MODIFIED="1596641765060" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1674844931" MODIFIED="1599240307991" TEXT="...&#xa;spec:&#xa;  securityContext:&#xa;    runAsUser: 1000&#xa;    capabilities:&#xa;      add: [&quot;MAC_ADMIN&quot;]&#xa;  containers: ..."/>
 <node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_1816724464" MODIFIED="1599240299887" TEXT="...&#xa;spec:&#xa;  containers:&#xa;    - name: ubuntu&#xa;      securityContext:&#xa;        runAsUser: 1000&#xa;        capabilities:&#xa;          add: [&quot;MAC_ADMIN&quot;]"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1596641733042" ID="Freemind_Link_687752675" MODIFIED="1659720532396" TEXT="serviceAccountName">
+<node CREATED="1599240168542" ID="Freemind_Link_1567812140" MODIFIED="1599240171221" TEXT="Usado para">
+<node CREATED="1596641743396" ID="Freemind_Link_539450483" MODIFIED="1659720558468" TEXT="Vincular um POD a um serviceaccount"/>
+</node>
+<node CREATED="1596641764356" ID="Freemind_Link_640316934" MODIFIED="1596641765060" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_270734467" MODIFIED="1659720623888" TEXT="...&#xa;spec:&#xa;  containers:&#xa;    - name: ubuntu&#xa;      image: ubuntu&#xa;  serviceAccountName: nomedoserviceaccount"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1596641733042" ID="Freemind_Link_137170977" MODIFIED="1659721077045" TEXT="automountServiceAccountToken">
+<node CREATED="1659721085033" ID="Freemind_Link_1907992425" MODIFIED="1659721113365" TEXT="Usado para ativar/desativar o mount autom&#xe1;tico do serviceaccount &apos;default&apos; para os PODs que n&#xe3;o tiverem um serviceaccount especificado"/>
+<node CREATED="1599240168542" ID="Freemind_Link_14707396" MODIFIED="1659721083089" TEXT="Padr&#xe3;o &#xe9; &apos;true&apos;"/>
+<node CREATED="1596641764356" ID="Freemind_Link_815254575" MODIFIED="1596641765060" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1593785430156" ID="Freemind_Link_434076639" MODIFIED="1659721133688" TEXT="...&#xa;spec:&#xa;  containers:&#xa;    - name: ubuntu&#xa;      image: ubuntu&#xa;  automountServiceAccountToken: false"/>
 </node>
 </node>
 </node>
@@ -3695,7 +3710,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592316092693" ID="Freemind_Link_1567221451" MODIFIED="1592316095839" TEXT="Service">
+<node CREATED="1592316092693" FOLDED="true" ID="Freemind_Link_1567221451" MODIFIED="1592316095839" TEXT="Service">
 <node CREATED="1592325699922" ID="Freemind_Link_112789781" MODIFIED="1592325714101" TEXT="Objeto k8s que fica exposto ao mundo externo">
 <node CREATED="1658940029659" ID="Freemind_Link_1234852595" MODIFIED="1658940030443" TEXT="https://kubernetes.io/docs/concepts/services-networking/service/"/>
 </node>
@@ -4736,6 +4751,43 @@
 </node>
 </node>
 <node CREATED="1595951529873" FOLDED="true" ID="Freemind_Link_407808227" MODIFIED="1613574834687" TEXT="ServiceAccount">
+<node CREATED="1659702145345" ID="Freemind_Link_729986529" MODIFIED="1659702355972" TEXT="Usado por servi&#xe7;os (aplica&#xe7;&#xf5;es)">
+<node CREATED="1659702159216" ID="Freemind_Link_1589630955" MODIFIED="1659702173742" TEXT="Diferentemente do userAccount que &#xe9; usado por humanos"/>
+<node CREATED="1659702207820" ID="Freemind_Link_78102182" MODIFIED="1659702220494" TEXT="Pode ser usado por uma aplica&#xe7;&#xe3;o para que ela interaja com o cluster kubernetes"/>
+<node CREATED="1659702355943" ID="Freemind_Link_1276088430" MODIFIED="1659702358865" TEXT="Ex:">
+<node CREATED="1659702267473" ID="Freemind_Link_1474302077" MODIFIED="1659702366860" TEXT="O Prometheus usa um serviceaccount para consultar as m&#xe9;tricas do cluster via a API do kubernetes"/>
+<node CREATED="1659702368429" ID="Freemind_Link_1768226402" MODIFIED="1659702391689" TEXT="O Jenkins usa o serviceaccount para fazer deploy de aplica&#xe7;&#xf5;es no cluster kubernetes"/>
+</node>
+<node CREATED="1659720455643" ID="Freemind_Link_980521689" LINK="#Freemind_Link_687752675" MODIFIED="1659720668923" TEXT="Para usar o serviceaccount em um pod, use o campo &apos;serviceAccountName&apos; no manifesto do pod"/>
+</node>
+<node CREATED="1659702591728" ID="Freemind_Link_1681855080" MODIFIED="1659702610367" TEXT="Quando o serviceaccount &#xe9; criado:">
+<node CREATED="1659702473117" ID="Freemind_Link_1466140904" MODIFIED="1659702814384" TEXT="ele gera um token. Esse token deve ser usado pela&#xa;aplica&#xe7;&#xe3;o para se conectar &#xe0; API do kubernetes">
+<icon BUILTIN="full-1"/>
+<node CREATED="1659702505241" ID="Freemind_Link_1144990196" MODIFIED="1659702820274" TEXT="Use &apos;kubectl describe serviceaccount &lt;nome-do-serviceaccount&gt;&apos; &#xa;para consultar o nome do token criado"/>
+</node>
+<node CREATED="1659702635152" ID="Freemind_Link_234194848" MODIFIED="1659703008467" TEXT="Ele cria um objeto &apos;secret&apos; com &#xa;o token mencionado acima">
+<icon BUILTIN="full-2"/>
+<node CREATED="1659702684233" ID="Freemind_Link_948686086" MODIFIED="1659702844560" TEXT="Use &apos;kubectl describe secret &lt;nome-do-token&gt;&apos;&apos; para consultar o secret criado para o serviceaccount e ver, assim, seu token criado"/>
+<node CREATED="1659703289607" ID="Freemind_Link_1214444372" MODIFIED="1659703308348" TEXT="Disponibilizando o token para a aplica&#xe7;&#xe3;o">
+<node CREATED="1659702852514" ID="Freemind_Link_573624591" MODIFIED="1659702886566" TEXT="Esse token pode ser usado como autentica&#xe7;&#xe3;o &apos;bearer token&apos; ao se fazer requisi&#xe7;&#xf5;es para o kubernetes">
+<node CREATED="1659702920440" ID="Freemind_Link_975002220" MODIFIED="1659702923488" TEXT="Ex: ">
+<node COLOR="#0000ff" CREATED="1659702926088" ID="Freemind_Link_1041500559" MODIFIED="1659703001503" TEXT="curl https://&lt;ip-do-kubeapi&gt;:6443/api -insecure --header &quot;Authorization: Bearer &lt;token-do-serviceaccount&gt;"/>
+</node>
+</node>
+<node CREATED="1659703313505" ID="Freemind_Link_1023520562" MODIFIED="1659703345836" TEXT="Se a aplica&#xe7;&#xe3;o j&#xe1; estiver rodando dentro do pr&#xf3;prio cluster, basta montar o secret como um volume para o POD">
+<arrowlink DESTINATION="Freemind_Link_581398308" ENDARROW="Default" ENDINCLINATION="778;0;" ID="Freemind_Arrow_Link_1048178445" STARTARROW="Default" STARTINCLINATION="778;0;"/>
+</node>
+</node>
+<node CREATED="1659703065693" ID="Freemind_Link_1647107854" MODIFIED="1659703100090" TEXT="As permiss&#xf5;es do serviceaccount s&#xe3;o feitas via &apos;roles&apos;"/>
+</node>
+</node>
+<node CREATED="1659703245889" ID="Freemind_Link_581398308" MODIFIED="1659720976006" TEXT="O kubernetes cria automaticamente, para cada &#xa;um dos namespaces existentes, um serviceaccount &#xa;de nome &apos;default&apos;">
+<node CREATED="1659720917159" ID="Freemind_Link_265864587" MODIFIED="1659720982678" TEXT="O serviceaccount &apos;default&apos; ser&#xe1; montado automaticamente &#xa;para todo POD que n&#xe3;o tiver um serviceaccount especificado">
+<node CREATED="1659720983704" ID="Freemind_Link_727306994" LINK="#Freemind_Link_137170977" MODIFIED="1659721148258" TEXT="Para evitar isso use a diretiva &apos;automountServiceAccountToken&apos; &#xa;para false no manifesto do POD"/>
+</node>
+<node CREATED="1659720273213" ID="Freemind_Link_1685885931" MODIFIED="1659720308219" TEXT="O secret default &#xe9; montado no ponto &apos;/var/run/secrets/kubernetes.io/serviceaccount&apos; de cada pod"/>
+<node CREATED="1659720353330" ID="Freemind_Link_654398897" MODIFIED="1659720373301" TEXT="Esse serviceaccount &#xe9; muito restrito. Permite apenas a execu&#xe7;&#xe3;o de queryes b&#xe1;sicas na API do kubernetes"/>
+</node>
 <node CREATED="1595868955278" ID="Freemind_Link_374774445" MODIFIED="1595868961065" TEXT="Linha de comando">
 <node COLOR="#0000ff" CREATED="1595868970683" ID="Freemind_Link_1065740102" MODIFIED="1613575303632" TEXT="kubectl create serviceaccount &lt;nomeconta&gt; --namespace=&lt;namespace&gt;">
 <node CREATED="1595869017286" ID="Freemind_Link_1096107739" MODIFIED="1613575320554" TEXT="Cria um service account no cluster K8s"/>

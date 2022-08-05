@@ -540,7 +540,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1586963818695" ID="Freemind_Link_204344341" MODIFIED="1636743379448" POSITION="right" TEXT="POM">
+<node CREATED="1586963818695" FOLDED="true" ID="Freemind_Link_204344341" MODIFIED="1636743379448" POSITION="right" TEXT="POM">
 <node CREATED="1636743384294" ID="Freemind_Link_680633735" MODIFIED="1636743391089" TEXT="Project Object Model"/>
 <node CREATED="1636743380270" ID="Freemind_Link_1235427665" MODIFIED="1636743383504" TEXT="Arquivo pom.xml">
 <node CREATED="1636743399805" ID="Freemind_Link_456615519" MODIFIED="1636743415706" TEXT="Precisa estar em conformidade com o maven-4.0.0.xsd"/>
@@ -711,7 +711,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1642531386528" FOLDED="true" ID="Freemind_Link_616584117" MODIFIED="1642531389062" POSITION="right" TEXT="BOM">
+<node CREATED="1642531386528" ID="Freemind_Link_616584117" MODIFIED="1642531389062" POSITION="right" TEXT="BOM">
 <node CREATED="1642531389744" ID="Freemind_Link_1790183288" MODIFIED="1642531414004" TEXT="Bill of Material">
 <node CREATED="1642531414873" ID="Freemind_Link_1638386967" MODIFIED="1642531423525" TEXT="Lista de materiais"/>
 </node>
@@ -787,7 +787,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1575574182808" ID="Freemind_Link_1468390236" MODIFIED="1575574184422" POSITION="right" TEXT="Plugins">
+<node CREATED="1575574182808" FOLDED="true" ID="Freemind_Link_1468390236" MODIFIED="1575574184422" POSITION="right" TEXT="Plugins">
 <node CREATED="1575574678611" ID="Freemind_Link_821896362" MODIFIED="1575574683130" TEXT="https://maven.apache.org/plugins/index.html">
 <icon BUILTIN="attach"/>
 </node>
@@ -1519,7 +1519,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1648157304559" ID="Freemind_Link_1733018256" MODIFIED="1648157322818" TEXT="Elementos POM em profiles">
+<node CREATED="1648157304559" FOLDED="true" ID="Freemind_Link_1733018256" MODIFIED="1648157322818" TEXT="Elementos POM em profiles">
 <node CREATED="1648157323904" ID="Freemind_Link_1054320294" MODIFIED="1648157329008" TEXT="repositories"/>
 <node CREATED="1648157330561" ID="Freemind_Link_1343658455" MODIFIED="1648157337443" TEXT="pluginRepositories"/>
 <node CREATED="1648157337935" ID="Freemind_Link_1139797214" MODIFIED="1648157340769" TEXT="dependencies"/>
