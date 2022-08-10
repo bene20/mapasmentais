@@ -1,7 +1,7 @@
 <map version="0.8.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1587588035937" ID="Freemind_Link_179599812" LINK="../Mapas.mm" MODIFIED="1587588110544" TEXT="Kubernetes">
-<node CREATED="1587588278670" ID="_" MODIFIED="1596638881260" POSITION="right" TEXT="Instala&#xe7;&#xe3;o/configura&#xe7;&#xe3;o">
+<node CREATED="1587588278670" FOLDED="true" ID="_" MODIFIED="1596638881260" POSITION="right" TEXT="Instala&#xe7;&#xe3;o/configura&#xe7;&#xe3;o">
 <node CREATED="1587588396290" ID="Freemind_Link_1993121344" MODIFIED="1587588399504" TEXT="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/">
 <icon BUILTIN="attach"/>
 </node>
@@ -1232,7 +1232,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1591997555354" ID="Freemind_Link_1121402737" MODIFIED="1591997566014" POSITION="right" TEXT="Ferramentas">
+<node CREATED="1591997555354" FOLDED="true" ID="Freemind_Link_1121402737" MODIFIED="1591997566014" POSITION="right" TEXT="Ferramentas">
 <node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_1270117106" MODIFIED="1597409834931" TEXT="kubeadm">
 <node CREATED="1597409873583" ID="Freemind_Link_1028947641" MODIFIED="1597409888010" TEXT="Ferramenta de administra&#xe7;&#xe3;o do cluster (instala&#xe7;&#xe3;o e configura&#xe7;&#xe3;o)"/>
 <node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_588434013" MODIFIED="1597409845241" TEXT="upgrade">
@@ -1898,6 +1898,11 @@
 <node CREATED="1593455773573" ID="Freemind_Link_1297303568" MODIFIED="1593455800686" TEXT="Executar &apos;minikube delete&apos; e em seguida &apos;minikube start&apos;">
 <icon BUILTIN="password"/>
 </node>
+<node CREATED="1659980067639" ID="Freemind_Link_1850121879" MODIFIED="1659980164476" TEXT="Para instalar certificados, coloque-os na pasta  ~/.minikube/files no mesmo caminho que&#xa; voc&#xea; colocaria na m&#xe1;quina real. O Minikube sincroniza todo o conte&#xfa;do dessa pasta &apos;files&apos;&#xa; na VM do minikube, respeitando o path, sempre que se executa o &apos;minikube start&apos;">
+<node CREATED="1599157613040" ID="Freemind_Link_1514213162" MODIFIED="1599157613826" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1596205892636" ID="Freemind_Link_1023381829" MODIFIED="1659980359893" TEXT="mkdir -p ~/.minikube/files/etc/docker/certs.d/&#xa;sudo cp -r /etc/docker/certs.d/* ~/.minikube/files/etc/docker/certs.d/&#xa;sudo chown -R $(whoami):$(whoami) ~/.minikube/files/etc/docker/certs.d/"/>
+</node>
+</node>
 </node>
 <node CREATED="1596205872182" ID="Freemind_Link_1890707813" MODIFIED="1596205880038" TEXT="Configurar DNS">
 <node CREATED="1599157357055" ID="Freemind_Link_706950784" MODIFIED="1599157359073" TEXT="Manualmente">
@@ -2357,7 +2362,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592315528094" ID="Freemind_Link_1064829192" MODIFIED="1592317218772" POSITION="right" TEXT="Objetos k8s">
+<node CREATED="1592315528094" FOLDED="true" ID="Freemind_Link_1064829192" MODIFIED="1592317218772" POSITION="right" TEXT="Objetos k8s">
 <node CREATED="1592317521186" ID="Freemind_Link_1956142399" MODIFIED="1592317522903" TEXT="Master">
 <node CREATED="1592317523600" ID="Freemind_Link_755059932" MODIFIED="1592317530400" TEXT="Gerencia o cluster"/>
 <node CREATED="1592317530989" ID="Freemind_Link_1067778424" MODIFIED="1592317540209" TEXT="&#xc9; onde ficam todos os arquivos YAML"/>
@@ -4439,12 +4444,58 @@
 <node CREATED="1599243375858" ID="Freemind_Link_848535900" MODIFIED="1599243378634" TEXT="Tipo Array"/>
 <node CREATED="1592844989287" ID="Freemind_Link_1770251480" MODIFIED="1599243488746" TEXT="Indica de quais Pods poder&#xe3;o chegar tr&#xe1;fego"/>
 <node COLOR="#ff00ff" CREATED="1599243955618" ID="Freemind_Link_73589574" MODIFIED="1599243969235" TEXT="-(item)">
-<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_225674248" MODIFIED="1599243507525" TEXT="podSelector">
+<node CREATED="1660133177227" ID="Freemind_Link_1992341774" MODIFIED="1660133225114" TEXT="Cada item &#xe9; uma regra">
+<node CREATED="1660133177227" ID="Freemind_Link_1597184953" MODIFIED="1660133289531" TEXT="Voc&#xea; pode ter dois dos items abaixo em um mesmo item e isso compor&#xe1; uma &#xfa;nica regra (aplicando um AND entre eles)">
+<node CREATED="1595951551270" ID="Freemind_Link_1621396672" MODIFIED="1595951552490" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1308607450" MODIFIED="1660132585128" TEXT="...&#xa;spec:&#xa;  ingress:&#xa;    - from:&#xa;      - podSelector:&#xa;          matchLabels:&#xa;            name: api-pod&#xa;        namespaceSelector:&#xa;          matchLabels:&#xa;            name: prod&#xa;...">
+<node CREATED="1660133087221" ID="Freemind_Link_562641731" MODIFIED="1660133335499" TEXT="Neste exemplo o &apos;podSelector&apos; e o &apos;namespaceSelector&apos; &#xa;est&#xe3;o dentro do mesmo item, criando uma &#xfa;nica regra (aplica-se um AND)"/>
+</node>
+</node>
+</node>
+<node CREATED="1660133177227" ID="Freemind_Link_1762766044" MODIFIED="1660133283146" TEXT="Voc&#xea; pode ter dois dos items abaixo sendo cada um em um item e isso criar&#xe1; duas regras distintas (aplicando um OR entre elas)">
+<node CREATED="1595951551270" ID="Freemind_Link_1478139594" MODIFIED="1595951552490" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1037645452" MODIFIED="1660133364436" TEXT="...&#xa;spec:&#xa;  ingress:&#xa;    - from:&#xa;      - podSelector:&#xa;          matchLabels:&#xa;            name: api-pod&#xa;      - ipBlock:&#xa;          cidr: 192.168.0.10/30&#xa;...">
+<node CREATED="1660133087221" ID="Freemind_Link_774669464" MODIFIED="1660133396165" TEXT="Neste exemplo o &apos;podSelector&apos; e o &apos;ipBlock&apos; &#xa;est&#xe3;o em itens distintos, criando duas regras independentes (aplica-se um OR)"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1592843866864" FOLDED="true" ID="Freemind_Link_225674248" MODIFIED="1599243507525" TEXT="podSelector">
 <node CREATED="1592844989287" ID="Freemind_Link_1001495476" MODIFIED="1599243543542" TEXT="Seleciona os Pods de onde os tr&#xe1;fegos ser&#xe3;o permitidos"/>
-<node COLOR="#ff00ff" CREATED="1592843866864" FOLDED="true" ID="Freemind_Link_1132970037" MODIFIED="1599243196459" TEXT="matchLabels">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1132970037" MODIFIED="1599243196459" TEXT="matchLabels">
 <node CREATED="1592844989287" ID="Freemind_Link_164070757" MODIFIED="1599243595513" TEXT="Rela&#xe7;&#xe3;o do par &apos;label&apos; x &apos;valor&apos; dos Pods a serem selecionados"/>
-<node CREATED="1595951551270" FOLDED="true" ID="Freemind_Link_555033345" MODIFIED="1595951552490" TEXT="Ex:">
-<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_759021926" MODIFIED="1599243687217" TEXT="...&#xa;spec:&#xa;  ingress:&#xa;    - from:&#xa;      - podSelector:&#xa;        matchLabels:&#xa;          name: api-pod&#xa;..."/>
+<node CREATED="1595951551270" ID="Freemind_Link_555033345" MODIFIED="1595951552490" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_759021926" MODIFIED="1660132594366" TEXT="...&#xa;spec:&#xa;  ingress:&#xa;    - from:&#xa;      - podSelector:&#xa;          matchLabels:&#xa;            name: api-pod&#xa;..."/>
+</node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1592843866864" FOLDED="true" ID="Freemind_Link_864309876" MODIFIED="1660132276233" TEXT="namespaceSelector">
+<node CREATED="1660132344139" ID="Freemind_Link_464237893" MODIFIED="1660132388805" TEXT="Em cen&#xe1;rios com m&#xfa;ltiplos namespaces, selecionar &#xa;apenas o label do pod (com podSelector) pode n&#xe3;o ser suficiente.">
+<node CREATED="1660132390327" ID="Freemind_Link_700561815" MODIFIED="1660132424114" TEXT="Exemplo: quando se tem os namespaces de DEV, HOM e PROD. Nesse caso os POD&apos;s t&#xea;m o mesmo label, mas pertencem a namespaces diferentes"/>
+<node CREATED="1660132434267" ID="Freemind_Link_1838140238" MODIFIED="1660132474260" TEXT="Caso se queira proibir acesso a um pod de outros pods que n&#xe3;o estejam no mesmo namespace que o pod de destino, use esta diretiva &apos;namespaceSelector&apos;"/>
+<node CREATED="1660132475992" ID="Freemind_Link_852819186" MODIFIED="1660132495700" TEXT="Assim pode-se, por exemplo, evitar que um pod do namespace DEV acesse um pod de DB do namespace de PROD"/>
+</node>
+<node CREATED="1592844989287" ID="Freemind_Link_1076009086" MODIFIED="1660132341040" TEXT="Seleciona os namespaces cujos Pods ser&#xe3;o permitidos"/>
+<node CREATED="1660132787933" ID="Freemind_Link_1376091393" MODIFIED="1660132841197" TEXT="Colocar a diretiva &apos;namespaceSelector&apos; sem a diretiva &apos;podSelector&apos; far&#xe1; com que todos os pods do namespace informado posso acessar o pod destino, e nenhum pod fora desse namespace conseguir&#xe1; faz&#xea;-lo">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1225772908" MODIFIED="1599243196459" TEXT="matchLabels">
+<node CREATED="1592844989287" ID="Freemind_Link_426585104" MODIFIED="1660132525348" TEXT="Rela&#xe7;&#xe3;o do par &apos;label&apos; x &apos;valor&apos; dos namespaces a serem selecionados"/>
+<node CREATED="1595951551270" ID="Freemind_Link_52972069" MODIFIED="1595951552490" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1821990243" MODIFIED="1660132585128" TEXT="...&#xa;spec:&#xa;  ingress:&#xa;    - from:&#xa;      - podSelector:&#xa;          matchLabels:&#xa;            name: api-pod&#xa;        namespaceSelector:&#xa;          matchLabels:&#xa;            name: prod&#xa;...">
+<node CREATED="1660133087221" ID="Freemind_Link_731915546" MODIFIED="1660133109373" TEXT="Neste exemplo o &apos;podSelector&apos; e o &apos;namespaceSelector&apos; est&#xe3;o dentro do mesmo item pois isso &#xe9; um AND"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1592843866864" FOLDED="true" ID="Freemind_Link_333249505" MODIFIED="1660132868418" TEXT="ipBlock">
+<node CREATED="1660132344139" ID="Freemind_Link_1002234918" MODIFIED="1660132913909" TEXT="Em cen&#xe1;rios onde se quer permitir acesso a um pod de uma m&#xe1;quina fora do cluster, usa-se esta diretiva">
+<node CREATED="1660132921387" ID="Freemind_Link_1123556329" MODIFIED="1660132963795" TEXT="Exemplo: dentro do cluster tem-se um pod que &#xe9; uma base de dados e voc&#xea; precisa usar o servi&#xe7;o de backup, que roda fora do cluster, para fazer backup desse banco de dados."/>
+</node>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1741875758" MODIFIED="1660133005564" TEXT="cidr">
+<node CREATED="1592844989287" ID="Freemind_Link_1630626391" MODIFIED="1660133024989" TEXT="Diretiva que informa o IP a ter o acesso permitido"/>
+<node CREATED="1595951551270" ID="Freemind_Link_1050768238" MODIFIED="1595951552490" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1395338364" MODIFIED="1660133072271" TEXT="...&#xa;spec:&#xa;  ingress:&#xa;    - from:&#xa;      - ipBlock:&#xa;          cidr: 192.168.5.10/32&#xa;..."/>
 </node>
 </node>
 </node>
@@ -4475,13 +4526,13 @@
 <node CREATED="1599579996730" ID="Freemind_Link_1341579140" MODIFIED="1599579999887" TEXT="Tipo Array"/>
 <node COLOR="#ff00ff" CREATED="1599579979849" ID="Freemind_Link_1798624574" MODIFIED="1599580006465" TEXT="-(Item)">
 <node COLOR="#ff00ff" CREATED="1599579979849" ID="Freemind_Link_750168723" MODIFIED="1599580028584" TEXT="podSelector">
-<node CREATED="1592844989287" ID="Freemind_Link_1036832013" MODIFIED="1599243543542" TEXT="Seleciona os Pods de onde os tr&#xe1;fegos ser&#xe3;o permitidos"/>
-<node COLOR="#ff00ff" CREATED="1599579979849" FOLDED="true" ID="Freemind_Link_597954403" MODIFIED="1599580038015" TEXT="matchLabels">
-<node CREATED="1592844989287" ID="Freemind_Link_1521101621" MODIFIED="1599243595513" TEXT="Rela&#xe7;&#xe3;o do par &apos;label&apos; x &apos;valor&apos; dos Pods a serem selecionados"/>
-<node CREATED="1595951551270" FOLDED="true" ID="Freemind_Link_899826485" MODIFIED="1595951552490" TEXT="Ex:">
-<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_819214847" MODIFIED="1599580108848" TEXT="...&#xa;spec:&#xa;  egress:&#xa;    - to:&#xa;      - podSelector:&#xa;        matchLabels:&#xa;          name: api-pod&#xa;..."/>
+<node CREATED="1660140372375" ID="Freemind_Link_315992868" LINK="#Freemind_Link_225674248" MODIFIED="1660140397440" TEXT="Ver defini&#xe7;&#xe3;o no item &apos;from&apos;"/>
 </node>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1814877711" MODIFIED="1660132276233" TEXT="namespaceSelector">
+<node CREATED="1660140372375" ID="Freemind_Link_701010846" LINK="#Freemind_Link_864309876" MODIFIED="1660140403885" TEXT="Ver defini&#xe7;&#xe3;o no item &apos;from&apos;"/>
 </node>
+<node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_440831202" MODIFIED="1660132868418" TEXT="ipBlock">
+<node CREATED="1660140372375" ID="Freemind_Link_395402959" LINK="#Freemind_Link_333249505" MODIFIED="1660140409277" TEXT="Ver defini&#xe7;&#xe3;o no item &apos;from&apos;"/>
 </node>
 </node>
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_1353002200" MODIFIED="1599243780405" TEXT="ports">
@@ -4769,12 +4820,12 @@
 <icon BUILTIN="full-2"/>
 <node CREATED="1659702684233" ID="Freemind_Link_948686086" MODIFIED="1659702844560" TEXT="Use &apos;kubectl describe secret &lt;nome-do-token&gt;&apos;&apos; para consultar o secret criado para o serviceaccount e ver, assim, seu token criado"/>
 <node CREATED="1659703289607" ID="Freemind_Link_1214444372" MODIFIED="1659703308348" TEXT="Disponibilizando o token para a aplica&#xe7;&#xe3;o">
-<node CREATED="1659702852514" ID="Freemind_Link_573624591" MODIFIED="1659702886566" TEXT="Esse token pode ser usado como autentica&#xe7;&#xe3;o &apos;bearer token&apos; ao se fazer requisi&#xe7;&#xf5;es para o kubernetes">
+<node CREATED="1659702852514" ID="Freemind_Link_573624591" MODIFIED="1660131613373" TEXT="Esse token pode ser usado como autentica&#xe7;&#xe3;o &#xa;&apos;bearer token&apos; ao se fazer requisi&#xe7;&#xf5;es para o kubernetes">
 <node CREATED="1659702920440" ID="Freemind_Link_975002220" MODIFIED="1659702923488" TEXT="Ex: ">
 <node COLOR="#0000ff" CREATED="1659702926088" ID="Freemind_Link_1041500559" MODIFIED="1659703001503" TEXT="curl https://&lt;ip-do-kubeapi&gt;:6443/api -insecure --header &quot;Authorization: Bearer &lt;token-do-serviceaccount&gt;"/>
 </node>
 </node>
-<node CREATED="1659703313505" ID="Freemind_Link_1023520562" MODIFIED="1659703345836" TEXT="Se a aplica&#xe7;&#xe3;o j&#xe1; estiver rodando dentro do pr&#xf3;prio cluster, basta montar o secret como um volume para o POD">
+<node CREATED="1659703313505" ID="Freemind_Link_1023520562" MODIFIED="1660131625399" TEXT="Se a aplica&#xe7;&#xe3;o j&#xe1; estiver rodando dentro do pr&#xf3;prio cluster,&#xa;basta montar o secret como um volume para o POD">
 <arrowlink DESTINATION="Freemind_Link_581398308" ENDARROW="Default" ENDINCLINATION="778;0;" ID="Freemind_Arrow_Link_1048178445" STARTARROW="Default" STARTINCLINATION="778;0;"/>
 </node>
 </node>
