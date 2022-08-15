@@ -1232,6 +1232,56 @@
 </node>
 </node>
 </node>
+<node CREATED="1660565520397" ID="Freemind_Link_55113036" MODIFIED="1660565522412" POSITION="right" TEXT="Componentes">
+<node CREATED="1660565571129" ID="Freemind_Link_1936591752" MODIFIED="1660565574466" TEXT="Para listar:">
+<node COLOR="#0000ff" CREATED="1660565575097" ID="Freemind_Link_1500103395" MODIFIED="1660565610687" TEXT="kubectl -n kube-system get all">
+<font NAME="SansSerif" SIZE="13"/>
+<node CREATED="1660566101750" ID="Freemind_Link_988798751" LINK="#Freemind_Link_1076101247" MODIFIED="1660566157962" TEXT="A lista aqui ser&#xe1; de POD&apos;s est&#xe1;ticos"/>
+</node>
+</node>
+<node CREATED="1660565732016" ID="Freemind_Link_1606432097" MODIFIED="1660565744578" TEXT="Local dos manifestos: /etc/kubernetes/manifests"/>
+<node CREATED="1660565523297" ID="Freemind_Link_1637162424" MODIFIED="1660565669983" TEXT="kube-scheduler">
+<node CREATED="1660565526141" ID="Freemind_Link_1412567363" MODIFIED="1660565603610" TEXT="Respons&#xe1;vel por atribuir o POD a um n&#xf3;"/>
+<node CREATED="1660565747716" ID="Freemind_Link_1133271417" MODIFIED="1660565760917" TEXT="Manifesto: ">
+<node COLOR="#ff00ff" CREATED="1660565767484" ID="Freemind_Link_113592876" MODIFIED="1660565789656" TEXT="/etc/kubernetes/manifests/kube-scheduler.yaml"/>
+</node>
+<node CREATED="1660565859701" ID="Freemind_Link_263497250" MODIFIED="1660565881594" TEXT="Arquivo de configura&#xe7;&#xe3;o:">
+<node COLOR="#ff00ff" CREATED="1660565767484" ID="Freemind_Link_1851366900" MODIFIED="1660565933711" TEXT="/etc/kubernetes/scheduler.conf"/>
+</node>
+<node CREATED="1660565546144" ID="Freemind_Link_25350806" MODIFIED="1660565560193" TEXT="Nome: pod/pod/kube-scheduler-XXX"/>
+</node>
+<node CREATED="1660565623094" ID="Freemind_Link_958627917" MODIFIED="1660565657450" TEXT="kube-apiserver">
+<node CREATED="1660565747716" ID="Freemind_Link_1698245112" MODIFIED="1660565760917" TEXT="Manifesto: ">
+<node COLOR="#ff00ff" CREATED="1660565767484" ID="Freemind_Link_1699173795" MODIFIED="1660565802501" TEXT="/etc/kubernetes/manifests/kube-apiserver.yaml"/>
+</node>
+</node>
+<node CREATED="1660565631062" ID="Freemind_Link_822979014" MODIFIED="1660565664391" TEXT="kube-controller-manager">
+<node CREATED="1660566421715" ID="Freemind_Link_1975171160" MODIFIED="1660566486704" TEXT="Respons&#xe1;vel por ">
+<node CREATED="1660566517200" ID="Freemind_Link_792714776" MODIFIED="1660566528160" TEXT="Controlar o replicaset controller">
+<node CREATED="1660566487759" ID="Freemind_Link_303038208" MODIFIED="1660566549462" TEXT="Atualiza e escalona um replicaset"/>
+</node>
+<node CREATED="1660566529709" ID="Freemind_Link_1714094143" MODIFIED="1660566534272" TEXT="Controlar o deployment controller"/>
+</node>
+<node CREATED="1660565747716" ID="Freemind_Link_572452566" MODIFIED="1660565760917" TEXT="Manifesto: ">
+<node COLOR="#ff00ff" CREATED="1660565767484" ID="Freemind_Link_1323406256" MODIFIED="1660565817397" TEXT="/etc/kubernetes/manifests/kube-controller-manager.yaml"/>
+</node>
+<node CREATED="1660565859701" ID="Freemind_Link_80209299" MODIFIED="1660565881594" TEXT="Arquivo de configura&#xe7;&#xe3;o:">
+<node COLOR="#ff00ff" CREATED="1660565767484" ID="Freemind_Link_327932624" MODIFIED="1660565953588" TEXT="/etc/kubernetes/controller-manager.conf"/>
+</node>
+</node>
+<node CREATED="1660565638683" ID="Freemind_Link_1869437148" MODIFIED="1660565650895" TEXT="Kube-proxy"/>
+<node CREATED="1660565679258" ID="Freemind_Link_1834202766" MODIFIED="1660565680707" TEXT="etcd">
+<node CREATED="1660565747716" ID="Freemind_Link_1570461380" MODIFIED="1660565760917" TEXT="Manifesto: ">
+<node COLOR="#ff00ff" CREATED="1660565767484" ID="Freemind_Link_1846189997" MODIFIED="1660565833690" TEXT="/etc/kubernetes/manifests/etcd.yaml"/>
+</node>
+</node>
+<node CREATED="1660565683874" ID="Freemind_Link_1718925881" MODIFIED="1660565685699" TEXT="coredns"/>
+<node CREATED="1660565854562" ID="Freemind_Link_186832222" MODIFIED="1660565857093" TEXT="kubelet">
+<node CREATED="1660565859701" ID="Freemind_Link_1986303850" MODIFIED="1660565881594" TEXT="Arquivo de configura&#xe7;&#xe3;o:">
+<node COLOR="#ff00ff" CREATED="1660565767484" ID="Freemind_Link_1745650677" MODIFIED="1660565913854" TEXT="/etc/kubernetes/kubelet.conf"/>
+</node>
+</node>
+</node>
 <node CREATED="1591997555354" FOLDED="true" ID="Freemind_Link_1121402737" MODIFIED="1591997566014" POSITION="right" TEXT="Ferramentas">
 <node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_1270117106" MODIFIED="1597409834931" TEXT="kubeadm">
 <node CREATED="1597409873583" ID="Freemind_Link_1028947641" MODIFIED="1597409888010" TEXT="Ferramenta de administra&#xe7;&#xe3;o do cluster (instala&#xe7;&#xe3;o e configura&#xe7;&#xe3;o)"/>
@@ -2034,7 +2084,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1596034959140" FOLDED="true" ID="Freemind_Link_902301057" MODIFIED="1596034963642" POSITION="right" TEXT="Scheduling">
+<node CREATED="1596034959140" ID="Freemind_Link_902301057" MODIFIED="1596034963642" POSITION="right" TEXT="Scheduling">
 <node CREATED="1596034965646" ID="Freemind_Link_1847599504" MODIFIED="1596035021281" TEXT="&#xc9; poss&#xed;vel determinar afinidade ou restri&#xe7;&#xf5;es entre pods e n&#xf3;s"/>
 <node CREATED="1596119449395" ID="Freemind_Link_1513609610" MODIFIED="1596119454460" TEXT="Manual">
 <node CREATED="1596119454969" ID="Freemind_Link_379128097" MODIFIED="1596119494999" TEXT="Para determinar um n&#xf3; espec&#xed;fico para um Pod use o atributo &apos;nodeName&apos; da se&#xe7;&#xe3;o &apos;spec&apos;"/>
@@ -2183,7 +2233,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1596635753730" ID="Freemind_Link_1076101247" MODIFIED="1596635759349" TEXT="Static Pods">
+<node CREATED="1596635753730" FOLDED="true" ID="Freemind_Link_1076101247" MODIFIED="1596635759349" TEXT="Static Pods">
 <node CREATED="1596635766637" ID="Freemind_Link_427492771" MODIFIED="1596635783625" TEXT="Deploy de Pods feito diretamente pelo kubelet">
 <node CREATED="1596636416426" ID="Freemind_Link_1849014889" MODIFIED="1596636421735" TEXT="Apenas Pods!">
 <icon BUILTIN="messagebox_warning"/>
@@ -2396,7 +2446,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592315531047" FOLDED="true" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
+<node CREATED="1592315531047" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
 <node CREATED="1592316082413" ID="Freemind_Link_1900255977" MODIFIED="1592316091293" TEXT="Unidade m&#xed;nima do cluster"/>
 <node CREATED="1596637761488" ID="Freemind_Link_557787628" MODIFIED="1596637780453" TEXT="Static Pods:">
 <node CREATED="1596637767688" ID="Freemind_Link_1065461531" LINK="#Freemind_Link_1076101247" MODIFIED="1596637785246" TEXT="Ver documenta&#xe7;&#xe3;o acima"/>
@@ -4940,7 +4990,7 @@
 </node>
 </node>
 <node CREATED="1613745571445" MODIFIED="1613745571445" TEXT="sudo service haproxy restart"/>
-<node CREATED="1617886708377" ID="Freemind_Link_1990626368" MODIFIED="1617886711696" TEXT="Falha de aplica&#xe7;&#xe3;o">
+<node CREATED="1617886708377" FOLDED="true" ID="Freemind_Link_1990626368" MODIFIED="1617886711696" TEXT="Falha de aplica&#xe7;&#xe3;o">
 <node CREATED="1617886723358" ID="Freemind_Link_866978362" MODIFIED="1617886739991" TEXT="Desenhar a arquitetura K8s da aplica&#xe7;&#xe3;o">
 <node CREATED="1617886740552" ID="Freemind_Link_839565773" MODIFIED="1617886743886" TEXT="Ex:">
 <node CREATED="1617887557211" ID="Freemind_Link_569736997" MODIFIED="1617887568102" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/arquitetura_aplicacao_k8s.jpg&quot;&gt;"/>
@@ -4968,6 +5018,9 @@
 </node>
 <node CREATED="1617888193854" ID="Freemind_Link_731123989" MODIFIED="1617888195455" TEXT="Dos Pods">
 <node CREATED="1617888196186" ID="Freemind_Link_1078907018" MODIFIED="1617888238852" TEXT="Verifique se est&#xe3;o no estado &quot;Running&quot;">
+<node CREATED="1660303588419" ID="Freemind_Link_1572749292" MODIFIED="1660303607009" TEXT="Se o n&#xfa;mero de reinicializa&#xe7;&#xf5;es do PD estiver alto, &#xe9; um ind&#xed;cio de erro na aplica&#xe7;&#xe3;o">
+<icon BUILTIN="messagebox_warning"/>
+</node>
 <node COLOR="#0000ff" CREATED="1605009506888" ID="Freemind_Link_1710084120" MODIFIED="1617888306902" TEXT="kubectl get pod web"/>
 </node>
 <node CREATED="1617888271122" ID="Freemind_Link_1441734948" MODIFIED="1617888283542" TEXT="Verifique os detalhes de execu&#xe7;&#xe3;o do Pod">
@@ -4975,12 +5028,53 @@
 </node>
 <node CREATED="1617888271122" ID="Freemind_Link_1612239652" MODIFIED="1617888318725" TEXT="Analise os logs da aplica&#xe7;&#xe3;o do pod">
 <node COLOR="#0000ff" CREATED="1605009506888" ID="Freemind_Link_666864543" MODIFIED="1617888371133" TEXT="kubectl logs web">
-<node CREATED="1617888379642" ID="Freemind_Link_468318093" MODIFIED="1617888388955" TEXT="Adicione a flag -f se quiser acompanhar o log em tempo real"/>
-<node CREATED="1617888391073" ID="Freemind_Link_1525911072" MODIFIED="1617888421155" TEXT="Adicione a tag --previous se quiser ver os logs de pods anteriores"/>
+<node CREATED="1660303655769" ID="Freemind_Link_326184494" MODIFIED="1660303695892" TEXT="&#xc9; poss&#xed;vel que o log n&#xe3;o tenha informa&#xe7;&#xe3;o &#xfa;til pois o POD pode n&#xe3;o ter falhado ainda">
+<arrowlink DESTINATION="Freemind_Link_1525911072" ENDARROW="Default" ENDINCLINATION="133;0;" ID="Freemind_Arrow_Link_867735079" STARTARROW="None" STARTINCLINATION="133;0;"/>
+<arrowlink DESTINATION="Freemind_Link_468318093" ENDARROW="Default" ENDINCLINATION="26;0;" ID="Freemind_Arrow_Link_1476896931" STARTARROW="None" STARTINCLINATION="26;0;"/>
+</node>
+<node CREATED="1617888379642" ID="Freemind_Link_468318093" MODIFIED="1660303689845" TEXT="Adicione a flag -f se quiser acompanhar o log em tempo real, at&#xe9; a aplica&#xe7;&#xe3;o falhar"/>
+<node CREATED="1617888391073" ID="Freemind_Link_1525911072" MODIFIED="1660303695890" TEXT="Adicione a tag --previous se quiser ver os logs de pods anteriores"/>
 </node>
 </node>
 </node>
 </node>
+</node>
+<node CREATED="1660562739211" ID="Freemind_Link_113685131" MODIFIED="1660562745185" TEXT="Falha do control plane">
+<node CREATED="1660562749030" ID="Freemind_Link_524765886" MODIFIED="1660562765125" TEXT="Cheque os status dos&#xa;componentes do k8s">
+<node CREATED="1660562781500" ID="Freemind_Link_1231438008" MODIFIED="1660562804851" TEXT="Checar se os pod&apos;s do namespace&#xa;kube-system est&#xe3;o rodando">
+<node CREATED="1605005622020" ID="Freemind_Link_182604725" MODIFIED="1605005623058" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1839103555" MODIFIED="1660562819135" TEXT="kubectl get pods -n kube-system"/>
+</node>
+</node>
+<node CREATED="1660562847142" ID="Freemind_Link_221587437" MODIFIED="1660562885277" TEXT="Caso os componentes estejam rodando como&#xa;servi&#xe7;o, cheque o status individualmente">
+<node CREATED="1660562954189" ID="Freemind_Link_1474286441" MODIFIED="1660562957308" TEXT="Master node">
+<node CREATED="1605005622020" ID="Freemind_Link_337666502" MODIFIED="1605005623058" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_179493579" MODIFIED="1660562911337" TEXT="service kube-apiserver status"/>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_461642256" MODIFIED="1660562924843" TEXT="service kube-controller-manager status"/>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1341003598" MODIFIED="1660562932969" TEXT="service kube-scheduler status"/>
+</node>
+</node>
+<node CREATED="1660562954189" ID="Freemind_Link_756574437" MODIFIED="1660562965568" TEXT="Worker node">
+<node CREATED="1605005622020" ID="Freemind_Link_602350894" MODIFIED="1605005623058" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_187662327" MODIFIED="1660562973718" TEXT="service kubelet status"/>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_136432383" MODIFIED="1660562987409" TEXT="service kube-proxy status"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1660563007105" ID="Freemind_Link_1588250596" MODIFIED="1660563012379" TEXT="Cheque os logs do control plane">
+<node CREATED="1660563136673" ID="Freemind_Link_1940116802" MODIFIED="1660563145540" TEXT="Se instalado via kubeadm, use o kubectl">
+<node CREATED="1605005622020" ID="Freemind_Link_990319136" MODIFIED="1605005623058" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1652562773" MODIFIED="1660563035866" TEXT="kubectl logs kube-apiserver-master -n kube-system"/>
+</node>
+</node>
+<node CREATED="1660563148385" ID="Freemind_Link_1805519184" MODIFIED="1660563158653" TEXT="Se instalado nativamente, veja os logs do S.O.">
+<node CREATED="1605005622020" ID="Freemind_Link_985084217" MODIFIED="1605005623058" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_65987403" MODIFIED="1660563195853" TEXT="sudo journalctl -u kube-apiserver"/>
+</node>
+</node>
+</node>
+<node CREATED="1660563212815" ID="Freemind_Link_175719937" MODIFIED="1660563226221" TEXT="Consulte a se&#xe7;&#xe3;o &quot;Troubleshoot clusters&quot; do manual do K8s"/>
 </node>
 </node>
 </node>
