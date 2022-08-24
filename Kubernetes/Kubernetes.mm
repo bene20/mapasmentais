@@ -1269,13 +1269,36 @@
 <node COLOR="#ff00ff" CREATED="1660565767484" ID="Freemind_Link_327932624" MODIFIED="1660565953588" TEXT="/etc/kubernetes/controller-manager.conf"/>
 </node>
 </node>
-<node CREATED="1660565638683" ID="Freemind_Link_1869437148" MODIFIED="1660565650895" TEXT="Kube-proxy"/>
+<node CREATED="1660565638683" ID="Freemind_Link_1869437148" MODIFIED="1660565650895" TEXT="Kube-proxy">
+<node CREATED="1661256093387" ID="Freemind_Link_897115468" MODIFIED="1661256106586" TEXT="&#xc9; um proxy de rede que roda em cada n&#xf3; do cluster">
+<node CREATED="1661256205588" ID="Freemind_Link_1295169418" MODIFIED="1661256234250" TEXT="&#xc9; respons&#xe1;vel por monitorar &#xa;services e endpoints associados a eles"/>
+<node CREATED="1661256243456" ID="Freemind_Link_1529742428" MODIFIED="1661256291094" TEXT="Quando um client tenta se conectar a um service usando seu IP virtual, o kubeproxy &#xe9; respons&#xe1;vel por redirecionar o tr&#xe1;fego para o POD correspondente"/>
+</node>
+<node CREATED="1661256130979" ID="Freemind_Link_130529978" MODIFIED="1661256141567" TEXT="Mant&#xe9;m as rules da rede nos n&#xf3;s do cluster">
+<node CREATED="1661256142213" ID="Freemind_Link_862796882" MODIFIED="1661256178254" TEXT="Essas rules permitem comunica&#xe7;&#xe3;o aos PODs de sess&#xf5;es de rede internas ou externas ao cluster"/>
+</node>
+<node CREATED="1661256307622" ID="Freemind_Link_900483550" MODIFIED="1661256391756" TEXT="Arquivo de configura&#xe7;&#xe3;o fica em &#xa;/var/lib/kube-proxy/config.conf ">
+<node CREATED="1661256355272" ID="Freemind_Link_829215609" MODIFIED="1661256366334" TEXT="Nesse arquivo pode-se configurar clusterCIDR, kubeproxy mode, ipvs, iptables, bindaddress, kube-config etc"/>
+</node>
+</node>
 <node CREATED="1660565679258" ID="Freemind_Link_1834202766" MODIFIED="1660565680707" TEXT="etcd">
 <node CREATED="1660565747716" ID="Freemind_Link_1570461380" MODIFIED="1660565760917" TEXT="Manifesto: ">
 <node COLOR="#ff00ff" CREATED="1660565767484" ID="Freemind_Link_1846189997" MODIFIED="1660565833690" TEXT="/etc/kubernetes/manifests/etcd.yaml"/>
 </node>
 </node>
-<node CREATED="1660565683874" ID="Freemind_Link_1718925881" MODIFIED="1660565685699" TEXT="coredns"/>
+<node CREATED="1660565683874" ID="Freemind_Link_1718925881" MODIFIED="1660565685699" TEXT="coredns">
+<node CREATED="1661255888804" ID="Freemind_Link_1921007582" MODIFIED="1661255895985" TEXT="Solu&#xe7;&#xe3;o de DNS para o cluster kubernetes"/>
+<node CREATED="1661255821405" ID="Freemind_Link_1529596454" MODIFIED="1661255868841" TEXT="Quando em larga escala, o uso de mem&#xf3;ria do coredns &#xe9; bastante afetado pela quantidade de PODs e services no cluster"/>
+<node CREATED="1661255721109" ID="Freemind_Link_813270496" MODIFIED="1661255726354" TEXT="Os recursos do coredns s&#xe3;o">
+<node CREATED="1661255728838" ID="Freemind_Link_496582686" MODIFIED="1661255735142" TEXT="Um service de nome coredns"/>
+<node CREATED="1661255728838" ID="Freemind_Link_1821135305" MODIFIED="1661255804581" TEXT="Um service de nome kube-dns"/>
+<node CREATED="1661255738245" ID="Freemind_Link_1760960180" MODIFIED="1661255747974" TEXT="cluster-roles de nome coredns e kube-dns"/>
+<node CREATED="1661255738245" ID="Freemind_Link_63254857" MODIFIED="1661255765849" TEXT="clusterrolebindings de nome coredns e kube-dns"/>
+<node CREATED="1661255728838" ID="Freemind_Link_1624965866" MODIFIED="1661255779848" TEXT="Um deployment de nome coredns"/>
+<node CREATED="1661255728838" ID="Freemind_Link_108230548" MODIFIED="1661255787197" TEXT="Um configmap de nome coredns"/>
+</node>
+<node CREATED="1661255925823" ID="Freemind_Link_188293809" MODIFIED="1661255935402" TEXT="Usa a porta 53 para resolu&#xe7;&#xe3;o de DNS"/>
+</node>
 <node CREATED="1660565854562" ID="Freemind_Link_186832222" MODIFIED="1660565857093" TEXT="kubelet">
 <node CREATED="1660565859701" ID="Freemind_Link_1986303850" MODIFIED="1660565881594" TEXT="Arquivo de configura&#xe7;&#xe3;o:">
 <node COLOR="#ff00ff" CREATED="1660565767484" ID="Freemind_Link_1745650677" MODIFIED="1660565913854" TEXT="/etc/kubernetes/kubelet.conf"/>
@@ -2410,7 +2433,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592315528094" ID="Freemind_Link_1064829192" MODIFIED="1592317218772" POSITION="right" TEXT="Objetos k8s">
+<node CREATED="1592315528094" FOLDED="true" ID="Freemind_Link_1064829192" MODIFIED="1592317218772" POSITION="right" TEXT="Objetos k8s">
 <node CREATED="1660842228722" ID="Freemind_Link_597942392" MODIFIED="1660842232990" TEXT="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#-strong-api-overview-strong-">
 <icon BUILTIN="attach"/>
 </node>
@@ -5046,7 +5069,7 @@
 </node>
 </node>
 <node CREATED="1613745571445" MODIFIED="1613745571445" TEXT="sudo service haproxy restart"/>
-<node CREATED="1617886708377" ID="Freemind_Link_1990626368" MODIFIED="1617886711696" TEXT="Falha de aplica&#xe7;&#xe3;o">
+<node CREATED="1617886708377" FOLDED="true" ID="Freemind_Link_1990626368" MODIFIED="1617886711696" TEXT="Falha de aplica&#xe7;&#xe3;o">
 <node CREATED="1617886723358" ID="Freemind_Link_866978362" MODIFIED="1617886739991" TEXT="Desenhar a arquitetura K8s da aplica&#xe7;&#xe3;o">
 <node CREATED="1617886740552" ID="Freemind_Link_839565773" MODIFIED="1617886743886" TEXT="Ex:">
 <node CREATED="1617887557211" ID="Freemind_Link_569736997" MODIFIED="1617887568102" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/arquitetura_aplicacao_k8s.jpg&quot;&gt;"/>
@@ -5131,6 +5154,37 @@
 </node>
 </node>
 <node CREATED="1660563212815" ID="Freemind_Link_175719937" MODIFIED="1660563226221" TEXT="Consulte a se&#xe7;&#xe3;o &quot;Troubleshoot clusters&quot; do manual do K8s"/>
+</node>
+<node CREATED="1661167679126" ID="Freemind_Link_1780192378" MODIFIED="1661167685701" TEXT="Falha em n&#xf3;s">
+<node CREATED="1661167686314" ID="Freemind_Link_838294523" MODIFIED="1661167695033" TEXT="Cheque o status do n&#xf3;">
+<node CREATED="1605005622020" ID="Freemind_Link_494787389" MODIFIED="1605005623058" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_540960513" MODIFIED="1661167707332" TEXT="kubectl get nodes"/>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1480685981" MODIFIED="1661167718513" TEXT="kubectl describe node worker-1"/>
+</node>
+<node CREATED="1661167745006" ID="Freemind_Link_1742696118" MODIFIED="1661167761081" TEXT="Verifique o status de cada item do describe de um n&#xf3;">
+<node CREATED="1661167833206" ID="Freemind_Link_1376310700" MODIFIED="1661167855778" TEXT="Quando o status for &apos;unknown&apos;, isso indica perda de conex&#xe3;o entre o worker e o master"/>
+<node CREATED="1661167863098" ID="Freemind_Link_150691752" MODIFIED="1661167880532" TEXT="Cada tipo de problema (estouro de mem&#xf3;ria, disco cheio etc.) tem sua pr&#xf3;pria flag de status"/>
+</node>
+<node CREATED="1661167925442" ID="Freemind_Link_260204368" MODIFIED="1661167930500" TEXT="Verifique os recursos">
+<node CREATED="1605005622020" ID="Freemind_Link_1026237057" MODIFIED="1605005623058" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_857244085" MODIFIED="1661167977389" TEXT="service kubelet status">
+<node CREATED="1661167955731" ID="Freemind_Link_739565700" MODIFIED="1661167983792" TEXT="Para checar o status do kubelet"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_399737364" MODIFIED="1661168025518" TEXT="sudo journalctl -u bubelet">
+<node CREATED="1661167955731" ID="Freemind_Link_1222582952" MODIFIED="1661168016020" TEXT="Para checar o log do kubelet"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_876433818" MODIFIED="1661167934549" TEXT="top">
+<node CREATED="1661167935300" ID="Freemind_Link_256759577" MODIFIED="1661167943541" TEXT="Para checar a carga de CPU e mem&#xf3;ria do n&#xf3;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1217574954" MODIFIED="1661167954955" TEXT="df -f">
+<node CREATED="1661167955731" ID="Freemind_Link_747206756" MODIFIED="1661167963373" TEXT="Para checar espa&#xe7;o dispon&#xed;vel em disco"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_1321308625" MODIFIED="1661168062029" TEXT="openssl x509 -in /var/lib/kubelet/worker-1.crt -text">
+<node CREATED="1661167955731" ID="Freemind_Link_1631793911" MODIFIED="1661168082722" TEXT="Para checar o status dos certificados do kubelet (se expirados, se v&#xe1;lidos etc.)"/>
+</node>
+</node>
+</node>
+</node>
 </node>
 </node>
 </node>

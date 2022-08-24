@@ -83,7 +83,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1573669976288" ID="Freemind_Link_1968018790" MODIFIED="1573915323833" POSITION="right" TEXT="jboss-cli.sh">
+<node COLOR="#0000ff" CREATED="1573669976288" FOLDED="true" ID="Freemind_Link_1968018790" MODIFIED="1573915323833" POSITION="right" TEXT="jboss-cli.sh">
 <node CREATED="1573915331657" ID="Freemind_Link_386061028" MODIFIED="1573915340989" TEXT="comandos">
 <node COLOR="#0000ff" CREATED="1573669995752" ID="Freemind_Link_1850611618" MODIFIED="1573915147618" TEXT="embed-host-controller --std-out=echo --domain-config=domain.xml --host-config=host.xml">
 <node CREATED="1573670037212" ID="Freemind_Link_657933385" MODIFIED="1573915399119" TEXT="Liga o host-controller(inst&#xe2;ncia do wildfly com &#xa;papel de Host-Controller) e se conecta a ele"/>
@@ -171,6 +171,34 @@
 <node CREATED="1573594445997" ID="Freemind_Link_590555183" MODIFIED="1573594491810" TEXT="jps">
 <node CREATED="1573594452117" ID="Freemind_Link_1425046833" MODIFIED="1573594575482" TEXT="Lista as VM&apos;s Java HotSpot"/>
 <node CREATED="1573594577960" ID="Freemind_Link_1149227502" MODIFIED="1573594583763" TEXT="Obt&#xe9;m o PID das aplica&#xe7;&#xf5;es Java"/>
+<node CREATED="1661347528333" ID="Freemind_Link_880540096" MODIFIED="1661347530400" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1573594435662" ID="Freemind_Link_1495935444" MODIFIED="1661347539312" TEXT="jps -lvm">
+<node CREATED="1661347540432" ID="Freemind_Link_1923654264" MODIFIED="1661347565784" TEXT="Exibe os comandos usados para executar os processos Java, com seus respectivos argumentos"/>
+<node CREATED="1661347567041" ID="Freemind_Link_1466254559" MODIFIED="1661347586876" TEXT="Ideal para inspecionar se o wildfly est&#xe1; sendo carregado com os argumentos desejados">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1661347722948" ID="Freemind_Link_1207125325" MODIFIED="1661347725546" TEXT="jcmd">
+<node CREATED="1661347761593" ID="Freemind_Link_576011274" MODIFIED="1661347776028" TEXT="Utilizado para diagnosticar requisi&#xe7;&#xf5;es feitas &#xe0; JVM">
+<node CREATED="1661347776952" ID="Freemind_Link_1272730622" MODIFIED="1661347795628" TEXT="Ex: quando se carrega um wildfly, voc&#xea; est&#xe1; carregando uma aplica&#xe7;&#xe3;o na JVM"/>
+</node>
+<node CREATED="1661347840817" ID="Freemind_Link_1933773796" MODIFIED="1661347845797" TEXT="https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr006.html">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1661347801485" ID="Freemind_Link_1341832187" MODIFIED="1661347807104" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1573594435662" ID="Freemind_Link_1601624228" MODIFIED="1661347813800" TEXT="jcmd -l">
+<node CREATED="1661347814473" ID="Freemind_Link_1011004032" MODIFIED="1661347825565" TEXT="Lista todos os processos (PID&apos;s) carregados na JVM"/>
+</node>
+<node COLOR="#0000ff" CREATED="1573594435662" ID="Freemind_Link_910418703" MODIFIED="1661348327440" TEXT="jcmd &lt;pid&gt; VM.system_properties">
+<node CREATED="1661347814473" ID="Freemind_Link_225096527" MODIFIED="1661347896089" TEXT="Lista todas as propriedades de sistema carregadas para um processo submetido &#xe0; JVM"/>
+<node CREATED="1661348343158" ID="Freemind_Link_718234717" MODIFIED="1661348366237" TEXT="O &lt;pid&gt; pode ser obtido via &apos;jcmd -l&apos;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1573594435662" ID="Freemind_Link_236035540" MODIFIED="1661348336804" TEXT="jcmd &lt;pid&gt; flags">
+<node CREATED="1661347814473" ID="Freemind_Link_1256928154" MODIFIED="1661347924318" TEXT="Lista todas as flags carregadas para um processo submetido &#xe0; JVM"/>
+</node>
+</node>
 </node>
 <node COLOR="#0000ff" CREATED="1573594435662" ID="Freemind_Link_294493376" MODIFIED="1573671841062" TEXT="jstack -m -l &lt;PID JAVA&gt;"/>
 <node COLOR="#0000ff" CREATED="1573594518436" ID="Freemind_Link_1790745101" MODIFIED="1573671841063" TEXT="jstat -gccause &lt;PID JAVA&gt; 2000"/>
@@ -184,7 +212,7 @@
 <icon BUILTIN="attach"/>
 </node>
 </node>
-<node CREATED="1574648132994" ID="Freemind_Link_1670176762" MODIFIED="1574648135012" POSITION="right" TEXT="Logger">
+<node CREATED="1574648132994" FOLDED="true" ID="Freemind_Link_1670176762" MODIFIED="1574648135012" POSITION="right" TEXT="Logger">
 <node CREATED="1574648676430" ID="Freemind_Link_1771058907" MODIFIED="1574648695352" TEXT="A aplica&#xe7;&#xe3;o deve usar o Logger em vez do System.out ou System.err"/>
 <node CREATED="1574648697536" ID="Freemind_Link_431466724" MODIFIED="1574648699530" TEXT="Na aplica&#xe7;&#xe3;o">
 <node CREATED="1574650128657" ID="Freemind_Link_65962841" MODIFIED="1574650131958" TEXT="Pacote da aplica&#xe7;&#xe3;o">
