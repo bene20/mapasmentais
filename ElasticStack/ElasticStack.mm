@@ -2,25 +2,47 @@
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1553000049733" ID="Freemind_Link_683934292" LINK="../Mapas.mm" MODIFIED="1666110281733" TEXT="Elastic Stack">
 <node CREATED="1666110284987" ID="_" MODIFIED="1666110288451" POSITION="right" TEXT="Elastic search">
-<node CREATED="1666268194269" ID="Freemind_Link_230790975" MODIFIED="1666268198390" TEXT="Analyzers">
-<node CREATED="1666268210834" ID="Freemind_Link_1903893376" MODIFIED="1666268216130" TEXT="Text type mapping">
+<node CREATED="1666268194269" ID="Freemind_Link_230790975" MODIFIED="1667924186145" TEXT="Mappings">
+<node CREATED="1666268210834" ID="Freemind_Link_1903893376" MODIFIED="1667924204856" TEXT="Text">
+<icon BUILTIN="full-1"/>
 <node CREATED="1666268227440" ID="Freemind_Link_610813630" MODIFIED="1666268233930" TEXT="Correspond&#xea;ncia aproximada">
 <node CREATED="1666268234561" ID="Freemind_Link_1065905195" MODIFIED="1666268242562" TEXT="N&#xe3;o &#xe9; case-sensitive"/>
 <node CREATED="1666268243074" ID="Freemind_Link_1053961714" MODIFIED="1666268251010" TEXT="Aceita sin&#xf4;nimos"/>
 <node CREATED="1666268251642" ID="Freemind_Link_944382793" MODIFIED="1666268258154" TEXT="Aceita flex&#xf5;es (stemmed)"/>
 <node CREATED="1666268260142" ID="Freemind_Link_1625547801" MODIFIED="1666268272466" TEXT="Remove stopwords (preposi&#xe7;&#xf5;es, conjun&#xe7;&#xf5;es etc.)"/>
+<node CREATED="1667923681048" ID="Freemind_Link_732339404" MODIFIED="1667923688968" TEXT="&#xc9; armazenado na forma de um &#xed;ndice invertido"/>
 </node>
 <node CREATED="1666268289139" ID="Freemind_Link_896748834" MODIFIED="1666269596705" TEXT="Busca com m&#xfa;ltiplos termos n&#xe3;o &#xa;precisa ter correspond&#xea;ncia de todos ">
 <node CREATED="1666269570561" ID="Freemind_Link_301404272" MODIFIED="1666269590389" TEXT="Conforme a relev&#xe2;ncia, o campo score vai ser alto ou baixo"/>
 </node>
+<node CREATED="1667923401869" ID="Freemind_Link_250382142" MODIFIED="1667923725276" TEXT="Para permitir ordena&#xe7;&#xe3;o do tipo &apos;text&apos; &#xe9; &#xa;necess&#xe1;rio criar um field do tipo &apos;raw&apos;">
+<arrowlink DESTINATION="Freemind_Link_1917270961" ENDARROW="Default" ENDINCLINATION="375;-14;" ID="Freemind_Arrow_Link_208298755" STARTARROW="None" STARTINCLINATION="706;0;"/>
+<node CREATED="1667923547099" ID="Freemind_Link_655860722" MODIFIED="1667923552967" TEXT="field &#xe9; um &apos;subcampo&apos;">
+<node CREATED="1667923567843" ID="Freemind_Link_697150893" MODIFIED="1667923570496" TEXT="Campo aninhado"/>
+</node>
+<node CREATED="1666269653635" ID="Freemind_Link_987630069" MODIFIED="1666269655126" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1666111281257" ID="Freemind_Link_1896955042" MODIFIED="1667923522930" TEXT="{&#xa;  &quot;mappings&quot;:{&#xa;    &quot;properties&quot;:{&#xa;      &quot;title&quot;:{&#xa;        &quot;type&quot;: &quot;text&quot;,&#xa;        &quot;fields&quot;:{&#xa;          &quot;raw&quot;:{&quot;type&quot;:&quot;keyword&quot;}&#xa;        }&#xa;      }&#xa;    }&#xa;  }&#xa;}"/>
+<node COLOR="#0000ff" CREATED="1666111281257" ID="Freemind_Link_1176348560" MODIFIED="1667923829315" TEXT="curl [...] -XGET [...]/movies/_search?sort=title.raw">
+<node CREATED="1667923727110" ID="Freemind_Link_768400864" MODIFIED="1667923882646" TEXT="Note que aqui a ordena&#xe7;&#xe3;o dever&#xe1; ser pelo &#xa;subcampo (title.raw) e n&#xe3;o pelo campo (title)"/>
+</node>
+</node>
+</node>
 <node CREATED="1666269653635" ID="Freemind_Link_1406656662" MODIFIED="1666269655126" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1666111281257" ID="Freemind_Link_954163052" MODIFIED="1666269732873" TEXT="curl [...] -XGET [...]/movies/_search -d &apos;{&quot;query&quot;:{&quot;match&quot;:{&quot;title&quot;:&quot;Star Trek&quot;}}}&apos;&#xa;"/>
+<node COLOR="#0000ff" CREATED="1666111281257" ID="Freemind_Link_954163052" MODIFIED="1667923639288" TEXT="curl [...] -XGET [...]/movies/_search -d &apos;{&quot;query&quot;:{&quot;match&quot;:{&quot;title&quot;:&quot;Star Trek&quot;}}}&apos; "/>
 <node COLOR="#0000ff" CREATED="1666111281257" ID="Freemind_Link_1682722613" MODIFIED="1666269815650" TEXT="curl [...] -XGET [...]/movies/_search -d &apos;{&quot;query&quot;:{&quot;match_phrase&quot;:{&quot;genre&quot;:&quot;sci&quot;}}}&apos;&#xa;"/>
 </node>
 </node>
-<node CREATED="1666268198910" ID="Freemind_Link_1078418103" MODIFIED="1666268209722" TEXT="Keyword type mapping">
+<node CREATED="1666268198910" ID="Freemind_Link_1078418103" MODIFIED="1667924208758" TEXT="Keyword">
+<icon BUILTIN="full-2"/>
+<node CREATED="1667923590051" ID="Freemind_Link_1917270961" MODIFIED="1667923646572" TEXT="Um campo do tipo &apos;keyword&apos; n&#xe3;o &#xe9; analisado">
+<node CREATED="1667923607723" ID="Freemind_Link_248311204" MODIFIED="1667923614943" TEXT="N&#xe3;o se aplicam analyzers"/>
+<node CREATED="1667923599927" ID="Freemind_Link_1479470936" MODIFIED="1667923606956" TEXT="&#xc9; pesquisado em sua forma bruta"/>
+<node CREATED="1667923657549" ID="Freemind_Link_505860836" MODIFIED="1667923666976" TEXT="N&#xe3;o &#xe9; armazenado na forma de um &#xed;ndice invertido"/>
+</node>
 <node CREATED="1666268216902" ID="Freemind_Link_168779858" MODIFIED="1666268222450" TEXT="Correspond&#xea;ncia exata">
-<node CREATED="1666270363917" ID="Freemind_Link_1486582453" MODIFIED="1666270374043" TEXT="Inclusive &#xe9; case-sensitive"/>
+<node CREATED="1666270363917" ID="Freemind_Link_1486582453" MODIFIED="1667924255585" TEXT="Inclusive &#xe9; case-sensitive">
+<icon BUILTIN="messagebox_warning"/>
+</node>
 </node>
 <node CREATED="1666269653635" ID="Freemind_Link_806717832" MODIFIED="1666269655126" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1666111281257" ID="Freemind_Link_1978848354" MODIFIED="1666270137080" TEXT="curl [...] -XPUT [...]/movies -d &apos;{&quot;mappings&quot;:{&quot;properties&quot;:{&quot;id&quot;:{&quot;type&quot;:&quot;integer&quot;},&quot;year&quot;:{&quot;type&quot;:&quot;date&quot;},&quot;genre&quot;:{&quot;type&quot;:&quot;keyword&quot;},&quot;title&quot;:{&quot;type&quot;:&quot;text&quot;, &quot;analyzer&quot;:&quot;english&quot;}}}}&apos;&#xa;">
@@ -82,7 +104,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1666631233734" ID="Freemind_Link_1041526809" MODIFIED="1666631236064" TEXT="_cluster">
+<node CREATED="1666631233734" FOLDED="true" ID="Freemind_Link_1041526809" MODIFIED="1666631236064" TEXT="_cluster">
 <node CREATED="1666631237412" ID="Freemind_Link_555547580" MODIFIED="1666631243261" TEXT="Para ver o estado do cluster:">
 <node CREATED="1666631343995" ID="Freemind_Link_290246796" MODIFIED="1666631352551" TEXT="&#xc9; um arquivo grande, com mais de 6000 linhas"/>
 <node COLOR="#0000ff" CREATED="1666111505885" ID="Freemind_Link_1824595130" MODIFIED="1666631908670" TEXT="curl [...] -XGET &quot;127.0.0.1:9200/movies/_cluster/state&quot;"/>
@@ -174,9 +196,10 @@
 </node>
 <node CREATED="1667490211650" ID="Freemind_Link_1790803611" MODIFIED="1667490213781" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1666111505885" ID="Freemind_Link_752970191" MODIFIED="1667493437821" TEXT="curl [...] -XGET &quot;127.0.0.1:9200/movies/_sarch -d &apos;{&quot;query&quot;:{&quot;bool&quot;:{&quot;must&quot;:{&quot;term&quot;:{&quot;title&quot;:&quot;trek&quot;}},&quot;filter&quot;:{&quot;range&quot;:{&quot;year&quot;:{&quot;gte&quot;:2010}}}}}}&apos;"/>
+<node COLOR="#0000ff" CREATED="1666111505885" ID="Freemind_Link_585088095" MODIFIED="1667925361107" TEXT="{&#xa;  &quot;query&quot;:{&#xa;    &quot;bool&quot;:{&#xa;      &quot;must&quot;:{&quot;match&quot;:{&quot;genre&quot;:&quot;Sci-Fi&quot;}},&#xa;      &quot;must_not&quot;:{&quot;match&quot;:{&quot;title&quot;:&quot;trek&quot;}},&#xa;      &quot;filter&quot;:{&#xa;        &quot;range&quot;:{&quot;year&quot;:{&quot;gte&quot;:2010, &quot;lt&quot;:2015}}&#xa;      }&#xa;    }&#xa;  }&#xa;}"/>
 </node>
 </node>
-<node CREATED="1667494499720" ID="Freemind_Link_1635415759" MODIFIED="1667494502443" TEXT="Tipos de queries">
+<node CREATED="1667494499720" FOLDED="true" ID="Freemind_Link_1635415759" MODIFIED="1667494502443" TEXT="Tipos de queries">
 <node CREATED="1667494503790" ID="Freemind_Link_929602379" MODIFIED="1667494506900" TEXT="match_all">
 <node CREATED="1667494508723" ID="Freemind_Link_202996138" MODIFIED="1667494513996" TEXT="Retorna todos os documentos"/>
 <node CREATED="1667494514675" ID="Freemind_Link_280353083" MODIFIED="1667494520076" TEXT="Normalmente usado com filtro"/>
@@ -189,8 +212,33 @@
 <node CREATED="1667494863589" ID="Freemind_Link_100027326" MODIFIED="1667494900657" TEXT="D&#xe1; match com flex&#xf5;es, case insensitive, sin&#xf4;nimos etc."/>
 <node CREATED="1667494540252" ID="Freemind_Link_937338447" MODIFIED="1667494547612" TEXT="Ex: full text search"/>
 </node>
+<node CREATED="1667568578705" ID="Freemind_Link_1349674763" MODIFIED="1667568595805" TEXT="&#xc9; tolerante &#xe0; aus&#xea;ncia de um ou mais termos da busca para dar o match"/>
 <node CREATED="1667490211650" ID="Freemind_Link_1212353688" MODIFIED="1667490213781" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1666111505885" ID="Freemind_Link_1930411053" MODIFIED="1667494639254" TEXT="{&quot;match&quot;:{&quot;title&quot;:&quot;star&quot;}}"/>
+</node>
+</node>
+<node CREATED="1667567112657" ID="Freemind_Link_350407457" MODIFIED="1667567119225" TEXT="match_phrase">
+<node CREATED="1667567120885" ID="Freemind_Link_1990053794" MODIFIED="1667569179056" TEXT="Encontra os termos quando estiverem na ordem fornecida nos termos de busca"/>
+<node CREATED="1667567233024" ID="Freemind_Link_1811107434" MODIFIED="1667567235427" TEXT="Par&#xe2;metros">
+<node CREATED="1667567235886" ID="Freemind_Link_1371815910" MODIFIED="1667567237831" TEXT="slop">
+<node CREATED="1667567238286" ID="Freemind_Link_314033210" MODIFIED="1667569109132" TEXT="Define a toler&#xe2;ncia de dist&#xe2;ncia&#xa;dos termos para dar o match">
+<node CREATED="1667568973877" ID="Freemind_Link_459764618" MODIFIED="1667569007140" TEXT="A dist&#xe2;ncia &#xe9; obtida da quantidade de termos que existem entre os termos procurados"/>
+<node CREATED="1667569013180" ID="Freemind_Link_1426273538" MODIFIED="1667569015221" TEXT="Ex:">
+<node CREATED="1667569015834" ID="Freemind_Link_862205887" MODIFIED="1667569028126" TEXT="Procura &quot;meu amigo&quot;"/>
+<node CREATED="1667569031372" ID="Freemind_Link_1352051847" MODIFIED="1667569040453" TEXT="Encontra &quot;meu grande amigo&quot; se slop = 1"/>
+<node CREATED="1667569031372" ID="Freemind_Link_141459959" MODIFIED="1667569099902" TEXT="N&#xe3;o encontra &quot;meu hiper, saudoso e grande amigo&quot; se slop = 1, mas encontra se slop = 3"/>
+<node CREATED="1667569041460" ID="Freemind_Link_1421913914" MODIFIED="1667569054894" TEXT="N&#xe3;o encontra &quot;amigo meu&quot;, independente do slop"/>
+</node>
+</node>
+<node CREATED="1667567520022" ID="Freemind_Link_1615548181" MODIFIED="1667567558871" TEXT="Colocar um slop de 100, vai dar match quando as palavras estiverem distantes 100 &apos;pontos&apos;. Mas quanto mais pr&#xf3;ximas estiverem no texto, maior ser&#xe1; a relev&#xe2;ncia (rank) da resposta"/>
+<node CREATED="1667490211650" ID="Freemind_Link_15734842" MODIFIED="1667490213781" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1666111505885" ID="Freemind_Link_1147504157" MODIFIED="1667567282967" TEXT="{&quot;match_phrase&quot;:{&quot;title&quot;:&quot;star wars&quot;, &quot;slop&quot;:1}}"/>
+<node CREATED="1667567399318" ID="Freemind_Link_1295025240" MODIFIED="1667567421178" TEXT="Procura por &quot;star beyound&quot; com slop 1 aceitaria &quot;star trek beyound&quot; como match"/>
+</node>
+</node>
+</node>
+<node CREATED="1667490211650" ID="Freemind_Link_714636248" MODIFIED="1667490213781" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1666111505885" ID="Freemind_Link_1571073674" MODIFIED="1667567176398" TEXT="{&quot;match_phrase&quot;:{&quot;title&quot;:&quot;star wars&quot;}}"/>
 </node>
 </node>
 <node CREATED="1667494552635" ID="Freemind_Link_220385134" MODIFIED="1667494557925" TEXT="multi_match">
@@ -201,6 +249,20 @@
 </node>
 <node CREATED="1667494571211" ID="Freemind_Link_8274280" MODIFIED="1667494572085" TEXT="bool">
 <node CREATED="1667494574409" ID="Freemind_Link_1350820091" MODIFIED="1667494589229" TEXT="Funciona como o filtro bool, mas os resultados s&#xe3;o rankeados por relev&#xe2;ncia"/>
+</node>
+</node>
+<node CREATED="1667569724989" ID="Freemind_Link_1155725354" MODIFIED="1667569727747" TEXT="Pagina&#xe7;&#xe3;o">
+<node CREATED="1667569728560" ID="Freemind_Link_233237442" MODIFIED="1667569735312" TEXT="from">
+<node CREATED="1667569735667" ID="Freemind_Link_592142892" MODIFIED="1667569749302" TEXT="Indica o n&#xfa;mero da p&#xe1;gina, iniciando no 0 (zero)"/>
+</node>
+<node CREATED="1667569750203" ID="Freemind_Link_1849480697" MODIFIED="1667569752552" TEXT="size">
+<node CREATED="1667569753042" ID="Freemind_Link_278957423" MODIFIED="1667569762420" TEXT="Indica a quantidade de registros que devem ser enviados por rsposta"/>
+</node>
+<node CREATED="1667569766237" ID="Freemind_Link_248880724" MODIFIED="1667569777081" TEXT="Pagina&#xe7;&#xf5;es muito grandes podem degradar a performance">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node CREATED="1667569764517" ID="Freemind_Link_1900461634" MODIFIED="1667569765332" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1666111505885" ID="Freemind_Link_849106670" MODIFIED="1667570097031" TEXT="curl [...] -XGET &quot;127.0.0.1:9200/movies/_sarch -d &apos;{&quot;from&quot;:1,&quot;size&quot;:2,&quot;query&quot;:{...}}&apos;"/>
 </node>
 </node>
 </node>
