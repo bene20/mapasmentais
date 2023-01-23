@@ -51,7 +51,7 @@
 <icon BUILTIN="messagebox_warning"/>
 <node CREATED="1591993019067" ID="Freemind_Link_519075278" MODIFIED="1591993032745" TEXT="Incluir o texto [skip ci] no texto do commit."/>
 </node>
-<node CREATED="1578681234338" ID="Freemind_Link_1857077151" MODIFIED="1578681241349" TEXT="Jobs">
+<node CREATED="1578681234338" FOLDED="true" ID="Freemind_Link_1857077151" MODIFIED="1578681241349" TEXT="Jobs">
 <node CREATED="1578681241904" ID="Freemind_Link_1981425285" MODIFIED="1578681248907" TEXT="Todo job pode ter um nome arbir&#xe1;rio"/>
 <node CREATED="1578681262462" ID="Freemind_Link_1223537013" MODIFIED="1578681301307" TEXT="Antes de cada job os comandos definidos em before_script ser&#xe3;o executados"/>
 <node CREATED="1578681356637" ID="Freemind_Link_735318917" MODIFIED="1578681370339" TEXT="Precisam ter o campo &apos;script&apos; obrigatoriamente"/>
@@ -334,7 +334,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1579193962548" ID="Freemind_Link_1153995823" MODIFIED="1579193964102" TEXT="Runner">
+<node CREATED="1579193962548" FOLDED="true" ID="Freemind_Link_1153995823" MODIFIED="1579193964102" TEXT="Runner">
 <node CREATED="1579193964754" ID="Freemind_Link_210805590" MODIFIED="1579196941645" TEXT="Container pronto">
 <node CREATED="1579193988315" ID="Freemind_Link_1056811944" MODIFIED="1579195005045" TEXT="Baixar:">
 <node COLOR="#0000ff" CREATED="1579195006380" ID="Freemind_Link_857701346" MODIFIED="1579195033802" TEXT="docker pull gitlab/gitlab-runner:latest"/>

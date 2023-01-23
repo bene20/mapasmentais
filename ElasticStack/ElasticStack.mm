@@ -100,6 +100,22 @@
 </node>
 </node>
 </node>
+<node CREATED="1670329235660" ID="Freemind_Link_1039500924" MODIFIED="1670329303672" TEXT="Ciclo de vida">
+<node CREATED="1670329262390" ID="Freemind_Link_1164964716" MODIFIED="1670329297458" TEXT="&#xc9; poss&#xed;vel configurar o Elasticsearch para excluir automaticamente registros ap&#xf3;s um tempo de vida"/>
+<node CREATED="1670329303656" ID="Freemind_Link_778284476" MODIFIED="1670329305762" TEXT="Fases:">
+<node CREATED="1670329250584" ID="Freemind_Link_1706118249" MODIFIED="1670329261403" TEXT="HOT =&gt; WARM =&gt; COLD =&gt; Delete"/>
+</node>
+<node CREATED="1670329309610" ID="Freemind_Link_108871196" MODIFIED="1670329310496" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1666111281257" ID="Freemind_Link_886501500" MODIFIED="1670329460991" TEXT="PUT _ilm/policy/datastream_policy&#xa;{&#xa;  &quot;policy&quot;:{&#xa;    &quot;phases&quot;:{&#xa;      &quot;hot&quot;:{&#xa;        &quot;actions&quot;:{&#xa;          &quot;rollover&quot;:{&#xa;            &quot;max_size&quot;:&quot;50GB&quot;,&#xa;            &quot;max_age&quot;:&quot;30d&quot;&#xa;          }&#xa;        }&#xa;      },&#xa;      &quot;delete&quot;:{&#xa;        &quot;min_age&quot;:&quot;90d&quot;,&#xa;        &quot;actions&quot;:{&#xa;          &quot;delete&quot;:{}&#xa;        }&#xa;      }&#xa;    }&#xa;  }&#xa;}">
+<node CREATED="1670329463527" ID="Freemind_Link_1851288851" MODIFIED="1670329474418" TEXT="Definindo a pol&#xed;tica de exclus&#xe3;o de registros"/>
+<node CREATED="1670329475489" ID="Freemind_Link_19323542" MODIFIED="1670329550585" TEXT="&#xcd;ndices com mais de 50GB ou com mais de 30 dias ser&#xe3;o transferidos para a fase &quot;delete&quot;"/>
+<node CREATED="1670329551633" ID="Freemind_Link_1801074189" MODIFIED="1670329573961" TEXT="&#xcd;ndices na fase &quot;delete&quot; ser&#xe3;o removidos ap&#xf3;s um m&#xed;nimo de 90 dias"/>
+</node>
+<node COLOR="#0000ff" CREATED="1666111281257" ID="Freemind_Link_1957124681" MODIFIED="1670329724628" TEXT="PUT _template/datastream_template&#xa;{&#xa;  &quot;index_patterns&quot;:[&quot;datastream-*&quot;],&#xa;  &quot;settings&quot;:{&#xa;    &quot;number_of_shards&quot;:1,&#xa;    &quot;number_of_replicas&quot;:1,&#xa;    &quot;index.lifecycle.name&quot;:&quot;datastream_policy&quot;,&#xa;    &quot;index.lifecycle.rollover_alias&quot;:&quot;datastream&quot;&#xa;  }&#xa;}">
+<node CREATED="1670329463527" ID="Freemind_Link_1796274097" MODIFIED="1670329754353" TEXT="Aplicando a pol&#xed;tica de eclus&#xe3;o de registros a um &#xed;ndice espec&#xed;fico"/>
+</node>
+</node>
+</node>
 </node>
 <node CREATED="1666632077133" ID="Freemind_Link_1621754543" MODIFIED="1666632090480" TEXT="Flatenned data type">
 <node CREATED="1666632115725" ID="Freemind_Link_769876904" MODIFIED="1666632124969" TEXT="Solu&#xe7;&#xe3;o adotada para evitar a explos&#xe3;o de mappings no ES"/>
@@ -162,7 +178,7 @@
 <node COLOR="#0000ff" CREATED="1666111505885" ID="Freemind_Link_488183236" MODIFIED="1666631899032" TEXT="curl [...] -XGET &quot;127.0.0.1:9200/movies/_cluster/state&quot; | jsonpath &apos;..indices.movies&apos;"/>
 </node>
 </node>
-<node CREATED="1667490176946" ID="Freemind_Link_1764688607" MODIFIED="1667490182240" TEXT="_search">
+<node CREATED="1667490176946" FOLDED="true" ID="Freemind_Link_1764688607" MODIFIED="1667490182240" TEXT="_search">
 <node CREATED="1667490183195" FOLDED="true" ID="Freemind_Link_924069342" MODIFIED="1667490187845" TEXT="Query lite">
 <node CREATED="1667490188220" ID="Freemind_Link_254293144" MODIFIED="1667490192405" TEXT="Ajuda a testar consultas">
 <node CREATED="1667490282451" ID="Freemind_Link_931091295" MODIFIED="1667490297198" TEXT="Passa a consulta na url em vez de passar via Json no corpo da requisi&#xe7;&#xe3;o"/>
@@ -185,7 +201,7 @@
 <node CREATED="1667493125450" ID="Freemind_Link_795016464" MODIFIED="1667493129136" TEXT="Body search">
 <node CREATED="1667493129821" ID="Freemind_Link_556232572" MODIFIED="1667493140832" TEXT="Consulta via json enviado no corpo da requisi&#xe7;&#xe3;o"/>
 <node CREATED="1667490211650" ID="Freemind_Link_1169903594" MODIFIED="1667490213781" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1666111505885" ID="Freemind_Link_1339450615" MODIFIED="1667493209881" TEXT="curl [...] -XGET &quot;127.0.0.1:9200/movies/_sarch -d &apos;{&quot;query&quot;:{&quot;match&quot;:{&quot;title&quot;:&quot;star&quot;}}}&apos;"/>
+<node COLOR="#0000ff" CREATED="1666111505885" ID="Freemind_Link_1339450615" MODIFIED="1669902887876" TEXT="curl [...] -XGET &quot;127.0.0.1:9200/movies/_search -d &apos;{&quot;query&quot;:{&quot;match&quot;:{&quot;title&quot;:&quot;star&quot;}}}&apos;"/>
 </node>
 </node>
 <node CREATED="1667493280695" FOLDED="true" ID="Freemind_Link_783597039" MODIFIED="1667493282670" TEXT="Filtros">
@@ -353,26 +369,52 @@
 <node CREATED="1669828206364" ID="Freemind_Link_298137185" MODIFIED="1669828280210" TEXT="Posso fazer uma consulta e&#xa;depois agregar o resultado">
 <node CREATED="1669828302299" ID="Freemind_Link_1255580362" MODIFIED="1669828310798" TEXT="Funciona como um filtro do que deve ser agregado"/>
 <node CREATED="1667490211650" ID="Freemind_Link_408078939" MODIFIED="1667490213781" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1666111505885" ID="Freemind_Link_835662338" MODIFIED="1669828267671" TEXT="curl [...] -XGET &quot;127.0.0.1:9200/movies/_sarch -d &apos;&#xa;{&#xa;  &quot;query&quot;:{&#xa;    &quot;match&quot;:{&#xa;      &quot;rating&quot;:5.0&#xa;    }&#xa;  },&#xa;  &quot;aggs&quot;:{&#xa;    &quot;ratings&quot;:{&#xa;      &quot;terms&quot;:{&#xa;        &quot;field&quot;:&quot;rating&quot;&#xa;      }&#xa;    }&#xa;  }&#xa;}&apos;"/>
+<node COLOR="#0000ff" CREATED="1666111505885" ID="Freemind_Link_835662338" MODIFIED="1669902873871" TEXT="curl [...] -XGET &quot;127.0.0.1:9200/ratings/_search -d &apos;&#xa;{&#xa;  &quot;query&quot;:{&#xa;    &quot;match&quot;:{&#xa;      &quot;rating&quot;:5.0&#xa;    }&#xa;  },&#xa;  &quot;aggs&quot;:{&#xa;    &quot;ratings&quot;:{&#xa;      &quot;terms&quot;:{&#xa;        &quot;field&quot;:&quot;rating&quot;&#xa;      }&#xa;    }&#xa;  }&#xa;}&apos;"/>
 </node>
 </node>
 <node COLOR="#0000ff" CREATED="1669827920517" ID="Freemind_Link_1972074126" MODIFIED="1669827932094" TEXT="aggs">
 <node COLOR="#0000ff" CREATED="1669827920517" ID="Freemind_Link_1341906051" MODIFIED="1669828466340" TEXT="&lt;nome-da-agregacao&gt;">
 <node COLOR="#0000ff" CREATED="1669827920517" ID="Freemind_Link_1187971233" MODIFIED="1669828478576" TEXT="avg">
-<node CREATED="1669828346587" ID="Freemind_Link_1173224752" MODIFIED="1669828490713" TEXT="Usado para c&#xe1;lculo de m&#xe9;dias">
+<node COLOR="#0000ff" CREATED="1669827920517" ID="Freemind_Link_582859419" MODIFIED="1669903129024" TEXT="field">
+<node CREATED="1669828346587" ID="Freemind_Link_1858694733" MODIFIED="1669903151251" TEXT="Informa por qual campo ser&#xe1; feita a agrega&#xe7;&#xe3;o"/>
+</node>
+<node CREATED="1669828346587" ID="Freemind_Link_1173224752" MODIFIED="1669902662950" TEXT="Usado para &#xa;c&#xe1;lculo de m&#xe9;dias">
 <node CREATED="1667490211650" ID="Freemind_Link_369583611" MODIFIED="1667490213781" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1666111505885" ID="Freemind_Link_1511698883" MODIFIED="1669828405018" TEXT="curl [...] -XGET &quot;127.0.0.1:9200/movies/_sarch -d &apos;&#xa;{&#xa;  &quot;query&quot;:{&#xa;    &quot;match_phrase&quot;:{&#xa;      &quot;title&quot;:&quot;Star Wars Epidose IV&quot;&#xa;    }&#xa;  },&#xa;  &quot;aggs&quot;:{&#xa;    &quot;avg_rating&quot;:{&#xa;      &quot;avg&quot;:{&#xa;        &quot;field&quot;:&quot;rating&quot;&#xa;      }&#xa;    }&#xa;  }&#xa;}&apos;"/>
+<node COLOR="#0000ff" CREATED="1666111505885" ID="Freemind_Link_1511698883" MODIFIED="1669902866166" TEXT="curl [...] -XGET &quot;127.0.0.1:9200/ratings/_search -d &apos;&#xa;{&#xa;  &quot;query&quot;:{&#xa;    &quot;match_phrase&quot;:{&#xa;      &quot;title&quot;:&quot;Star Wars Epidose IV&quot;&#xa;    }&#xa;  },&#xa;  &quot;aggs&quot;:{&#xa;    &quot;avg_rating&quot;:{&#xa;      &quot;avg&quot;:{&#xa;        &quot;field&quot;:&quot;rating&quot;&#xa;      }&#xa;    }&#xa;  }&#xa;}&apos;"/>
 </node>
 </node>
 </node>
 <node COLOR="#0000ff" CREATED="1669827920517" ID="Freemind_Link_1748243976" MODIFIED="1669828510489" TEXT="terms">
-<node CREATED="1669828346587" ID="Freemind_Link_249632389" MODIFIED="1669828517337" TEXT="Usado para contabilizar termos">
+<node COLOR="#0000ff" CREATED="1669827920517" ID="Freemind_Link_1256139642" MODIFIED="1669903129024" TEXT="field">
+<node CREATED="1669828346587" ID="Freemind_Link_214649319" MODIFIED="1669903151251" TEXT="Informa por qual campo ser&#xe1; feita a agrega&#xe7;&#xe3;o"/>
+</node>
+<node CREATED="1669828346587" ID="Freemind_Link_249632389" MODIFIED="1669902670195" TEXT="Usado para &#xa;contabilizar termos">
 <node CREATED="1667490211650" ID="Freemind_Link_1178094648" MODIFIED="1667490213781" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1666111505885" ID="Freemind_Link_1183858289" MODIFIED="1669827904764" TEXT="curl [...] -XGET &quot;127.0.0.1:9200/movies/_sarch -d &apos;&#xa;{&#xa;  &quot;aggs&quot;:{&#xa;    &quot;ratings&quot;:{&#xa;      &quot;terms&quot;:{&#xa;        &quot;field&quot;:&quot;rating&quot;&#xa;      }&#xa;    }&#xa;  }&#xa;}&apos;">
+<node COLOR="#0000ff" CREATED="1666111505885" ID="Freemind_Link_1183858289" MODIFIED="1669902859334" TEXT="curl [...] -XGET &quot;127.0.0.1:9200/ratings/_search -d &apos;&#xa;{&#xa;  &quot;aggs&quot;:{&#xa;    &quot;ratings&quot;:{&#xa;      &quot;terms&quot;:{&#xa;        &quot;field&quot;:&quot;rating&quot;&#xa;      }&#xa;    }&#xa;  }&#xa;}&apos;">
 <node CREATED="1669828538638" ID="Freemind_Link_130759850" MODIFIED="1669828556393" TEXT="Calcula a quantidade de termos por valor do campo &apos;rating&apos;"/>
 <node CREATED="1669833357390" ID="Freemind_Link_1136495220" MODIFIED="1669833377418" TEXT="Adicionar &apos;?size=0&apos; &#xe0; url far&#xe1; o Elasticsearch retornar apenas o resultado da agrega&#xe7;&#xe3;o"/>
 </node>
 </node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1669827920517" ID="Freemind_Link_744848116" MODIFIED="1669902649373" TEXT="histogram">
+<node CREATED="1669828346587" ID="Freemind_Link_1224809531" MODIFIED="1669902675635" TEXT="Usado para&#xa;gerar histogramas">
+<node CREATED="1667490211650" ID="Freemind_Link_209988431" MODIFIED="1667490213781" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1666111505885" ID="Freemind_Link_956336891" MODIFIED="1669902853007" TEXT="curl [...] -XGET &quot;127.0.0.1:9200/ratings/_search -d &apos;&#xa;{&#xa;  &quot;aggs&quot;:{&#xa;    &quot;whole_ratings&quot;:{&#xa;      &quot;histogram&quot;:{&#xa;        &quot;field&quot;:&quot;rating&quot;,&#xa;        &quot;interval&quot;:1.0&#xa;      }&#xa;    }&#xa;  }&#xa;}&apos;"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1669827920517" ID="Freemind_Link_1567088279" MODIFIED="1669903129024" TEXT="field">
+<node CREATED="1669828346587" ID="Freemind_Link_974747941" MODIFIED="1669903151251" TEXT="Informa por qual campo ser&#xe1; feita a agrega&#xe7;&#xe3;o"/>
+</node>
+<node COLOR="#0000ff" CREATED="1669827920517" ID="Freemind_Link_1598852951" MODIFIED="1669903160248" TEXT="interval">
+<node CREATED="1669828346587" ID="Freemind_Link_1585418592" MODIFIED="1669903177473" TEXT="Informa qul o intervalo (abrang&#xea;ncia) de cada barra do histograma"/>
+</node>
+</node>
+</node>
+<node CREATED="1669907013882" ID="Freemind_Link_1250578092" MODIFIED="1669907018153" TEXT="Pode ser aninhada">
+<node CREATED="1667490211650" ID="Freemind_Link_49846271" MODIFIED="1667490213781" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1666111505885" ID="Freemind_Link_835183615" MODIFIED="1669908466057" TEXT="curl [...] -XGET &quot;127.0.0.1:9200/ratings/_search&quot; -d &apos;&#xa;{&#xa;  &quot;query&quot;:{&#xa;    &quot;match_phrase&quot;:{&#xa;      &quot;title&quot;:&quot;Star Wars&quot;&#xa;    }&#xa;  },&#xa;  &quot;aggs&quot;:{&#xa;    &quot;titles&quot;:{&#xa;      &quot;terms&quot;:{&#xa;        &quot;field&quot;:&quot;title.keyword&quot;&#xa;      },&#xa;      &quot;aggs&quot;:{&#xa;        &quot;avg_rating&quot;:{&#xa;          &quot;avg&quot;:{&#xa;            &quot;field&quot;:&quot;rating&quot;&#xa;          }&#xa;        }&#xa;      }&#xa;    }&#xa;  }&#xa;}&apos;">
+<node CREATED="1669908691190" ID="Freemind_Link_996348039" MODIFIED="1669908703375" TEXT="Obtenho a m&#xe9;dia de avali&#xe7;&#xe3;o de cada um dos filmes do Star Wars"/>
 </node>
 </node>
 </node>
@@ -632,5 +674,6 @@
 </node>
 </node>
 </node>
+<node CREATED="1669908714799" ID="Freemind_Link_1331993738" MODIFIED="1669908716850" POSITION="right" TEXT="Kibana"/>
 </node>
 </map>

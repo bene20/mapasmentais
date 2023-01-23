@@ -1314,7 +1314,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1591997283387" ID="Freemind_Link_461602891" MODIFIED="1598276866576" TEXT="kubectl">
+<node COLOR="#0000ff" CREATED="1591997283387" FOLDED="true" ID="Freemind_Link_461602891" MODIFIED="1598276866576" TEXT="kubectl">
 <node CREATED="1592317124854" ID="Freemind_Link_1986325000" MODIFIED="1592317142693" TEXT="&#xc9; uma interface de linha de comandos para gerenciar k8s"/>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1145737261" MODIFIED="1591997526134" TEXT="version">
 <node CREATED="1591997501435" ID="Freemind_Link_885210971" MODIFIED="1591997537374" TEXT="Exibe a vers&#xe3;o do kubectl instalada"/>
@@ -1344,7 +1344,7 @@
 <node CREATED="1597756834965" ID="Freemind_Link_1816258564" MODIFIED="1597756862740" TEXT="Lista todas as contas de servi&#xe7;o criadas no k8s"/>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1841282645" MODIFIED="1592316012408" TEXT="get">
+<node COLOR="#0000ff" CREATED="1591997498699" FOLDED="true" ID="Freemind_Link_1841282645" MODIFIED="1592316012408" TEXT="get">
 <node CREATED="1591997501435" ID="Freemind_Link_1618155496" MODIFIED="1592316177570" TEXT="Lista recursos ativos do cluster"/>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1862005678" MODIFIED="1592316026697" TEXT="pods">
 <node CREATED="1591997501435" ID="Freemind_Link_1691489598" MODIFIED="1592316187023" TEXT="Lista os pods ativos do cluster"/>
@@ -1849,6 +1849,27 @@
 <node CREATED="1595869017286" ID="Freemind_Link_582855429" MODIFIED="1599064828809" TEXT="Exibe mais informa&#xe7;&#xf5;es dos recursos"/>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_669147424" MODIFIED="1670332461719" TEXT="replace">
+<node CREATED="1591997501435" ID="Freemind_Link_767092852" MODIFIED="1670332470272" TEXT="Substitui um recurso por outro">
+<node CREATED="1670332472484" ID="Freemind_Link_1862397894" MODIFIED="1670332480135" TEXT="Usado para atualizar/corrigir um recurso"/>
+</node>
+<node COLOR="#0000ff" CREATED="1597756704399" ID="Freemind_Link_559693867" MODIFIED="1597756744911" TEXT="serviceaccount &lt;nome-conta&gt;">
+<node CREATED="1597756714571" ID="Freemind_Link_311475812" MODIFIED="1597756722145" TEXT="Cria uma conta de servi&#xe7;o">
+<node CREATED="1597756722541" ID="Freemind_Link_721481278" MODIFIED="1597756731566" TEXT="Usada por rob&#xf4;s (ou outros sistemas)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_602738727" MODIFIED="1592315822419" TEXT="-f &lt;nome_arquivo_yml&gt;">
+<icon BUILTIN="flag"/>
+<node CREATED="1592314815568" ID="Freemind_Link_25003888" MODIFIED="1670332503944" TEXT="Indica qual arquivo tem as especifica&#xe7;&#xf5;es do objeto a ser substitu&#xed;do"/>
+</node>
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_221453967" MODIFIED="1670332509504" TEXT="--force">
+<icon BUILTIN="flag"/>
+<node CREATED="1592314815568" ID="Freemind_Link_480655955" MODIFIED="1670332635634" TEXT="For&#xe7;a a substitui&#xe7;&#xe3;o via dele&#xe7;&#xe3;o e recria&#xe7;&#xe3;o do recurso de forma imediata (n&#xe3;o espera remo&#xe7;&#xe3;o graciosa do recurso)"/>
+<node CREATED="1594063796087" ID="Freemind_Link_1962130120" MODIFIED="1594063797741" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1592316606926" ID="Freemind_Link_726599157" MODIFIED="1670332585353" TEXT="kubectl replace --force -f file.pod.yml"/>
+</node>
+</node>
+</node>
 <node CREATED="1598276866561" ID="Freemind_Link_1086141826" MODIFIED="1598276869416" TEXT="Flags">
 <node CREATED="1598277122584" ID="Freemind_Link_432823762" MODIFIED="1598277154507" TEXT="Podem ser evitadas via objeto Config">
 <node CREATED="1598277155878" ID="Freemind_Link_730160602" LINK="#Freemind_Link_1755709500" MODIFIED="1598277172520" TEXT="Ver anota&#xe7;&#xf5;es"/>
@@ -1878,7 +1899,7 @@
 <icon BUILTIN="flag"/>
 <node CREATED="1592314815568" ID="Freemind_Link_1312252257" MODIFIED="1598276949692" TEXT="Usado para autenticar o usu&#xe1;rio. indica quem assinou o certificado dele"/>
 <node CREATED="1593529486490" ID="Freemind_Link_48369831" MODIFIED="1593529487579" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1352300200" MODIFIED="1598277000265" TEXT="kubectl get pods --certificate-authority ca.crt [...]"/>
+<node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_1352300200" MODIFIED="1670331667096" TEXT="kubectl get pods --certificate-authority ca.crt [...]"/>
 </node>
 </node>
 </node>
@@ -2271,7 +2292,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1596635753730" FOLDED="true" ID="Freemind_Link_1076101247" MODIFIED="1596635759349" TEXT="Static Pods">
+<node CREATED="1596635753730" ID="Freemind_Link_1076101247" MODIFIED="1596635759349" TEXT="Static Pods">
 <node CREATED="1596635766637" ID="Freemind_Link_427492771" MODIFIED="1596635783625" TEXT="Deploy de Pods feito diretamente pelo kubelet">
 <node CREATED="1596636416426" ID="Freemind_Link_1849014889" MODIFIED="1596636421735" TEXT="Apenas Pods!">
 <icon BUILTIN="messagebox_warning"/>
@@ -2487,7 +2508,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592315531047" FOLDED="true" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
+<node CREATED="1592315531047" ID="Freemind_Link_414527269" MODIFIED="1592315532248" TEXT="Pod">
 <node CREATED="1592316082413" ID="Freemind_Link_1900255977" MODIFIED="1592316091293" TEXT="Unidade m&#xed;nima do cluster"/>
 <node CREATED="1596637761488" ID="Freemind_Link_557787628" MODIFIED="1596637780453" TEXT="Static Pods:">
 <node CREATED="1596637767688" ID="Freemind_Link_1065461531" LINK="#Freemind_Link_1076101247" MODIFIED="1596637785246" TEXT="Ver documenta&#xe7;&#xe3;o acima"/>
@@ -5020,6 +5041,381 @@
 </node>
 <node CREATED="1595951551270" ID="Freemind_Link_906128641" MODIFIED="1595951552490" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1592843866864" ID="Freemind_Link_626947124" MODIFIED="1595951561106" TEXT="???"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1671473002276" ID="Freemind_Link_1273132686" MODIFIED="1671473004746" POSITION="right" TEXT="Helm">
+<node CREATED="1671473620787" ID="Freemind_Link_299477442" MODIFIED="1671473625308" TEXT="Usa o conceito de charts">
+<node CREATED="1671473625682" ID="Freemind_Link_266765286" MODIFIED="1671473657629" TEXT="Charts s&#xe3;o como pacotes para instalar aplica&#xe7;&#xf5;es no k8s"/>
+<node CREATED="1671473672682" ID="Freemind_Link_1682336281" MODIFIED="1671473679131" TEXT="Existem reporit&#xf3;rios chart">
+<node CREATED="1671473713434" ID="Freemind_Link_6059570" MODIFIED="1671473839267" TEXT="https://bitnami.com/stacks/helm"/>
+</node>
+</node>
+<node CREATED="1671474348291" ID="Freemind_Link_682533238" MODIFIED="1671474352556" TEXT="Instala&#xe7;&#xe3;o">
+<node COLOR="#0000ff" CREATED="1671474353203" ID="Freemind_Link_924370711" MODIFIED="1671474363031" TEXT="sudo snap install helm --classic"/>
+<node CREATED="1671474622577" ID="Freemind_Link_629643079" MODIFIED="1671474735023" TEXT="O helm usa o mesmo arquivo&#xa;de configura&#xe7;&#xe3;o que o kubectl">
+<node CREATED="1671474682730" ID="Freemind_Link_1137051552" MODIFIED="1671474697029" TEXT="Inicialmente o helm procura pelo valor da vari&#xe1;vel KUBECONFIG"/>
+<node CREATED="1671474701434" ID="Freemind_Link_24577852" MODIFIED="1671474728108" TEXT="Caso a vari&#xe1;vel KUBECONFIG n&#xe3;o esteja definida, usar&#xe1; o path default: ~/.kube/config"/>
+<node CREATED="1671474631939" ID="Freemind_Link_46741474" MODIFIED="1671474658924" TEXT="~/.kube/config">
+<node CREATED="1671474770363" ID="Freemind_Link_1710938835" MODIFIED="1671474777219" TEXT="Esse arquivo &#xe9; criado pelo kubectl"/>
+</node>
+</node>
+<node CREATED="1674483015884" ID="Freemind_Link_1043591368" MODIFIED="1674483018534" TEXT="Bash copmpletion">
+<node COLOR="#0000ff" CREATED="1674483020012" ID="Freemind_Link_300909844" MODIFIED="1674483031226" TEXT="source &lt;(helm completion bash)"/>
+</node>
+</node>
+<node CREATED="1673638861219" ID="Freemind_Link_331377770" MODIFIED="1674483111338" TEXT="O Helm usa objetos &apos;secret&apos; para guardar as informa&#xe7;&#xf5;es dos diferentes releases das aplica&#xe7;&#xf5;es instaladas pelo helm">
+<node CREATED="1673638896475" ID="Freemind_Link_1359651522" MODIFIED="1673638923079" TEXT="I.e., a cada &apos;helm upgrade&apos; um novo secret &#xe9; gerado para guardar as informa&#xe7;&#xf5;es da nova vers&#xe3;o"/>
+</node>
+<node CREATED="1671473010429" ID="Freemind_Link_1632526206" MODIFIED="1671476613402" TEXT="Reposit&#xf3;rios">
+<arrowlink COLOR="#ff0000" DESTINATION="Freemind_Link_157236652" ENDARROW="Default" ENDINCLINATION="122;0;" ID="Freemind_Arrow_Link_715842288" STARTARROW="Default" STARTINCLINATION="122;0;"/>
+<node CREATED="1671473015381" ID="Freemind_Link_370762049" MODIFIED="1671473019125" TEXT="bitnami">
+<node CREATED="1671476228391" ID="Freemind_Link_30839386" MODIFIED="1671476229627" TEXT="https://github.com/bitnami/charts"/>
+<node CREATED="1671473020261" ID="Freemind_Link_684385258" MODIFIED="1671473022085" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1067039071" MODIFIED="1671473090447" TEXT="helm upgrade apache bitnami/apache --namespace=web"/>
+</node>
+</node>
+</node>
+<node CREATED="1671476115424" ID="Freemind_Link_1434820482" MODIFIED="1671476117476" TEXT="Comandos">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_561152433" MODIFIED="1674482761066" TEXT="helm">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_157236652" MODIFIED="1671476613403" TEXT="repo">
+<node CREATED="1671476134786" ID="Freemind_Link_1895236695" MODIFIED="1671476141147" TEXT="Manipula os reposit&#xf3;rios do Helm"/>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1303839124" MODIFIED="1671476149147" TEXT="list">
+<node CREATED="1671474838444" ID="Freemind_Link_377767629" MODIFIED="1671476564874" TEXT="Lista os reposit&#xf3;rios atualmente diospon&#xed;veis ao helm instalado na sua m&#xe1;quina"/>
+<node CREATED="1671474907180" ID="Freemind_Link_1584408753" MODIFIED="1671474914755" TEXT="Inicialmente a lista de reposit&#xf3;rios vem vazia"/>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1766010273" MODIFIED="1671476157107" TEXT="add bitnami https://charts.bitnami.com/bitnami">
+<node CREATED="1671475682186" ID="Freemind_Link_1508953156" MODIFIED="1671475690875" TEXT="Adiciona o reposit&#xf3;rio bitnami ao helm"/>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_132307201" MODIFIED="1671476545218" TEXT="remove bitnami ">
+<node CREATED="1671475682186" ID="Freemind_Link_1068962850" MODIFIED="1671476553147" TEXT="Remove o reposit&#xf3;rio bitnami do helm"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1920676182" MODIFIED="1671476168276" TEXT="search repo mysql">
+<node CREATED="1671475682186" ID="Freemind_Link_240837337" MODIFIED="1671475825883" TEXT="Pesquisa por charts &apos;mysql&apos; nos reposit&#xf3;rios">
+<node CREATED="1671475943193" ID="Freemind_Link_583025954" MODIFIED="1671475959371" TEXT="N&#xe3;o s&#xf3; no nome da aplica&#xe7;&#xe3;o, mas tamb&#xe9;m em outros campos, como a descri&#xe7;&#xe3;o"/>
+</node>
+<node CREATED="1671475833344" ID="Freemind_Link_1775405358" MODIFIED="1671475848820" TEXT="A resposta indicar&#xe1; em qual reposit&#xf3;rio a aplica&#xe7;&#xe3;o foi encontrada"/>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1592618314" MODIFIED="1673628224637" TEXT="--versions">
+<icon BUILTIN="flag"/>
+<node CREATED="1671475928977" ID="Freemind_Link_1988300038" MODIFIED="1671476060160" TEXT="Por padr&#xe3;o a resposta s&#xf3; retorna a &#xfa;ltima vers&#xe3;o do chart. Adicionando&#xa;essa flag, todas as vers&#xf5;es dispon&#xed;veis ser&#xe3;o exibidas na resposta"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1612410166" MODIFIED="1671477629636" TEXT="status">
+<node CREATED="1671475682186" ID="Freemind_Link_1919958090" MODIFIED="1671477509475" TEXT="Mostra o status de uma aplica&#xe7;&#xe3;o instalada pelo helm"/>
+<node CREATED="1671477511146" ID="Freemind_Link_49290979" MODIFIED="1671477525805" TEXT="Reexibe as informa&#xe7;&#xf5;es dadas no momento da instala&#xe7;&#xe3;o da aplica&#xe7;&#xe3;o">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node CREATED="1671477533633" ID="Freemind_Link_535798530" MODIFIED="1671477534483" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_878953667" MODIFIED="1671477565635" TEXT="helm status apache"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1487879052" MODIFIED="1671478368019" TEXT="list">
+<node CREATED="1671475682186" ID="Freemind_Link_463081557" MODIFIED="1671478377218" TEXT="Lista todas as aplica&#xe7;&#xf5;es instaladas pelo helm"/>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_437513542" MODIFIED="1671476814868" TEXT="--namespace=&lt;seu-namespace&gt;">
+<icon BUILTIN="flag"/>
+<node CREATED="1671476816720" ID="Freemind_Link_70729787" MODIFIED="1671478472179" TEXT="Restringe a listagem &#xe0;s aplica&#xe7;&#xf5;es de um namespace espec&#xed;fico"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" FOLDED="true" ID="Freemind_Link_577797007" MODIFIED="1671478592843" TEXT="install &lt;nome-da-instancia&gt; &lt;chart&gt;">
+<node CREATED="1671476746713" ID="Freemind_Link_1768982640" MODIFIED="1671477018164" TEXT="O nome da inst&#xe2;ncia da aplica&#xe7;&#xe3;o deve ser &#xfa;nico por namespace"/>
+<node CREATED="1671477578335" ID="Freemind_Link_606397470" MODIFIED="1671477629636" TEXT="Ser&#xe1; exibida uma lista de informa&#xe7;&#xf5;es e de a&#xe7;&#xf5;es que podem ser tomadas sobre a aplica&#xe7;&#xe3;o">
+<edge WIDTH="thin"/>
+<arrowlink DESTINATION="Freemind_Link_1612410166" ENDARROW="Default" ENDINCLINATION="864;0;" ID="Freemind_Arrow_Link_1833234741" STARTARROW="None" STARTINCLINATION="197;0;"/>
+</node>
+<node CREATED="1673650106267" ID="Freemind_Link_294395544" MODIFIED="1673650466738" TEXT="Etapas realizadas no install">
+<node CREATED="1673650124090" ID="Freemind_Link_1459704100" MODIFIED="1673650162311" TEXT="Download/carregamento do chart e de suas depend&#xea;ncias">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1673650164256" ID="Freemind_Link_1264635562" MODIFIED="1673650178913" TEXT="Parse do arquivo values.yaml">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1673650180005" ID="Freemind_Link_1580097471" MODIFIED="1673650330876" TEXT="Gera&#xe7;&#xe3;o do arquivo Yaml aplicando os valores do arquivo values.yaml">
+<icon BUILTIN="full-3"/>
+</node>
+<node CREATED="1673650220698" ID="Freemind_Link_301453215" MODIFIED="1673650234731" TEXT="Parse do Yaml para objetos kubernetes e valida&#xe7;&#xe3;o">
+<icon BUILTIN="full-4"/>
+</node>
+<node CREATED="1673650335103" ID="Freemind_Link_1182242414" MODIFIED="1673650351041" TEXT="Gera&#xe7;&#xe3;o do yaml final e publica&#xe7;&#xe3;o dele no cluster k8s">
+<icon BUILTIN="full-5"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_232002542" MODIFIED="1673650448738" TEXT="--dry-run">
+<icon BUILTIN="flag"/>
+<node CREATED="1671476816720" ID="Freemind_Link_1924012131" MODIFIED="1673650466741" TEXT="Executa apenas as 4 primeiras etapas do &apos;helm install&apos;">
+<arrowlink DESTINATION="Freemind_Link_294395544" ENDARROW="Default" ENDINCLINATION="247;0;" ID="Freemind_Arrow_Link_825339786" STARTARROW="None" STARTINCLINATION="247;0;"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_867954588" MODIFIED="1673650958382" TEXT="--template">
+<icon BUILTIN="flag"/>
+<node CREATED="1671476816720" ID="Freemind_Link_1340541194" MODIFIED="1673651041094" TEXT="Semelhantemente ao --dry-run, executa apenas as 4 primeiras etapas do &apos;helm install&apos;, mas n&#xe3;o exibe informa&#xe7;&#xf5;es extras. Exibe apenas os templates de manifestos k8s gerados, que podem ser aplicados diretamente no cluster via comando kubectl">
+<arrowlink DESTINATION="Freemind_Link_294395544" ENDARROW="Default" ENDINCLINATION="247;0;" ID="Freemind_Arrow_Link_751009720" STARTARROW="None" STARTINCLINATION="247;0;"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1036289187" MODIFIED="1671476814868" TEXT="--namespace=&lt;seu-namespace&gt;">
+<icon BUILTIN="flag"/>
+<node CREATED="1671476816720" ID="Freemind_Link_54608769" MODIFIED="1674484878533" TEXT="Cria a aplica&#xe7;&#xe3;o em um namespace espec&#xed;fico">
+<node CREATED="1671476816720" ID="Freemind_Link_1419185665" MODIFIED="1674484887845" TEXT="O namespace precisar existir previamente"/>
+<node CREATED="1674484839571" ID="Freemind_Link_1222698578" MODIFIED="1674484852852" TEXT="Caso queiras criar o namespace, adicione a flag &apos;--create-namespace&apos;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1398801921" MODIFIED="1674484915589" TEXT="--create-namespace">
+<icon BUILTIN="flag"/>
+<node CREATED="1674484921468" ID="Freemind_Link_1768830498" MODIFIED="1674484955293" TEXT="Por adr&#xe3;o o namespace precisa existir antes de se usar a flag --namespace. Caso ela n&#xe3;o exista, poder&#xe1; ser criada automaticamente com o uso desta flag."/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1270318077" MODIFIED="1671479292570" TEXT="--set variavel=valor">
+<icon BUILTIN="flag"/>
+<node CREATED="1671476816720" ID="Freemind_Link_887245582" MODIFIED="1671479322034" TEXT="Um meio pelo qual se pode passar valor parametrizado para o helm"/>
+<node CREATED="1671479322337" ID="Freemind_Link_180891837" MODIFIED="1671479443966" TEXT="N&#xe3;o &#xe9; o meio mais recomendado">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1671479353553" ID="Freemind_Link_492931396" MODIFIED="1671479360570" TEXT="O ideal &#xe9; usar um arquivo de propriedades"/>
+</node>
+<node CREATED="1671476763968" ID="Freemind_Link_1055351446" MODIFIED="1671476765139" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1679428508" MODIFIED="1671479569914" TEXT="... --set auth.rootPassword=minhasenha"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1913257783" MODIFIED="1671479676034" TEXT="--values &lt;path-arquivo-yaml&gt;">
+<icon BUILTIN="flag"/>
+<node CREATED="1671476816720" ID="Freemind_Link_1242673912" MODIFIED="1671479756095" TEXT="Informa o arquivo yaml de propriedades dos&#xa;par&#xe2;metros para o helm construir a aplica&#xe7;&#xe3;o"/>
+<node CREATED="1671479424958" ID="Freemind_Link_912225127" MODIFIED="1671479443966" TEXT="Mais recomendado que usar --set">
+<arrowlink DESTINATION="Freemind_Link_180891837" ENDARROW="Default" ENDINCLINATION="46;0;" ID="Freemind_Arrow_Link_764500312" STARTARROW="Default" STARTINCLINATION="46;0;"/>
+</node>
+<node CREATED="1671476763968" ID="Freemind_Link_1319268618" MODIFIED="1671479780017" TEXT="Ex:">
+<node CREATED="1671479780003" ID="Freemind_Link_1349980670" MODIFIED="1671479783450" TEXT="Comando">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1585397693" MODIFIED="1671479699395" TEXT="... --values /home/user/values.yaml"/>
+</node>
+<node CREATED="1671479772744" ID="Freemind_Link_1122442701" MODIFIED="1671479778250" TEXT="Arquivo values.yaml">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1937766746" MODIFIED="1671479617902" TEXT="auth:&#xa;    rootPassword: &quot;minhasenha&quot;"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_126955866" MODIFIED="1674496475532" TEXT="--wait">
+<icon BUILTIN="flag"/>
+<node CREATED="1671476816720" ID="Freemind_Link_1117004742" MODIFIED="1674496024330" TEXT="Por padr&#xe3;o o helm termina a execu&#xe7;&#xe3;o do comando &apos;install&apos; assim que envia os manifestos ao k8s. Esta flag far&#xe1; o helm aguardar os services, deployments e pods estarem carregados e operantes antes de encerrar a execu&#xe7;&#xe3;o"/>
+<node CREATED="1674496060524" ID="Freemind_Link_1827868596" MODIFIED="1674496071011" TEXT="A espera ser&#xe1; de at&#xe9; 300 segundos">
+<node CREATED="1674496075250" ID="Freemind_Link_1839816504" MODIFIED="1674496087514" TEXT="Caso o tempo expire, ser&#xe1; considerado falha da instala&#xe7;&#xe3;o"/>
+<node CREATED="1674496110385" ID="Freemind_Link_31500680" MODIFIED="1674496125018" TEXT="Pode ser alterado com a flag &apos;--timeout&apos;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1910540766" MODIFIED="1674496479034" TEXT="--timeout &lt;tempo-limite&gt;">
+<icon BUILTIN="flag"/>
+<node CREATED="1674496060524" ID="Freemind_Link_1656670684" MODIFIED="1674496156578" TEXT="Altera o tempo limite de espera que por padr&#xe3;o &#xe9; 300 segundos"/>
+<node CREATED="1674496254932" ID="Freemind_Link_1900786101" MODIFIED="1674496265754" TEXT="Em CI/CD &#xe9; recomendado usar o tempo de 10 minutos"/>
+<node CREATED="1674496157179" ID="Freemind_Link_761931530" MODIFIED="1674496176242" TEXT="Formato: XmYs, onde X &#xe9; a quantidade de minutos e Y &#xe9; a quantidade de segundos"/>
+<node CREATED="1674496184608" ID="Freemind_Link_780851852" MODIFIED="1674496186113" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1367383972" MODIFIED="1674496199571" TEXT="helm install apache bitnami/apache --wait --timeout 5m20s"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1201856958" MODIFIED="1674496321010" TEXT="--atomic">
+<icon BUILTIN="flag"/>
+<node CREATED="1671476816720" ID="Freemind_Link_1277057981" MODIFIED="1674496361063" TEXT="Caso a instala&#xe7;&#xe3;o n&#xe3;o seja bem sucedida, o helm far&#xe1; o rollback automaticamente para a vers&#xe3;o anterior em vez de deixar a instala&#xe7;&#xe3;o no status &apos;failure&apos;"/>
+<node CREATED="1674496381847" ID="Freemind_Link_1741643828" MODIFIED="1674496411120" TEXT="Esta flag habilita automaticamente a flag &apos;--wait&apos;. N&#xe3;o &#xe9; preciso explicit&#xe1;-la">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_715283979" MODIFIED="1674496184628" TEXT="--timeout &lt;tempo-limite&gt;">
+<icon BUILTIN="flag"/>
+<node CREATED="1674496060524" ID="Freemind_Link_1661298642" MODIFIED="1674496479035" TEXT="Uso semelhante ao da flag &apos;--wait&apos;">
+<arrowlink DESTINATION="Freemind_Link_1910540766" ENDARROW="Default" ENDINCLINATION="259;0;" ID="Freemind_Arrow_Link_1775069322" STARTARROW="None" STARTINCLINATION="259;0;"/>
+</node>
+</node>
+</node>
+<node CREATED="1671476763968" ID="Freemind_Link_1379212044" MODIFIED="1671476765139" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1095899767" MODIFIED="1671473099194" TEXT="helm install apache bitnami/apache --namespace=web"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" FOLDED="true" ID="Freemind_Link_281192878" MODIFIED="1671478621626" TEXT="uninstall &lt;nome-da-instancia&gt;">
+<node CREATED="1671476746713" ID="Freemind_Link_383947260" MODIFIED="1671478645578" TEXT="Desinstala do cluster uma aplica&#xe7;&#xe3;o instalada pelo helm">
+<node CREATED="1671478646080" ID="Freemind_Link_575899911" MODIFIED="1671478659371" TEXT="Todos os objetos criados para a aplica&#xe7;&#xe3;o ser&#xe3;o removidos em um &#xfa;nico comando"/>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_896554784" MODIFIED="1671476814868" TEXT="--namespace=&lt;seu-namespace&gt;">
+<icon BUILTIN="flag"/>
+<node CREATED="1671476816720" ID="Freemind_Link_1366915189" MODIFIED="1671478735691" TEXT="Remove a aplica&#xe7;&#xe3;o de um namespace espec&#xed;fico"/>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1873609770" MODIFIED="1673638514192" TEXT="--keep-history">
+<icon BUILTIN="flag"/>
+<node CREATED="1671476816720" ID="Freemind_Link_1272999263" MODIFIED="1673638615555" TEXT="A cada upgrade, o helm cria secrets de backup para viabilizar eventuais rollbacks. Ao fazer o uninstall esse hist&#xf3;rico ser&#xe1; exclu&#xed;do, a menos que voc&#xea; passe a flag --keep-history no comando."/>
+<node CREATED="1674484536744" ID="Freemind_Link_1424506238" MODIFIED="1674484552724" TEXT="N&#xe3;o usar esta flag impossibilitar&#xe1; a opera&#xe7;&#xe3;o de rollback"/>
+</node>
+<node CREATED="1671476763968" ID="Freemind_Link_1113905239" MODIFIED="1671476765139" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_705272085" MODIFIED="1671478673667" TEXT="helm uninstall apache"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" FOLDED="true" ID="Freemind_Link_976076979" MODIFIED="1673638296863" TEXT="upgrade  &lt;nome-da-instancia&gt; &lt;chart&gt;">
+<node CREATED="1671476816720" ID="Freemind_Link_1811489867" MODIFIED="1674475927310" TEXT="A cada upgrade, o helm cria secrets de backup, no K8s, para viabilizar eventuais rollbacks">
+<node CREATED="1674475927277" ID="Freemind_Link_1100286795" MODIFIED="1674475929119" TEXT="Ex:">
+<node CREATED="1674475793589" ID="Freemind_Link_188820090" MODIFIED="1674475943337" TEXT="sh.helm.release.v1.mydb.v1"/>
+<node CREATED="1674475793589" ID="Freemind_Link_110055828" MODIFIED="1674475952175" TEXT="sh.helm.release.v1.mydb.v2"/>
+</node>
+</node>
+<node CREATED="1671475682186" ID="Freemind_Link_800364685" MODIFIED="1673638183954" TEXT="Atualiza a aplica&#xe7;&#xe3;o obtendo a vers&#xe3;o mais recente dos charts"/>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_659010749" MODIFIED="1673638158873" TEXT="--reuse-values">
+<icon BUILTIN="flag"/>
+<node CREATED="1671476816720" ID="Freemind_Link_135334850" MODIFIED="1673638341478" TEXT="Por padr&#xe3;o, caso voc&#xea; n&#xe3;o informe --set ou --values, o helm usar&#xe1; os valores default (sobrescrevendo os valores atuais). Usar --reuse-values evita isso."/>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1564798995" MODIFIED="1674495354469" TEXT="--install">
+<icon BUILTIN="flag"/>
+<node CREATED="1671476816720" ID="Freemind_Link_189265389" MODIFIED="1674495402847" TEXT="Ideal para uso em CI/CD. Caso a aplica&#xe7;&#xe3;o n&#xe3;o esteja instalada, ser&#xe1; efetuada a a&#xe7;&#xe3;o &apos;helm install&apos;. Caso contr&#xe1;rio, ser&#xe1; efetuada a a&#xe7;&#xe3;o &apos;helm upgrade&apos;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_617595343" MODIFIED="1674496609761" TEXT="--force">
+<icon BUILTIN="flag"/>
+<node CREATED="1674496544798" ID="Freemind_Link_31835198" MODIFIED="1674496643886" TEXT="Por padr&#xe3;o, apenas os pods que tiverem modifica&#xe7;&#xe3;o nos valores (values) ser&#xe3;o reiniciados. Os demais n&#xe3;o ser&#xe3;o atualizados. Esta flag for&#xe7;ar&#xe1; a reinicializa&#xe7;&#xe3;o de todos os pods (pois o helm excluir&#xe1; e recriar&#xe1; o deployment)"/>
+<node CREATED="1674496668278" ID="Freemind_Link_1934383835" MODIFIED="1674496675266" TEXT="O Downtime da aplica&#xe7;&#xe3;o fica maior">
+<node CREATED="1674496676407" ID="Freemind_Link_421473703" MODIFIED="1674496692009" TEXT="N&#xe3;o &#xe9; recomendado seu uso em CI/CD"/>
+</node>
+</node>
+<node CREATED="1671476763968" ID="Freemind_Link_1541546228" MODIFIED="1671476765139" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1038995409" MODIFIED="1673638277892" TEXT="helm upgrade apache bitnami/apache --reuse-values"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1674482761031" FOLDED="true" ID="Freemind_Link_1945200167" MODIFIED="1674482788278" TEXT="get">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_888860017" MODIFIED="1674482766661" TEXT="notes &lt;nome-da-instancia&gt;">
+<node CREATED="1671475682186" ID="Freemind_Link_1144867441" MODIFIED="1674477286832" TEXT="Exibe as infomra&#xe7;&#xf5;es de release da aplica&#xe7;&#xe3;o mantida pelo helm"/>
+<node CREATED="1671476763968" ID="Freemind_Link_1679608402" MODIFIED="1671476765139" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1541594778" MODIFIED="1674477301511" TEXT="helm get notes mydb"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1813648959" MODIFIED="1674482800605" TEXT="values &lt;nome-da-instancia&gt;">
+<node CREATED="1671475682186" ID="Freemind_Link_456381399" MODIFIED="1674482816605" TEXT="Exibe os valores atualmente usados na aplica&#xe7;&#xe3;o">
+<node CREATED="1674482817074" ID="Freemind_Link_703920648" MODIFIED="1674483163245" TEXT="Apenas os customizados pela flag --set ou --values"/>
+<node CREATED="1674483165257" ID="Freemind_Link_1153587991" MODIFIED="1674483177317" TEXT="Caso queira ver todos os valores, adicione a flag --all"/>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1970837391" MODIFIED="1674483185957" TEXT="--all">
+<icon BUILTIN="flag"/>
+<node CREATED="1671476816720" ID="Freemind_Link_380341415" MODIFIED="1674483213360" TEXT="Por padr&#xe3;o apenas osa valores customizados ser&#xe3;o exibidos. Para ver todos os valores usados, use esta flag"/>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1530633453" MODIFIED="1674484297637" TEXT="--revision &lt;n&#xfa;mero-da-vers&#xe3;o&gt;">
+<icon BUILTIN="flag"/>
+<node CREATED="1671476816720" ID="Freemind_Link_1634840261" MODIFIED="1674483447184" TEXT="Se quiser ver os valores usados em uma vers&#xe3;o espec&#xed;fica, use esta flag"/>
+<node CREATED="1674484326242" ID="Freemind_Link_1185820748" LINK="#Freemind_Link_1535669124" MODIFIED="1674484401428" TEXT="O n&#xfa;mero da vers&#xe3;o pode ser obtido da listagem do &apos;helm history&apos;"/>
+<node CREATED="1671476763968" ID="Freemind_Link_1968024445" MODIFIED="1671476765139" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1945224914" MODIFIED="1674483459638" TEXT="helm get values mydb --revision 1"/>
+</node>
+</node>
+<node CREATED="1671476763968" ID="Freemind_Link_1336091325" MODIFIED="1671476765139" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_781262244" MODIFIED="1674482839405" TEXT="helm get values mydb"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_768978532" MODIFIED="1674483517901" TEXT="manifest &lt;nome-da-instancia&gt;">
+<node CREATED="1671475682186" ID="Freemind_Link_24463668" MODIFIED="1674483537877" TEXT="Exibe os manifestos usados para a aplica&#xe7;&#xe3;o em execu&#xe7;&#xe3;o"/>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_326729530" MODIFIED="1674484311453" TEXT="--revision &lt;n&#xfa;mero-da-vers&#xe3;o&gt;">
+<icon BUILTIN="flag"/>
+<node CREATED="1671476816720" ID="Freemind_Link_1718768122" MODIFIED="1674483677237" TEXT="Se quiser ver os manifestos usados em uma vers&#xe3;o espec&#xed;fica, use esta flag"/>
+<node CREATED="1674484326242" ID="Freemind_Link_1757696728" LINK="#Freemind_Link_1535669124" MODIFIED="1674484401428" TEXT="O n&#xfa;mero da vers&#xe3;o pode ser obtido da listagem do &apos;helm history&apos;"/>
+<node CREATED="1671476763968" ID="Freemind_Link_260142789" MODIFIED="1671476765139" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_63971177" MODIFIED="1674483684565" TEXT="helm get manifest mydb --revision 1"/>
+</node>
+</node>
+<node CREATED="1671476763968" ID="Freemind_Link_848637594" MODIFIED="1671476765139" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_747876898" MODIFIED="1674483549813" TEXT="helm get manifest mydb"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1535669124" MODIFIED="1674484003781" TEXT="history &lt;nome-da-instancia&gt;">
+<node CREATED="1671476816720" ID="Freemind_Link_980329810" MODIFIED="1674484372181" TEXT="Exibe o hist&#xf3;rico de instala&#xe7;&#xf5;es e upgrades de uma aplica&#xe7;&#xe3;o mantida pelo helm"/>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" FOLDED="true" ID="Freemind_Link_1582206470" MODIFIED="1674484259709" TEXT="rollback &lt;nome-da-instancia&gt; &lt;n&#xfa;mero-da-vers&#xe3;o&gt;">
+<node CREATED="1671476816720" ID="Freemind_Link_740381426" MODIFIED="1674484285173" TEXT="Desfaz um upgrade e reverte a aplica&#xe7;&#xe3;o para a vers&#xe3;o especificada"/>
+<node CREATED="1674484326242" ID="Freemind_Link_1529920730" LINK="#Freemind_Link_1535669124" MODIFIED="1674484401428" TEXT="O n&#xfa;mero da vers&#xe3;o pode ser obtido da listagem do &apos;helm history&apos;"/>
+<node CREATED="1674484621753" ID="Freemind_Link_187908131" LINK="#Freemind_Link_1873609770" MODIFIED="1674484660668" TEXT="A opera&#xe7;&#xe3;o de rollback n&#xe3;o ser&#xe1; poss&#xed;vel ap&#xf3;s uma opera&#xe7;&#xe3;o &apos;uninstall&apos; caso n&#xe3;o tenha sido usada a flag &apos;--keep-history&apos;">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" FOLDED="true" ID="Freemind_Link_1595392160" MODIFIED="1674497400921" TEXT="template">
+<node CREATED="1671475682186" ID="Freemind_Link_295369063" MODIFIED="1674497416313" TEXT="Exibe o template dos manifestos usados na instala&#xe7;&#xe3;o da aplica&#xe7;&#xe3;o"/>
+<node CREATED="1674497418534" ID="Freemind_Link_1564867241" MODIFIED="1674497428681" TEXT="&#xc9; comum combinar com o uso da flag &apos;--dry-run&apos;"/>
+<node CREATED="1674497495087" ID="Freemind_Link_846420614" LINK="#Freemind_Link_867954588" MODIFIED="1674497525800" TEXT="Ver flag &apos;--template&apos; do &apos;helm install&apos;"/>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1090133502" MODIFIED="1673650448738" TEXT="--dry-run">
+<icon BUILTIN="flag"/>
+<node CREATED="1671476816720" ID="Freemind_Link_1928653658" MODIFIED="1674497463194" TEXT="N&#xe3;o executa o passo de instala&#xe7;&#xe3;o definitivo da aplica&#xe7;&#xe3;o no cluster">
+<arrowlink DESTINATION="Freemind_Link_294395544" ENDARROW="Default" ENDINCLINATION="247;0;" ID="Freemind_Arrow_Link_1425495211" STARTARROW="None" STARTINCLINATION="247;0;"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" FOLDED="true" ID="Freemind_Link_79969328" MODIFIED="1674505228671" TEXT="create &lt;nome-da-aplicacao&gt;">
+<node CREATED="1671475682186" ID="Freemind_Link_1784131419" MODIFIED="1674505198535" TEXT="Cria um novo chart">
+<node CREATED="1674505199221" ID="Freemind_Link_1417303857" MODIFIED="1674505208415" TEXT="Inicialmente cria um chart baseado no Nginx"/>
+<node CREATED="1674505383955" ID="Freemind_Link_1078323375" MODIFIED="1674505392975" TEXT="Objetos criados">
+<node CREATED="1674505393547" ID="Freemind_Link_925684398" MODIFIED="1674507066402" TEXT="Arquivo Chart.yaml">
+<icon BUILTIN="full-1"/>
+<node CREATED="1674505810024" ID="Freemind_Link_1090652853" MODIFIED="1674505816272" TEXT="Cont&#xe9;m os metadados do projeto"/>
+<node CREATED="1674506351829" ID="Freemind_Link_246141462" MODIFIED="1674506356078" TEXT="Valores adicionais">
+<node COLOR="#ff0000" CREATED="1674506356776" FOLDED="true" ID="Freemind_Link_217206916" MODIFIED="1674506421510" TEXT="icon">
+<node CREATED="1674506366837" ID="Freemind_Link_1904526744" MODIFIED="1674506385575" TEXT="&#xcd;cone a ser usados por ferramentas UI que manipulam os charts"/>
+<node CREATED="1674506387276" ID="Freemind_Link_1050672849" MODIFIED="1674506399887" TEXT="Ex: icon: http://meusite.com/meuicone.jpg"/>
+</node>
+<node COLOR="#ff0000" CREATED="1674506356776" FOLDED="true" ID="Freemind_Link_1912590541" MODIFIED="1674506449207" TEXT="keywords">
+<node CREATED="1674506366837" ID="Freemind_Link_763066210" MODIFIED="1674506590343" TEXT="Lista de palavras que descrevem o projeto"/>
+<node CREATED="1674506387276" ID="Freemind_Link_1473569810" MODIFIED="1674506494874" TEXT="Ex:&#xa;keywords:&#xa;  - seguran&#xe7;a&#xa;  - autentica&#xe7;&#xe3;o&#xa;  - controle de usu&#xe1;rios   "/>
+</node>
+<node COLOR="#ff0000" CREATED="1674506356776" FOLDED="true" ID="Freemind_Link_224713947" MODIFIED="1674506532198" TEXT="home">
+<node CREATED="1674506366837" ID="Freemind_Link_235946834" MODIFIED="1674506539199" TEXT="Url do seu projeto"/>
+<node CREATED="1674506387276" ID="Freemind_Link_312903039" MODIFIED="1674506552031" TEXT="Ex: home: http://meuprojeto.com"/>
+</node>
+<node COLOR="#ff0000" CREATED="1674506356776" FOLDED="true" ID="Freemind_Link_304075366" MODIFIED="1674506574631" TEXT="sources">
+<node CREATED="1674506366837" ID="Freemind_Link_243237115" MODIFIED="1674506649063" TEXT="Lista de fontes de onde o projeto pode ser baixado"/>
+<node CREATED="1674506387276" ID="Freemind_Link_1334495989" MODIFIED="1674506617847" TEXT="Ex:&#xa;sources:&#xa;  - http://pagina1.com&#xa;  - http://pagina2.com&#xa;  - http://pagina3.com"/>
+</node>
+<node COLOR="#ff0000" CREATED="1674506356776" FOLDED="true" ID="Freemind_Link_1991519697" MODIFIED="1674506687838" TEXT="maintainers">
+<node CREATED="1674506366837" ID="Freemind_Link_1681275325" MODIFIED="1674506695519" TEXT="Lista dos mantenedores do projeto"/>
+<node CREATED="1674506387276" ID="Freemind_Link_230931173" MODIFIED="1674506741594" TEXT="Ex:&#xa;maintainers:&#xa;  - name: fulano de tal&#xa;    email: fulanodetal@email.com&#xa;  - name: beltrano de tal&#xa;    email: beltranodetal@email.com"/>
+</node>
+</node>
+</node>
+<node CREATED="1674505401070" ID="Freemind_Link_1858431836" MODIFIED="1674507069856" TEXT="Arquivo values.yaml">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1674505405957" ID="Freemind_Link_773257410" MODIFIED="1674507072232" TEXT="Pasta charts">
+<icon BUILTIN="full-3"/>
+</node>
+<node CREATED="1674505409373" ID="Freemind_Link_1483664119" MODIFIED="1674507075321" TEXT="Pasta templates">
+<icon BUILTIN="full-4"/>
+<node CREATED="1674506887271" ID="Freemind_Link_407025777" MODIFIED="1674506905414" TEXT="A parte din&#xe2;mica dos templates usa a sintaxe da linguagem &apos;Google Go&apos;"/>
+<node CREATED="1674507033924" ID="Freemind_Link_676758833" MODIFIED="1674507039278" TEXT="Arquivo _helpers.tpl">
+<node CREATED="1674507130748" ID="Freemind_Link_507867507" MODIFIED="1674507161038" TEXT="Cont&#xe9;m m&#xe9;todos que ser&#xe3;o aplicados a todos os arquivos de template yaml da pasta  &apos;templates&apos;"/>
+</node>
+<node CREATED="1674507050500" ID="Freemind_Link_1950610410" MODIFIED="1674507054818" TEXT="Pasta tests"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_732823028" MODIFIED="1673650448738" TEXT="--dry-run">
+<icon BUILTIN="flag"/>
+<node CREATED="1671476816720" ID="Freemind_Link_1040413008" MODIFIED="1674497463194" TEXT="N&#xe3;o executa o passo de instala&#xe7;&#xe3;o definitivo da aplica&#xe7;&#xe3;o no cluster">
+<arrowlink DESTINATION="Freemind_Link_294395544" ENDARROW="Default" ENDINCLINATION="247;0;" ID="Freemind_Arrow_Link_79845502" STARTARROW="None" STARTINCLINATION="247;0;"/>
+</node>
+</node>
+<node CREATED="1674505233756" ID="Freemind_Link_408384807" MODIFIED="1674505235072" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1970905134" MODIFIED="1674505250808" TEXT="helm create myfirstchart"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" FOLDED="true" ID="Freemind_Link_1723080927" MODIFIED="1674507968582" TEXT="package &lt;nome-da-pasta-dos-charts&gt;">
+<node CREATED="1671475682186" ID="Freemind_Link_847808039" MODIFIED="1674508090782" TEXT="Exporta o projeto helm em um arquivo tar-gzip">
+<node CREATED="1674508050123" ID="Freemind_Link_1426263476" MODIFIED="1674508068431" TEXT="O nome do arquivo ser&#xe1; composto pelo nome do chart, a vers&#xe3;o do chart e a extens&#xe3;o tgz"/>
+</node>
+<node CREATED="1674508457770" ID="Freemind_Link_341983045" MODIFIED="1674508461590" TEXT="Arquivo .helmignore">
+<node CREATED="1674508531085" ID="Freemind_Link_1249204860" MODIFIED="1674508536689" TEXT="https://helm.sh/docs/chart_template_guide/helm_ignore_file/">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1674508462900" ID="Freemind_Link_1604272527" MODIFIED="1674508494894" TEXT="Pode ser usado para instruir o comando &apos;helm package&apos; para ignorar arquivos na hora de criar o pacote de exporta&#xe7;&#xe3;o (arquivo tgz)"/>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_985418136" MODIFIED="1674508155262" TEXT="--dependenci-update ou -u">
+<icon BUILTIN="flag"/>
+<node CREATED="1671476816720" ID="Freemind_Link_1385000274" MODIFIED="1674508217486" TEXT="Baixa para a pasta &apos;charts&apos;, antes de criar o pacote, as vers&#xf5;es mais atualizadas dos charts dos quais o projeto depende"/>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1648801443" MODIFIED="1674508359042" TEXT="--destination &lt;caminho-da-pasta-destino&gt; ou &#xa;-d &lt;caminho-da-pasta-destino&gt;">
+<icon BUILTIN="flag"/>
+<node CREATED="1671476816720" ID="Freemind_Link_156619892" MODIFIED="1674508308260" TEXT="Indica a pasta de destino do arquivo de pacote gerado. Por padr&#xe3;o ele &#xe9; gerado na pasta corrente"/>
+</node>
+<node CREATED="1674505233756" ID="Freemind_Link_178915918" MODIFIED="1674505235072" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_907189189" MODIFIED="1674508010670" TEXT="helm package myfirstchart"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" FOLDED="true" ID="Freemind_Link_1224246490" MODIFIED="1674508644702" TEXT="lint &lt;nome-da-pasta-dos-charts&gt;">
+<node CREATED="1671475682186" ID="Freemind_Link_4599251" MODIFIED="1674508669374" TEXT="Varre os templates do projeto e verifica se h&#xe1; erros de sintaxe ou identa&#xe7;&#xe3;o"/>
+<node CREATED="1674508734971" ID="Freemind_Link_1990972793" MODIFIED="1674508751638" TEXT="&#xc9; recomendado usar esta ferramenta no CI/CD para verificar os templates antes de us&#xe1;-los"/>
+<node CREATED="1674505233756" ID="Freemind_Link_1817366320" MODIFIED="1674505235072" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_675889059" MODIFIED="1674508677910" TEXT="helm lint myfirstchart"/>
+</node>
 </node>
 </node>
 </node>
