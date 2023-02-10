@@ -5321,7 +5321,7 @@
 <icon BUILTIN="messagebox_warning"/>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1671473023021" FOLDED="true" ID="Freemind_Link_1595392160" MODIFIED="1674497400921" TEXT="template">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1595392160" MODIFIED="1674497400921" TEXT="template">
 <node CREATED="1671475682186" ID="Freemind_Link_295369063" MODIFIED="1674497416313" TEXT="Exibe o template dos manifestos usados na instala&#xe7;&#xe3;o da aplica&#xe7;&#xe3;o"/>
 <node CREATED="1674497418534" ID="Freemind_Link_1564867241" MODIFIED="1674497428681" TEXT="&#xc9; comum combinar com o uso da flag &apos;--dry-run&apos;"/>
 <node CREATED="1674497495087" ID="Freemind_Link_846420614" LINK="#Freemind_Link_867954588" MODIFIED="1674497525800" TEXT="Ver flag &apos;--template&apos; do &apos;helm install&apos;"/>
@@ -5415,6 +5415,230 @@
 <node CREATED="1674508734971" ID="Freemind_Link_1990972793" MODIFIED="1674508751638" TEXT="&#xc9; recomendado usar esta ferramenta no CI/CD para verificar os templates antes de us&#xe1;-los"/>
 <node CREATED="1674505233756" ID="Freemind_Link_1817366320" MODIFIED="1674505235072" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_675889059" MODIFIED="1674508677910" TEXT="helm lint myfirstchart"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1676047009037" ID="Freemind_Link_1406439761" MODIFIED="1676047011522" TEXT="Templates">
+<node CREATED="1676047099334" ID="Freemind_Link_272069308" MODIFIED="1676047107795" TEXT="S&#xe3;o baseados na linguagem Go Language"/>
+<node CREATED="1676047019893" ID="Freemind_Link_884558446" MODIFIED="1676047040657" TEXT="Actions s&#xe3;o blocos entre 2 pares de chaves">
+<node CREATED="1676047179967" ID="Freemind_Link_1959960272" MODIFIED="1676047193068" TEXT="O que estiver entre essas chaves ser&#xe1; processado dinamicamente"/>
+<node CREATED="1676047133862" ID="Freemind_Link_1269726532" MODIFIED="1676047160907" TEXT="Tudo o que n&#xe3;o estiver entre essas chaves ser&#xe1; reproduzido como est&#xe1; na sa&#xed;da"/>
+<node CREATED="1676047041949" ID="Freemind_Link_1161844178" MODIFIED="1676047042857" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1885327816" MODIFIED="1676047070585" TEXT="{{ include &quot;firstchart.fullname&quot; .}}"/>
+</node>
+</node>
+<node CREATED="1676059506270" ID="Freemind_Link_1997998868" MODIFIED="1676059508864" TEXT="Operadores">
+<node COLOR="#0000ff" CREATED="1676047284897" ID="Freemind_Link_793365265" MODIFIED="1676047343150" TEXT="&apos;-&apos;">
+<node CREATED="1676047287577" ID="Freemind_Link_1588947973" MODIFIED="1676047409239" TEXT="O h&#xed;fen &#xe9; usado para instruir o template a suprimir espa&#xe7;os no resultado final (no in&#xed;cio e/ou no final do texto de sa&#xed;da&#xa;"/>
+<node CREATED="1676047041949" ID="Freemind_Link_1087018491" MODIFIED="1676047042857" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1523136442" MODIFIED="1676047364086" TEXT="{{- include &quot;firstchart.fullname&quot; .}}"/>
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_245401681" MODIFIED="1676047441647" TEXT="{{&quot;meu texto&quot;    -}}"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1676047284897" ID="Freemind_Link_594429412" MODIFIED="1676047774540" TEXT="&apos;.&apos;">
+<node CREATED="1676047287577" ID="Freemind_Link_19237211" MODIFIED="1676048272660" TEXT="O ponto representa toda informa&#xe7;&#xe3;o&#xa;que o template pode usar">
+<node CREATED="1676048258840" ID="Freemind_Link_915498489" MODIFIED="1676048264787" TEXT="&#xc9; o elemento raiz (root)"/>
+<node CREATED="1676047858787" ID="Freemind_Link_1110785717" MODIFIED="1676047866862" TEXT="Ele tem sub-objetos">
+<node COLOR="#0000ff" CREATED="1676047867282" ID="Freemind_Link_552385412" MODIFIED="1676047912718" TEXT="Values">
+<node CREATED="1676047884098" ID="Freemind_Link_78731976" MODIFIED="1676047901342" TEXT="Cont&#xe9;m todas as informa&#xe7;&#xf5;es do arquivo values.yaml"/>
+<node CREATED="1676047041949" ID="Freemind_Link_1068490550" MODIFIED="1676047042857" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_753212630" MODIFIED="1676047823733" TEXT="{{ .Values.replicaCount }}"/>
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_30148547" MODIFIED="1676047999000" TEXT="{{- if not .Values.autoscaling.enabled }}&#xa;replicas: {{ .Values.replicaCount }}&#xa;{{- end }}"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1676047867282" ID="Freemind_Link_1633323658" MODIFIED="1676048377973" TEXT="Chart">
+<node CREATED="1676047884098" ID="Freemind_Link_1139168428" MODIFIED="1676048387773" TEXT="Cont&#xe9;m todas as informa&#xe7;&#xf5;es do arquivo Chart.yaml"/>
+<node CREATED="1676047041949" ID="Freemind_Link_1745006471" MODIFIED="1676047042857" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1877376194" MODIFIED="1676048418110" TEXT="{{ .Chart.Name }}"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1676047867282" ID="Freemind_Link_1341212091" MODIFIED="1676048698794" TEXT="Release">
+<node CREATED="1676047884098" ID="Freemind_Link_1486925467" MODIFIED="1676048718778" TEXT="Cont&#xe9;m todas as informa&#xe7;&#xf5;es do release da aplica&#xe7;&#xe3;o"/>
+<node CREATED="1676047041949" ID="Freemind_Link_890285580" MODIFIED="1676047042857" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_362438958" MODIFIED="1676048862501" TEXT="{{ .Release.Name }}"/>
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_847834617" MODIFIED="1676048859660" TEXT="{{ .Release.NameSpace }}"/>
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1955552920" MODIFIED="1676048911693" TEXT="{{ .Release.IsInstall }}">
+<node CREATED="1676048927546" ID="Freemind_Link_1095926018" MODIFIED="1676048943221" TEXT="Booleano que indica se a a&#xe7;&#xe3;o do helm &#xe9; de instala&#xe7;&#xe3;o"/>
+</node>
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_806763455" MODIFIED="1676048955742" TEXT="{{ .Release.isUpgrade }}">
+<node CREATED="1676048927546" ID="Freemind_Link_929524173" MODIFIED="1676048960998" TEXT="Booleano que indica se a a&#xe7;&#xe3;o do helm &#xe9; de atualiza&#xe7;&#xe3;o"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1676047867282" ID="Freemind_Link_670455869" MODIFIED="1676049225026" TEXT="Template">
+<node CREATED="1676047884098" ID="Freemind_Link_676964446" MODIFIED="1676049284931" TEXT="Cont&#xe9;m todas as informa&#xe7;&#xf5;es do template sendo usado na gera&#xe7;&#xe3;o dos manifestos"/>
+<node CREATED="1676047041949" ID="Freemind_Link_1377705344" MODIFIED="1676047042857" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_531462705" MODIFIED="1676049297099" TEXT="{{ .Template.Name }}">
+<node CREATED="1676049407441" ID="Freemind_Link_275662393" MODIFIED="1676049431277" TEXT="Indica qual &#xe9; o caminho completo do arquivo de template que gera o manifesto"/>
+</node>
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_431843589" MODIFIED="1676049368588" TEXT="{{ .Template.BasePath }}">
+<node CREATED="1676049407441" ID="Freemind_Link_469023123" MODIFIED="1676049457405" TEXT="Indica qual &#xe9; o caminho da pasta raiz onde ficam os templates"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1676047041949" ID="Freemind_Link_571090901" MODIFIED="1676047042857" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1317120280" MODIFIED="1676047823733" TEXT="{{ .Values.replicaCount }}"/>
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_317923837" MODIFIED="1676047841013" TEXT="{{ include &quot;firstchart.fullname&quot; .}}"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1676047284897" ID="Freemind_Link_125954600" MODIFIED="1676049533838" TEXT="&apos;|&apos;">
+<node CREATED="1676047287577" ID="Freemind_Link_1951316871" MODIFIED="1676049702633" TEXT="O pipe nos permite encadear execu&#xe7;&#xf5;es de comandos ou &#xa;fun&#xe7;&#xf5;es, tal qual usamos na linha de comando do unix">
+<node CREATED="1676049623692" ID="Freemind_Link_143790467" MODIFIED="1676049670361" TEXT="O output da execu&#xe7;&#xe3;o &#xe0; esquerda do pipe &#xe9; redirecionada &#xa;para o inoput da execu&#xe7;&#xe3;o &#xe0; direita do pipe"/>
+</node>
+<node CREATED="1676047041949" ID="Freemind_Link_25442012" MODIFIED="1676047042857" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_365430660" MODIFIED="1676049609847" TEXT="{{- include &quot;firstchart.fullname&quot; . | nindent 6 }}"/>
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_74781106" MODIFIED="1676049800507" TEXT="{{.Values.my.custom.data | default &quot;valordefault&quot; }}">
+<node CREATED="1676049802695" ID="Freemind_Link_22370758" MODIFIED="1676049829395" TEXT="A fun&#xe7;&#xe3;o default retornar&#xe1; o valor default informado caso a sa&#xed;da &#xe0; esquerda do pipe seja vazia ou nula"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1676047284897" ID="Freemind_Link_1406240045" MODIFIED="1676058690515" TEXT="&apos;$&apos;">
+<node CREATED="1676047287577" ID="Freemind_Link_1369432944" MODIFIED="1676058706108" TEXT="Referencia a raiz dos objetos">
+<node CREATED="1676058757544" ID="Freemind_Link_276529470" MODIFIED="1676058777245" TEXT="Geralmente n&#xe3;o &#xe9; necess&#xe1;rio. Pode-se, na maioria dos casos, usar &apos;.&apos; diretamente"/>
+<node CREATED="1676049623692" ID="Freemind_Link_975497463" MODIFIED="1676058734100" TEXT="Muito &#xfa;til quando se est&#xe1; dentro de um &apos;with&apos; e se quer acessar um objeto de n&#xed;veis acima"/>
+</node>
+<node CREATED="1676059626247" ID="Freemind_Link_1816178405" MODIFIED="1676059643130" TEXT="Tamb&#xe9;m usado para declarar vari&#xe1;veis">
+<node CREATED="1676049870040" ID="Freemind_Link_1941262519" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1744685077" MODIFIED="1676059655763" TEXT="{{ $meuBOOLEANO := true }}"/>
+</node>
+</node>
+<node CREATED="1676049870040" ID="Freemind_Link_1527534524" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_787447453" MODIFIED="1676058631163" TEXT="{{- with .Values.image }}&#xa;  {{- toYaml $.Values | nindent 4 }}&#xa;{{- end }}"/>
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_896863897" MODIFIED="1676059655763" TEXT="{{ $meuBOOLEANO := true }}"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1676047284897" ID="Freemind_Link_211472644" MODIFIED="1676059527656" TEXT="&apos;:=&apos;">
+<node CREATED="1676047287577" ID="Freemind_Link_1059228153" MODIFIED="1676060140354" TEXT="Declara uma vari&#xe1;vel e atribui um valor inicial a ela">
+<node CREATED="1676059541813" ID="Freemind_Link_875321950" MODIFIED="1676059552121" TEXT="A declara&#xe7;&#xe3;o da vari&#xe1;vel deve iniciar com &apos;$&apos;"/>
+<node CREATED="1676059554157" ID="Freemind_Link_433632158" MODIFIED="1676059565001" TEXT="O tipo da vari&#xe1;vel ser&#xe1; definido automaticamente pelo valor definido"/>
+</node>
+<node CREATED="1676060341793" ID="Freemind_Link_347360909" MODIFIED="1676060376088" TEXT="N&#xe3;o confundir com o operador &apos;=&apos;"/>
+<node CREATED="1676049870040" ID="Freemind_Link_1882885560" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_152778957" MODIFIED="1676059730036" TEXT="{{ $meuString := &quot;nome dele&quot; }}"/>
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_841011459" MODIFIED="1676059743620" TEXT="{{ $meuBOOLEANO := true }}"/>
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_976773288" MODIFIED="1676059775044" TEXT="{{ $meuvalor := .Values.image.status }}">
+<node CREATED="1676059790337" ID="Freemind_Link_1750107839" MODIFIED="1676059805156" TEXT="Se a atribui&#xe7;&#xe3;o for de um Booleano, a vari&#xe1;vel poder&#xe1; ser usada em um &apos;if&apos;">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1082173239" MODIFIED="1676059845077" TEXT="{{- if $meuvalor }} ... {{- end }}"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1676047284897" ID="Freemind_Link_303737755" MODIFIED="1676060149674" TEXT="&apos;=&apos;">
+<node CREATED="1676047287577" ID="Freemind_Link_1932853248" MODIFIED="1676060162754" TEXT="Atribui um valor a uma vari&#xe1;vel pr&#xe9;-existente">
+<node CREATED="1676059541813" ID="Freemind_Link_1347591264" MODIFIED="1676060335169" TEXT="Se a atribui&#xe7;&#xe3;o for de um tipo de dado diferente do inferido &#xa;na declara&#xe7;&#xe3;o, a atribui&#xe7;&#xe3;o ser&#xe1; ignorada (sem erro)">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1676060200080" ID="Freemind_Link_139540501" MODIFIED="1676060200843" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_967094317" MODIFIED="1676060320333" TEXT="{{ $myvar := true }}&#xa;{{ $myvar = false }}&#xa;{{- if $myvar }}&#xa;  {{&quot;Output do if&quot; | indent 2}}&#xa;{{- else }}&#xa;  {{&quot;Output do else&quot; | indent 2}}&#xa;{{- end }}">
+<node CREATED="1676060256976" ID="Freemind_Link_1827361624" MODIFIED="1676060325612" TEXT="Resultado imprimir&#xe1;  &apos;Output do else&apos;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_229111504" MODIFIED="1676060287412" TEXT="{{ $myvar := true }}&#xa;{{ $myvar = &quot;false&quot; }}&#xa;{{- if $myvar }}&#xa;  {{&quot;Output do if&quot; | indent 2}}&#xa;{{- else }}&#xa;  {{&quot;Output do else&quot; | indent 2}}&#xa;{{- end }}&#xa;">
+<node CREATED="1676060256976" ID="Freemind_Link_1770461552" MODIFIED="1676060293348" TEXT="Resultado imprimir&#xe1;  &apos;Output do if&apos;"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1676060341793" ID="Freemind_Link_1246973003" MODIFIED="1676060376087" TEXT="N&#xe3;o confundir com o operador &apos;:=&apos;">
+<arrowlink COLOR="#f00b0b" DESTINATION="Freemind_Link_347360909" ENDARROW="Default" ENDINCLINATION="135;0;" ID="Freemind_Arrow_Link_543278161" STARTARROW="Default" STARTINCLINATION="135;0;"/>
+</node>
+<node CREATED="1676049870040" ID="Freemind_Link_539856868" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_406116462" MODIFIED="1676059730036" TEXT="{{ $meuString := &quot;nome dele&quot; }}"/>
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1638846865" MODIFIED="1676059743620" TEXT="{{ $meuBOOLEANO := true }}"/>
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1859694862" MODIFIED="1676059775044" TEXT="{{ $meuvalor := .Values.image.status }}">
+<node CREATED="1676059790337" ID="Freemind_Link_740733483" MODIFIED="1676059805156" TEXT="Se a atribui&#xe7;&#xe3;o for de um Booleano, a vari&#xe1;vel poder&#xe1; ser usada em um &apos;if&apos;">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1981510457" MODIFIED="1676059845077" TEXT="{{- if $meuvalor }} ... {{- end }}"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1676049855624" ID="Freemind_Link_1622447979" MODIFIED="1676049858531" TEXT="Fun&#xe7;&#xf5;es">
+<node CREATED="1676052639898" ID="Freemind_Link_1973758538" MODIFIED="1676052640926" TEXT="https://helm.sh/docs/chart_template_guide/function_list/">
+<node CREATED="1676052643515" ID="Freemind_Link_670854408" MODIFIED="1676052648110" TEXT="Lista de fun&#xe7;&#xf5;es dispon&#xed;veis"/>
+</node>
+<node COLOR="#0000ff" CREATED="1676047041949" FOLDED="true" ID="Freemind_Link_394908233" MODIFIED="1676049912460" TEXT="default &lt;valor-default&gt;">
+<node CREATED="1676049802695" ID="Freemind_Link_1614793123" MODIFIED="1676050265858" TEXT="Retornar&#xe1; o valor default informado caso a entrada fornecida seja vazia ou n&#xe3;o exista"/>
+<node CREATED="1676049870040" ID="Freemind_Link_825576119" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1078963519" MODIFIED="1676049800507" TEXT="{{.Values.my.custom.data | default &quot;valordefault&quot; }}"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1676047041949" FOLDED="true" ID="Freemind_Link_1213187521" MODIFIED="1676050007982" TEXT="upper">
+<node CREATED="1676049802695" ID="Freemind_Link_1624953510" MODIFIED="1676050019646" TEXT="Converte todo o texto da entrada em mai&#xfa;sculas"/>
+<node CREATED="1676049870040" ID="Freemind_Link_1693886223" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1215810693" MODIFIED="1676050029966" TEXT="{{.Values.my.custom.data | upper }}"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1676047041949" FOLDED="true" ID="Freemind_Link_1889779599" MODIFIED="1676050066623" TEXT="quote">
+<node CREATED="1676049802695" ID="Freemind_Link_142837402" MODIFIED="1676050077639" TEXT="Cerca todo o texto da entrada com aspas"/>
+<node CREATED="1676049870040" ID="Freemind_Link_1694272186" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1226435548" MODIFIED="1676050082815" TEXT="{{.Values.my.custom.data | quote }}"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1676047041949" FOLDED="true" ID="Freemind_Link_1857047289" MODIFIED="1676050455885" TEXT="nindent">
+<node CREATED="1676049802695" ID="Freemind_Link_1346324276" MODIFIED="1676050476709" TEXT="Adiciona uma nova linha e a quantidade informada de espa&#xe7;os"/>
+<node CREATED="1676049870040" ID="Freemind_Link_357397892" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1209344681" MODIFIED="1676049609847" TEXT="{{- include &quot;firstchart.fullname&quot; . | nindent 6 }}"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1676047041949" FOLDED="true" ID="Freemind_Link_1225270860" MODIFIED="1676051340970" TEXT="toYaml">
+<node CREATED="1676049802695" ID="Freemind_Link_1915595698" MODIFIED="1676051360339" TEXT="L&#xea; a fonte de dados informada e a converte no formato yaml"/>
+<node CREATED="1676049870040" ID="Freemind_Link_1493101076" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_879341817" MODIFIED="1676051373659" TEXT="{{ toYaml .Values.image }}"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1676047041949" FOLDED="true" ID="Freemind_Link_1369461288" MODIFIED="1676051393651" TEXT="toJson">
+<node CREATED="1676049802695" ID="Freemind_Link_1144038389" MODIFIED="1676051397739" TEXT="L&#xea; a fonte de dados informada e a converte no formato json"/>
+<node CREATED="1676049870040" ID="Freemind_Link_1616588869" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1074081274" MODIFIED="1676051405283" TEXT="{{ toJson .Values.image }}"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1676047041949" FOLDED="true" ID="Freemind_Link_1517532574" MODIFIED="1676059272388" TEXT="with &lt;condi&#xe7;&#xe3;o&gt; - else">
+<node CREATED="1676049802695" ID="Freemind_Link_542193077" MODIFIED="1676051454012" TEXT="Passa a considerar o universo de dados a partir do contexto indicado"/>
+<node CREATED="1676058591454" ID="Freemind_Link_165029072" MODIFIED="1676058605074" TEXT="Caso precise, dentro do with, referenciar a raiz novamente, use &apos;$.&apos;">
+<node CREATED="1676049870040" ID="Freemind_Link_509573246" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_900856778" MODIFIED="1676058631163" TEXT="{{- with .Values.image }}&#xa;  {{- toYaml $.Values | nindent 4 }}&#xa;{{- end }}"/>
+</node>
+</node>
+<node CREATED="1676059277009" ID="Freemind_Link_1761690221" MODIFIED="1676059305341" TEXT="Caso o objeto passado para o &apos;with&apos; esteja vazio, o fluxo ser&#xe1; direcionado para o else"/>
+<node CREATED="1676049870040" ID="Freemind_Link_759124147" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_125826606" MODIFIED="1676051500997" TEXT="{{- with .Values.image }}&#xa;  {{- toYaml . | nindent 4 }}&#xa;{{- end }}">
+<node CREATED="1676051503033" ID="Freemind_Link_1538180153" MODIFIED="1676051526541" TEXT="Nesse caso o comando toYaml est&#xe1; processando os dados de .Values.image, que &#xe9; o contexto definido pelo &apos;with&apos;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1047417869" MODIFIED="1676059364990" TEXT="  {{- with .Values.my2 }}&#xa;      {{- toJson . | indent 2}}&#xa;  {{- else }}&#xa;    {{&quot;With vazio&quot;}}&#xa;  {{- end }}  "/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1676047041949" FOLDED="true" ID="Freemind_Link_203356834" MODIFIED="1676059235276" TEXT="if &lt;condi&#xe7;&#xe3;o&gt; -else">
+<node CREATED="1676049802695" ID="Freemind_Link_1919798892" MODIFIED="1676054840272" TEXT="Condicional. O bloco ser&#xe1; executado se a condi&#xe7;&#xe3;o fornecida for verdadeira"/>
+<node CREATED="1676055298083" ID="Freemind_Link_597113693" MODIFIED="1676059246332" TEXT="Condi&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1676047041949" ID="Freemind_Link_85316028" MODIFIED="1676055383400" TEXT="not &lt;condicao&gt;">
+<node CREATED="1676055152169" ID="Freemind_Link_628149436" MODIFIED="1676055327864" TEXT="Usado para se negar a express&#xe3;o"/>
+<node CREATED="1676049870040" ID="Freemind_Link_1575822353" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_732691974" MODIFIED="1676055175605" TEXT="  {{- if not .Values.my.flag }}&#xa;  {{&quot;Output do if&quot; | nindent 2}}&#xa;  {{- end }}"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1676047041949" ID="Freemind_Link_828699433" MODIFIED="1676055397872" TEXT="and &lt;condicao1&gt; &lt;condicao2&gt;">
+<node CREATED="1676055152169" ID="Freemind_Link_1038050975" MODIFIED="1676055360552" TEXT="Usado para avaliar se duas condi&#xe7;&#xf5;es s&#xe3;o verdadeiras"/>
+<node CREATED="1676049870040" ID="Freemind_Link_125053149" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_847560377" MODIFIED="1676055484050" TEXT="  {{- if and .Values.my.flag .Values.my.enabled}}&#xa;    {{&quot;Output do if&quot; | indent 2}}&#xa;  {{- else }}&#xa;    {{&quot;Output do else&quot; | indent 2}}&#xa;  {{- end }}"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1676047041949" ID="Freemind_Link_1292785595" MODIFIED="1676055520514" TEXT="or &lt;condicao1&gt; &lt;condicao2&gt;">
+<node CREATED="1676055152169" ID="Freemind_Link_1344734575" MODIFIED="1676055549691" TEXT="Usado para avaliar se ao menos uma de duas condi&#xe7;&#xf5;es &#xe9; verdadeira"/>
+<node CREATED="1676049870040" ID="Freemind_Link_1372612619" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1083984423" MODIFIED="1676055560043" TEXT="  {{- if or .Values.my.flag .Values.my.enabled}}&#xa;    {{&quot;Output do if&quot; | indent 2}}&#xa;  {{- else }}&#xa;    {{&quot;Output do else&quot; | indent 2}}&#xa;  {{- end }}"/>
+</node>
+</node>
+</node>
+<node CREATED="1676055152169" ID="Freemind_Link_1906714202" MODIFIED="1676055161573" TEXT="Para se negar a express&#xe3;o, use o operador &apos;not&apos;">
+<node CREATED="1676049870040" ID="Freemind_Link_1287620732" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_213691153" MODIFIED="1676055175605" TEXT="  {{- if not .Values.my.flag }}&#xa;  {{&quot;Output do if&quot; | nindent 2}}&#xa;  {{- end }}"/>
+</node>
+</node>
+<node CREATED="1676049870040" ID="Freemind_Link_1836552764" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_438240895" MODIFIED="1676054854896" TEXT="  {{- if .Values.my.flag }}&#xa;  {{&quot;Output do if&quot; | nindent 2}}&#xa;  {{- end }}"/>
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1112892811" MODIFIED="1676054960810" TEXT="  {{- if .Values.my.flag }}&#xa;    {{&quot;Output do if&quot; | nindent 2}}&#xa;  {{- else }}&#xa;    {{&quot;Output do else&quot; | nindent 2}}&#xa;  {{- end }}"/>
 </node>
 </node>
 </node>
