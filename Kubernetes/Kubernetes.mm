@@ -5048,7 +5048,7 @@
 <node CREATED="1671473002276" ID="Freemind_Link_1273132686" MODIFIED="1671473004746" POSITION="right" TEXT="Helm">
 <node CREATED="1671473620787" ID="Freemind_Link_299477442" MODIFIED="1671473625308" TEXT="Usa o conceito de charts">
 <node CREATED="1671473625682" ID="Freemind_Link_266765286" MODIFIED="1671473657629" TEXT="Charts s&#xe3;o como pacotes para instalar aplica&#xe7;&#xf5;es no k8s"/>
-<node CREATED="1671473672682" ID="Freemind_Link_1682336281" MODIFIED="1671473679131" TEXT="Existem reporit&#xf3;rios chart">
+<node CREATED="1671473672682" ID="Freemind_Link_1682336281" MODIFIED="1678730795473" TEXT="Existem reposit&#xf3;rios chart">
 <node CREATED="1671473713434" ID="Freemind_Link_6059570" MODIFIED="1671473839267" TEXT="https://bitnami.com/stacks/helm"/>
 </node>
 </node>
@@ -5061,7 +5061,7 @@
 <node CREATED="1671474770363" ID="Freemind_Link_1710938835" MODIFIED="1671474777219" TEXT="Esse arquivo &#xe9; criado pelo kubectl"/>
 </node>
 </node>
-<node CREATED="1674483015884" ID="Freemind_Link_1043591368" MODIFIED="1674483018534" TEXT="Bash copmpletion">
+<node CREATED="1674483015884" ID="Freemind_Link_1043591368" MODIFIED="1678730820845" TEXT="Bash completion">
 <node COLOR="#0000ff" CREATED="1674483020012" ID="Freemind_Link_300909844" MODIFIED="1674483031226" TEXT="source &lt;(helm completion bash)"/>
 </node>
 </node>
@@ -5077,12 +5077,248 @@
 </node>
 </node>
 </node>
-<node CREATED="1671476115424" ID="Freemind_Link_1434820482" MODIFIED="1671476117476" TEXT="Comandos">
+<node CREATED="1678903017214" ID="Freemind_Link_293541" MODIFIED="1678903020744" TEXT="Depend&#xea;ncias">
+<node CREATED="1678903023838" ID="Freemind_Link_557930368" MODIFIED="1678911155703" TEXT="Devem ser registradas&#xa;no arquivo Chart.yaml">
+<arrowlink DESTINATION="Freemind_Link_1737549383" ENDARROW="Default" ENDINCLINATION="309;0;" ID="Freemind_Arrow_Link_1974428628" STARTARROW="Default" STARTINCLINATION="309;0;"/>
+<node CREATED="1678903034781" ID="Freemind_Link_552949639" MODIFIED="1678903035824" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1991282112" MODIFIED="1678903602967" TEXT="dependencies:&#xa;  - name: mysql&#xa;    version: &quot;9.6.0&quot;&#xa;    repository: &quot;http://charts.bitnami.com/bitnami&quot;"/>
+</node>
+</node>
+<node CREATED="1678904266171" ID="Freemind_Link_540619647" MODIFIED="1678904267312" TEXT="Campos">
+<node COLOR="#ff0000" CREATED="1678904268452" FOLDED="true" ID="Freemind_Link_1707527115" MODIFIED="1678911425180" TEXT="name">
+<node CREATED="1678904271044" ID="Freemind_Link_825537434" MODIFIED="1678904461010" TEXT="Nome do chart a ser instalado&#xa;como depend&#xea;ncia">
+<node CREATED="1678904367441" ID="Freemind_Link_873202446" MODIFIED="1678904437649" TEXT="Veja a rela&#xe7;&#xe3;o do que tem dispon&#xed;vel&#xa;pesquisando o reposit&#xf3;rio:">
+<node COLOR="#0005ff" CREATED="1678904381426" ID="Freemind_Link_1832278212" MODIFIED="1678904390910" TEXT="helm search repo bitnami">
+<node CREATED="1678904557271" ID="Freemind_Link_1063155187" MODIFIED="1678904566825" TEXT="Neste caso, &apos;bitnami&apos; &#xe9; o nome do reposit&#xf3;rio"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#ff0000" CREATED="1678904282836" FOLDED="true" ID="Freemind_Link_1198363328" MODIFIED="1678904627346" TEXT="version">
+<node CREATED="1678904286572" ID="Freemind_Link_608843259" MODIFIED="1678904291112" TEXT="Vers&#xe3;o do chart a ser baixado">
+<node CREATED="1678904367441" ID="Freemind_Link_1424676437" MODIFIED="1678904493654" TEXT="Veja as vers&#xf5;es dispon&#xed;veis&#xa;pesquisando o reposit&#xf3;rio:">
+<node COLOR="#0005ff" CREATED="1678904381426" ID="Freemind_Link_862418792" MODIFIED="1678904541287" TEXT="helm search repo mysql --versions">
+<arrowlink DESTINATION="Freemind_Link_1988300038" ENDARROW="Default" ENDINCLINATION="225;0;" ID="Freemind_Arrow_Link_1653483291" STARTARROW="None" STARTINCLINATION="225;0;"/>
+</node>
+</node>
+</node>
+<node CREATED="1678906075603" ID="Freemind_Link_1737549383" MODIFIED="1678906193980" TEXT="Ao fazer o download das depend&#xea;ncias, ser&#xe1; gerado o arquivo&#xa;Chart.lock com a exata vers&#xe3;o das depend&#xea;ncias baixadas"/>
+<node CREATED="1678904707060" ID="Freemind_Link_1443031174" MODIFIED="1678904717912" TEXT="Operadores:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_260367037" MODIFIED="1678905252903" TEXT="&gt;, &lt;, &#xa;&gt;=, &lt;=, &#xa;=, !=">
+<node CREATED="1678904765983" ID="Freemind_Link_760788693" MODIFIED="1678905214734" TEXT="Indica que a vers&#xe3;o deve respeitar&#xa;o operador de compara&#xe7;&#xe3;o utilizado">
+<node CREATED="1678904786026" ID="Freemind_Link_351617729" MODIFIED="1678904787204" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_818247787" MODIFIED="1678904843934" TEXT="dependencies:&#xa;  - name: mysql&#xa;    version: &quot;&gt;= 9.6.0&quot;&#xa;    repository: &quot;http://charts.bitnami.com/bitnami&quot;"/>
+</node>
+</node>
+</node>
+<node COLOR="#ff0000" CREATED="1671473023021" ID="Freemind_Link_1124587533" MODIFIED="1678905511556" TEXT="and&#xa;|">
+<node CREATED="1678904765983" ID="Freemind_Link_190263697" MODIFIED="1678905019235" TEXT="Operador l&#xf3;gico que permite colocar&#xa;mais de uma restri&#xe7;&#xe3;o de vers&#xe3;o">
+<node CREATED="1678904786026" ID="Freemind_Link_217573288" MODIFIED="1678904787204" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1272193983" MODIFIED="1678905412887" TEXT="dependencies:&#xa;  - name: mysql&#xa;    version: &quot;&gt;= 8.8.6 and &lt; 9.0.0&quot;&#xa;    repository: &quot;http://charts.bitnami.com/bitnami&quot;"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1353255104" MODIFIED="1678905296692" TEXT="^">
+<node CREATED="1678904765983" ID="Freemind_Link_1516154486" MODIFIED="1678905377357" TEXT="Operador shortcut para restringir at&#xe9; a&#xa;major version seguinte ao valor usado">
+<node CREATED="1678904786026" ID="Freemind_Link_453934511" MODIFIED="1678904787204" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1316723501" MODIFIED="1678905394524" TEXT="dependencies:&#xa;  - name: mysql&#xa;    version: &quot;^8.8.6&quot;&#xa;    repository: &quot;http://charts.bitnami.com/bitnami&quot;">
+<node CREATED="1678905398206" ID="Freemind_Link_1456955461" MODIFIED="1678905419448" TEXT="Equivalete a">
+<arrowlink COLOR="#f6090c" DESTINATION="Freemind_Link_1272193983" ENDARROW="Default" ENDINCLINATION="107;0;" ID="Freemind_Arrow_Link_1540754140" STARTARROW="None" STARTINCLINATION="107;0;"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1678905427157" ID="Freemind_Link_669574649" MODIFIED="1678905454415" TEXT="Ex:">
+<node COLOR="#f6090c" CREATED="1678905455928" ID="Freemind_Link_1438288717" MODIFIED="1678905499154" TEXT="^1.3.4">
+<node CREATED="1678905466578" ID="Freemind_Link_1392717366" MODIFIED="1678905474073" TEXT="Equivalente a">
+<node COLOR="#ff0000" CREATED="1678905481345" ID="Freemind_Link_299113116" MODIFIED="1678905570704" TEXT="&gt;=1.3.4 and &lt; 2.0.0"/>
+</node>
+</node>
+<node COLOR="#f6090c" CREATED="1678905455928" ID="Freemind_Link_882634986" MODIFIED="1678905580637" TEXT="^1.3.x">
+<node CREATED="1678905466578" ID="Freemind_Link_1558482882" MODIFIED="1678905474073" TEXT="Equivalente a">
+<node COLOR="#ff0000" CREATED="1678905481345" ID="Freemind_Link_1720155574" MODIFIED="1678905589822" TEXT="&gt;=1.3.0 and &lt; 2.0.0"/>
+</node>
+</node>
+<node COLOR="#f6090c" CREATED="1678905455928" ID="Freemind_Link_156702662" MODIFIED="1678905602557" TEXT="^2.x">
+<node CREATED="1678905466578" ID="Freemind_Link_84752132" MODIFIED="1678905474073" TEXT="Equivalente a">
+<node COLOR="#ff0000" CREATED="1678905481345" ID="Freemind_Link_1926232054" MODIFIED="1678905618950" TEXT="&gt;=2.0.0 and &lt; 3.0.0"/>
+</node>
+</node>
+<node COLOR="#f6090c" CREATED="1678905455928" ID="Freemind_Link_1191402199" MODIFIED="1678905645654" TEXT="^0.2.4">
+<node CREATED="1678905466578" ID="Freemind_Link_1038627601" MODIFIED="1678905474073" TEXT="Equivalente a">
+<node COLOR="#ff0000" CREATED="1678905481345" ID="Freemind_Link_1315392980" MODIFIED="1678905663219" TEXT="&gt;=0.2.4 and &lt; 0.3.0"/>
+</node>
+</node>
+<node COLOR="#f6090c" CREATED="1678905455928" ID="Freemind_Link_511230822" MODIFIED="1678905671599" TEXT="^0">
+<node CREATED="1678905466578" ID="Freemind_Link_1798048311" MODIFIED="1678905474073" TEXT="Equivalente a">
+<node COLOR="#ff0000" CREATED="1678905481345" ID="Freemind_Link_105231894" MODIFIED="1678905685573" TEXT="&gt;=0.0.0 and &lt; 1.0.0"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1446173559" MODIFIED="1678905857204" TEXT="~">
+<node CREATED="1678904765983" ID="Freemind_Link_435444562" MODIFIED="1678905866933" TEXT="Operador shortcut para restringir at&#xe9; a&#xa;minor version seguinte ao valor usado">
+<node CREATED="1678904786026" ID="Freemind_Link_806734949" MODIFIED="1678904787204" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_177039321" MODIFIED="1678905878732" TEXT="dependencies:&#xa;  - name: mysql&#xa;    version: &quot;~8.8.6&quot;&#xa;    repository: &quot;http://charts.bitnami.com/bitnami&quot;"/>
+</node>
+</node>
+<node CREATED="1678905427157" ID="Freemind_Link_1449674058" MODIFIED="1678905454415" TEXT="Ex:">
+<node COLOR="#f6090c" CREATED="1678905455928" ID="Freemind_Link_1525795441" MODIFIED="1678905887824" TEXT="~1.3.4">
+<node CREATED="1678905466578" ID="Freemind_Link_1010408983" MODIFIED="1678905474073" TEXT="Equivalente a">
+<node COLOR="#ff0000" CREATED="1678905481345" ID="Freemind_Link_1356978652" MODIFIED="1678905898419" TEXT="&gt;=1.3.4 and &lt; 1.4.0"/>
+</node>
+</node>
+<node COLOR="#f6090c" CREATED="1678905455928" ID="Freemind_Link_1109571451" MODIFIED="1678905910696" TEXT="~2">
+<node CREATED="1678905466578" ID="Freemind_Link_1887024542" MODIFIED="1678905474073" TEXT="Equivalente a">
+<node COLOR="#ff0000" CREATED="1678905481345" ID="Freemind_Link_901480247" MODIFIED="1678905922912" TEXT="&gt;= 2 and &lt; 3"/>
+</node>
+</node>
+<node COLOR="#f6090c" CREATED="1678905455928" ID="Freemind_Link_1153586863" MODIFIED="1678905938247" TEXT="~2.3">
+<node CREATED="1678905466578" ID="Freemind_Link_113246014" MODIFIED="1678905474073" TEXT="Equivalente a">
+<node COLOR="#ff0000" CREATED="1678905481345" ID="Freemind_Link_478816144" MODIFIED="1678905949575" TEXT="&gt;= 2.3 and &lt; 2.4"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#ff0000" CREATED="1678904587422" FOLDED="true" ID="Freemind_Link_782461634" MODIFIED="1678904605085" TEXT="repository">
+<node CREATED="1678904286572" ID="Freemind_Link_1497706145" MODIFIED="1678906627181" TEXT="URL do reposit&#xf3;rio de onde o&#xa;Chart dever&#xe1; ser baixado">
+<node CREATED="1678904367441" ID="Freemind_Link_1123973542" MODIFIED="1678906486703" TEXT="Veja os reposit&#xf3;rios dispon&#xed;veis&#xa;listando os reposit&#xf3;rios cadastrados:">
+<node COLOR="#0005ff" CREATED="1678904381426" ID="Freemind_Link_143756541" MODIFIED="1678906494243" TEXT="helm repo list">
+<arrowlink DESTINATION="Freemind_Link_1988300038" ENDARROW="Default" ENDINCLINATION="225;0;" ID="Freemind_Arrow_Link_128422693" STARTARROW="None" STARTINCLINATION="225;0;"/>
+</node>
+</node>
+<node CREATED="1678906389434" ID="Freemind_Link_1068547853" MODIFIED="1678906675604" TEXT="Pode ser usado o nome do&#xa;reposit&#xf3;rio, precedendo-o&#xa;com um &apos;@&apos;, em vez de usar a URL">
+<node CREATED="1678906581598" ID="Freemind_Link_296432187" MODIFIED="1678906664427" TEXT="N&#xe3;o &#xe9; recomendado pois requer que o&#xa;reposit&#xf3;rio tenha sido previamente adicionado">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node CREATED="1678904786026" ID="Freemind_Link_1713374471" MODIFIED="1678904787204" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1453934431" MODIFIED="1678906378760" TEXT="dependencies:&#xa;  - name: mysql&#xa;    version: &quot;~8.8.6&quot;&#xa;    repository: &quot;@bitnami&quot;"/>
+</node>
+</node>
+<node CREATED="1678904786026" ID="Freemind_Link_1609572841" MODIFIED="1678904787204" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_426872557" MODIFIED="1678905878732" TEXT="dependencies:&#xa;  - name: mysql&#xa;    version: &quot;~8.8.6&quot;&#xa;    repository: &quot;http://charts.bitnami.com/bitnami&quot;"/>
+</node>
+</node>
+</node>
+<node COLOR="#ff0000" CREATED="1678904587422" FOLDED="true" ID="Freemind_Link_513294424" MODIFIED="1678909817771" TEXT="condition">
+<node CREATED="1678904286572" ID="Freemind_Link_345458098" MODIFIED="1678907533946" TEXT="Condi&#xe7;&#xe3;o a ser checada para instalar&#xa;ou n&#xe3;o a depend&#xea;ncia declarada">
+<node CREATED="1678909750882" ID="Freemind_Link_414345325" MODIFIED="1678909813906" TEXT="Caso precise usar muitas condi&#xe7;&#xf5;es (ao trabalhar com&#xa;v&#xe1;rias depend&#xea;ncias), o ideal &#xe9; usar &apos;tags&apos; em vez de &apos;condition&apos;">
+<arrowlink COLOR="#10f144" DESTINATION="Freemind_Link_1400146475" ENDARROW="Default" ENDINCLINATION="804;0;" ID="Freemind_Arrow_Link_766214152" STARTARROW="None" STARTINCLINATION="804;0;"/>
+</node>
+<node CREATED="1678907536804" ID="Freemind_Link_754636987" MODIFIED="1678907612048" TEXT="A vari&#xe1;vel usada na condi&#xe7;&#xe3;o deve estar&#xa;declarada no arquivo values.yaml">
+<node CREATED="1678904786026" ID="Freemind_Link_1969429480" MODIFIED="1678904787204" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_942106534" MODIFIED="1678907566112" TEXT="mysql:&#xa;   enabled: false"/>
+</node>
+</node>
+<node CREATED="1678904786026" ID="Freemind_Link_848911533" MODIFIED="1678904787204" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_721823296" MODIFIED="1678907589002" TEXT="dependencies:&#xa;  - name: mysql&#xa;    version: &quot;~8.8.6&quot;&#xa;    repository: &quot;http://charts.bitnami.com/bitnami&quot;&#xa;    condition: mysql.enabled"/>
+</node>
+</node>
+</node>
+<node COLOR="#ff0000" CREATED="1678904587422" FOLDED="true" ID="Freemind_Link_1400146475" MODIFIED="1678909800238" TEXT="tags">
+<node CREATED="1678904286572" ID="Freemind_Link_1087189403" MODIFIED="1678909011037" TEXT="Multiplas condi&#xe7;&#xf5;es a serem checadas para&#xa;instalar ou n&#xe3;o a depend&#xea;ncia declarada.">
+<node CREATED="1678909013241" ID="Freemind_Link_1351629177" MODIFIED="1678909824418" TEXT="Substitui o uso de &apos;condition&apos;">
+<arrowlink COLOR="#08f60e" DESTINATION="Freemind_Link_513294424" ENDARROW="Default" ENDINCLINATION="492;0;" ID="Freemind_Arrow_Link_1038956153" STARTARROW="None" STARTINCLINATION="492;0;"/>
+</node>
+<node CREATED="1678907536804" ID="Freemind_Link_1324355616" MODIFIED="1678909049050" TEXT="As tags usadas na condi&#xe7;&#xe3;o devem estar&#xa;declaradas no arquivo values.yaml">
+<node CREATED="1678904786026" ID="Freemind_Link_605785636" MODIFIED="1678904787204" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1059292253" MODIFIED="1678909698947" TEXT="tags:&#xa;   mysqlenabled: false&#xa;   sgbdenabled: true"/>
+</node>
+</node>
+<node CREATED="1678909616469" ID="Freemind_Link_762120978" MODIFIED="1678909640315" TEXT="Caso se declare e use mais de uma tag,&#xa;ser&#xe1; feita a opera&#xe7;&#xe3;o &apos;OR&apos; entre elas">
+<node CREATED="1678909643243" ID="Freemind_Link_586533521" MODIFIED="1678909673291" TEXT="Bastar&#xe1; uma estar com o valor &apos;true&apos; para&#xa;que a depend&#xea;ncia seja baixada e instalada"/>
+</node>
+<node CREATED="1678904786026" ID="Freemind_Link_1182695891" MODIFIED="1678904787204" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_169145722" MODIFIED="1678909711898" TEXT="dependencies:&#xa;  - name: mysql&#xa;    version: &quot;~8.8.6&quot;&#xa;    repository: &quot;http://charts.bitnami.com/bitnami&quot;&#xa;    tags:&#xa;        - mysqlenabled&#xa;        - sgbdenabled">
+<node CREATED="1678909714002" ID="Freemind_Link_1649267540" MODIFIED="1678909734952" TEXT="Neste caso, como sgbdenabled est&#xe1; com o&#xa;valor &apos;true&apos;, a depend&#xea;ncia ser&#xe1; baixada"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#ff0000" CREATED="1678913311276" ID="Freemind_Link_1553273976" MODIFIED="1678913326058" TEXT="import-values">
+<node CREATED="1678911712829" ID="Freemind_Link_842210330" MODIFIED="1678913395207" TEXT="Importa valores do values.yaml do chart filho"/>
+<node CREATED="1678912236577" FOLDED="true" ID="Freemind_Link_1031353294" MODIFIED="1678913346368" TEXT="Importando valores&#xa;exportados">
+<node CREATED="1678912250926" ID="Freemind_Link_983418199" MODIFIED="1678912337329" TEXT="Neste caso o values.yaml do chart&#xa;filho tem uma se&#xe7;&#xe3;o &apos;export&apos;">
+<icon BUILTIN="full-1"/>
+<node CREATED="1678912278334" ID="Freemind_Link_783257061" MODIFIED="1678912280108" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_143719596" MODIFIED="1678912327922" TEXT="export:&#xa;    service:&#xa;        type: http&#xa;        port: 80"/>
+</node>
+</node>
+<node CREATED="1678912342063" ID="Freemind_Link_1777778562" MODIFIED="1678912417951" TEXT="Ao declarar a depend&#xea;ncia, use o atributo  &apos;import-values&apos; &#xa;e adicione o atributo que se quer importar">
+<icon BUILTIN="full-2"/>
+<node CREATED="1678912278334" ID="Freemind_Link_794190155" MODIFIED="1678912280108" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_594250629" MODIFIED="1678912464402" TEXT="dependencies:&#xa;  - name: mysql&#xa;    version: &quot;9.6.0&quot;&#xa;    repository: &quot;http://charts.bitnami.com/bitnami&quot;&#xa;    import-values:&#xa;        -service:"/>
+</node>
+</node>
+<node CREATED="1678912471910" ID="Freemind_Link_917123100" MODIFIED="1678912548432" TEXT="Acesse a vari&#xe1;vel do values.yaml chart filho como se &#xa;ela estivesse declarada no values.yaml do chart pai">
+<icon BUILTIN="full-3"/>
+<node CREATED="1678912278334" ID="Freemind_Link_852482253" MODIFIED="1678912280108" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_539412685" MODIFIED="1678912520354" TEXT="{{ .Values.service.type }}"/>
+</node>
+</node>
+</node>
+<node CREATED="1678912242730" FOLDED="true" ID="Freemind_Link_47253997" MODIFIED="1678913352005" TEXT="Importando valores&#xa;n&#xe3;o exportados">
+<node CREATED="1678912250926" ID="Freemind_Link_1434060919" MODIFIED="1678912754084" TEXT="Neste caso o values.yaml do chart&#xa;filho N&#xc3;O tem uma se&#xe7;&#xe3;o &apos;export&apos;">
+<icon BUILTIN="full-1"/>
+<node CREATED="1678912278334" ID="Freemind_Link_38498347" MODIFIED="1678912280108" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_514346481" MODIFIED="1678913186373" TEXT="primary:&#xa;    service:&#xa;        type: http&#xa;        port: 80"/>
+</node>
+</node>
+<node CREATED="1678912342063" ID="Freemind_Link_879038051" MODIFIED="1678912831387" TEXT="Ao declarar a depend&#xea;ncia, use o atributo  &apos;import-values&apos; &#xa;e informe qual o atributo do filho (child) a ser importado e a qual&#xa;atributo do pai (parent) ele deve ser atribu&#xed;do">
+<icon BUILTIN="full-2"/>
+<node CREATED="1678912278334" ID="Freemind_Link_1151091914" MODIFIED="1678912280108" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_139754696" MODIFIED="1678913192773" TEXT="dependencies:&#xa;  - name: mysql&#xa;    version: &quot;9.6.0&quot;&#xa;    repository: &quot;http://charts.bitnami.com/bitnami&quot;&#xa;    import-values:&#xa;        - child: primary.service&#xa;          parent: mysqlService">
+<node CREATED="1678912911579" ID="Freemind_Link_1207120189" MODIFIED="1678912928135" TEXT="O campo &apos;primary.service. deve existir no values.yaml do chart filho"/>
+<node CREATED="1678912891756" ID="Freemind_Link_28884590" MODIFIED="1678912905286" TEXT="O valor do &apos;parent&apos; pode ser escolhido livremente"/>
+</node>
+</node>
+</node>
+<node CREATED="1678912471910" ID="Freemind_Link_75795874" MODIFIED="1678912974832" TEXT="Acesse a vari&#xe1;vel do values.yaml chart filho&#xa;como se ela estivesse declarada no atributo &#xa;definido no campo &apos;parent&apos; no values.yaml do chart pai">
+<icon BUILTIN="full-3"/>
+<node CREATED="1678912278334" ID="Freemind_Link_1261777518" MODIFIED="1678912280108" TEXT="Ex:">
+<node CREATED="1678913091012" ID="Freemind_Link_636942108" MODIFIED="1678913208033" TEXT="Acessar &apos;.Values.mysqlService&apos; do chart pai na verdade &#xa;est&#xe1; acessando &apos;.Values.primary.service&apos; do chart filho">
+<arrowlink DESTINATION="Freemind_Link_514346481" ENDARROW="Default" ENDINCLINATION="655;0;" ID="Freemind_Arrow_Link_85082661" STARTARROW="None" STARTINCLINATION="655;0;"/>
+<arrowlink DESTINATION="Freemind_Link_139754696" ENDARROW="Default" ENDINCLINATION="240;0;" ID="Freemind_Arrow_Link_1711511436" STARTARROW="None" STARTINCLINATION="240;0;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_594626958" MODIFIED="1678913067268" TEXT="{{ .Values.mysqlService.type }}"/>
+</node>
+</node>
+</node>
+<node CREATED="1678913428193" ID="Freemind_Link_1231889282" MODIFIED="1678913461089" TEXT="Para sobrescrever valores do values.yaml do chart filho, veja esta nota">
+<arrowlink DESTINATION="Freemind_Link_525027192" ENDARROW="Default" ENDINCLINATION="433;0;" ID="Freemind_Arrow_Link_1474913778" STARTARROW="None" STARTINCLINATION="433;0;"/>
+</node>
+</node>
+</node>
+<node CREATED="1678911680013" ID="Freemind_Link_525027192" MODIFIED="1678913461086" TEXT="Sobrescrevendo&#xa;valores do chart filho">
+<node CREATED="1678911163675" ID="Freemind_Link_1827193617" MODIFIED="1678911223370" TEXT="Para substituir o valor de um campo do chart filho,&#xa;declare a chave no Chart do projeto come&#xe7;ando &#xa;com o nome do chart da depend&#xea;ncia">
+<node CREATED="1678911224723" ID="Freemind_Link_1397196161" MODIFIED="1678911280864" TEXT="Situa&#xe7;&#xe3;o">
+<node CREATED="1678911227108" ID="Freemind_Link_438209486" MODIFIED="1678911289873" TEXT="O chart mysql (depend&#xea;ncia) tem o atributo &#xa;&apos;auth.rootPassword&apos; em seu arquivo values.yaml">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1678911291985" ID="Freemind_Link_1895665696" MODIFIED="1678911344222" TEXT="Para sobrescrever esse valor, declare o atributo&#xa;&apos;mysql.auth.rootPassword no arquivo values.yaml do projeto">
+<icon BUILTIN="full-2"/>
+<node CREATED="1678911345689" ID="Freemind_Link_1520818516" LINK="#Freemind_Link_1707527115" MODIFIED="1678911444628" TEXT="Neste caso, &apos;mysql&apos; &#xe9; o nome do chart conforme&#xa;declarado no atributo &apos;name&apos; da depend&#xea;ncia"/>
+</node>
+</node>
+<node CREATED="1678911485040" ID="Freemind_Link_1270236961" MODIFIED="1678911485869" TEXT="Ex:">
+<node CREATED="1678911488744" ID="Freemind_Link_1865193211" MODIFIED="1678911507763" TEXT="Chart da depend&#xea;ncia (digamos &apos;mysql&apos;)">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1192168064" MODIFIED="1678911537549" TEXT="auth:&#xa;    rootPassword: teste1234"/>
+</node>
+<node CREATED="1678911488744" ID="Freemind_Link_1005169236" MODIFIED="1678911567084" TEXT="Chart do projeto principal (que inclui o &#xa;chart &apos;mysql&apos; como depend&#xea;ncia)">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1272345083" MODIFIED="1678911577171" TEXT="mysql:&#xa;    auth:&#xa;        rootPassword: teste1234"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1671476115424" FOLDED="true" ID="Freemind_Link_1434820482" MODIFIED="1671476117476" TEXT="Comandos">
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_561152433" MODIFIED="1674482761066" TEXT="helm">
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_157236652" MODIFIED="1671476613403" TEXT="repo">
 <node CREATED="1671476134786" ID="Freemind_Link_1895236695" MODIFIED="1671476141147" TEXT="Manipula os reposit&#xf3;rios do Helm"/>
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1303839124" MODIFIED="1671476149147" TEXT="list">
-<node CREATED="1671474838444" ID="Freemind_Link_377767629" MODIFIED="1671476564874" TEXT="Lista os reposit&#xf3;rios atualmente diospon&#xed;veis ao helm instalado na sua m&#xe1;quina"/>
+<node CREATED="1671474838444" ID="Freemind_Link_377767629" MODIFIED="1678730891545" TEXT="Lista os reposit&#xf3;rios atualmente dispon&#xed;veis ao helm instalado na sua m&#xe1;quina"/>
 <node CREATED="1671474907180" ID="Freemind_Link_1584408753" MODIFIED="1671474914755" TEXT="Inicialmente a lista de reposit&#xf3;rios vem vazia"/>
 </node>
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1766010273" MODIFIED="1671476157107" TEXT="add bitnami https://charts.bitnami.com/bitnami">
@@ -5099,7 +5335,7 @@
 <node CREATED="1671475833344" ID="Freemind_Link_1775405358" MODIFIED="1671475848820" TEXT="A resposta indicar&#xe1; em qual reposit&#xf3;rio a aplica&#xe7;&#xe3;o foi encontrada"/>
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1592618314" MODIFIED="1673628224637" TEXT="--versions">
 <icon BUILTIN="flag"/>
-<node CREATED="1671475928977" ID="Freemind_Link_1988300038" MODIFIED="1671476060160" TEXT="Por padr&#xe3;o a resposta s&#xf3; retorna a &#xfa;ltima vers&#xe3;o do chart. Adicionando&#xa;essa flag, todas as vers&#xf5;es dispon&#xed;veis ser&#xe3;o exibidas na resposta"/>
+<node CREATED="1671475928977" ID="Freemind_Link_1988300038" MODIFIED="1678904541283" TEXT="Por padr&#xe3;o a resposta s&#xf3; retorna a &#xfa;ltima vers&#xe3;o do chart. Adicionando&#xa;essa flag, todas as vers&#xf5;es dispon&#xed;veis ser&#xe3;o exibidas na resposta"/>
 </node>
 </node>
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1612410166" MODIFIED="1671477629636" TEXT="status">
@@ -5268,9 +5504,9 @@
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1038995409" MODIFIED="1673638277892" TEXT="helm upgrade apache bitnami/apache --reuse-values"/>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1674482761031" FOLDED="true" ID="Freemind_Link_1945200167" MODIFIED="1674482788278" TEXT="get">
+<node COLOR="#0000ff" CREATED="1674482761031" ID="Freemind_Link_1945200167" MODIFIED="1674482788278" TEXT="get">
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_888860017" MODIFIED="1674482766661" TEXT="notes &lt;nome-da-instancia&gt;">
-<node CREATED="1671475682186" ID="Freemind_Link_1144867441" MODIFIED="1674477286832" TEXT="Exibe as infomra&#xe7;&#xf5;es de release da aplica&#xe7;&#xe3;o mantida pelo helm"/>
+<node CREATED="1671475682186" ID="Freemind_Link_1144867441" MODIFIED="1678731214347" TEXT="Exibe as informa&#xe7;&#xf5;es de release da aplica&#xe7;&#xe3;o mantida pelo helm"/>
 <node CREATED="1671476763968" ID="Freemind_Link_1679608402" MODIFIED="1671476765139" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1541594778" MODIFIED="1674477301511" TEXT="helm get notes mydb"/>
 </node>
@@ -5321,7 +5557,7 @@
 <icon BUILTIN="messagebox_warning"/>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1595392160" MODIFIED="1674497400921" TEXT="template">
+<node COLOR="#0000ff" CREATED="1671473023021" FOLDED="true" ID="Freemind_Link_1595392160" MODIFIED="1674497400921" TEXT="template">
 <node CREATED="1671475682186" ID="Freemind_Link_295369063" MODIFIED="1674497416313" TEXT="Exibe o template dos manifestos usados na instala&#xe7;&#xe3;o da aplica&#xe7;&#xe3;o"/>
 <node CREATED="1674497418534" ID="Freemind_Link_1564867241" MODIFIED="1674497428681" TEXT="&#xc9; comum combinar com o uso da flag &apos;--dry-run&apos;"/>
 <node CREATED="1674497495087" ID="Freemind_Link_846420614" LINK="#Freemind_Link_867954588" MODIFIED="1674497525800" TEXT="Ver flag &apos;--template&apos; do &apos;helm install&apos;"/>
@@ -5417,9 +5653,37 @@
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_675889059" MODIFIED="1674508677910" TEXT="helm lint myfirstchart"/>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_670005046" MODIFIED="1678903633469" TEXT="dependency">
+<node CREATED="1671475682186" ID="Freemind_Link_1178053407" MODIFIED="1678903674580" TEXT="Comandos para trabalhar com as depend&#xea;ncias do Chart do projeto"/>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1777424711" MODIFIED="1678903695732" TEXT="list &lt;nome-da-instancia&gt;">
+<node CREATED="1671475682186" ID="Freemind_Link_1571386727" MODIFIED="1678903714952" TEXT="Lista as depend&#xea;ncias da aplica&#xe7;&#xe3;o mantida pelo Helm">
+<node CREATED="1678903717695" ID="Freemind_Link_1028885442" MODIFIED="1678903722531" TEXT="Depend&#xea;ncias de outros charts"/>
+</node>
+<node CREATED="1674505233756" ID="Freemind_Link_984989217" MODIFIED="1674505235072" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1779674666" MODIFIED="1678903738475" TEXT="helm dependency list firstchart"/>
 </node>
 </node>
-<node CREATED="1676047009037" ID="Freemind_Link_1406439761" MODIFIED="1676047011522" TEXT="Templates">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1615800877" MODIFIED="1678903745779" TEXT="update &lt;nome-da-instancia&gt;">
+<node CREATED="1671475682186" ID="Freemind_Link_1567570565" MODIFIED="1678903775682" TEXT="Atualiza/baixa as depend&#xea;ncias da aplica&#xe7;&#xe3;o mantida pelo Helm">
+<node CREATED="1678903717695" ID="Freemind_Link_47691249" MODIFIED="1678903722531" TEXT="Depend&#xea;ncias de outros charts"/>
+</node>
+<node CREATED="1674505233756" ID="Freemind_Link_1967252190" MODIFIED="1674505235072" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_20407845" MODIFIED="1678903782802" TEXT="helm dependency update firstchart"/>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_115344509" MODIFIED="1678903790150" TEXT="helm dependency update .">
+<node CREATED="1678903791518" ID="Freemind_Link_1117633573" MODIFIED="1678903801094" TEXT="Caso voc&#xea; j&#xe1; esteja na pasta do projeto"/>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1626460684" MODIFIED="1678903859023" TEXT="helm dependency update">
+<node CREATED="1678903791518" ID="Freemind_Link_598947704" MODIFIED="1678903801094" TEXT="Caso voc&#xea; j&#xe1; esteja na pasta do projeto"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1676047009037" FOLDED="true" ID="Freemind_Link_1406439761" MODIFIED="1676047011522" TEXT="Templates">
+<node CREATED="1676062408897" ID="Freemind_Link_1434918393" MODIFIED="1676062413145" TEXT="https://helm.sh/docs/chart_template_guide/getting_started/">
+<icon BUILTIN="attach"/>
+</node>
 <node CREATED="1676047099334" ID="Freemind_Link_272069308" MODIFIED="1676047107795" TEXT="S&#xe3;o baseados na linguagem Go Language"/>
 <node CREATED="1676047019893" ID="Freemind_Link_884558446" MODIFIED="1676047040657" TEXT="Actions s&#xe3;o blocos entre 2 pares de chaves">
 <node CREATED="1676047179967" ID="Freemind_Link_1959960272" MODIFIED="1676047193068" TEXT="O que estiver entre essas chaves ser&#xe1; processado dinamicamente"/>
@@ -5428,18 +5692,21 @@
 <node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1885327816" MODIFIED="1676047070585" TEXT="{{ include &quot;firstchart.fullname&quot; .}}"/>
 </node>
 </node>
-<node CREATED="1676059506270" ID="Freemind_Link_1997998868" MODIFIED="1676059508864" TEXT="Operadores">
-<node COLOR="#0000ff" CREATED="1676047284897" ID="Freemind_Link_793365265" MODIFIED="1676047343150" TEXT="&apos;-&apos;">
+<node CREATED="1676059506270" FOLDED="true" ID="Freemind_Link_1997998868" MODIFIED="1676059508864" TEXT="Operadores">
+<node COLOR="#0000ff" CREATED="1676047284897" FOLDED="true" ID="Freemind_Link_793365265" MODIFIED="1676047343150" TEXT="&apos;-&apos;">
 <node CREATED="1676047287577" ID="Freemind_Link_1588947973" MODIFIED="1676047409239" TEXT="O h&#xed;fen &#xe9; usado para instruir o template a suprimir espa&#xe7;os no resultado final (no in&#xed;cio e/ou no final do texto de sa&#xed;da&#xa;"/>
 <node CREATED="1676047041949" ID="Freemind_Link_1087018491" MODIFIED="1676047042857" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1523136442" MODIFIED="1676047364086" TEXT="{{- include &quot;firstchart.fullname&quot; .}}"/>
 <node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_245401681" MODIFIED="1676047441647" TEXT="{{&quot;meu texto&quot;    -}}"/>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1676047284897" ID="Freemind_Link_594429412" MODIFIED="1676047774540" TEXT="&apos;.&apos;">
+<node COLOR="#0000ff" CREATED="1676047284897" FOLDED="true" ID="Freemind_Link_594429412" MODIFIED="1676047774540" TEXT="&apos;.&apos;">
 <node CREATED="1676047287577" ID="Freemind_Link_19237211" MODIFIED="1676048272660" TEXT="O ponto representa toda informa&#xe7;&#xe3;o&#xa;que o template pode usar">
 <node CREATED="1676048258840" ID="Freemind_Link_915498489" MODIFIED="1676048264787" TEXT="&#xc9; o elemento raiz (root)"/>
 <node CREATED="1676047858787" ID="Freemind_Link_1110785717" MODIFIED="1676047866862" TEXT="Ele tem sub-objetos">
+<node CREATED="1676061446960" ID="Freemind_Link_648381980" MODIFIED="1676061453370" TEXT="https://helm.sh/docs/chart_template_guide/builtin_objects/">
+<icon BUILTIN="attach"/>
+</node>
 <node COLOR="#0000ff" CREATED="1676047867282" ID="Freemind_Link_552385412" MODIFIED="1676047912718" TEXT="Values">
 <node CREATED="1676047884098" ID="Freemind_Link_78731976" MODIFIED="1676047901342" TEXT="Cont&#xe9;m todas as informa&#xe7;&#xf5;es do arquivo values.yaml"/>
 <node CREATED="1676047041949" ID="Freemind_Link_1068490550" MODIFIED="1676047042857" TEXT="Ex:">
@@ -5481,10 +5748,25 @@
 </node>
 <node CREATED="1676047041949" ID="Freemind_Link_571090901" MODIFIED="1676047042857" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1317120280" MODIFIED="1676047823733" TEXT="{{ .Values.replicaCount }}"/>
-<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_317923837" MODIFIED="1676047841013" TEXT="{{ include &quot;firstchart.fullname&quot; .}}"/>
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_317923837" MODIFIED="1676047841013" TEXT="{{ include &quot;firstchart.fullname&quot; .}}">
+<node CREATED="1678900939527" ID="Freemind_Link_843816221" MODIFIED="1678901002204" TEXT="Ao fazer este include passando &apos;.Values&apos;, o template &apos;firstchart.fullname&apos; ter&#xe1; acesso a todos os objetos a partir do &apos;.Values&apos;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_477366832" MODIFIED="1678900984362" TEXT="{{ include &quot;firstchart.fullname&quot; .Values}}">
+<node CREATED="1678900939527" ID="Freemind_Link_1943770612" MODIFIED="1678900975862" TEXT="Ao fazer este include passando &apos;.&apos;, o template &apos;firstchart.fullname&apos; ter&#xe1; acesso a todos os objetos a partir do &apos;.&apos;"/>
+<node CREATED="1678900939527" ID="Freemind_Link_108193881" MODIFIED="1678901225726" TEXT="Nesse caso, o template &apos;firstchart.fullname&apos; n&#xe3;o poder&#xe1; &#xa;acessar o objeto &apos;.Chart&apos;, por exemplo. Nem mesmo poder&#xe1; &#xa;acessar &apos;.Values&apos;. Acessar&#xe1; apenas os elementos de &apos;.Values&apos;">
+<node CREATED="1678901110292" ID="Freemind_Link_1414879462" MODIFIED="1678901111959" TEXT="Ex:">
+<node CREATED="1678901074100" ID="Freemind_Link_326407891" MODIFIED="1678901159974" TEXT="O template &apos;firstchart.fullname&apos; poder&#xe1; usar {{- .meuvalor }}">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1678901074100" ID="Freemind_Link_1388377563" MODIFIED="1678901179493" TEXT="O template &apos;firstchart.fullname&apos; N&#xc3;O poder&#xe1; usar {{- .Values.meuvalor }}">
+<icon BUILTIN="button_cancel"/>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1676047284897" ID="Freemind_Link_125954600" MODIFIED="1676049533838" TEXT="&apos;|&apos;">
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1676047284897" FOLDED="true" ID="Freemind_Link_125954600" MODIFIED="1676049533838" TEXT="&apos;|&apos;">
 <node CREATED="1676047287577" ID="Freemind_Link_1951316871" MODIFIED="1676049702633" TEXT="O pipe nos permite encadear execu&#xe7;&#xf5;es de comandos ou &#xa;fun&#xe7;&#xf5;es, tal qual usamos na linha de comando do unix">
 <node CREATED="1676049623692" ID="Freemind_Link_143790467" MODIFIED="1676049670361" TEXT="O output da execu&#xe7;&#xe3;o &#xe0; esquerda do pipe &#xe9; redirecionada &#xa;para o inoput da execu&#xe7;&#xe3;o &#xe0; direita do pipe"/>
 </node>
@@ -5495,7 +5777,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1676047284897" ID="Freemind_Link_1406240045" MODIFIED="1676058690515" TEXT="&apos;$&apos;">
+<node COLOR="#0000ff" CREATED="1676047284897" FOLDED="true" ID="Freemind_Link_1406240045" MODIFIED="1676058690515" TEXT="&apos;$&apos;">
 <node CREATED="1676047287577" ID="Freemind_Link_1369432944" MODIFIED="1676058706108" TEXT="Referencia a raiz dos objetos">
 <node CREATED="1676058757544" ID="Freemind_Link_276529470" MODIFIED="1676058777245" TEXT="Geralmente n&#xe3;o &#xe9; necess&#xe1;rio. Pode-se, na maioria dos casos, usar &apos;.&apos; diretamente"/>
 <node CREATED="1676049623692" ID="Freemind_Link_975497463" MODIFIED="1676058734100" TEXT="Muito &#xfa;til quando se est&#xe1; dentro de um &apos;with&apos; e se quer acessar um objeto de n&#xed;veis acima"/>
@@ -5510,7 +5792,7 @@
 <node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_896863897" MODIFIED="1676059655763" TEXT="{{ $meuBOOLEANO := true }}"/>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1676047284897" ID="Freemind_Link_211472644" MODIFIED="1676059527656" TEXT="&apos;:=&apos;">
+<node COLOR="#0000ff" CREATED="1676047284897" FOLDED="true" ID="Freemind_Link_211472644" MODIFIED="1676059527656" TEXT="&apos;:=&apos;">
 <node CREATED="1676047287577" ID="Freemind_Link_1059228153" MODIFIED="1676060140354" TEXT="Declara uma vari&#xe1;vel e atribui um valor inicial a ela">
 <node CREATED="1676059541813" ID="Freemind_Link_875321950" MODIFIED="1676059552121" TEXT="A declara&#xe7;&#xe3;o da vari&#xe1;vel deve iniciar com &apos;$&apos;"/>
 <node CREATED="1676059554157" ID="Freemind_Link_433632158" MODIFIED="1676059565001" TEXT="O tipo da vari&#xe1;vel ser&#xe1; definido automaticamente pelo valor definido"/>
@@ -5526,7 +5808,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1676047284897" ID="Freemind_Link_303737755" MODIFIED="1676060149674" TEXT="&apos;=&apos;">
+<node COLOR="#0000ff" CREATED="1676047284897" FOLDED="true" ID="Freemind_Link_303737755" MODIFIED="1676060149674" TEXT="&apos;=&apos;">
 <node CREATED="1676047287577" ID="Freemind_Link_1932853248" MODIFIED="1676060162754" TEXT="Atribui um valor a uma vari&#xe1;vel pr&#xe9;-existente">
 <node CREATED="1676059541813" ID="Freemind_Link_1347591264" MODIFIED="1676060335169" TEXT="Se a atribui&#xe7;&#xe3;o for de um tipo de dado diferente do inferido &#xa;na declara&#xe7;&#xe3;o, a atribui&#xe7;&#xe3;o ser&#xe1; ignorada (sem erro)">
 <icon BUILTIN="messagebox_warning"/>
@@ -5554,11 +5836,11 @@
 </node>
 </node>
 </node>
-<node CREATED="1676049855624" ID="Freemind_Link_1622447979" MODIFIED="1676049858531" TEXT="Fun&#xe7;&#xf5;es">
+<node CREATED="1676049855624" FOLDED="true" ID="Freemind_Link_1622447979" MODIFIED="1676049858531" TEXT="Fun&#xe7;&#xf5;es">
 <node CREATED="1676052639898" ID="Freemind_Link_1973758538" MODIFIED="1676052640926" TEXT="https://helm.sh/docs/chart_template_guide/function_list/">
 <node CREATED="1676052643515" ID="Freemind_Link_670854408" MODIFIED="1676052648110" TEXT="Lista de fun&#xe7;&#xf5;es dispon&#xed;veis"/>
 </node>
-<node COLOR="#0000ff" CREATED="1676047041949" FOLDED="true" ID="Freemind_Link_394908233" MODIFIED="1676049912460" TEXT="default &lt;valor-default&gt;">
+<node COLOR="#0000ff" CREATED="1676047041949" ID="Freemind_Link_394908233" MODIFIED="1676049912460" TEXT="default &lt;valor-default&gt;">
 <node CREATED="1676049802695" ID="Freemind_Link_1614793123" MODIFIED="1676050265858" TEXT="Retornar&#xe1; o valor default informado caso a entrada fornecida seja vazia ou n&#xe3;o exista"/>
 <node CREATED="1676049870040" ID="Freemind_Link_825576119" MODIFIED="1676049871340" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1078963519" MODIFIED="1676049800507" TEXT="{{.Values.my.custom.data | default &quot;valordefault&quot; }}"/>
@@ -5594,7 +5876,7 @@
 <node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1074081274" MODIFIED="1676051405283" TEXT="{{ toJson .Values.image }}"/>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1676047041949" FOLDED="true" ID="Freemind_Link_1517532574" MODIFIED="1676059272388" TEXT="with &lt;condi&#xe7;&#xe3;o&gt; - else">
+<node COLOR="#0000ff" CREATED="1676047041949" FOLDED="true" ID="Freemind_Link_1517532574" MODIFIED="1676314893663" TEXT="with &lt;objeto&gt; - else">
 <node CREATED="1676049802695" ID="Freemind_Link_542193077" MODIFIED="1676051454012" TEXT="Passa a considerar o universo de dados a partir do contexto indicado"/>
 <node CREATED="1676058591454" ID="Freemind_Link_165029072" MODIFIED="1676058605074" TEXT="Caso precise, dentro do with, referenciar a raiz novamente, use &apos;$.&apos;">
 <node CREATED="1676049870040" ID="Freemind_Link_509573246" MODIFIED="1676049871340" TEXT="Ex:">
@@ -5639,6 +5921,66 @@
 <node CREATED="1676049870040" ID="Freemind_Link_1836552764" MODIFIED="1676049871340" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_438240895" MODIFIED="1676054854896" TEXT="  {{- if .Values.my.flag }}&#xa;  {{&quot;Output do if&quot; | nindent 2}}&#xa;  {{- end }}"/>
 <node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1112892811" MODIFIED="1676054960810" TEXT="  {{- if .Values.my.flag }}&#xa;    {{&quot;Output do if&quot; | nindent 2}}&#xa;  {{- else }}&#xa;    {{&quot;Output do else&quot; | nindent 2}}&#xa;  {{- end }}"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1676047041949" ID="Freemind_Link_1450347714" MODIFIED="1676314887427" TEXT="range &lt;objeto&gt;">
+<node CREATED="1676049802695" ID="Freemind_Link_691937755" MODIFIED="1676314920159" TEXT="Loop em uma lista de valores">
+<node CREATED="1676314923041" ID="Freemind_Link_969701271" MODIFIED="1676314930880" TEXT="Recebe um objeto do tipo lista como par&#xe2;metro"/>
+<node CREATED="1676314932203" ID="Freemind_Link_767458878" MODIFIED="1676314955928" TEXT="Tal qual o with, o &apos;.&apos; dentro do range passar&#xe1; a representar o item corrente da itera&#xe7;&#xe3;o do loop"/>
+</node>
+<node CREATED="1676315747103" ID="Freemind_Link_929495389" MODIFIED="1676315770551" TEXT="Caso queiras usar o par chave-valor, defina as vari&#xe1;veis e fa&#xe7;a a atribui&#xe7;&#xe3;o">
+<node CREATED="1676049870040" ID="Freemind_Link_1166273470" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_636046775" MODIFIED="1676315812414" TEXT="{{ range $key,$value := .Values.image }}&#xa;  {{$key}}: {{$value | quote}}&#xa;{{- end }}"/>
+</node>
+</node>
+<node CREATED="1676049870040" ID="Freemind_Link_620620443" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1896208155" MODIFIED="1676315048559" TEXT="{{ range .Values.my.custom.country }}&#xa;{{ . | upper}}&#xa;{{- end }}"/>
+</node>
+</node>
+</node>
+<node CREATED="1678898072804" FOLDED="true" ID="Freemind_Link_958394700" MODIFIED="1678898076453" TEXT="TPL">
+<node CREATED="1678898077843" ID="Freemind_Link_1872641070" MODIFIED="1678898144229" TEXT="Arquivos TPL s&#xe3;o arquivos de templates (fun&#xe7;&#xf5;es) diversas que podem ser reutilizados nos templates do helm"/>
+<node CREATED="1678898278670" ID="Freemind_Link_365440980" MODIFIED="1678898285385" TEXT="Veja o arquivo _helper.tpl"/>
+<node CREATED="1678898215686" ID="Freemind_Link_1350827633" MODIFIED="1678898229594" TEXT="Estrutura">
+<node CREATED="1678898230740" ID="Freemind_Link_1753905312" MODIFIED="1678898688658" TEXT="Come&#xe7;a com um bloco define&#xa;com o nome do template">
+<node CREATED="1676049870040" ID="Freemind_Link_53137345" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_961399782" MODIFIED="1678898276500" TEXT="{{- define &quot;firstchart.name&quot; -}}"/>
+</node>
+<node CREATED="1678898312501" ID="Freemind_Link_611237946" MODIFIED="1678898415177" TEXT="O nome do template &#xe9; na forma&#xa;&lt;namespace&gt;.&lt;nome-template&gt;">
+<node CREATED="1678898347107" ID="Freemind_Link_261725068" MODIFIED="1678898352104" TEXT="O namespace deve ser &#xfa;nico"/>
+<node CREATED="1678898352925" ID="Freemind_Link_842907071" MODIFIED="1678898515669" TEXT="N&#xe3;o confundir este namespace com o namespace do k8s. &#xa;Este namespace &#xe9; como os &apos;packages&apos; do Java"/>
+<node CREATED="1678898394117" ID="Freemind_Link_852743968" MODIFIED="1678898404759" TEXT="O nome-template &#xe9; como se fosse o nome da fun&#xe7;&#xe3;o"/>
+</node>
+</node>
+<node CREATED="1678898723802" ID="Freemind_Link_212849548" MODIFIED="1678898744295" TEXT="O corpo &#xe9; composto do uso de comandos e fun&#xe7;&#xf5;es/templates">
+<node CREATED="1676049870040" ID="Freemind_Link_45197089" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_272782195" MODIFIED="1678898776135" TEXT="{{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix &quot;-&quot; }}"/>
+</node>
+</node>
+<node CREATED="1678898230740" ID="Freemind_Link_1586866745" MODIFIED="1678898702454" TEXT="Finaliza com um bloco end">
+<node CREATED="1676049870040" ID="Freemind_Link_1454714445" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_854052001" MODIFIED="1678898717551" TEXT="{{- end }}"/>
+</node>
+</node>
+</node>
+<node CREATED="1678898983086" ID="Freemind_Link_1213823995" MODIFIED="1678899048618" TEXT="Um template pode ser usado dentro de outro">
+<node CREATED="1678898983086" ID="Freemind_Link_550539910" MODIFIED="1678899053176" TEXT="via include">
+<node CREATED="1676049870040" ID="Freemind_Link_1234665658" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_14571627" MODIFIED="1678899037123" TEXT="app.kubernetes.io/name: {{ include &quot;firstchart.name&quot; . }}"/>
+</node>
+</node>
+<node CREATED="1678898983086" ID="Freemind_Link_1070000165" MODIFIED="1678899087239" TEXT="via template">
+<node CREATED="1678899097605" ID="Freemind_Link_1507514970" MODIFIED="1678899151698" TEXT="A diferen&#xe7;a entre o template e o include &#xe9; que &#xa;n&#xe3;o se pode usar pipe (|) ao se usar template">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1676049870040" ID="Freemind_Link_939730710" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_1090732175" MODIFIED="1678899192836" TEXT="app.kubernetes.io/name: {{ template &quot;firstchart.name&quot; . | upper}}">
+<icon BUILTIN="button_cancel"/>
+</node>
+</node>
+</node>
+<node CREATED="1676049870040" ID="Freemind_Link_1948794004" MODIFIED="1676049871340" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_50270222" MODIFIED="1678899094241" TEXT="app.kubernetes.io/name: {{ template &quot;firstchart.name&quot; . }}"/>
+</node>
 </node>
 </node>
 </node>

@@ -52,7 +52,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1669136972088" ID="Freemind_Link_600435195" MODIFIED="1669136973871" TEXT="&#xcd;ndices">
+<node CREATED="1669136972088" FOLDED="true" ID="Freemind_Link_600435195" MODIFIED="1669136973871" TEXT="&#xcd;ndices">
 <node CREATED="1668784979305" FOLDED="true" ID="Freemind_Link_966445409" MODIFIED="1668784985502" TEXT="N-Grams">
 <node CREATED="1668784994355" ID="Freemind_Link_1762898708" MODIFIED="1668785074304" TEXT="Cria &#xed;ndice com os in&#xed;cios de cada termo">
 <node CREATED="1668785076567" ID="Freemind_Link_133099145" MODIFIED="1668785085513" TEXT="Ex:">
@@ -117,7 +117,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1666632077133" ID="Freemind_Link_1621754543" MODIFIED="1666632090480" TEXT="Flatenned data type">
+<node CREATED="1666632077133" FOLDED="true" ID="Freemind_Link_1621754543" MODIFIED="1666632090480" TEXT="Flatenned data type">
 <node CREATED="1666632115725" ID="Freemind_Link_769876904" MODIFIED="1666632124969" TEXT="Solu&#xe7;&#xe3;o adotada para evitar a explos&#xe3;o de mappings no ES"/>
 <node CREATED="1666632127249" ID="Freemind_Link_896251396" MODIFIED="1666632143450" TEXT="Elimina a exibi&#xe7;&#xe3;o das propriedades filhas nos mappings">
 <node CREATED="1666632145814" ID="Freemind_Link_1487436040" MODIFIED="1666632156809" TEXT="Minimiza, assim, a troca de informa&#xe7;&#xf5;es de estado entre os n&#xf3;s do cluster"/>
@@ -178,7 +178,7 @@
 <node COLOR="#0000ff" CREATED="1666111505885" ID="Freemind_Link_488183236" MODIFIED="1666631899032" TEXT="curl [...] -XGET &quot;127.0.0.1:9200/movies/_cluster/state&quot; | jsonpath &apos;..indices.movies&apos;"/>
 </node>
 </node>
-<node CREATED="1667490176946" FOLDED="true" ID="Freemind_Link_1764688607" MODIFIED="1667490182240" TEXT="_search">
+<node CREATED="1667490176946" ID="Freemind_Link_1764688607" MODIFIED="1667490182240" TEXT="_search">
 <node CREATED="1667490183195" FOLDED="true" ID="Freemind_Link_924069342" MODIFIED="1667490187845" TEXT="Query lite">
 <node CREATED="1667490188220" ID="Freemind_Link_254293144" MODIFIED="1667490192405" TEXT="Ajuda a testar consultas">
 <node CREATED="1667490282451" ID="Freemind_Link_931091295" MODIFIED="1667490297198" TEXT="Passa a consulta na url em vez de passar via Json no corpo da requisi&#xe7;&#xe3;o"/>
@@ -204,7 +204,7 @@
 <node COLOR="#0000ff" CREATED="1666111505885" ID="Freemind_Link_1339450615" MODIFIED="1669902887876" TEXT="curl [...] -XGET &quot;127.0.0.1:9200/movies/_search -d &apos;{&quot;query&quot;:{&quot;match&quot;:{&quot;title&quot;:&quot;star&quot;}}}&apos;"/>
 </node>
 </node>
-<node CREATED="1667493280695" FOLDED="true" ID="Freemind_Link_783597039" MODIFIED="1667493282670" TEXT="Filtros">
+<node CREATED="1667493280695" ID="Freemind_Link_783597039" MODIFIED="1667493282670" TEXT="Filtros">
 <node CREATED="1667493283204" ID="Freemind_Link_519444084" MODIFIED="1667493288483" TEXT="Devem ser usados sempre que poss&#xed;vel"/>
 <node CREATED="1667493289227" ID="Freemind_Link_1985302260" MODIFIED="1667493298006" TEXT="S&#xe3;o mais r&#xe1;pidos e permitem cache"/>
 <node CREATED="1667493783919" ID="Freemind_Link_1742324822" MODIFIED="1667493785194" TEXT="Tipos">
@@ -264,7 +264,7 @@
 <node COLOR="#0000ff" CREATED="1666111505885" ID="Freemind_Link_585088095" MODIFIED="1667925361107" TEXT="{&#xa;  &quot;query&quot;:{&#xa;    &quot;bool&quot;:{&#xa;      &quot;must&quot;:{&quot;match&quot;:{&quot;genre&quot;:&quot;Sci-Fi&quot;}},&#xa;      &quot;must_not&quot;:{&quot;match&quot;:{&quot;title&quot;:&quot;trek&quot;}},&#xa;      &quot;filter&quot;:{&#xa;        &quot;range&quot;:{&quot;year&quot;:{&quot;gte&quot;:2010, &quot;lt&quot;:2015}}&#xa;      }&#xa;    }&#xa;  }&#xa;}"/>
 </node>
 </node>
-<node CREATED="1667494499720" FOLDED="true" ID="Freemind_Link_1635415759" MODIFIED="1667494502443" TEXT="Tipos de queries">
+<node CREATED="1667494499720" ID="Freemind_Link_1635415759" MODIFIED="1667494502443" TEXT="Tipos de queries">
 <node CREATED="1667494503790" ID="Freemind_Link_929602379" MODIFIED="1667494506900" TEXT="match_all">
 <node CREATED="1667494508723" ID="Freemind_Link_202996138" MODIFIED="1667494513996" TEXT="Retorna todos os documentos"/>
 <node CREATED="1667494514675" ID="Freemind_Link_280353083" MODIFIED="1667494520076" TEXT="Normalmente usado com filtro"/>
@@ -425,7 +425,7 @@
 <node CREATED="1667569735667" ID="Freemind_Link_592142892" MODIFIED="1667569749302" TEXT="Indica o n&#xfa;mero da p&#xe1;gina, iniciando no 0 (zero)"/>
 </node>
 <node CREATED="1667569750203" ID="Freemind_Link_1849480697" MODIFIED="1667569752552" TEXT="size">
-<node CREATED="1667569753042" ID="Freemind_Link_278957423" MODIFIED="1667569762420" TEXT="Indica a quantidade de registros que devem ser enviados por rsposta"/>
+<node CREATED="1667569753042" ID="Freemind_Link_278957423" MODIFIED="1677592436462" TEXT="Indica a quantidade de registros que devem ser enviados por resposta"/>
 </node>
 <node CREATED="1667569766237" ID="Freemind_Link_248880724" MODIFIED="1667569777081" TEXT="Pagina&#xe7;&#xf5;es muito grandes podem degradar a performance">
 <icon BUILTIN="messagebox_warning"/>
