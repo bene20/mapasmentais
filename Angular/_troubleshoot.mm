@@ -19,5 +19,31 @@
 </node>
 </node>
 </node>
+<node CREATED="1689365450902" ID="Freemind_Link_648101693" MODIFIED="1689365452191" POSITION="right" TEXT="Debug">
+<node CREATED="1689365452732" ID="Freemind_Link_291840438" MODIFIED="1689365462583" TEXT="Para fazer debug com breakpoint no Browser">
+<node CREATED="1689365464196" ID="Freemind_Link_957542368" MODIFIED="1689365479347" TEXT="Abra o inspecionador de elementos">
+<icon BUILTIN="full-1"/>
+<node CREATED="1689365480027" ID="Freemind_Link_1405745027" MODIFIED="1689365483511" TEXT="Tecla F12"/>
+</node>
+<node CREATED="1689365488949" ID="Freemind_Link_965554707" MODIFIED="1689365503463" TEXT="Abra a aba &apos;Sources&apos;">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1689365504380" ID="Freemind_Link_1935034960" MODIFIED="1689365533738" TEXT="Na aba da esquerda, encontre  a pasta &apos;webpack://&apos;">
+<icon BUILTIN="full-3"/>
+</node>
+<node CREATED="1689365534476" ID="Freemind_Link_809543276" MODIFIED="1689365558202" TEXT="Navegue para a pasta ./src/app/...">
+<icon BUILTIN="full-4"/>
+<node CREATED="1689365559180" ID="Freemind_Link_671327908" MODIFIED="1689365580520" TEXT="At&#xe9; encontrar o arquivo Typescript que deseja debugar"/>
+</node>
+<node CREATED="1689365581741" ID="Freemind_Link_1409329642" MODIFIED="1689365588851" TEXT="Adicione seus breakpoints">
+<icon BUILTIN="full-5"/>
+<node CREATED="1689365593989" ID="Freemind_Link_1413968696" MODIFIED="1689365606169" TEXT="Na parte da direita ser&#xe1; exibido o c&#xf3;digo do arquivo quando voc&#xea; clicar nele"/>
+</node>
+<node CREATED="1689365609254" ID="Freemind_Link_1278137361" MODIFIED="1689365641402" TEXT="Navegue na aplica&#xe7;&#xe3;o">
+<icon BUILTIN="full-6"/>
+<node CREATED="1689365642205" ID="Freemind_Link_1262814721" MODIFIED="1689365643265" TEXT="Seu breakpoint ser&#xe1; executado quando a execu&#xe7;&#xe3;o passar pelo ponto marcado"/>
+</node>
+</node>
+</node>
 </node>
 </map>

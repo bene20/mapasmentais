@@ -1,12 +1,15 @@
 <map version="0.8.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node BACKGROUND_COLOR="#8d8d92" CREATED="1533305953376" ID="Freemind_Link_1926993525" LINK="Angular.mm" MODIFIED="1544799831270" TEXT="Diretivas">
-<node CREATED="1544800144083" ID="Freemind_Link_1217308876" MODIFIED="1544800152167" POSITION="right" TEXT="&apos;*&apos; indica uma diretiva estrutural">
+<node BACKGROUND_COLOR="#8d8d92" CREATED="1533305953376" ID="Freemind_Link_1926993525" LINK="Angular.mm" MODIFIED="1689261490211" TEXT="Diretivas">
+<node CREATED="1689261490197" ID="Freemind_Link_396531628" MODIFIED="1689261493702" POSITION="right" TEXT="Sobre">
+<node CREATED="1544800144083" ID="Freemind_Link_1217308876" MODIFIED="1544800152167" TEXT="&apos;*&apos; indica uma diretiva estrutural">
 <node CREATED="1544800152707" ID="Freemind_Link_921992417" MODIFIED="1544800164535" TEXT="Diretiva estrutural &#xe9; aquela que altera a &#xe1;rvore DOM"/>
+</node>
+<node CREATED="1689261497779" ID="Freemind_Link_154664984" MODIFIED="1689261555357" TEXT="Diretiva de atributo, diferentemente de diretiva estrutural, apenas faz modifica&#xe7;&#xf5;es no elemento em que &#xe9; inserida. Ela n&#xe3;o adiciona ou remove elementos da DOM"/>
 </node>
 <node CREATED="1547033591675" ID="Freemind_Link_911187140" MODIFIED="1547033594478" POSITION="right" TEXT="Customizada">
 <node CREATED="1547033605400" ID="Freemind_Link_1959021205" MODIFIED="1547033619788" TEXT="Uma diretiva &#xe9; como um componente, exceto por n&#xe3;o possuir um template"/>
-<node CREATED="1550072248235" ID="Freemind_Link_1175006756" MODIFIED="1550072251250" TEXT="Implementa&#xe7;&#xe3;o">
+<node CREATED="1550072248235" FOLDED="true" ID="Freemind_Link_1175006756" MODIFIED="1550072251250" TEXT="Implementa&#xe7;&#xe3;o">
 <node CREATED="1550072445436" ID="Freemind_Link_1266790715" MODIFIED="1550072454726" TEXT="Criar a classe da diretiva">
 <icon BUILTIN="full-1"/>
 <node CREATED="1550072457620" ID="Freemind_Link_399127648" MODIFIED="1550072469015" TEXT="ng g d nomeDiretiva"/>
@@ -54,7 +57,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1547033741271" ID="Freemind_Link_72768016" MODIFIED="1547033743083" TEXT="Seletores">
+<node CREATED="1547033741271" FOLDED="true" ID="Freemind_Link_72768016" MODIFIED="1547033743083" TEXT="Seletores">
 <node CREATED="1547033980510" ID="Freemind_Link_1444848089" MODIFIED="1547034005081" TEXT="Indicam em quais componentes a diretiva ser&#xe1; acionada"/>
 <node CREATED="1547033755263" ID="Freemind_Link_1105419295" MODIFIED="1547033765346" TEXT="Podem ser de v&#xe1;rios tipos">
 <node CREATED="1547033769983" ID="Freemind_Link_1998513402" MODIFIED="1547033772338" TEXT="Um elemento">
@@ -103,7 +106,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1547034488722" ID="Freemind_Link_1207673637" MODIFIED="1547034490278" TEXT="Inputs">
+<node CREATED="1547034488722" FOLDED="true" ID="Freemind_Link_1207673637" MODIFIED="1547034490278" TEXT="Inputs">
 <node CREATED="1547034527570" ID="Freemind_Link_82415065" MODIFIED="1547034539957" TEXT="Define quais propriedades aceitar&#xe3;o data binding"/>
 <node CREATED="1547034729890" ID="Freemind_Link_1451100382" MODIFIED="1547034776324" TEXT="Sempre que o input for alterado, a propriedade ser&#xe1; atualizada automaticamente"/>
 <node CREATED="1547035833689" ID="Freemind_Link_651748642" MODIFIED="1547035835484" TEXT="Formas">
@@ -147,7 +150,7 @@
 <node CREATED="1547035517411" ID="Freemind_Link_241206624" MODIFIED="1547035536102" TEXT="Permite implementar notifica&#xe7;&#xe3;o quando o valor da propriedade &#xe9; modificado"/>
 <node CREATED="1547034062725" ID="Freemind_Link_246491397" MODIFIED="1547035543974" TEXT="Ex:">
 <node CREATED="1547035587674" ID="Freemind_Link_1122744996" MODIFIED="1547035622502" TEXT="Neste exemplo o setter ser&#xe1; invocado toda vez que a propriedade &apos;logText&apos; for modificada"/>
-<node COLOR="#0000ff" CREATED="1544799959031" ID="Freemind_Link_1859376568" MODIFIED="1547035574918" TEXT="@Directive({&#xa;   selector: &apos;[loggable]&apos;,&#xa;   inputs: [&apos;text: logText&apos;]&#xa;})&#xa;export class SimpleTextDirective {&#xa;   set text(value) {&#xa;      concole.log(value);&#xa;   }&#xa;}"/>
+<node COLOR="#0000ff" CREATED="1544799959031" ID="Freemind_Link_1859376568" MODIFIED="1690467516057" TEXT="@Directive({&#xa;   selector: &apos;[loggable]&apos;,&#xa;   inputs: [&apos;text: logText&apos;]&#xa;})&#xa;export class SimpleTextDirective {&#xa;   set text(value) {&#xa;      console.log(value);&#xa;   }&#xa;}"/>
 </node>
 </node>
 </node>
@@ -167,7 +170,7 @@
 <node CREATED="1547037615132" ID="Freemind_Link_1729295505" MODIFIED="1547037616359" TEXT="Ex:"/>
 </node>
 </node>
-<node CREATED="1544799841233" ID="_" MODIFIED="1544799847957" POSITION="right" TEXT="NgIf">
+<node CREATED="1544799841233" FOLDED="true" ID="_" MODIFIED="1544799847957" POSITION="right" TEXT="NgIf">
 <node CREATED="1544799862049" ID="Freemind_Link_1359331050" MODIFIED="1544799889084" TEXT="Permite a instancia&#xe7;&#xe3;o condicional de um componente"/>
 <node CREATED="1544799891704" ID="Freemind_Link_1872773332" MODIFIED="1544799892852" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1544799900960" ID="Freemind_Link_1747986777" MODIFIED="1544799952019" TEXT="&lt;div *ngIf=&quot;races.length &gt; 0&quot;&gt;&lt;h2&gt;Races&lt;/h2&gt;&lt;/div&gt;">
@@ -207,7 +210,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1544800829021" ID="Freemind_Link_1067838406" MODIFIED="1544800832256" POSITION="right" TEXT="NgSwitch">
+<node CREATED="1544800829021" FOLDED="true" ID="Freemind_Link_1067838406" MODIFIED="1544800832256" POSITION="right" TEXT="NgSwitch">
 <node CREATED="1544800842847" ID="Freemind_Link_1373270525" MODIFIED="1544800873816" TEXT="Permite sele&#xe7;&#xe3;o de um template de uma lista de templates"/>
 <node CREATED="1544799891704" ID="Freemind_Link_317110261" MODIFIED="1544799892852" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1544799900960" ID="Freemind_Link_1591343619" MODIFIED="1544801008918" TEXT="&lt;div [ngSwitch]=&quot;messageCount&quot;&gt;&#xa;    &lt;p *ngSwitchCase=&quot;0&quot;&gt;N&#xe3;o h&#xe1; mensagem&lt;/p&gt;&#xa;    &lt;p *ngSwitchCase=&quot;1&quot;&gt;Voc&#xea; tem uma mensagem&lt;/p&gt;&#xa;    &lt;p *ngSwitchDefault&gt;Voc&#xea; tem mensagens&lt;/p&gt;&#xa;&lt;/div&gt;"/>
@@ -224,7 +227,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1544801023929" ID="Freemind_Link_1555589238" MODIFIED="1544801561466" POSITION="right" TEXT="NgClass">
+<node CREATED="1544801023929" FOLDED="true" ID="Freemind_Link_1555589238" MODIFIED="1544801561466" POSITION="right" TEXT="NgClass">
 <node CREATED="1544801030025" ID="Freemind_Link_1056538417" MODIFIED="1544801573298" TEXT="Permite a aplica&#xe7;&#xe3;o de diversas classes de estilo de uma s&#xf3; vez"/>
 <node CREATED="1544801242199" ID="Freemind_Link_736638323" MODIFIED="1544801581818" TEXT="Alternativa &#xe0; aplica&#xe7;&#xe3;o de uma classe por vez">
 <node COLOR="#0000ff" CREATED="1544800538780" ID="Freemind_Link_1421760353" MODIFIED="1544801624802" TEXT="Ex: &lt;p [class.textoVermelho]=&quot;isTextoVermelho()&quot; [class.fonteGrande]=&quot;isFonteGrande()&quot;&gt;Texto estiloso&lt;/p&gt;">

@@ -11,6 +11,11 @@
 <node CREATED="1544802111177" ID="Freemind_Link_1668311697" MODIFIED="1544802114405" TEXT="( ... )">
 <node CREATED="1544802115585" ID="Freemind_Link_32051690" LINK="#Freemind_Link_244368175" MODIFIED="1544802215976" TEXT="Para event binding"/>
 </node>
+<node CREATED="1544802111177" ID="Freemind_Link_1906199599" MODIFIED="1688490378967" TEXT="[( ... )]">
+<node CREATED="1688490383142" ID="Freemind_Link_296757076" MODIFIED="1688490383142" TEXT="Para two-way data-binding">
+<node CREATED="1688506662012" ID="Freemind_Link_538806559" MODIFIED="1688506669229" TEXT="Requer o FormModule habilitado"/>
+</node>
+</node>
 <node CREATED="1544802125674" ID="Freemind_Link_456552618" MODIFIED="1544802127069" TEXT="#">
 <node CREATED="1544802127625" ID="Freemind_Link_1468107673" LINK="#Freemind_Link_533973430" MODIFIED="1544802229440" TEXT="Para declara&#xe7;&#xe3;o de vari&#xe1;vel local"/>
 </node>

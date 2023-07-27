@@ -15,7 +15,7 @@
 <node CREATED="1550611246501" ID="Freemind_Link_669981938" MODIFIED="1550611285306" TEXT="S&#xf3; ser&#xe1; necess&#xe1;rio declarar um componente no export do &#xa;m&#xf3;dulo se ele for usado no template de outro componente">
 <icon BUILTIN="messagebox_warning"/>
 </node>
-<node CREATED="1544644042860" ID="Freemind_Link_48317202" MODIFIED="1544644067031" TEXT="S&#xf3; ter&#xe1; utilizade se seu m&#xf3;dulo for importado por outros">
+<node CREATED="1544644042860" ID="Freemind_Link_48317202" MODIFIED="1690465609011" TEXT="S&#xf3; ter&#xe1; utilidade se seu m&#xf3;dulo for importado por outros">
 <icon BUILTIN="idea"/>
 </node>
 </node>

@@ -52,7 +52,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1549637880327" ID="Freemind_Link_301583379" MODIFIED="1549637882386" POSITION="right" TEXT="Styles">
+<node CREATED="1549637880327" FOLDED="true" ID="Freemind_Link_301583379" MODIFIED="1549637882386" POSITION="right" TEXT="Styles">
 <node CREATED="1549638891983" ID="Freemind_Link_511311365" MODIFIED="1549638911619" TEXT="Declara o CSS a ser aplicado no componente"/>
 <node CREATED="1549637975829" ID="Freemind_Link_962803719" MODIFIED="1549637980251" TEXT="2 formas">
 <node CREATED="1549637983021" ID="Freemind_Link_1136886618" MODIFIED="1549638928932" TEXT="C&#xf3;digo do CSS &#xa;no componete">

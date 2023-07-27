@@ -1,7 +1,7 @@
 <map version="0.8.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node BACKGROUND_COLOR="#8d8d92" CREATED="1533305953376" ID="Freemind_Link_1926993525" LINK="Angular.mm" MODIFIED="1544642908746" TEXT="Decorators">
-<node CREATED="1544642915413" ID="_" MODIFIED="1544642919576" POSITION="right" TEXT="@Component">
+<node CREATED="1544642915413" FOLDED="true" ID="_" MODIFIED="1544642919576" POSITION="right" TEXT="@Component">
 <node CREATED="1544642941765" ID="Freemind_Link_378895232" MODIFIED="1544642950800" TEXT="Aplicado a classes"/>
 <node CREATED="1544643071556" ID="Freemind_Link_378127655" MODIFIED="1544643082008" TEXT="Biblioteca @angular/core"/>
 <node CREATED="1544642932989" ID="Freemind_Link_1250199732" MODIFIED="1544642940969" TEXT="Diz ao angular que a classe &#xe9; um componente angular"/>
@@ -11,7 +11,41 @@
 </node>
 <node CREATED="1544642965436" ID="Freemind_Link_419312511" MODIFIED="1544642988456" TEXT="Par&#xe2;metros de&#xa;configura&#xe7;&#xe3;o">
 <node CREATED="1544642990307" ID="Freemind_Link_214513092" MODIFIED="1544642996368" TEXT="selector">
-<node CREATED="1544643029278" ID="Freemind_Link_1916829248" MODIFIED="1544643067895" TEXT="Nome da tag que representa o componente"/>
+<node CREATED="1688487412908" ID="Freemind_Link_184811823" MODIFIED="1688487445857" TEXT="Indica qual elemento ser&#xe1; substitu&#xed;do pelo template do componente"/>
+<node CREATED="1688487448022" ID="Freemind_Link_1620658552" MODIFIED="1688487450033" TEXT="Pode ser:">
+<node CREATED="1544643029278" ID="Freemind_Link_1916829248" MODIFIED="1544643067895" TEXT="Nome da tag que representa o componente">
+<node CREATED="1688487460094" ID="Freemind_Link_1266135586" MODIFIED="1688487616298" TEXT="Ex:">
+<node CREATED="1688487616287" ID="Freemind_Link_1037772114" MODIFIED="1688487622447" TEXT="No arquivo ts">
+<node COLOR="#0005ff" CREATED="1688487462684" ID="Freemind_Link_1744867696" MODIFIED="1688487489349" TEXT="selector: &apos;app-server&apos;"/>
+</node>
+<node CREATED="1688487623514" ID="Freemind_Link_1480150784" MODIFIED="1688487635925" TEXT="No html que usa o componente">
+<node COLOR="#0005ff" CREATED="1688487462684" ID="Freemind_Link_295137650" MODIFIED="1688487656605" TEXT="&lt;app-server&gt;&lt;/app-server&gt;"/>
+</node>
+</node>
+</node>
+<node CREATED="1688487548652" ID="Freemind_Link_1486468403" MODIFIED="1688487591446" TEXT="Atributo da tag">
+<node CREATED="1688487592763" ID="Freemind_Link_1156619288" MODIFIED="1688487614270" TEXT="Nesse caso a tag que tiver o atributo ser&#xe1; substitu&#xed;da pela template do componente"/>
+<node CREATED="1688487460094" ID="Freemind_Link_1647604373" MODIFIED="1688487616298" TEXT="Ex:">
+<node CREATED="1688487616287" ID="Freemind_Link_606373795" MODIFIED="1688487622447" TEXT="No arquivo ts">
+<node COLOR="#0005ff" CREATED="1688487462684" ID="Freemind_Link_472745886" MODIFIED="1688487670189" TEXT="selector: &apos;[app-server]&apos;"/>
+</node>
+<node CREATED="1688487623514" ID="Freemind_Link_603686242" MODIFIED="1688487635925" TEXT="No html que usa o componente">
+<node COLOR="#0005ff" CREATED="1688487462684" ID="Freemind_Link_1117420591" MODIFIED="1688487684268" TEXT="&lt;div app-server&gt;&lt;/div&gt;"/>
+</node>
+</node>
+</node>
+<node CREATED="1688487548652" ID="Freemind_Link_1775558268" MODIFIED="1688487762548" TEXT="Classe da tag">
+<node CREATED="1688487592763" ID="Freemind_Link_76388261" MODIFIED="1688487774819" TEXT="Nesse caso a tag que tiver a classe ser&#xe1; substitu&#xed;da pela template do componente"/>
+<node CREATED="1688487460094" ID="Freemind_Link_633184183" MODIFIED="1688487616298" TEXT="Ex:">
+<node CREATED="1688487616287" ID="Freemind_Link_1695338521" MODIFIED="1688487622447" TEXT="No arquivo ts">
+<node COLOR="#0005ff" CREATED="1688487462684" ID="Freemind_Link_741828285" MODIFIED="1688487781531" TEXT="selector: &apos;.app-server&apos;"/>
+</node>
+<node CREATED="1688487623514" ID="Freemind_Link_1439325640" MODIFIED="1688487635925" TEXT="No html que usa o componente">
+<node COLOR="#0005ff" CREATED="1688487462684" ID="Freemind_Link_231547810" MODIFIED="1688487798370" TEXT="&lt;div class=&quot;app-server&quot;&gt;&lt;/div&gt;"/>
+</node>
+</node>
+</node>
+</node>
 </node>
 <node CREATED="1544643010949" ID="Freemind_Link_1216707214" MODIFIED="1544643015976" TEXT="templateUrl">
 <node CREATED="1544643087436" ID="Freemind_Link_596967588" MODIFIED="1544643160398" TEXT="Caminho do arquivo html que &#xe9; o template do componente">
@@ -29,6 +63,28 @@
 <node CREATED="1544643306644" ID="Freemind_Link_331659758" MODIFIED="1544643313198" TEXT="Configura&#xe7;&#xf5;es de anima&#xe7;&#xe3;o do componente"/>
 <node CREATED="1544643324530" ID="Freemind_Link_686979237" LINK="_animacoes.mm" MODIFIED="1544643330486" TEXT="Ver documenta&#xe7;&#xe3;o"/>
 </node>
+<node CREATED="1690471069971" ID="Freemind_Link_1852436268" MODIFIED="1690471073087" TEXT="encapsulation">
+<node CREATED="1690471079724" ID="Freemind_Link_1147391269" MODIFIED="1690471265635" TEXT="Permite alterar o funcionamento do escopo de atua&#xe7;&#xe3;o dos estilos css definidos no componente">
+<node CREATED="1690471279622" ID="Freemind_Link_1201125901" MODIFIED="1690471302219" TEXT="Note que os estilos gerados pelo angular cont&#xe9;m um atributo do tipo"/>
+</node>
+<node CREATED="1688487460094" ID="Freemind_Link_394528340" MODIFIED="1688487616298" TEXT="Ex:">
+<node CREATED="1688487616287" ID="Freemind_Link_370664905" MODIFIED="1688487622447" TEXT="No arquivo ts">
+<node COLOR="#0005ff" CREATED="1688487462684" ID="Freemind_Link_1733288839" MODIFIED="1690471168709" TEXT="encapsulation: ViewEncapsulation.None"/>
+</node>
+<node CREATED="1690471171305" ID="Freemind_Link_452032026" MODIFIED="1690471175157" TEXT="Valores poss&#xed;veis">
+<node CREATED="1690471178743" ID="Freemind_Link_1859421621" MODIFIED="1690471194852" TEXT="ViewEncapsulation.Emulated">
+<node CREATED="1690471196134" ID="Freemind_Link_1946444688" MODIFIED="1690471198509" TEXT="Valor default"/>
+</node>
+<node CREATED="1690471178743" ID="Freemind_Link_1358519510" MODIFIED="1690471207364" TEXT="ViewEncapsulation.Native">
+<node CREATED="1690471209033" ID="Freemind_Link_1942784368" MODIFIED="1690471216499" TEXT="Usa o dom shadow"/>
+<node CREATED="1690471219569" ID="Freemind_Link_1634640973" MODIFIED="1690471226220" TEXT="N&#xe3;o &#xe9; suportado por todos os browsers"/>
+</node>
+<node CREATED="1690471178743" ID="Freemind_Link_1770074591" MODIFIED="1690471184412" TEXT="ViewEncapsulation.None">
+<node CREATED="1690471227961" ID="Freemind_Link_551789175" MODIFIED="1690471253299" TEXT="N&#xe3;o encapsula os estilos. Eles ser&#xe3;o aplicados na aplica&#xe7;&#xe3;o como um todo, e n&#xe3;o apenas no componente."/>
+</node>
+</node>
+</node>
+</node>
 </node>
 <node CREATED="1544643219067" ID="Freemind_Link_1777630070" MODIFIED="1544643220766" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1544643277730" ID="Freemind_Link_1070291656" MODIFIED="1544643379054" TEXT="@Component({&#xa;  selector: &apos;mt-snackbar&apos;,&#xa;  templateUrl: &apos;./snackbar.component.html&apos;,&#xa;  styleUrls: [&apos;./snackbar.component.css&apos;]&#xa;})&#xa;export class SnackbarComponent implements OnInit { ... }"/>
@@ -37,7 +93,7 @@
 <node CREATED="1547037221533" ID="Freemind_Link_1298134245" LINK="_diretivas.mm" MODIFIED="1547037298043" TEXT="Veja o mapa de Diretivas"/>
 </node>
 </node>
-<node CREATED="1547033641736" ID="Freemind_Link_395694235" MODIFIED="1547033646500" POSITION="right" TEXT="@Directive">
+<node CREATED="1547033641736" FOLDED="true" ID="Freemind_Link_395694235" MODIFIED="1547033646500" POSITION="right" TEXT="@Directive">
 <node CREATED="1544642941765" ID="Freemind_Link_1691700739" MODIFIED="1544642950800" TEXT="Aplicado a classes"/>
 <node CREATED="1544643071556" ID="Freemind_Link_1744137157" MODIFIED="1544643082008" TEXT="Biblioteca @angular/core"/>
 <node CREATED="1544642932989" ID="Freemind_Link_596304958" MODIFIED="1547033683707" TEXT="Diz ao angular que a classe &#xe9; uma diretiva angular"/>
@@ -49,7 +105,7 @@
 <node CREATED="1544642932989" ID="Freemind_Link_1880717633" MODIFIED="1544643444589" TEXT="Diz ao angular que a classe configura um m&#xf3;dulo angular"/>
 <node CREATED="1549650153293" ID="Freemind_Link_338110019" LINK="_modulos.mm" MODIFIED="1549650175972" TEXT="Uso e implementa&#xe7;&#xe3;o"/>
 </node>
-<node CREATED="1545058607869" ID="Freemind_Link_959745140" MODIFIED="1546529884281" POSITION="right" TEXT="@Injectable">
+<node CREATED="1545058607869" FOLDED="true" ID="Freemind_Link_959745140" MODIFIED="1546529884281" POSITION="right" TEXT="@Injectable">
 <node CREATED="1545058618588" ID="Freemind_Link_1005006016" MODIFIED="1545058636231" TEXT="Indica que o servi&#xe7;o tem algumas depend&#xea;ncias">
 <node CREATED="1545058640556" ID="Freemind_Link_864646788" MODIFIED="1545058653183" TEXT="Isto &#xe9;, receber&#xe1; inje&#xe7;&#xf5;es"/>
 </node>
@@ -89,7 +145,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1545928840002" ID="Freemind_Link_1159107835" MODIFIED="1545928842846" POSITION="right" TEXT="@Inject">
+<node CREATED="1545928840002" FOLDED="true" ID="Freemind_Link_1159107835" MODIFIED="1545928842846" POSITION="right" TEXT="@Inject">
 <node CREATED="1545928855864" ID="Freemind_Link_1460973156" MODIFIED="1545928861981" TEXT="Permite a inje&#xe7;&#xe3;o de valores simples"/>
 <node CREATED="1546529842011" ID="Freemind_Link_1850225174" MODIFIED="1546529940970" TEXT="&#xc9; prefer&#xed;vel usar o @Injectable() na inje&#xe7;&#xe3;o de servi&#xe7;os">
 <arrowlink DESTINATION="Freemind_Link_959745140" ENDARROW="Default" ENDINCLINATION="653;0;" ID="Freemind_Arrow_Link_128955860" STARTARROW="None" STARTINCLINATION="653;0;"/>
@@ -115,7 +171,7 @@
 </node>
 <node CREATED="1545929338679" ID="Freemind_Link_6950555" MODIFIED="1545929402161" TEXT="Um exemplo de uso &#xe9; o uso do token LOCALE_ID do Angular"/>
 </node>
-<node CREATED="1545856561949" ID="Freemind_Link_1873569479" MODIFIED="1545856564530" POSITION="right" TEXT="@Input">
+<node CREATED="1545856561949" FOLDED="true" ID="Freemind_Link_1873569479" MODIFIED="1545856564530" POSITION="right" TEXT="@Input">
 <node CREATED="1545857098102" ID="Freemind_Link_694528769" LINK="_bindings.mm" MODIFIED="1545857137323" TEXT="&#xc9; um property binding">
 <node CREATED="1545858108561" ID="Freemind_Link_1326812962" MODIFIED="1545858129338" TEXT="O componente pai emitindo um evento para o componente filho"/>
 </node>
@@ -130,7 +186,7 @@
 <node CREATED="1547036899702" ID="Freemind_Link_1675198330" LINK="_diretivas.mm" MODIFIED="1547036922498" TEXT="Ver documenta&#xe7;&#xe3;o de input de diretivas"/>
 </node>
 </node>
-<node CREATED="1545857226109" ID="Freemind_Link_1888961123" MODIFIED="1545857228961" POSITION="right" TEXT="@Output">
+<node CREATED="1545857226109" FOLDED="true" ID="Freemind_Link_1888961123" MODIFIED="1545857228961" POSITION="right" TEXT="@Output">
 <node CREATED="1545857098102" ID="Freemind_Link_985349637" LINK="_bindings.mm" MODIFIED="1545857243466" TEXT="&#xc9; um event binding">
 <node CREATED="1545858132633" ID="Freemind_Link_1664631453" MODIFIED="1545858142227" TEXT="O componente filho emitindo um evento para o componente pai"/>
 </node>
@@ -142,6 +198,49 @@
 </node>
 <node COLOR="#0000ff" CREATED="1545059186575" ID="Freemind_Link_1582507341" MODIFIED="1545857762795" TEXT="Ex: &#xa;@Component({&#xa;   selector: &apos;bank-account&apos;,&#xa;   template: `&lt;button&gt;Press it&lt;/button&gt;`&#xa;})&#xa;class BankAccount {&#xa;   @Output() change = new EventEmitter&lt;any&gt;();&#xa;}"/>
 <node CREATED="1547037453917" ID="Freemind_Link_1833344672" LINK="_componentes.mm" MODIFIED="1547038094263" TEXT="Ver documenta&#xe7;&#xe3;o de output de componentes"/>
+</node>
+<node CREATED="1690478288516" ID="Freemind_Link_865079842" MODIFIED="1690478292311" POSITION="right" TEXT="@ViewChild">
+<node CREATED="1690478298219" ID="Freemind_Link_444769265" MODIFIED="1690484231408" TEXT="Permite referenciar um elemento HTML e atribu&#xed;-lo&#xa;a uma propriedade da classe TypesCript">
+<arrowlink COLOR="#a22020" DESTINATION="Freemind_Link_1919040363" ENDARROW="Default" ENDINCLINATION="240;0;" ID="Freemind_Arrow_Link_1117199468" STARTARROW="Default" STARTINCLINATION="240;0;"/>
+<node CREATED="1690484202179" ID="Freemind_Link_529153193" MODIFIED="1690484205520" TEXT="Semelhante ao ContentChild"/>
+</node>
+<node CREATED="1690479614598" ID="Freemind_Link_275718447" MODIFIED="1690479694868" TEXT="N&#xe3;o altere o elemento DOM acessado&#xa;por ViewChild. &#xc9; uma m&#xe1; pr&#xe1;tica!">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1690479798269" ID="Freemind_Link_788384461" MODIFIED="1690479827857" TEXT="Use string-interpolation ou property-binding!"/>
+<node CREATED="1690479644233" ID="Freemind_Link_1961649896" MODIFIED="1690479645284" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1690478342474" ID="Freemind_Link_732013133" MODIFIED="1690479681992" TEXT="@ViewChild(&apos;meuinput&apos;) meuElementoInput: ElementRef;&#xa;...&#xa;this.meuElementoInput.nativeElement.value = &apos;meu texto&apos;;&#xa;">
+<icon BUILTIN="button_cancel"/>
+</node>
+</node>
+</node>
+<node CREATED="1690478336178" ID="Freemind_Link_1911614806" MODIFIED="1690478337334" TEXT="Ex:">
+<node CREATED="1690478338266" ID="Freemind_Link_1806533678" MODIFIED="1690478340494" TEXT="No HTML">
+<node COLOR="#0000ff" CREATED="1690478342474" ID="Freemind_Link_1925408395" MODIFIED="1690478362159" TEXT="&lt;input type=&quot;text&quot; #meuinput&gt;"/>
+</node>
+<node CREATED="1690478363842" ID="Freemind_Link_1136327424" MODIFIED="1690478366533" TEXT="No TS">
+<node COLOR="#0000ff" CREATED="1690478342474" ID="Freemind_Link_1965141064" MODIFIED="1690478442149" TEXT="@ViewChild(&apos;meuinput&apos;) meuElementoInput: ElementRef;&#xa;...&#xa;minhafuncao(){&#xa;  console.log(this.meuElementoInput.nativeElement.value)&#xa;}"/>
+</node>
+</node>
+</node>
+<node CREATED="1690478288516" ID="Freemind_Link_1605833830" MODIFIED="1690484102986" POSITION="right" TEXT="@ContentChild">
+<node CREATED="1690478298219" ID="Freemind_Link_1919040363" MODIFIED="1690484194736" TEXT="Semelhante ao ViewChild, mas permite referenciar um elemento HTML de um componente filho e atribu&#xed;-lo a uma propriedade da classe TypesCript m&#xe3;e"/>
+<node CREATED="1690479614598" ID="Freemind_Link_55768209" MODIFIED="1690484109154" TEXT="N&#xe3;o altere o elemento DOM acessado&#xa;por ContentChild. &#xc9; uma m&#xe1; pr&#xe1;tica!">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1690479798269" ID="Freemind_Link_1509078136" MODIFIED="1690479827857" TEXT="Use string-interpolation ou property-binding!"/>
+<node CREATED="1690479644233" ID="Freemind_Link_1592363029" MODIFIED="1690479645284" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1690478342474" ID="Freemind_Link_1986525734" MODIFIED="1690484120373" TEXT="@ContentChild(&apos;meuinput&apos;) meuElementoInput: ElementRef;&#xa;...&#xa;this.meuElementoInput.nativeElement.value = &apos;meu texto&apos;;&#xa;">
+<icon BUILTIN="button_cancel"/>
+</node>
+</node>
+</node>
+<node CREATED="1690478336178" ID="Freemind_Link_1967046713" MODIFIED="1690478337334" TEXT="Ex:">
+<node CREATED="1690478338266" ID="Freemind_Link_1620824331" MODIFIED="1690484141391" TEXT="No HTML do componente filho">
+<node COLOR="#0000ff" CREATED="1690478342474" ID="Freemind_Link_65444208" MODIFIED="1690478362159" TEXT="&lt;input type=&quot;text&quot; #meuinput&gt;"/>
+</node>
+<node CREATED="1690478363842" ID="Freemind_Link_643550068" MODIFIED="1690478366533" TEXT="No TS">
+<node COLOR="#0000ff" CREATED="1690478342474" ID="Freemind_Link_1398340968" MODIFIED="1690484150377" TEXT="@ContentChild(&apos;meuinput&apos;) meuElementoInput: ElementRef;&#xa;...&#xa;minhafuncao(){&#xa;  console.log(this.meuElementoInput.nativeElement.value)&#xa;}"/>
+</node>
+</node>
 </node>
 <node CREATED="1546013707785" ID="Freemind_Link_1811139465" MODIFIED="1546013710156" POSITION="right" TEXT="@Pipe">
 <node CREATED="1546013711744" ID="Freemind_Link_337476495" MODIFIED="1546013721916" TEXT="Permite a cria&#xe7;&#xe3;o de um pipe personalizado"/>
