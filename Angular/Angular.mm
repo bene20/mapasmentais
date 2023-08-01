@@ -1,7 +1,7 @@
 <map version="0.8.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node BACKGROUND_COLOR="#8d8d92" CREATED="1533305953376" ID="Freemind_Link_1926993525" LINK="../Mapas.mm" MODIFIED="1546544431661" TEXT="Angular">
-<node CREATED="1687886032735" ID="Freemind_Link_47263976" MODIFIED="1687886099226" POSITION="right" TEXT="Overview">
+<node CREATED="1687886032735" FOLDED="true" ID="Freemind_Link_47263976" MODIFIED="1687886099226" POSITION="right" TEXT="Overview">
 <node CREATED="1687886040215" ID="Freemind_Link_881674024" MODIFIED="1687886044356" TEXT="Nodejs">
 <node CREATED="1687886045432" ID="Freemind_Link_857950217" MODIFIED="1687886055239" TEXT="Usado para gerar o build da aplica&#xe7;&#xe3;o angular"/>
 </node>

@@ -28,7 +28,10 @@
 </node>
 <node CREATED="1690479614598" ID="Freemind_Link_275718447" MODIFIED="1690479738093" TEXT="N&#xe3;o altere o elemento DOM acessado&#xa;por refer&#xea;ncia. &#xc9; uma m&#xe1; pr&#xe1;tica!">
 <icon BUILTIN="messagebox_warning"/>
-<node CREATED="1690479798269" ID="Freemind_Link_788384461" MODIFIED="1690479858183" TEXT="Use string-interpolation ou property-binding!"/>
+<node CREATED="1690915593557" ID="Freemind_Link_1609004996" MODIFIED="1690915603119" TEXT="Use o Renderer2, em vez disso:">
+<node CREATED="1690915603894" ID="Freemind_Link_996633940" MODIFIED="1690915604489" TEXT="https://angular.io/api/core/Renderer2"/>
+</node>
+<node CREATED="1690915612434" ID="Freemind_Link_275522054" MODIFIED="1690915621214" TEXT="Nem sempre voc&#xea; ter&#xe1; acesso ao DOM"/>
 <node CREATED="1690479644233" ID="Freemind_Link_1961649896" MODIFIED="1690479645284" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1690478342474" ID="Freemind_Link_732013133" MODIFIED="1690479766692" TEXT="meuelemento.value = &apos;meu texto&apos;;&#xa;">
 <icon BUILTIN="button_cancel"/>

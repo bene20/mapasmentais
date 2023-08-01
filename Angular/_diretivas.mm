@@ -57,7 +57,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1547033741271" FOLDED="true" ID="Freemind_Link_72768016" MODIFIED="1547033743083" TEXT="Seletores">
+<node CREATED="1547033741271" ID="Freemind_Link_72768016" MODIFIED="1547033743083" TEXT="Seletores">
 <node CREATED="1547033980510" ID="Freemind_Link_1444848089" MODIFIED="1547034005081" TEXT="Indicam em quais componentes a diretiva ser&#xe1; acionada"/>
 <node CREATED="1547033755263" ID="Freemind_Link_1105419295" MODIFIED="1547033765346" TEXT="Podem ser de v&#xe1;rios tipos">
 <node CREATED="1547033769983" ID="Freemind_Link_1998513402" MODIFIED="1547033772338" TEXT="Um elemento">
@@ -97,13 +97,46 @@
 <node CREATED="1547034411811" ID="Freemind_Link_450715720" MODIFIED="1547034414758" TEXT="let-"/>
 <node CREATED="1547034414978" ID="Freemind_Link_1087356931" MODIFIED="1547034415630" TEXT="ref-"/>
 </node>
-<node CREATED="1547034054693" ID="Freemind_Link_598501102" MODIFIED="1547034060785" TEXT="Ex:">
+<node CREATED="1547034054693" ID="Freemind_Link_598501102" MODIFIED="1690913986081" TEXT="Ex:">
+<node CREATED="1690915771804" FOLDED="true" ID="Freemind_Link_1613631748" MODIFIED="1690915786426" TEXT="Diretiva de&#xa;atributo">
+<node CREATED="1690913986009" ID="Freemind_Link_449833424" MODIFIED="1690913987771" TEXT="1">
+<node CREATED="1690914093354" ID="Freemind_Link_1988733241" MODIFIED="1690914104006" TEXT="Nesse exemplo criou uma diretiva que n&#xe3;o faz nada"/>
 <node CREATED="1547034062725" ID="Freemind_Link_710863560" MODIFIED="1547034066409" TEXT="Diretiva:">
 <node COLOR="#0000ff" CREATED="1544799959031" ID="Freemind_Link_912654516" MODIFIED="1547034170080" TEXT="@Directive({&#xa;   selector: &apos;[doNothing]&apos;&#xa;})&#xa;export class DoNothingDirective {&#xa;   constructor() {console.log(&apos;Do nothing directive&apos;);&#xa;}"/>
 </node>
 <node CREATED="1547034067101" ID="Freemind_Link_133407428" MODIFIED="1547035451679" TEXT="Componente acionado &#xa;por essa diretiva:">
 <node COLOR="#0000ff" CREATED="1544799959031" ID="Freemind_Link_662826423" MODIFIED="1547034243457" TEXT="@Component({&#xa;   selector: &apos;ns-test&apos;,&#xa;   template: &apos;&lt;div doNothing&gt;Click me&lt;/div&gt;&apos;&#xa;})&#xa;export class TestComponent { ... }"/>
 </node>
+</node>
+<node CREATED="1690913992132" ID="Freemind_Link_1771554532" MODIFIED="1690913993416" TEXT="2">
+<node CREATED="1690914066082" ID="Freemind_Link_109589647" MODIFIED="1690914088261" TEXT="Nesse exemplo crio uma diretiva que aplica o backgroundcolor verde no elemento que a receber"/>
+<node CREATED="1690914248599" ID="Freemind_Link_1538857164" MODIFIED="1690915271000" TEXT="Este exemplo, de alterar um elemento da&#xa;DOM via ElementRef, n&#xe3;o &#xe9; uma boa pr&#xe1;tica!">
+<icon BUILTIN="messagebox_warning"/>
+<icon BUILTIN="messagebox_warning"/>
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1690915272723" ID="Freemind_Link_1725077481" MODIFIED="1690915321034" TEXT="O mais recomendado &#xe9; usar o &apos;Renderer2. Veja o exemplo 3"/>
+<node CREATED="1690915545125" ID="Freemind_Link_218744336" MODIFIED="1690915553974" TEXT="Veja a documenta&#xe7;&#xe3;o do Renderer2 aqui: ">
+<node CREATED="1690915555054" ID="Freemind_Link_896736561" MODIFIED="1690915555633" TEXT="https://angular.io/api/core/Renderer2"/>
+</node>
+</node>
+<node CREATED="1547034062725" ID="Freemind_Link_1196157965" MODIFIED="1547034066409" TEXT="Diretiva:">
+<node COLOR="#0000ff" CREATED="1544799959031" ID="Freemind_Link_1970362488" MODIFIED="1690914274322" TEXT="@Directive({&#xa;    selector: &apos;[appBasicHighlight]&apos;&#xa;})&#xa;export class BasicHighlightDirective implements OnInit{&#xa;    constructor(private elementRef: ElementRef) {}&#xa;    ngOnInit(): void {&#xa;        this.elementRef.nativeElement.style.backgroundColor=&apos;green&apos;;&#xa;    }&#xa;}"/>
+</node>
+<node CREATED="1547034067101" ID="Freemind_Link_811446213" MODIFIED="1547035451679" TEXT="Componente acionado &#xa;por essa diretiva:">
+<node COLOR="#0000ff" CREATED="1544799959031" ID="Freemind_Link_133654928" MODIFIED="1690915391228" TEXT="&lt;p appBasicHighlight&gt;Diretiva basic-highlight&lt;/p&gt;"/>
+</node>
+</node>
+<node CREATED="1690913992132" ID="Freemind_Link_1695217814" MODIFIED="1690915307678" TEXT="3">
+<node CREATED="1690914066082" ID="Freemind_Link_920104028" MODIFIED="1690915298664" TEXT="Nesse exemplo crio uma diretiva que aplica o backgroundcolor vermelho no elemento que a receber"/>
+<node CREATED="1547034062725" ID="Freemind_Link_1957903919" MODIFIED="1547034066409" TEXT="Diretiva:">
+<node COLOR="#0000ff" CREATED="1544799959031" ID="Freemind_Link_528773406" MODIFIED="1690915363945" TEXT="@Directive({&#xa;  selector: &apos;[appBetterHighlight]&apos;&#xa;})&#xa;export class BetterHighlightDirective implements OnInit{&#xa;&#xa;  constructor(private elementRef: ElementRef, private renderer: Renderer2) { }&#xa;  ngOnInit(): void {&#xa;    this.renderer.setStyle(this.elementRef.nativeElement, &apos;background-color&apos;, &apos;red&apos;);&#xa;  }&#xa;}"/>
+</node>
+<node CREATED="1547034067101" ID="Freemind_Link_73732706" MODIFIED="1547035451679" TEXT="Componente acionado &#xa;por essa diretiva:">
+<node COLOR="#0000ff" CREATED="1544799959031" ID="Freemind_Link_542910822" MODIFIED="1690915379526" TEXT="&lt;p appBetterHighlight&gt;Diretiva better-highlight&lt;/p&gt;"/>
+</node>
+</node>
+</node>
+<node CREATED="1690915792194" ID="Freemind_Link_1908339871" MODIFIED="1690915798970" TEXT="Diretiva&#xa;estrutural"/>
 </node>
 </node>
 <node CREATED="1547034488722" FOLDED="true" ID="Freemind_Link_1207673637" MODIFIED="1547034490278" TEXT="Inputs">
@@ -181,7 +214,7 @@
 <node COLOR="#0000ff" CREATED="1544799900960" ID="Freemind_Link_1186726851" MODIFIED="1544800118184" TEXT="&lt;div *ngIf=&quot;races.length &gt; 0; else empty&quot;&gt;&lt;h2&gt;Races&lt;/h2&gt;&lt;/div&gt;&#xa;&lt;ng-template #empty&gt;&lt;h2&gt;No races.&lt;/h2&gt;&lt;/ng-template&gt;"/>
 </node>
 </node>
-<node CREATED="1544800171619" ID="Freemind_Link_746254240" MODIFIED="1544800174119" POSITION="right" TEXT="NgFor">
+<node CREATED="1544800171619" FOLDED="true" ID="Freemind_Link_746254240" MODIFIED="1544800174119" POSITION="right" TEXT="NgFor">
 <node CREATED="1544800177091" ID="Freemind_Link_1011788097" MODIFIED="1544800191679" TEXT="Permite itera&#xe7;&#xe3;o para exibir um componente mais de uma vez"/>
 <node CREATED="1544799891704" ID="Freemind_Link_156359880" MODIFIED="1544799892852" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1544799900960" ID="Freemind_Link_75339236" MODIFIED="1544800376326" TEXT="&lt;ul&gt;&#xa;    &lt;li *ngFor=&quot;let race of races&quot;&gt;{{race.name}}&lt;/div&gt;&#xa;&lt;/ul&gt;">
@@ -216,7 +249,7 @@
 <node COLOR="#0000ff" CREATED="1544799900960" ID="Freemind_Link_1591343619" MODIFIED="1544801008918" TEXT="&lt;div [ngSwitch]=&quot;messageCount&quot;&gt;&#xa;    &lt;p *ngSwitchCase=&quot;0&quot;&gt;N&#xe3;o h&#xe1; mensagem&lt;/p&gt;&#xa;    &lt;p *ngSwitchCase=&quot;1&quot;&gt;Voc&#xea; tem uma mensagem&lt;/p&gt;&#xa;    &lt;p *ngSwitchDefault&gt;Voc&#xea; tem mensagens&lt;/p&gt;&#xa;&lt;/div&gt;"/>
 </node>
 </node>
-<node CREATED="1544801023929" ID="Freemind_Link_1943071524" MODIFIED="1544801026237" POSITION="right" TEXT="NgStyle">
+<node CREATED="1544801023929" FOLDED="true" ID="Freemind_Link_1943071524" MODIFIED="1544801026237" POSITION="right" TEXT="NgStyle">
 <node CREATED="1544801030025" ID="Freemind_Link_265782051" MODIFIED="1544801053460" TEXT="Permite a aplica&#xe7;&#xe3;o de diversos estilos de uma s&#xf3; vez"/>
 <node CREATED="1544801242199" ID="Freemind_Link_1908320728" MODIFIED="1544801254332" TEXT="Alternativa &#xe0; aplica&#xe7;&#xe3;o de um estilo por vez">
 <node COLOR="#0000ff" CREATED="1544800538780" ID="Freemind_Link_1084310077" MODIFIED="1544801531558" TEXT="Ex: &lt;p [style.color]=&quot;getCorParagrafo()&quot; [style.fontWeight]=&quot;getFontWeightParagrafo()&quot;&gt;Texto estiloso&lt;/p&gt;">
