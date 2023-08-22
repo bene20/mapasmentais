@@ -56,5 +56,19 @@
 </node>
 </node>
 </node>
+<node CREATED="1691688210808" ID="Freemind_Link_504886061" MODIFIED="1691688265031" POSITION="right" TEXT="Quando se quer emitir um evento de um componente &#xa;X e se quer caput&#xe1;-lo de outro componente distante &#xa;(ou n&#xe3;o necessariamente ancestral)">
+<node CREATED="1691688266377" ID="Freemind_Link_1961336008" MODIFIED="1691688312663" TEXT="Em vez de fazer uma cadeia de emiss&#xe3;o de eventos e captura de eventos para repasse entre a hierarquia de componentes, use um Service">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1691688313473" ID="Freemind_Link_19075102" MODIFIED="1691688353863" TEXT="O service deve ter um atributo do tipo EventEmitter">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1691688354826" ID="Freemind_Link_177169992" MODIFIED="1691688392738" TEXT="O componente que quer emitir o evento deve usar o EventEmitter dessa classe de servi&#xe7;o">
+<icon BUILTIN="full-3"/>
+</node>
+<node CREATED="1691688394403" ID="Freemind_Link_1864170870" MODIFIED="1691688414425" TEXT="O componente que quer capturar o evento deve se inscrever no evento do servi&#xe7;o">
+<icon BUILTIN="full-4"/>
+</node>
+</node>
 </node>
 </map>

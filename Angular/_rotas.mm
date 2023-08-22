@@ -19,7 +19,7 @@
 <node CREATED="1549909588409" ID="Freemind_Link_674616933" MODIFIED="1549909598187" TEXT="Usar o &apos;router-outlet&apos;"/>
 <node COLOR="#0000ff" CREATED="1549909598760" ID="Freemind_Link_20840437" MODIFIED="1549909626610" TEXT="Ex: &lt;router-outlet&gt;&lt;/router-outlet&gt;"/>
 </node>
-<node CREATED="1544627794016" ID="_" MODIFIED="1544627976027" POSITION="right" TEXT="Rota com wildcard">
+<node CREATED="1544627794016" FOLDED="true" ID="_" MODIFIED="1544627976027" POSITION="right" TEXT="Rota com wildcard">
 <node CREATED="1544627802977" ID="Freemind_Link_734856452" MODIFIED="1544627811268" TEXT="Ideal para p&#xe1;gina &quot;NotFound&quot;"/>
 <node CREATED="1544627813954" ID="Freemind_Link_322025615" MODIFIED="1544627818492" TEXT="Usar o wildcard &apos;**&apos;"/>
 <node CREATED="1544627851033" ID="Freemind_Link_1086321220" MODIFIED="1544627852156" TEXT="Ex:">
@@ -33,12 +33,92 @@
 <node CREATED="1544627851033" ID="Freemind_Link_183784205" MODIFIED="1544627852156" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1544627819296" ID="Freemind_Link_1435937571" MODIFIED="1551098182931" TEXT="&lt;a href=&quot;&quot; [routerLink]=&quot;[&apos;/&apos;]&quot;&gt;Home&lt;/a&gt;"/>
 </node>
-<node CREATED="1551098196423" ID="Freemind_Link_421115791" MODIFIED="1551098239011" TEXT="&#xc9; poss&#xed;vel aplicar uma classe css a &#xa;um link ativo (ativado na rota atual)">
+<node CREATED="1551098196423" ID="Freemind_Link_421115791" MODIFIED="1692719081201" TEXT="&#xc9; poss&#xed;vel aplicar uma classe css a &#xa;um link ativo (ativado na rota atual)">
 <node CREATED="1551098246023" ID="Freemind_Link_1463293504" MODIFIED="1551098260674" TEXT="Usar o RouterLinkActive"/>
-<node COLOR="#0000ff" CREATED="1544627819296" ID="Freemind_Link_1467886082" MODIFIED="1551098396825" TEXT="Ex: &lt;a href=&quot;&quot; [routerLink]=&quot;[&apos;/&apos;]&quot; routerLinkActive=&quot;selected-menu&quot;&gt;Home&lt;/a&gt;"/>
-<node COLOR="#0000ff" CREATED="1544627819296" ID="Freemind_Link_1854058816" MODIFIED="1551098862607" TEXT="Ex: &#xa;Para a rota: ...{path: &apos;/races/:raceId/ponies/:ponyId&apos;, component: PonyComponent }&#xa;O link din&#xe2;mico: &lt;a href=&quot;&quot; [routerLink]=&quot;[&apos;/races&apos;, race.id, &apos;ponies&apos;, pony.id]&quot;&gt;See pony&lt;/a&gt;"/>
-<node CREATED="1551098343614" ID="Freemind_Link_264804001" MODIFIED="1551098389297" TEXT="&#xc9; poss&#xed;vel pegar uma refer&#xea;ncia para essa diretiva &#xa;para saber se a rota est&#xe1; ativa e usar isso no template.">
-<node COLOR="#0000ff" CREATED="1544627819296" ID="Freemind_Link_847126215" MODIFIED="1551098515800" TEXT="Ex: &#xa;&lt;a href=&quot;&quot; [routerLink]=&quot;[&apos;/&apos;]&quot; routerLinkActive &#xa;                  #route=&quot;routerLinkActive&quot;&gt;&#xa;    Home {{route.isActive? &apos;(here)&apos;:&apos;&apos;}}&#xa;&lt;/a&gt;"/>
+<node CREATED="1692719081180" ID="Freemind_Link_1448578033" MODIFIED="1692719082666" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1544627819296" ID="Freemind_Link_1467886082" MODIFIED="1692719088059" TEXT="&lt;a href=&quot;&quot; [routerLink]=&quot;[&apos;/&apos;]&quot; routerLinkActive=&quot;selected-menu&quot;&gt;Home&lt;/a&gt;"/>
+<node COLOR="#0000ff" CREATED="1544627819296" ID="Freemind_Link_1854058816" MODIFIED="1692719099000" TEXT="Para a rota: ...{path: &apos;/races/:raceId/ponies/:ponyId&apos;, component: PonyComponent }&#xa;O link din&#xe2;mico: &lt;a href=&quot;&quot; [routerLink]=&quot;[&apos;/races&apos;, race.id, &apos;ponies&apos;, pony.id]&quot;&gt;See pony&lt;/a&gt;"/>
+</node>
+<node CREATED="1551098343614" ID="Freemind_Link_264804001" MODIFIED="1692719112934" TEXT="&#xc9; poss&#xed;vel pegar uma refer&#xea;ncia para essa diretiva &#xa;para saber se a rota est&#xe1; ativa e usar isso no template.">
+<node CREATED="1692719112879" ID="Freemind_Link_145196081" MODIFIED="1692719114347" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1544627819296" ID="Freemind_Link_847126215" MODIFIED="1692719111636" TEXT="&lt;a href=&quot;&quot; [routerLink]=&quot;[&apos;/&apos;]&quot; routerLinkActive &#xa;                  #route=&quot;routerLinkActive&quot;&gt;&#xa;    Home {{route.isActive? &apos;(here)&apos;:&apos;&apos;}}&#xa;&lt;/a&gt;"/>
+</node>
+</node>
+</node>
+<node CREATED="1692718976712" ID="Freemind_Link_1774221776" MODIFIED="1692720198246" TEXT="QueryParam">
+<node CREATED="1692720198234" ID="Freemind_Link_740023512" MODIFIED="1692720200428" TEXT="Gerando">
+<node CREATED="1692718983555" ID="Freemind_Link_1078658383" MODIFIED="1692719437661" TEXT="Para colocar query parameters da URL, use a propriedade &apos;queryParams&apos;"/>
+<node CREATED="1692719034353" ID="Freemind_Link_531599902" MODIFIED="1692719049131" TEXT="N&#xe3;o &#xe9; uma diretiva. &#xc9; uma proprieade da diretiva routerLink"/>
+<node CREATED="1692719066047" ID="Freemind_Link_920453783" MODIFIED="1692719067796" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1544627819296" ID="Freemind_Link_215862251" MODIFIED="1692719301401" TEXT="&lt;a&#xa;  [routerLink]=&quot;[&apos;/servers&apos;,5,&apos;edit&apos;]&quot;&#xa;  [queryParams]=&quot;{allowEdit: &apos;1&apos;}&quot;&#xa;  href=&quot;#&quot;&gt;&#xa;  {{ server.name }}&#xa;&lt;/a&gt;">
+<node CREATED="1692719216102" ID="Freemind_Link_1602448958" MODIFIED="1692719237000" TEXT="Tag &apos;a&apos; com o queryParam"/>
+</node>
+<node COLOR="#0000ff" CREATED="1544627819296" ID="Freemind_Link_46398960" MODIFIED="1692719207059" TEXT="http://localhost:4200/servers/5/edit?allowEdit=1">
+<node CREATED="1692719216102" ID="Freemind_Link_505306844" MODIFIED="1692719218473" TEXT="URL gerada"/>
+</node>
+</node>
+</node>
+<node CREATED="1692720204904" ID="Freemind_Link_332547970" MODIFIED="1692720576853" TEXT="Consumindo">
+<node CREATED="1692720576841" ID="Freemind_Link_497631630" MODIFIED="1692720579612" TEXT="Forma 1">
+<node CREATED="1692720512970" ID="Freemind_Link_499708155" MODIFIED="1692720571867" TEXT="Injete o ActivatedRoute">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1692720530154" ID="Freemind_Link_1311633339" MODIFIED="1692720575172" TEXT="Acesse o atributo snapshot.queryParams de sua inst&#xe2;ncia do ActivatedRoute">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1692720506377" ID="Freemind_Link_344028055" MODIFIED="1692720507509" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1692720456650" ID="Freemind_Link_1241395819" MODIFIED="1692720594351" TEXT="&#xa;  constructor(private route: ActivatedRoute) { }&#xa;&#xa;  ngOnInit() {&#xa;    console.log(this.route.snapshot.queryParams);&#xa;  }"/>
+</node>
+</node>
+<node CREATED="1692720576841" ID="Freemind_Link_1676264797" MODIFIED="1692720928940" TEXT="Forma 2">
+<node CREATED="1692720512970" ID="Freemind_Link_1058167907" MODIFIED="1692720571867" TEXT="Injete o ActivatedRoute">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1692720530154" ID="Freemind_Link_310555596" MODIFIED="1692720893606" TEXT="Inscreva-se no observable &apos;queryParams&apos; de sua inst&#xe2;ncia do ActivatedRoute">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1692720506377" ID="Freemind_Link_907992282" MODIFIED="1692720507509" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1692720456650" ID="Freemind_Link_516634415" MODIFIED="1692720924615" TEXT="&#xa;  constructor(private route: ActivatedRoute) { }&#xa;&#xa;  ngOnInit() {&#xa;    this.route.queryParams.subscribe(...);&#xa;  }"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1692718976712" ID="Freemind_Link_1339486801" MODIFIED="1692720210987" TEXT="Fragment">
+<node CREATED="1692720210976" ID="Freemind_Link_225827440" MODIFIED="1692720213164" TEXT="Gerando">
+<node CREATED="1692718983555" ID="Freemind_Link_170761637" MODIFIED="1692719465932" TEXT="Para colocar &#xe2;ncora na URL, use a propriedade &apos;fragment&apos;"/>
+<node CREATED="1692719034353" ID="Freemind_Link_1901209776" MODIFIED="1692719049131" TEXT="N&#xe3;o &#xe9; uma diretiva. &#xc9; uma proprieade da diretiva routerLink"/>
+<node CREATED="1692719066047" ID="Freemind_Link_1852275435" MODIFIED="1692719067796" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1544627819296" ID="Freemind_Link_1864771745" MODIFIED="1692719486686" TEXT="&lt;a&#xa;  [routerLink]=&quot;[&apos;/servers&apos;,5,&apos;edit&apos;]&quot;&#xa;  [fragment]=&quot;&apos;loading&apos;&quot;&#xa;  href=&quot;#&quot;&gt;&#xa;  {{ server.name }}&#xa;&lt;/a&gt;">
+<node CREATED="1692719216102" ID="Freemind_Link_1860047648" MODIFIED="1692719495235" TEXT="Tag &apos;a&apos; com o fragment"/>
+</node>
+<node COLOR="#0000ff" CREATED="1544627819296" ID="Freemind_Link_1366603317" MODIFIED="1692719516394" TEXT="http://localhost:4200/servers/5/edit#loading">
+<node CREATED="1692719216102" ID="Freemind_Link_1331588247" MODIFIED="1692719218473" TEXT="URL gerada"/>
+</node>
+</node>
+</node>
+<node CREATED="1692720204904" ID="Freemind_Link_1634277423" MODIFIED="1692720207605" TEXT="Consumindo">
+<node CREATED="1692720576841" ID="Freemind_Link_1340839720" MODIFIED="1692720579612" TEXT="Forma 1">
+<node CREATED="1692720512970" ID="Freemind_Link_1258746830" MODIFIED="1692720571867" TEXT="Injete o ActivatedRoute">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1692720530154" ID="Freemind_Link_126757919" MODIFIED="1692720955350" TEXT="Acesse o atributo snapshot.fragment de sua inst&#xe2;ncia do ActivatedRoute">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1692720506377" ID="Freemind_Link_1707788863" MODIFIED="1692720507509" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1692720456650" ID="Freemind_Link_1746867362" MODIFIED="1692720966070" TEXT="&#xa;  constructor(private route: ActivatedRoute) { }&#xa;&#xa;  ngOnInit() {&#xa;    console.log(this.route.snapshot.fragment);&#xa;  }"/>
+</node>
+</node>
+<node CREATED="1692720576841" ID="Freemind_Link_389701654" MODIFIED="1692720928940" TEXT="Forma 2">
+<node CREATED="1692720512970" ID="Freemind_Link_1033188477" MODIFIED="1692720571867" TEXT="Injete o ActivatedRoute">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1692720530154" ID="Freemind_Link_1090545426" MODIFIED="1692720973373" TEXT="Inscreva-se no observable &apos;fragment&apos; de sua inst&#xe2;ncia do ActivatedRoute">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1692720506377" ID="Freemind_Link_1842756231" MODIFIED="1692720507509" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1692720456650" ID="Freemind_Link_81728153" MODIFIED="1692720985492" TEXT="&#xa;  constructor(private route: ActivatedRoute) { }&#xa;&#xa;  ngOnInit() {&#xa;    this.route.fragment.subscribe(...);&#xa;  }"/>
+</node>
+</node>
 </node>
 </node>
 </node>
@@ -48,14 +128,56 @@
 <node CREATED="1551277865142" ID="Freemind_Link_516058095" MODIFIED="1551277879482" TEXT="&#xc9; necess&#xe1;rio passar a url inteira, concatenando os segmentos de rota"/>
 <node COLOR="#0000ff" CREATED="1544627819296" ID="Freemind_Link_323295485" MODIFIED="1551277859351" TEXT="Ex: &#xa;export class RacesComponent {&#xa;   constructor(private router: Router) {}&#xa;&#xa;   saveAndMoveBackAtHome(userName: string) {&#xa;      ...&#xa;      this.route.navigateByUrl(&apos;user/&apos; + userName);&#xa;   }&#xa;}"/>
 </node>
-<node CREATED="1551277756556" ID="Freemind_Link_1258250420" MODIFIED="1551277759043" TEXT="navigate">
+<node CREATED="1551277756556" ID="Freemind_Link_1258250420" MODIFIED="1692725020096" TEXT="navigate">
 <node CREATED="1551098565676" ID="Freemind_Link_1762862293" MODIFIED="1551098581511" TEXT="Usar o m&#xe9;todo &apos;navigate()&apos; de &apos;Router&apos;"/>
 <node CREATED="1551277937357" ID="Freemind_Link_36846783" MODIFIED="1551277956561" TEXT="Evita ter que fazer concatena&#xe7;&#xe3;o de strings na cria&#xe7;&#xe3;o da url de destino"/>
-<node COLOR="#0000ff" CREATED="1544627819296" ID="Freemind_Link_1869666640" MODIFIED="1551277934356" TEXT="Ex: &#xa;export class RacesComponent {&#xa;   constructor(private router: Router) {}&#xa;&#xa;   saveAndMoveBackAtHome(userName: string) {&#xa;      ...&#xa;      this.route.navigate([&apos;user&apos;, userName]);&#xa;   }&#xa;}"/>
+<node CREATED="1692725020075" ID="Freemind_Link_1971928687" MODIFIED="1692725021750" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1544627819296" ID="Freemind_Link_1869666640" MODIFIED="1692725028464" TEXT="export class RacesComponent {&#xa;   constructor(private router: Router) {}&#xa;&#xa;   saveAndMoveBackAtHome(userName: string) {&#xa;      ...&#xa;      this.route.navigate([&apos;user&apos;, userName]);&#xa;   }&#xa;}"/>
+</node>
+<node CREATED="1692725464644" ID="Freemind_Link_1452949749" MODIFIED="1692725466962" TEXT="Par&#xe2;metros">
+<node CREATED="1692725599644" ID="Freemind_Link_564007398" MODIFIED="1692725615423" TEXT="Objeto passado como segundo par&#xe2;metro ddo m&#xe9;todo &apos;navigate&apos;"/>
+<node CREATED="1692725302752" ID="Freemind_Link_169044701" MODIFIED="1692726923149" TEXT="queryParam">
+<arrowlink COLOR="#f80707" DESTINATION="Freemind_Link_1246825383" ENDARROW="Default" ENDINCLINATION="172;0;" ID="Freemind_Arrow_Link_1844795967" STARTARROW="None" STARTINCLINATION="172;0;"/>
+<node CREATED="1692725528803" ID="Freemind_Link_1158522147" MODIFIED="1692725542600" TEXT="Permite passar par&#xe2;metros de query na URL"/>
+<node COLOR="#0000ff" CREATED="1544627819296" ID="Freemind_Link_1772083829" MODIFIED="1692719906094" TEXT="onLoadServer(id: number) {&#xa;  this.router.navigate(&#xa;    [&apos;/servers&apos;, id, &apos;edit&apos;], &#xa;    {queryParams: {allowEdit: &apos;1&apos;}});&#xa;}"/>
+</node>
+<node CREATED="1692726612798" ID="Freemind_Link_1246825383" MODIFIED="1692726917403" TEXT="queryParamsHandling">
+<node CREATED="1692726618814" ID="Freemind_Link_599808980" MODIFIED="1692726622786" TEXT="Valores poss&#xed;veis:">
+<node CREATED="1692726840147" ID="Freemind_Link_1437512466" MODIFIED="1692726865333" TEXT="Por default, ser&#xe3;o descartados os queryPartams da rota pai e usados apenas os da rota filha"/>
+<node COLOR="#0000ff" CREATED="1692726623359" ID="Freemind_Link_1545965516" MODIFIED="1692726879545" TEXT="preserve">
+<node CREATED="1692726630307" ID="Freemind_Link_1800892242" MODIFIED="1692726647793" TEXT="Mant&#xe9;m o queryParam recebido da rota pai"/>
+</node>
+<node COLOR="#0000ff" CREATED="1692726628015" ID="Freemind_Link_255238636" MODIFIED="1692726885497" TEXT="merge">
+<node CREATED="1692726649812" ID="Freemind_Link_278938068" MODIFIED="1692726667170" TEXT="Faz o merge do queryParam recebido da rota pai com os queryParams adicionados na rota filha"/>
+</node>
+</node>
+<node CREATED="1692725020075" ID="Freemind_Link_1894545972" MODIFIED="1692725021750" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1544627819296" ID="Freemind_Link_222731109" MODIFIED="1692726721095" TEXT="  onEdit(){&#xa;    // Na linha abaixo tenho uma rota relativa&#xa;    // Como seria a rota absoluta: this.router.navigate([&apos;/servers&apos;, this.server.id, &apos;edit&apos;]);&#xa;    this.router.navigate([&apos;edit&apos;], &#xa;        {relativeTo: this.route, queryParamsHandling: &apos;preserve&apos;});&#xa;  }&#xa;"/>
+</node>
+</node>
+<node CREATED="1692725315736" ID="Freemind_Link_944987481" MODIFIED="1692725492170" TEXT="fragment&#xa;(URL com &#xe2;ncora)">
+<node CREATED="1692725528803" ID="Freemind_Link_242499980" MODIFIED="1692725559767" TEXT="Permite adicionar uma &#xe2;ncora na URL"/>
+<node COLOR="#0000ff" CREATED="1544627819296" ID="Freemind_Link_120897638" MODIFIED="1692719933614" TEXT="onLoadServer(id: number) {&#xa;  this.router.navigate(&#xa;    [&apos;/servers&apos;, id, &apos;edit&apos;], &#xa;    {fragment: &apos;loading&apos;});&#xa;}"/>
+</node>
+<node CREATED="1692725001934" ID="Freemind_Link_1992937095" MODIFIED="1692725510788" TEXT="relativeTo&#xa;(rota relativa)">
+<node CREATED="1692725007718" ID="Freemind_Link_1169744105" MODIFIED="1692725570733" TEXT="Permite navegar para uma rota relativa &#xe0; atual"/>
+<node CREATED="1692725020075" ID="Freemind_Link_1694679179" MODIFIED="1692725021750" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1544627819296" ID="Freemind_Link_1232205137" MODIFIED="1692725111251" TEXT="export class RacesComponent {&#xa;   constructor(private router: Router, private route: ActivatedRoute) {}&#xa;&#xa;   onEdit() {&#xa;      this.route.navigate([&apos;edit&apos;], {relativeTo: this.route});&#xa;   }&#xa;}"/>
+<node CREATED="1692725122701" ID="Freemind_Link_1971692181" MODIFIED="1692725125504" TEXT="Efeito:">
+<node CREATED="1692725126322" ID="Freemind_Link_96488901" MODIFIED="1692725128952" TEXT="Se estou em">
+<node COLOR="#000000" CREATED="1692725132853" ID="Freemind_Link_735189633" MODIFIED="1692725231914" TEXT="http://localhost:4200/servers/2"/>
+</node>
+<node CREATED="1692725129788" ID="Freemind_Link_1578966728" MODIFIED="1692725131625" TEXT="Vou para">
+<node COLOR="#000000" CREATED="1692725132853" ID="Freemind_Link_1827040283" MODIFIED="1692725249061" TEXT="http://localhost:4200/servers/2/edit"/>
 </node>
 </node>
 </node>
-<node CREATED="1545072989605" ID="Freemind_Link_156710819" MODIFIED="1545072997329" POSITION="right" TEXT="Providers">
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1545072989605" FOLDED="true" ID="Freemind_Link_156710819" MODIFIED="1545072997329" POSITION="right" TEXT="Providers">
 <node CREATED="1545072997933" ID="Freemind_Link_838826671" MODIFIED="1545073002049" TEXT="ActivatedRoute">
 <node CREATED="1545073033133" ID="Freemind_Link_858888947" MODIFIED="1545073054569" TEXT="Injeta o componente Router da rota ativa neste momento"/>
 <node CREATED="1545073068669" ID="Freemind_Link_1305366435" MODIFIED="1545073072033" TEXT="Exemplo de uso:">
@@ -122,7 +244,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1545061126738" ID="Freemind_Link_379034394" MODIFIED="1545061130086" POSITION="right" TEXT="Route guard">
+<node CREATED="1545061126738" FOLDED="true" ID="Freemind_Link_379034394" MODIFIED="1545061130086" POSITION="right" TEXT="Route guard">
 <node CREATED="1545070668965" ID="Freemind_Link_1527222975" MODIFIED="1545070678984" TEXT="Associar a&#xe7;&#xf5;es a rotas">
 <node CREATED="1545070686493" ID="Freemind_Link_1336616748" MODIFIED="1545070701840" TEXT="Implementar a a&#xe7;&#xe3;o (cada uma com sua respectiva interface)"/>
 <node CREATED="1545070703180" ID="Freemind_Link_60712505" MODIFIED="1545070714472" TEXT="Declarar o routeguard na configura&#xe7;&#xe3;o de rotas"/>
@@ -130,7 +252,7 @@
 <node CREATED="1545071938836" ID="Freemind_Link_1910242237" MODIFIED="1545072004391" TEXT="O route guard &#xe9; um provider e, portanto, necessita &#xa;ser declarado na lista de providers  da aplica&#xe7;&#xe3;o">
 <icon BUILTIN="messagebox_warning"/>
 </node>
-<node CREATED="1545063051930" ID="Freemind_Link_1933776150" MODIFIED="1545063054513" TEXT="Can Load">
+<node CREATED="1545063051930" FOLDED="true" ID="Freemind_Link_1933776150" MODIFIED="1545063054513" TEXT="Can Load">
 <node CREATED="1545061135698" ID="Freemind_Link_411542561" MODIFIED="1545061939616" TEXT="Usado para controlar carregamento de m&#xf3;dulos&#xa;conforme restri&#xe7;&#xf5;es determinadas pelo programador">
 <node CREATED="1545061160681" ID="Freemind_Link_587071725" MODIFIED="1545061980634" TEXT="Ex: impedir carregamento de um m&#xf3;dulo caso o usu&#xe1;rio n&#xe3;o esteja logado"/>
 <node CREATED="1545071771653" ID="Freemind_Link_330443172" MODIFIED="1545071866889" TEXT="Est&#xe1; sempre associado a restringir o carregamento tardio de &#xa;um m&#xf3;dulo, isto &#xe9;, rotas que contenham loadChildren">
@@ -148,7 +270,7 @@
 <node COLOR="#0000ff" CREATED="1545069571828" ID="Freemind_Link_70955609" MODIFIED="1545069851086" TEXT="import { CanLoad, Route } from &apos;@angular/router&apos;;&#xa;...&#xa;export class LoggedInGuard implements CanLoad {&#xa;&#xa;  canLoad(route: Route): boolean {&#xa;    return myCheckAuthenticationFunction(route.path);&#xa;  }&#xa;}"/>
 </node>
 </node>
-<node CREATED="1545063058282" ID="Freemind_Link_1387005104" MODIFIED="1545063060778" TEXT="Can Activate">
+<node CREATED="1545063058282" FOLDED="true" ID="Freemind_Link_1387005104" MODIFIED="1545063060778" TEXT="Can Activate">
 <node CREATED="1545063453688" ID="Freemind_Link_1869570269" MODIFIED="1545074168690" TEXT="Usado para controlar a ativa&#xe7;&#xe3;o de um m&#xf3;dulo">
 <node CREATED="1545063492511" ID="Freemind_Link_654369190" MODIFIED="1545063611825" TEXT="O m&#xf3;dulo j&#xe1; pode estar carregado, mas mesmo assim pode ser necess&#xe1;rio bloquear a sua ativa&#xe7;&#xe3;o (navega&#xe7;&#xe3;o para ele)"/>
 <node CREATED="1545063072443" ID="Freemind_Link_1269570140" MODIFIED="1545063083646" TEXT="Mais um passo de prote&#xe7;&#xe3;o (adicional ao Can Load)"/>

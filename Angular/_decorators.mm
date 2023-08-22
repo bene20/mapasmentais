@@ -183,6 +183,7 @@
 </node>
 <node COLOR="#0000ff" CREATED="1545059186575" ID="Freemind_Link_1464314018" MODIFIED="1545857657326" TEXT="Ex: &#xa;@Component({&#xa;   selector: &apos;bank-account&apos;,&#xa;   template: `Bank Name: {{bankName}},  Account Id: {{id}}`&#xa;})&#xa;class BankAccount {&#xa;   @Input() bankName: string;&#xa;   @Input(&apos;id&apos;) accountId: string;&#xa; &#xa;   // this property is not bound, and is not automatically updated by Angular&#xa;   normalizedBankName: string;&#xa;}"/>
 <node CREATED="1547035512300" ID="Freemind_Link_11615994" MODIFIED="1547035514239" TEXT="setter">
+<node CREATED="1691607991536" ID="Freemind_Link_55268066" MODIFIED="1691608048895" TEXT="QUando aplicamos este decorator em um setter, o setter ser&#xe1; executado &#xa;toda vez que o valor da propriedade for modificada no componente."/>
 <node CREATED="1547036899702" ID="Freemind_Link_1675198330" LINK="_diretivas.mm" MODIFIED="1547036922498" TEXT="Ver documenta&#xe7;&#xe3;o de input de diretivas"/>
 </node>
 </node>
@@ -199,7 +200,34 @@
 <node COLOR="#0000ff" CREATED="1545059186575" ID="Freemind_Link_1582507341" MODIFIED="1545857762795" TEXT="Ex: &#xa;@Component({&#xa;   selector: &apos;bank-account&apos;,&#xa;   template: `&lt;button&gt;Press it&lt;/button&gt;`&#xa;})&#xa;class BankAccount {&#xa;   @Output() change = new EventEmitter&lt;any&gt;();&#xa;}"/>
 <node CREATED="1547037453917" ID="Freemind_Link_1833344672" LINK="_componentes.mm" MODIFIED="1547038094263" TEXT="Ver documenta&#xe7;&#xe3;o de output de componentes"/>
 </node>
-<node CREATED="1690478288516" ID="Freemind_Link_865079842" MODIFIED="1690478292311" POSITION="right" TEXT="@ViewChild">
+<node CREATED="1691518512403" FOLDED="true" ID="Freemind_Link_1970276245" MODIFIED="1691518515898" POSITION="right" TEXT="@HostListener">
+<node CREATED="1691520331769" ID="Freemind_Link_945644465" MODIFIED="1691520337061" TEXT="Usao na implementa&#xe7;&#xe3;o de Diretivas"/>
+<node CREATED="1691519720629" ID="Freemind_Link_1185212935" MODIFIED="1691520418006" TEXT="Permite que seja implementada uma rea&#xe7;&#xe3;o a um evento&#xa;ocorrido no componente/elmento que usa a diretiva"/>
+<node CREATED="1691518607277" ID="Freemind_Link_1027554904" MODIFIED="1691518609038" TEXT="Ex:">
+<node CREATED="1691518610165" ID="Freemind_Link_227291686" MODIFIED="1691518637593" TEXT="Neste exemplo o componente que usa a diretiva&#xa;fica vermelho quando o mouse passa por cima dele"/>
+<node COLOR="#0000ff" CREATED="1691518656140" ID="Freemind_Link_1415832009" MODIFIED="1691518677622" TEXT="&lt;p appBetterHighlight&gt;Diretiva better-highlight&lt;/p&gt;">
+<node CREATED="1691518661531" ID="Freemind_Link_1349953012" MODIFIED="1691518666990" TEXT="C&#xf3;digo HTML que usa a diretiva"/>
+</node>
+<node COLOR="#0000ff" CREATED="1691518656140" ID="Freemind_Link_1835189695" MODIFIED="1691519982873" TEXT="@Directive({ selector: &apos;[appBetterHighlight]&apos;})&#xa;export class BetterHighlightDirective {&#xa;  constructor(private elementRef: ElementRef, private renderer: Renderer2) { }&#xa;&#xa;  @HostListener(&apos;mouseenter&apos;) mouseentrando(eventData: Event) {&#xa;    this.renderer.setStyle(this.elementRef.nativeElement, &apos;background-color&apos;, &apos;red&apos;);&#xa;  }&#xa;&#xa;  @HostListener(&apos;mouseleave&apos;) mousesaindo(eventData: Event) {&#xa;    this.renderer.setStyle(this.elementRef.nativeElement, &apos;background-color&apos;, &apos;transparent&apos;);&#xa;  }&#xa;}">
+<arrowlink COLOR="#f60d10" DESTINATION="Freemind_Link_322686846" ENDARROW="Default" ENDINCLINATION="173;0;" ID="Freemind_Arrow_Link_377324295" STARTARROW="Default" STARTINCLINATION="211;0;"/>
+<node CREATED="1691518661531" ID="Freemind_Link_998901501" MODIFIED="1691518687191" TEXT="C&#xf3;digo da diretiva"/>
+</node>
+</node>
+</node>
+<node CREATED="1691519635616" FOLDED="true" ID="Freemind_Link_1181055515" MODIFIED="1691519645738" POSITION="right" TEXT="@HostBinding">
+<node CREATED="1691520331769" ID="Freemind_Link_900601384" MODIFIED="1691520337061" TEXT="Usao na implementa&#xe7;&#xe3;o de Diretivas"/>
+<node CREATED="1691519655440" ID="Freemind_Link_206169233" MODIFIED="1691520372412" TEXT="Permite vincular uma vari&#xe1;vel a uma propriedade do componente/objeto que usa a diretiva"/>
+<node CREATED="1691518607277" ID="Freemind_Link_1104948136" MODIFIED="1691518609038" TEXT="Ex:">
+<node CREATED="1691518610165" ID="Freemind_Link_1335847340" MODIFIED="1691519965428" TEXT="Neste exemplo o componente que usa a diretiva&#xa;fica azul quando o mouse passa por cima dele"/>
+<node COLOR="#0000ff" CREATED="1691518656140" ID="Freemind_Link_1930875087" MODIFIED="1691518677622" TEXT="&lt;p appBetterHighlight&gt;Diretiva better-highlight&lt;/p&gt;">
+<node CREATED="1691518661531" ID="Freemind_Link_575998883" MODIFIED="1691518666990" TEXT="C&#xf3;digo HTML que usa a diretiva"/>
+</node>
+<node COLOR="#0000ff" CREATED="1691518656140" ID="Freemind_Link_322686846" MODIFIED="1691519982877" TEXT="@Directive({ selector: &apos;[appBetterHighlight]&apos;})&#xa;export class BetterHighlightDirective {&#xa;  @HostBinding(&apos;style.backgroundColor&apos;) backgroundColor: string = &apos;transparent&apos;;&#xa;&#xa;  constructor(private elementRef: ElementRef) { }&#xa;&#xa;  @HostListener(&apos;mouseenter&apos;) mouseentrando(eventData: Event) {&#xa;    this.backgroundColor = &apos;blue&apos;;&#xa;  }&#xa;&#xa;  @HostListener(&apos;mouseleave&apos;) mousesaindo(eventData: Event) {&#xa;    this.backgroundColor = &apos;transparent&apos;;&#xa;  }&#xa;}">
+<node CREATED="1691518661531" ID="Freemind_Link_1957166721" MODIFIED="1691518687191" TEXT="C&#xf3;digo da diretiva"/>
+</node>
+</node>
+</node>
+<node CREATED="1690478288516" FOLDED="true" ID="Freemind_Link_865079842" MODIFIED="1690478292311" POSITION="right" TEXT="@ViewChild">
 <node CREATED="1690478298219" ID="Freemind_Link_444769265" MODIFIED="1690484231408" TEXT="Permite referenciar um elemento HTML e atribu&#xed;-lo&#xa;a uma propriedade da classe TypesCript">
 <arrowlink COLOR="#a22020" DESTINATION="Freemind_Link_1919040363" ENDARROW="Default" ENDINCLINATION="240;0;" ID="Freemind_Arrow_Link_1117199468" STARTARROW="Default" STARTINCLINATION="240;0;"/>
 <node CREATED="1690484202179" ID="Freemind_Link_529153193" MODIFIED="1690484205520" TEXT="Semelhante ao ContentChild"/>
@@ -222,7 +250,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1690478288516" ID="Freemind_Link_1605833830" MODIFIED="1690484102986" POSITION="right" TEXT="@ContentChild">
+<node CREATED="1690478288516" FOLDED="true" ID="Freemind_Link_1605833830" MODIFIED="1690484102986" POSITION="right" TEXT="@ContentChild">
 <node CREATED="1690478298219" ID="Freemind_Link_1919040363" MODIFIED="1690484194736" TEXT="Semelhante ao ViewChild, mas permite referenciar um elemento HTML de um componente filho e atribu&#xed;-lo a uma propriedade da classe TypesCript m&#xe3;e"/>
 <node CREATED="1690479614598" ID="Freemind_Link_55768209" MODIFIED="1690484109154" TEXT="N&#xe3;o altere o elemento DOM acessado&#xa;por ContentChild. &#xc9; uma m&#xe1; pr&#xe1;tica!">
 <icon BUILTIN="messagebox_warning"/>
