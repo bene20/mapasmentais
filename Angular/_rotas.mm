@@ -5,29 +5,68 @@
 <node CREATED="1544627898323" ID="Freemind_Link_453661605" MODIFIED="1544627909710" TEXT="Rotas mais espec&#xed;ficas primeiro"/>
 <node CREATED="1544627917464" ID="Freemind_Link_1972716845" MODIFIED="1544627922388" TEXT="Rotas mais gen&#xe9;ricas depois"/>
 </node>
-<node CREATED="1549909231426" ID="Freemind_Link_1116650273" MODIFIED="1549909235030" POSITION="right" TEXT="Array de rotas">
+<node CREATED="1693924963389" FOLDED="true" ID="Freemind_Link_930700943" MODIFIED="1693927397707" POSITION="right" TEXT="Configura&#xe7;&#xe3;o">
+<node CREATED="1693924967682" ID="Freemind_Link_1037869803" MODIFIED="1693927445084" TEXT="Geralmente as rotas ficam&#xa;configuradas em um m&#xf3;dulo pr&#xf3;prio">
+<node CREATED="1693924989213" ID="Freemind_Link_447920513" MODIFIED="1693924990936" TEXT="Recomendado"/>
+<node CREATED="1693924992051" ID="Freemind_Link_915234661" MODIFIED="1693927389324" TEXT="Nome: app-routing.module.ts">
+<node CREATED="1693927348746" ID="Freemind_Link_1374479542" MODIFIED="1693927361986" TEXT="Precisa ser importado no app.module.ts"/>
+</node>
+</node>
+<node CREATED="1549909231426" FOLDED="true" ID="Freemind_Link_1116650273" MODIFIED="1549909235030" TEXT="Array de rotas">
 <node CREATED="1549909235562" ID="Freemind_Link_1831043085" MODIFIED="1549909281974" TEXT="Biblioteca @angular/router"/>
 <node CREATED="1549909393113" ID="Freemind_Link_999518942" MODIFIED="1549909408652" TEXT="&#xc9; necess&#xe1;rio importar o RouterModule no m&#xf3;dulo">
 <node CREATED="1549909410849" ID="Freemind_Link_197353325" MODIFIED="1549909419004" TEXT="No m&#xf3;dulo raiz, importar o RouterModule"/>
 <node CREATED="1549909419601" ID="Freemind_Link_896967278" MODIFIED="1549909437564" TEXT="Em m&#xf3;dulos filhos, importar RouterModule.forRoot(&apos; ... &apos;)"/>
 </node>
+<node CREATED="1693921567929" ID="Freemind_Link_1169674886" MODIFIED="1693921586924" TEXT="Estrutura">
+<node COLOR="#0000ff" CREATED="1693921588598" ID="Freemind_Link_1755262377" MODIFIED="1693921618727" TEXT="path">
+<node CREATED="1693921592526" ID="Freemind_Link_1007815348" MODIFIED="1693921609361" TEXT="Define o nome da rota (o que aparece na url)"/>
+</node>
+<node COLOR="#0000ff" CREATED="1693921588598" ID="Freemind_Link_1170537640" MODIFIED="1693921625281" TEXT="component">
+<node CREATED="1693921592526" ID="Freemind_Link_1426928802" MODIFIED="1693921697560" TEXT="Define qual componente ser&#xe1; carregado na tag (seletor)&#xa;&apos;&lt;router-outlet&gt;&apos; quando a rota for acionada"/>
+</node>
+<node COLOR="#0000ff" CREATED="1693921588598" ID="Freemind_Link_198216071" MODIFIED="1693921707614" TEXT="redirectTo">
+<node CREATED="1693921592526" ID="Freemind_Link_1007067111" MODIFIED="1693921770793" TEXT="Indica para qual outra rota a navega&#xe7;&#xe3;o ser&#xe1; redirecionada quando&#xa;esta rota for acionada. A navega&#xe7;&#xe3;o altera a URL do navegador&#xa;"/>
+<node CREATED="1544627851033" ID="Freemind_Link_559592776" MODIFIED="1544627852156" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1544627819296" ID="Freemind_Link_391433319" MODIFIED="1693921875390" TEXT="{path: &apos;not-found&apos;, component: NotFoundComponent},&#xa;{path: &apos;**&apos;, redirectTo: &apos;not-found&apos;}"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1693921588598" ID="Freemind_Link_503282880" MODIFIED="1693922057744" TEXT="pathMatch">
+<node CREATED="1693921592526" ID="Freemind_Link_110810983" MODIFIED="1693922099673" TEXT="Indica qual tipo de match deve existir entre a rota definida no &apos;path&apos; e a url digitada no navegador"/>
+<node CREATED="1693922101785" ID="Freemind_Link_929314130" MODIFIED="1693922111039" TEXT="Por padr&#xe3;o o tipo de match &#xe9; &apos;prefix&apos;"/>
+<node CREATED="1693922112168" ID="Freemind_Link_1256706913" MODIFIED="1693922117295" TEXT="Op&#xe7;&#xf5;es:">
+<node COLOR="#0000ff" CREATED="1693921588598" ID="Freemind_Link_1535469412" MODIFIED="1693922132286" TEXT="prefix">
+<node CREATED="1693922230695" ID="Freemind_Link_1866189755" MODIFIED="1693922254420" TEXT="O match &#xe9; feito de forma que a rota seja acionada sempre que ela der match com a parte inicial da url usada no navegador"/>
+</node>
+<node COLOR="#0000ff" CREATED="1693921588598" ID="Freemind_Link_433638776" MODIFIED="1693922136559" TEXT="full">
+<node CREATED="1693922256268" ID="Freemind_Link_995660402" MODIFIED="1693922280419" TEXT="O match &#xe9; feito apenas quando a url digitada no navegador coincide em sua totalidade com o path da rota"/>
+</node>
+</node>
+</node>
+</node>
 <node CREATED="1549909291122" ID="Freemind_Link_1961689121" MODIFIED="1549909291877" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1549909303977" ID="Freemind_Link_927100562" MODIFIED="1549909318334" TEXT="const routes: Routes = [&#xa;  {path: &apos;user/flavio&apos;, component: PhotoListComponent },&#xa;  {path: &apos;p/add&apos;, component: PhotoFormComponent }&#xa;];"/>
 </node>
 </node>
-<node CREATED="1549909585752" ID="Freemind_Link_1305952390" MODIFIED="1549909587844" POSITION="right" TEXT="Seletor">
-<node CREATED="1549909588409" ID="Freemind_Link_674616933" MODIFIED="1549909598187" TEXT="Usar o &apos;router-outlet&apos;"/>
-<node COLOR="#0000ff" CREATED="1549909598760" ID="Freemind_Link_20840437" MODIFIED="1549909626610" TEXT="Ex: &lt;router-outlet&gt;&lt;/router-outlet&gt;"/>
+<node CREATED="1693927264971" ID="Freemind_Link_663873032" MODIFIED="1693927265717" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1549909598760" ID="Freemind_Link_1287790120" MODIFIED="1693927338663" TEXT="import { NgModule } from &quot;@angular/core&quot;;&#xa;import { RouterModule, Routes } from &quot;@angular/router&quot;;&#xa;&#xa;import ...&#xa;&#xa;const appRoutes: Routes = [&#xa;    {path: &apos;&apos;, component: HomeComponent },&#xa;    {path: &apos;users&apos;, component: UsersComponent, children: [&#xa;      {path: &apos;:id/:name&apos;, component: UserComponent },&#xa;    ]},&#xa;    {path: &apos;not-found&apos;, component: NotFoundComponent},&#xa;    {path: &apos;**&apos;, redirectTo: &apos;/not-found&apos;}&#xa;  ];&#xa;&#xa;@NgModule({&#xa;    imports: [RouterModule.forRoot(appRoutes)],&#xa;    exports: [RouterModule]&#xa;})&#xa;export class AppRoutingModule {}"/>
 </node>
-<node CREATED="1544627794016" FOLDED="true" ID="_" MODIFIED="1544627976027" POSITION="right" TEXT="Rota com wildcard">
+</node>
+<node CREATED="1549909585752" ID="Freemind_Link_1305952390" MODIFIED="1693927277372" POSITION="right" TEXT="Seletor">
+<node CREATED="1549909588409" ID="Freemind_Link_674616933" MODIFIED="1549909598187" TEXT="Usar o &apos;router-outlet&apos;"/>
+<node CREATED="1693927277367" ID="Freemind_Link_1514760304" MODIFIED="1693927278918" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1549909598760" ID="Freemind_Link_20840437" MODIFIED="1693927282134" TEXT="&lt;router-outlet&gt;&lt;/router-outlet&gt;"/>
+</node>
+</node>
+<node CREATED="1544627794016" ID="_" MODIFIED="1544627976027" POSITION="right" TEXT="Rota com wildcard">
 <node CREATED="1544627802977" ID="Freemind_Link_734856452" MODIFIED="1544627811268" TEXT="Ideal para p&#xe1;gina &quot;NotFound&quot;"/>
 <node CREATED="1544627813954" ID="Freemind_Link_322025615" MODIFIED="1544627818492" TEXT="Usar o wildcard &apos;**&apos;"/>
 <node CREATED="1544627851033" ID="Freemind_Link_1086321220" MODIFIED="1544627852156" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1544627819296" ID="Freemind_Link_318150228" MODIFIED="1544627864923" TEXT="{path: &apos;**&apos;, component: NotFoundComponent}"/>
 </node>
 </node>
-<node CREATED="1551098071931" ID="Freemind_Link_1876020515" MODIFIED="1551098074726" POSITION="right" TEXT="Navega&#xe7;&#xe3;o">
-<node CREATED="1551098078664" ID="Freemind_Link_1174750389" MODIFIED="1551098081903" TEXT="RouterLink">
+<node CREATED="1551098071931" FOLDED="true" ID="Freemind_Link_1876020515" MODIFIED="1551098074726" POSITION="right" TEXT="Navega&#xe7;&#xe3;o">
+<node CREATED="1551098078664" FOLDED="true" ID="Freemind_Link_1174750389" MODIFIED="1551098081903" TEXT="RouterLink">
 <node CREATED="1551098138881" ID="Freemind_Link_812441702" MODIFIED="1551098143298" TEXT="&#xc9; uma diretiva"/>
 <node CREATED="1551098098200" ID="Freemind_Link_752505446" MODIFIED="1551098123899" TEXT="Seu uso &#xe9; vi&#xe1;vel quando RouterModule est&#xe1; carregado no m&#xf3;dulo root da aplica&#xe7;&#xe3;o"/>
 <node CREATED="1544627851033" ID="Freemind_Link_183784205" MODIFIED="1544627852156" TEXT="Ex:">
@@ -122,7 +161,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1551098558068" ID="Freemind_Link_1292291098" MODIFIED="1551099039245" TEXT="Navegando apartir&#xa;do c&#xf3;digo">
+<node CREATED="1551098558068" FOLDED="true" ID="Freemind_Link_1292291098" MODIFIED="1551099039245" TEXT="Navegando apartir&#xa;do c&#xf3;digo">
 <node CREATED="1551277765599" ID="Freemind_Link_1445198620" MODIFIED="1551277777771" TEXT="navigateByUrl">
 <node CREATED="1551098565676" ID="Freemind_Link_527252370" MODIFIED="1551277794986" TEXT="Usar o m&#xe9;todo &apos;navigateByUrl()&apos; de &apos;Router&apos;"/>
 <node CREATED="1551277865142" ID="Freemind_Link_516058095" MODIFIED="1551277879482" TEXT="&#xc9; necess&#xe1;rio passar a url inteira, concatenando os segmentos de rota"/>
@@ -194,7 +233,7 @@
 </node>
 <node CREATED="1549982788461" FOLDED="true" ID="Freemind_Link_1882511218" MODIFIED="1549982794753" POSITION="right" TEXT="Resolver">
 <node CREATED="1549982802717" ID="Freemind_Link_1394237944" MODIFIED="1549982821257" TEXT="Resolve as depend&#xea;ncias de uma rota antes que ela seja carregada"/>
-<node CREATED="1549982948636" ID="Freemind_Link_465810965" MODIFIED="1549984530669" TEXT="Como implementar">
+<node CREATED="1549982948636" FOLDED="true" ID="Freemind_Link_465810965" MODIFIED="1549984530669" TEXT="Como implementar">
 <node CREATED="1549982958595" ID="Freemind_Link_794630312" MODIFIED="1549982970563" TEXT="Criar a classe do resolver">
 <icon BUILTIN="full-1"/>
 <node CREATED="1549982974372" ID="Freemind_Link_1959923109" MODIFIED="1549982990183" TEXT="Deve implementar a interface &apos;Resolve&apos;">
@@ -244,13 +283,14 @@
 </node>
 </node>
 </node>
-<node CREATED="1545061126738" FOLDED="true" ID="Freemind_Link_379034394" MODIFIED="1545061130086" POSITION="right" TEXT="Route guard">
+<node CREATED="1545061126738" ID="Freemind_Link_379034394" MODIFIED="1545061130086" POSITION="right" TEXT="Route guard">
 <node CREATED="1545070668965" ID="Freemind_Link_1527222975" MODIFIED="1545070678984" TEXT="Associar a&#xe7;&#xf5;es a rotas">
 <node CREATED="1545070686493" ID="Freemind_Link_1336616748" MODIFIED="1545070701840" TEXT="Implementar a a&#xe7;&#xe3;o (cada uma com sua respectiva interface)"/>
 <node CREATED="1545070703180" ID="Freemind_Link_60712505" MODIFIED="1545070714472" TEXT="Declarar o routeguard na configura&#xe7;&#xe3;o de rotas"/>
 </node>
 <node CREATED="1545071938836" ID="Freemind_Link_1910242237" MODIFIED="1545072004391" TEXT="O route guard &#xe9; um provider e, portanto, necessita &#xa;ser declarado na lista de providers  da aplica&#xe7;&#xe3;o">
 <icon BUILTIN="messagebox_warning"/>
+<node CREATED="1694186508333" ID="Freemind_Link_665211528" MODIFIED="1694186516426" TEXT="Em geral, no arquivo app.module.ts"/>
 </node>
 <node CREATED="1545063051930" FOLDED="true" ID="Freemind_Link_1933776150" MODIFIED="1545063054513" TEXT="Can Load">
 <node CREATED="1545061135698" ID="Freemind_Link_411542561" MODIFIED="1545061939616" TEXT="Usado para controlar carregamento de m&#xf3;dulos&#xa;conforme restri&#xe7;&#xf5;es determinadas pelo programador">
@@ -277,9 +317,16 @@
 </node>
 <node CREATED="1545061215385" ID="Freemind_Link_1774998120" MODIFIED="1545063101559" TEXT="Implementar a interface CanActivate">
 <node CREATED="1545061225793" ID="Freemind_Link_1448546518" MODIFIED="1545061233669" TEXT="Pacote @angular/router"/>
+<node CREATED="1694186581271" ID="Freemind_Link_1006313780" MODIFIED="1694186583151" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1545070716500" ID="Freemind_Link_650640494" MODIFIED="1694186632355" TEXT="@Injectable()&#xa;export class AuthGuard implements CanActivate {&#xa;  constructor(private authService: AuthService,&#xa;              private router: Router) {}&#xa;&#xa;  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable&lt;boolean&gt; | Promise&lt;boolean&gt; | boolean {&#xa;    return this.authService&#xa;        .isAuthenticated()&#xa;        .then(&#xa;          (authenticated: boolean) =&gt; {&#xa;            if(authenticated) {&#xa;              return true;&#xa;            } else {&#xa;              this.router.navigate([&apos;/&apos;]);&#xa;              return false;&#xa;            }&#xa;          }&#xa;        )&#xa;  }&#xa;}">
+<node CREATED="1694186642972" ID="Freemind_Link_1788814335" MODIFIED="1694186664561" TEXT="Nesse exemplo, caso o usu&#xe1;rio n&#xe3;o esteja autenticado eu redireciono a navega&#xe7;&#xe3;o para a raiz &apos;/&apos;"/>
 </node>
-<node CREATED="1545070879115" ID="Freemind_Link_974472194" MODIFIED="1545071043798" TEXT="A configura&#xe7;&#xe3;o do CanActivate &#xe9; na declara&#xe7;&#xe3;o &#xa;de rota de carregamento do m&#xf3;dulo (loadChildren)">
-<node COLOR="#0000ff" CREATED="1545070716500" ID="Freemind_Link_627933589" MODIFIED="1545070967590" TEXT="Ex:&#xa;export const ROUTES: Routes = [&#xa;   ...&#xa;  {path: &apos;order&apos;, loadChildren: &apos;./order/order.module#OrderModule&apos;,&#xa;        canActivate: [LoggedInGuard]},&#xa;];"/>
+</node>
+</node>
+<node CREATED="1545070879115" ID="Freemind_Link_974472194" MODIFIED="1694186581351" TEXT="A configura&#xe7;&#xe3;o do CanActivate &#xe9; na declara&#xe7;&#xe3;o &#xa;de rota de carregamento do m&#xf3;dulo (loadChildren)">
+<node CREATED="1694186581271" ID="Freemind_Link_44897764" MODIFIED="1694186583151" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1545070716500" ID="Freemind_Link_627933589" MODIFIED="1694186588076" TEXT="export const ROUTES: Routes = [&#xa;   ...&#xa;  {path: &apos;order&apos;, loadChildren: &apos;./order/order.module#OrderModule&apos;,&#xa;        canActivate: [LoggedInGuard]},&#xa;];"/>
+</node>
 </node>
 <node CREATED="1545074289941" ID="Freemind_Link_825194976" MODIFIED="1545074292905" TEXT="Par&#xe2;metros">
 <node CREATED="1545074293389" ID="Freemind_Link_1968224976" MODIFIED="1545074301576" TEXT="ActivatedRouteSnapshot">
@@ -298,7 +345,19 @@
 <node COLOR="#0000ff" CREATED="1545069571828" ID="Freemind_Link_1535094681" MODIFIED="1545074616283" TEXT="import { CanActivate, RouterStateSnapshot, ActivatedRouteSnapshot } from &apos;@angular/router&apos;;&#xa;...&#xa;export class LoggedInGuard implements CanActivate {&#xa;&#xa;  canActivate(activatedRoute: ActivatedRouteSnapshot, routerState: RouterStateSnapshot): boolean {&#xa;    return myCheckAuthentication(activatedRoute.routeConfig.path);&#xa;  }&#xa;}"/>
 </node>
 </node>
-<node CREATED="1545063058282" FOLDED="true" ID="Freemind_Link_1370989578" MODIFIED="1545069461968" TEXT="Can Deactivate">
+<node CREATED="1694187189101" FOLDED="true" ID="Freemind_Link_1022198593" MODIFIED="1694187193664" TEXT="Can Activate Child">
+<node CREATED="1694187196064" ID="Freemind_Link_1051927972" MODIFIED="1694187207368" TEXT="Usado para proteger rotas filhas de uma rota"/>
+<node CREATED="1694187207768" ID="Freemind_Link_651565871" MODIFIED="1694187220560" TEXT="Muito semelhante ao CanActivate, mas voltado para rotas filhas"/>
+<node CREATED="1545061215385" ID="Freemind_Link_1444203139" MODIFIED="1694187232749" TEXT="Implementar a interface CanActivateChild">
+<node CREATED="1545061225793" ID="Freemind_Link_125970085" MODIFIED="1545061233669" TEXT="Pacote @angular/router"/>
+<node CREATED="1694186581271" ID="Freemind_Link_629936446" MODIFIED="1694186583151" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1545070716500" ID="Freemind_Link_1036963358" MODIFIED="1694187275493" TEXT="@Injectable()&#xa;export class AuthGuard implements CanActivate, CanActivateChild {&#xa;  constructor(private authService: AuthService,&#xa;              private router: Router) {}&#xa;&#xa;  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable&lt;boolean&gt; | Promise&lt;boolean&gt; | boolean {&#xa;    return this.authService&#xa;        .isAuthenticated()&#xa;        .then(&#xa;          (authenticated: boolean) =&gt; {&#xa;            if(authenticated) {&#xa;              return true;&#xa;            } else {&#xa;              this.router.navigate([&apos;/&apos;]);&#xa;              return false;&#xa;            }&#xa;          }&#xa;        )&#xa;  }&#xa;&#xa;  canActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable&lt;boolean&gt; | Promise&lt;boolean&gt; | boolean {&#xa;    return this.canActivate(route, state);&#xa;  }&#xa;&#xa;}">
+<node CREATED="1694186642972" ID="Freemind_Link_14477979" MODIFIED="1694187314102" TEXT="Nesse exemplo, caso o usu&#xe1;rio n&#xe3;o esteja autenticado&#xa;eu redireciono a navega&#xe7;&#xe3;o para a raiz &apos;/&apos; quando todas filhas de &apos;server&apos; forem acionadas"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1545063058282" ID="Freemind_Link_1370989578" MODIFIED="1545069461968" TEXT="Can Deactivate">
 <node CREATED="1545063453688" ID="Freemind_Link_290088153" MODIFIED="1545074925680" TEXT="Usado para controlar a desativa&#xe7;&#xe3;o de um componente.">
 <node CREATED="1545063492511" ID="Freemind_Link_868360049" MODIFIED="1545074945235" TEXT="Controla quando estou com um componente (p&#xe1;gina) ativo e quero sair dele"/>
 </node>
@@ -311,7 +370,7 @@
 </node>
 <node COLOR="#0000ff" CREATED="1545070716500" ID="Freemind_Link_1160297118" MODIFIED="1545072438252" TEXT="Ex:&#xa;export const ROUTES: Routes = [&#xa;   ...&#xa;  {path: &apos;&apos;, component: OrderComponent, canDeactivate: [LeaveOrderGuard]},&#xa;];"/>
 </node>
-<node CREATED="1545074289941" ID="Freemind_Link_888713079" MODIFIED="1545074292905" TEXT="Par&#xe2;metros">
+<node CREATED="1545074289941" FOLDED="true" ID="Freemind_Link_888713079" MODIFIED="1545074292905" TEXT="Par&#xe2;metros">
 <node CREATED="1545075025950" ID="Freemind_Link_1994410496" MODIFIED="1545075376959" TEXT="&lt;T&gt;">
 <node CREATED="1545075314028" ID="Freemind_Link_1113066742" MODIFIED="1545075398377" TEXT="Tipo gen&#xe9;rico, que &#xe9; o componente associado ao Guard"/>
 <node CREATED="1545075093806" ID="Freemind_Link_192262554" MODIFIED="1545075149385" TEXT="O mesmo tipo que &#xe9; declarado na &#xa;declara&#xe7;&#xe3;o da classe entre os sinais &apos;&lt;&apos; e &apos;&gt;&apos;">
@@ -336,6 +395,45 @@
 <node CREATED="1545072346126" ID="Freemind_Link_1616824218" MODIFIED="1545072408603" TEXT="Note a rela&#xe7;&#xe3;o do component da rota e &#xa;do component do CanDeactivate&lt;&gt;">
 <arrowlink DESTINATION="Freemind_Link_988074157" ENDARROW="Default" ENDINCLINATION="298;0;" ID="Freemind_Arrow_Link_1998758510" STARTARROW="None" STARTINCLINATION="298;0;"/>
 <arrowlink DESTINATION="Freemind_Link_1160297118" ENDARROW="Default" ENDINCLINATION="288;0;" ID="Freemind_Arrow_Link_1592263267" STARTARROW="None" STARTINCLINATION="288;0;"/>
+</node>
+</node>
+</node>
+<node CREATED="1694190957821" FOLDED="true" ID="Freemind_Link_1026028834" MODIFIED="1694191137854" TEXT="Para fazer um canDeactivate gen&#xe9;rico&#xa;para qualquer componente seu">
+<node CREATED="1694190997413" ID="Freemind_Link_1193743836" MODIFIED="1694191198611" TEXT="Crie uma interface que tenha&#xa;o m&#xe9;todo &apos;canDeactivate&apos;">
+<icon BUILTIN="full-1"/>
+<node CREATED="1694191162772" ID="Freemind_Link_23191582" MODIFIED="1694191168979" TEXT="Pode escolher outro nome para o m&#xe9;todo"/>
+<node CREATED="1694191170332" ID="Freemind_Link_1245324952" MODIFIED="1694191171188" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1694191172259" ID="Freemind_Link_67054094" MODIFIED="1694191512064" TEXT="export interface CanComponentDeactivate {&#xa;  canDeactivate: () =&gt; Observable&lt;boolean&gt; | Promise&lt;boolean&gt; | boolean;&#xa;}"/>
+</node>
+</node>
+<node CREATED="1694191225881" ID="Freemind_Link_996160699" MODIFIED="1694191287910" TEXT="Crie a classe CanDeactivateGuard que implementa&#xa;o CanDeactivate de um tipo da interface declarada acima">
+<icon BUILTIN="full-2"/>
+<node CREATED="1694191343281" ID="Freemind_Link_379451336" MODIFIED="1694191353702" TEXT="Esta classe e a interface podem estar no mesmo arquivo ts"/>
+<node CREATED="1694191170332" ID="Freemind_Link_1393265369" MODIFIED="1694191171188" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1694191172259" ID="Freemind_Link_1248936646" MODIFIED="1694191512059" TEXT="export class CanDeactivateGuard implements CanDeactivate&lt;CanComponentDeactivate&gt; {&#xa;  canDeactivate(component: CanComponentDeactivate,&#xa;                currentRoute: ActivatedRouteSnapshot,&#xa;                currentState: RouterStateSnapshot,&#xa;                nextState?: RouterStateSnapshot): Observable&lt;boolean&gt; | Promise&lt;boolean&gt; | boolean {&#xa;    return component.canDeactivate();&#xa;  }&#xa;}">
+<arrowlink DESTINATION="Freemind_Link_67054094" ENDARROW="Default" ENDINCLINATION="229;10;" ID="Freemind_Arrow_Link_412863772" STARTARROW="None" STARTINCLINATION="266;7;"/>
+</node>
+</node>
+</node>
+<node CREATED="1694191391299" ID="Freemind_Link_26189812" MODIFIED="1694191426175" TEXT="Fa&#xe7;a o seu componente alvo implementar&#xa;a interface criada no passo 1">
+<icon BUILTIN="full-3"/>
+<node CREATED="1694191170332" ID="Freemind_Link_1343113822" MODIFIED="1694191171188" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1694191172259" ID="Freemind_Link_1396662368" MODIFIED="1694191526017" TEXT="export class EditServerComponent implements OnInit, CanComponentDeactivate {&#xa;  ...&#xa;  canDeactivate(): boolean | Promise&lt;boolean&gt; | Observable&lt;boolean&gt; {&#xa;    if(!this.allowEdit){&#xa;      return true;&#xa;    }&#xa;    if( (this.serverName !== this.server.name || this.serverStatus !== this.server.status ) &amp;&amp; !this.changesSaved){&#xa;      return confirm(&apos;Do you want to discarg changes?&apos;);&#xa;    } else {&#xa;      return true;&#xa;    }&#xa;  }&#xa;}&#xa;">
+<arrowlink COLOR="#330aef" DESTINATION="Freemind_Link_67054094" ENDARROW="Default" ENDINCLINATION="389;0;" ID="Freemind_Arrow_Link_1333068456" STARTARROW="None" STARTINCLINATION="389;0;"/>
+</node>
+</node>
+</node>
+<node CREATED="1694191553646" ID="Freemind_Link_907470201" MODIFIED="1694191582212" TEXT="Agora basta usar a interface no&#xa;atributo canDeactivate da sua rota">
+<icon BUILTIN="full-4"/>
+<node CREATED="1694191583742" ID="Freemind_Link_644846039" MODIFIED="1694191585001" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1694191172259" ID="Freemind_Link_1115131585" MODIFIED="1694191600735" TEXT="{path: &apos;:id/edit&apos;, component: EditServerComponent, canDeactivate: [CanDeactivateGuard] }"/>
+</node>
+</node>
+<node CREATED="1694191618319" ID="Freemind_Link_1267937089" MODIFIED="1694191645470" TEXT="N&#xe3;o esqeucer de declarar a interface&#xa;criada na lista de providers do m&#xf3;dulo">
+<icon BUILTIN="full-5"/>
+<node CREATED="1694191646151" ID="Freemind_Link_897182334" MODIFIED="1694191651367" TEXT="Arquivo app.module.ts"/>
+<node CREATED="1694191583742" ID="Freemind_Link_878772745" MODIFIED="1694191585001" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1694191172259" ID="Freemind_Link_95646777" MODIFIED="1694191699219" TEXT="@NgModule({&#xa;  declarations: [...],&#xa;  imports: [...],&#xa;  providers: [..., CanDeactivateGuard],&#xa;  ...&#xa;})&#xa;export class AppModule { }&#xa;"/>
 </node>
 </node>
 </node>
