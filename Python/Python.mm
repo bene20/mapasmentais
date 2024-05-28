@@ -4,5 +4,6 @@
 <node CREATED="1609876380941" ID="_" LINK="_bibliotecas.mm" MODIFIED="1609876406943" POSITION="right" TEXT="Bibliotecas"/>
 <node CREATED="1609877050816" ID="Freemind_Link_1957152777" LINK="_tiposDados.mm" MODIFIED="1609877062082" POSITION="right" TEXT="Tipos de dados"/>
 <node CREATED="1609878049033" ID="Freemind_Link_122608367" LINK="_funcoes.mm" MODIFIED="1609878063133" POSITION="right" TEXT="Fun&#xe7;&#xf5;es"/>
+<node CREATED="1716904603726" ID="Freemind_Link_632912968" LINK="_decoradores.mm" MODIFIED="1716904658910" POSITION="right" TEXT="Decoradores"/>
 </node>
 </map>
