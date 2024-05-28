@@ -51,7 +51,7 @@
 <icon BUILTIN="messagebox_warning"/>
 <node CREATED="1591993019067" ID="Freemind_Link_519075278" MODIFIED="1591993032745" TEXT="Incluir o texto [skip ci] no texto do commit."/>
 </node>
-<node CREATED="1578681234338" FOLDED="true" ID="Freemind_Link_1857077151" MODIFIED="1578681241349" TEXT="Jobs">
+<node CREATED="1578681234338" ID="Freemind_Link_1857077151" MODIFIED="1578681241349" TEXT="Jobs">
 <node CREATED="1578681241904" ID="Freemind_Link_1981425285" MODIFIED="1578681248907" TEXT="Todo job pode ter um nome arbir&#xe1;rio"/>
 <node CREATED="1578681262462" ID="Freemind_Link_1223537013" MODIFIED="1578681301307" TEXT="Antes de cada job os comandos definidos em before_script ser&#xe3;o executados"/>
 <node CREATED="1578681356637" ID="Freemind_Link_735318917" MODIFIED="1578681370339" TEXT="Precisam ter o campo &apos;script&apos; obrigatoriamente"/>
@@ -72,6 +72,20 @@
 </node>
 </node>
 <node CREATED="1578682793040" ID="Freemind_Link_858726247" MODIFIED="1578682795834" TEXT="Par&#xe2;metros">
+<node CREATED="1704394570862" ID="Freemind_Link_467705364" MODIFIED="1704394573042" TEXT="default">
+<node CREATED="1704394573774" ID="Freemind_Link_432042152" MODIFIED="1704394599186" TEXT="Tudo o que for declarado no stage &apos;default&apos; ser&#xe1; inclu&#xed;do nos demais stages, a menos que seja explicitamente sobrescrito"/>
+<node CREATED="1578682895185" ID="Freemind_Link_529527770" MODIFIED="1578682943830" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1578682901335" ID="Freemind_Link_961947465" MODIFIED="1704394616572" TEXT="default:&#xa;  image: registry.prd.pjek8s.trt10.jus.br/cdsis/busybox-trt10:1.0.0&#xa;  before_script:&#xa;    - env | sort&#xa;    - pwd&#xa;    - ls -la&#xa;    - cat /etc/os-release&#xa;&#xa;  after_script:&#xa;    - pwd&#xa;    - ls -la"/>
+<node COLOR="#ff00ff" CREATED="1578682930792" ID="Freemind_Link_1987826494" MODIFIED="1704394690236" TEXT="job1:&#xa;  image: registry.prd.pjek8s.trt10.jus.br/proxy.hub.docker.com/library/docker:24.0.5&#xa;  stage: buildImage&#xa;  before_script:&#xa;    - echo &quot;nada do before_script default ser&#xe1; executado aqui&quot;">
+<node CREATED="1704394692072" ID="Freemind_Link_939928298" MODIFIED="1704394703108" TEXT="A imagem usada aqui ser&#xe1; a docker:24.0.5"/>
+<node CREATED="1704394707962" ID="Freemind_Link_971207688" MODIFIED="1704394721548" TEXT="O before_script aqui exibir&#xe1; apenas esta mensagem com o echo"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1578682930792" ID="Freemind_Link_989974492" MODIFIED="1704394748698" TEXT="job2:&#xa;  stage: buildImage&#xa;  before_script:&#xa;    - !reference [&quot;default&quot;, &quot;before_script&quot;]&#xa;    - echo &quot;Mais uma ou outra a&#xe7;&#xe3;o aqui&quot;">
+<node CREATED="1704394692072" ID="Freemind_Link_1050622352" MODIFIED="1704394779797" TEXT="A imagem usada aqui ser&#xe1; a busybox-trt10:1.0.0, declarada na se&#xe7;&#xe3;o &apos;default&apos;"/>
+<node CREATED="1704394782001" ID="Freemind_Link_1042723075" MODIFIED="1704394834622" TEXT="O before_script aqui executar&#xe1; as a&#xe7;&#xf5;es do before_script da se&#xe7;&#xe3;o &apos;default&apos; e depois as a&#xe7;&#xf5;es p&#x155;oprias daqui"/>
+</node>
+</node>
+</node>
 <node CREATED="1591814990435" ID="Freemind_Link_1604400962" MODIFIED="1591814992943" TEXT="variables">
 <node CREATED="1591815260650" ID="Freemind_Link_715166168" MODIFIED="1591815265000" TEXT="Podem ser globais ou de job"/>
 <node CREATED="1591815138774" ID="Freemind_Link_1380136002" MODIFIED="1591815336964" TEXT="H&#xe1; algumas predefinidas">
@@ -125,6 +139,11 @@
 <node CREATED="1579123111456" ID="Freemind_Link_1494852470" MODIFIED="1579123113408" TEXT="services">
 <node CREATED="1579123113957" ID="Freemind_Link_1210172168" MODIFIED="1579123134033" TEXT="Indica quais servi&#xe7;os devem estar de p&#xe9; no container executado pelo gitlab"/>
 <node CREATED="1579623763131" ID="Freemind_Link_440105725" MODIFIED="1579623778691" TEXT="S&#xe3;o imagens docker que ser&#xe3;o levantadas com o servi&#xe7;o especificado"/>
+<node CREATED="1704386502489" ID="Freemind_Link_183196557" MODIFIED="1704386513416" TEXT="Configura&#xe7;&#xf5;es dispon&#xed;veis para os services: ">
+<node CREATED="1704386514020" ID="Freemind_Link_1735304168" MODIFIED="1704386529671" TEXT="https://docs.gitlab.com/ee/ci/services/#available-settings-for-services">
+<icon BUILTIN="attach"/>
+</node>
+</node>
 <node CREATED="1589911328360" ID="Freemind_Link_1378994476" MODIFIED="1589911350901" TEXT="Os servi&#xe7;os poder&#xe3;o ser &#xa;referenciados por seus nomes">
 <node CREATED="1589911355734" ID="Freemind_Link_83197730" MODIFIED="1589911376082" TEXT="Ex: service mysql:latest =&gt; referenciado por &apos;mysql&apos;"/>
 <node CREATED="1589911381144" ID="Freemind_Link_639657165" MODIFIED="1589911414424" TEXT="Ex: service tutum/wordpress:latest =&gt; referenciado por tutum-wordpress ou tutum_wordpress"/>
@@ -146,18 +165,34 @@
 <node CREATED="1578683189773" ID="Freemind_Link_1311530693" MODIFIED="1578683193003" TEXT="Se sucesso ou falha"/>
 </node>
 <node CREATED="1578683234720" ID="Freemind_Link_1790946557" MODIFIED="1578683235547" TEXT="Ex:">
-<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_71294514" MODIFIED="1578683245670" TEXT="job:&#xa;  before_script:&#xa;    - execute this instead of global before script&#xa;  script:&#xa;    - my command&#xa;  after_script:&#xa;    - execute this after my script&#xa;"/>
-<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_376815706" MODIFIED="1578683273338" TEXT="before_script:&#xa;  - execute this instead of global before script&#xa;&#xa;after_script:&#xa;  - execute this after my script&#xa;&#xa;job:&#xa;  script:&#xa;    - my command&#xa;"/>
+<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_376815706" MODIFIED="1703675155353" TEXT="before_script:&#xa;  - execute this before script&#xa;&#xa;after_script:&#xa;  - execute this after my script&#xa;&#xa;job:&#xa;  script:&#xa;    - my command&#xa;"/>
+<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_71294514" MODIFIED="1703675198262" TEXT="job:&#xa;  before_script:&#xa;    - execute this instead of global before my script&#xa;  script:&#xa;    - my command&#xa;  after_script:&#xa;    - execute this instead of global after my script&#xa;"/>
 </node>
 </node>
-<node CREATED="1579205078299" ID="Freemind_Link_753673414" MODIFIED="1579205080998" TEXT="rules">
+<node CREATED="1579205078299" FOLDED="true" ID="Freemind_Link_753673414" MODIFIED="1579205080998" TEXT="rules">
 <node CREATED="1579205083609" ID="Freemind_Link_454956340" MODIFIED="1579205108535" TEXT="Define as regras que determinam se/quando um job ser&#xe1; executado"/>
 <node CREATED="1579205139211" ID="Freemind_Link_1068680425" MODIFIED="1579205174990" TEXT="Geralmente &#xe9; combinado com o &apos;if&apos;, &apos;changes&apos; e &apos;exists&apos;"/>
+<node CREATED="1703678397655" ID="Freemind_Link_1968037553" MODIFIED="1703678399122" TEXT="changes">
+<node CREATED="1703678399705" ID="Freemind_Link_740823982" MODIFIED="1703678412569" TEXT="S&#xf3; executa caso o arquivo especificado tenha sido modificado"/>
+<node CREATED="1578683234720" ID="Freemind_Link_1119706692" MODIFIED="1578683235547" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_1954410087" MODIFIED="1703678504835" TEXT="...&#xa;  rules:&#xa;    - if: &apos;$CI_PIPELINE_SOURCE == &quot;push&quot;&apos;&#xa;      changes:&#xa;        - Dockerfile&#xa;      when: manual">
+<node CREATED="1703678456070" ID="Freemind_Link_1803842656" MODIFIED="1703678519083" TEXT="S&#xf3; executar&#xe1; caso esteja em um evento de push e se o arquivo &apos;Dockerfile&apos; tenha sido modificado"/>
+</node>
+</node>
+</node>
+<node CREATED="1703678397655" ID="Freemind_Link_1582201420" MODIFIED="1703678557628" TEXT="exists">
+<node CREATED="1703678399705" ID="Freemind_Link_123148564" MODIFIED="1703678563668" TEXT="S&#xf3; executa caso o arquivo especificado exista"/>
+<node CREATED="1578683234720" ID="Freemind_Link_1364587348" MODIFIED="1578683235547" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_1506116936" MODIFIED="1703678587686" TEXT="...&#xa;  rules:&#xa;    - exists:&#xa;        - Dockerfile">
+<node CREATED="1703678456070" ID="Freemind_Link_309912884" MODIFIED="1703678601651" TEXT="S&#xf3; executar&#xe1; caso o arquivo &apos;Dockerfile&apos; exista"/>
+</node>
+</node>
+</node>
 <node CREATED="1578683234720" ID="Freemind_Link_386545622" MODIFIED="1578683235547" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_1008108220" MODIFIED="1579205129402" TEXT="job:&#xa;  script: &quot;echo Hello, Rules!&quot;&#xa;  rules:&#xa;    - if: &apos;$CI_MERGE_REQUEST_TARGET_BRANCH_NAME == &quot;master&quot;&apos;&#xa;      when: always&#xa;    - if: &apos;$VAR =~ /pattern/&apos;&#xa;      when: manual&#xa;    - when: on_success&#xa;"/>
 </node>
 </node>
-<node CREATED="1589485628770" ID="Freemind_Link_1123447812" MODIFIED="1589485630464" TEXT="cache">
+<node CREATED="1589485628770" FOLDED="true" ID="Freemind_Link_1123447812" MODIFIED="1589485630464" TEXT="cache">
 <node CREATED="1589485631218" ID="Freemind_Link_172817089" MODIFIED="1589485645229" TEXT="Lista de arquivos que devem ser armazenados entre execu&#xe7;&#xf5;es consecutivas"/>
 <node CREATED="1590029429662" ID="Freemind_Link_349039929" MODIFIED="1590029481050" TEXT="Lista de pastas/arquivos que &#xa;ser&#xe3;o compartilhados entre jobs">
 <node CREATED="1590029445478" ID="Freemind_Link_1642508870" MODIFIED="1590029469427" TEXT="Cada job, antes de executar, pergunta se existe&#xa;algo no cache a ser baixado para sua execu&#xe7;&#xe3;o"/>
@@ -182,12 +217,12 @@
 </node>
 <node CREATED="1590029603990" ID="Freemind_Link_1300166887" MODIFIED="1590029606160" TEXT="push">
 <node CREATED="1590029608471" ID="Freemind_Link_1491130464" MODIFIED="1590029637592" TEXT="(Re)cria o cache antes da execu&#xe7;&#xe3;o do job">
-<node CREATED="1590029638286" ID="Freemind_Link_247170572" MODIFIED="1590029647898" TEXT="Conte&#xfa;dos pr&#xe9;cios ser&#xe3;o descartados"/>
+<node CREATED="1590029638286" ID="Freemind_Link_247170572" MODIFIED="1703675297007" TEXT="Conte&#xfa;dos pr&#xe9;vios ser&#xe3;o descartados"/>
 <node CREATED="1590029648556" ID="Freemind_Link_1676522836" MODIFIED="1590029655057" TEXT="&#xda;til quando se quer inicializar um cache"/>
 </node>
 </node>
 <node CREATED="1590029681852" ID="Freemind_Link_1132770870" MODIFIED="1590029688393" TEXT="pull-push">
-<node CREATED="1590029693517" ID="Freemind_Link_420463906" MODIFIED="1590029724480" TEXT="Far&#xe1; o pull antes da execu&#xe7;&#xe3;o do job e atualiar&#xe1; o&#xa;cache com push ap&#xf3;s o t&#xe9;rmino da execu&#xe7;&#xe3;o do job"/>
+<node CREATED="1590029693517" ID="Freemind_Link_420463906" MODIFIED="1703675317800" TEXT="Far&#xe1; o pull antes da execu&#xe7;&#xe3;o do job e atualizar&#xe1; o&#xa;cache com push ap&#xf3;s o t&#xe9;rmino da execu&#xe7;&#xe3;o do job"/>
 </node>
 </node>
 <node CREATED="1590029392710" ID="Freemind_Link_360655433" MODIFIED="1590029394027" TEXT="key">
@@ -195,7 +230,7 @@
 </node>
 <node CREATED="1589485670442" ID="Freemind_Link_702274464" MODIFIED="1589485671318" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_529389646" MODIFIED="1589485707142" TEXT="cache:&#xa;  paths:&#xa;    - .m2/repository/&#xa;    - target/&#xa;"/>
-<node CREATED="1591981162140" FOLDED="true" ID="Freemind_Link_1995817839" MODIFIED="1591981170171" TEXT="Herdar cache global, sobrescrevendo algo:">
+<node CREATED="1591981162140" ID="Freemind_Link_1995817839" MODIFIED="1591981170171" TEXT="Herdar cache global, sobrescrevendo algo:">
 <node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_779415522" MODIFIED="1591981185828" TEXT="cache: &amp;global_cache&#xa;    key: ${CI_COMMIT_REF_SLUG}&#xa;    paths:&#xa;      - node_modules/&#xa;      - public/&#xa;      - vendor/&#xa;    policy: pull-push&#xa;&#xa;job:&#xa;  cache:&#xa;    # inherit all global cache settings&#xa;    &lt;&lt;: *global_cache&#xa;    # override the policy&#xa;    policy: pull"/>
 </node>
 </node>
@@ -246,8 +281,13 @@
 </node>
 </node>
 </node>
-<node CREATED="1590021654927" ID="Freemind_Link_1694358510" MODIFIED="1590021657078" TEXT="artifacts">
+<node CREATED="1590021654927" FOLDED="true" ID="Freemind_Link_1694358510" MODIFIED="1590021657078" TEXT="artifacts">
 <node CREATED="1590021657713" ID="Freemind_Link_1987781191" MODIFIED="1590021675884" TEXT="Disponibiliza para download, no Gitlab, um conte&#xfa;do produzido no runner"/>
+<node CREATED="1703679234076" ID="Freemind_Link_833595099" MODIFIED="1703679280633" TEXT="Todo artefato ficar&#xe1; dispon&#xed;vel para os demais&#xa;stages posteriores ao stage em que o atefato foi criado">
+<node CREATED="1590021806761" ID="Freemind_Link_1249580016" MODIFIED="1590021808035" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_1353759651" MODIFIED="1703679463667" TEXT="run-script:&#xa;  stage: build&#xa;  script:&#xa;    - echo &quot;oi&quot; &gt; build.log&#xa;    - ls -l $CI_PROJECT_DIR&#xa;  artifacts:&#xa;    paths:&#xa;      - build.log&#xa;&#xa;test-script:&#xa;  stage: test&#xa;  script:&#xa;    - ls -l $CI_PROJECT_DIR&#xa;    - cat $CI_PROJECT_DIR/build.log"/>
+</node>
+</node>
 <node CREATED="1590022032190" ID="Freemind_Link_917086340" MODIFIED="1590022035428" TEXT="Pode ter um nome">
 <node CREATED="1590022036023" ID="Freemind_Link_431530137" MODIFIED="1590022056899" TEXT="Isso viabiliza ter diversos artefatos distintos"/>
 <node CREATED="1590022057630" ID="Freemind_Link_444443686" MODIFIED="1590022065739" TEXT="Por padr&#xe3;o ser&#xe1; artifact.zip"/>
@@ -275,7 +315,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1579124636241" ID="Freemind_Link_283128050" MODIFIED="1579124638818" TEXT="Vari&#xe1;veis">
+<node CREATED="1579124636241" FOLDED="true" ID="Freemind_Link_283128050" MODIFIED="1579124638818" TEXT="Vari&#xe1;veis">
 <node CREATED="1579205957197" ID="Freemind_Link_1567301011" MODIFIED="1579205959661" TEXT="Declara&#xe7;&#xe3;o">
 <node CREATED="1579124681253" ID="Freemind_Link_382279386" MODIFIED="1579205977005" TEXT="No menu Settings =&gt; CI/CD =&gt; Variables no gitlab"/>
 <node CREATED="1579205982485" ID="Freemind_Link_608050465" MODIFIED="1579206016291" TEXT="Na se&#xe7;&#xe3;o &apos;variables&apos; do arquivo .gitlab-ci.yml">
@@ -334,7 +374,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1579193962548" FOLDED="true" ID="Freemind_Link_1153995823" MODIFIED="1579193964102" TEXT="Runner">
+<node CREATED="1579193962548" ID="Freemind_Link_1153995823" MODIFIED="1579193964102" TEXT="Runner">
 <node CREATED="1579193964754" ID="Freemind_Link_210805590" MODIFIED="1579196941645" TEXT="Container pronto">
 <node CREATED="1579193988315" ID="Freemind_Link_1056811944" MODIFIED="1579195005045" TEXT="Baixar:">
 <node COLOR="#0000ff" CREATED="1579195006380" ID="Freemind_Link_857701346" MODIFIED="1579195033802" TEXT="docker pull gitlab/gitlab-runner:latest"/>
@@ -343,7 +383,7 @@
 <node COLOR="#0000ff" CREATED="1579194981485" ID="Freemind_Link_244530134" MODIFIED="1591855673625" TEXT="docker run -d --name gitlab-runner --restart always \&#xa;      -v /home/ebenezer.botelho/tmp/shared/:/etc/gitlab-runner \&#xa;      -v /var/run/docker.sock:/var/run/docker.sock \&#xa;      gitlab/gitlab-runner:latest "/>
 </node>
 </node>
-<node CREATED="1579195417561" ID="Freemind_Link_880931997" MODIFIED="1579196381350" TEXT="Cria&#xe7;&#xe3;o/configura&#xe7;&#xe3;o">
+<node CREATED="1579195417561" FOLDED="true" ID="Freemind_Link_880931997" MODIFIED="1579196381350" TEXT="Cria&#xe7;&#xe3;o/configura&#xe7;&#xe3;o">
 <node CREATED="1579195523899" ID="Freemind_Link_470156444" MODIFIED="1579196435197" TEXT="Subir o servi&#xe7;o do runner">
 <icon BUILTIN="full-1"/>
 <node CREATED="1579196388512" ID="Freemind_Link_1390050152" MODIFIED="1579196395274" TEXT="Em m&#xe1;quina local, por exemplo"/>
@@ -454,7 +494,7 @@
 <node CREATED="1591032519622" ID="Freemind_Link_1880923048" MODIFIED="1591032520610" TEXT="Local">
 <node CREATED="1591032521085" ID="Freemind_Link_1936199994" MODIFIED="1591032661250" TEXT="/etc/gitlab-runner/config.toml em sistemas *nix quando executado em modo root"/>
 <node CREATED="1591032521085" ID="Freemind_Link_1218914303" MODIFIED="1591032681623" TEXT="~/.gitlab-runner/config.toml em sistemas *nix quando executado em modo n&#xe3;o root"/>
-<node CREATED="1591032521085" ID="Freemind_Link_955168886" MODIFIED="1591032687369" TEXT="./config.toml em otros sistemas"/>
+<node CREATED="1591032521085" ID="Freemind_Link_955168886" MODIFIED="1703766750679" TEXT="./config.toml em outros sistemas"/>
 </node>
 </node>
 <node CREATED="1579799020677" ID="Freemind_Link_115340728" MODIFIED="1579799023034" TEXT="Executors">

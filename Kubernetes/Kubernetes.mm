@@ -416,8 +416,34 @@
 <node CREATED="1599064092474" ID="Freemind_Link_131181898" MODIFIED="1599064100619" TEXT="Configura&#xe7;&#xe3;o de acesso a clusters">
 <node CREATED="1599064101162" ID="Freemind_Link_853204876" LINK="#Freemind_Link_1755709500" MODIFIED="1599064119292" TEXT="Ver objeto Config em anota&#xe7;&#xf5;es abaixo"/>
 </node>
+<node CREATED="1702399480308" ID="Freemind_Link_759365862" MODIFIED="1702399483947" TEXT="Melhores pr&#xe1;ticas">
+<node CREATED="1702399498010" ID="Freemind_Link_579927348" MODIFIED="1702399515661" TEXT="Image scan procurando vulnerabilidades&#xa;">
+<icon BUILTIN="full-1"/>
+<node CREATED="1702399516432" ID="Freemind_Link_113207719" MODIFIED="1702399517267" TEXT="Ideal fazer o scan da imagem antes de fazer o push para o registry, no Pipeline"/>
+<node CREATED="1702399519432" ID="Freemind_Link_831542190" MODIFIED="1702399522220" TEXT="Ferramentas:">
+<node CREATED="1702399522864" ID="Freemind_Link_1240913525" MODIFIED="1702399525619" TEXT="Snyk"/>
+<node CREATED="1702399526039" ID="Freemind_Link_60580712" MODIFIED="1702399529692" TEXT="Sysdig"/>
 </node>
-<node CREATED="1613589359874" ID="Freemind_Link_1303181181" MODIFIED="1613589369127" TEXT="Instala&#xe7;&#xe3;o">
+</node>
+<node CREATED="1702399541567" ID="Freemind_Link_341847483" MODIFIED="1702399560263" TEXT="Executar POD&apos;s com usu&#xe1;rio non-root">
+<icon BUILTIN="full-2"/>
+<node CREATED="1702399560840" ID="Freemind_Link_486897260" MODIFIED="1702399586581" TEXT="No spec do POD">
+<node CREATED="1702399587368" ID="Freemind_Link_440949737" MODIFIED="1702399596596" TEXT="securityContext: runAsUser: 1000"/>
+<node CREATED="1702399587368" ID="Freemind_Link_800659717" MODIFIED="1702399600908" TEXT="securityContext: allowPrivilegeEscalation: false "/>
+</node>
+</node>
+<node CREATED="1702399605874" ID="Freemind_Link_1080338387" MODIFIED="1702399633518" TEXT="Limitar a rede de cada aplica&#xe7;&#xe3;o">
+<icon BUILTIN="full-3"/>
+<node CREATED="1702399634081" ID="Freemind_Link_266678766" MODIFIED="1702399654165" TEXT="Definir o NetworkPolicy das aplica&#xe7;&#xf5;es (PODs)"/>
+<node CREATED="1702399634081" ID="Freemind_Link_1422560616" MODIFIED="1702399662245" TEXT="Definir o ServiceMesh dos servi&#xe7;os (services)"/>
+</node>
+<node CREATED="1702399664713" ID="Freemind_Link_975561342" MODIFIED="1702399706966" TEXT="Encriptar comunica&#xe7;&#xe3;o entre os PODs">
+<icon BUILTIN="full-4"/>
+<node CREATED="1702399707258" ID="Freemind_Link_996802683" MODIFIED="1702399707670" TEXT="Habilitar o mTLS entre os services"/>
+</node>
+</node>
+</node>
+<node CREATED="1613589359874" FOLDED="true" ID="Freemind_Link_1303181181" MODIFIED="1613589369127" TEXT="Instala&#xe7;&#xe3;o">
 <node CREATED="1613589369797" ID="Freemind_Link_1687393185" MODIFIED="1613589371694" TEXT="Na m&#xe3;o">
 <node CREATED="1613735818463" ID="Freemind_Link_1373035147" MODIFIED="1613735823015" TEXT="https://www.youtube.com/playlist?list=PL2We04F3Y_41jYdadX55fdJplDvgNGENo">
 <icon BUILTIN="attach"/>
@@ -1305,7 +1331,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1591997555354" FOLDED="true" ID="Freemind_Link_1121402737" MODIFIED="1591997566014" POSITION="right" TEXT="Ferramentas">
+<node CREATED="1591997555354" ID="Freemind_Link_1121402737" MODIFIED="1591997566014" POSITION="right" TEXT="Ferramentas">
 <node COLOR="#0000ff" CREATED="1597409823944" FOLDED="true" ID="Freemind_Link_1270117106" MODIFIED="1597409834931" TEXT="kubeadm">
 <node CREATED="1597409873583" ID="Freemind_Link_1028947641" MODIFIED="1597409888010" TEXT="Ferramenta de administra&#xe7;&#xe3;o do cluster (instala&#xe7;&#xe3;o e configura&#xe7;&#xe3;o)"/>
 <node COLOR="#0000ff" CREATED="1597409823944" ID="Freemind_Link_588434013" MODIFIED="1597409845241" TEXT="upgrade">
@@ -1606,7 +1632,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1591997498699" FOLDED="true" ID="Freemind_Link_1831588263" MODIFIED="1593799742784" TEXT="scale">
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1831588263" MODIFIED="1593799742784" TEXT="scale">
 <node CREATED="1591997501435" ID="Freemind_Link_307304603" MODIFIED="1593799753775" TEXT="Aplica o scaling de um recurso"/>
 <node COLOR="#0000ff" CREATED="1592314792468" ID="Freemind_Link_413824817" MODIFIED="1593799794271" TEXT="&lt;tipo-recurso&gt; &lt;nome-recurso&gt;">
 <node CREATED="1593799985664" ID="Freemind_Link_1356300367" MODIFIED="1593799995211" TEXT="Ou">
@@ -1717,7 +1743,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1591997498699" FOLDED="true" ID="Freemind_Link_321868487" MODIFIED="1596728482410" TEXT="rollout">
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_321868487" MODIFIED="1596728482410" TEXT="rollout">
 <node CREATED="1591997501435" ID="Freemind_Link_364733426" MODIFIED="1596728820518" TEXT="Acontece quando se atualiza a imagem de um Pod">
 <node CREATED="1596729136818" ID="Freemind_Link_1899875520" MODIFIED="1596729150983" TEXT="Via comando &apos;kubectl set image ...&apos;, por exemplo"/>
 <node CREATED="1593620735495" ID="Freemind_Link_630638092" MODIFIED="1596728578664" TEXT="Por padr&#xe3;o a atualiza&#xe7;&#xe3;o &#xe9; feita de forma gradativa, um Pod por vez"/>
@@ -1731,7 +1757,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1591997498699" FOLDED="true" ID="Freemind_Link_1983460405" MODIFIED="1596728830408" TEXT="set">
+<node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1983460405" MODIFIED="1596728830408" TEXT="set">
 <node CREATED="1591997501435" ID="Freemind_Link_1908958133" MODIFIED="1596728841195" TEXT="Redefine atributos de objetos do cluster"/>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_872944522" MODIFIED="1596729051379" TEXT="image &lt;nome-do-objeto&gt; &lt;nome-container&gt;=&lt;nome-da-imagem&gt;">
 <node CREATED="1596729082897" ID="Freemind_Link_88750360" MODIFIED="1596729087131" TEXT="O objeto pode ser">
@@ -1932,9 +1958,6 @@
 <node CREATED="1654277145249" ID="Freemind_Link_1316083930" MODIFIED="1654277148093" TEXT="Para o sistema"/>
 </node>
 </node>
-<node CREATED="1591997595130" ID="Freemind_Link_1168792514" MODIFIED="1593633701771" TEXT="Necessita do VirtualBox instalado na m&#xe1;quina">
-<icon BUILTIN="messagebox_warning"/>
-</node>
 <node CREATED="1591997293128" ID="Freemind_Link_988409868" MODIFIED="1591997305963" TEXT="Simula um cluster k8s na m&#xe1;quina local (DEV)"/>
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_598496447" MODIFIED="1591997513781" TEXT="start">
 <node CREATED="1591997501435" ID="Freemind_Link_748587161" MODIFIED="1591997505382" TEXT="Levanta o cluster"/>
@@ -2001,7 +2024,7 @@
 <node COLOR="#0000ff" CREATED="1591997498699" ID="Freemind_Link_1922409823" MODIFIED="1596205541912" TEXT="minikube ssh"/>
 </node>
 </node>
-<node CREATED="1593455743106" ID="Freemind_Link_1332834250" MODIFIED="1593455745843" TEXT="Troubleshoot">
+<node CREATED="1593455743106" FOLDED="true" ID="Freemind_Link_1332834250" MODIFIED="1593455745843" TEXT="Troubleshoot">
 <node CREATED="1593455767880" ID="Freemind_Link_1145384260" MODIFIED="1593455806490" TEXT="x509: certificate is valid for">
 <icon BUILTIN="button_cancel"/>
 <node CREATED="1593455773573" ID="Freemind_Link_1297303568" MODIFIED="1593455800686" TEXT="Executar &apos;minikube delete&apos; e em seguida &apos;minikube start&apos;">
@@ -2353,7 +2376,7 @@
 </node>
 </node>
 <node CREATED="1598535170761" ID="Freemind_Link_775338386" MODIFIED="1598535172246" POSITION="right" TEXT="API">
-<node CREATED="1598536309220" FOLDED="true" ID="Freemind_Link_1516751677" MODIFIED="1598536311246" TEXT="Comandos">
+<node CREATED="1598536309220" ID="Freemind_Link_1516751677" MODIFIED="1598536311246" TEXT="Comandos">
 <node CREATED="1598536352897" ID="Freemind_Link_1087131410" MODIFIED="1598536655243" TEXT="Esses comandos est&#xe3;o considerando o uso do proxy do k8s">
 <node CREATED="1598536655700" ID="Freemind_Link_399594191" LINK="#Freemind_Link_106432025" MODIFIED="1598536670794" TEXT="Ver anota&#xe7;&#xf5;es acima"/>
 </node>
@@ -2428,6 +2451,22 @@
 </node>
 </node>
 </node>
+<node CREATED="1702491309924" ID="Freemind_Link_1190097561" MODIFIED="1702491312071" TEXT="Exemplos">
+<node CREATED="1702491312650" ID="Freemind_Link_1581962656" MODIFIED="1702491437204" TEXT="Consultar a API a partir de&#xa;um POD dentro do cluster">
+<node CREATED="1702491341421" ID="Freemind_Link_1685139256" MODIFIED="1702491357957" TEXT="Obter o certificado">
+<icon BUILTIN="full-1"/>
+<node CREATED="1702491386461" ID="Freemind_Link_1146555541" MODIFIED="1702491423616" TEXT="Ele se encontra no arquivo /var/run/secrets/kubernetes.io/serviceaccount/ca.crt"/>
+</node>
+<node CREATED="1702491442796" ID="Freemind_Link_1618740051" MODIFIED="1702491449652" TEXT="Obter o token">
+<icon BUILTIN="full-2"/>
+<node CREATED="1702491386461" ID="Freemind_Link_681705789" MODIFIED="1702491458952" TEXT="Ele se encontra no arquivo /var/run/secrets/kubernetes.io/serviceaccount/token"/>
+</node>
+<node CREATED="1702491466717" ID="Freemind_Link_541025082" MODIFIED="1702491473923" TEXT="Fazer a requisi&#xe7;&#xe3;o via curl">
+<icon BUILTIN="full-3"/>
+<node COLOR="#0000ff" CREATED="1702491477493" ID="Freemind_Link_251021887" MODIFIED="1702491558594" TEXT="CA=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt&#xa;TOKEN=$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)&#xa;curl --cacert ${CA} -X GET https://kubernetes/api --header &quot;Authorization: Bearer ${TPKEN}&quot;"/>
+</node>
+</node>
+</node>
 </node>
 <node CREATED="1596732335275" FOLDED="true" ID="Freemind_Link_1795218081" MODIFIED="1597756405896" POSITION="right" TEXT="Update Strategy">
 <node CREATED="1596729082897" ID="Freemind_Link_559184636" MODIFIED="1596732352558" TEXT="Aplic&#xe1;vel a">
@@ -2471,7 +2510,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1592315528094" FOLDED="true" ID="Freemind_Link_1064829192" MODIFIED="1592317218772" POSITION="right" TEXT="Objetos k8s">
+<node CREATED="1592315528094" ID="Freemind_Link_1064829192" MODIFIED="1592317218772" POSITION="right" TEXT="Objetos k8s">
 <node CREATED="1660842228722" ID="Freemind_Link_597942392" MODIFIED="1660842232990" TEXT="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#-strong-api-overview-strong-">
 <icon BUILTIN="attach"/>
 </node>
@@ -5083,7 +5122,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1678903017214" ID="Freemind_Link_293541" MODIFIED="1678903020744" TEXT="Depend&#xea;ncias">
+<node CREATED="1678903017214" FOLDED="true" ID="Freemind_Link_293541" MODIFIED="1678903020744" TEXT="Depend&#xea;ncias">
 <node CREATED="1678903023838" ID="Freemind_Link_557930368" MODIFIED="1678911155703" TEXT="Devem ser registradas&#xa;no arquivo Chart.yaml">
 <arrowlink DESTINATION="Freemind_Link_1737549383" ENDARROW="Default" ENDINCLINATION="309;0;" ID="Freemind_Arrow_Link_1974428628" STARTARROW="Default" STARTINCLINATION="309;0;"/>
 <node CREATED="1678903034781" ID="Freemind_Link_552949639" MODIFIED="1678903035824" TEXT="Ex:">
@@ -5129,7 +5168,7 @@
 <node CREATED="1678904786026" ID="Freemind_Link_453934511" MODIFIED="1678904787204" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1316723501" MODIFIED="1678905394524" TEXT="dependencies:&#xa;  - name: mysql&#xa;    version: &quot;^8.8.6&quot;&#xa;    repository: &quot;http://charts.bitnami.com/bitnami&quot;">
 <node CREATED="1678905398206" ID="Freemind_Link_1456955461" MODIFIED="1678905419448" TEXT="Equivalete a">
-<arrowlink COLOR="#f6090c" DESTINATION="Freemind_Link_1272193983" ENDARROW="Default" ENDINCLINATION="107;0;" ID="Freemind_Arrow_Link_1540754140" STARTARROW="None" STARTINCLINATION="107;0;"/>
+<arrowlink COLOR="#f6090c" DESTINATION="Freemind_Link_1272193983" ENDARROW="Default" ENDINCLINATION="107;0;" ID="Freemind_Arrow_Link_1787398012" STARTARROW="None" STARTINCLINATION="107;0;"/>
 </node>
 </node>
 </node>
@@ -5226,7 +5265,7 @@
 <node COLOR="#ff0000" CREATED="1678904587422" FOLDED="true" ID="Freemind_Link_1400146475" MODIFIED="1678909800238" TEXT="tags">
 <node CREATED="1678904286572" ID="Freemind_Link_1087189403" MODIFIED="1678909011037" TEXT="Multiplas condi&#xe7;&#xf5;es a serem checadas para&#xa;instalar ou n&#xe3;o a depend&#xea;ncia declarada.">
 <node CREATED="1678909013241" ID="Freemind_Link_1351629177" MODIFIED="1678909824418" TEXT="Substitui o uso de &apos;condition&apos;">
-<arrowlink COLOR="#08f60e" DESTINATION="Freemind_Link_513294424" ENDARROW="Default" ENDINCLINATION="492;0;" ID="Freemind_Arrow_Link_1038956153" STARTARROW="None" STARTINCLINATION="492;0;"/>
+<arrowlink COLOR="#08f60e" DESTINATION="Freemind_Link_513294424" ENDARROW="Default" ENDINCLINATION="492;0;" ID="Freemind_Arrow_Link_1306689492" STARTARROW="None" STARTINCLINATION="492;0;"/>
 </node>
 <node CREATED="1678907536804" ID="Freemind_Link_1324355616" MODIFIED="1678909049050" TEXT="As tags usadas na condi&#xe7;&#xe3;o devem estar&#xa;declaradas no arquivo values.yaml">
 <node CREATED="1678904786026" ID="Freemind_Link_605785636" MODIFIED="1678904787204" TEXT="Ex:">
@@ -5243,7 +5282,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#ff0000" CREATED="1678913311276" ID="Freemind_Link_1553273976" MODIFIED="1678913326058" TEXT="import-values">
+<node COLOR="#ff0000" CREATED="1678913311276" FOLDED="true" ID="Freemind_Link_1553273976" MODIFIED="1678913326058" TEXT="import-values">
 <node CREATED="1678911712829" ID="Freemind_Link_842210330" MODIFIED="1678913395207" TEXT="Importa valores do values.yaml do chart filho"/>
 <node CREATED="1678912236577" FOLDED="true" ID="Freemind_Link_1031353294" MODIFIED="1678913346368" TEXT="Importando valores&#xa;exportados">
 <node CREATED="1678912250926" ID="Freemind_Link_983418199" MODIFIED="1678912337329" TEXT="Neste caso o values.yaml do chart&#xa;filho tem uma se&#xe7;&#xe3;o &apos;export&apos;">
@@ -5265,7 +5304,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1678912242730" FOLDED="true" ID="Freemind_Link_47253997" MODIFIED="1678913352005" TEXT="Importando valores&#xa;n&#xe3;o exportados">
+<node CREATED="1678912242730" ID="Freemind_Link_47253997" MODIFIED="1678913352005" TEXT="Importando valores&#xa;n&#xe3;o exportados">
 <node CREATED="1678912250926" ID="Freemind_Link_1434060919" MODIFIED="1678912754084" TEXT="Neste caso o values.yaml do chart&#xa;filho N&#xc3;O tem uma se&#xe7;&#xe3;o &apos;export&apos;">
 <icon BUILTIN="full-1"/>
 <node CREATED="1678912278334" ID="Freemind_Link_38498347" MODIFIED="1678912280108" TEXT="Ex:">
@@ -5285,8 +5324,8 @@
 <icon BUILTIN="full-3"/>
 <node CREATED="1678912278334" ID="Freemind_Link_1261777518" MODIFIED="1678912280108" TEXT="Ex:">
 <node CREATED="1678913091012" ID="Freemind_Link_636942108" MODIFIED="1678913208033" TEXT="Acessar &apos;.Values.mysqlService&apos; do chart pai na verdade &#xa;est&#xe1; acessando &apos;.Values.primary.service&apos; do chart filho">
-<arrowlink DESTINATION="Freemind_Link_514346481" ENDARROW="Default" ENDINCLINATION="655;0;" ID="Freemind_Arrow_Link_85082661" STARTARROW="None" STARTINCLINATION="655;0;"/>
-<arrowlink DESTINATION="Freemind_Link_139754696" ENDARROW="Default" ENDINCLINATION="240;0;" ID="Freemind_Arrow_Link_1711511436" STARTARROW="None" STARTINCLINATION="240;0;"/>
+<arrowlink DESTINATION="Freemind_Link_514346481" ENDARROW="Default" ENDINCLINATION="655;0;" ID="Freemind_Arrow_Link_319558554" STARTARROW="None" STARTINCLINATION="655;0;"/>
+<arrowlink DESTINATION="Freemind_Link_139754696" ENDARROW="Default" ENDINCLINATION="240;0;" ID="Freemind_Arrow_Link_1237525074" STARTARROW="None" STARTINCLINATION="240;0;"/>
 </node>
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_594626958" MODIFIED="1678913067268" TEXT="{{ .Values.mysqlService.type }}"/>
 </node>
@@ -5319,7 +5358,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1671476115424" FOLDED="true" ID="Freemind_Link_1434820482" MODIFIED="1671476117476" TEXT="Comandos">
+<node CREATED="1671476115424" ID="Freemind_Link_1434820482" MODIFIED="1671476117476" TEXT="Comandos">
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_561152433" MODIFIED="1674482761066" TEXT="helm">
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_157236652" MODIFIED="1671476613403" TEXT="repo">
 <node CREATED="1671476134786" ID="Freemind_Link_1895236695" MODIFIED="1671476141147" TEXT="Manipula os reposit&#xf3;rios do Helm"/>
@@ -5327,11 +5366,32 @@
 <node CREATED="1671474838444" ID="Freemind_Link_377767629" MODIFIED="1678730891545" TEXT="Lista os reposit&#xf3;rios atualmente dispon&#xed;veis ao helm instalado na sua m&#xe1;quina"/>
 <node CREATED="1671474907180" ID="Freemind_Link_1584408753" MODIFIED="1671474914755" TEXT="Inicialmente a lista de reposit&#xf3;rios vem vazia"/>
 </node>
-<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1766010273" MODIFIED="1671476157107" TEXT="add bitnami https://charts.bitnami.com/bitnami">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_132307201" MODIFIED="1701976950853" TEXT="remove &lt;nome-repo&gt;">
+<node CREATED="1674505233756" ID="Freemind_Link_1244092902" MODIFIED="1674505235072" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_244299930" MODIFIED="1701976979254" TEXT="helm repo remove bitnami">
+<node CREATED="1671475682186" ID="Freemind_Link_550464476" MODIFIED="1701976989270" TEXT="Remove o reposit&#xf3;rio bitnami do helm"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_689050738" MODIFIED="1701976811924" TEXT="add">
+<node CREATED="1671475682186" ID="Freemind_Link_822322077" MODIFIED="1701976855403" TEXT="Adiciona um reposit&#xf3;rio &#xe0; lista de reposit&#xf3;rios do Helm"/>
+<node CREATED="1674505233756" ID="Freemind_Link_1928094142" MODIFIED="1674505235072" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_345889789" MODIFIED="1701976840251" TEXT="helm repo add sonatype https://sonatype.github.io/helm3-charts/">
+<node CREATED="1701976917595" ID="Freemind_Link_1340414976" MODIFIED="1701976925101" TEXT="Adiciona o reposit&#xf3;rio do Nexus"/>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1766010273" MODIFIED="1701976907717" TEXT="helm repo add bitnami https://charts.bitnami.com/bitnami">
 <node CREATED="1671475682186" ID="Freemind_Link_1508953156" MODIFIED="1671475690875" TEXT="Adiciona o reposit&#xf3;rio bitnami ao helm"/>
 </node>
-<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_132307201" MODIFIED="1671476545218" TEXT="remove bitnami ">
-<node CREATED="1671475682186" ID="Freemind_Link_1068962850" MODIFIED="1671476553147" TEXT="Remove o reposit&#xf3;rio bitnami do helm"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1966188956" MODIFIED="1701976690017" TEXT="update">
+<node CREATED="1671475682186" ID="Freemind_Link_764906873" MODIFIED="1701976737491" TEXT="Atualiza a lista dos pacotes dos reposit&#xf3;rios registrados"/>
+<node CREATED="1701976738855" ID="Freemind_Link_1977825303" MODIFIED="1701976855404" TEXT="Ideal usar sempre que adicionar um reposit&#xf3;rio ao Helm">
+<arrowlink DESTINATION="Freemind_Link_822322077" ENDARROW="Default" ENDINCLINATION="74;0;" ID="Freemind_Arrow_Link_1499572137" STARTARROW="None" STARTINCLINATION="74;0;"/>
+</node>
+<node CREATED="1674505233756" ID="Freemind_Link_1709217732" MODIFIED="1674505235072" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_258678125" MODIFIED="1701976762038" TEXT="helm repo update"/>
+</node>
 </node>
 </node>
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1920676182" MODIFIED="1671476168276" TEXT="search repo mysql">
@@ -5360,11 +5420,11 @@
 <node CREATED="1671476816720" ID="Freemind_Link_70729787" MODIFIED="1671478472179" TEXT="Restringe a listagem &#xe0;s aplica&#xe7;&#xf5;es de um namespace espec&#xed;fico"/>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1671473023021" FOLDED="true" ID="Freemind_Link_577797007" MODIFIED="1671478592843" TEXT="install &lt;nome-da-instancia&gt; &lt;chart&gt;">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_577797007" MODIFIED="1671478592843" TEXT="install &lt;nome-da-instancia&gt; &lt;chart&gt;">
 <node CREATED="1671476746713" ID="Freemind_Link_1768982640" MODIFIED="1671477018164" TEXT="O nome da inst&#xe2;ncia da aplica&#xe7;&#xe3;o deve ser &#xfa;nico por namespace"/>
 <node CREATED="1671477578335" ID="Freemind_Link_606397470" MODIFIED="1671477629636" TEXT="Ser&#xe1; exibida uma lista de informa&#xe7;&#xf5;es e de a&#xe7;&#xf5;es que podem ser tomadas sobre a aplica&#xe7;&#xe3;o">
 <edge WIDTH="thin"/>
-<arrowlink DESTINATION="Freemind_Link_1612410166" ENDARROW="Default" ENDINCLINATION="864;0;" ID="Freemind_Arrow_Link_1833234741" STARTARROW="None" STARTINCLINATION="197;0;"/>
+<arrowlink DESTINATION="Freemind_Link_1612410166" ENDARROW="Default" ENDINCLINATION="864;0;" ID="Freemind_Arrow_Link_1454465603" STARTARROW="None" STARTINCLINATION="197;0;"/>
 </node>
 <node CREATED="1673650106267" ID="Freemind_Link_294395544" MODIFIED="1673650466738" TEXT="Etapas realizadas no install">
 <node CREATED="1673650124090" ID="Freemind_Link_1459704100" MODIFIED="1673650162311" TEXT="Download/carregamento do chart e de suas depend&#xea;ncias">
@@ -5386,13 +5446,13 @@
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_232002542" MODIFIED="1673650448738" TEXT="--dry-run">
 <icon BUILTIN="flag"/>
 <node CREATED="1671476816720" ID="Freemind_Link_1924012131" MODIFIED="1673650466741" TEXT="Executa apenas as 4 primeiras etapas do &apos;helm install&apos;">
-<arrowlink DESTINATION="Freemind_Link_294395544" ENDARROW="Default" ENDINCLINATION="247;0;" ID="Freemind_Arrow_Link_825339786" STARTARROW="None" STARTINCLINATION="247;0;"/>
+<arrowlink DESTINATION="Freemind_Link_294395544" ENDARROW="Default" ENDINCLINATION="247;0;" ID="Freemind_Arrow_Link_1509537264" STARTARROW="None" STARTINCLINATION="247;0;"/>
 </node>
 </node>
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_867954588" MODIFIED="1673650958382" TEXT="--template">
 <icon BUILTIN="flag"/>
 <node CREATED="1671476816720" ID="Freemind_Link_1340541194" MODIFIED="1673651041094" TEXT="Semelhantemente ao --dry-run, executa apenas as 4 primeiras etapas do &apos;helm install&apos;, mas n&#xe3;o exibe informa&#xe7;&#xf5;es extras. Exibe apenas os templates de manifestos k8s gerados, que podem ser aplicados diretamente no cluster via comando kubectl">
-<arrowlink DESTINATION="Freemind_Link_294395544" ENDARROW="Default" ENDINCLINATION="247;0;" ID="Freemind_Arrow_Link_751009720" STARTARROW="None" STARTINCLINATION="247;0;"/>
+<arrowlink DESTINATION="Freemind_Link_294395544" ENDARROW="Default" ENDINCLINATION="247;0;" ID="Freemind_Arrow_Link_862780152" STARTARROW="None" STARTINCLINATION="247;0;"/>
 </node>
 </node>
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1036289187" MODIFIED="1671476814868" TEXT="--namespace=&lt;seu-namespace&gt;">
@@ -5421,7 +5481,7 @@
 <icon BUILTIN="flag"/>
 <node CREATED="1671476816720" ID="Freemind_Link_1242673912" MODIFIED="1671479756095" TEXT="Informa o arquivo yaml de propriedades dos&#xa;par&#xe2;metros para o helm construir a aplica&#xe7;&#xe3;o"/>
 <node CREATED="1671479424958" ID="Freemind_Link_912225127" MODIFIED="1671479443966" TEXT="Mais recomendado que usar --set">
-<arrowlink DESTINATION="Freemind_Link_180891837" ENDARROW="Default" ENDINCLINATION="46;0;" ID="Freemind_Arrow_Link_764500312" STARTARROW="Default" STARTINCLINATION="46;0;"/>
+<arrowlink DESTINATION="Freemind_Link_180891837" ENDARROW="Default" ENDINCLINATION="46;0;" ID="Freemind_Arrow_Link_1789766979" STARTARROW="Default" STARTINCLINATION="46;0;"/>
 </node>
 <node CREATED="1671476763968" ID="Freemind_Link_1319268618" MODIFIED="1671479780017" TEXT="Ex:">
 <node CREATED="1671479780003" ID="Freemind_Link_1349980670" MODIFIED="1671479783450" TEXT="Comando">
@@ -5458,7 +5518,7 @@
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_715283979" MODIFIED="1674496184628" TEXT="--timeout &lt;tempo-limite&gt;">
 <icon BUILTIN="flag"/>
 <node CREATED="1674496060524" ID="Freemind_Link_1661298642" MODIFIED="1674496479035" TEXT="Uso semelhante ao da flag &apos;--wait&apos;">
-<arrowlink DESTINATION="Freemind_Link_1910540766" ENDARROW="Default" ENDINCLINATION="259;0;" ID="Freemind_Arrow_Link_1775069322" STARTARROW="None" STARTINCLINATION="259;0;"/>
+<arrowlink DESTINATION="Freemind_Link_1910540766" ENDARROW="Default" ENDINCLINATION="259;0;" ID="Freemind_Arrow_Link_998480232" STARTARROW="None" STARTINCLINATION="259;0;"/>
 </node>
 </node>
 </node>
@@ -5563,14 +5623,14 @@
 <icon BUILTIN="messagebox_warning"/>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1671473023021" FOLDED="true" ID="Freemind_Link_1595392160" MODIFIED="1674497400921" TEXT="template">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1595392160" MODIFIED="1674497400921" TEXT="template">
 <node CREATED="1671475682186" ID="Freemind_Link_295369063" MODIFIED="1674497416313" TEXT="Exibe o template dos manifestos usados na instala&#xe7;&#xe3;o da aplica&#xe7;&#xe3;o"/>
 <node CREATED="1674497418534" ID="Freemind_Link_1564867241" MODIFIED="1674497428681" TEXT="&#xc9; comum combinar com o uso da flag &apos;--dry-run&apos;"/>
 <node CREATED="1674497495087" ID="Freemind_Link_846420614" LINK="#Freemind_Link_867954588" MODIFIED="1674497525800" TEXT="Ver flag &apos;--template&apos; do &apos;helm install&apos;"/>
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1090133502" MODIFIED="1673650448738" TEXT="--dry-run">
 <icon BUILTIN="flag"/>
 <node CREATED="1671476816720" ID="Freemind_Link_1928653658" MODIFIED="1674497463194" TEXT="N&#xe3;o executa o passo de instala&#xe7;&#xe3;o definitivo da aplica&#xe7;&#xe3;o no cluster">
-<arrowlink DESTINATION="Freemind_Link_294395544" ENDARROW="Default" ENDINCLINATION="247;0;" ID="Freemind_Arrow_Link_1425495211" STARTARROW="None" STARTINCLINATION="247;0;"/>
+<arrowlink DESTINATION="Freemind_Link_294395544" ENDARROW="Default" ENDINCLINATION="247;0;" ID="Freemind_Arrow_Link_1455012757" STARTARROW="None" STARTINCLINATION="247;0;"/>
 </node>
 </node>
 </node>
@@ -5623,7 +5683,7 @@
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_732823028" MODIFIED="1673650448738" TEXT="--dry-run">
 <icon BUILTIN="flag"/>
 <node CREATED="1671476816720" ID="Freemind_Link_1040413008" MODIFIED="1674497463194" TEXT="N&#xe3;o executa o passo de instala&#xe7;&#xe3;o definitivo da aplica&#xe7;&#xe3;o no cluster">
-<arrowlink DESTINATION="Freemind_Link_294395544" ENDARROW="Default" ENDINCLINATION="247;0;" ID="Freemind_Arrow_Link_79845502" STARTARROW="None" STARTINCLINATION="247;0;"/>
+<arrowlink DESTINATION="Freemind_Link_294395544" ENDARROW="Default" ENDINCLINATION="247;0;" ID="Freemind_Arrow_Link_1680939959" STARTARROW="None" STARTINCLINATION="247;0;"/>
 </node>
 </node>
 <node CREATED="1674505233756" ID="Freemind_Link_408384807" MODIFIED="1674505235072" TEXT="Ex:">
@@ -5659,7 +5719,7 @@
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_675889059" MODIFIED="1674508677910" TEXT="helm lint myfirstchart"/>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_670005046" MODIFIED="1678903633469" TEXT="dependency">
+<node COLOR="#0000ff" CREATED="1671473023021" FOLDED="true" ID="Freemind_Link_670005046" MODIFIED="1678903633469" TEXT="dependency">
 <node CREATED="1671475682186" ID="Freemind_Link_1178053407" MODIFIED="1678903674580" TEXT="Comandos para trabalhar com as depend&#xea;ncias do Chart do projeto"/>
 <node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1777424711" MODIFIED="1678903695732" TEXT="list &lt;nome-da-instancia&gt;">
 <node CREATED="1671475682186" ID="Freemind_Link_1571386727" MODIFIED="1678903714952" TEXT="Lista as depend&#xea;ncias da aplica&#xe7;&#xe3;o mantida pelo Helm">
@@ -5682,6 +5742,18 @@
 <node CREATED="1678903791518" ID="Freemind_Link_598947704" MODIFIED="1678903801094" TEXT="Caso voc&#xea; j&#xe1; esteja na pasta do projeto"/>
 </node>
 </node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1475967241" MODIFIED="1700588693113" TEXT="pull">
+<node CREATED="1671475682186" ID="Freemind_Link_680979170" MODIFIED="1700588769039" TEXT="Baixa um pacote do reposit&#xf3;rio para a m&#xe1;quina local"/>
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_97906297" MODIFIED="1673650448738" TEXT="--dry-run">
+<icon BUILTIN="flag"/>
+<node CREATED="1671476816720" ID="Freemind_Link_320952867" MODIFIED="1700588738381" TEXT="Baixa os arquivos descompactados">
+<arrowlink DESTINATION="Freemind_Link_294395544" ENDARROW="Default" ENDINCLINATION="247;0;" ID="Freemind_Arrow_Link_303884217" STARTARROW="None" STARTINCLINATION="247;0;"/>
+</node>
+</node>
+<node CREATED="1674505233756" ID="Freemind_Link_1463194012" MODIFIED="1674505235072" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1671473023021" ID="Freemind_Link_1094131111" MODIFIED="1700588719150" TEXT="helm pull sonarqube/sonarqube --untar"/>
 </node>
 </node>
 </node>
@@ -5829,7 +5901,7 @@
 </node>
 </node>
 <node CREATED="1676060341793" ID="Freemind_Link_1246973003" MODIFIED="1676060376087" TEXT="N&#xe3;o confundir com o operador &apos;:=&apos;">
-<arrowlink COLOR="#f00b0b" DESTINATION="Freemind_Link_347360909" ENDARROW="Default" ENDINCLINATION="135;0;" ID="Freemind_Arrow_Link_543278161" STARTARROW="Default" STARTINCLINATION="135;0;"/>
+<arrowlink COLOR="#f00b0b" DESTINATION="Freemind_Link_347360909" ENDARROW="Default" ENDINCLINATION="135;0;" ID="Freemind_Arrow_Link_520336274" STARTARROW="Default" STARTINCLINATION="135;0;"/>
 </node>
 <node CREATED="1676049870040" ID="Freemind_Link_539856868" MODIFIED="1676049871340" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1676047046301" ID="Freemind_Link_406116462" MODIFIED="1676059730036" TEXT="{{ $meuString := &quot;nome dele&quot; }}"/>
@@ -6052,6 +6124,14 @@
 <node COLOR="#0000ff" CREATED="1605009506888" ID="Freemind_Link_115566810" MODIFIED="1605009544220" TEXT="vim kube-apiserver.yaml"/>
 </node>
 </node>
+<node CREATED="1701102839416" ID="Freemind_Link_555693712" MODIFIED="1701102842540" TEXT="Convers&#xe3;o">
+<node CREATED="1701102705768" ID="Freemind_Link_1611537107" MODIFIED="1701102735259" TEXT="Para converter arquivo do&#xa;docker-compose em manifestos k8s">
+<node CREATED="1701102757654" ID="Freemind_Link_1445292134" MODIFIED="1701102758586" TEXT="https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/"/>
+</node>
+<node CREATED="1701102845008" ID="Freemind_Link_1998470424" MODIFIED="1701102855764" TEXT="Para converter manifestos k8s para charts helm">
+<node CREATED="1701102868929" ID="Freemind_Link_1015643479" MODIFIED="1701102870028" TEXT="https://github.com/arttor/helmify"/>
+</node>
+</node>
 </node>
 <node CREATED="1613745571445" MODIFIED="1613745571445" TEXT="sudo service haproxy restart"/>
 <node CREATED="1617886708377" FOLDED="true" ID="Freemind_Link_1990626368" MODIFIED="1617886711696" TEXT="Falha de aplica&#xe7;&#xe3;o">
@@ -6103,7 +6183,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1660562739211" ID="Freemind_Link_113685131" MODIFIED="1660562745185" TEXT="Falha do control plane">
+<node CREATED="1660562739211" FOLDED="true" ID="Freemind_Link_113685131" MODIFIED="1660562745185" TEXT="Falha do control plane">
 <node CREATED="1660562749030" ID="Freemind_Link_524765886" MODIFIED="1660562765125" TEXT="Cheque os status dos&#xa;componentes do k8s">
 <node CREATED="1660562781500" ID="Freemind_Link_1231438008" MODIFIED="1660562804851" TEXT="Checar se os pod&apos;s do namespace&#xa;kube-system est&#xe3;o rodando">
 <node CREATED="1605005622020" ID="Freemind_Link_182604725" MODIFIED="1605005623058" TEXT="Ex:">
@@ -6140,7 +6220,7 @@
 </node>
 <node CREATED="1660563212815" ID="Freemind_Link_175719937" MODIFIED="1660563226221" TEXT="Consulte a se&#xe7;&#xe3;o &quot;Troubleshoot clusters&quot; do manual do K8s"/>
 </node>
-<node CREATED="1661167679126" ID="Freemind_Link_1780192378" MODIFIED="1661167685701" TEXT="Falha em n&#xf3;s">
+<node CREATED="1661167679126" FOLDED="true" ID="Freemind_Link_1780192378" MODIFIED="1661167685701" TEXT="Falha em n&#xf3;s">
 <node CREATED="1661167686314" ID="Freemind_Link_838294523" MODIFIED="1661167695033" TEXT="Cheque o status do n&#xf3;">
 <node CREATED="1605005622020" ID="Freemind_Link_494787389" MODIFIED="1605005623058" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1597756636426" ID="Freemind_Link_540960513" MODIFIED="1661167707332" TEXT="kubectl get nodes"/>

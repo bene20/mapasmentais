@@ -5,11 +5,23 @@
 <node CREATED="1544627898323" ID="Freemind_Link_453661605" MODIFIED="1544627909710" TEXT="Rotas mais espec&#xed;ficas primeiro"/>
 <node CREATED="1544627917464" ID="Freemind_Link_1972716845" MODIFIED="1544627922388" TEXT="Rotas mais gen&#xe9;ricas depois"/>
 </node>
-<node CREATED="1693924963389" FOLDED="true" ID="Freemind_Link_930700943" MODIFIED="1693927397707" POSITION="right" TEXT="Configura&#xe7;&#xe3;o">
+<node CREATED="1693924963389" ID="Freemind_Link_930700943" MODIFIED="1693927397707" POSITION="right" TEXT="Configura&#xe7;&#xe3;o">
 <node CREATED="1693924967682" ID="Freemind_Link_1037869803" MODIFIED="1693927445084" TEXT="Geralmente as rotas ficam&#xa;configuradas em um m&#xf3;dulo pr&#xf3;prio">
 <node CREATED="1693924989213" ID="Freemind_Link_447920513" MODIFIED="1693924990936" TEXT="Recomendado"/>
 <node CREATED="1693924992051" ID="Freemind_Link_915234661" MODIFIED="1693927389324" TEXT="Nome: app-routing.module.ts">
 <node CREATED="1693927348746" ID="Freemind_Link_1374479542" MODIFIED="1693927361986" TEXT="Precisa ser importado no app.module.ts"/>
+</node>
+</node>
+<node CREATED="1694542120311" ID="Freemind_Link_62949567" MODIFIED="1694542124203" TEXT="Location strategies">
+<node CREATED="1694542385674" ID="Freemind_Link_1777001276" MODIFIED="1694542446276" TEXT="Por ser uma aplica&#xe7;&#xe3;o SPA (Single Page Application), as rotas podem fazer com que o backend server n&#xe3;o reconhe&#xe7;a as rotas do frontend e, assim, gerar respostas 404 para as requisi&#xe7;&#xf5;es recebidas.">
+<node CREATED="1694542465329" ID="Freemind_Link_1247369827" MODIFIED="1694542498652" TEXT="Se voc&#xea; conseguir fazer seu backendserver responder com o arquivo index.html sempre que acontecer um erro 404, esse n&#xe3;o ser&#xe1; mais um problema para o frontend."/>
+<node CREATED="1694542125421" ID="Freemind_Link_938416788" MODIFIED="1694542247694" TEXT="Em browsers antigos, o fato de o angular colocar as rotas ap&#xf3;s o servername (na url), pode reencaminhar essas requisi&#xe7;&#xf5;es ao backend, gerando um erro. Nesses casos voc&#xea; pode alterar o comportamento do angular para colcoar um # antes das rotas&#xa;"/>
+</node>
+<node CREATED="1694542160821" ID="Freemind_Link_853873553" MODIFIED="1694542161570" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1694542162101" ID="Freemind_Link_107841837" MODIFIED="1694542173677" TEXT="RouterModule.forRoot(appRoutes, {useHash: true})"/>
+<node CREATED="1694542252900" ID="Freemind_Link_445066007" MODIFIED="1694542255384" TEXT="Resultado:">
+<node CREATED="1694542263522" ID="Freemind_Link_582356797" MODIFIED="1694542264128" TEXT="http://localhost:4200/#/servers"/>
+</node>
 </node>
 </node>
 <node CREATED="1549909231426" FOLDED="true" ID="Freemind_Link_1116650273" MODIFIED="1549909235030" TEXT="Array de rotas">
@@ -231,10 +243,13 @@
 </node>
 </node>
 </node>
-<node CREATED="1549982788461" FOLDED="true" ID="Freemind_Link_1882511218" MODIFIED="1549982794753" POSITION="right" TEXT="Resolver">
-<node CREATED="1549982802717" ID="Freemind_Link_1394237944" MODIFIED="1549982821257" TEXT="Resolve as depend&#xea;ncias de uma rota antes que ela seja carregada"/>
+<node CREATED="1549982788461" ID="Freemind_Link_1882511218" MODIFIED="1549982794753" POSITION="right" TEXT="Resolver">
+<node CREATED="1549982802717" ID="Freemind_Link_1394237944" MODIFIED="1694539239937" TEXT="Resolve as depend&#xea;ncias de uma&#xa;rota antes que ela seja carregada">
+<node CREATED="1694539241138" ID="Freemind_Link_1559156173" MODIFIED="1694539279159" TEXT="&#xc9; uma alternativa a voc&#xea; carregar os dados do componente inicial da rota no NgOnInit"/>
+<node CREATED="1694539300413" ID="Freemind_Link_1041890284" MODIFIED="1694539306272" TEXT="Busca dados, faz processamentos etc."/>
+</node>
 <node CREATED="1549982948636" FOLDED="true" ID="Freemind_Link_465810965" MODIFIED="1549984530669" TEXT="Como implementar">
-<node CREATED="1549982958595" ID="Freemind_Link_794630312" MODIFIED="1549982970563" TEXT="Criar a classe do resolver">
+<node CREATED="1549982958595" ID="Freemind_Link_794630312" MODIFIED="1694541442201" TEXT="Criar a classe&#xa;do resolver">
 <icon BUILTIN="full-1"/>
 <node CREATED="1549982974372" ID="Freemind_Link_1959923109" MODIFIED="1549982990183" TEXT="Deve implementar a interface &apos;Resolve&apos;">
 <node CREATED="1549982994020" ID="Freemind_Link_1557930154" MODIFIED="1549983003663" TEXT="Biblioteca &apos;@angular/router&apos;"/>
@@ -258,7 +273,7 @@
 <node COLOR="#0000ff" CREATED="1545073123260" ID="Freemind_Link_656902140" MODIFIED="1549983488507" TEXT="@Injectable({  providedIn: &apos;root&apos; })&#xa;export class PhotoListResolver implements Resolve&lt;Observable&lt;Photo[]&gt;&gt; {&#xa;  constructor(private service: PhotoService) {}&#xa;&#xa;  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable&lt;Photo[]&gt; {&#xa;    return this.service.listFromUser(route.params[&apos;userName&apos;]);&#xa;  }&#xa;}"/>
 </node>
 </node>
-<node CREATED="1549983890997" ID="Freemind_Link_1962610148" MODIFIED="1549983904216" TEXT="Declarar o resolver na rota espec&#xed;fica">
+<node CREATED="1549983890997" ID="Freemind_Link_1962610148" MODIFIED="1694541430414" TEXT="Declarar o resolver&#xa;na rota espec&#xed;fica">
 <icon BUILTIN="full-2"/>
 <node CREATED="1549983908679" ID="Freemind_Link_1482562280" MODIFIED="1549983959968" TEXT="Identificar a rota que deve acionar o resolver e registra&#xe1;-lo via atributo &apos;resolve&apos;"/>
 <node CREATED="1549984103835" ID="Freemind_Link_1762637848" MODIFIED="1549984128039" TEXT="Ao fazer isso, escolha um nome para o resolver. Esse nome ser&#xe1; usado no componente">
@@ -269,7 +284,7 @@
 </node>
 <node COLOR="#0000ff" CREATED="1545073123260" ID="Freemind_Link_770243970" MODIFIED="1549984515077" TEXT="Ex: //Trecho do arquivo de declara&#xe7;&#xe3;o de rotas&#xa;const routes: Routes = [&#xa;  {&#xa;    path: &apos;user/:userName&apos;,&#xa;    component: PhotoListComponent,&#xa;    resolve: {&#xa;      photos: PhotoListResolver&#xa;    }&#xa;  },&#xa;  {... },&#xa;  ...&#xa;];"/>
 </node>
-<node CREATED="1549984270235" ID="Freemind_Link_155480252" MODIFIED="1549984284253" TEXT="Usar o resolver no seu componente">
+<node CREATED="1549984270235" ID="Freemind_Link_155480252" MODIFIED="1694541435864" TEXT="Usar o resolver no&#xa;seu componente">
 <icon BUILTIN="full-3"/>
 <node CREATED="1549984346498" ID="Freemind_Link_264170159" MODIFIED="1549984358350" TEXT="Ser&#xe1; necess&#xe1;rio injetar o ActivatedRoute no seu componente">
 <node CREATED="1549982994020" ID="Freemind_Link_294779240" MODIFIED="1549983003663" TEXT="Biblioteca &apos;@angular/router&apos;"/>
@@ -283,7 +298,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1545061126738" ID="Freemind_Link_379034394" MODIFIED="1545061130086" POSITION="right" TEXT="Route guard">
+<node CREATED="1545061126738" FOLDED="true" ID="Freemind_Link_379034394" MODIFIED="1545061130086" POSITION="right" TEXT="Route guard">
 <node CREATED="1545070668965" ID="Freemind_Link_1527222975" MODIFIED="1545070678984" TEXT="Associar a&#xe7;&#xf5;es a rotas">
 <node CREATED="1545070686493" ID="Freemind_Link_1336616748" MODIFIED="1545070701840" TEXT="Implementar a a&#xe7;&#xe3;o (cada uma com sua respectiva interface)"/>
 <node CREATED="1545070703180" ID="Freemind_Link_60712505" MODIFIED="1545070714472" TEXT="Declarar o routeguard na configura&#xe7;&#xe3;o de rotas"/>
