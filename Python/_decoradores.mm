@@ -1,9 +1,9 @@
 <map version="0.8.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node BACKGROUND_COLOR="#8d8d92" CREATED="1533305953376" ID="Freemind_Link_1926993525" LINK="Python.mm" MODIFIED="1716904668875" TEXT="Decoradores">
+<node BACKGROUND_COLOR="#8d8d92" CREATED="1533305953376" ID="Freemind_Link_1926993525" LINK="Python.mm" MODIFIED="1717510352357" TEXT="Decoradores">
 <node CREATED="1609876470660" ID="Freemind_Link_1952635201" MODIFIED="1716904730614" POSITION="right" TEXT="Permite alterar o funcionamento&#xa;de uma fun&#xe7;&#xe3;o">
 <node CREATED="1716904701118" ID="_" MODIFIED="1716904705002" TEXT="Adicionando comportamentos"/>
-<node CREATED="1716904706694" ID="Freemind_Link_1986143309" MODIFIED="1716904718106" TEXT="Adicionando (envopando) com checagens"/>
+<node CREATED="1716904706694" ID="Freemind_Link_1986143309" MODIFIED="1717548584872" TEXT="Adicionando (envelopando) com checagens"/>
 <node CREATED="1716904718556" ID="Freemind_Link_1767204640" MODIFIED="1716904722445" TEXT="Alterando o resultado"/>
 </node>
 <node CREATED="1716904741165" ID="Freemind_Link_10978551" MODIFIED="1716904745479" POSITION="right" TEXT="Faz intenso uso de closures">
@@ -12,8 +12,9 @@
 <node CREATED="1716912559287" ID="Freemind_Link_346747375" MODIFIED="1716912570041" POSITION="right" TEXT="Pode-se usar mais de um decorator em uma mesma fun&#xe7;&#xe3;o">
 <node CREATED="1716912570744" ID="Freemind_Link_1195308727" MODIFIED="1716912579624" TEXT="A ordem de execu&#xe7;&#xe3;o dos decorators ser&#xe1; de baixo para cima"/>
 </node>
-<node CREATED="1716904782293" FOLDED="true" ID="Freemind_Link_1094962079" MODIFIED="1716911044942" POSITION="right" TEXT="Etapas">
-<node CREATED="1716904787905" FOLDED="true" ID="Freemind_Link_691273849" MODIFIED="1716911061712" TEXT="Decorator sem&#xa;par&#xe2;metros">
+<node CREATED="1717510352098" ID="Freemind_Link_1321376606" MODIFIED="1717510354954" POSITION="right" TEXT="Fun&#xe7;&#xf5;es">
+<node CREATED="1716904782293" FOLDED="true" ID="Freemind_Link_1094962079" MODIFIED="1716911044942" TEXT="Etapas">
+<node CREATED="1716904787905" ID="Freemind_Link_691273849" MODIFIED="1716911061712" TEXT="Decorator sem&#xa;par&#xe2;metros">
 <node CREATED="1716904790275" ID="Freemind_Link_1982168852" MODIFIED="1716904832703" TEXT="Construindo um decorator que envelopa uma fun&#xe7;&#xe3;o de inverter strings para fazer verifica&#xe7;&#xf5;es de par&#xe2;metros antes de executar a fun&#xe7;&#xe3;o que faz a invers&#xe3;o"/>
 <node CREATED="1716904837832" ID="Freemind_Link_1312020647" MODIFIED="1716904841806" TEXT="Cen&#xe1;rio inicial">
 <node CREATED="1716906902923" ID="Freemind_Link_1841148281" MODIFIED="1716906910214" TEXT="Cria&#xe7;&#xe3;o e uso da fun&#xe7;&#xe3;o invertestring"/>
@@ -59,6 +60,40 @@
 <node CREATED="1716911220137" ID="Freemind_Link_1650708652" MODIFIED="1716912245024" TEXT="fabrica_decorator  &#xe9; uma f&#xe1;brica de decorators"/>
 <node CREATED="1716911220137" ID="Freemind_Link_1180080363" MODIFIED="1716911234380" TEXT="restringe_param_string &#xe9; uma f&#xe1;brica de fun&#xe7;&#xf5;es"/>
 <node CREATED="1716911240304" ID="Freemind_Link_1126916614" MODIFIED="1716911698155" TEXT="inner &#xe9; a fun&#xe7;&#xe3;o que ser&#xe1; executada"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717510355844" FOLDED="true" ID="Freemind_Link_1839956401" MODIFIED="1717510358007" POSITION="right" TEXT="M&#xe9;todos">
+<node CREATED="1717510482024" ID="Freemind_Link_1097241118" LINK="_tiposDados.mm" MODIFIED="1717510571769" TEXT="Ver mapa &apos;Tipos de dados&apos;, bra&#xe7;o &apos;Classe&apos; -&gt; &apos;Personalizado&apos; -&gt; &apos;Decorators&apos; -&gt; &apos;Decorator de m&#xe9;todo&apos;"/>
+</node>
+<node CREATED="1717513473087" FOLDED="true" ID="Freemind_Link_1979895625" MODIFIED="1717513474790" POSITION="right" TEXT="Classes">
+<node CREATED="1717513477347" ID="Freemind_Link_1407785601" MODIFIED="1717513486452" TEXT="Implementa&#xe7;&#xe3;o de classes decoradoras"/>
+<node CREATED="1717513531699" ID="Freemind_Link_926568118" MODIFIED="1717513542773" TEXT="Decorador&#xa;sem par&#xe2;metro">
+<node CREATED="1609876566896" ID="Freemind_Link_1025335522" MODIFIED="1717513496757" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1895993705" MODIFIED="1717513504583" TEXT="class Decuplica:&#xa;    def __init__(self, funcDecorada):&#xa;        self._funcDecorada = funcDecorada&#xa;&#xa;    def __call__(self, *args):&#xa;        return self._funcDecorada(*args) * 10&#xa;&#xa;@Decuplica&#xa;def soma(a, b):&#xa;    return a + b&#xa;&#xa;print(soma(2,4))">
+<node CREATED="1609876580616" ID="Freemind_Link_975088126" MODIFIED="1717513594765" TEXT="O decorator &apos;Decuplica&apos; decuplica&#xa;o retorno dado pela fun&#xe7;&#xe3;o decorada"/>
+<node CREATED="1717514558789" ID="Freemind_Link_416993602" MODIFIED="1717514561649" TEXT="Neste exemplo">
+<node CREATED="1717514561958" ID="Freemind_Link_675492420" MODIFIED="1717514582632" TEXT="o __init__ recebe uma refer&#xea;ncia da fun&#xe7;&#xe3;o decorada"/>
+<node CREATED="1717514583437" ID="Freemind_Link_659688594" MODIFIED="1717514596592" TEXT="o __call__ recebe os argumentos da fun&#xe7;&#xe3;o decorada"/>
+</node>
+<node CREATED="1717513803541" ID="Freemind_Link_1922874924" MODIFIED="1717513806494" TEXT="Resultado: 60"/>
+</node>
+</node>
+</node>
+<node CREATED="1717513531699" ID="Freemind_Link_415285910" MODIFIED="1717514543664" TEXT="Decorador&#xa;com par&#xe2;metro">
+<node CREATED="1609876566896" ID="Freemind_Link_383715669" MODIFIED="1717513496757" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_40235161" MODIFIED="1717514549245" TEXT="class Multiplica:&#xa;    def __init__(self, multiplicador):&#xa;        self._multiplicador = multiplicador&#xa;&#xa;    def __call__(self, funcaoDecorada):&#xa;        def interno(*args, **kwargs):&#xa;          return funcaoDecorada(*args, **kwargs) * self._multiplicador&#xa;&#xa;        return interno&#xa;&#xa;@Multiplica(5)&#xa;def soma(a, b):&#xa;    return a + b&#xa;&#xa;print(soma(2,4))">
+<node CREATED="1609876580616" ID="Freemind_Link_343908021" MODIFIED="1717514630803" TEXT="O decorator &apos;Multiplica&apos; multiplica o retorno dado pela&#xa;fun&#xe7;&#xe3;o decorada pelo multiplicador informado no par&#xe2;metro"/>
+<node CREATED="1717514558789" ID="Freemind_Link_1879829018" MODIFIED="1717514561649" TEXT="Neste exemplo">
+<node CREATED="1717514561958" ID="Freemind_Link_1143753018" MODIFIED="1717514681719" TEXT="o __init__ recebe o par&#xe2;metro &apos;multiplicador&apos;, passado no decorator (na anota&#xe7;&#xe3;o da fun&#xe7;&#xe3;o)"/>
+<node CREATED="1717514583437" ID="Freemind_Link_292970250" MODIFIED="1717514697367" TEXT="o __call__ recebe uma refer&#xea;ncia da fun&#xe7;&#xe3;o decorada"/>
+<node CREATED="1717514698570" ID="Freemind_Link_1165015416" MODIFIED="1717514755095" TEXT="Para repassar os par&#xe2;metros da fun&#xe7;&#xe3;o &apos;soma&apos; para a fun&#xe7;&#xe3;o recebida&#xa;pelo __call__ devo adiar a execu&#xe7;&#xe3;o da fun&#xe7;&#xe3;o declarando uma fun&#xe7;&#xe3;o interna">
+<node CREATED="1717514744073" ID="Freemind_Link_823488067" MODIFIED="1717514747869" TEXT="Conceito de Closure"/>
+</node>
+</node>
+<node CREATED="1717513803541" ID="Freemind_Link_1417450706" MODIFIED="1717514635432" TEXT="Resultado: 30"/>
 </node>
 </node>
 </node>

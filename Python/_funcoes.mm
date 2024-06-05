@@ -16,6 +16,17 @@
 <node CREATED="1716493217614" ID="Freemind_Link_280330" MODIFIED="1716493230340" TEXT="A fun&#xe7;&#xe3;o mais interna s&#xf3; estar&#xe1; dispon&#xed;vel para a fun&#xe7;&#xe3;o mais externa"/>
 </node>
 <node CREATED="1716491555191" ID="Freemind_Link_919165271" MODIFIED="1716491557147" TEXT="Argumentos">
+<node CREATED="1717352091332" ID="Freemind_Link_1437604518" MODIFIED="1717352094681" TEXT="Podem ser tipados">
+<node CREATED="1717352096717" ID="Freemind_Link_1373153418" MODIFIED="1717352105674" TEXT="O Python n&#xe3;o faz NADA com essa tipagem"/>
+<node CREATED="1717352106170" ID="Freemind_Link_798090535" MODIFIED="1717352141275" TEXT="Essa tipagem serve unicamente para orientar o&#xa;programador e as ferramentas de edi&#xe7;&#xe3;o de c&#xf3;digo">
+<node CREATED="1717352126485" ID="Freemind_Link_1844697621" MODIFIED="1717352135477" TEXT="Viabilizam autocompletes, por eemplo"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_1593744425" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1136622338" MODIFIED="1717352203735" TEXT="def imprime(a: bool, b:str, c: int):&#xa;  print(f&apos;{a=}, {b=}, {c=}&apos;)&#xa;&#xa;imprime(10, True, &apos;oi&apos;) # V&#xe1;lido (O Python n&#xe3;o verifica a tipagem)">
+<node CREATED="1716491617567" ID="Freemind_Link_1025339683" MODIFIED="1717352225723" TEXT="Resultado: a=10, b=True, c=oi"/>
+</node>
+</node>
+</node>
 <node CREATED="1716491558213" ID="Freemind_Link_1132903467" MODIFIED="1716491562722" TEXT="Por padr&#xe3;o s&#xe3;o posicionais">
 <node CREATED="1609876605273" ID="Freemind_Link_824793827" MODIFIED="1609876606302" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1714852107" MODIFIED="1716491614715" TEXT="def imprime(a, b, c):&#xa;  print(f&apos;{a=}, {b=}, {c=}&apos;)&#xa;&#xa;imprime(10, 15, 7)">
@@ -23,7 +34,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1716491558213" ID="Freemind_Link_344670102" MODIFIED="1716491749487" TEXT="Podem ser nomeados">
+<node CREATED="1716491558213" FOLDED="true" ID="Freemind_Link_344670102" MODIFIED="1716491749487" TEXT="Podem ser nomeados">
 <node CREATED="1716491656334" ID="Freemind_Link_1704639688" MODIFIED="1716491679537" TEXT="Nesse caso a posi&#xe7;&#xe3;o n&#xe3;o &#xe9; usada pra atribuir os argumentos aos par&#xe2;metros, mas sim os nomes dos par&#xe2;metros informados"/>
 <node CREATED="1609876605273" ID="Freemind_Link_972398133" MODIFIED="1609876606302" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1905534431" MODIFIED="1716491697699" TEXT="def imprime(a, b, c):&#xa;  print(f&apos;{a=}, {b=}, {c=}&apos;)&#xa;&#xa;imprime(c=10, a=15, b=7)">
@@ -31,19 +42,55 @@
 </node>
 </node>
 </node>
-<node CREATED="1716491558213" ID="Freemind_Link_1863165301" MODIFIED="1716491926997" TEXT="Podem ser nomeados e posicionais">
+<node CREATED="1716491558213" FOLDED="true" ID="Freemind_Link_1863165301" MODIFIED="1716491926997" TEXT="Podem ser nomeados e posicionais">
 <node CREATED="1716491656334" ID="Freemind_Link_524569110" MODIFIED="1716491946822" TEXT="Nesse caso, a partir do primeiro argumento nomeado, os demais devem ser todos nomeados"/>
+<node CREATED="1716997961761" ID="Freemind_Link_578997299" MODIFIED="1716999637868" TEXT="Caso voc&#xea; queira IMPEDIR par&#xe2;metros&#xa;nomeados, use a &apos;/&apos; na assinatura da fun&#xe7;&#xe3;o.">
+<arrowlink COLOR="#ec0202" DESTINATION="Freemind_Link_46181693" ENDARROW="Default" ENDINCLINATION="342;0;" ID="Freemind_Arrow_Link_1137889991" STARTARROW="None" STARTINCLINATION="342;0;"/>
+<icon BUILTIN="idea"/>
+<node CREATED="1716997996829" ID="Freemind_Link_1983597321" MODIFIED="1716999307211" TEXT="Os argumentos ANTES da barra DEVEM ser posicionais"/>
+<node CREATED="1609876605273" ID="Freemind_Link_191910941" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_646361092" MODIFIED="1716998271282" TEXT="def imprime(a, b, c, /, d, e):&#xa;  print(f&apos;{a=}, {b=}, {c=}&apos;)&#xa;&#xa;imprime(1,2,3,4,5) # Uso v&#xe1;lido&#xa;imprime(1,2,3,d=4,e=5) # Uso v&#xe1;lido&#xa;imprime(1,2,3,e=4,d=5) # Uso v&#xe1;lido&#xa;imprime(1,2,c=3,d=4,e=5) # Uso inv&#xe1;lido&#xa;imprime(1,b=2,c=3,d=4,e=5) # Uso inv&#xe1;lido&#xa;imprime(a=1,b=2,c=3,d=4,e=5) # Uso inv&#xe1;lido"/>
+</node>
+</node>
+<node CREATED="1716997961761" ID="Freemind_Link_1306079095" MODIFIED="1716999603141" TEXT="Caso voc&#xea; queira IMPEDIR par&#xe2;metros&#xa;posicionais, use o &apos;*&apos; na assinatura da fun&#xe7;&#xe3;o.">
+<arrowlink COLOR="#f50202" DESTINATION="Freemind_Link_46181693" ENDARROW="Default" ENDINCLINATION="206;0;" ID="Freemind_Arrow_Link_376246954" STARTARROW="None" STARTINCLINATION="206;0;"/>
+<icon BUILTIN="idea"/>
+<node CREATED="1716997996829" ID="Freemind_Link_1495427817" MODIFIED="1716999359868" TEXT="Os argumentos DEPOIS do asterisco  DEVEM ser nomeados"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1362459286" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1036588086" MODIFIED="1716999133525" TEXT="def imprimir(a, b, *, c, d):&#xa;    print(f&apos;{a=}, {b=}, {c=}, {d=}&apos;)&#xa;&#xa;imprimir(1,2,c=3,d=4) # V&#xe1;lido&#xa;imprimir(a=1,b=2,c=3,d=4) # V&#xe1;lido&#xa;# imprimir(1,2,3,4) # Inv&#xe1;lido&#xa;# imprimir(1,2,3,d=4) # Inv&#xe1;lido&#xa;# imprimir(1,b=2,c=3,d=4) # Inv&#xe1;lido"/>
+</node>
+</node>
+<node CREATED="1716999504934" ID="Freemind_Link_46181693" MODIFIED="1716999632593" TEXT="* e / podem ser combinados">
+<node CREATED="1609876605273" ID="Freemind_Link_1482642176" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_319141989" MODIFIED="1716999552115" TEXT="def imprimir(a, b, /, *, c, d):&#xa;    print(f&apos;{a=}, {b=}, {c=}, {d=}&apos;)&#xa;&#xa;imprimir(1,2,c=3,d=4) # V&#xe1;lido&#xa;imprimir(a=1,b=2,c=3,d=4) # Inv&#xe1;lido&#xa;# imprimir(1,2,3,4) # Inv&#xe1;lido&#xa;# imprimir(1,2,3,d=4) # Inv&#xe1;lido&#xa;# imprimir(1,b=2,c=3,d=4) # Inv&#xe1;lido"/>
+</node>
+</node>
 <node CREATED="1609876605273" ID="Freemind_Link_1727052383" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1676188936" MODIFIED="1716492019561" TEXT="def imprime(a, b, c):&#xa;  print(f&apos;{a=}, {b=}, {c=}&apos;)&#xa;&#xa;imprime(1,2,3) # Uso v&#xe1;lido&#xa;imprime(1,2,c=3) # Uso v&#xe1;lido&#xa;imprime(1,b=2,3) # Uso inv&#xe1;lido&#xa;imprime(1,b=2,c=3) # Uso v&#xe1;lido">
-<node CREATED="1716491617567" ID="Freemind_Link_1455512078" MODIFIED="1716491719560" TEXT="Resultado: a=15, b=7, c=10"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1676188936" MODIFIED="1716492019561" TEXT="def imprime(a, b, c):&#xa;  print(f&apos;{a=}, {b=}, {c=}&apos;)&#xa;&#xa;imprime(1,2,3) # Uso v&#xe1;lido&#xa;imprime(1,2,c=3) # Uso v&#xe1;lido&#xa;imprime(1,b=2,3) # Uso inv&#xe1;lido&#xa;imprime(1,b=2,c=3) # Uso v&#xe1;lido"/>
 </node>
 </node>
-</node>
-<node CREATED="1716492485419" ID="Freemind_Link_1571152133" MODIFIED="1716492488810" TEXT="Podem ter valor padr&#xe3;o">
+<node CREATED="1716492485419" FOLDED="true" ID="Freemind_Link_1571152133" MODIFIED="1716492488810" TEXT="Podem ter valor padr&#xe3;o">
 <node CREATED="1716492738627" ID="Freemind_Link_1816763475" MODIFIED="1716492768672" TEXT="Todo par&#xe2;metro que vier depois de um par&#xe2;metro&#xa;com valor padr&#xe3;o, dever&#xe1;, tamb&#xe9;m, ter um valor padr&#xe3;o">
 <node CREATED="1609876605273" ID="Freemind_Link_414715500" MODIFIED="1609876606302" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_465647478" MODIFIED="1716492816249" TEXT="def imprime(a, b, c): # Uso v&#xe1;lido&#xa;def imprime(a, b, c=7): # Uso v&#xe1;lido&#xa;def imprime(a, b=7, c): # Uso inv&#xe1;lido&#xa;def imprime(a, b=7, c=8): # Uso v&#xe1;lido&#xa;&#xa;">
 <node CREATED="1716491617567" ID="Freemind_Link_1858914882" MODIFIED="1716491719560" TEXT="Resultado: a=15, b=7, c=10"/>
+</node>
+</node>
+</node>
+<node CREATED="1716994453830" ID="Freemind_Link_542716078" MODIFIED="1716994463199" TEXT="ATEN&#xc7;&#xc3;O">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1716994475093" ID="Freemind_Link_1579415485" MODIFIED="1716994490121" TEXT="N&#xe3;o use valor padr&#xe3;o em argumentos mut&#xe1;veis"/>
+<node CREATED="1716994491133" ID="Freemind_Link_181139230" MODIFIED="1716994529621" TEXT="Se um argumento lista for declarado com padr&#xe3;o [], por exemplo, toda vez que a fun&#xe7;&#xe3;o for chamada sem esse argumento, a fun&#xe7;&#xe3;o usar&#xe1; a mesma lista (em todas as chamadas)"/>
+<node CREATED="1716994464948" ID="Freemind_Link_524084710" MODIFIED="1716994466240" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1716994466966" ID="Freemind_Link_1257010303" MODIFIED="1716994542982" TEXT="&#xa;def testelista(nome, lista=[]):&#xa;    lista.append(nome)&#xa;    return lista&#xa;&#xa;cli1 = testelista(&apos;Ana&apos;)&#xa;cli2 = testelista(&apos;Beto&apos;)&#xa;&#xa;print(f&apos;{cli1=}, {cli2=}&apos;)">
+<node CREATED="1716994655737" ID="Freemind_Link_1284534844" MODIFIED="1716994666532" TEXT="Aqui, cli1 e cli2 apontam para a mesma lista!">
+<icon BUILTIN="clanbomber"/>
+</node>
+<node CREATED="1716994546884" ID="Freemind_Link_1908859014" MODIFIED="1716994549535" TEXT="Solu&#xe7;&#xe3;o:">
+<node COLOR="#0000ff" CREATED="1716994466966" ID="Freemind_Link_336353874" MODIFIED="1716994571874" TEXT="&#xa;def testelista(nome, lista=None):&#xa;    if lista is None:&#xa;        lista=[]&#xa;    lista.append(nome)&#xa;    return lista&#xa;&#xa;cli1 = testelista(&apos;Ana&apos;)&#xa;cli2 = testelista(&apos;Beto&apos;)&#xa;&#xa;print(f&apos;{cli1=}, {cli2=}&apos;)">
+<node CREATED="1716994684224" ID="Freemind_Link_889031941" MODIFIED="1716994690372" TEXT="Aqui, cli1 e cli2 s&#xe3;o listas distintas"/>
+</node>
+</node>
 </node>
 </node>
 </node>
@@ -53,11 +100,20 @@
 </node>
 </node>
 </node>
-<node CREATED="1716505960430" ID="Freemind_Link_777728250" MODIFIED="1716505963631" TEXT="Podem ser tuplas">
+<node CREATED="1716505960430" FOLDED="true" ID="Freemind_Link_777728250" MODIFIED="1716505963631" TEXT="Podem ser tuplas">
 <node CREATED="1716505965164" ID="Freemind_Link_1751764695" MODIFIED="1716505972744" TEXT="Nesse caso s&#xe3;o argumentos n&#xe3;o nomeados"/>
 <node CREATED="1609876605273" ID="Freemind_Link_30311248" MODIFIED="1609876606302" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_408401730" MODIFIED="1716506091877" TEXT="def soma(*args):&#xa;    total=0&#xa;    for num in args:&#xa;        total += num&#xa;    return total&#xa;&#xa;print(soma(10, 20,30))">
 <node CREATED="1716491617567" ID="Freemind_Link_1774045281" MODIFIED="1716506056357" TEXT="Resultado: 60"/>
+</node>
+</node>
+</node>
+<node CREATED="1717517891671" ID="Freemind_Link_1602358896" MODIFIED="1717517896361" TEXT="Podem ser de v&#xe1;rios tipos">
+<node CREATED="1717517897479" ID="Freemind_Link_1670773562" MODIFIED="1717517924613" TEXT="Os tipos s&#xe3;o ignorados pelo Python. S&#xe3;o usados&#xa;apenas pelas ferramentas de edi&#xe7;&#xe3;o de c&#xf3;digo"/>
+<node CREATED="1717517926108" ID="Freemind_Link_814838357" MODIFIED="1717517926841" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1737471526" MODIFIED="1717517963196" TEXT="def minha_funcao(a: int | float, b: int | float) -&gt; int | float:&#xa;    ...">
+<node CREATED="1717517965139" ID="Freemind_Link_814261058" MODIFIED="1717517977577" TEXT="Nesse exemplo, os argumentos a e b podem ser do tipo int ou do tipo float"/>
+<node CREATED="1717517965139" ID="Freemind_Link_255115019" MODIFIED="1717517999216" TEXT="Nesse exemplo, a fun&#xe7;&#xe3;o retorna um dado do tipo int ou do tipo float"/>
 </node>
 </node>
 </node>
@@ -106,7 +162,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1716857680605" ID="Freemind_Link_1915685718" MODIFIED="1716857755023" POSITION="right" TEXT="Closure">
+<node CREATED="1716857680605" FOLDED="true" ID="Freemind_Link_1915685718" MODIFIED="1716857755023" POSITION="right" TEXT="Closure">
 <icon BUILTIN="bookmark"/>
 <node CREATED="1716899033820" ID="Freemind_Link_847866650" MODIFIED="1716899034985" TEXT="https://www.youtube.com/watch?v=8WzqEPzaOfE"/>
 <node CREATED="1716898973783" ID="Freemind_Link_440954534" MODIFIED="1716900456243" TEXT="Na pr&#xe1;tica, uma closure cria uma associa&#xe7;&#xe3;o de&#xa;dados com uma fun&#xe7;&#xe3;o que trabalha tais dados">
@@ -418,6 +474,18 @@
 <icon BUILTIN="attach"/>
 </node>
 </node>
+<node CREATED="1717352950491" ID="Freemind_Link_1654857403" MODIFIED="1717352980601" TEXT="Para relan&#xe7;ar a exce&#xe7;&#xe3;o capturada exatamente como&#xa;ela foi recebida, use o comando &apos;raise&apos; sem par&#xe2;metros">
+<node CREATED="1716830199401" ID="Freemind_Link_1130274494" MODIFIED="1716830200609" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1716829802501" ID="Freemind_Link_145496491" MODIFIED="1716849789984" TEXT="try&#xa;    ...&#xa;except IndexError:&#xa;    print(&apos;Alguma a&#xe7;&#xe3;o aqui&apos;)&#xa;    raise"/>
+</node>
+</node>
+<node CREATED="1717355117667" ID="Freemind_Link_779930932" MODIFIED="1717355136585" TEXT="Para relan&#xe7;ar uma exce&#xe7;&#xe3;o a&#xa;partir de outra, use o &apos;raise from&apos;">
+<node CREATED="1716830199401" ID="Freemind_Link_1672008512" MODIFIED="1716830200609" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1716829802501" ID="Freemind_Link_1478147994" MODIFIED="1717355337203" TEXT="class OutroError(Exception): ...&#xa;&#xa;try:&#xa;    var = 1/0&#xa;except ZeroDivisionError as error:&#xa;    outraexcecao = OutroError(&apos;Alguma a&#xe7;&#xe3;o aqui&apos;)&#xa;    raise outraexcecao from error">
+<node CREATED="1717355338869" ID="Freemind_Link_779330490" MODIFIED="1717355398773" TEXT="Resultado:&#xa;ZeroDivisionError: division by zero&#xa;&#xa;The above exception was the direct cause of the following exception:&#xa;&#xa;Traceback (most recent call last):&#xa;  File &quot;/cursopython/aula234.py&quot;, line 7, in &lt;module&gt;&#xa;    raise outraexcecao from error&#xa;OutroError: Alguma a&#xe7;&#xe3;o aqui"/>
+</node>
+</node>
+</node>
 <node CREATED="1716830199401" ID="Freemind_Link_1206510199" MODIFIED="1716830200609" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1716829802501" ID="Freemind_Link_657181605" MODIFIED="1716849567819" TEXT="raise ValueError(&apos;Minha mensagem de erro&apos;)">
 <node CREATED="1716849817773" ID="Freemind_Link_822600545" MODIFIED="1716849845915" TEXT="Lan&#xe7;a a exce&#xe7;&#xe3;o ValueError com a mensagem especificada"/>
@@ -430,7 +498,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1716913356423" ID="Freemind_Link_22861493" MODIFIED="1716913366381" POSITION="right" TEXT="zip">
+<node COLOR="#0000ff" CREATED="1716913356423" FOLDED="true" ID="Freemind_Link_22861493" MODIFIED="1716913366381" POSITION="right" TEXT="zip">
 <node CREATED="1716913368520" ID="Freemind_Link_1392667122" MODIFIED="1716913393292" TEXT="Une duas listas, juntando os elementos em tuplas">
 <node CREATED="1716913396727" ID="Freemind_Link_1095760594" MODIFIED="1716913433870" TEXT="O primeiro elemento da lista 1 com o primeiro da lista 2&#xa;O segundo elemento da lista 1 com o segundo da lista 2&#xa;etc."/>
 <node CREATED="1716913396727" ID="Freemind_Link_1121188870" MODIFIED="1716913446771" TEXT="Se baseia na menor lista">
@@ -442,6 +510,115 @@
 <node CREATED="1716913547688" ID="Freemind_Link_1209122549" MODIFIED="1716913563367" TEXT="Resultado: (&apos;Ana&apos;, 2) (&apos;Beto&apos;, 5) (&apos;Caio&apos;, 8)"/>
 <node CREATED="1716913571364" ID="Freemind_Link_1470062649" MODIFIED="1716913598742" TEXT="Os elementos da lista2 que n&#xe3;o t&#xea;m correspondentes com os da lista1 s&#xe3;o desconsiderados"/>
 </node>
+</node>
+</node>
+<node CREATED="1717356123633" FOLDED="true" ID="Freemind_Link_1583258779" MODIFIED="1717356127595" POSITION="right" TEXT="Dunder methods">
+<node CREATED="1717356602734" ID="Freemind_Link_1504271931" MODIFIED="1717356607254" TEXT="https://rszalski.github.io/magicmethods/">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1717356902400" ID="Freemind_Link_1663122585" MODIFIED="1717356905830" TEXT="https://docs.python.org/3.11/reference/datamodel.html#special-method-names">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1717356232253" ID="Freemind_Link_1972245497" MODIFIED="1717356241216" TEXT="Dunder vem de double underline">
+<node CREATED="1717356242035" ID="Freemind_Link_1455288660" MODIFIED="1717356261752" TEXT="Tem a ver com o &apos;__&apos; no in&#xed;cio e final  dos nomes dos m&#xe9;todos"/>
+</node>
+<node CREATED="1717356129880" ID="Freemind_Link_1298948484" MODIFIED="1717356138266" TEXT="M&#xe9;todos &apos;m&#xe1;gicos&apos; do Python"/>
+<node CREATED="1717356207206" ID="Freemind_Link_1725975258" MODIFIED="1717356228889" TEXT="Ao efetuar opera&#xe7;&#xf5;es entre objetos, o Python sempre passa por um dunder method"/>
+<node COLOR="#0000ff" CREATED="1717428708154" ID="Freemind_Link_1709482569" MODIFIED="1717428920979" TEXT="__new__(cls)">
+<node CREATED="1717428738658" ID="Freemind_Link_1188332715" MODIFIED="1717428742429" TEXT="Cria o objeto"/>
+<node CREATED="1717428743331" ID="Freemind_Link_1183653964" MODIFIED="1717428771085" TEXT="N&#xe3;o tem &apos;self&apos; como argumento pois o objeto ainda n&#xe3;o foi criado"/>
+<node CREATED="1717428891020" ID="Freemind_Link_958268132" MODIFIED="1717428906321" TEXT="Tem &apos;cls&apos; (refer&#xea;ncia &#xe0; classe) como argumento"/>
+<node CREATED="1717429046794" ID="Freemind_Link_669600669" MODIFIED="1717429048039" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717428778442" ID="Freemind_Link_1930889208" MODIFIED="1717429093804" TEXT="def __new__(cls):&#xa;    return super().__new__(cls)">
+<node CREATED="1717428789890" ID="Freemind_Link_141772973" MODIFIED="1717429061319" TEXT="__new__ original faz exatamente isso"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1717428778442" ID="Freemind_Link_881839670" MODIFIED="1717428788765" TEXT="__init__(self)">
+<node CREATED="1717428789890" ID="Freemind_Link_760778994" MODIFIED="1717428795790" TEXT="Inicializa o objeto"/>
+<node CREATED="1717428796114" ID="Freemind_Link_551673532" MODIFIED="1717428806254" TEXT="Define valores dos atributos etc."/>
+</node>
+<node COLOR="#0000ff" CREATED="1717356142832" ID="Freemind_Link_796950672" MODIFIED="1717356163810" TEXT="__lt__(self, other)">
+<node CREATED="1717356266482" ID="Freemind_Link_742949466" MODIFIED="1717356274160" TEXT="Compara se um objeto &#xe9; menor que o outro"/>
+<node CREATED="1717356276373" ID="Freemind_Link_809429704" MODIFIED="1717428637641" TEXT="Invocado no uso do sinal &lt;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1717356142832" ID="Freemind_Link_1743706455" MODIFIED="1717356339192" TEXT="__le__(self, other)">
+<node CREATED="1717356266482" ID="Freemind_Link_1396682532" MODIFIED="1717356352583" TEXT="Compara se um objeto &#xe9; menor ou igual a o outro"/>
+<node CREATED="1717356276373" ID="Freemind_Link_366375095" MODIFIED="1717428643505" TEXT="Invocado no uso do sinal &lt;="/>
+</node>
+<node COLOR="#0000ff" CREATED="1717356142832" ID="Freemind_Link_1624258943" MODIFIED="1717356293688" TEXT="__gt__(self, other)">
+<node CREATED="1717356266482" ID="Freemind_Link_339078125" MODIFIED="1717356301727" TEXT="Compara se um objeto &#xe9; maior que o outro"/>
+<node CREATED="1717356276373" ID="Freemind_Link_1453413231" MODIFIED="1717428647032" TEXT="Invocado no uso do sinal &gt;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1717356142832" ID="Freemind_Link_1489315599" MODIFIED="1717356373110" TEXT="__ge__(self, other)">
+<node CREATED="1717356266482" ID="Freemind_Link_1590364778" MODIFIED="1717356384543" TEXT="Compara se um objeto &#xe9; maior ou igual a outro"/>
+<node CREATED="1717356276373" ID="Freemind_Link_1129931220" MODIFIED="1717428650110" TEXT="Invocado no uso do sinal &gt;="/>
+</node>
+<node COLOR="#0000ff" CREATED="1717356142832" ID="Freemind_Link_313058442" MODIFIED="1717356318583" TEXT="__eq__(self, other)">
+<node CREATED="1717356266482" ID="Freemind_Link_70837098" MODIFIED="1717356640106" TEXT="Compara se um objeto &#xe9; igual a outro"/>
+<node CREATED="1717356276373" ID="Freemind_Link_495931974" MODIFIED="1717428653135" TEXT="Invocado no uso do sinal =="/>
+</node>
+<node COLOR="#0000ff" CREATED="1717356142832" ID="Freemind_Link_948164761" MODIFIED="1717356627360" TEXT="__ne__(self, other)">
+<node CREATED="1717356266482" ID="Freemind_Link_783542489" MODIFIED="1717356648200" TEXT="Compara se um objeto &#xe9; diferente de outro"/>
+<node CREATED="1717356276373" ID="Freemind_Link_1892330060" MODIFIED="1717428658463" TEXT="Invocado no uso do sinal !="/>
+</node>
+<node COLOR="#0000ff" CREATED="1717356142832" ID="Freemind_Link_1861071141" MODIFIED="1717356395894" TEXT="__add__(self, other)">
+<node CREATED="1717356266482" ID="Freemind_Link_1049164791" MODIFIED="1717356408766" TEXT="Efetua a soma de um objeto com outro"/>
+<node CREATED="1717356276373" ID="Freemind_Link_543785362" MODIFIED="1717428664479" TEXT="Invocado no uso do sinal +"/>
+</node>
+<node COLOR="#0000ff" CREATED="1717356142832" ID="Freemind_Link_330257517" MODIFIED="1717356428341" TEXT="__sub__(self, other)">
+<node CREATED="1717356266482" ID="Freemind_Link_390427775" MODIFIED="1717356437630" TEXT="Efetua a subtra&#xe7;&#xe3;o de um objeto com outro"/>
+<node CREATED="1717356276373" ID="Freemind_Link_1878842586" MODIFIED="1717428672132" TEXT="Invocado no uso do sinal -"/>
+</node>
+<node COLOR="#0000ff" CREATED="1717356142832" ID="Freemind_Link_1837150605" MODIFIED="1717356448316" TEXT="__mul__(self, other)">
+<node CREATED="1717356266482" ID="Freemind_Link_1732609022" MODIFIED="1717356455493" TEXT="Efetua a multiplica&#xe7;&#xe3;o de um objeto com outro"/>
+<node CREATED="1717356276373" ID="Freemind_Link_493024370" MODIFIED="1717428677808" TEXT="Invocado no uso do sinal *"/>
+</node>
+<node COLOR="#0000ff" CREATED="1717356142832" ID="Freemind_Link_1237355298" MODIFIED="1717356497499" TEXT="__str__(self)">
+<node CREATED="1717356266482" ID="Freemind_Link_36685492" MODIFIED="1717357016496" TEXT="Retorna uma string com o conte&#xfa;do do objeto serializado em string"/>
+<node CREATED="1717356276373" ID="Freemind_Link_1022781676" MODIFIED="1717356283088" TEXT="Equivalente a">
+<node CREATED="1717356284090" ID="Freemind_Link_89153772" MODIFIED="1717357060975" TEXT="str"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1717356142832" ID="Freemind_Link_1450202460" MODIFIED="1717356993711" TEXT="__neg__(self)">
+<node CREATED="1717356266482" ID="Freemind_Link_474636271" MODIFIED="1717357027578" TEXT="Nega o objeto e o retorna">
+<node CREATED="1717357028327" ID="Freemind_Link_1399093676" MODIFIED="1717357035254" TEXT="O pr&#xf3;prio objeto &#xe9; modificado"/>
+</node>
+<node CREATED="1717356276373" ID="Freemind_Link_345266829" MODIFIED="1717356283088" TEXT="Equivalente a">
+<node CREATED="1717356284090" ID="Freemind_Link_118189535" MODIFIED="1717357044048" TEXT="- self"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1717356142832" ID="Freemind_Link_1838746144" MODIFIED="1717357276565" TEXT="__repr__">
+<node CREATED="1717356266482" ID="Freemind_Link_699140671" MODIFIED="1717357300621" TEXT="Implementa a forma como o objeto ser&#xe1;&#xa;representado quando convertido para string">
+<node CREATED="1717357028327" ID="Freemind_Link_1480924474" MODIFIED="1717357308748" TEXT="Quando for usado no print, por exemplo"/>
+</node>
+<node CREATED="1717357781320" ID="Freemind_Link_151967685" MODIFIED="1717357854044" TEXT="__repr__ vs __str__">
+<icon BUILTIN="idea"/>
+<node CREATED="1717357692223" ID="Freemind_Link_1206329573" MODIFIED="1717357841307" TEXT="&#xc9; semelhante ao __str__, mas aquele &#xe9; voltado para o desenvolvedor e este &#xe9;&#xa;para dizer como o objeto deve ser exibido quando for transformado em estring">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node CREATED="1717357755541" ID="Freemind_Link_1564909598" MODIFIED="1717357909273" TEXT="Este __repr___ s&#xf3; ser&#xe1; chamado pelo&#xa;print caso __str__ n&#xe3;o esteja definido">
+<node CREATED="1717357910997" ID="Freemind_Link_171191796" MODIFIED="1717357931878" TEXT="Para for&#xe7;ar o print da representa&#xe7;&#xe3;o, use print(repr(seu_objeto))"/>
+</node>
+</node>
+<node CREATED="1717356276373" ID="Freemind_Link_1762157354" MODIFIED="1717357351746" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717358192283" ID="Freemind_Link_383006092" MODIFIED="1717358203343" TEXT="class Ponto:&#xa;    def __init__(self, x:int, y:int, nome: str) -&gt; None:&#xa;        self._x = x&#xa;        self._y = y&#xa;        self._nome = nome&#xa;    def __repr__(self) -&gt; str:&#xa;        return f&apos;{self.__class__.__name__}(x={self._x!r}, y={self._y!r}, nome={self._nome!r})&apos;&#xa;&#xa;p1 = Ponto(5,7,&apos;In&#xed;cio&apos;)&#xa;p2 = Ponto(3,8,&apos;Final&apos;)&#xa;&#xa;print(p1,p2, sep=&apos;\n&apos;)">
+<node CREATED="1717358225052" ID="Freemind_Link_555423675" MODIFIED="1717358369078" TEXT="Explica&#xe7;&#xf5;es">
+<node CREATED="1717358401650" ID="Freemind_Link_1816600691" MODIFIED="1717358423997" TEXT="Ao implementar o repr, &#xe9; bom usar o&#xa;repr dos elementos que voc&#xea; quer usar">
+<node CREATED="1717358425434" ID="Freemind_Link_1733482713" MODIFIED="1717358481342" TEXT="Neste exemplo, ao implementar o repr da classe&#xa;&apos;Ponto&apos;, devo usar o repr dos argumentos _x, _y e _nome"/>
+<node CREATED="1717358487905" ID="Freemind_Link_1671937636" MODIFIED="1717358521293" TEXT="Isso faz, por exemplo, a a string &apos;nome&apos; ser exibida&#xa;entre aspas simples no repr da clase Ponto"/>
+</node>
+<node CREATED="1717358260741" ID="Freemind_Link_1123966553" MODIFIED="1717358272106" TEXT="f&apos;{var!r}&apos;">
+<node CREATED="1717358272931" ID="Freemind_Link_1881130781" MODIFIED="1717358286800" TEXT="Esse !r indica ao f-string para usar o repr da vari&#xe1;vel"/>
+</node>
+</node>
+<node CREATED="1717358212204" ID="Freemind_Link_457664579" MODIFIED="1717358346241" TEXT="Resultado com a implementa&#xe7;&#xe3;o do dunder method __repr__:&#xa;Ponto(x=5, y=7, nome=&apos;In&#xed;cio&apos;)&#xa;Ponto(x=3, y=8, nome=&apos;Final&apos;)"/>
+<node CREATED="1717357365548" ID="Freemind_Link_110807738" MODIFIED="1717357538690" TEXT="Resultado se n&#xe3;o implementasse o dunder method __repr__:&#xa;&lt;__main__.Ponto object at 0x7f3e6903a650&gt;&#xa;&lt;__main__.Ponto object at 0x7f3e6903a690&gt;"/>
+</node>
+</node>
+</node>
+<node CREATED="1717356535807" ID="Freemind_Link_1021268247" MODIFIED="1717356536835" TEXT="etc.">
+<node CREATED="1717356537638" ID="Freemind_Link_1636318000" MODIFIED="1717356540035" TEXT="H&#xe1; muitos outros"/>
 </node>
 </node>
 </node>

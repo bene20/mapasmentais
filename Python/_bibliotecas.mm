@@ -7,7 +7,7 @@
 <node CREATED="1716850407842" ID="Freemind_Link_919115303" MODIFIED="1716850411634" POSITION="right" TEXT="https://docs.python.org/3/py-modindex.html">
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1716853823977" ID="Freemind_Link_1847963508" MODIFIED="1716853830540" POSITION="right" TEXT="Sobre m&#xf3;dulos">
+<node CREATED="1716853823977" FOLDED="true" ID="Freemind_Link_1847963508" MODIFIED="1716853830540" POSITION="right" TEXT="Sobre m&#xf3;dulos">
 <node CREATED="1716853831049" ID="Freemind_Link_1753437371" MODIFIED="1716853839523" TEXT="O m&#xf3;dulo principal sempre se chama __main__">
 <node CREATED="1609876661409" ID="Freemind_Link_1308184279" MODIFIED="1609880328889" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1228489604" MODIFIED="1716853863319" TEXT="print(&apos;Este m&#xf3;dulo se chama&apos;, __name__)">
@@ -62,7 +62,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1609880220805" ID="Freemind_Link_1566582807" MODIFIED="1609880232122" POSITION="right" TEXT="Importa&#xe7;&#xe3;o:">
+<node CREATED="1609880220805" FOLDED="true" ID="Freemind_Link_1566582807" MODIFIED="1609880232122" POSITION="right" TEXT="Importa&#xe7;&#xe3;o:">
 <node CREATED="1609880408987" ID="Freemind_Link_996462982" MODIFIED="1609880415403" TEXT="Tr&#xea; formas poss&#xed;veis:">
 <node CREATED="1609880258126" FOLDED="true" ID="Freemind_Link_348300118" MODIFIED="1609880312559" TEXT="Simples">
 <icon BUILTIN="forward"/>
@@ -850,6 +850,19 @@
 </node>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1982596262" MODIFIED="1716990919796" TEXT="remove ou unlink">
+<node CREATED="1609876580616" ID="Freemind_Link_1596869295" MODIFIED="1716990931173" TEXT="Exclui um arquivo"/>
+<node CREATED="1609876605273" ID="Freemind_Link_696716096" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1299750227" MODIFIED="1716990972630" TEXT="os.unlink(&apos;arquivo.txt&apos;)"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_857402278" MODIFIED="1716990982036" TEXT="os.remove(&apos;arquivo.txt&apos;)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_703308435" MODIFIED="1716991099344" TEXT="rename">
+<node CREATED="1609876580616" ID="Freemind_Link_1797453830" MODIFIED="1716991103465" TEXT="Renomeia um aquivo"/>
+<node CREATED="1609876605273" ID="Freemind_Link_210336857" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1060091935" MODIFIED="1716991123702" TEXT="os.rename(&apos;nomeantigo.txt&apos;, &apos;nomenovo.txt&apos;)&#xa;"/>
+</node>
+</node>
 </node>
 </node>
 <node CREATED="1716489278424" FOLDED="true" ID="Freemind_Link_363827175" MODIFIED="1716489279389" POSITION="right" TEXT="re">
@@ -899,7 +912,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1716489278424" ID="Freemind_Link_1015161708" MODIFIED="1716489969409" POSITION="right" TEXT="random">
+<node CREATED="1716489278424" FOLDED="true" ID="Freemind_Link_1015161708" MODIFIED="1716489969409" POSITION="right" TEXT="random">
 <node CREATED="1716489280228" ID="Freemind_Link_784043325" MODIFIED="1716489979624" TEXT="Biblioteca de gera&#xe7;&#xe3;o de n&#xfa;meros aleat&#xf3;rios"/>
 <node CREATED="1716489302508" ID="Freemind_Link_1012642963" MODIFIED="1716489304527" TEXT="Fun&#xe7;&#xf5;es">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_405877111" MODIFIED="1716489991393" TEXT="randint">
@@ -1001,6 +1014,151 @@
 </node>
 </node>
 </node>
+</node>
+<node CREATED="1716991758376" FOLDED="true" ID="Freemind_Link_1231091591" MODIFIED="1716991760837" POSITION="right" TEXT="json">
+<node CREATED="1716991767818" ID="Freemind_Link_226286989" MODIFIED="1716991778164" TEXT="Conjunto de fun&#xe7;&#xf5;es de manipula&#xe7;&#xe3;o de dados json"/>
+<node CREATED="1716991791896" ID="Freemind_Link_817287610" MODIFIED="1716991794036" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1716991795193" ID="Freemind_Link_1932931791" MODIFIED="1716991803844" TEXT="dump">
+<node CREATED="1716991811485" ID="Freemind_Link_628339663" MODIFIED="1716991827609" TEXT="Grava um dict do python em formato json em um arquivo"/>
+<node CREATED="1716993298923" ID="Freemind_Link_312172917" MODIFIED="1716993301453" TEXT="Argumentos">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1917492719" MODIFIED="1716993329135" TEXT="ensure_ascii">
+<node CREATED="1716993329786" ID="Freemind_Link_964550134" MODIFIED="1716993352471" TEXT="For&#xe7;a a escrita do arquivo em ascii se True">
+<node CREATED="1716993339064" ID="Freemind_Link_345546152" MODIFIED="1716993341678" TEXT="N&#xe3;o recomendado"/>
+</node>
+<node CREATED="1716993357041" ID="Freemind_Link_1209952523" MODIFIED="1716993360726" TEXT="Pode ser False ou True"/>
+<node CREATED="1716993393675" ID="Freemind_Link_970689328" MODIFIED="1716993394438" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_502937315" MODIFIED="1716993506504" TEXT="    json.dump(pessoa, arquivo, ensure_ascii=False)">
+<node CREATED="1716993492729" ID="Freemind_Link_618097300" MODIFIED="1716993565871" TEXT="Resultado: ... &quot;bairro&quot;: &quot;Graja&#xfa;&quot;">
+<arrowlink COLOR="#e40b0e" DESTINATION="Freemind_Link_849094226" ENDARROW="Default" ENDINCLINATION="36;0;" ID="Freemind_Arrow_Link_681919728" STARTARROW="Default" STARTINCLINATION="36;0;"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_429039302" MODIFIED="1716993432956" TEXT="    json.dump(pessoa, arquivo, ensure_ascii=True)">
+<node CREATED="1716993492729" ID="Freemind_Link_849094226" MODIFIED="1716993559249" TEXT="Resultado: ...&quot;bairro&quot;: &quot;Graja\u00fa&quot;,"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1797311684" MODIFIED="1716993369279" TEXT="indent">
+<node CREATED="1716993329786" ID="Freemind_Link_643164138" MODIFIED="1716993378836" TEXT="Faz a escrita do arquivo com identa&#xe7;&#xf5;es"/>
+<node CREATED="1716993357041" ID="Freemind_Link_80429284" MODIFIED="1716993390059" TEXT="O valor deve ser um n&#xfa;mero"/>
+<node CREATED="1716993393675" ID="Freemind_Link_1770740804" MODIFIED="1716993394438" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_536018708" MODIFIED="1716993411878" TEXT="    json.dump(pessoa, arquivo, indent=2)"/>
+</node>
+</node>
+</node>
+<node CREATED="1716993739620" ID="Freemind_Link_248718753" MODIFIED="1716993806988" TEXT="Aten&#xe7;&#xe3;o:">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1716993744634" ID="Freemind_Link_1639129185" MODIFIED="1716993753798" TEXT="Tuplas do Python ser&#xe3;o escritas como listas no Json"/>
+<node CREATED="1716993754292" ID="Freemind_Link_1059725696" MODIFIED="1716993816757" TEXT="O Set do Python n&#xe3;o tem um equivalente&#xa;no Json, portanto n&#xe3;o ser&#xe1; serializado">
+<node CREATED="1716993773098" ID="Freemind_Link_816046210" MODIFIED="1716993780615" TEXT="Uma exec&#xe7;&#xe3;o ser&#xe1; lan&#xe7;ada"/>
+</node>
+</node>
+<node CREATED="1716993225398" ID="Freemind_Link_1869407210" MODIFIED="1716993226034" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1716993226949" ID="Freemind_Link_1249457978" MODIFIED="1716993264562" TEXT="import json&#xa;&#xa;pessoa={&#xa;    &apos;nome&apos;: &apos;Ana&apos;,&#xa;    &apos;idade&apos;: 25,&#xa;    &apos;pets&apos;: [&#xa;        {&apos;tipo&apos;: &apos;canino&apos;, &apos;nome&apos;: &apos;Pepperoni&apos;, &apos;idade&apos;: 7},&#xa;        {&apos;tipo&apos;: &apos;canino&apos;, &apos;nome&apos;: &apos;Minuim&apos;, &apos;idade&apos;: 8},&#xa;        {&apos;tipo&apos;: &apos;felino&apos;, &apos;nome&apos;: &apos;Mingau&apos;, &apos;idade&apos;: 3},&#xa;    ],&#xa;    &apos;endereco&apos; : {&#xa;        &apos;logradouro&apos;: &apos;Rua sete&apos;,&#xa;        &apos;numero&apos;: 125,&#xa;        &apos;bairro&apos;: &apos;Graja&#xfa;&apos;,&#xa;        &apos;lotes&apos;: [3,4,5,12]&#xa;    }&#xa;}&#xa;&#xa;with open(&apos;meusdados.json&apos;, &apos;w&apos;, encoding=&apos;utf-8&apos;) as arquivo:&#xa;    json.dump(pessoa, arquivo, indent=2)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1716991795193" ID="Freemind_Link_1338794295" MODIFIED="1716993601167" TEXT="load">
+<node CREATED="1716991811485" ID="Freemind_Link_299771352" MODIFIED="1716993616104" TEXT="Carrega um arquivo json em um dict Python"/>
+<node CREATED="1716993225398" ID="Freemind_Link_1118156270" MODIFIED="1716993226034" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1716993226949" ID="Freemind_Link_1981690157" MODIFIED="1716993705706" TEXT="import json&#xa;&#xa;with open(&apos;meusdados.json&apos;, &apos;r&apos;, encoding=&apos;utf-8&apos;) as arquivo:&#xa;    pessoa2=json.load(arquivo)    &#xa;    print(pessoa2)"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717548619155" FOLDED="true" ID="Freemind_Link_897129555" MODIFIED="1717550948199" POSITION="right" TEXT="dataclasses">
+<node CREATED="1717549938337" ID="Freemind_Link_891634692" MODIFIED="1717549944938" TEXT="Inclu&#xed;do na vers&#xe3;o 3.7 do Python"/>
+<node CREATED="1717550950603" ID="Freemind_Link_1623552075" MODIFIED="1717550952584" TEXT="dataclass">
+<node CREATED="1717548622416" ID="Freemind_Link_878773725" MODIFIED="1717548662788" TEXT="Facilita o processo de cria&#xe7;&#xe3;o de classes, implementando&#xa;de forma simples as funcionalidades mais comuns">
+<node CREATED="1717548641561" ID="Freemind_Link_1312917678" MODIFIED="1717548642324" TEXT="Ex:">
+<node CREATED="1717548643811" ID="Freemind_Link_658843457" MODIFIED="1717548646190" TEXT="getter&apos;s"/>
+<node CREATED="1717548646418" ID="Freemind_Link_1941194082" MODIFIED="1717548648205" TEXT="setter&apos;s"/>
+<node CREATED="1717548648722" ID="Freemind_Link_1560385770" MODIFIED="1717549862790" TEXT="repr&apos;s"/>
+<node CREATED="1717548651503" ID="Freemind_Link_1304488375" MODIFIED="1717548655451" TEXT="etc"/>
+</node>
+</node>
+<node CREATED="1717550419491" ID="Freemind_Link_1295260226" MODIFIED="1717550421131" TEXT="Argumentos">
+<node COLOR="#990000" CREATED="1717550421637" ID="Freemind_Link_1052368538" MODIFIED="1717550450030" TEXT="init">
+<node CREATED="1717550425415" ID="Freemind_Link_867659241" MODIFIED="1717550441778" TEXT="Indica se quero ou n&#xe3;o que o dataclass implemente o m&#xe9;todo __init__"/>
+<node CREATED="1717550451636" ID="Freemind_Link_1401412919" MODIFIED="1717550458834" TEXT="Valor default: True"/>
+</node>
+<node COLOR="#990000" CREATED="1717550477302" ID="Freemind_Link_557439650" MODIFIED="1717550480362" TEXT="eq">
+<node CREATED="1717550425415" ID="Freemind_Link_93948903" MODIFIED="1717550496672" TEXT="Indica se quero ou n&#xe3;o que o dataclass implemente o m&#xe9;todo __eq__"/>
+<node CREATED="1717550451636" ID="Freemind_Link_150554842" MODIFIED="1717550458834" TEXT="Valor default: True"/>
+</node>
+<node COLOR="#990000" CREATED="1717550555082" ID="Freemind_Link_1639622388" MODIFIED="1717550557924" TEXT="frozen">
+<node CREATED="1717550558576" ID="Freemind_Link_1757314323" MODIFIED="1717550577189" TEXT="Indica se a classe decorada &#xe9; congelada ou n&#xe3;o (se aceita ou n&#xe3;o altera&#xe7;&#xe3;o)"/>
+<node CREATED="1717550584672" ID="Freemind_Link_133805228" MODIFIED="1717550629620" TEXT="Quando uma clase &#xe9; &apos;congelada&apos;, voc&#xea; n&#xe3;o poder&#xe1; alterar o valor de seus&#xa;atributos. No m&#xe1;ximo poder&#xe1; fazer uma c&#xf3;pia modificada do objeto original."/>
+<node CREATED="1717550451636" ID="Freemind_Link_1439754818" MODIFIED="1717550583071" TEXT="Valor default: False"/>
+</node>
+<node COLOR="#990000" CREATED="1717550755599" ID="Freemind_Link_1373375688" MODIFIED="1717550759664" TEXT="order">
+<node CREATED="1717550760095" ID="Freemind_Link_1356545179" MODIFIED="1717550771219" TEXT="Ativa a ordena&#xe7;&#xe3;o dos objetos da classe">
+<node CREATED="1717550772028" ID="Freemind_Link_1873199718" MODIFIED="1717550789402" TEXT="Os objetos ser&#xe3;o ordenados pelos atributos, na ordem em que s&#xe3;o declarados na classe"/>
+<node CREATED="1717550791432" ID="Freemind_Link_578925037" MODIFIED="1717550804915" TEXT="O m&#xe9;todo &apos;sorted&apos; passa a funcionar para uma lista dessa classe"/>
+</node>
+<node CREATED="1717550451636" ID="Freemind_Link_391425278" MODIFIED="1717550583071" TEXT="Valor default: False"/>
+</node>
+<node CREATED="1717550501629" ID="Freemind_Link_533352939" MODIFIED="1717550502352" TEXT="etc"/>
+</node>
+<node CREATED="1717551235166" ID="Freemind_Link_1265397894" MODIFIED="1717551695123" TEXT="Permite declara&#xe7;&#xe3;o&#xa;de valores padr&#xe3;o">
+<node CREATED="1717551244567" ID="Freemind_Link_1762719572" MODIFIED="1717551528164" TEXT="Para os tipos imut&#xe1;veis">
+<node CREATED="1717551252366" ID="Freemind_Link_1414334750" MODIFIED="1717551253201" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1368611181" MODIFIED="1717551289815" TEXT="from dataclasses import dataclass&#xa;&#xa;@dataclass&#xa;class Pessoa():&#xa;    nome: str = &apos;Pedro&apos;&#xa;    idade: int = 17&#xa;&#xa;p1 = Pessoa()&#xa;print(p1, sep=&apos;\n&apos;)">
+<node CREATED="1717549730182" ID="Freemind_Link_1370999324" MODIFIED="1717551341326" TEXT="Resultado:&#xa;Pessoa(nome=&apos;Pedro&apos;, idade=17)"/>
+</node>
+</node>
+</node>
+<node CREATED="1717551461259" ID="Freemind_Link_1260749783" MODIFIED="1717551511965" TEXT="Para tipos mut&#xe1;veis">
+<node CREATED="1717551512938" ID="Freemind_Link_402335404" MODIFIED="1717551722922" TEXT="Requer o uso do m&#xf3;dulo &apos;field&apos;">
+<arrowlink DESTINATION="Freemind_Link_994299774" ENDARROW="Default" ENDINCLINATION="596;0;" ID="Freemind_Arrow_Link_1262304707" STARTARROW="None" STARTINCLINATION="596;0;"/>
+</node>
+<node CREATED="1717551252366" ID="Freemind_Link_510168483" MODIFIED="1717551253201" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_437140022" MODIFIED="1717551609680" TEXT="from dataclasses import dataclass, field&#xa;&#xa;@dataclass&#xa;class Pessoa():&#xa;    nome: str = &apos;Pedro&apos;&#xa;    idade: int = 17&#xa;    endenrecos: list[str] = field(default_factory=list)&#xa;&#xa;p1 = Pessoa()&#xa;print(p1, sep=&apos;\n&apos;)">
+<node CREATED="1717549730182" ID="Freemind_Link_1983469652" MODIFIED="1717551601386" TEXT="Resultado:&#xa;Pessoa(nome=&apos;Pedro&apos;, idade=17, endenrecos=[])"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717548666074" FOLDED="true" ID="Freemind_Link_1623273055" MODIFIED="1717548666829" TEXT="Ex:">
+<node CREATED="1717548671801" ID="Freemind_Link_11048511" MODIFIED="1717548678878" TEXT="Classe feita na m&#xe3;o">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_3429281" MODIFIED="1717549721966" TEXT="&#xa;class Pessoa():&#xa;    def __init__(self, nome: str, idade: int) -&gt; None:&#xa;        self._nome = nome&#xa;        self._idade = idade&#xa;&#xa;    @property&#xa;    def nome(self):&#xa;        return self._nome&#xa;    &#xa;    @nome.setter&#xa;    def nome(self, nome: str):&#xa;        self._nome = nome&#xa;&#xa;    @property&#xa;    def idade(self):&#xa;        return self._idade&#xa;    &#xa;    @idade.setter&#xa;    def idade(self, idade: int):&#xa;        self._idade = idade&#xa;&#xa;    def __repr__(self) -&gt; str:&#xa;        class_name = type(self).__name__&#xa;        attrs = f&apos;(nome={self._nome!r}, idade={self._idade!r})&apos;&#xa;        return f&apos;{class_name}{attrs}&apos;&#xa;    &#xa;p1 = Pessoa(&apos;Ana&apos;, 15)&#xa;print(p1, sep=&apos;\n&apos;)">
+<node CREATED="1717549730182" ID="Freemind_Link_742270836" MODIFIED="1717549735935" TEXT="Resultado:&#xa;Pessoa(nome=&apos;Ana&apos;, idade=15)"/>
+</node>
+</node>
+<node CREATED="1717548681241" ID="Freemind_Link_751499711" MODIFIED="1717548688021" TEXT="Classe feita via decorator">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1005639739" MODIFIED="1717549843130" TEXT="from dataclasses import dataclass&#xa;&#xa;@dataclass&#xa;class Pessoa():&#xa;    nome: str&#xa;    idade: int&#xa;&#xa;p1 = Pessoa(&apos;Ana&apos;, 15)&#xa;print(p1, sep=&apos;\n&apos;)">
+<node CREATED="1717549730182" ID="Freemind_Link_37731875" MODIFIED="1717549735935" TEXT="Resultado:&#xa;Pessoa(nome=&apos;Ana&apos;, idade=15)"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_193370837" MODIFIED="1717550353167" TEXT="from dataclasses import dataclass&#xa;&#xa;@dataclass(init=False&#xa;class Pessoa():&#xa;    nome: str&#xa;    idade: int&#xa;&#xa;    def __init__(self, nome: str, idade: int):&#xa;        self._nome = nome&#xa;        self._idade = idade&#xa;&#xa;p1 = Pessoa(&apos;Ana&apos;, 15)&#xa;print(p1, sep=&apos;\n&apos;)">
+<node CREATED="1717550359798" ID="Freemind_Link_1866446607" MODIFIED="1717550376700" TEXT="Aqui eu quis implementar o meu pr&#xf3;prio __init__ e n&#xe3;o deix&#xe1;-lo a cargo do dataclass"/>
+<node CREATED="1717549730182" ID="Freemind_Link_649933515" MODIFIED="1717549735935" TEXT="Resultado:&#xa;Pessoa(nome=&apos;Ana&apos;, idade=15)"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717551700374" ID="Freemind_Link_994299774" MODIFIED="1717551722920" TEXT="field">
+<node CREATED="1717551702674" ID="Freemind_Link_1193431398" MODIFIED="1717551710920" TEXT="Permite configurar os campos no dataclass"/>
+<node CREATED="1717551712446" ID="Freemind_Link_1171189277" MODIFIED="1717551718073" TEXT="&#xc9; poderoso. Vale ler a documenta&#xe7;&#xe3;o"/>
+</node>
+<node CREATED="1717550965548" ID="Freemind_Link_320390920" MODIFIED="1717550967344" TEXT="asdict">
+<node CREATED="1717550967884" ID="Freemind_Link_864767978" MODIFIED="1717550984102" TEXT="Converte uma classe para um dicion&#xe1;rio"/>
+<node CREATED="1717551054499" ID="Freemind_Link_801621370" MODIFIED="1717551055230" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717551056061" ID="Freemind_Link_1046980" MODIFIED="1717551136342" TEXT="from dataclasses import dataclass, asdict&#xa;&#xa;@dataclass&#xa;class Pessoa():&#xa;    nome: str&#xa;    idade: int&#xa;&#xa;p1 = Pessoa(&apos;Ana&apos;, 15)&#xa;print(p1, sep=&apos;\n&apos;)&#xa;print(asdict(p1))">
+<node CREATED="1717551146717" ID="Freemind_Link_871903450" MODIFIED="1717551154258" TEXT="Resultado:&#xa;Pessoa(nome=&apos;Ana&apos;, idade=15)&#xa;{&apos;nome&apos;: &apos;Ana&apos;, &apos;idade&apos;: 15}"/>
+</node>
+</node>
+</node>
+<node CREATED="1717550978530" ID="Freemind_Link_1823514856" MODIFIED="1717550979798" TEXT="astuple">
+<node CREATED="1717550967884" ID="Freemind_Link_1634836662" MODIFIED="1717550992574" TEXT="Converte uma classe para uma tupla"/>
+<node CREATED="1717551054499" ID="Freemind_Link_362337941" MODIFIED="1717551055230" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717551056061" ID="Freemind_Link_1761897636" MODIFIED="1717551169809" TEXT="from dataclasses import dataclass, astuple&#xa;&#xa;@dataclass&#xa;class Pessoa():&#xa;    nome: str&#xa;    idade: int&#xa;&#xa;p1 = Pessoa(&apos;Ana&apos;, 15)&#xa;print(p1, sep=&apos;\n&apos;)&#xa;print(astuple(p1))">
+<node CREATED="1717551146717" ID="Freemind_Link_315884687" MODIFIED="1717551182837" TEXT="Resultado:&#xa;Pessoa(nome=&apos;Ana&apos;, idade=15)&#xa;(&apos;Ana&apos;, 15)"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717348778077" ID="Freemind_Link_18217416" MODIFIED="1717348779380" POSITION="right" TEXT="ABC">
+<node CREATED="1717348780257" ID="Freemind_Link_958663719" MODIFIED="1717348787634" TEXT="Abstract Base Class"/>
+<node CREATED="1717348789616" ID="Freemind_Link_1897588557" MODIFIED="1717348798540" TEXT="M&#xf3;dulo para cria&#xe7;&#xe3;o de classes abstratas"/>
+<node CREATED="1717348800887" ID="Freemind_Link_596438753" LINK="_tiposDados.mm" MODIFIED="1717348826814" TEXT="Ver mapa &apos;Tipos de dados&apos; -&gt; CLasse"/>
 </node>
 <node CREATED="1609876470660" ID="Freemind_Link_1952635201" MODIFIED="1609876747404" POSITION="right" TEXT="???">
 <node CREATED="1609876530394" ID="Freemind_Link_1734758861" MODIFIED="1609876749434" TEXT="???"/>

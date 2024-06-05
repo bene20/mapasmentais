@@ -17,7 +17,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1716918093879" ID="Freemind_Link_27483015" MODIFIED="1716918102736" POSITION="right" TEXT="Iterables">
+<node CREATED="1716918093879" FOLDED="true" ID="Freemind_Link_27483015" MODIFIED="1716918102736" POSITION="right" TEXT="Iterables">
 <node CREATED="1609879823606" FOLDED="true" ID="Freemind_Link_961330039" MODIFIED="1716394121153" TEXT="Lista">
 <node CREATED="1609879827726" ID="Freemind_Link_96777695" MODIFIED="1609879830257" TEXT="Vetor de valores"/>
 <node CREATED="1716567329423" ID="Freemind_Link_1969125884" MODIFIED="1716567371952" TEXT="Declara&#xe7;&#xe3;o usando-se colchetes"/>
@@ -819,6 +819,14 @@
 </node>
 </node>
 <node CREATED="1609877802642" ID="Freemind_Link_1001266178" MODIFIED="1609877805127" POSITION="right" TEXT="Boolean">
+<node CREATED="1717355702345" ID="Freemind_Link_879843141" MODIFIED="1717355711296" TEXT="Palavra reservada &apos;bool&apos;">
+<node CREATED="1717355725942" ID="Freemind_Link_313702397" MODIFIED="1717355736188" TEXT="A tipagem pode ser impl&#xed;cita">
+<node CREATED="1717355736780" ID="Freemind_Link_857386136" MODIFIED="1717355792951" TEXT="A tipagem expl&#xed;cita &#xe9; apenas para apoiar o desenvolvedor&#xa;e as ferramentas de edi&#xe7;&#xe3;o de c&#xf3;digo (IDE&apos;s). O Python as ignora."/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_99777242" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_542835947" MODIFIED="1717355718525" TEXT="a: bool = True"/>
+</node>
+</node>
 <node CREATED="1609877896753" ID="Freemind_Link_1882460059" MODIFIED="1609877908405" TEXT="A primeira letra deve ser mai&#xfa;scula (na atribui&#xe7;&#xe3;o de valor)"/>
 <node CREATED="1609876605273" ID="Freemind_Link_1353596865" MODIFIED="1609876606302" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1916410309" MODIFIED="1609877867989" TEXT="x = True"/>
@@ -829,6 +837,454 @@
 <node CREATED="1716419813500" ID="Freemind_Link_973524183" MODIFIED="1716419819638" TEXT="Requer a biblioteca &apos;decimal&apos;"/>
 <node CREATED="1609876605273" ID="Freemind_Link_439705496" MODIFIED="1609876606302" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_351351167" MODIFIED="1716419847201" TEXT="import decimal&#xa;&#xa;numero = decimal.Decimal(&apos;0.1&apos;)&#xa;print (numero, type(numero))"/>
+</node>
+</node>
+<node CREATED="1717095417900" ID="Freemind_Link_1264374279" MODIFIED="1717095419317" POSITION="right" TEXT="Class">
+<node CREATED="1717095420110" ID="Freemind_Link_1427453679" MODIFIED="1717095442394" TEXT="Classes do paradigma de orienta&#xe7;&#xe3;o a objetos"/>
+<node CREATED="1717349093864" FOLDED="true" ID="Freemind_Link_1057633254" MODIFIED="1717349148428" TEXT="Classe abstrata">
+<node CREATED="1717349103666" ID="Freemind_Link_979049498" LINK="#Freemind_Link_1432011726" MODIFIED="1717349132094" TEXT="Ver decorator @abstractmethod"/>
+<node CREATED="1717349152412" ID="Freemind_Link_75788883" MODIFIED="1717349154068" TEXT="Requer">
+<node CREATED="1717349154617" ID="Freemind_Link_553559882" MODIFIED="1717349159716" TEXT="importa&#xe7;&#xe3;o do m&#xf3;dulo abc"/>
+<node CREATED="1717349160326" ID="Freemind_Link_1869409621" MODIFIED="1717349174084" TEXT="herdar da superclasse ABC"/>
+<node CREATED="1717349669020" ID="Freemind_Link_1532374889" MODIFIED="1717349679521" TEXT="Ter ao menos um m&#xe9;todo abstrato (anotado com @abstractmethod)"/>
+</node>
+</node>
+<node CREATED="1717175526241" FOLDED="true" ID="Freemind_Link_1968565170" MODIFIED="1717175528227" TEXT="Heran&#xe7;a">
+<node CREATED="1717175567642" ID="Freemind_Link_1638145866" MODIFIED="1717175579007" TEXT="Toda classe deriva automaticamente da classe object"/>
+<node CREATED="1717175529137" ID="Freemind_Link_1967942935" MODIFIED="1717175556654" TEXT="Para herdar de uma classe, informe a classe&#xa;m&#xe3;e nos par&#xea;nteses, na defini&#xe7;&#xe3;o da classe"/>
+<node CREATED="1717178208030" ID="Freemind_Link_266862508" MODIFIED="1717178210130" TEXT="Simples">
+<node CREATED="1717178217141" ID="Freemind_Link_595153417" MODIFIED="1717178241416" TEXT="Uma heran&#xe7;a &#xe9; simples quando uma classe herda&#xa;de apenas uma classe (tem apenas uma classe m&#xe3;e)"/>
+<node CREATED="1717175558738" ID="Freemind_Link_1745429747" MODIFIED="1717175559855" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_510803356" MODIFIED="1717175610460" TEXT="class Carro():&#xa;    ...">
+<node CREATED="1717175623535" ID="Freemind_Link_175530339" MODIFIED="1717175626094" TEXT="Equivalente a">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_854775441" MODIFIED="1717175621556" TEXT="class Carro(object):&#xa;    ..."/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717178213747" ID="Freemind_Link_1771438331" MODIFIED="1717178215929" TEXT="M&#xfa;ltipla">
+<node CREATED="1717178243142" ID="Freemind_Link_1632629694" MODIFIED="1717178270768" TEXT="Uma her&#xe1;n&#xe7;a &#xe9; multipla quando uma classe &#xe9; filha de&#xa;duas ou mais classes m&#xe3;e (herda de duas ou mais classes)"/>
+<node CREATED="1717178936673" ID="Freemind_Link_639600582" MODIFIED="1717179054643" TEXT="Em um caso de duas classes m&#xe3;e terem um m&#xe9;todo de mesmo nome, o m&#xe9;todo que ser&#xe1; &#xa;escolhido para ser executado ser&#xe1; conforme a ordem do mro (method resolution order)"/>
+<node CREATED="1717175558738" ID="Freemind_Link_730053924" MODIFIED="1717175559855" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1853994336" MODIFIED="1717178864135" TEXT="class Veiculo():&#xa;    def exibe_info(self):&#xa;        print(self.__class__.__name__, &apos;: Sou ve&#xed;culo&apos;)&#xa;&#xa;class Aquatico(Veiculo):&#xa;    def exibe_info(self):&#xa;        print(self.__class__.__name__, &apos;: Sou ve&#xed;culo aqu&#xe1;tico&apos;)&#xa;&#xa;class Terrestre(Veiculo):&#xa;    def exibe_info(self):&#xa;        print(self.__class__.__name__, &apos;: Sou ve&#xed;culo terrestre&apos;)&#xa;&#xa;class Anfibio(Terrestre, Aquatico):&#xa;    ...&#xa;    &#xa;a1 = Anfibio()&#xa;a1.exibe_info()&#xa;print(*Anfibio.mro(), sep=&apos;\n&apos;)">
+<node CREATED="1717178868250" ID="Freemind_Link_1339748046" MODIFIED="1717178896790" TEXT="Resultado:&#xa;Anfibio : Sou ve&#xed;culo terrestre&#xa;&lt;class &apos;__main__.Anfibio&apos;&gt;&#xa;&lt;class &apos;__main__.Terrestre&apos;&gt;&#xa;&lt;class &apos;__main__.Aquatico&apos;&gt;&#xa;&lt;class &apos;__main__.Veiculo&apos;&gt;&#xa;&lt;class &apos;object&apos;&gt;"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717429461495" FOLDED="true" ID="Freemind_Link_982790785" MODIFIED="1717429470642" TEXT="Context manager">
+<node CREATED="1717429495924" ID="Freemind_Link_1054349054" MODIFIED="1717429503369" TEXT="Permite o uso do &apos;with&apos; na sua classe"/>
+<node CREATED="1717431328468" ID="Freemind_Link_1300870106" MODIFIED="1717431335227" TEXT="Em classes">
+<node CREATED="1717429471327" ID="Freemind_Link_1224105259" MODIFIED="1717429606177" TEXT="Para implementar o context manager,&#xa;implemente os dunder methos ___enter__ e __exit__">
+<arrowlink DESTINATION="Freemind_Link_1575964776" ENDARROW="Default" ENDINCLINATION="351;0;" ID="Freemind_Arrow_Link_766943013" STARTARROW="None" STARTINCLINATION="351;0;"/>
+<arrowlink DESTINATION="Freemind_Link_214151268" ENDARROW="Default" ENDINCLINATION="396;0;" ID="Freemind_Arrow_Link_1329261821" STARTARROW="None" STARTINCLINATION="396;0;"/>
+</node>
+<node CREATED="1717429947018" ID="Freemind_Link_1730395293" MODIFIED="1717429947913" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717429948753" ID="Freemind_Link_344698329" MODIFIED="1717429956803" TEXT="class MyContextManager:&#xa;    def __enter__(self):&#xa;        print(&apos;ENTER&apos;)&#xa;&#xa;    def __exit__(self, cls_exception, exception, traceback):&#xa;        print(&apos;EXIT&apos;)&#xa;&#xa;instancia = MyContextManager()&#xa;&#xa;with instancia as inst:&#xa;    print(&apos;Executei o With&apos;)"/>
+</node>
+</node>
+<node CREATED="1717431359060" ID="Freemind_Link_289913443" MODIFIED="1717431365116" TEXT="Em fun&#xe7;&#xf5;es">
+<node CREATED="1717431839651" ID="Freemind_Link_599649071" MODIFIED="1717431856694" TEXT="Requer import da biblioteca contextlib"/>
+<node CREATED="1717429947018" ID="Freemind_Link_44727446" MODIFIED="1717429947913" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717429948753" ID="Freemind_Link_1635288572" MODIFIED="1717432378968" TEXT="from contextlib import contextmanager&#xa;&#xa;@contextmanager&#xa;def meuOpen(caminho_arquivo, modo):&#xa;    try:&#xa;        print(&apos;Abrindo arquivo&apos;)&#xa;        arquivo = open(caminho_arquivo, modo, encoding=&apos;utf-8&apos;)&#xa;        yield arquivo&#xa;    except Exception as e:&#xa;        print(&apos;Erro: &apos;, e)&#xa;    finally:&#xa;        print(&apos;Fechando arquivo&apos;)&#xa;        arquivo.close()&#xa;&#xa;with meuOpen(&apos;meuarq.txt&apos;, &apos;w&apos;) as arq:&#xa;    arq.write(&apos;Adicionei conte&#xfa;do&apos;)&#xa;    print(&apos;No with&apos;)    ">
+<node CREATED="1717432139841" ID="Freemind_Link_1603045638" MODIFIED="1717432157967" TEXT="Resultado:&#xa;Abrindo arquivo&#xa;No with&#xa;Fechando arquivo"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717095460334" ID="Freemind_Link_83463051" MODIFIED="1717095463017" TEXT="M&#xe9;todos">
+<node CREATED="1717096088858" ID="Freemind_Link_1655503992" MODIFIED="1717096139960" TEXT="Todo m&#xe9;todo recebe como&#xa;primeiro argumento o &apos;self&apos;">
+<node CREATED="1717096418932" ID="Freemind_Link_1756985079" MODIFIED="1717096459049" TEXT="O nome &apos;self&apos; &#xe9; apenas uma conven&#xe7;&#xe3;o. Poderia&#xa;usar &apos;this&apos;, por exemplo, ou qualquer outro nome">
+<node CREATED="1717095443982" ID="Freemind_Link_1604858792" MODIFIED="1717095445305" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_751711673" MODIFIED="1717096620216" TEXT="class Pessoa():&#xa;    def metodo1(self, nome):&#xa;        self.nome = nome&#xa;&#xa;    def metodo2(this, sobrenome):&#xa;        this.sobrenome = sobrenome&#xa;&#xa;    def metodo3(blablabla, idade):&#xa;        blablabla.idade = idade&#xa;"/>
+</node>
+</node>
+<node CREATED="1717096101129" ID="Freemind_Link_94038598" MODIFIED="1717096144951" TEXT="Mas ao usar o m&#xe9;todo n&#xe3;o se passa o &apos;self&apos;.. O pr&#xf3;prio&#xa;Python o coloca na chamada automaticamente"/>
+</node>
+<node CREATED="1717429525138" ID="Freemind_Link_810871206" MODIFIED="1717429528770" TEXT="Dunder methods">
+<node COLOR="#0000ff" CREATED="1609876573952" FOLDED="true" ID="Freemind_Link_758765615" MODIFIED="1717095471449" TEXT="__init__">
+<node CREATED="1717095472452" ID="Freemind_Link_1655917834" MODIFIED="1717095476081" TEXT="Construtor da classe"/>
+<node CREATED="1717095537875" ID="Freemind_Link_547181815" MODIFIED="1717095559136" TEXT="&#xc9; um dos primeiros m&#xe9;todos a ser chamado para inicializar os atruibutos da classe"/>
+<node COLOR="#0000ff" CREATED="1717095829576" ID="Freemind_Link_186312637" MODIFIED="1717097829443" TEXT="Sempre retorna &apos;None&apos;"/>
+<node CREATED="1717095477190" ID="Freemind_Link_1117695270" MODIFIED="1717100883332" TEXT="O primeiro argumento deve ser o &apos;self&apos;">
+<node CREATED="1717095490622" ID="Freemind_Link_1171658068" MODIFIED="1717100905420" TEXT="O &apos;self&apos; ser&#xe1; preenchido automaticamente pelo Python&#xa;quando se estiver usando uma inst&#xe2;ncia da classe">
+<node CREATED="1717095443982" ID="Freemind_Link_1323703727" MODIFIED="1717095445305" TEXT="Ex:">
+<node CREATED="1717100979005" ID="Freemind_Link_1071625490" MODIFIED="1717100987418" TEXT="Para">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1309554405" MODIFIED="1717100998066" TEXT="class Pessoa():&#xa;    def metodo1(self):&#xa;        print(&apos;Ol&#xe1; mundo!&apos;)&#xa;&#xa;p1 = Pessoa()&#xa;&#xa;"/>
+</node>
+<node CREATED="1717100981470" ID="Freemind_Link_1498581877" MODIFIED="1717100985809" TEXT="S&#xe3;o equivalentes:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_507245733" MODIFIED="1717101018690" TEXT="p1.metodo1()"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_586722414" MODIFIED="1717101012811" TEXT="Pessoa.metodo1(p1)"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717095443982" ID="Freemind_Link_580137964" MODIFIED="1717095445305" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_441211205" MODIFIED="1717095456867" TEXT="class Pessoa():&#xa;    def __init__(self, nome, sobrenome):&#xa;        self.nome = nome&#xa;        self.sobrenome = sobrenome&#xa;&#xa;p1 = Pessoa(&apos;Ana&apos;, &apos;Perez&apos;)&#xa;p2 = Pessoa(&apos;Beto&apos;, &apos;Sanches&apos;)&#xa;&#xa;print(f&apos;{p1.nome=}, {p1.sobrenome=}&apos;)&#xa;print(f&apos;{p2.nome=}, {p2.sobrenome=}&apos;)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1575964776" MODIFIED="1717429599616" TEXT="__enter__">
+<node CREATED="1717095472452" ID="Freemind_Link_1940163028" MODIFIED="1717429617981" TEXT="Usado para implementar o context manager da classe"/>
+<node CREATED="1717429643929" ID="Freemind_Link_1651097569" MODIFIED="1717429654038" TEXT="Este m&#xe9;todo ser&#xe1; executado ao se entrar no with da classe"/>
+<node CREATED="1717095443982" ID="Freemind_Link_1588472537" MODIFIED="1717095445305" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717429948753" ID="Freemind_Link_901795597" MODIFIED="1717430771784" TEXT="def __enter__(self):&#xa;    print(&apos;ENTER&apos;)&#xa;"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_214151268" MODIFIED="1717429606176" TEXT="__exit__">
+<node CREATED="1717095472452" ID="Freemind_Link_207299999" MODIFIED="1717429625047" TEXT="Usado para implementar o context manager da classe"/>
+<node CREATED="1717429643929" ID="Freemind_Link_737468292" MODIFIED="1717429666062" TEXT="Este m&#xe9;todo ser&#xe1; executado ao se sair do with da classe"/>
+<node CREATED="1717429681078" ID="Freemind_Link_573317782" MODIFIED="1717429684325" TEXT="Este m&#xe9;todo recebe">
+<node CREATED="1717429684673" ID="Freemind_Link_1896713076" MODIFIED="1717429692046" TEXT="A classe da exce&#xe7;&#xe3;o"/>
+<node CREATED="1717429692529" ID="Freemind_Link_1795792230" MODIFIED="1717429694453" TEXT="A exce&#xe7;&#xe3;o"/>
+<node CREATED="1717429694842" ID="Freemind_Link_371279204" MODIFIED="1717429697011" TEXT="O traceback"/>
+</node>
+<node CREATED="1717429709874" ID="Freemind_Link_793693039" MODIFIED="1717429722466" TEXT="Se este m&#xe9;todo retornar &apos;True&apos;, a exce&#xe7;&#xe3;o no with ser&#xe1; suprimida"/>
+<node CREATED="1717430681629" ID="Freemind_Link_389651791" MODIFIED="1717430710179" TEXT="Com os argumentos recebidos, &#xe9; poss&#xed;vel traatr e/ou relan&#xe7;ar a exce&#xe7;&#xe3;o recebida durante a execu&#xe7;&#xe3;o do with"/>
+<node CREATED="1717095443982" ID="Freemind_Link_787359154" MODIFIED="1717095445305" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717429948753" ID="Freemind_Link_185067330" MODIFIED="1717430761409" TEXT="def __exit__(self, cls_exception, exception, traceback):&#xa;    print(&apos;EXIT&apos;)&#xa;"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1798313151" MODIFIED="1717511971101" TEXT="__call__">
+<node CREATED="1717095472452" ID="Freemind_Link_1583543120" MODIFIED="1717511993538" TEXT="Uma classe que implementa o m&#xe9;todo __call__ se torna callable"/>
+<node CREATED="1717429643929" ID="Freemind_Link_1412185519" MODIFIED="1717512010625" TEXT="Implementar o __call__ permite usar a inst&#xe2;ncia da classe como uma fun&#xe7;&#xe3;o"/>
+<node CREATED="1717512363822" ID="Freemind_Link_500909896" MODIFIED="1717512379158" TEXT="__call__ pode receber par&#xe2;metros e retornar valores"/>
+<node CREATED="1717095443982" FOLDED="true" ID="Freemind_Link_1043940087" MODIFIED="1717095445305" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717429948753" ID="Freemind_Link_1493639635" MODIFIED="1717512157642" TEXT="class CallMe:&#xa;    def __init__(self, number):&#xa;        self._number = number&#xa;&#xa;    def __call__(self, *args, **kwargs):&#xa;        print(f&apos;Chamando {self._number}&apos;)&#xa;&#xa;c1 = CallMe(&apos;2345678&apos;)&#xa;c1()">
+<node CREATED="1717512174477" ID="Freemind_Link_1963148595" MODIFIED="1717512184872" TEXT="Note que estou usando a inst&#xe2;ncia &apos;c1&apos; comom se fosse uma fun&#xe7;&#xe3;o"/>
+<node CREATED="1717512164657" ID="Freemind_Link_1682208064" MODIFIED="1717512170613" TEXT="Retorno: Chamando 2345678"/>
+</node>
+<node COLOR="#0000ff" CREATED="1717429948753" ID="Freemind_Link_1369936123" MODIFIED="1717512275150" TEXT="class CallMe:&#xa;    def __init__(self, number):&#xa;        self._number = number&#xa;&#xa;    def __call__(self, nome):&#xa;        print(f&apos;{nome} est&#xe1; chamando {self._number}&apos;)&#xa;&#xa;c1 = CallMe(&apos;2345678&apos;)&#xa;c1(&apos;Pedro&apos;)">
+<node CREATED="1717512164657" ID="Freemind_Link_1565963387" MODIFIED="1717512289679" TEXT="Retorno: Pedro est&#xe1; chamando 2345678"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717163881100" ID="Freemind_Link_1492690128" MODIFIED="1717163886436" TEXT="Getter e Setter">
+<node CREATED="1717163886892" ID="Freemind_Link_274386221" LINK="#Freemind_Link_25671038" MODIFIED="1717163929576" TEXT="Ver decotators @property e @xxx.setter"/>
+</node>
+</node>
+<node CREATED="1717097760273" FOLDED="true" ID="Freemind_Link_1687239882" MODIFIED="1717097762660" TEXT="Atributos">
+<node CREATED="1717097766393" ID="Freemind_Link_1977718067" MODIFIED="1717097776549" TEXT="Dados do estado da inst&#xe2;ncia da classe"/>
+<node CREATED="1717097778067" ID="Freemind_Link_737694441" MODIFIED="1717097810157" TEXT="Para acessar os atributos da classe, use o nome da&#xa;classe. Para acessar os dados da inst&#xe2;ncia use o termo &apos;self&apos;">
+<node CREATED="1717097914249" ID="Freemind_Link_398737153" MODIFIED="1717097936647" TEXT="O Python procura o dado primeiramente na&#xa;inst&#xe2;ncia. Se n&#xe3;o achar, pega o da classe"/>
+<node CREATED="1717097812400" ID="Freemind_Link_1606165279" MODIFIED="1717097813626" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717097814454" ID="Freemind_Link_1745863787" MODIFIED="1717097858542" TEXT="class MinhaClasse:&#xa;    meuAtributo=&apos;valor da classe&apos;&#xa;&#xa;    def __init__(self):&#xa;        self.meuAtributo = &apos;valor da inst&#xe2;ncia&apos;&#xa;&#xa;    def getValorInstancia(self):&#xa;        return self.meuAtributo&#xa;&#xa;    def getValorClasse(self):&#xa;        return MinhaClasse.meuAtributo&#xa;    &#xa;&#xa;mc = MinhaClasse()&#xa;print(&apos;Valor da inst&#xe2;ncia:&apos;, mc.getValorInstancia())&#xa;print(&apos;Valor da classe:&apos;, mc.getValorClasse())">
+<node CREATED="1717097859738" ID="Freemind_Link_1164342135" MODIFIED="1717097875047" TEXT="Resultado:&#xa;Valor da inst&#xe2;ncia: valor da inst&#xe2;ncia&#xa;Valor da classe: valor da classe"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1717098330264" ID="Freemind_Link_1139428174" MODIFIED="1717099508429" TEXT="__dict__">
+<node CREATED="1717098720400" ID="Freemind_Link_1154789084" MODIFIED="1717098734050" TEXT="Local onde s&#xe3;o salvos os dados da inst&#xe2;ncia da classe"/>
+<node CREATED="1717098359536" ID="Freemind_Link_11709222" MODIFIED="1717098370305" TEXT="Cont&#xe9;m o dicion&#xe1;rio do objeto">
+<node CREATED="1717098371023" ID="Freemind_Link_292314590" MODIFIED="1717098385329" TEXT="Dados da inst&#xe2;ncia da classe em formato dict"/>
+</node>
+<node CREATED="1717099512362" ID="Freemind_Link_647119692" LINK="#Freemind_Link_1207271384" MODIFIED="1717099542282" TEXT="Alternativa ao uso da fun&#xe7;&#xe3;o &apos;vars&apos;"/>
+<node CREATED="1717098770861" ID="Freemind_Link_1402666820" MODIFIED="1717098901853" TEXT="N&#xe3;o &#xe9; somente de leitura. Pode alterar o objeto">
+<node CREATED="1717095443982" ID="Freemind_Link_213802528" MODIFIED="1717095445305" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1369532162" MODIFIED="1717098812011" TEXT="class Pessoa:&#xa;    def __init__(self, nome, sobrenome, idade):&#xa;        self.nome = nome&#xa;        self.sobrenome=sobrenome&#xa;        self.idade=idade&#xa;&#xa;p1 = Pessoa(&apos;Ana&apos;, &apos;Perez&apos;, 25)        &#xa;p1.__dict__[&apos;nome&apos;] = &apos;Bia&apos;&#xa;print(p1.__dict__)">
+<node CREATED="1717098455244" ID="Freemind_Link_519081309" MODIFIED="1717098865466" TEXT="Resultado:&#xa;{&apos;nome&apos;: &apos;Bia&apos;, &apos;sobrenome&apos;: &apos;Perez&apos;, &apos;idade&apos;: 25}"/>
+</node>
+</node>
+</node>
+<node CREATED="1717095443982" ID="Freemind_Link_175672343" MODIFIED="1717095445305" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1011902107" MODIFIED="1717098356733" TEXT="class Pessoa:&#xa;    def __init__(self, nome, sobrenome, idade):&#xa;        self.nome = nome&#xa;        self.sobrenome=sobrenome&#xa;        self.idade=idade&#xa;&#xa;p1 = Pessoa(&apos;Ana&apos;, &apos;Perez&apos;, 25)        &#xa;print(p1.__dict__)">
+<node CREATED="1717098455244" ID="Freemind_Link_1127470373" MODIFIED="1717098464321" TEXT="Resultado:&#xa;{&apos;nome&apos;: &apos;Ana&apos;, &apos;sobrenome&apos;: &apos;Perez&apos;, &apos;idade&apos;: 25}"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717100772050" FOLDED="true" ID="Freemind_Link_25671038" MODIFIED="1717100774206" TEXT="Decorators">
+<node CREATED="1717433169819" ID="Freemind_Link_1921537861" MODIFIED="1717433846990" TEXT="Personalizado">
+<node CREATED="1717510404937" ID="Freemind_Link_623135932" MODIFIED="1717510585929" TEXT="Decorator&#xa;de clase">
+<node CREATED="1717510419642" ID="Freemind_Link_269774552" MODIFIED="1717510455317" TEXT="Permite adicionar a&#xe7;&#xf5;es no&#xa;processo de defini&#xe7;&#xe3;o da classe"/>
+<node CREATED="1717433846979" ID="Freemind_Link_516485032" MODIFIED="1717433874225" TEXT="Etapas:">
+<node CREATED="1717433824993" ID="Freemind_Link_1100409208" MODIFIED="1717433866928" TEXT="Implementar uma fun&#xe7;&#xe3;o que receba &apos;class&apos; como par&#xe2;metro">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1717433852916" ID="Freemind_Link_641636801" MODIFIED="1717433985558" TEXT="Decorar a classe alvo com o nome da fun&#xe7;&#xe3;o">
+<icon BUILTIN="full-2"/>
+</node>
+</node>
+<node CREATED="1717433177337" FOLDED="true" ID="Freemind_Link_225458842" MODIFIED="1717433885598" TEXT="Exemplo">
+<node CREATED="1717433186536" FOLDED="true" ID="Freemind_Link_1585300836" MODIFIED="1717433232449" TEXT="Cen&#xe1;rio inicial">
+<icon BUILTIN="full-1"/>
+<node COLOR="#0000ff" CREATED="1717433194279" ID="Freemind_Link_1899059011" MODIFIED="1717433210130" TEXT="class Time():&#xa;    def __init__(self, nome):&#xa;        self._nome = nome&#xa;&#xa;t1 = Time(&apos;Flamengo&apos;)&#xa;print(t1)        ">
+<node CREATED="1717433211817" ID="Freemind_Link_872716808" MODIFIED="1717433222153" TEXT="Resultado:&#xa;&lt;__main__.Time object at 0x7f2aa4fa1e90&gt;"/>
+</node>
+</node>
+<node CREATED="1717433234872" FOLDED="true" ID="Freemind_Link_711440344" MODIFIED="1717433406936" TEXT="Definindo um __repr__">
+<icon BUILTIN="full-2"/>
+<node COLOR="#0000ff" CREATED="1717433194279" ID="Freemind_Link_626052898" MODIFIED="1717433373558" TEXT="class Time():&#xa;    def __init__(self, nome):&#xa;        self._nome = nome&#xa;&#xa;    def __repr__(self):&#xa;        nome_classe = self.__class__.__name__&#xa;        dict_classe = self.__dict__&#xa;        repr = f&apos;{nome_classe}({dict_classe})&apos;&#xa;        return repr&#xa;&#xa;t1 = Time(&apos;Flamengo&apos;)&#xa;print(t1)      ">
+<node CREATED="1717433211817" ID="Freemind_Link_1535458153" MODIFIED="1717433388577" TEXT="Resultado:&#xa;Time({&apos;_nome&apos;: &apos;Flamengo&apos;})"/>
+</node>
+</node>
+<node CREATED="1717433409746" FOLDED="true" ID="Freemind_Link_832892301" MODIFIED="1717433415190" TEXT="Problema:">
+<icon BUILTIN="full-3"/>
+<node CREATED="1717433415789" ID="Freemind_Link_1052533297" MODIFIED="1717433434952" TEXT="Se eu quiser usar esse mesmo __repr__ em outra classe, terei duplica&#xe7;&#xe3;o de c&#xf3;digo"/>
+</node>
+<node CREATED="1717433437341" FOLDED="true" ID="Freemind_Link_1620325276" MODIFIED="1717433462531" TEXT="Solu&#xe7;&#xe3;o (sem decorator)">
+<icon BUILTIN="full-4"/>
+<node COLOR="#0000ff" CREATED="1717433194279" ID="Freemind_Link_138649934" MODIFIED="1717433586219" TEXT="def adiciona_repr(cls):&#xa;    def meu_repr(self):&#xa;        nome_classe = self.__class__.__name__&#xa;        dict_classe = self.__dict__&#xa;        repr = f&apos;{nome_classe}({dict_classe})&apos;&#xa;        return repr&#xa;    cls.__repr__ = meu_repr&#xa;    return cls&#xa;&#xa;class Time():&#xa;    def __init__(self, nome):&#xa;        self._nome = nome&#xa;&#xa;Time = adiciona_repr(Time)&#xa;t1 = Time(&apos;Flamengo&apos;)&#xa;print(t1)        ">
+<node CREATED="1717433591170" ID="Freemind_Link_1131680159" MODIFIED="1717433716457" TEXT="Agora basta executar &apos;adiciona_repr&apos; na classe que eu&#xa;quiser adicionar a minha implementa&#xe7;&#xe3;o do __repr__&#xa;Ex: Time = adiciona_repr(Time)"/>
+<node CREATED="1717433211817" ID="Freemind_Link_1559830690" MODIFIED="1717433388577" TEXT="Resultado:&#xa;Time({&apos;_nome&apos;: &apos;Flamengo&apos;})"/>
+</node>
+</node>
+<node CREATED="1717433764150" ID="Freemind_Link_1197481705" MODIFIED="1717433772616" TEXT="Solu&#xe7;&#xe3;o com decorator">
+<icon BUILTIN="full-5"/>
+<node COLOR="#0000ff" CREATED="1717433194279" ID="Freemind_Link_1857958013" MODIFIED="1717433792534" TEXT="def adiciona_repr(cls):&#xa;    def meu_repr(self):&#xa;        nome_classe = self.__class__.__name__&#xa;        dict_classe = self.__dict__&#xa;        repr = f&apos;{nome_classe}({dict_classe})&apos;&#xa;        return repr&#xa;    cls.__repr__ = meu_repr&#xa;    return cls&#xa;&#xa;@adiciona_repr&#xa;class Time():&#xa;    def __init__(self, nome):&#xa;        self._nome = nome&#xa;&#xa;t1 = Time(&apos;Flamengo&apos;)&#xa;print(t1)        ">
+<node CREATED="1717433591170" ID="Freemind_Link_1460954061" MODIFIED="1717433814815" TEXT="Agora basta anotar com &apos;@adiciona_repr&apos; a classe que eu&#xa;quiser adicionar a minha implementa&#xe7;&#xe3;o do __repr__"/>
+<node CREATED="1717433999217" ID="Freemind_Link_1741011870" MODIFIED="1717434049064" TEXT="Obs: A fun&#xe7;&#xe3;o &apos;meu_repr&apos; n&#xe3;o precisa estar dentro da fun&#xe7;&#xe3;o&#xa;&apos;adiciona_rep&#x155;&apos;. Ela poderia, perfeitamente, estar declarada fora.">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node CREATED="1717433211817" ID="Freemind_Link_662318606" MODIFIED="1717433388577" TEXT="Resultado:&#xa;Time({&apos;_nome&apos;: &apos;Flamengo&apos;})"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717510458841" ID="Freemind_Link_632587419" MODIFIED="1717510590026" TEXT="Decorator&#xa;de m&#xe9;todo">
+<node CREATED="1717510419642" ID="Freemind_Link_595837563" MODIFIED="1717510618769" TEXT="Permite adicionar a&#xe7;&#xf5;es na&#xa;execu&#xe7;&#xe3;o dos m&#xe9;todos decorados"/>
+<node CREATED="1717433846979" ID="Freemind_Link_466729962" MODIFIED="1717433874225" TEXT="Etapas:">
+<node CREATED="1717433824993" ID="Freemind_Link_1610450816" MODIFIED="1717510696272" TEXT="Implementar uma fun&#xe7;&#xe3;o que receba &apos;method&apos; como par&#xe2;metro">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1717433852916" ID="Freemind_Link_1141328288" MODIFIED="1717510714676" TEXT="Decorar o m&#xe9;todo alvo com o nome da fun&#xe7;&#xe3;o">
+<icon BUILTIN="full-2"/>
+</node>
+</node>
+<node CREATED="1717433177337" FOLDED="true" ID="Freemind_Link_1686185307" MODIFIED="1717433885598" TEXT="Exemplo">
+<node CREATED="1717433186536" ID="Freemind_Link_1023223498" MODIFIED="1717433232449" TEXT="Cen&#xe1;rio inicial">
+<icon BUILTIN="full-1"/>
+<node COLOR="#0000ff" CREATED="1717433194279" ID="Freemind_Link_1793261709" MODIFIED="1717511181682" TEXT="class Planeta:&#xa;    def __init__(self, nome):&#xa;        self._nome = nome&#xa;&#xa;    def falar_nome(self):&#xa;        return f&apos;{self._nome}&apos;&#xa;    &#xa;p1 = Planeta(&apos;Terra&apos;)&#xa;p2 = Planeta(&apos;Marte&apos;)&#xa;&#xa;print(&apos;Meu nome &#xe9;&apos;, p1.falar_nome())&#xa;print(&apos;Meu nome &#xe9;&apos;, p2.falar_nome())">
+<node CREATED="1717433211817" ID="Freemind_Link_1489506147" MODIFIED="1717510946031" TEXT="Resultado:&#xa;Meu nome &#xe9; Terra&#xa;Meu nome &#xe9; Marte"/>
+</node>
+</node>
+<node CREATED="1717433234872" ID="Freemind_Link_1624833216" MODIFIED="1717510956162" TEXT="Problema">
+<icon BUILTIN="full-2"/>
+<node CREATED="1717510965103" ID="Freemind_Link_246273157" MODIFIED="1717511009433" TEXT="Quero criar um decorator que altere o funcionamento do m&#xe9;todo &apos;falar_nome&apos; de forma que o retorno seja &apos;Estou em casa&apos; quando a inst&#xe2;ncia for do planeta &apos;Terra&apos;"/>
+</node>
+<node CREATED="1717433764150" ID="Freemind_Link_1793487853" MODIFIED="1717511423782" TEXT="Solu&#xe7;&#xe3;o com decorator">
+<icon BUILTIN="full-3"/>
+<node COLOR="#0000ff" CREATED="1717433194279" ID="Freemind_Link_1754961956" MODIFIED="1717511396594" TEXT="def em_casa(metodo):&#xa;    def interno(self, *args, **kwargs):&#xa;        if self._nome == &apos;Terra&apos;:&#xa;            return &apos;Estou em casa&apos;&#xa;        return metodo(self, *args, **kwargs)&#xa;    return interno&#xa;&#xa;class Planeta:&#xa;    def __init__(self, nome):&#xa;        self._nome = nome&#xa;&#xa;    @em_casa&#xa;    def falar_nome(self):&#xa;        return f&apos;{self._nome}&apos;&#xa;    &#xa;p1 = Planeta(&apos;Terra&apos;)&#xa;p2 = Planeta(&apos;Marte&apos;)&#xa;&#xa;print(p1.falar_nome())&#xa;print(p2.falar_nome())">
+<node CREATED="1717433211817" ID="Freemind_Link_343551219" MODIFIED="1717511412191" TEXT="Estou em casa&#xa;Marte"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1717100781910" FOLDED="true" ID="Freemind_Link_1745966308" MODIFIED="1717100790752" TEXT="@classmethod">
+<node CREATED="1717100792490" ID="Freemind_Link_1603272308" MODIFIED="1717100793342" TEXT="Ex:">
+<node CREATED="1717101294494" ID="Freemind_Link_1535642382" MODIFIED="1717101311227" TEXT="Indica que o m&#xe9;todo &#xe9; um m&#xe9;todo voltado para a classe e n&#xe3;o para o objeto"/>
+<node CREATED="1717100804438" ID="Freemind_Link_1987034801" MODIFIED="1717101288083" TEXT="O m&#xe9;todo decoradp recebe como argumento&#xa;uma refer&#xea;ncia &#xe0; pr&#xf3;pria classe">
+<node CREATED="1717100821690" ID="Freemind_Link_1407884976" MODIFIED="1717100837596" TEXT="Diferente dos m&#xe9;todos sem essa anota&#xe7;&#xe3;o, que recebem uma refer&#xea;ncia &#xe0; inst&#xe2;ncia da classe"/>
+</node>
+<node CREATED="1717101038029" ID="Freemind_Link_578294724" MODIFIED="1717101088210" TEXT="Muito usado na&#xa;cria&#xe7;&#xe3;o de factories">
+<icon BUILTIN="idea"/>
+<node CREATED="1717101054845" ID="Freemind_Link_1750980918" MODIFIED="1717101060720" TEXT="M&#xe9;todos que criam inst&#xe2;ncias de classes"/>
+<node CREATED="1717101062113" ID="Freemind_Link_952383624" MODIFIED="1717101081374" TEXT="Muito usado em inst&#xe2;ncia&#xe7;&#xe3;o de classes muito complexas, como de conex&#xf5;es HTTP etc."/>
+</node>
+<node COLOR="#0000ff" CREATED="1717100794122" ID="Freemind_Link_1246724753" MODIFIED="1717100801560" TEXT="class Pessoa:&#xa;    def __init__(self, nome, sobrenome, idade):&#xa;        self.nome = nome&#xa;        self.sobrenome=sobrenome&#xa;        self.idade=idade&#xa;&#xa;    @classmethod&#xa;    def criarSemNome(cls, idade):&#xa;        return cls(&apos;&apos;, &apos;&apos;, 25)&#xa;    &#xa;p1 = Pessoa(&apos;Ana&apos;, &apos;Perez&apos;, 20)&#xa;p2 = Pessoa.criarSemNome(25)&#xa;print(&apos;p1:&apos;, vars(p1))&#xa;print(&apos;p2:&apos;, vars(p2))"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1717100781910" FOLDED="true" ID="Freemind_Link_1407557313" MODIFIED="1717101258114" TEXT="@staticmethod">
+<node CREATED="1717100792490" ID="Freemind_Link_521223240" MODIFIED="1717100793342" TEXT="Ex:">
+<node CREATED="1717100804438" ID="Freemind_Link_1458929902" MODIFIED="1717101331721" TEXT="Indica que o m&#xe9;todo &#xe9;, na verdade, uma fun&#xe7;&#xe3;o que est&#xe1; no namespace da classe"/>
+<node CREATED="1717101336440" ID="Freemind_Link_45771002" MODIFIED="1717101353354" TEXT="N&#xe3;o recebe nenhum par&#xe2;metro (refer&#xea;ncia) do Python"/>
+<node COLOR="#0000ff" CREATED="1717100794122" ID="Freemind_Link_1876905448" MODIFIED="1717101408204" TEXT="class Pessoa:&#xa;    @staticmethod&#xa;    def meumetodo(x, y):&#xa;        return x+y&#xa;    &#xa;print(Pessoa.meumetodo(3,6))">
+<node CREATED="1717101410468" ID="Freemind_Link_824839777" MODIFIED="1717101413482" TEXT="Resultado: 9"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1717100781910" FOLDED="true" ID="Freemind_Link_495232162" MODIFIED="1717164953512" TEXT="@property">
+<arrowlink COLOR="#fbe202" DESTINATION="Freemind_Link_1237270972" ENDARROW="None" ENDINCLINATION="23;0;" ID="Freemind_Arrow_Link_1861470787" STARTARROW="None" STARTINCLINATION="23;0;"/>
+<node CREATED="1717100792490" ID="Freemind_Link_1995623243" MODIFIED="1717100793342" TEXT="Ex:">
+<node CREATED="1717100804438" ID="Freemind_Link_112253541" MODIFIED="1717163553579" TEXT="Faz um m&#xe9;todo se comportar como um atributo"/>
+<node CREATED="1717101336440" ID="Freemind_Link_1727281261" MODIFIED="1717163545110" TEXT="o modo Pyth&#xf4;nico de implementar getter&apos;s"/>
+<node COLOR="#0000ff" CREATED="1717100794122" ID="Freemind_Link_350435338" MODIFIED="1717163849364" TEXT="class Casa:&#xa;    def __init__(self, cor):&#xa;        self._cor = cor&#xa;&#xa;    @property&#xa;    def cor(self):&#xa;        return self._cor&#xa;    &#xa;c1 = Casa(&apos;Verde&apos;)    &#xa;print(c1.cor)">
+<node CREATED="1717101410468" ID="Freemind_Link_1412648550" MODIFIED="1717163454553" TEXT="Resultado: Verde"/>
+<node CREATED="1717163463207" ID="Freemind_Link_116582155" MODIFIED="1717163471845" TEXT="Note que uso c1.cor em vez de c1.cor()"/>
+<node CREATED="1717164520855" ID="Freemind_Link_744723870" MODIFIED="1717165657330" TEXT="Usar &apos;_&apos; antes do atributo &#xe9; uma conven&#xe7;&#xe3;o no Python &#xa;para indicar ao cliente do c&#xf3;digo de que esse atributo &#xa;&#xe9; protegido (equivalente ao &apos;protected&apos; do Java)&#xa;">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1717100781910" FOLDED="true" ID="Freemind_Link_1237270972" MODIFIED="1717164946504" TEXT="@???.setter">
+<node CREATED="1717100792490" ID="Freemind_Link_1207843332" MODIFIED="1717100793342" TEXT="Ex:">
+<node CREATED="1717100804438" ID="Freemind_Link_1881811220" MODIFIED="1717163553579" TEXT="Faz um m&#xe9;todo se comportar como um atributo"/>
+<node CREATED="1717101336440" ID="Freemind_Link_920161337" MODIFIED="1717164886339" TEXT="o modo Pyth&#xf4;nico de implementar setter&apos;s"/>
+<node COLOR="#0000ff" CREATED="1717100794122" ID="Freemind_Link_1223945606" MODIFIED="1717164874903" TEXT="class Casa:&#xa;    def __init__(self, cor):&#xa;        self._cor = cor&#xa;&#xa;    @property&#xa;    def cor(self):&#xa;        return self._cor&#xa;    &#xa;    @cor.setter&#xa;    def cor(self, valor):&#xa;        self._cor = valor&#xa;&#xa;c1 = Casa(&apos;Verde&apos;)    &#xa;print(c1.cor)&#xa;c1.cor = &apos;Amarelo&apos;&#xa;print(c1.cor)">
+<node CREATED="1717101410468" ID="Freemind_Link_568686843" MODIFIED="1717164895023" TEXT="Resultado: &#xa;Verde&#xa;Amarelo"/>
+<node CREATED="1717164520855" ID="Freemind_Link_1718046810" MODIFIED="1717165657330" TEXT="Usar &apos;_&apos; antes do atributo &#xe9; uma conven&#xe7;&#xe3;o no Python &#xa;para indicar ao cliente do c&#xf3;digo de que esse atributo &#xa;&#xe9; protegido (equivalente ao &apos;protected&apos; do Java)&#xa;">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1717100781910" FOLDED="true" ID="Freemind_Link_1432011726" MODIFIED="1717349129390" TEXT="@abstractmethod">
+<node CREATED="1717100804438" ID="Freemind_Link_1800273235" MODIFIED="1717348491933" TEXT="Indica que um m&#xe9;todo &#xe9; abstrato">
+<node CREATED="1717348492907" ID="Freemind_Link_385028280" MODIFIED="1717348501759" TEXT="Sendo assim, n&#xe3;o ter&#xe1; corpo, apenas a assinatura"/>
+<node CREATED="1717348502518" ID="Freemind_Link_404254147" MODIFIED="1717348514839" TEXT="Uma classe com um ou mais m&#xe9;todos abstratos n&#xe3;o poder&#xe1; ser instanciada"/>
+<node CREATED="1717348550194" ID="Freemind_Link_910017409" MODIFIED="1717348561584" TEXT="m&#xe8;todos abstratos DEVM ser implementados nas subclasses concretas"/>
+</node>
+<node CREATED="1717348745921" ID="Freemind_Link_1975324933" MODIFIED="1717348758284" TEXT="Requer a importa&#xe7;&#xe3;o do m&#xf3;dulo ABC"/>
+<node CREATED="1717349012708" ID="Freemind_Link_830953829" MODIFIED="1717349331617" TEXT="Para a classe ser abstrata,&#xa;precisa herdar de ABC">
+<node CREATED="1717349257133" ID="Freemind_Link_1984228336" MODIFIED="1717349335445" TEXT="Alternativa: ter como&#xa;metaclass o ABCMeta">
+<node CREATED="1717100792490" ID="Freemind_Link_1512811484" MODIFIED="1717349024404" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717100794122" ID="Freemind_Link_1792172039" MODIFIED="1717349324683" TEXT="from abc import ABC, ABCMeta&#xa;&#xa;class MinhaClasseAbstrata(metaclass=ABCMeta):&#xa;    ..."/>
+</node>
+</node>
+<node CREATED="1717100792490" ID="Freemind_Link_1359704542" MODIFIED="1717349024404" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717100794122" ID="Freemind_Link_735881860" MODIFIED="1717349306795" TEXT="from abc import ABC&#xa;&#xa;class MinhaClasseAbstrata(ABC):&#xa;    ..."/>
+</node>
+</node>
+<node CREATED="1717348625223" ID="Freemind_Link_1431503382" MODIFIED="1717348670440" TEXT="&#xc9; poss&#xed;vel combinar @abstractmethod com @property,&#xa;@setter, @classmethod, @staticmethod e @method">
+<node CREATED="1717348671545" ID="Freemind_Link_417910000" MODIFIED="1717350829779" TEXT="Use o @abstractmethod como decorator mais interno&#xa;(ou seja, ele deve vir colado ao nome do m&#xe9;todo)"/>
+</node>
+<node CREATED="1717100792490" ID="Freemind_Link_964322141" MODIFIED="1717350476161" TEXT="Ex:">
+<node CREATED="1717350476141" ID="Freemind_Link_356568768" MODIFIED="1717350511425" TEXT="Seja a classe&#xa;abstrata">
+<node COLOR="#0000ff" CREATED="1717100794122" ID="Freemind_Link_677286533" MODIFIED="1717350334234" TEXT="from abc import ABC, abstractmethod&#xa;&#xa;class Log(ABC):&#xa;    @abstractmethod&#xa;    def _log(self, msg): ...&#xa;    &#xa;    def log_error(self, msg):&#xa;        return self._log(f&apos;Error: {msg}&apos;)&#xa;    &#xa;    def log_success(self, msg):&#xa;        return self._log(f&apos;Success: {msg}&apos;)"/>
+</node>
+<node COLOR="#0000ff" CREATED="1717100794122" ID="Freemind_Link_217750510" MODIFIED="1717350424096" TEXT="l = Log()    &#xa;l.log_success(&apos;Minha classe concreta!&apos;)   ">
+<icon BUILTIN="button_cancel"/>
+<node CREATED="1717350427763" ID="Freemind_Link_1003113643" MODIFIED="1717350468130" TEXT="Resultado:&#xa;TypeError: Can&apos;t instantiate abstract class Log with abstract method _log"/>
+</node>
+<node COLOR="#0000ff" CREATED="1717100794122" ID="Freemind_Link_97132360" MODIFIED="1717350398038" TEXT="class LogPrintMixin(Log):&#xa;    def _log(self, msg):&#xa;        print(f&apos;{msg} ({self.__class__.__name__})&apos;)&#xa;&#xa;l = LogPrintMixin()    &#xa;l.log_success(&apos;Minha classe concreta!&apos;)   ">
+<icon BUILTIN="button_ok"/>
+<node CREATED="1717350427763" ID="Freemind_Link_1414870124" MODIFIED="1717350444956" TEXT="Resultado:&#xa;Success: Minha classe concreta! (LogPrintMixin)"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717098575882" FOLDED="true" ID="Freemind_Link_1687869662" MODIFIED="1717098577797" TEXT="Opera&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1717098330264" FOLDED="true" ID="Freemind_Link_89438476" MODIFIED="1717098600390" TEXT="del">
+<node CREATED="1717098359536" ID="Freemind_Link_227793033" MODIFIED="1717098608860" TEXT="Exclui um atributo do objeto"/>
+<node CREATED="1717095443982" ID="Freemind_Link_1612112" MODIFIED="1717095445305" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_352269023" MODIFIED="1717098686365" TEXT="class Pessoa:&#xa;    def __init__(self, nome, sobrenome, idade):&#xa;        self.nome = nome&#xa;        self.sobrenome=sobrenome&#xa;        self.idade=idade&#xa;&#xa;p1 = Pessoa(&apos;Ana&apos;, &apos;Perez&apos;, 25)        &#xa;print(f&apos;Antes: {p1.__dict__}&apos;)&#xa;del p1.sobrenome&#xa;print(f&apos;Depois: {p1.__dict__}&apos;)">
+<node CREATED="1717098455244" ID="Freemind_Link_1716869446" MODIFIED="1717098700004" TEXT="Resultado:&#xa;Antes: {&apos;nome&apos;: &apos;Ana&apos;, &apos;sobrenome&apos;: &apos;Perez&apos;, &apos;idade&apos;: 25}&#xa;Depois: {&apos;nome&apos;: &apos;Ana&apos;, &apos;idade&apos;: 25}"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1717098330264" FOLDED="true" ID="Freemind_Link_1207271384" MODIFIED="1717099380097" TEXT="vars">
+<node CREATED="1717098359536" ID="Freemind_Link_108241036" LINK="#Freemind_Link_1139428174" MODIFIED="1717099508427" TEXT="Retorna o __dict__ do objeto"/>
+<node CREATED="1717095443982" ID="Freemind_Link_361674345" MODIFIED="1717095445305" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1505242846" MODIFIED="1717099446097" TEXT="class Pessoa:&#xa;    def __init__(self, nome, sobrenome, idade):&#xa;        self.nome = nome&#xa;        self.sobrenome=sobrenome&#xa;        self.idade=idade&#xa;&#xa;p1 = Pessoa(&apos;Ana&apos;, &apos;Perez&apos;, 25)        &#xa;print(p1.__dict__)&#xa;print(vars(p1))&#xa;">
+<node CREATED="1717098455244" ID="Freemind_Link_27603866" MODIFIED="1717098700004" TEXT="Resultado:&#xa;Antes: {&apos;nome&apos;: &apos;Ana&apos;, &apos;sobrenome&apos;: &apos;Perez&apos;, &apos;idade&apos;: 25}&#xa;Depois: {&apos;nome&apos;: &apos;Ana&apos;, &apos;idade&apos;: 25}"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1717098330264" ID="Freemind_Link_1304783651" MODIFIED="1717176262738" TEXT="super">
+<node CREATED="1717176265213" ID="Freemind_Link_1414760334" MODIFIED="1717176312225" TEXT="Retorna refer&#xea;ncia &#xe0; superclasse (classe m&#xe3;e)"/>
+<node CREATED="1717176350515" ID="Freemind_Link_646975269" MODIFIED="1717176413552" TEXT="Ideal para uma cl&#xe7;asse filha sobrescrever m&#xe9;todo&#xa;da classe m&#xe3;e extendendo as possibilidades dele"/>
+<node CREATED="1717177515620" ID="Freemind_Link_929345648" MODIFIED="1717177555769" TEXT="Por padr&#xe3;o o Python j&#xe1; peenche a invoca&#xe7;&#xe3;o do&#xa;super() com a refer&#xea;ncia &#xe0; cklasse e ao objeto">
+<node CREATED="1717095443982" ID="Freemind_Link_325874488" MODIFIED="1717095445305" TEXT="Ex:">
+<node CREATED="1717177582121" ID="Freemind_Link_1287604546" MODIFIED="1717177586950" TEXT="S&#xe3;o equivalentes:"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1838037279" MODIFIED="1717177579137" TEXT="class MinhaString(str):&#xa;    def upper(self):&#xa;        return super().upper()"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_252080551" MODIFIED="1717177602437" TEXT="class MinhaString(str):&#xa;    def upper(self):&#xa;        return super(MinhaString, self).upper()"/>
+</node>
+</node>
+<node CREATED="1717095443982" ID="Freemind_Link_803794181" MODIFIED="1717095445305" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1756817970" MODIFIED="1717176777342" TEXT="class MinhaString(str):&#xa;    def upper(self):&#xa;        print(&apos;Meu upper&apos;)&#xa;        return super().upper()&#xa;&#xa;ms = MinhaString(&apos;Teste&apos;)&#xa;print(ms.upper())">
+<node CREATED="1717098455244" ID="Freemind_Link_757733549" MODIFIED="1717176707289" TEXT="Resultado:&#xa;Meu upper&#xa;None"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717095443982" ID="Freemind_Link_1346234877" MODIFIED="1717095445305" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1823866335" MODIFIED="1717096347852" TEXT="class Carro():&#xa;    def __init__(self, modelo, ano):&#xa;        self.modelo = modelo&#xa;        self.ano = ano&#xa;&#xa;    def acelera(self):&#xa;        print(f&apos;{self.modelo} acelerando&apos;)&#xa;&#xa;c1 = Carro(&apos;Fusca&apos;, 1980)&#xa;c1.acelerar()"/>
+</node>
+</node>
+<node CREATED="1717538096123" FOLDED="true" ID="Freemind_Link_1352169380" MODIFIED="1717538097621" POSITION="right" TEXT="Enum">
+<node CREATED="1717538104246" ID="Freemind_Link_1050110066" MODIFIED="1717538110841" TEXT="Cria enumeradores"/>
+<node CREATED="1717538203089" ID="Freemind_Link_917110103" MODIFIED="1717538215454" TEXT="Precisa importar da biblioteca &apos;enum&apos;"/>
+<node CREATED="1717538638049" ID="Freemind_Link_325891483" MODIFIED="1717538662141" TEXT="Enumeradores devem herdar da classe enum.ENUM"/>
+<node CREATED="1717538731123" ID="Freemind_Link_1749055241" MODIFIED="1717538763385" TEXT="Posso explicitar a numera&#xe7;&#xe3;o&#xa;ou deixa&#xe1;-la autom&#xe1;tica">
+<node CREATED="1609876605273" ID="Freemind_Link_276033516" MODIFIED="1609876606302" TEXT="Ex:">
+<node CREATED="1717538682551" ID="Freemind_Link_1048377932" MODIFIED="1717538755036" TEXT="Expl&#xed;cita">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_989810598" MODIFIED="1717538770255" TEXT="import enum&#xa;&#xa;class Direcoes(enum.Enum):&#xa;    ESQUERDA = 1&#xa;    DIREITA = 2"/>
+</node>
+<node CREATED="1717538669404" ID="Freemind_Link_1957280860" MODIFIED="1717538758114" TEXT="Autom&#xe1;tica">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1986836018" MODIFIED="1717538791036" TEXT="import enum&#xa;&#xa;class Direcoes(enum.Enum):&#xa;    ESQUERDA = enum.auto()&#xa;    DIREITA = enum.auto()"/>
+</node>
+</node>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_1721168748" MODIFIED="1609876606302" TEXT="Ex:">
+<node CREATED="1717538682551" ID="Freemind_Link_1127422917" MODIFIED="1717538688912" TEXT="Forma 1">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_190298494" MODIFIED="1717538626825" TEXT="import enum&#xa;&#xa;class Direcoes(enum.Enum):&#xa;    ESQUERDA = 1&#xa;    DIREITA = 2&#xa;&#xa;print(Direcoes(1), Direcoes[&apos;ESQUERDA&apos;], Direcoes.ESQUERDA)&#xa;print(Direcoes(1).name, Direcoes(1).value)">
+<node CREATED="1717538303179" ID="Freemind_Link_1343597213" MODIFIED="1717538310863" TEXT="Resultado:&#xa;Direcoes.ESQUERDA Direcoes.ESQUERDA Direcoes.ESQUERDA&#xa;ESQUERDA 1"/>
+</node>
+</node>
+<node CREATED="1717538669404" ID="Freemind_Link_949335782" MODIFIED="1717538693256" TEXT="Forma 2">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_7725536" MODIFIED="1717538296364" TEXT="import enum&#xa;&#xa;Direcoes = enum.Enum(&apos;Direcoes&apos;, [&apos;ESQUERDA&apos;, &apos;DIREITA&apos;])&#xa;&#xa;print(Direcoes(1), Direcoes[&apos;ESQUERDA&apos;], Direcoes.ESQUERDA)&#xa;print(Direcoes(1).name, Direcoes(1).value)">
+<node CREATED="1717538303179" ID="Freemind_Link_93499511" MODIFIED="1717538310863" TEXT="Resultado:&#xa;Direcoes.ESQUERDA Direcoes.ESQUERDA Direcoes.ESQUERDA&#xa;ESQUERDA 1"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717515858521" ID="Freemind_Link_1314548688" MODIFIED="1717515860278" POSITION="right" TEXT="Type">
+<node CREATED="1717515986047" ID="Freemind_Link_908834174" MODIFIED="1717515989479" TEXT="&#xc9; uma metaclasse">
+<node CREATED="1717515990035" ID="Freemind_Link_1230439708" MODIFIED="1717515995452" TEXT="Est&#xe1; acima de object"/>
+</node>
+<node CREATED="1717516033281" ID="Freemind_Link_1075923239" MODIFIED="1717516039444" TEXT="E quem cria classes em Python">
+<node CREATED="1717516041826" ID="Freemind_Link_1332771654" MODIFIED="1717516125309" TEXT="S&#xe3;o equivalentes:">
+<node COLOR="#0000ff" CREATED="1717515951696" ID="Freemind_Link_785340391" MODIFIED="1717516059215" TEXT="class Foo:&#xa;    ...&#xa;"/>
+<node COLOR="#0000ff" CREATED="1717515951696" ID="Freemind_Link_6404307" MODIFIED="1717516115500" TEXT="Foo = type(&apos;Foo&apos;, (object,), {})"/>
+</node>
+</node>
+<node CREATED="1717515861277" ID="Freemind_Link_1407244455" MODIFIED="1717515865583" TEXT="&#xc9; o tipo das classes">
+<node CREATED="1717515866308" ID="Freemind_Link_1323723006" MODIFIED="1717515869047" TEXT="Entenda:">
+<node CREATED="1717515869482" ID="Freemind_Link_716537094" MODIFIED="1717515880967" TEXT="Seu objeto &#xe9; uma inst&#xe2;ncia da sua Classe"/>
+<node CREATED="1717515881389" ID="Freemind_Link_125772484" MODIFIED="1717515889417" TEXT="Sua Classe &#xe9; uma inst&#xe2;ncia de type"/>
+<node CREATED="1717515949979" ID="Freemind_Link_1748088128" MODIFIED="1717515950768" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717515951696" ID="Freemind_Link_466041843" MODIFIED="1717515963271" TEXT="class Foo:&#xa;    ...&#xa;&#xa;f = Foo()&#xa;&#xa;print(type(f))&#xa;print(type(Foo))">
+<node CREATED="1717515964482" ID="Freemind_Link_988312349" MODIFIED="1717515973169" TEXT="Resultado:&#xa;&lt;class &apos;__main__.Foo&apos;&gt;&#xa;&lt;class &apos;type&apos;&gt;"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717516201263" ID="Freemind_Link_1409387748" MODIFIED="1717516330671" TEXT="Fases da cria&#xe7;&#xe3;o&#xa;de uma classe">
+<node CREATED="1717516210791" ID="Freemind_Link_697636447" MODIFIED="1717516228510" TEXT="__new__ da metaclasse &#xe9; chamado e cria nova classe">
+<icon BUILTIN="full-1"/>
+<node CREATED="1717516418595" ID="Freemind_Link_338398088" MODIFIED="1717516440988" TEXT="O __new__ da metaclasse n&#xe3;o recebe refer&#xea;ncia para&#xa;a classe pois a classe sequer existe nessa fase"/>
+<node CREATED="1717516481504" ID="Freemind_Link_538976859" MODIFIED="1717516694457" TEXT="Argumentos do&#xa;__new__ da metaclasse">
+<node COLOR="#990000" CREATED="1717516489616" ID="Freemind_Link_195919709" MODIFIED="1717516506513" TEXT="mcs">
+<node CREATED="1717516496113" ID="Freemind_Link_906448132" MODIFIED="1717516501637" TEXT="Refer&#xea;ncia &#xe0; pr&#xf3;pria metaclasse"/>
+</node>
+<node COLOR="#990000" CREATED="1717516512014" ID="Freemind_Link_1390205574" MODIFIED="1717516514080" TEXT="name">
+<node CREATED="1717516514720" ID="Freemind_Link_554274129" MODIFIED="1717516520613" TEXT="Nome da classe a ser criada"/>
+</node>
+<node COLOR="#990000" CREATED="1717516526738" ID="Freemind_Link_1448182272" MODIFIED="1717516529144" TEXT="bases">
+<node CREATED="1717516529737" ID="Freemind_Link_221811599" MODIFIED="1717516540813" TEXT="Heran&#xe7;a da classe a ser cirada (suas classes m&#xe3;e)"/>
+</node>
+<node COLOR="#990000" CREATED="1717516543991" ID="Freemind_Link_720333852" MODIFIED="1717516546857" TEXT="dict">
+<node CREATED="1717516547769" ID="Freemind_Link_986442349" MODIFIED="1717516555474" TEXT="O dict da classe a ser criada"/>
+</node>
+</node>
+</node>
+<node CREATED="1717516235546" ID="Freemind_Link_225438886" MODIFIED="1717516624765" TEXT="__call__ da metaclasse &#xe9; chamado">
+<icon BUILTIN="full-2"/>
+<node CREATED="1717516627406" ID="Freemind_Link_46424043" MODIFIED="1717516699787" TEXT="Argumentos do&#xa;__call__ da metaclasse">
+<node COLOR="#990000" CREATED="1717516639750" ID="Freemind_Link_767302344" MODIFIED="1717516642023" TEXT="cls">
+<node CREATED="1717516642847" ID="Freemind_Link_1910690551" MODIFIED="1717516651982" TEXT="Refer&#xea;ncia &#xe0; classe criada"/>
+</node>
+<node COLOR="#990000" CREATED="1717516656683" ID="Freemind_Link_1203801959" MODIFIED="1717516664918" TEXT="*args">
+<node CREATED="1717516665359" ID="Freemind_Link_629544872" MODIFIED="1717516669577" TEXT="Argumentos da classe criada"/>
+</node>
+<node COLOR="#990000" CREATED="1717516660822" ID="Freemind_Link_317717952" MODIFIED="1717516664683" TEXT="**kwargs">
+<node CREATED="1717516665359" ID="Freemind_Link_1143562996" MODIFIED="1717516669577" TEXT="Argumentos da classe criada"/>
+</node>
+</node>
+<node CREATED="1717516608880" ID="Freemind_Link_1342722857" MODIFIED="1717516617706" TEXT="O __call__ da metaclasse chama:">
+<node CREATED="1717516271356" ID="Freemind_Link_321127370" MODIFIED="1717516291513" TEXT="__new__ da classe com os argumentos (cria a inst&#xe2;ncia)">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1717516295427" ID="Freemind_Link_1492514416" MODIFIED="1717516307036" TEXT="__init__ da classe com os argumentos">
+<icon BUILTIN="full-2"/>
+</node>
+</node>
+</node>
+<node CREATED="1717516311036" ID="Freemind_Link_935451119" MODIFIED="1717516321110" TEXT="__call__ da metaclasse termina a execu&#xe7;&#xe3;o">
+<icon BUILTIN="full-3"/>
+</node>
 </node>
 </node>
 </node>
