@@ -809,6 +809,13 @@
 </node>
 </node>
 <node CREATED="1609877793490" ID="Freemind_Link_69878801" MODIFIED="1609877799358" POSITION="right" TEXT="Integer">
+<node CREATED="1717612606245" ID="Freemind_Link_19909113" MODIFIED="1717612611998" TEXT="Permite separar casas com _">
+<node CREATED="1717612612334" ID="Freemind_Link_1795408192" MODIFIED="1717612617850" TEXT="O _ n&#xe3;o interfere no valor"/>
+<node CREATED="1717612632603" ID="Freemind_Link_601163092" MODIFIED="1717612642060" TEXT="&#xc9; para mera visualiza&#xe7;&#xe3;o (facilitar o programador)"/>
+<node CREATED="1609876605273" ID="Freemind_Link_84814822" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1097753550" MODIFIED="1717612625568" TEXT="x = 1_000_000"/>
+</node>
+</node>
 <node CREATED="1609876605273" ID="Freemind_Link_235842893" MODIFIED="1609876606302" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_326247797" MODIFIED="1609877852277" TEXT="x = 1"/>
 </node>
@@ -839,7 +846,7 @@
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_351351167" MODIFIED="1716419847201" TEXT="import decimal&#xa;&#xa;numero = decimal.Decimal(&apos;0.1&apos;)&#xa;print (numero, type(numero))"/>
 </node>
 </node>
-<node CREATED="1717095417900" ID="Freemind_Link_1264374279" MODIFIED="1717095419317" POSITION="right" TEXT="Class">
+<node CREATED="1717095417900" FOLDED="true" ID="Freemind_Link_1264374279" MODIFIED="1717095419317" POSITION="right" TEXT="Class">
 <node CREATED="1717095420110" ID="Freemind_Link_1427453679" MODIFIED="1717095442394" TEXT="Classes do paradigma de orienta&#xe7;&#xe3;o a objetos"/>
 <node CREATED="1717349093864" FOLDED="true" ID="Freemind_Link_1057633254" MODIFIED="1717349148428" TEXT="Classe abstrata">
 <node CREATED="1717349103666" ID="Freemind_Link_979049498" LINK="#Freemind_Link_1432011726" MODIFIED="1717349132094" TEXT="Ver decorator @abstractmethod"/>
@@ -1220,7 +1227,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1717515858521" ID="Freemind_Link_1314548688" MODIFIED="1717515860278" POSITION="right" TEXT="Type">
+<node CREATED="1717515858521" FOLDED="true" ID="Freemind_Link_1314548688" MODIFIED="1717515860278" POSITION="right" TEXT="Type">
 <node CREATED="1717515986047" ID="Freemind_Link_908834174" MODIFIED="1717515989479" TEXT="&#xc9; uma metaclasse">
 <node CREATED="1717515990035" ID="Freemind_Link_1230439708" MODIFIED="1717515995452" TEXT="Est&#xe1; acima de object"/>
 </node>
