@@ -1419,6 +1419,53 @@
 </node>
 </node>
 </node>
+<node CREATED="1717862228358" FOLDED="true" ID="Freemind_Link_1391613099" MODIFIED="1717862231339" POSITION="right" TEXT="openpyxl">
+<node CREATED="1718033431741" ID="Freemind_Link_1349970466" MODIFIED="1718033445859" TEXT="https://openpyxl.readthedocs.io/en/stable/">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1717862240744" ID="Freemind_Link_320567885" MODIFIED="1718033456530" TEXT="Biblioteca de ferramentas para&#xa;lidar com arquivos excel">
+<node CREATED="1717862266688" ID="Freemind_Link_677443036" MODIFIED="1717862269372" TEXT="*.xls"/>
+<node CREATED="1717862266688" ID="Freemind_Link_1480552379" MODIFIED="1717862276168" TEXT="*.xlsx"/>
+<node CREATED="1717862266688" ID="Freemind_Link_938532563" MODIFIED="1717862287937" TEXT="*.xlsm"/>
+<node CREATED="1717862289129" ID="Freemind_Link_1331849932" MODIFIED="1717862301626" TEXT="*.xltx"/>
+<node CREATED="1717862289129" ID="Freemind_Link_1584434089" MODIFIED="1717862306273" TEXT="*.xltm"/>
+</node>
+<node CREATED="1609876661409" ID="Freemind_Link_1606220421" MODIFIED="1717862356351" TEXT="Instala&#xe7;&#xe3;o">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_947212606" MODIFIED="1717862367970" TEXT="pip install openpyxl"/>
+</node>
+<node CREATED="1609876661409" ID="Freemind_Link_305364342" MODIFIED="1718033491129" TEXT="Ex:">
+<node CREATED="1718033491072" ID="Freemind_Link_1749336292" MODIFIED="1718033499522" TEXT="Criando um&#xa;arquivo Excel">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_471742193" MODIFIED="1718033429531" TEXT="from pathlib import Path&#xa;&#xa;from openpyxl import Workbook&#xa;from openpyxl.worksheet.worksheet import Worksheet&#xa;&#xa;ROOT_FOLDER = Path(__file__).parent&#xa;WORKBOOK_PATH = ROOT_FOLDER / &apos;workbook.xlsx&apos;&#xa;&#xa;workbook = Workbook()&#xa;worksheet: Worksheet = workbook.active&#xa;&#xa;# Criando os cabe&#xe7;alhos&#xa;worksheet.cell(1, 1, &apos;Nome&apos;)&#xa;worksheet.cell(1, 2, &apos;Idade&apos;)&#xa;worksheet.cell(1, 3, &apos;Nota&apos;)&#xa;&#xa;students = [&#xa;    # nome      idade nota&#xa;    [&apos;Jo&#xe3;o&apos;,    14,   5.5],&#xa;    [&apos;Maria&apos;,   13,   9.7],&#xa;    [&apos;Luiz&apos;,    15,   8.8],&#xa;    [&apos;Alberto&apos;, 16,   10],&#xa;]&#xa;&#xa;# for i, student_row in enumerate(students, start=2):&#xa;#     for j, student_column in enumerate(student_row, start=1):&#xa;#         worksheet.cell(i, j, student_column)&#xa;&#xa;for student in students:&#xa;    worksheet.append(student)&#xa;&#xa;workbook.save(WORKBOOK_PATH)"/>
+</node>
+</node>
+</node>
+<node CREATED="1718034388551" FOLDED="true" ID="Freemind_Link_701821818" MODIFIED="1718034390061" POSITION="right" TEXT="pillow">
+<node CREATED="1718034397446" ID="Freemind_Link_1453348996" MODIFIED="1718034406731" TEXT="Biblioteca de ferramentas de redimensionamento de imagens"/>
+<node CREATED="1609876661409" ID="Freemind_Link_1365191952" MODIFIED="1718034647180" TEXT="Instala&#xe7;&#xe3;o">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1699629029" MODIFIED="1718034651564" TEXT="pip install pillow"/>
+</node>
+<node CREATED="1609876661409" ID="Freemind_Link_412128239" MODIFIED="1718036899331" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_660466159" MODIFIED="1718036914131" TEXT="from PIL import Image"/>
+</node>
+<node CREATED="1718037328419" ID="Freemind_Link_1438836778" MODIFIED="1718037329172" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_78716490" MODIFIED="1718037345370" TEXT="# Pillow: redimensionando imagens com Python&#xa;# Essa biblioteca &#xe9; o Photoshop do Python &#xd83d;&#xde02;&#xa;from pathlib import Path&#xa;&#xa;from PIL import Image&#xa;&#xa;ROOT_FOLDER = Path(__file__).parent&#xa;ORIGINAL = ROOT_FOLDER / &apos;original.JPG&apos;&#xa;NEW_IMAGE = ROOT_FOLDER / &apos; new.JPG&apos;&#xa;&#xa;pil_image = Image.open(ORIGINAL)&#xa;width, height = pil_image.size&#xa;exif = pil_image.info[&apos;exif&apos;]&#xa;&#xa;# width     new_width&#xa;# height    ??&#xa;new_width = 640&#xa;new_height = round(height * new_width / width)&#xa;&#xa;new_image = pil_image.resize(size=(new_width, new_height))&#xa;new_image.save(&#xa;    NEW_IMAGE,&#xa;    optimize=True,&#xa;    quality=70,&#xa;    # exif=exif,&#xa;)"/>
+</node>
+</node>
+<node CREATED="1718037896147" FOLDED="true" ID="Freemind_Link_6207032" MODIFIED="1718037898228" POSITION="right" TEXT="pyside6">
+<node CREATED="1718037921109" ID="Freemind_Link_339492954" MODIFIED="1718037924994" TEXT="https://doc.qt.io/qtforpython/">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1718037899571" ID="Freemind_Link_7749697" MODIFIED="1718037901628" TEXT="PySide6 para GUI (interface gr&#xe1;fica) com Qt em Python"/>
+<node CREATED="1718038061053" ID="Freemind_Link_1122401254" MODIFIED="1718038068035" TEXT="Instala&#xe7;&#xe3;o">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1739954562" MODIFIED="1718038076251" TEXT="pip install pyside6"/>
+</node>
+<node CREATED="1609876661409" ID="Freemind_Link_637873902" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_856112147" MODIFIED="1609876759581" TEXT="import ??? as ??"/>
+</node>
+<node CREATED="1609876605273" FOLDED="true" ID="Freemind_Link_1117389754" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_80510258" MODIFIED="1718044216025" TEXT="# Trabalhando com classes e heran&#xe7;a no PySide6&#xa;import sys&#xa;&#xa;from PySide6.QtCore import Slot&#xa;from PySide6.QtWidgets import (QApplication, QGridLayout, QMainWindow,&#xa;                               QPushButton, QWidget)&#xa;&#xa;&#xa;class MyWindow(QMainWindow):&#xa;    def __init__(self, parent=None):&#xa;        super().__init__(parent)&#xa;&#xa;        self.central_widget = QWidget()&#xa;&#xa;        self.setCentralWidget(self.central_widget)&#xa;        self.setWindowTitle(&apos;Minha janela bonita&apos;)&#xa;&#xa;        # Bot&#xe3;o&#xa;        self.botao1 = self.make_button(&apos;Texto do bot&#xe3;o&apos;)&#xa;        self.botao1.clicked.connect(self.segunda_acao_marcada)  # type: ignore&#xa;&#xa;        self.botao2 = self.make_button(&apos;Bot&#xe3;o 2&apos;)&#xa;&#xa;        self.botao3 = self.make_button(&apos;Terceiro&apos;)&#xa;&#xa;        self.grid_layout = QGridLayout()&#xa;        self.central_widget.setLayout(self.grid_layout)&#xa;&#xa;        self.grid_layout.addWidget(self.botao1, 1, 1, 1, 1)&#xa;        self.grid_layout.addWidget(self.botao2, 1, 2, 1, 1)&#xa;        self.grid_layout.addWidget(self.botao3, 3, 1, 1, 2)&#xa;&#xa;        # statusBar&#xa;        self.status_bar = self.statusBar()&#xa;        self.status_bar.showMessage(&apos;Mostrar mensagem na barra&apos;)&#xa;&#xa;        # menuBar&#xa;        self.menu = self.menuBar()&#xa;        self.primeiro_menu = self.menu.addMenu(&apos;Primeiro menu&apos;)&#xa;        self.primeira_acao = self.primeiro_menu.addAction(&apos;Primeira a&#xe7;&#xe3;o&apos;)&#xa;        self.primeira_acao.triggered.connect(  # type:ignore&#xa;            self.muda_mensagem_da_status_bar)&#xa;&#xa;        self.segunda_action = self.primeiro_menu.addAction(&apos;Segunda a&#xe7;&#xe3;o&apos;)&#xa;        self.segunda_action.setCheckable(True)&#xa;        self.segunda_action.toggled.connect(  # type:ignore&#xa;            self.segunda_acao_marcada)&#xa;        self.segunda_action.hovered.connect(  # type:ignore&#xa;            self.segunda_acao_marcada)&#xa;&#xa;    @Slot()&#xa;    def muda_mensagem_da_status_bar(self):&#xa;        self.status_bar.showMessage(&apos;O meu slot foi executado&apos;)&#xa;&#xa;    @Slot()&#xa;    def segunda_acao_marcada(self):&#xa;        print(&apos;Est&#xe1; marcado?&apos;, self.segunda_action.isChecked())&#xa;&#xa;    def make_button(self, text):&#xa;        btn = QPushButton(text)&#xa;        btn.setStyleSheet(&apos;font-size: 80px;&apos;)&#xa;        return btn&#xa;&#xa;&#xa;if __name__ == &apos;__main__&apos;:&#xa;    app = QApplication(sys.argv)&#xa;    window = MyWindow()&#xa;    window.show()&#xa;    app.exec()  # O loop da aplica&#xe7;&#xe3;o"/>
+</node>
+</node>
 <node CREATED="1717548619155" FOLDED="true" ID="Freemind_Link_897129555" MODIFIED="1717550948199" POSITION="right" TEXT="dataclasses">
 <node CREATED="1717549938337" ID="Freemind_Link_891634692" MODIFIED="1717549944938" TEXT="Inclu&#xed;do na vers&#xe3;o 3.7 do Python"/>
 <node CREATED="1717550950603" ID="Freemind_Link_1623552075" MODIFIED="1717550952584" TEXT="dataclass">
@@ -2082,10 +2129,177 @@
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_881775532" MODIFIED="1717789855887" TEXT="import os&#xa;from PyPDF2 import PdfReader&#xa;&#xa;PDF_ORIGINAL_PATH = os.path.dirname(__file__) + &apos;/pdfs_originais&apos;&#xa;PDF_NOVO_PATH = os.path.dirname(__file__) + &apos;/pdfs_novos&apos;&#xa;&#xa;&#xa;RELATORIO_BACEN = PDF_ORIGINAL_PATH + &apos;/R20240531.pdf&apos;&#xa;&#xa;if not os.path.exists(RELATORIO_BACEN):&#xa;    raise FileNotFoundError(f&apos;Arquivo PDF {RELATORIO_BACEN} n&#xe3;o encontrado!&apos;)&#xa;&#xa;reader = PdfReader(RELATORIO_BACEN)&#xa;&#xa;print(f&apos;O relat&#xf3;rio {os.path.basename(RELATORIO_BACEN)} tem {len(reader.pages)} p&#xe1;ginas&apos;)&#xa;print(&quot;Conte&#xfa;do da p&#xe1;gina 1:&quot;, reader.pages[0].extract_text(), sep=&apos;\n&apos;)"/>
 </node>
 </node>
-<node CREATED="1717348778077" ID="Freemind_Link_18217416" MODIFIED="1717348779380" POSITION="right" TEXT="ABC">
+<node CREATED="1717861711311" FOLDED="true" ID="Freemind_Link_36559580" MODIFIED="1717861713038" POSITION="right" TEXT="collections">
+<node CREATED="1717861718121" ID="Freemind_Link_623876679" MODIFIED="1717861755317" TEXT="Biblioteca com funcionalidaes&#xa;de trabalho com cole&#xe7;&#xf5;es">
+<node CREATED="1717861733505" ID="Freemind_Link_452103954" MODIFIED="1717861740285" TEXT="Pilhas"/>
+<node CREATED="1717861741162" ID="Freemind_Link_437516476" MODIFIED="1717861744716" TEXT="Listas encadeadas"/>
+<node CREATED="1717861745041" ID="Freemind_Link_1683006532" MODIFIED="1717861749686" TEXT="Listas duplamente encadeadas"/>
+</node>
+<node CREATED="1609876661409" ID="Freemind_Link_1875309231" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1451902077" MODIFIED="1717861770092" TEXT="from collections import deque"/>
+</node>
+<node CREATED="1609876566896" ID="Freemind_Link_238210676" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1586005690" MODIFIED="1609876761667" TEXT="???">
+<node CREATED="1609876580616" ID="Freemind_Link_973812105" MODIFIED="1609876767449" TEXT="???"/>
+<node CREATED="1609876605273" ID="Freemind_Link_572572751" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1876174539" MODIFIED="1609876764389" TEXT="???"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717348778077" FOLDED="true" ID="Freemind_Link_18217416" MODIFIED="1717348779380" POSITION="right" TEXT="ABC">
 <node CREATED="1717348780257" ID="Freemind_Link_958663719" MODIFIED="1717348787634" TEXT="Abstract Base Class"/>
 <node CREATED="1717348789616" ID="Freemind_Link_1897588557" MODIFIED="1717348798540" TEXT="M&#xf3;dulo para cria&#xe7;&#xe3;o de classes abstratas"/>
 <node CREATED="1717348800887" ID="Freemind_Link_596438753" LINK="_tiposDados.mm" MODIFIED="1717348826814" TEXT="Ver mapa &apos;Tipos de dados&apos; -&gt; CLasse"/>
+</node>
+<node CREATED="1718129947354" FOLDED="true" ID="Freemind_Link_645359434" MODIFIED="1718129949117" POSITION="right" TEXT="typing">
+<node CREATED="1718129954138" ID="Freemind_Link_1550331961" MODIFIED="1718129971670" TEXT="Ferramentas de apoio ao lint checking das IDE&apos;s"/>
+<node CREATED="1609876661409" ID="Freemind_Link_131935448" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_92432325" MODIFIED="1718129998861" TEXT="from typing import TYPE_CHECKING"/>
+</node>
+<node CREATED="1609876566896" ID="Freemind_Link_1458126186" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1113720015" MODIFIED="1718131119874" TEXT="TYPE_CHECKING">
+<node CREATED="1718130019014" ID="Freemind_Link_244539689" MODIFIED="1718130028266" TEXT="Usado para resolver problema de include circular"/>
+<node CREATED="1718131119839" ID="Freemind_Link_392718273" MODIFIED="1718131122272" TEXT="Cen&#xe1;rio">
+<node CREATED="1718130029367" ID="Freemind_Link_1969175644" MODIFIED="1718131124969" TEXT="Inicial">
+<node CREATED="1718130034253" ID="Freemind_Link_1864733773" MODIFIED="1718130050693" TEXT="Voc&#xea; tem um arquivo a.py e um arquivo b.py."/>
+<node CREATED="1718130051657" ID="Freemind_Link_1566771143" MODIFIED="1718131287823" TEXT="Em pai.py voc&#xea; tem uma vari&#xe1;vel&#xa;de um tipo declarado em filho.py">
+<node CREATED="1609876605273" FOLDED="true" ID="Freemind_Link_1684482382" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_463542570" MODIFIED="1718131328967" TEXT="class Pai:&#xa;    def __init__(self, nome: str, filho) -&gt; None:&#xa;        self._nome = nome&#xa;        self._filho = filho&#xa;&#xa;    def show_me(self):&#xa;        if self._filho is not None:&#xa;            print(f&apos;Me chamo {self._nome} e sou pai de {self._filho._nome}&apos;)&#xa;        else:&#xa;            print(f&apos;Me chamo {self._nome} e n&#xe3;o tenho filho&apos;)"/>
+</node>
+</node>
+<node CREATED="1718130051657" ID="Freemind_Link_1485731003" MODIFIED="1718131292749" TEXT="Em filho.py voc&#xea; tem uma vari&#xe1;vel&#xa;de um tipo declarado em pai.py">
+<node CREATED="1609876605273" FOLDED="true" ID="Freemind_Link_308126788" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_870243504" MODIFIED="1718131337109" TEXT="class Filho:&#xa;    def __init__(self, nome: str, pai) -&gt; None:&#xa;        self._nome = nome&#xa;        self._pai = pai&#xa;&#xa;    def show_me(self):&#xa;        if self._pai is not None:&#xa;            print(f&apos;Me chamo {self._nome} e sou filho de {self._pai._nome}&apos;)&#xa;        else:&#xa;            print(f&apos;Me chamo {self._nome} e n&#xe3;o tenho pai&apos;)        "/>
+</node>
+</node>
+<node CREATED="1718131307378" ID="Freemind_Link_441116455" MODIFIED="1718131317429" TEXT="Voc&#xea; usa as classes Pai e Filho">
+<node CREATED="1609876605273" FOLDED="true" ID="Freemind_Link_633141526" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1570926894" MODIFIED="1718131345103" TEXT="from pai import Pai&#xa;from filho import Filho&#xa;&#xa;p = Pai(&apos;Pedro&apos;, None)&#xa;f = Filho(&apos;Lucas&apos;, p)&#xa;p2 = Pai(&apos;Caio&apos;, p)&#xa;f2 = Filho(&apos;Davi&apos;, None)&#xa;&#xa;p.show_me()&#xa;f.show_me()&#xa;p2.show_me()&#xa;f2.show_me()">
+<node CREATED="1718131351583" ID="Freemind_Link_1734622277" MODIFIED="1718131360701" TEXT="Resultado:&#xa;Me chamo Pedro e n&#xe3;o tenho filho&#xa;Me chamo Lucas e sou filho de Pedro&#xa;Me chamo Caio e sou pai de Pedro&#xa;Me chamo Davi e n&#xe3;o tenho pai"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1718130029367" ID="Freemind_Link_669602996" MODIFIED="1718131150273" TEXT="Inten&#xe7;&#xe3;o">
+<node CREATED="1718131156948" ID="Freemind_Link_1566477988" MODIFIED="1718131170360" TEXT="Voc&#xea; quer usar o type lint da sua IDE">
+<node CREATED="1718131170635" ID="Freemind_Link_125640737" MODIFIED="1718131186527" TEXT="Ser beneficiado com ferramentas como de auto-complete de c&#xf3;digo"/>
+<node CREATED="1718131191500" ID="Freemind_Link_1886913798" MODIFIED="1718131209197" TEXT="Para isso, voc&#xea; precisa declarar os tipos nas declara&#xe7;&#xf5;es"/>
+</node>
+<node CREATED="1718130051657" ID="Freemind_Link_283494518" MODIFIED="1718131491732" TEXT="Em pai.py voc&#xea; precisa fazer &apos;import filho&apos; para declarar o&#xa;atributo &apos;filho&apos; como &apos;Filho&apos; no m&#xe9;todo __init__ da classe &apos;Pai&apos;">
+<node CREATED="1609876605273" FOLDED="true" ID="Freemind_Link_91992373" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1953239211" MODIFIED="1718131558787" TEXT="from filho import Filho&#xa;&#xa;class Pai:&#xa;    def __init__(self, nome: str, filho:Filho) -&gt; None:&#xa;        ...">
+<node CREATED="1718132163371" ID="Freemind_Link_1733550252" MODIFIED="1718132178140" TEXT="Repare o atributo &apos;filho&apos; no m&#xe9;todo __init__"/>
+</node>
+</node>
+</node>
+<node CREATED="1718130051657" ID="Freemind_Link_1821385033" MODIFIED="1718131590354" TEXT="Em filho.py voc&#xea; precisa fazer &apos;import pai&apos; para declarar o&#xa;atributo &apos;pai&apos; como &apos;Pai&apos; no m&#xe9;todo __init__ da classe &apos;Filho&apos;">
+<node CREATED="1609876605273" FOLDED="true" ID="Freemind_Link_1963999107" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1473733986" MODIFIED="1718131620009" TEXT="from pai import Pai&#xa;&#xa;class Filho:&#xa;    def __init__(self, nome: str, pai: Pai) -&gt; None:&#xa;        ...">
+<node CREATED="1718132163371" ID="Freemind_Link_2739214" MODIFIED="1718132185563" TEXT="Repare o atributo &apos;pai&apos; no m&#xe9;todo __init__"/>
+</node>
+</node>
+</node>
+<node CREATED="1718130113312" ID="Freemind_Link_910419842" MODIFIED="1718130125315" TEXT="Neste cen&#xe1;rio, voc&#xea; ter&#xe1; um erro de &apos;import c&#xed;clico&apos;">
+<node CREATED="1718131665600" ID="Freemind_Link_1818400487" MODIFIED="1718131671893" TEXT="Erro:">
+<node COLOR="#990000" CREATED="1718131672747" ID="Freemind_Link_103402460" MODIFIED="1718131683451" TEXT="ImportError: cannot import name &apos;Pai&apos; from partially initialized module &apos;pai&apos; (most likely due to a circular import) (/home/ebenezer.botelho/workspace/pessoal/cursopython/udemy_2024/outrasAulas/aula358/pai.py)"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1718130131848" ID="Freemind_Link_941775923" MODIFIED="1718130134419" TEXT="Solu&#xe7;&#xe3;o:">
+<node CREATED="1718131719226" ID="Freemind_Link_1199097044" MODIFIED="1718131773801" TEXT="Use o TYPE_CHECKING para que o import s&#xf3; seja&#xa;realizado quando se estiver fazendo a tipagem"/>
+<node CREATED="1718131776151" ID="Freemind_Link_932736539" MODIFIED="1718131812052" TEXT="O valor de TYPE_CHECKING ser&#xe1; &apos;True&apos; quando se&#xa;estiver fazendo uma tipagem e &apos;False&apos; caso contr&#xe1;rio"/>
+<node CREATED="1718131978332" ID="Freemind_Link_379949526" MODIFIED="1718132133728" TEXT="Ao usar o TYPE_CHECKING, sempre declare os tipos &apos;conflituosos&apos;&#xa;(aqueles envolvidos no import c&#xed;clico) entre aspas simples">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1718132018492" ID="Freemind_Link_1168570534" MODIFIED="1718132019432" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1718131996619" ID="Freemind_Link_999539830" MODIFIED="1718132147931" TEXT="minhavar: &apos;MeuTipo&apos;">
+<icon BUILTIN="button_ok"/>
+</node>
+<node COLOR="#0000ff" CREATED="1718131996619" ID="Freemind_Link_762047602" MODIFIED="1718132144823" TEXT="minhavar: MeuTipo">
+<icon BUILTIN="button_cancel"/>
+</node>
+</node>
+</node>
+<node CREATED="1718132032890" FOLDED="true" ID="Freemind_Link_633270255" MODIFIED="1718132033848" TEXT="Ex:">
+<node CREATED="1718132035957" ID="Freemind_Link_373782405" MODIFIED="1718132038521" TEXT="pai.py">
+<node COLOR="#0000ff" CREATED="1718131996619" ID="Freemind_Link_1675787028" MODIFIED="1718132067207" TEXT="from typing import TYPE_CHECKING&#xa;&#xa;if TYPE_CHECKING:&#xa;    from filho import Filho&#xa;&#xa;class Pai:&#xa;    def __init__(self, nome: str, filho: &apos;Filho&apos;) -&gt; None:&#xa;        ...">
+<node CREATED="1718132163371" ID="Freemind_Link_1075429654" MODIFIED="1718132178140" TEXT="Repare o atributo &apos;filho&apos; no m&#xe9;todo __init__"/>
+</node>
+</node>
+<node CREATED="1718132039194" ID="Freemind_Link_1852294827" MODIFIED="1718132041456" TEXT="filho.py">
+<node COLOR="#0000ff" CREATED="1718131996619" ID="Freemind_Link_1231470640" MODIFIED="1718132081036" TEXT="from typing import TYPE_CHECKING&#xa;&#xa;if TYPE_CHECKING:&#xa;    from pai import Pai&#xa;&#xa;class Filho:&#xa;    def __init__(self, nome: str, pai: &apos;Pai&apos;) -&gt; None:&#xa;        ...">
+<node CREATED="1718132163371" ID="Freemind_Link_255157601" MODIFIED="1718132185563" TEXT="Repare o atributo &apos;pai&apos; no m&#xe9;todo __init__"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_827646630" MODIFIED="1718214186641" TEXT="cast">
+<node CREATED="1718130019014" ID="Freemind_Link_230993388" MODIFIED="1718214209512" TEXT="Usado para fazer cast de objetos"/>
+<node CREATED="1718214210375" ID="Freemind_Link_1676253272" MODIFIED="1718214236653" TEXT="&#xda;til apenas para orientar as ferramentas de apoio ao desenvolvedor">
+<node CREATED="1718214237818" ID="Freemind_Link_1861920429" MODIFIED="1718214241929" TEXT="IDE&apos;s"/>
+<node CREATED="1718214242152" ID="Freemind_Link_146136846" MODIFIED="1718214247326" TEXT="lynt&apos;s"/>
+<node CREATED="1718214247560" ID="Freemind_Link_881458846" MODIFIED="1718214249499" TEXT="etc"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_902719455" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_900765045" MODIFIED="1718214307679" TEXT="var1 = obj1&#xa;var1 = cast(TipoX, var1)"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1718218196172" FOLDED="true" ID="Freemind_Link_284194512" MODIFIED="1718218199096" POSITION="right" TEXT="sqlite3">
+<node CREATED="1718218200299" ID="Freemind_Link_305332605" MODIFIED="1718218212675" TEXT="M&#xf3;dulo que prov&#xea; ferramentas de trabalho com o SGBD sqlite"/>
+<node CREATED="1609876661409" ID="Freemind_Link_52799044" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1553489196" MODIFIED="1718218224966" TEXT="import sqlite3"/>
+</node>
+<node CREATED="1609876566896" ID="Freemind_Link_1938011137" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1016479459" MODIFIED="1718219969531" TEXT="execute">
+<node CREATED="1609876580616" ID="Freemind_Link_504675163" MODIFIED="1718219978814" TEXT="Executa um comando DDL ou DML na base de dados"/>
+<node CREATED="1718220412872" ID="Freemind_Link_1369032799" MODIFIED="1718220427800" TEXT="Pode ou n&#xe3;o receber os par&#xe2;metros (quando usar os bindings)"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1063025735" MODIFIED="1718220511766" TEXT="Ex:">
+<node CREATED="1718220511747" FOLDED="true" ID="Freemind_Link_1677066648" MODIFIED="1718220525256" TEXT="Refer&#xea;ncia para os&#xa;exemplos abaixo:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1540835009" MODIFIED="1718220465791" TEXT="import sqlite3&#xa;import os&#xa;&#xa;ROOT_DIR = os.path.dirname(__file__)&#xa;DB_FILE = ROOT_DIR + &apos;/db.sqlite3&apos;&#xa;&#xa;try:&#xa;    conn = sqlite3.connect(DB_FILE)&#xa;    cursor = conn.cursor()&#xa;&#xa;    # Criando a minha tabela&#xa;    cursor.execute(&#xa;        &apos;CREATE TABLE IF NOT EXISTS customers(&apos;&#xa;        &apos; id INTEGER PRIMARY KEY AUTOINCREMENT,&apos;&#xa;        &apos; name TEXT ,&apos;&#xa;        &apos; weight REAL&apos;&#xa;        &apos;)&apos;&#xa;    )&#xa;&#xa;    # Comandos DML aqui&#xa;    ...&#xa;&#xa;    # Comitando minhas transa&#xe7;&#xf5;es&#xa;    conn.commit()&#xa;finally:&#xa;    cursor.close()&#xa;    conn.close()"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_935121374" MODIFIED="1718220484621" TEXT="    # Inserindo dados na tabela&#xa;    cursor.execute(&#xa;        &apos;INSERT INTO customers (name, weight) VALUES&apos;&#xa;        &apos;(&quot;Ana&quot;, 25),&apos;&#xa;        &apos;(&quot;Beto&quot;, 12.6),&apos;&#xa;        &apos;(&quot;Caio&quot;, 33.8)&apos;&#xa;    )">
+<node CREATED="1718220388925" ID="Freemind_Link_265095342" MODIFIED="1718220401523" TEXT="Vulner&#xe1;vel a SQL-Injection">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1194749346" MODIFIED="1718223751051" TEXT="    # Inserindo dados na tabela     cursor.execute(         &apos;INSERT INTO customers (name, weight) VALUES (?, ?)&apos;,         [&apos;Bruna&apos;, 35.9]     )">
+<node CREATED="1718220378713" ID="Freemind_Link_1828301528" MODIFIED="1718220382492" TEXT="Uso de statement"/>
+<node CREATED="1718220383289" ID="Freemind_Link_1450883704" MODIFIED="1718220386099" TEXT="Mais seguro"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1604214997" MODIFIED="1718223695878" TEXT="executemany">
+<node CREATED="1609876580616" ID="Freemind_Link_1671010026" MODIFIED="1718223729062" TEXT="Executa um comando DDL ou DML m&#xfa;ltiplas vezes&#xa;para cada posi&#xe7;&#xe3;o de um iterator recebido"/>
+<node CREATED="1609876605273" ID="Freemind_Link_866450328" MODIFIED="1718220511766" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1492927053" MODIFIED="1718223769591" TEXT="    # Inserindo muitos dados na tabela&#xa;    cursor.executemany(&#xa;        &apos;INSERT INTO customers (name, weight) VALUES (?, ?)&apos;,&#xa;        ((&apos;Bruna&apos;, 35.9), (&apos;Caio&apos;, 22.3), (&apos;Davi&apos;, 17), (&apos;Enio&apos;, 5.2))&#xa;    )&#xa;"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1247005660" MODIFIED="1718220001789" TEXT="commit">
+<node CREATED="1609876580616" ID="Freemind_Link_1008402004" MODIFIED="1718220008082" TEXT="Efetua o commit das opera&#xe7;&#xf5;es"/>
+<node CREATED="1609876605273" ID="Freemind_Link_498251330" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1360952443" MODIFIED="1718220036820" TEXT="    # Removendo todos os dados na tabela&#xa;    cursor.execute(&apos;DELETE FROM customers&apos;)&#xa;&#xa;    ...&#xa;&#xa;    # Comitando minhas transa&#xe7;&#xf5;es&#xa;    conn.commit()&#xa;"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1718203627473" FOLDED="true" ID="Freemind_Link_770001460" MODIFIED="1718203630564" POSITION="right" TEXT="pyinstaller">
+<node CREATED="1718203632251" ID="Freemind_Link_864425009" MODIFIED="1718203645363" TEXT="https://pyinstaller.org/en/stable/">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1718203641189" ID="Freemind_Link_1176572024" MODIFIED="1718203648482" TEXT="https://www.pythonguis.com/tutorials/packaging-pyside6-applications-windows-pyinstaller-installforge/">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1718203649177" ID="Freemind_Link_1271801954" MODIFIED="1718203666024" TEXT="Biblioteca de ferramentas de&#xa;empacotamento de aplica&#xe7;&#xf5;es python">
+<node CREATED="1718203667461" ID="Freemind_Link_32897716" MODIFIED="1718203679359" TEXT="Gera execut&#xe1;veis do S.O. em que o pacote foi gerado"/>
+<node CREATED="1718203685757" ID="Freemind_Link_879252568" MODIFIED="1718203693759" TEXT="O pacote gerado n&#xe3;o &#xe9; cross-platform"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_825055711" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1570774685" MODIFIED="1718204283212" TEXT="pyinstaller --name=&quot;Calculadora&quot; --noconfirm --onefile \&#xa;  --add-data=&apos;pasta_do_projeto/files/:files/&apos; \&#xa;  --icon=&apos;pasta_do_projeto/files/icon.png&apos; \&#xa;  --noconsole --clean --log-level=WARN \&#xa;  pasta_do_projeto/main.py"/>
+</node>
 </node>
 <node CREATED="1609876470660" ID="Freemind_Link_1952635201" MODIFIED="1609876747404" POSITION="right" TEXT="???">
 <node CREATED="1609876530394" ID="Freemind_Link_1734758861" MODIFIED="1609876749434" TEXT="???"/>

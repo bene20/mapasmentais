@@ -512,6 +512,18 @@
 </node>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1718129231932" ID="Freemind_Link_735597694" MODIFIED="1718129244736" POSITION="right" TEXT="eval">
+<node CREATED="1718129246881" ID="Freemind_Link_1350914858" MODIFIED="1718129255697" TEXT="Permite a execu&#xe7;&#xe3;o de um c&#xf3;digo montado dinamicamente"/>
+<node CREATED="1718129339895" ID="Freemind_Link_646127002" MODIFIED="1718129360771" TEXT="Esta fun&#xe7;&#xe3;o &#xe9; muito perigosa. Use-a com cuidado!">
+<icon BUILTIN="messagebox_warning"/>
+<icon BUILTIN="clanbomber"/>
+</node>
+<node CREATED="1716913456578" ID="Freemind_Link_341538372" MODIFIED="1716913457927" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1716913356423" ID="Freemind_Link_170415936" MODIFIED="1718129317275" TEXT="meucomando=&apos;print(1234)&apos;&#xa;&#xa;print(&apos;Vou executar o comando:&apos;, meucomando)&#xa;eval(meucomando)">
+<node CREATED="1716913547688" ID="Freemind_Link_1623244254" MODIFIED="1718129326907" TEXT="Resultado: Vou executar o comando: 1234"/>
+</node>
+</node>
+</node>
 <node CREATED="1717356123633" FOLDED="true" ID="Freemind_Link_1583258779" MODIFIED="1717356127595" POSITION="right" TEXT="Dunder methods">
 <node CREATED="1717356602734" ID="Freemind_Link_1504271931" MODIFIED="1717356607254" TEXT="https://rszalski.github.io/magicmethods/">
 <icon BUILTIN="attach"/>
