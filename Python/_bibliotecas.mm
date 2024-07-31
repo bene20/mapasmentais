@@ -126,6 +126,894 @@
 </node>
 </node>
 </node>
+<node CREATED="1717348778077" FOLDED="true" ID="Freemind_Link_18217416" MODIFIED="1717348779380" POSITION="right" TEXT="ABC">
+<node CREATED="1717348780257" ID="Freemind_Link_958663719" MODIFIED="1717348787634" TEXT="Abstract Base Class"/>
+<node CREATED="1717348789616" ID="Freemind_Link_1897588557" MODIFIED="1717348798540" TEXT="M&#xf3;dulo para cria&#xe7;&#xe3;o de classes abstratas"/>
+<node CREATED="1717348800887" ID="Freemind_Link_596438753" LINK="_tiposDados.mm" MODIFIED="1717348826814" TEXT="Ver mapa &apos;Tipos de dados&apos; -&gt; CLasse"/>
+</node>
+<node CREATED="1717698224217" FOLDED="true" ID="Freemind_Link_328447137" MODIFIED="1717698226398" POSITION="right" TEXT="argparse">
+<node CREATED="1717698268086" ID="Freemind_Link_897596979" MODIFIED="1717698269068" TEXT="https://docs.python.org/3/library/argparse.html#module-argparse"/>
+<node CREATED="1717698227298" ID="Freemind_Link_145286280" MODIFIED="1717698241163" TEXT="Biblioteca usada para tratar argumentos recebidos na aplica&#xe7;&#xe3;o"/>
+</node>
+<node CREATED="1717712275199" FOLDED="true" ID="Freemind_Link_783947560" MODIFIED="1717712277501" POSITION="right" TEXT="bs4">
+<node CREATED="1717712352637" ID="Freemind_Link_1702599356" MODIFIED="1717712365450" TEXT="Ferramenta de web scraping"/>
+<node CREATED="1717712278487" ID="Freemind_Link_616518884" MODIFIED="1717712299690" TEXT="Biblioteca de fun&#xe7;&#xf5;es &#xfa;teis para raspar conte&#xfa;do da internet"/>
+<node CREATED="1609876661409" ID="Freemind_Link_1109264056" MODIFIED="1717700128303" TEXT="Instala&#xe7;&#xe3;o">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1117602826" MODIFIED="1717712313992" TEXT="pip install bs4"/>
+</node>
+<node CREATED="1609876566896" ID="Freemind_Link_1555085928" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1759300080" MODIFIED="1717712397740" TEXT="BeautifulSoup">
+<node CREATED="1717712556648" ID="Freemind_Link_1375104210" MODIFIED="1717712557118" TEXT="https://pypi.org/project/beautifulsoup4/"/>
+<node CREATED="1717712568268" ID="Freemind_Link_1607274556" MODIFIED="1717712569079" TEXT="https://beautiful-soup-4.readthedocs.io/en/latest/"/>
+<node CREATED="1609876580616" ID="Freemind_Link_1386059753" MODIFIED="1717712428850" TEXT="Permite interpretar dados de conte&#xfa;do HTML em formato de objetos Python"/>
+<node CREATED="1717713164816" ID="Freemind_Link_534663070" MODIFIED="1717713181136" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_884480536" MODIFIED="1717713223192" TEXT="select">
+<node CREATED="1717713223799" ID="Freemind_Link_1411705895" MODIFIED="1717713234841" TEXT="Seleciona itens usando seletor css"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_331311448" MODIFIED="1717713241281" TEXT="select_one">
+<node CREATED="1717713223799" ID="Freemind_Link_183678275" MODIFIED="1717713249667" TEXT="Seleciona um &#xfa;nico item usando seletor css"/>
+</node>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_954741375" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_463760220" MODIFIED="1717713171672" TEXT="import requests&#xa;from bs4 import BeautifulSoup&#xa;&#xa;url = &apos;http://localhost:3333/&apos;&#xa;&#xa;response = requests.get(url)&#xa;raw_html = response.text&#xa;parsed_html = BeautifulSoup(raw_html, &apos;html.parser&apos;)&#xa;print(parsed_html.title)&#xa;print(parsed_html.title.text)&#xa;&#xa;seletor_top3_jobs = parsed_html.select_one(&apos;#top-3 &gt; div &gt; div &gt; header &gt; h2&apos;)&#xa;print(seletor_top3_jobs)&#xa;print(seletor_top3_jobs.text)&#xa;">
+<node CREATED="1717713502840" ID="Freemind_Link_1231965107" MODIFIED="1717713544541" TEXT="Adicione o par&#xe2;metro &quot;from_encoding=&apos;utf-8&apos;&quot; na chamada&#xa;a BeautifulSoup caso tenha problemas de encoding"/>
+<node CREATED="1717702533111" ID="Freemind_Link_1886934475" MODIFIED="1717713264154" TEXT="Resultado:&#xa;&lt;title&gt;Site&lt;/title&gt;&#xa;Site&#xa;&lt;h2&gt;TOP 3 jobs&lt;/h2&gt;&#xa;TOP 3 jobs"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717613124486" FOLDED="true" ID="Freemind_Link_191925553" MODIFIED="1717615056518" POSITION="right" TEXT="calendar">
+<node CREATED="1717613128612" ID="Freemind_Link_940452594" MODIFIED="1717613129561" TEXT="https://docs.python.org/3/library/calendar.html#module-calendar"/>
+<node CREATED="1717613130157" ID="Freemind_Link_489998162" MODIFIED="1717613138473" TEXT="Permite opera&#xe7;&#xf5;es de calend&#xe1;rio">
+<node CREATED="1717613139045" ID="Freemind_Link_964491632" MODIFIED="1717613140832" TEXT="Ex:">
+<node CREATED="1717613141621" ID="Freemind_Link_188884272" MODIFIED="1717613149713" TEXT="Pegar o &#xfa;ltimo dia do m&#xea;s"/>
+</node>
+</node>
+<node CREATED="1717613264827" ID="Freemind_Link_1195474163" MODIFIED="1717613265538" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717613266353" ID="Freemind_Link_741846818" MODIFIED="1717613281792" TEXT="import calendar&#xa;&#xa;print(calendar.calendar(2024))">
+<node CREATED="1717613282852" ID="Freemind_Link_668390115" MODIFIED="1717613289758" TEXT="Resultado: imprime o calend&#xe1;rio do ano 2024"/>
+</node>
+<node COLOR="#0000ff" CREATED="1717613266353" ID="Freemind_Link_1549003220" MODIFIED="1717613303678" TEXT="import calendar&#xa;&#xa;print(calendar.month(2024,6))">
+<node CREATED="1717613282852" ID="Freemind_Link_190221785" MODIFIED="1717613297767" TEXT="Resultado: imprime o calend&#xe1;rio de junho do ano 2024"/>
+</node>
+</node>
+<node CREATED="1609876566896" ID="Freemind_Link_623730130" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1880723109" MODIFIED="1717613388685" TEXT="monthrange">
+<node CREATED="1717613506246" ID="Freemind_Link_1428525782" MODIFIED="1717613633278" TEXT="O dia da semana &#xe9; tal que 0=segunda-feira e 6=domingo">
+<arrowlink DESTINATION="Freemind_Link_430011416" ENDARROW="Default" ENDINCLINATION="429;0;" ID="Freemind_Arrow_Link_1110079957" STARTARROW="None" STARTINCLINATION="429;0;"/>
+</node>
+<node CREATED="1609876580616" ID="Freemind_Link_735305697" MODIFIED="1717613438916" TEXT="Retorna o &#xfa;ltimo dia do m&#xea;s 12/2022"/>
+<node CREATED="1609876605273" ID="Freemind_Link_43485" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717613266353" ID="Freemind_Link_430328973" MODIFIED="1717613433180" TEXT="import calendar&#xa;&#xa;print(calendar.monthrange(2022,12))">
+<node CREATED="1717613282852" ID="Freemind_Link_1589887522" MODIFIED="1717613503765" TEXT="Resultado: &#xa;(3, 31)&#xa;31 &#xe9; o dia do M&#x1ebd;s&#xa;3 &#xe9; o dia da semana (no caso, quarta-feira)"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717613616253" ID="Freemind_Link_1389079763" MODIFIED="1717613617820" TEXT="Atributos">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_430011416" MODIFIED="1717613633277" TEXT="day_name">
+<node CREATED="1717613506246" ID="Freemind_Link_1634803143" MODIFIED="1717613625702" TEXT="Lista dos dias da semana"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1081506856" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717613266353" ID="Freemind_Link_391476670" MODIFIED="1717613645469" TEXT="import calendar&#xa;&#xa;print(list(calendar.day_name))">
+<node CREATED="1717613282852" ID="Freemind_Link_865256965" MODIFIED="1717613659126" TEXT="Resultado: &#xa;[&apos;Monday&apos;, &apos;Tuesday&apos;, &apos;Wednesday&apos;, &apos;Thursday&apos;, &apos;Friday&apos;, &apos;Saturday&apos;, &apos;Sunday&apos;]"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717861711311" FOLDED="true" ID="Freemind_Link_36559580" MODIFIED="1717861713038" POSITION="right" TEXT="collections">
+<node CREATED="1717861718121" ID="Freemind_Link_623876679" MODIFIED="1717861755317" TEXT="Biblioteca com funcionalidaes&#xa;de trabalho com cole&#xe7;&#xf5;es">
+<node CREATED="1717861733505" ID="Freemind_Link_452103954" MODIFIED="1717861740285" TEXT="Pilhas"/>
+<node CREATED="1717861741162" ID="Freemind_Link_437516476" MODIFIED="1717861744716" TEXT="Listas encadeadas"/>
+<node CREATED="1717861745041" ID="Freemind_Link_1683006532" MODIFIED="1717861749686" TEXT="Listas duplamente encadeadas"/>
+</node>
+<node CREATED="1609876661409" ID="Freemind_Link_1875309231" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1451902077" MODIFIED="1717861770092" TEXT="from collections import deque"/>
+</node>
+<node CREATED="1609876566896" ID="Freemind_Link_238210676" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1586005690" MODIFIED="1609876761667" TEXT="???">
+<node CREATED="1609876580616" ID="Freemind_Link_973812105" MODIFIED="1609876767449" TEXT="???"/>
+<node CREATED="1609876605273" ID="Freemind_Link_572572751" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1876174539" MODIFIED="1609876764389" TEXT="???"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1716599127736" FOLDED="true" ID="Freemind_Link_594366204" MODIFIED="1717773725492" POSITION="right" TEXT="copy">
+<icon BUILTIN="button_ok"/>
+<node CREATED="1716599130432" ID="Freemind_Link_1252210564" MODIFIED="1716599138203" TEXT="Bibiolteca de c&#xf3;pia de objetos mut&#xe1;veis"/>
+<node CREATED="1716489302508" ID="Freemind_Link_1642009796" MODIFIED="1716489304527" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_384772239" MODIFIED="1716599147802" TEXT="copy">
+<node CREATED="1609876580616" ID="Freemind_Link_85310645" MODIFIED="1716599162684" TEXT="Realiza c&#xf3;pia rasa de objetos mut&#xe1;veis"/>
+<node CREATED="1716599169015" ID="Freemind_Link_601193253" MODIFIED="1716599180339" TEXT="Semelhante ao m&#xe9;todo copy() dos objetos mut&#xe1;veis"/>
+<node CREATED="1716599614840" ID="Freemind_Link_90744689" MODIFIED="1716599618859" TEXT="shallow copy"/>
+<node CREATED="1609879856862" ID="Freemind_Link_904295457" MODIFIED="1609879858136" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1983409433" MODIFIED="1716599412063" TEXT="import copy&#xa;p1=dict(nome=&apos;Ana&apos;, idade=25, dias=[1,2,3])&#xa;p2=copy.copy(p1)&#xa;p1[&apos;dias&apos;][1]=20&#xa;print(p1)&#xa;print(p2)">
+<node CREATED="1716570223083" ID="Freemind_Link_1153747739" MODIFIED="1716598877590" TEXT="Ambos ter&#xe3;o o dado [&apos;dias&apos;][1] alterado para 20"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1960143203" MODIFIED="1716599421730" TEXT="deepcopy">
+<node CREATED="1609876580616" ID="Freemind_Link_1873836450" MODIFIED="1716599429810" TEXT="Realiza c&#xf3;pia profunda de objetos mut&#xe1;veis"/>
+<node CREATED="1609879856862" ID="Freemind_Link_162076155" MODIFIED="1609879858136" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1691858722" MODIFIED="1716599478106" TEXT="import copy&#xa;p1=dict(nome=&apos;Ana&apos;, idade=25, dias=[1,2,3])&#xa;p2=copy.deepcopy(p1)&#xa;p1[&apos;dias&apos;][1]=20&#xa;print(p1)&#xa;print(p2)">
+<node CREATED="1716570223083" ID="Freemind_Link_1637517444" MODIFIED="1716599503674" TEXT="Apenas a vari&#xe1;vel p1 ter&#xe1; o dado [&apos;dias&apos;][1] alterado para 20"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717687344962" FOLDED="true" ID="Freemind_Link_1997026584" MODIFIED="1717687346420" POSITION="right" TEXT="csv">
+<node CREATED="1609876530394" ID="Freemind_Link_106655148" MODIFIED="1717687356339" TEXT="Biblioteca de fun&#xe7;&#xf5;es para manipular arquivos csv"/>
+<node CREATED="1609876661409" ID="Freemind_Link_1361625711" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1257648852" MODIFIED="1717687361716" TEXT="import csv"/>
+</node>
+<node CREATED="1609876566896" ID="Freemind_Link_1273086161" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" FOLDED="true" ID="Freemind_Link_1115593476" MODIFIED="1717687387440" TEXT="reader">
+<node CREATED="1609876580616" ID="Freemind_Link_590152065" MODIFIED="1717687398929" TEXT="L&#xea; um arquivo csv"/>
+<node CREATED="1609876605273" ID="Freemind_Link_104272511" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1843456781" MODIFIED="1717687604070" TEXT="import csv&#xa;&#xa;with open(&apos;aula293.csv&apos;, &apos;r&apos;) as arqcsv:&#xa;    leitor = csv.reader(arqcsv)&#xa;&#xa;    for linha in leitor:&#xa;        print(linha[0], linha[1], linha[2])">
+<node CREATED="1717687610060" ID="Freemind_Link_1363384455" MODIFIED="1717687612416" TEXT="Para o csv:">
+<node CREATED="1717687612925" ID="Freemind_Link_344632072" MODIFIED="1717688395306" TEXT="Nome,Idade,Endere&#xe7;o&#xa;Ana,12,&quot;Rua Z, 23, &quot;&quot;Centro&quot;&quot;&quot;&#xa;Beto,27,&quot;Rua A, 35, &quot;&quot;Sul&quot;&quot;&quot;&#xa;Caio,32,&quot;Ruz X, 321, &quot;&quot;Norte&quot;&quot;&quot;&#xa;"/>
+</node>
+<node CREATED="1717687622074" ID="Freemind_Link_856696768" MODIFIED="1717688426211" TEXT="Resultado:&#xa;Nome Idade Endere&#xe7;o&#xa;Ana 12 Rua Z, 23, &quot;Centro&quot;&#xa;Beto 27 Rua A, 35, &quot;Sul&quot;&#xa;Caio 32 Ruz X, 321, &quot;Norte&quot;"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" FOLDED="true" ID="Freemind_Link_1504077213" MODIFIED="1717687687686" TEXT="Dictreader">
+<node CREATED="1609876580616" ID="Freemind_Link_37274868" MODIFIED="1717687694406" TEXT="L&#xea; um arquivo csv e o carrega em um dict"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1250397789" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1027658888" MODIFIED="1717687714874" TEXT="import csv&#xa;&#xa;with open(&apos;aula293.csv&apos;, &apos;r&apos;) as arqcsv:&#xa;    leitor = csv.DictReader(arqcsv)&#xa;&#xa;    for linha in leitor:&#xa;        print(linha">
+<node CREATED="1717687610060" ID="Freemind_Link_1339867084" MODIFIED="1717687612416" TEXT="Para o csv:">
+<node CREATED="1717687612925" ID="Freemind_Link_1493928961" MODIFIED="1717688398869" TEXT="Nome,Idade,Endere&#xe7;o&#xa;Ana,12,&quot;Rua Z, 23, &quot;&quot;Centro&quot;&quot;&quot;&#xa;Beto,27,&quot;Rua A, 35, &quot;&quot;Sul&quot;&quot;&quot;&#xa;Caio,32,&quot;Ruz X, 321, &quot;&quot;Norte&quot;&quot;&quot;&#xa;"/>
+</node>
+<node CREATED="1717687622074" ID="Freemind_Link_1797248795" MODIFIED="1717688434476" TEXT="Resultado:&#xa;{&apos;Nome&apos;: &apos;Ana&apos;, &apos;Idade&apos;: &apos;12&apos;, &apos;Endere&#xe7;o&apos;: &apos;Rua Z, 23, &quot;Centro&quot;&apos;}&#xa;{&apos;Nome&apos;: &apos;Beto&apos;, &apos;Idade&apos;: &apos;27&apos;, &apos;Endere&#xe7;o&apos;: &apos;Rua A, 35, &quot;Sul&quot;&apos;}&#xa;{&apos;Nome&apos;: &apos;Caio&apos;, &apos;Idade&apos;: &apos;32&apos;, &apos;Endere&#xe7;o&apos;: &apos;Ruz X, 321, &quot;Norte&quot;&apos;}"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" FOLDED="true" ID="Freemind_Link_255229352" MODIFIED="1717689009965" TEXT="writer">
+<node CREATED="1609876580616" ID="Freemind_Link_1664461941" MODIFIED="1717689020796" TEXT="Grava dados em arquivo csv"/>
+<node CREATED="1609876605273" ID="Freemind_Link_687107024" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_723098748" MODIFIED="1717689303416" TEXT="import csv&#xa;&#xa;csv_string = [&#xa;    [&apos;Nome&apos;,&apos;Idade&apos;,&apos;Endere&#xe7;o&apos;],&#xa;    [&apos;Ana&apos;,&apos;12&apos;,&apos;Rua Z, 23, &quot;Centro&quot;&apos;],&#xa;    [&apos;Beto&apos;,&apos;27&apos;,&apos;Rua A, 35, &quot;Sul&quot;&apos;],&#xa;    [&apos;Caio&apos;,&apos;32&apos;,&apos;Ruz X, 321, &quot;Norte&quot;&apos;]&#xa;]&#xa;&#xa;with open(&apos;aula293_b.csv&apos;, &apos;w&apos;) as arqcsv:&#xa;    escritor = csv.writer(arqcsv)&#xa;&#xa;    for item in csv_string:&#xa;        escritor.writerow(item)">
+<node CREATED="1717687610060" ID="Freemind_Link_1324006438" MODIFIED="1717689033965" TEXT="CSV gerado:">
+<node CREATED="1717687612925" ID="Freemind_Link_1600245071" MODIFIED="1717689072789" TEXT="Nome,Idade,Endere&#xe7;o&#xa;Ana,12,&quot;Rua Z, 23, &quot;&quot;Centro&quot;&quot;&quot;&#xa;Beto,27,&quot;Rua A, 35, &quot;&quot;Sul&quot;&quot;&quot;&#xa;Caio,32,&quot;Ruz X, 321, &quot;&quot;Norte&quot;&quot;&quot;&#xa;"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" FOLDED="true" ID="Freemind_Link_278799306" MODIFIED="1717689591810" TEXT="Dictwriter">
+<node CREATED="1609876580616" ID="Freemind_Link_1168008586" MODIFIED="1717689597721" TEXT="Grava dados de um dict em arquivo csv"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1733523186" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1912898167" MODIFIED="1717689608739" TEXT="import csv&#xa;&#xa;csv_dict = [&#xa;    {&apos;Nome&apos;: &apos;Ana&apos;, &apos;Idade&apos;: &apos;12&apos;, &apos;Endere&#xe7;o&apos;: &apos;Rua Z, 23, &quot;Centro&quot;&apos;},&#xa;    {&apos;Nome&apos;: &apos;Beto&apos;, &apos;Idade&apos;: &apos;27&apos;, &apos;Endere&#xe7;o&apos;: &apos;Rua A, 35, &quot;Sul&quot;&apos;},&#xa;    {&apos;Nome&apos;: &apos;Caio&apos;, &apos;Idade&apos;: &apos;32&apos;, &apos;Endere&#xe7;o&apos;: &apos;Ruz X, 321, &quot;Norte&quot;&apos;}&#xa;]&#xa;&#xa;with open(&apos;aula293_c.csv&apos;, &apos;w&apos;) as arqcsv:&#xa;    escritor = csv.DictWriter(arqcsv, fieldnames=csv_dict[0].keys())&#xa;    escritor.writeheader()&#xa;    for item in csv_dict:&#xa;        escritor.writerow(item)        ">
+<node CREATED="1717687610060" ID="Freemind_Link_1937578147" MODIFIED="1717689033965" TEXT="CSV gerado:">
+<node CREATED="1717687612925" ID="Freemind_Link_1898097586" MODIFIED="1717689072789" TEXT="Nome,Idade,Endere&#xe7;o&#xa;Ana,12,&quot;Rua Z, 23, &quot;&quot;Centro&quot;&quot;&quot;&#xa;Beto,27,&quot;Rua A, 35, &quot;&quot;Sul&quot;&quot;&quot;&#xa;Caio,32,&quot;Ruz X, 321, &quot;&quot;Norte&quot;&quot;&quot;&#xa;"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717548619155" FOLDED="true" ID="Freemind_Link_897129555" MODIFIED="1717550948199" POSITION="right" TEXT="dataclasses">
+<node CREATED="1717549938337" ID="Freemind_Link_891634692" MODIFIED="1717549944938" TEXT="Inclu&#xed;do na vers&#xe3;o 3.7 do Python"/>
+<node CREATED="1717550950603" ID="Freemind_Link_1623552075" MODIFIED="1717550952584" TEXT="dataclass">
+<node CREATED="1717548622416" ID="Freemind_Link_878773725" MODIFIED="1717548662788" TEXT="Facilita o processo de cria&#xe7;&#xe3;o de classes, implementando&#xa;de forma simples as funcionalidades mais comuns">
+<node CREATED="1717548641561" ID="Freemind_Link_1312917678" MODIFIED="1717548642324" TEXT="Ex:">
+<node CREATED="1717548643811" ID="Freemind_Link_658843457" MODIFIED="1717548646190" TEXT="getter&apos;s"/>
+<node CREATED="1717548646418" ID="Freemind_Link_1941194082" MODIFIED="1717548648205" TEXT="setter&apos;s"/>
+<node CREATED="1717548648722" ID="Freemind_Link_1560385770" MODIFIED="1717549862790" TEXT="repr&apos;s"/>
+<node CREATED="1717548651503" ID="Freemind_Link_1304488375" MODIFIED="1717548655451" TEXT="etc"/>
+</node>
+</node>
+<node CREATED="1717550419491" ID="Freemind_Link_1295260226" MODIFIED="1717550421131" TEXT="Argumentos">
+<node COLOR="#990000" CREATED="1717550421637" ID="Freemind_Link_1052368538" MODIFIED="1717550450030" TEXT="init">
+<node CREATED="1717550425415" ID="Freemind_Link_867659241" MODIFIED="1717550441778" TEXT="Indica se quero ou n&#xe3;o que o dataclass implemente o m&#xe9;todo __init__"/>
+<node CREATED="1717550451636" ID="Freemind_Link_1401412919" MODIFIED="1717550458834" TEXT="Valor default: True"/>
+</node>
+<node COLOR="#990000" CREATED="1717550477302" ID="Freemind_Link_557439650" MODIFIED="1717550480362" TEXT="eq">
+<node CREATED="1717550425415" ID="Freemind_Link_93948903" MODIFIED="1717550496672" TEXT="Indica se quero ou n&#xe3;o que o dataclass implemente o m&#xe9;todo __eq__"/>
+<node CREATED="1717550451636" ID="Freemind_Link_150554842" MODIFIED="1717550458834" TEXT="Valor default: True"/>
+</node>
+<node COLOR="#990000" CREATED="1717550555082" ID="Freemind_Link_1639622388" MODIFIED="1717550557924" TEXT="frozen">
+<node CREATED="1717550558576" ID="Freemind_Link_1757314323" MODIFIED="1717550577189" TEXT="Indica se a classe decorada &#xe9; congelada ou n&#xe3;o (se aceita ou n&#xe3;o altera&#xe7;&#xe3;o)"/>
+<node CREATED="1717550584672" ID="Freemind_Link_133805228" MODIFIED="1717550629620" TEXT="Quando uma clase &#xe9; &apos;congelada&apos;, voc&#xea; n&#xe3;o poder&#xe1; alterar o valor de seus&#xa;atributos. No m&#xe1;ximo poder&#xe1; fazer uma c&#xf3;pia modificada do objeto original."/>
+<node CREATED="1717550451636" ID="Freemind_Link_1439754818" MODIFIED="1717550583071" TEXT="Valor default: False"/>
+</node>
+<node COLOR="#990000" CREATED="1717550755599" ID="Freemind_Link_1373375688" MODIFIED="1717550759664" TEXT="order">
+<node CREATED="1717550760095" ID="Freemind_Link_1356545179" MODIFIED="1717550771219" TEXT="Ativa a ordena&#xe7;&#xe3;o dos objetos da classe">
+<node CREATED="1717550772028" ID="Freemind_Link_1873199718" MODIFIED="1717550789402" TEXT="Os objetos ser&#xe3;o ordenados pelos atributos, na ordem em que s&#xe3;o declarados na classe"/>
+<node CREATED="1717550791432" ID="Freemind_Link_578925037" MODIFIED="1717550804915" TEXT="O m&#xe9;todo &apos;sorted&apos; passa a funcionar para uma lista dessa classe"/>
+</node>
+<node CREATED="1717550451636" ID="Freemind_Link_391425278" MODIFIED="1717550583071" TEXT="Valor default: False"/>
+</node>
+<node CREATED="1717550501629" ID="Freemind_Link_533352939" MODIFIED="1717550502352" TEXT="etc"/>
+</node>
+<node CREATED="1717551235166" ID="Freemind_Link_1265397894" MODIFIED="1717551695123" TEXT="Permite declara&#xe7;&#xe3;o&#xa;de valores padr&#xe3;o">
+<node CREATED="1717551244567" ID="Freemind_Link_1762719572" MODIFIED="1717551528164" TEXT="Para os tipos imut&#xe1;veis">
+<node CREATED="1717551252366" ID="Freemind_Link_1414334750" MODIFIED="1717551253201" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1368611181" MODIFIED="1717551289815" TEXT="from dataclasses import dataclass&#xa;&#xa;@dataclass&#xa;class Pessoa():&#xa;    nome: str = &apos;Pedro&apos;&#xa;    idade: int = 17&#xa;&#xa;p1 = Pessoa()&#xa;print(p1, sep=&apos;\n&apos;)">
+<node CREATED="1717549730182" ID="Freemind_Link_1370999324" MODIFIED="1717551341326" TEXT="Resultado:&#xa;Pessoa(nome=&apos;Pedro&apos;, idade=17)"/>
+</node>
+</node>
+</node>
+<node CREATED="1717551461259" ID="Freemind_Link_1260749783" MODIFIED="1717551511965" TEXT="Para tipos mut&#xe1;veis">
+<node CREATED="1717551512938" ID="Freemind_Link_402335404" MODIFIED="1717551722922" TEXT="Requer o uso do m&#xf3;dulo &apos;field&apos;">
+<arrowlink DESTINATION="Freemind_Link_994299774" ENDARROW="Default" ENDINCLINATION="596;0;" ID="Freemind_Arrow_Link_1262304707" STARTARROW="None" STARTINCLINATION="596;0;"/>
+</node>
+<node CREATED="1717551252366" ID="Freemind_Link_510168483" MODIFIED="1717551253201" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_437140022" MODIFIED="1717551609680" TEXT="from dataclasses import dataclass, field&#xa;&#xa;@dataclass&#xa;class Pessoa():&#xa;    nome: str = &apos;Pedro&apos;&#xa;    idade: int = 17&#xa;    endenrecos: list[str] = field(default_factory=list)&#xa;&#xa;p1 = Pessoa()&#xa;print(p1, sep=&apos;\n&apos;)">
+<node CREATED="1717549730182" ID="Freemind_Link_1983469652" MODIFIED="1717551601386" TEXT="Resultado:&#xa;Pessoa(nome=&apos;Pedro&apos;, idade=17, endenrecos=[])"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717548666074" FOLDED="true" ID="Freemind_Link_1623273055" MODIFIED="1717548666829" TEXT="Ex:">
+<node CREATED="1717548671801" ID="Freemind_Link_11048511" MODIFIED="1717548678878" TEXT="Classe feita na m&#xe3;o">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_3429281" MODIFIED="1717549721966" TEXT="&#xa;class Pessoa():&#xa;    def __init__(self, nome: str, idade: int) -&gt; None:&#xa;        self._nome = nome&#xa;        self._idade = idade&#xa;&#xa;    @property&#xa;    def nome(self):&#xa;        return self._nome&#xa;    &#xa;    @nome.setter&#xa;    def nome(self, nome: str):&#xa;        self._nome = nome&#xa;&#xa;    @property&#xa;    def idade(self):&#xa;        return self._idade&#xa;    &#xa;    @idade.setter&#xa;    def idade(self, idade: int):&#xa;        self._idade = idade&#xa;&#xa;    def __repr__(self) -&gt; str:&#xa;        class_name = type(self).__name__&#xa;        attrs = f&apos;(nome={self._nome!r}, idade={self._idade!r})&apos;&#xa;        return f&apos;{class_name}{attrs}&apos;&#xa;    &#xa;p1 = Pessoa(&apos;Ana&apos;, 15)&#xa;print(p1, sep=&apos;\n&apos;)">
+<node CREATED="1717549730182" ID="Freemind_Link_742270836" MODIFIED="1717549735935" TEXT="Resultado:&#xa;Pessoa(nome=&apos;Ana&apos;, idade=15)"/>
+</node>
+</node>
+<node CREATED="1717548681241" ID="Freemind_Link_751499711" MODIFIED="1717548688021" TEXT="Classe feita via decorator">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1005639739" MODIFIED="1717549843130" TEXT="from dataclasses import dataclass&#xa;&#xa;@dataclass&#xa;class Pessoa():&#xa;    nome: str&#xa;    idade: int&#xa;&#xa;p1 = Pessoa(&apos;Ana&apos;, 15)&#xa;print(p1, sep=&apos;\n&apos;)">
+<node CREATED="1717549730182" ID="Freemind_Link_37731875" MODIFIED="1717549735935" TEXT="Resultado:&#xa;Pessoa(nome=&apos;Ana&apos;, idade=15)"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_193370837" MODIFIED="1717550353167" TEXT="from dataclasses import dataclass&#xa;&#xa;@dataclass(init=False&#xa;class Pessoa():&#xa;    nome: str&#xa;    idade: int&#xa;&#xa;    def __init__(self, nome: str, idade: int):&#xa;        self._nome = nome&#xa;        self._idade = idade&#xa;&#xa;p1 = Pessoa(&apos;Ana&apos;, 15)&#xa;print(p1, sep=&apos;\n&apos;)">
+<node CREATED="1717550359798" ID="Freemind_Link_1866446607" MODIFIED="1717550376700" TEXT="Aqui eu quis implementar o meu pr&#xf3;prio __init__ e n&#xe3;o deix&#xe1;-lo a cargo do dataclass"/>
+<node CREATED="1717549730182" ID="Freemind_Link_649933515" MODIFIED="1717549735935" TEXT="Resultado:&#xa;Pessoa(nome=&apos;Ana&apos;, idade=15)"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717551700374" ID="Freemind_Link_994299774" MODIFIED="1717551722920" TEXT="field">
+<node CREATED="1717551702674" ID="Freemind_Link_1193431398" MODIFIED="1717551710920" TEXT="Permite configurar os campos no dataclass"/>
+<node CREATED="1717551712446" ID="Freemind_Link_1171189277" MODIFIED="1717551718073" TEXT="&#xc9; poderoso. Vale ler a documenta&#xe7;&#xe3;o"/>
+</node>
+<node CREATED="1717550965548" ID="Freemind_Link_320390920" MODIFIED="1717550967344" TEXT="asdict">
+<node CREATED="1717550967884" ID="Freemind_Link_864767978" MODIFIED="1717550984102" TEXT="Converte uma classe para um dicion&#xe1;rio"/>
+<node CREATED="1717551054499" ID="Freemind_Link_801621370" MODIFIED="1717551055230" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717551056061" ID="Freemind_Link_1046980" MODIFIED="1717551136342" TEXT="from dataclasses import dataclass, asdict&#xa;&#xa;@dataclass&#xa;class Pessoa():&#xa;    nome: str&#xa;    idade: int&#xa;&#xa;p1 = Pessoa(&apos;Ana&apos;, 15)&#xa;print(p1, sep=&apos;\n&apos;)&#xa;print(asdict(p1))">
+<node CREATED="1717551146717" ID="Freemind_Link_871903450" MODIFIED="1717551154258" TEXT="Resultado:&#xa;Pessoa(nome=&apos;Ana&apos;, idade=15)&#xa;{&apos;nome&apos;: &apos;Ana&apos;, &apos;idade&apos;: 15}"/>
+</node>
+</node>
+</node>
+<node CREATED="1717550978530" ID="Freemind_Link_1823514856" MODIFIED="1717550979798" TEXT="astuple">
+<node CREATED="1717550967884" ID="Freemind_Link_1634836662" MODIFIED="1717550992574" TEXT="Converte uma classe para uma tupla"/>
+<node CREATED="1717551054499" ID="Freemind_Link_362337941" MODIFIED="1717551055230" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717551056061" ID="Freemind_Link_1761897636" MODIFIED="1717551169809" TEXT="from dataclasses import dataclass, astuple&#xa;&#xa;@dataclass&#xa;class Pessoa():&#xa;    nome: str&#xa;    idade: int&#xa;&#xa;p1 = Pessoa(&apos;Ana&apos;, 15)&#xa;print(p1, sep=&apos;\n&apos;)&#xa;print(astuple(p1))">
+<node CREATED="1717551146717" ID="Freemind_Link_315884687" MODIFIED="1717551182837" TEXT="Resultado:&#xa;Pessoa(nome=&apos;Ana&apos;, idade=15)&#xa;(&apos;Ana&apos;, 15)"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717609550872" FOLDED="true" ID="Freemind_Link_247897315" MODIFIED="1717609552370" POSITION="right" TEXT="datetime">
+<node CREATED="1717609856640" ID="Freemind_Link_689711760" MODIFIED="1717609857383" TEXT="https://docs.python.org/3/library/datetime.html#module-datetime"/>
+<node CREATED="1717610054515" ID="Freemind_Link_366104311" MODIFIED="1717610068664" TEXT="Biblioteca &#xfa;til para lidar com data e hora"/>
+<node CREATED="1609876661409" ID="Freemind_Link_1371959802" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1733174951" MODIFIED="1717609578081" TEXT="import datetime"/>
+</node>
+<node CREATED="1609876566896" ID="Freemind_Link_1077242059" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1041637939" MODIFIED="1717610243094" TEXT="datetime">
+<node COLOR="#0000ff" CREATED="1717610243038" ID="Freemind_Link_871321609" MODIFIED="1717610271877" TEXT="now">
+<node CREATED="1717610407055" ID="Freemind_Link_1522322593" MODIFIED="1717610449754" TEXT="&#xc9; importante us&#xe1;-lo&#xa;com o TimeZone">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1717610418399" ID="Freemind_Link_1023963403" MODIFIED="1717610442547" TEXT="Para tal, recomenda-se&#xa;usar a biblioteca pytz">
+<node CREATED="1717610734079" ID="Freemind_Link_1807596668" MODIFIED="1717610740748" TEXT="Instala&#xe7;&#xe3;o do pytz:">
+<node COLOR="#0000ff" CREATED="1717610202053" ID="Freemind_Link_1649107348" MODIFIED="1717610489114" TEXT="pip instal pytz types-pytz&#xa;&#xa;"/>
+<node COLOR="#0000ff" CREATED="1717610202053" ID="Freemind_Link_1842726807" MODIFIED="1717610720670" TEXT="python -m pip instal pytz types-pytz  "/>
+</node>
+<node CREATED="1717610261514" ID="Freemind_Link_1456365234" MODIFIED="1717610262582" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717610202053" ID="Freemind_Link_662477749" MODIFIED="1717610854837" TEXT="from datetime import datetime&#xa;from pytz import timezone&#xa;&#xa;date = datetime.now(timezone(&apos;America/Sao_Paulo&apos;))&#xa;print(date)">
+<node CREATED="1717610856831" ID="Freemind_Link_1024977248" MODIFIED="1717610867304" TEXT="Resultado: 2024-06-05 15:07:09.764337-03:00"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717610192690" ID="Freemind_Link_1807197569" MODIFIED="1717610292767" TEXT="Obt&#xe9;m hora atual&#xa;do sistema">
+<node CREATED="1717610261514" ID="Freemind_Link_755923277" MODIFIED="1717610262582" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717610202053" ID="Freemind_Link_443500756" MODIFIED="1717610312963" TEXT="from datetime import datetime&#xa;&#xa;date = datetime.now()&#xa;print(date)"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1717610243038" ID="Freemind_Link_1477543837" MODIFIED="1717610991807" TEXT="timestamp">
+<node CREATED="1717610993465" ID="Freemind_Link_1000961867" MODIFIED="1717611005400" TEXT="Retorna o n&#xfa;mero de segundos desde a Epoch at&#xe9; agora"/>
+<node CREATED="1717610261514" ID="Freemind_Link_903692508" MODIFIED="1717610262582" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717610202053" ID="Freemind_Link_979599973" MODIFIED="1717611057450" TEXT="from datetime import datetime&#xa;&#xa;date = datetime.now()&#xa;print(date.timestamp())">
+<node CREATED="1717611073304" ID="Freemind_Link_1117350264" MODIFIED="1717611076602" TEXT="Resultado: 1724148005.0"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1717610243038" ID="Freemind_Link_811109592" MODIFIED="1717610266845" TEXT="strptime">
+<node CREATED="1717610192690" ID="Freemind_Link_1763677549" MODIFIED="1717612176288" TEXT="Efetua convers&#xe3;o de&#xa;string para datetime">
+<node CREATED="1717610261514" ID="Freemind_Link_1217830048" MODIFIED="1717610262582" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717610202053" ID="Freemind_Link_192566869" MODIFIED="1717610214277" TEXT="from datetime import datetime&#xa;&#xa;str_data = &apos;2024-08-20 07:00:05&apos;&#xa;str_fmt = &apos;%Y-%m-%d %H:%M:%S&apos;&#xa;&#xa;date = datetime.strptime(str_data, str_fmt)&#xa;print(date)"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1717610243038" ID="Freemind_Link_1368557927" MODIFIED="1717612187721" TEXT="strftime">
+<node CREATED="1717612378293" ID="Freemind_Link_1956657949" MODIFIED="1717612387251" TEXT="Retorna um string"/>
+<node CREATED="1717610192690" ID="Freemind_Link_1199064907" MODIFIED="1717612200336" TEXT="Forma a exibi&#xe7;&#xe3;o da data">
+<node CREATED="1717610261514" ID="Freemind_Link_686021397" MODIFIED="1717610262582" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717610202053" ID="Freemind_Link_1764176089" MODIFIED="1717612346579" TEXT="from datetime import datetime&#xa;&#xa;str_fmt = &apos;%d/%m/%Y %H:%M:%S&apos;&#xa;&#xa;date = datetime.now()&#xa;print(date)&#xa;print(date.strftime(str_fmt))">
+<node CREATED="1717612354743" ID="Freemind_Link_905698889" MODIFIED="1717612360064" TEXT="Resultado:&#xa;2024-06-05 15:31:57.061685&#xa;05/06/2024 15:31:57"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1717611405344" ID="Freemind_Link_1408526846" MODIFIED="1717611507732" TEXT="timedelta">
+<node CREATED="1717611713773" ID="Freemind_Link_680587306" MODIFIED="1717611730224" TEXT="Armazena um per&#xed;odo de tempo (tempo decorrido entre dois mmentos)"/>
+<node CREATED="1717611507721" ID="Freemind_Link_1829884888" MODIFIED="1717611526935" TEXT="A diferen&#xe7;a entre dois datetime&apos;s&#xa;retorna um timedelta">
+<node CREATED="1717611419322" ID="Freemind_Link_1998743217" MODIFIED="1717611420021" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717611420956" ID="Freemind_Link_147240190" MODIFIED="1717611442594" TEXT="from datetime import datetime&#xa;&#xa;data_inicio = datetime(1979,8,20,6,20,13)&#xa;data_termino = datetime(2024,6,5,15,15,52)&#xa;delta = data_termino - data_inicio&#xa;print(delta)">
+<node CREATED="1717611444532" ID="Freemind_Link_1652041152" MODIFIED="1717611455798" TEXT="Resultado: 16361 days, 8:55:39"/>
+</node>
+</node>
+</node>
+<node CREATED="1717611419322" ID="Freemind_Link_701246676" MODIFIED="1717611420021" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717611420956" ID="Freemind_Link_1082837274" MODIFIED="1717611688890" TEXT="from datetime import datetime, timedelta&#xa;&#xa;delta = timedelta(days=16361, hours=8, minutes=55, seconds=39)&#xa;data_inicio = datetime(1979,8,20,6,20,13)&#xa;data_termino = data_inicio + delta&#xa;print(data_termino)&#xa;">
+<node CREATED="1717611444532" ID="Freemind_Link_1128246512" MODIFIED="1717611707804" TEXT="Resultado: 2024-06-05 15:15:52"/>
+</node>
+</node>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_841021437" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_117928179" MODIFIED="1717609680087" TEXT="from datetime import datetime&#xa;data = datetime(2024, 08, 20)&#xa;print(data)">
+<node CREATED="1717609681829" ID="Freemind_Link_466532874" MODIFIED="1717609690959" TEXT="Resultado: 2024-08-20 00:00:00"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1999050544" MODIFIED="1717609700488" TEXT="from datetime import datetime&#xa;data = datetime(2024, 08, 20, 7)&#xa;print(data)">
+<node CREATED="1717609681829" ID="Freemind_Link_1655636650" MODIFIED="1717609704509" TEXT="Resultado: 2024-08-20 07:00:00"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1718390898889" FOLDED="true" ID="Freemind_Link_848099048" MODIFIED="1718390900736" POSITION="right" TEXT="doctest">
+<node CREATED="1718390926210" ID="Freemind_Link_1808389810" MODIFIED="1718390939138" TEXT="Biblioteca que permite implementa&#xe7;&#xe3;o de testes via docstrings"/>
+<node CREATED="1718390943232" ID="Freemind_Link_967448505" MODIFIED="1718390967757" TEXT="Pode-se implementar testes s na documenta&#xe7;&#xe3;o da pr&#xf3;pria fun&#xe7;&#xe3;oimples"/>
+<node CREATED="1718391112943" ID="Freemind_Link_1581165551" MODIFIED="1718391159186" TEXT="Testes realizados com&#xa;sucesso n&#xe3;o ser&#xe3;o exibidos">
+<node CREATED="1718391124085" ID="Freemind_Link_1628328917" MODIFIED="1718391154027" TEXT="Para que sejam exibidos, passe o&#xa;par&#xe2;metro &apos;verbose=True&apos; na chamada do m&#xe9;todo testmod"/>
+</node>
+<node CREATED="1718391032359" ID="Freemind_Link_1000929850" MODIFIED="1718391036235" TEXT="Implementa&#xe7;&#xe3;o">
+<node CREATED="1718391037128" ID="Freemind_Link_1881655341" MODIFIED="1718391054354" TEXT="Abre-se o docstrings">
+<icon BUILTIN="full-1"/>
+<node CREATED="1718391043408" ID="Freemind_Link_656972073" MODIFIED="1718391050428" TEXT="Aspas triplas"/>
+</node>
+<node CREATED="1718391055272" ID="Freemind_Link_19443564" MODIFIED="1718391077967" TEXT="Declara-se o teste com &gt;&gt;&gt;">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1718391078895" ID="Freemind_Link_401484567" MODIFIED="1718391089806" TEXT="Declara-se o resultado esperado na linha seguinte ao &gt;&gt;&gt;">
+<icon BUILTIN="full-3"/>
+</node>
+</node>
+<node CREATED="1609876661409" ID="Freemind_Link_511427226" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_330046545" MODIFIED="1718390924579" TEXT="import doctest"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_1596076564" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_804795407" MODIFIED="1718390981232" TEXT="def soma(x, y):&#xa;    &quot;&quot;&quot;&quot;&#xa;    Soma&#xa;&#xa;    &gt;&gt;&gt; soma(1,5)&#xa;    5&#xa;    &quot;&quot;&quot;&#xa;    assert isinstance(x, (int, float)), &apos;x precisa ser int ou float&apos;&#xa;    assert isinstance(y, (int, float)), &apos;y precisa ser int ou float&apos;&#xa;    return x + y&#xa;&#xa;if __name__ == &apos;__main__&apos;:&#xa;    import doctest&#xa;    doctest.testmod()&#xa;    ">
+<node CREATED="1718390986480" ID="Freemind_Link_1445265167" MODIFIED="1718391006599" TEXT="Resultado:&#xa;Failed example:&#xa;    soma(1,5)&#xa;Expected:&#xa;    5&#xa;Got:&#xa;    6"/>
+</node>
+</node>
+</node>
+<node CREATED="1717694560472" FOLDED="true" ID="Freemind_Link_824662076" MODIFIED="1717694562049" POSITION="right" TEXT="dotenv">
+<node CREATED="1717694563071" ID="Freemind_Link_813568561" MODIFIED="1717694595403" TEXT="Biblioteca de funcionalidades para manipular vari&#xe1;veis de ambiente via arquivo .env&#xa;"/>
+<node CREATED="1609876530394" ID="Freemind_Link_1770190083" MODIFIED="1717694626712" TEXT="Instala&#xe7;&#xe3;o">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_378167854" MODIFIED="1717694679175" TEXT="pip install python-dotenv "/>
+</node>
+<node CREATED="1609876661409" ID="Freemind_Link_128622289" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_470062995" MODIFIED="1717694623463" TEXT="import dotenv"/>
+</node>
+<node CREATED="1609876566896" ID="Freemind_Link_539069422" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_559325979" MODIFIED="1717695030472" TEXT="load_dotenv">
+<node CREATED="1609876580616" ID="Freemind_Link_169250733" MODIFIED="1717695039906" TEXT="Carrega as vari&#xe1;veis declaradas no arquivo .env"/>
+<node CREATED="1717695079277" ID="Freemind_Link_549185451" MODIFIED="1717695190672" TEXT="As vari&#xe1;veis carregadas estar&#xe3;o acess&#xed;veis via clase os.environ ou m&#xe9;todo os.getenv()"/>
+<node CREATED="1609876605273" ID="Freemind_Link_627516274" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1144757653" MODIFIED="1717695200765" TEXT="import os&#xa;&#xa;from dotenv import load_dotenv #type: ignore&#xa;load_dotenv()&#xa;print(os.environ[&apos;NOME&apos;])&#xa;print(os.getenv(&apos;NOME&apos;))">
+<node CREATED="1717694993478" ID="Freemind_Link_124883783" MODIFIED="1717695006475" TEXT="Conte&#xfa;do do arquivo .env&#xa;NOME=&quot;Ana&quot;"/>
+<node CREATED="1717695008224" ID="Freemind_Link_1093656083" MODIFIED="1717695206062" TEXT="Resultado:&#xa;Ana&#xa;Ana"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1821971393" MODIFIED="1717695353763" TEXT="environ">
+<node CREATED="1609876580616" ID="Freemind_Link_1799220048" MODIFIED="1717695362764" TEXT="Permite acessar ou declarar vari&#xe1;veis de ambiente"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1537572250" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1984518176" MODIFIED="1717695412589" TEXT="import os&#xa;&#xa;from dotenv import load_dotenv #type: ignore&#xa;load_dotenv()&#xa;&#xa;print(os.environ[&apos;NOME&apos;]) #Exibe a vari&#xe1;vel de ambiente &apos;NOME&apos;&#xa;os.environ[&apos;IDADE&apos;] = 15 #Declarta a vari&#xe1;vel de ambiente &apos;IDADE&apos;"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717699358074" FOLDED="true" ID="Freemind_Link_998809945" MODIFIED="1717699361999" POSITION="right" TEXT="http.server">
+<node CREATED="1717699362636" ID="Freemind_Link_396053732" MODIFIED="1717699374157" TEXT="M&#xf3;dulo que sobe um servidor http localmente"/>
+<node CREATED="1717699435359" ID="Freemind_Link_1808846512" MODIFIED="1717699442242" TEXT="Argumentos">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1328552326" MODIFIED="1717699452722" TEXT="-d pasta_dos_htmls">
+<node CREATED="1717699455122" ID="Freemind_Link_991630845" MODIFIED="1717699484381" TEXT="Informa a pasta raiz em que est&#xe3;o os documentos a serem servidos"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_472387840" MODIFIED="1717699508203" TEXT="&lt;porta&gt;">
+<node CREATED="1717699455122" ID="Freemind_Link_1567363239" MODIFIED="1717699523475" TEXT="Informa a porta em que o servi&#xe7;o ser&#xe1; disponibilizado"/>
+<node CREATED="1717699523801" ID="Freemind_Link_66047663" MODIFIED="1717699530800" TEXT="Se n&#xe3;o informada, ser&#xe1; usada a porta 8000"/>
+</node>
+</node>
+<node CREATED="1609876661409" ID="Freemind_Link_1466836532" MODIFIED="1717699569660" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1099559129" MODIFIED="1717699565755" TEXT="python -m http.server -d aula310_site 3333">
+<node CREATED="1717699537753" ID="Freemind_Link_128828290" MODIFIED="1717699560276" TEXT="Sobre o servidor http na porta 3333, servindo os documentos da pasta  &apos;aula310_site&apos;"/>
+</node>
+</node>
+</node>
+<node CREATED="1716913688795" FOLDED="true" ID="Freemind_Link_277427291" MODIFIED="1716913691204" POSITION="right" TEXT="itertools">
+<node CREATED="1716913696727" ID="Freemind_Link_518104455" MODIFIED="1716913706820" TEXT="Biblioteca de ferramentas de itera&#xe7;&#xf5;es em iter&#xe1;veis"/>
+<node CREATED="1716489302508" ID="Freemind_Link_997547970" MODIFIED="1716489304527" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_704663608" MODIFIED="1716913737805" TEXT="zip_longest">
+<node CREATED="1609876580616" ID="Freemind_Link_464857777" MODIFIED="1716913751853" TEXT="Agrupa duas listas pareando seus elementos"/>
+<node CREATED="1716913752442" ID="Freemind_Link_891337814" MODIFIED="1716913765123" TEXT="Diferentemente da fun&#xe7;&#xe3;o &apos;zip&apos;, esta fun&#xe7;&#xe3;o se baseia na maior lista"/>
+<node CREATED="1609876605273" ID="Freemind_Link_602709895" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_506314144" MODIFIED="1716913727644" TEXT="from itertools import zip_longest&#xa; &#xa;lista_a = [10, 2, 3, 4, 5]&#xa;lista_b = [12, 2, 3, 6, 50, 60, 70]&#xa;lista_soma = [x + y for x, y in zip_longest(lista_a, lista_b, fillvalue=0)]&#xa;print(lista_soma)  # [22, 4, 6, 10, 55, 60, 70]">
+<node CREATED="1716913855925" ID="Freemind_Link_680357690" MODIFIED="1716913871981" TEXT="Neste exemplo eu somo os valores de duas listas, gerando uma nova lista"/>
+<node CREATED="1716490028237" ID="Freemind_Link_1729166100" MODIFIED="1716913821435" TEXT="Se fillvalue n&#xe3;o for informado, ser&#xe1; usado o valor None nos &#xed;tens da maior lista que n&#xe3;o tiverem o par correspondente na menor"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" FOLDED="true" ID="Freemind_Link_1651182022" MODIFIED="1716913939343" TEXT="count">
+<node CREATED="1609876580616" ID="Freemind_Link_1393735091" MODIFIED="1716913947638" TEXT="um iterator sem fim"/>
+<node CREATED="1716913752442" ID="Freemind_Link_1152059508" MODIFIED="1716913961831" TEXT="Diferentemente do range, esta fun&#xe7;&#xe3;o retorna infinitos elementos"/>
+<node CREATED="1716914309019" ID="Freemind_Link_309720568" MODIFIED="1716914428917" TEXT="Par&#xe2;metros">
+<node CREATED="1716914426196" ID="Freemind_Link_144282991" MODIFIED="1716914427136" TEXT="1">
+<node CREATED="1716914323338" ID="Freemind_Link_1452959170" MODIFIED="1716914332696" TEXT="Informa o n&#xfa;mero inicial do count"/>
+<node CREATED="1716914491579" ID="Freemind_Link_1578652419" MODIFIED="1716914497614" TEXT="ou nome &apos;step&apos;"/>
+</node>
+<node CREATED="1716914428905" ID="Freemind_Link_1544310889" MODIFIED="1716914429518" TEXT="2">
+<node CREATED="1716914333493" ID="Freemind_Link_682878416" MODIFIED="1716914344189" TEXT="Informa o tamanho de cada pulo do count"/>
+<node CREATED="1716914498882" ID="Freemind_Link_1497563104" MODIFIED="1716914501860" TEXT="ou nome &apos;start&apos;"/>
+</node>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_408441902" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_366404895" MODIFIED="1716914252459" TEXT="import itertools&#xa;c1 = itertools.count()&#xa;for i in c1:&#xa;    if i &gt; 100:&#xa;        break&#xa;    print(i)">
+<node CREATED="1716913855925" ID="Freemind_Link_1628526696" MODIFIED="1716914210210" TEXT="Resultado: listar&#xe1; os n&#xfa;meros de 1 a 100"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_674383001" MODIFIED="1716914403698" TEXT="import itertools&#xa;c1 = itertools.count(5, 7)&#xa;for i in c1:&#xa;    if i &gt; 60:&#xa;        break&#xa;    print(i)">
+<node CREATED="1716913855925" ID="Freemind_Link_259741748" MODIFIED="1716914398189" TEXT="Resultado: &#xa;5&#xa;12&#xa;19&#xa;26&#xa;33&#xa;40&#xa;47&#xa;54"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_428613472" MODIFIED="1716914521240" TEXT="import itertools&#xa;c1 = itertools.count(step=7, start=5)&#xa;for i in c1:&#xa;    if i &gt; 60:&#xa;        break&#xa;    print(i)">
+<node CREATED="1716913855925" ID="Freemind_Link_1401420240" MODIFIED="1716914398189" TEXT="Resultado: &#xa;5&#xa;12&#xa;19&#xa;26&#xa;33&#xa;40&#xa;47&#xa;54"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_359238241" MODIFIED="1716914673647" TEXT="combinations">
+<node CREATED="1609876580616" ID="Freemind_Link_1176438677" MODIFIED="1716914686739" TEXT="Faz combina&#xe7;&#xf5;es entre elementos de uma lista">
+<node CREATED="1716914938218" ID="Freemind_Link_1306360518" MODIFIED="1716915336290" TEXT="A ordem n&#xe3;o importa"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_1032809789" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_550330438" MODIFIED="1716915051461" TEXT="import itertools&#xa;lista1=[&apos;Ana&apos;, &apos;Beto&apos;, &apos;Caio&apos;, &apos;Davi&apos;]&#xa;print(*list(itertools.combinations(lista1, 2)), sep=&apos;\n&apos;)">
+<node CREATED="1716913855925" ID="Freemind_Link_1358010027" MODIFIED="1716914872238" TEXT="Resultado: &#xa;(&apos;Ana&apos;, &apos;Beto&apos;)&#xa;(&apos;Ana&apos;, &apos;Caio&apos;)&#xa;(&apos;Ana&apos;, &apos;Davi&apos;)&#xa;(&apos;Beto&apos;, &apos;Caio&apos;)&#xa;(&apos;Beto&apos;, &apos;Davi&apos;)&#xa;(&apos;Caio&apos;, &apos;Davi&apos;)"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1387229118" MODIFIED="1716915012987" TEXT="permutations">
+<node CREATED="1609876580616" ID="Freemind_Link_777302044" MODIFIED="1716915285799" TEXT="Faz produto cartesiano entre os elementos dlistase ">
+<node CREATED="1716914938218" ID="Freemind_Link_1547122882" MODIFIED="1716915283151" TEXT="A ordem importa">
+<arrowlink COLOR="#fa0909" DESTINATION="Freemind_Link_1306360518" ENDARROW="Default" ENDINCLINATION="151;0;" ID="Freemind_Arrow_Link_1587101293" STARTARROW="Default" STARTINCLINATION="151;0;"/>
+</node>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_244920932" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_806510064" MODIFIED="1716915319948" TEXT="import itertools &#xa;lista1=[&apos;Ana&apos;, &apos;Beto&apos;, &apos;Caio&apos;]&#xa;print(*list(itertools.permutations(lista1, 2)), sep=&apos;\n&apos;)">
+<node CREATED="1716913855925" ID="Freemind_Link_1008685448" MODIFIED="1716915065870" TEXT="Resultado: &#xa;(&apos;Ana&apos;, &apos;Beto&apos;)&#xa;(&apos;Ana&apos;, &apos;Caio&apos;)&#xa;(&apos;Beto&apos;, &apos;Ana&apos;)&#xa;(&apos;Beto&apos;, &apos;Caio&apos;)&#xa;(&apos;Caio&apos;, &apos;Ana&apos;)&#xa;(&apos;Caio&apos;, &apos;Beto&apos;)&#xa;"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1944533479" MODIFIED="1716915332324" TEXT="product">
+<node CREATED="1609876580616" ID="Freemind_Link_1082825159" MODIFIED="1716915382069" TEXT="Faz produto cartesiano entre os elementos das listas informadas"/>
+<node CREATED="1609876605273" ID="Freemind_Link_335055672" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1893693911" MODIFIED="1716915353263" TEXT="import itertools &#xa;tamanhos=[&apos;P&apos;, &apos;M&apos;, &apos;G&apos;]&#xa;cores=[&apos;Branca&apos;, &apos;Preta&apos;, &apos;Azul&apos;]&#xa;camisas=itertools.product(cores, tamanhos)&#xa;print(*list(camisas), sep=&apos;\n&apos;)">
+<node CREATED="1716913855925" ID="Freemind_Link_303299261" MODIFIED="1716915371311" TEXT="Resultado: &#xa;(&apos;Branca&apos;, &apos;P&apos;)&#xa;(&apos;Branca&apos;, &apos;M&apos;)&#xa;(&apos;Branca&apos;, &apos;G&apos;)&#xa;(&apos;Preta&apos;, &apos;P&apos;)&#xa;(&apos;Preta&apos;, &apos;M&apos;)&#xa;(&apos;Preta&apos;, &apos;G&apos;)&#xa;(&apos;Azul&apos;, &apos;P&apos;)&#xa;(&apos;Azul&apos;, &apos;M&apos;)&#xa;(&apos;Azul&apos;, &apos;G&apos;)"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1462943569" MODIFIED="1716915924275" TEXT="groupby">
+<node CREATED="1609876580616" ID="Freemind_Link_1913422340" MODIFIED="1716915937395" TEXT="Agrupa elementos de um iterable"/>
+<node CREATED="1716915939311" ID="Freemind_Link_216350308" MODIFIED="1716916070343" TEXT="em listas">
+<node CREATED="1716916020121" ID="Freemind_Link_1724449777" MODIFIED="1716916030049" TEXT="O groupby assume que a lista est&#xe1; ordenada">
+<node CREATED="1716916030739" ID="Freemind_Link_1751043830" MODIFIED="1716916043422" TEXT="Se n&#xe3;o estiver, o agrupamento n&#xe3;o funcionar&#xe1; bem"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_139208798" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1083838474" MODIFIED="1716916000937" TEXT="import itertools&#xa;&#xa;lista=[1,2,3,4,2,1,2,1,3]&#xa;&#xa;for chave, grupo in itertools.groupby(sorted(lista)):&#xa;    print(chave,&apos; =&gt; &apos;, list(grupo))">
+<node CREATED="1716913855925" ID="Freemind_Link_1830907232" MODIFIED="1716916014537" TEXT="Resultado: &#xa;1  =&gt;  [1, 1, 1]&#xa;2  =&gt;  [2, 2, 2]&#xa;3  =&gt;  [3, 3]&#xa;4  =&gt;  [4]"/>
+</node>
+</node>
+</node>
+<node CREATED="1716916058777" ID="Freemind_Link_1276298507" MODIFIED="1716916073588" TEXT="em dicion&#xe1;rios">
+<node CREATED="1609876605273" ID="Freemind_Link_577268050" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1329625936" MODIFIED="1716916833386" TEXT="import itertools&#xa;&#xa;alunos=[&#xa;    {&apos;nome&apos;:&apos;Ana&apos;, &apos;nota&apos;:&apos;A&apos;},&#xa;    {&apos;nome&apos;:&apos;Beto&apos;, &apos;nota&apos;:&apos;A&apos;},&#xa;    {&apos;nome&apos;:&apos;Caio&apos;, &apos;nota&apos;:&apos;C&apos;},&#xa;    {&apos;nome&apos;:&apos;Davi&apos;, &apos;nota&apos;:&apos;B&apos;},&#xa;    {&apos;nome&apos;:&apos;Emerson&apos;, &apos;nota&apos;:&apos;A&apos;},&#xa;    {&apos;nome&apos;:&apos;Felipe&apos;, &apos;nota&apos;:&apos;C&apos;},&#xa;    {&apos;nome&apos;:&apos;Joana&apos;, &apos;nota&apos;:&apos;A&apos;},&#xa;]&#xa;&#xa;chaveordenacao=lambda aluno: aluno[&apos;nota&apos;]&#xa;alunosordenadospornota=sorted(alunos, key=chaveordenacao)&#xa;alunosagrupadospornota=itertools.groupby(alunosordenadospornota, key=chaveordenacao)&#xa;for chave, grupo in alunosagrupadospornota:&#xa;    print(chave,&apos; =&gt; &apos;, end=&apos;&apos;)&#xa;    for aluno in grupo:&#xa;        print(f&apos;\t{aluno}&apos;)">
+<node CREATED="1716913855925" ID="Freemind_Link_1941609407" MODIFIED="1716916694887" TEXT="Resultado: &#xa;&#xa;A  =&gt;   {&apos;nome&apos;: &apos;Ana&apos;, &apos;nota&apos;: &apos;A&apos;}&#xa;        {&apos;nome&apos;: &apos;Beto&apos;, &apos;nota&apos;: &apos;A&apos;}&#xa;        {&apos;nome&apos;: &apos;Emerson&apos;, &apos;nota&apos;: &apos;A&apos;}&#xa;        {&apos;nome&apos;: &apos;Joana&apos;, &apos;nota&apos;: &apos;A&apos;}&#xa;B  =&gt;   {&apos;nome&apos;: &apos;Davi&apos;, &apos;nota&apos;: &apos;B&apos;}&#xa;C  =&gt;   {&apos;nome&apos;: &apos;Caio&apos;, &apos;nota&apos;: &apos;C&apos;}&#xa;        {&apos;nome&apos;: &apos;Felipe&apos;, &apos;nota&apos;: &apos;C&apos;}"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1716991758376" FOLDED="true" ID="Freemind_Link_1231091591" MODIFIED="1716991760837" POSITION="right" TEXT="json">
+<node CREATED="1716991767818" ID="Freemind_Link_226286989" MODIFIED="1716991778164" TEXT="Conjunto de fun&#xe7;&#xf5;es de manipula&#xe7;&#xe3;o de dados json"/>
+<node CREATED="1717634992936" FOLDED="true" ID="Freemind_Link_1518025987" MODIFIED="1717635851441" TEXT="Para ter a ajuda de tipagem em uma IDE">
+<icon BUILTIN="idea"/>
+<node CREATED="1717635241606" ID="Freemind_Link_899999720" MODIFIED="1717635289552" TEXT="importe o m&#xf3;dulo typing, tipo TypeDict">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1717635296956" ID="Freemind_Link_676823360" MODIFIED="1717635343055" TEXT="Implemente uma subclasse de TypeDict cujos atributos coincidam com os atributos do dict">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1717635349168" ID="Freemind_Link_1298963981" MODIFIED="1717635443693" TEXT="Declare um objeto do tipo da subclasse criada e atribua a uma vari&#xe1;vel">
+<icon BUILTIN="full-3"/>
+</node>
+<node CREATED="1717635382426" ID="Freemind_Link_1614677688" MODIFIED="1717635399674" TEXT="Tente usar essa vari&#xe1;vel e perceba a IDE fazendo o autocomplete conforme a classe Movie">
+<icon BUILTIN="full-4"/>
+</node>
+<node CREATED="1716993225398" ID="Freemind_Link_1153051333" MODIFIED="1716993226034" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1716993226949" ID="Freemind_Link_1275151915" MODIFIED="1717635649723" TEXT="import json&#xa;from typing import TypedDict&#xa;&#xa;class Movie(TypedDict):&#xa;    nome: str   &#xa;    ano: int&#xa;    is_movie: bool&#xa;    characters: list[str]&#xa;&#xa;string_movie: Movie = &apos;&apos;&apos;&#xa;{&#xa;    &quot;nome&quot;: &quot;O Senhor dos an&#xe9;is&quot;,&#xa;    &quot;ano&quot;: 2015,&#xa;    &quot;is_movie&quot;: true,&#xa;    &quot;characters&quot;: [&quot;Frodo&quot;, &quot;Sam&quot;, &quot;Gandalf&quot;, &quot;Boromir&quot;]&#xa;}&apos;&apos;&apos;&#xa;&#xa;filme: Movie = json.loads(string_movie)">
+<node CREATED="1717634967109" ID="Freemind_Link_1298576879" MODIFIED="1717635698336" TEXT="Nesse c&#xf3;digo, ao referenciar a vari&#xe1;vel &apos;filme&apos;, repare que&#xa;a IDE dar&#xe1; as sugest&#xf5;es conforme a classe &apos;Movie&apos;">
+<arrowlink DESTINATION="Freemind_Link_1061891429" ENDARROW="Default" ENDINCLINATION="85;0;" ID="Freemind_Arrow_Link_1542499644" STARTARROW="None" STARTINCLINATION="85;0;"/>
+</node>
+<node CREATED="1717635620958" ID="Freemind_Link_1061891429" MODIFIED="1717635698312" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/dict_autocomplete.png&quot;&gt;">
+<node CREATED="1717635715596" ID="Freemind_Link_252194477" MODIFIED="1717635770346" TEXT="ao abrir o colchete da vari&#xe1;vel &apos;filme&apos;, a IDE sugere os atributos &apos;ano&apos;, &apos;characters&apos;,&#xa;&apos;is_movie&apos; e &apos;nome&apos;, conforme a classe Movie (que &#xe9; subclasse de TypesDict)"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1716991791896" ID="Freemind_Link_817287610" MODIFIED="1716991794036" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1716991795193" FOLDED="true" ID="Freemind_Link_1932931791" MODIFIED="1717635903133" TEXT="dump">
+<node CREATED="1716991811485" ID="Freemind_Link_628339663" MODIFIED="1716991827609" TEXT="Grava um dict do python em formato json em um arquivo"/>
+<node CREATED="1716993298923" ID="Freemind_Link_312172917" MODIFIED="1716993301453" TEXT="Argumentos">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1917492719" MODIFIED="1716993329135" TEXT="ensure_ascii">
+<node CREATED="1716993329786" ID="Freemind_Link_964550134" MODIFIED="1716993352471" TEXT="For&#xe7;a a escrita do arquivo em ascii se True">
+<node CREATED="1716993339064" ID="Freemind_Link_345546152" MODIFIED="1716993341678" TEXT="N&#xe3;o recomendado"/>
+</node>
+<node CREATED="1716993357041" ID="Freemind_Link_1209952523" MODIFIED="1716993360726" TEXT="Pode ser False ou True"/>
+<node CREATED="1716993393675" ID="Freemind_Link_970689328" MODIFIED="1716993394438" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_502937315" MODIFIED="1716993506504" TEXT="    json.dump(pessoa, arquivo, ensure_ascii=False)">
+<node CREATED="1716993492729" ID="Freemind_Link_618097300" MODIFIED="1716993565871" TEXT="Resultado: ... &quot;bairro&quot;: &quot;Graja&#xfa;&quot;">
+<arrowlink COLOR="#e40b0e" DESTINATION="Freemind_Link_849094226" ENDARROW="Default" ENDINCLINATION="36;0;" ID="Freemind_Arrow_Link_681919728" STARTARROW="Default" STARTINCLINATION="36;0;"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_429039302" MODIFIED="1716993432956" TEXT="    json.dump(pessoa, arquivo, ensure_ascii=True)">
+<node CREATED="1716993492729" ID="Freemind_Link_849094226" MODIFIED="1716993559249" TEXT="Resultado: ...&quot;bairro&quot;: &quot;Graja\u00fa&quot;,"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1797311684" MODIFIED="1716993369279" TEXT="indent">
+<node CREATED="1716993329786" ID="Freemind_Link_643164138" MODIFIED="1716993378836" TEXT="Faz a escrita do arquivo com identa&#xe7;&#xf5;es"/>
+<node CREATED="1716993357041" ID="Freemind_Link_80429284" MODIFIED="1716993390059" TEXT="O valor deve ser um n&#xfa;mero"/>
+<node CREATED="1716993393675" ID="Freemind_Link_1770740804" MODIFIED="1716993394438" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_536018708" MODIFIED="1716993411878" TEXT="    json.dump(pessoa, arquivo, indent=2)"/>
+</node>
+</node>
+</node>
+<node CREATED="1716993739620" ID="Freemind_Link_248718753" MODIFIED="1716993806988" TEXT="Aten&#xe7;&#xe3;o:">
+<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1716993744634" ID="Freemind_Link_1639129185" MODIFIED="1716993753798" TEXT="Tuplas do Python ser&#xe3;o escritas como listas no Json"/>
+<node CREATED="1716993754292" ID="Freemind_Link_1059725696" MODIFIED="1716993816757" TEXT="O Set do Python n&#xe3;o tem um equivalente&#xa;no Json, portanto n&#xe3;o ser&#xe1; serializado">
+<node CREATED="1716993773098" ID="Freemind_Link_816046210" MODIFIED="1716993780615" TEXT="Uma exec&#xe7;&#xe3;o ser&#xe1; lan&#xe7;ada"/>
+</node>
+</node>
+<node CREATED="1716993225398" ID="Freemind_Link_1869407210" MODIFIED="1716993226034" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1716993226949" ID="Freemind_Link_1249457978" MODIFIED="1716993264562" TEXT="import json&#xa;&#xa;pessoa={&#xa;    &apos;nome&apos;: &apos;Ana&apos;,&#xa;    &apos;idade&apos;: 25,&#xa;    &apos;pets&apos;: [&#xa;        {&apos;tipo&apos;: &apos;canino&apos;, &apos;nome&apos;: &apos;Pepperoni&apos;, &apos;idade&apos;: 7},&#xa;        {&apos;tipo&apos;: &apos;canino&apos;, &apos;nome&apos;: &apos;Minuim&apos;, &apos;idade&apos;: 8},&#xa;        {&apos;tipo&apos;: &apos;felino&apos;, &apos;nome&apos;: &apos;Mingau&apos;, &apos;idade&apos;: 3},&#xa;    ],&#xa;    &apos;endereco&apos; : {&#xa;        &apos;logradouro&apos;: &apos;Rua sete&apos;,&#xa;        &apos;numero&apos;: 125,&#xa;        &apos;bairro&apos;: &apos;Graja&#xfa;&apos;,&#xa;        &apos;lotes&apos;: [3,4,5,12]&#xa;    }&#xa;}&#xa;&#xa;with open(&apos;meusdados.json&apos;, &apos;w&apos;, encoding=&apos;utf-8&apos;) as arquivo:&#xa;    json.dump(pessoa, arquivo, indent=2)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1716991795193" FOLDED="true" ID="Freemind_Link_1338794295" MODIFIED="1716993601167" TEXT="load">
+<node CREATED="1716991811485" ID="Freemind_Link_299771352" MODIFIED="1716993616104" TEXT="Carrega um arquivo json em um dict Python"/>
+<node CREATED="1716993225398" ID="Freemind_Link_1118156270" MODIFIED="1716993226034" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1716993226949" ID="Freemind_Link_1981690157" MODIFIED="1716993705706" TEXT="import json&#xa;&#xa;with open(&apos;meusdados.json&apos;, &apos;r&apos;, encoding=&apos;utf-8&apos;) as arquivo:&#xa;    pessoa2=json.load(arquivo)    &#xa;    print(pessoa2)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1716991795193" ID="Freemind_Link_1325508284" MODIFIED="1717634797695" TEXT="loads">
+<node CREATED="1716991811485" ID="Freemind_Link_1366886840" MODIFIED="1717634807818" TEXT="Carrega um arquivo json de uma string em um dict Python"/>
+<node CREATED="1716993225398" ID="Freemind_Link_1714672305" MODIFIED="1716993226034" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1716993226949" ID="Freemind_Link_1988221560" MODIFIED="1717634959741" TEXT="import json&#xa;&#xa;string_movie = &apos;&apos;&apos;&#xa;{&#xa;    &quot;nome&quot;: &quot;O Senhor dos an&#xe9;is&quot;,&#xa;    &quot;ano&quot;: 2015,&#xa;    &quot;is_movie&quot;: true,&#xa;    &quot;characters&quot;: [&quot;Frodo&quot;, &quot;Sam&quot;, &quot;Gandalf&quot;, &quot;Boromir&quot;]&#xa;}&apos;&apos;&apos;&#xa;&#xa;filme = json.loads(string_movie)&#xa;print(filme)">
+<node CREATED="1717634967109" ID="Freemind_Link_1744418970" MODIFIED="1717634974299" TEXT="Resultado:&#xa;{&apos;nome&apos;: &apos;O Senhor dos an&#xe9;is&apos;, &apos;ano&apos;: 2015, &apos;is_movie&apos;: True, &apos;characters&apos;: [&apos;Frodo&apos;, &apos;Sam&apos;, &apos;Gandalf&apos;, &apos;Boromir&apos;]}"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1716991795193" ID="Freemind_Link_157257979" MODIFIED="1717635869259" TEXT="dumps">
+<node CREATED="1716991811485" ID="Freemind_Link_793812806" MODIFIED="1717635903134" TEXT="Igual ao dump, mas em vez de escrever em um&#xa;arquivo, devolve como uma vari&#xe1;vel do tipo string">
+<arrowlink DESTINATION="Freemind_Link_1932931791" ENDARROW="Default" ENDINCLINATION="446;0;" ID="Freemind_Arrow_Link_1851765804" STARTARROW="None" STARTINCLINATION="446;0;"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717614168289" FOLDED="true" ID="Freemind_Link_170205463" MODIFIED="1717614171694" POSITION="right" TEXT="locale">
+<node CREATED="1717614175153" ID="Freemind_Link_990559924" MODIFIED="1717614297828" TEXT="Permite implementar internacionaliza&#xe7;&#xe3;o de c&#xf3;digo">
+<node CREATED="1717614298151" ID="Freemind_Link_1671864441" MODIFIED="1717614299997" TEXT="Tradu&#xe7;&#xe3;o"/>
+</node>
+<node CREATED="1717615032221" ID="Freemind_Link_530840149" MODIFIED="1717615059696" TEXT="Para descobrir as locale&apos;s dispon&#xed;veis no S.O. Linux, use o comando &apos;locale -a&apos;">
+<icon BUILTIN="idea"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_1708755618" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1039571615" MODIFIED="1717614988371" TEXT="import locale&#xa;import calendar&#xa;&#xa;locale.setlocale(locale.LC_ALL, &apos;&apos;)&#xa;# locale.setlocale(locale.LC_ALL, &apos;pt_BR.utf-8&apos;)&#xa;print(calendar.month(2024,12))">
+<node CREATED="1717614483571" ID="Freemind_Link_1959466733" MODIFIED="1717614486406" TEXT="Neste exemplo:">
+<node CREATED="1717614449828" ID="Freemind_Link_1441974679" MODIFIED="1717614481352" TEXT="Em &apos;locale.setlocale(locale.LC_ALL, &apos;&apos;)&apos;, ao deixar o locale vazio (2o par&#xe2;metro), ser&#xe1; usado o locale do sistema "/>
+<node CREATED="1717614490346" ID="Freemind_Link_1796598623" MODIFIED="1717614531841" TEXT="Defini de uma s&#xf3; vez todo o locale (LC_ALL), mas pode-se fazer isso por partes (idioma, unidades de medida, moeda etc.)"/>
+</node>
+<node CREATED="1717614541995" ID="Freemind_Link_1717345307" MODIFIED="1717614566974" TEXT="Resultado: O calend&#xe1;rio de dezembro ser&#xe1; exibido em portugu&#xea;s (&apos;Dezembro&apos; em vez de &apos;December&apos;)"/>
+</node>
+</node>
+<node CREATED="1609876566896" ID="Freemind_Link_1636046497" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1857681318" MODIFIED="1717614855013" TEXT="getlocale">
+<node CREATED="1609876605273" ID="Freemind_Link_149108027" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1610396790" MODIFIED="1717614888667" TEXT="import locale&#xa;&#xa;print(locale.getlocale())">
+<node CREATED="1717614541995" ID="Freemind_Link_516267512" MODIFIED="1717614918207" TEXT="Resultado: (&apos;pt_BR&apos;, &apos;UTF-8&apos;)"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1610547827467" FOLDED="true" ID="Freemind_Link_1107441332" MODIFIED="1610547831694" POSITION="right" TEXT="Matplotlib">
+<node CREATED="1610550899375" ID="Freemind_Link_390408308" MODIFIED="1610550904355" TEXT=".pyplot">
+<node CREATED="1609876497969" ID="Freemind_Link_1329424061" MODIFIED="1609876508356" TEXT="Trabalho com gr&#xe1;ficos"/>
+<node CREATED="1609876661409" ID="Freemind_Link_579355271" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_360305371" MODIFIED="1610550930427" TEXT="import matplotlib.pyplot as plt"/>
+</node>
+<node CREATED="1609876470660" ID="Freemind_Link_1590228585" MODIFIED="1622477591016" TEXT="Axes3d">
+<node CREATED="1609876530394" ID="Freemind_Link_1146171283" MODIFIED="1622477668464" TEXT="Biblioteca  que estende o matplotlib para plotagem de gr&#xe1;ficos 3D">
+<node CREATED="1622477992976" ID="Freemind_Link_1885478212" MODIFIED="1622478000915" TEXT="O gr&#xe1;fico &#xe9; est&#xe1;tico, n&#xe3;o interativo"/>
+</node>
+<node CREATED="1609876661409" ID="Freemind_Link_105819182" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1659405731" MODIFIED="1622477617393" TEXT="from mpl_toolkits.mplot3d import axes3d"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_825982932" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1252166022" MODIFIED="1622477892397" TEXT="base = pd.read_csv(&apos;../dados/orchard.csv&apos;)&#xa;figura = plt.figure()&#xa;eixo = figura.add_subplot(1,1,1,projection=&apos;3d&apos;)&#xa;eixo.scatter(base.decrease, base.rowpos, base.colpos)&#xa;eixo.set_xlabel(&apos;decrease&apos;)&#xa;eixo.set_ylabel(&apos;rowpos&apos;)&#xa;eixo.set_zlabel(&apos;colpos&apos;)"/>
+</node>
+</node>
+<node CREATED="1610547852579" ID="Freemind_Link_1245451147" MODIFIED="1610547854446" TEXT="Fun&#xe7;&#xf5;es">
+<node CREATED="1621967313007" ID="Freemind_Link_1695300122" MODIFIED="1621967368153" TEXT="Chamadas sucessivas a fun&#xe7;&#xf5;es que plotam gr&#xe1;ficos &#xa;colocam todos os gr&#xe1;ficos na mesma imagem">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1771279890" MODIFIED="1610550942698" TEXT="hist">
+<node CREATED="1609876580616" ID="Freemind_Link_1377027773" MODIFIED="1610550950835" TEXT="Plota o histograma dos dados"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1853392264" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1456559388" MODIFIED="1610550972962" TEXT="plt.hist(base.iloc[:,1], bins=6)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_834850550" MODIFIED="1621959378695" TEXT="scatter">
+<node CREATED="1609876580616" ID="Freemind_Link_65899650" MODIFIED="1621959386151" TEXT="Plota o gr&#xe1;fico de dispers&#xe3;o"/>
+<node CREATED="1609876605273" ID="Freemind_Link_468586942" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1035541194" MODIFIED="1621959487519" TEXT="plt.scatter(base.Girth, base.Volume, color=&apos;blue&apos;, facecolors = &apos;none&apos;, marker =&apos;*&apos;)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_278505610" MODIFIED="1621959585578" TEXT="plot">
+<node CREATED="1609876580616" ID="Freemind_Link_685007593" MODIFIED="1621959592433" TEXT="Plota o gr&#xe1;fico de linha"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1414377437" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_582990258" MODIFIED="1621959605266" TEXT="plt.scatter(base.Girth, base.Volume)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1589998173" MODIFIED="1621969311443" TEXT="boxplot">
+<node CREATED="1609876580616" ID="Freemind_Link_1007673313" MODIFIED="1621969316260" TEXT="Plota o gr&#xe1;fico de boxplot"/>
+<node CREATED="1609876605273" ID="Freemind_Link_321688190" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_841066044" MODIFIED="1621969336410" TEXT="plt.boxplot(base.Volume, vert = False, showfliers = False, notch = True,patch_artist = True)">
+<node CREATED="1621969443198" ID="Freemind_Link_1175545910" MODIFIED="1621969455146" TEXT="Pode ser passado mais de uma s&#xe9;rie">
+<node CREATED="1621969455456" ID="Freemind_Link_373075507" MODIFIED="1621969467488" TEXT="Ex: [base.Volume, base.Girth]"/>
+</node>
+<node CREATED="1621969347495" ID="Freemind_Link_933430766" MODIFIED="1621969378594" TEXT="showFliers mostra os outliers"/>
+<node CREATED="1621969357345" ID="Freemind_Link_1093264047" MODIFIED="1621969578416" TEXT="notch faz um talho na linha da mediana"/>
+<node CREATED="1621969390261" ID="Freemind_Link_980197597" MODIFIED="1621969399448" TEXT="patch_artist preenche o boxplot"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_316309538" MODIFIED="1610551028643" TEXT="title">
+<node CREATED="1609876580616" ID="Freemind_Link_1422803735" MODIFIED="1610551038163" TEXT="Define o t&#xed;tulo do gr&#xe1;fico"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1591831169" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_424773552" MODIFIED="1610551050138" TEXT="plt.title(&apos;&#xc1;rvores&apos;)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_789001210" MODIFIED="1610551055977" TEXT="ylabel">
+<node CREATED="1609876580616" ID="Freemind_Link_557929981" MODIFIED="1610551070490" TEXT="Define o texto do eixo das ordenadas do gr&#xe1;fico"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1476136053" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_272446595" MODIFIED="1610551081764" TEXT="plt.ylabel(&apos;Frequencia&apos;)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1317825242" MODIFIED="1610551092161" TEXT="xlabel">
+<node CREATED="1609876580616" ID="Freemind_Link_1567512718" MODIFIED="1610551097721" TEXT="Define o texto do eixo das absci&#xe7;as do gr&#xe1;fico"/>
+<node CREATED="1609876605273" ID="Freemind_Link_604415105" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1315435058" MODIFIED="1610551106514" TEXT="plt.xlabel(&apos;Altura&apos;)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1312925747" MODIFIED="1621967091014" TEXT="legend">
+<node CREATED="1609876580616" ID="Freemind_Link_1414442478" MODIFIED="1621967098680" TEXT="Adiciona uma legenda ao gr&#xe1;fico"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1316301920" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1568610033" MODIFIED="1621967108488" TEXT="plt.legend(loc = &apos;lower right&apos;)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_7735739" MODIFIED="1621969006068" TEXT="subplot">
+<node CREATED="1609876580616" ID="Freemind_Link_1527844656" MODIFIED="1621969026138" TEXT="Usado para plotar v&#xe1;rios gr&#xe1;ficos (magens) como um grid de imagens">
+<node CREATED="1621969027580" ID="Freemind_Link_557149359" MODIFIED="1621969039980" TEXT="Como o &apos;screen&apos; do linux"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_1699643791" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1200952483" MODIFIED="1621969050212" TEXT="plt.figure(1)&#xa;plt.subplot(2,2,1)&#xa;plt.scatter(base.Girth, base.Volume)&#xa;plt.subplot(2,2,2)&#xa;plt.scatter(base.Girth, base.Height)&#xa;plt.subplot(2,2,3)&#xa;plt.scatter(base.Height, base.Volume, marker = &apos;*&apos;)&#xa;plt.subplot(2,2,4)&#xa;plt.hist(base.Volume)">
+<node CREATED="1621969052416" ID="Freemind_Link_789785944" MODIFIED="1621969066931" TEXT="2,2 =&gt; qtd de linhas e colunas"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1718635061689" FOLDED="true" ID="Freemind_Link_545220972" MODIFIED="1718635064157" POSITION="right" TEXT="MyPy">
+<node CREATED="1718635065346" ID="Freemind_Link_1365441233" MODIFIED="1718635072457" TEXT="Biblioteca de checagem de tipos do Python"/>
+<node CREATED="1718635072798" ID="Freemind_Link_184045658" MODIFIED="1718635087005" TEXT="Existe um plugin mypy do VSCode que facilita o uso da lib MyPy"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1783943351" MODIFIED="1718635216779" TEXT="Instala&#xe7;&#xe3;o">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1302563506" MODIFIED="1718635220636" TEXT="pip install mypy"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_1678819253" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1350737108" MODIFIED="1718635366693" TEXT="python -m mypy aula591.py ">
+<node CREATED="1718635115325" ID="Freemind_Link_1336431649" MODIFIED="1718635381941" TEXT="Executar no shell"/>
+<node CREATED="1718635115325" ID="Freemind_Link_343947677" MODIFIED="1718635389671" TEXT="Resultado:&#xa;Success: no issues found in 1 source file"/>
+</node>
+</node>
+</node>
+<node CREATED="1610547824229" FOLDED="true" ID="Freemind_Link_1400798417" MODIFIED="1610547826796" POSITION="right" TEXT="Numpy">
+<node CREATED="1609876497969" ID="Freemind_Link_1127785882" MODIFIED="1610547875182" TEXT="Trabalho com estat&#xed;stica"/>
+<node CREATED="1610547908748" ID="Freemind_Link_1139902648" MODIFIED="1610547914144" TEXT="Biblioteca cient&#xed;fica"/>
+<node CREATED="1609876661409" ID="Freemind_Link_652425837" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_341612145" MODIFIED="1610547866975" TEXT="import numpy as np"/>
+</node>
+<node CREATED="1610547852579" ID="Freemind_Link_1341626660" MODIFIED="1610547854446" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_961209902" MODIFIED="1610551133897" TEXT="histogram">
+<node CREATED="1609876580616" ID="Freemind_Link_663956981" MODIFIED="1610551149601" TEXT="Gera o array com os pontos do histograma dos dados"/>
+<node CREATED="1610551173790" ID="Freemind_Link_343328552" MODIFIED="1610551177409" TEXT="Argumentos">
+<node CREATED="1610551178934" ID="Freemind_Link_541911818" MODIFIED="1610551180265" TEXT="bins">
+<node CREATED="1610551180614" ID="Freemind_Link_1084757477" MODIFIED="1610551190376" TEXT="Indica quantos eixos (barras) deve ter no histograma"/>
+</node>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_278485905" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_760144888" MODIFIED="1610551170913" TEXT="np.histogram(base.iloc[:,1], bins=6)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_538388295" MODIFIED="1624299157237" TEXT="random">
+<node CREATED="1609876580616" ID="Freemind_Link_205747894" MODIFIED="1624299228479" TEXT="Ferramenta de gera&#xe7;&#xe3;o de n&#xfa;meros aleat&#xf3;rios"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_959713467" MODIFIED="1624299162224" TEXT="seed">
+<node CREATED="1609876580616" ID="Freemind_Link_1793702219" MODIFIED="1624299190605" TEXT="Determina a semente para gera&#xe7;&#xe3;o de n&#xfa;meros aleat&#xf3;rios"/>
+<node CREATED="1610551173790" ID="Freemind_Link_1705330443" MODIFIED="1624299209548" TEXT="Indicado para casos em que se quer reproduzir os mesmos resultados em outro momento/local"/>
+<node CREATED="1609876605273" ID="Freemind_Link_329909402" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_74792002" MODIFIED="1624299174830" TEXT="np.random.seed(2345)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1703104480" MODIFIED="1624299233796" TEXT="choice">
+<node CREATED="1609876580616" ID="Freemind_Link_507321608" MODIFIED="1624299257814" TEXT="Escolha aleat&#xf3;ria de registro de uma base de dados"/>
+<node CREATED="1609876605273" ID="Freemind_Link_73593545" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_876606390" MODIFIED="1624299287165" TEXT="np.random.choice(a=[0,1], size=150, replace=True, p=[0.7,0.3])">
+<node CREATED="1624299290820" ID="Freemind_Link_1158308820" MODIFIED="1624299337702" TEXT="150 amostras, de 0&apos;s e 1&apos;s, com reposi&#xe7;&#xe3;o e com probabilidades 0.7 e 0.3 respectv//"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717862228358" FOLDED="true" ID="Freemind_Link_1391613099" MODIFIED="1717862231339" POSITION="right" TEXT="openpyxl">
+<node CREATED="1718033431741" ID="Freemind_Link_1349970466" MODIFIED="1718033445859" TEXT="https://openpyxl.readthedocs.io/en/stable/">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1717862240744" ID="Freemind_Link_320567885" MODIFIED="1718033456530" TEXT="Biblioteca de ferramentas para&#xa;lidar com arquivos excel">
+<node CREATED="1717862266688" ID="Freemind_Link_677443036" MODIFIED="1717862269372" TEXT="*.xls"/>
+<node CREATED="1717862266688" ID="Freemind_Link_1480552379" MODIFIED="1717862276168" TEXT="*.xlsx"/>
+<node CREATED="1717862266688" ID="Freemind_Link_938532563" MODIFIED="1717862287937" TEXT="*.xlsm"/>
+<node CREATED="1717862289129" ID="Freemind_Link_1331849932" MODIFIED="1717862301626" TEXT="*.xltx"/>
+<node CREATED="1717862289129" ID="Freemind_Link_1584434089" MODIFIED="1717862306273" TEXT="*.xltm"/>
+</node>
+<node CREATED="1609876661409" ID="Freemind_Link_1606220421" MODIFIED="1717862356351" TEXT="Instala&#xe7;&#xe3;o">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_947212606" MODIFIED="1717862367970" TEXT="pip install openpyxl"/>
+</node>
+<node CREATED="1609876661409" ID="Freemind_Link_305364342" MODIFIED="1718033491129" TEXT="Ex:">
+<node CREATED="1718033491072" ID="Freemind_Link_1749336292" MODIFIED="1718033499522" TEXT="Criando um&#xa;arquivo Excel">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_471742193" MODIFIED="1718033429531" TEXT="from pathlib import Path&#xa;&#xa;from openpyxl import Workbook&#xa;from openpyxl.worksheet.worksheet import Worksheet&#xa;&#xa;ROOT_FOLDER = Path(__file__).parent&#xa;WORKBOOK_PATH = ROOT_FOLDER / &apos;workbook.xlsx&apos;&#xa;&#xa;workbook = Workbook()&#xa;worksheet: Worksheet = workbook.active&#xa;&#xa;# Criando os cabe&#xe7;alhos&#xa;worksheet.cell(1, 1, &apos;Nome&apos;)&#xa;worksheet.cell(1, 2, &apos;Idade&apos;)&#xa;worksheet.cell(1, 3, &apos;Nota&apos;)&#xa;&#xa;students = [&#xa;    # nome      idade nota&#xa;    [&apos;Jo&#xe3;o&apos;,    14,   5.5],&#xa;    [&apos;Maria&apos;,   13,   9.7],&#xa;    [&apos;Luiz&apos;,    15,   8.8],&#xa;    [&apos;Alberto&apos;, 16,   10],&#xa;]&#xa;&#xa;# for i, student_row in enumerate(students, start=2):&#xa;#     for j, student_column in enumerate(student_row, start=1):&#xa;#         worksheet.cell(i, j, student_column)&#xa;&#xa;for student in students:&#xa;    worksheet.append(student)&#xa;&#xa;workbook.save(WORKBOOK_PATH)"/>
+</node>
+</node>
+</node>
+<node CREATED="1609876470660" FOLDED="true" ID="Freemind_Link_1868837144" MODIFIED="1716383506466" POSITION="right" TEXT="os">
+<node CREATED="1716383516493" ID="Freemind_Link_325806044" MODIFIED="1716383527823" TEXT="Biblioteca que permite efetuar chamadas de comandos do S.O."/>
+<node CREATED="1717625086528" ID="Freemind_Link_286139285" LINK="#Freemind_Link_1176141369" MODIFIED="1717625111292" TEXT="Para manipula&#xe7;&#xf5;es de arquivos, prefira a bilioteca shutil"/>
+<node CREATED="1609876530394" ID="Freemind_Link_249712244" MODIFIED="1716383533113" TEXT="Nativa do Python"/>
+<node CREATED="1609876661409" ID="Freemind_Link_1356362143" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1086489164" MODIFIED="1716383539568" TEXT="import os"/>
+</node>
+<node CREATED="1609876566896" ID="Freemind_Link_32324062" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" FOLDED="true" ID="Freemind_Link_804525595" MODIFIED="1716383553432" TEXT="system">
+<node CREATED="1609876580616" ID="Freemind_Link_1504571454" MODIFIED="1716383563216" TEXT="Efetua chamadas de comandos do sistema operacional"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1029678701" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_112137638" MODIFIED="1716383571416" TEXT="os.system(&apos;clear&apos;)">
+<node CREATED="1716383572940" ID="Freemind_Link_965727028" MODIFIED="1716383575681" TEXT="Limpa o terminal"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" FOLDED="true" ID="Freemind_Link_1982596262" MODIFIED="1716990919796" TEXT="remove ou unlink">
+<node CREATED="1609876580616" ID="Freemind_Link_1596869295" MODIFIED="1716990931173" TEXT="Exclui um arquivo"/>
+<node CREATED="1609876605273" ID="Freemind_Link_696716096" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1299750227" MODIFIED="1716990972630" TEXT="os.unlink(&apos;arquivo.txt&apos;)"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_857402278" MODIFIED="1716990982036" TEXT="os.remove(&apos;arquivo.txt&apos;)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_703308435" MODIFIED="1716991099344" TEXT="rename">
+<node CREATED="1609876580616" ID="Freemind_Link_1797453830" MODIFIED="1716991103465" TEXT="Renomeia um aquivo"/>
+<node CREATED="1609876605273" ID="Freemind_Link_210336857" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1060091935" MODIFIED="1716991123702" TEXT="os.rename(&apos;nomeantigo.txt&apos;, &apos;nomenovo.txt&apos;)&#xa;"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" FOLDED="true" ID="Freemind_Link_256359971" MODIFIED="1717616463882" TEXT="path">
+<node CREATED="1609876580616" ID="Freemind_Link_1162274824" MODIFIED="1717615940140" TEXT="Manipula paths no S.O."/>
+<node COLOR="#0000ff" CREATED="1717616463855" ID="Freemind_Link_172753087" MODIFIED="1717616469690" TEXT="join">
+<node CREATED="1717616471714" ID="Freemind_Link_1153207621" MODIFIED="1717616487424" TEXT="Junta partes de um caminho usando o separador de pastas do S.O."/>
+<node CREATED="1609876605273" ID="Freemind_Link_900815765" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1318936478" MODIFIED="1717616630187" TEXT="import os&#xa;&#xa;caminho = &apos;/home/users/pasta1/pasta2/arquivo.txt&apos;&#xa;print(os.path.splitext(caminho))">
+<node CREATED="1717616078326" ID="Freemind_Link_1118966160" MODIFIED="1717616636841" TEXT="Resultado:&#xa;(&apos;/home/users/pasta1/pasta2&apos;, &apos;arquivo.txt&apos;)"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1717616463855" ID="Freemind_Link_1073560288" MODIFIED="1717616498426" TEXT="split">
+<node CREATED="1717616471714" ID="Freemind_Link_1182721547" MODIFIED="1717616955540" TEXT="Separa um caminho em uma tupla com&#xa;2 partes: o diret&#xf3;rio e o arquivo">
+<node CREATED="1717616956731" ID="Freemind_Link_791543530" MODIFIED="1717616970946" TEXT="Equivalente a combinar os usos&#xa;de dirname e basename">
+<node COLOR="#0000ff" CREATED="1717617009228" ID="Freemind_Link_661047797" MODIFIED="1717617012968" TEXT="print(os.path.dirname(caminho), os.path.basename(caminho))"/>
+</node>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_1543841735" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_701250032" MODIFIED="1717616752723" TEXT="import os&#xa;&#xa;caminho = &apos;/home/users/pasta1/pasta2/arquivo.txt&apos;&#xa;print(os.path.split(caminho))&#xa;">
+<node CREATED="1717616078326" ID="Freemind_Link_543844344" MODIFIED="1717616790734" TEXT="Resultado:&#xa;(&apos;/home/users/pasta1/pasta2&apos;, &apos;arquivo.txt&apos;)"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1717616463855" ID="Freemind_Link_621476854" MODIFIED="1717616734962" TEXT="splittext">
+<node CREATED="1717616728866" ID="Freemind_Link_7028321" MODIFIED="1717616800032" TEXT="Separa um caminho em uma tupla com 2 partes: o caminho&#xa;do arquivo (incluindo seu nome) e a extens&#xe3;o do arquivo"/>
+<node CREATED="1609876605273" ID="Freemind_Link_833947647" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1009381649" MODIFIED="1717616757796" TEXT="import os&#xa;&#xa;caminho = &apos;/home/users/pasta1/pasta2/arquivo.txt&apos;&#xa;print(os.path.splitext(caminho))">
+<node CREATED="1717616078326" ID="Freemind_Link_1744840443" MODIFIED="1717616786192" TEXT="Resultado:&#xa;(&apos;/home/users/pasta1/pasta2/arquivo&apos;, &apos;.txt&apos;)"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1717616463855" ID="Freemind_Link_93782037" MODIFIED="1717616844248" TEXT="exists">
+<node CREATED="1717616728866" ID="Freemind_Link_1384489496" MODIFIED="1717616861305" TEXT="Checa se um caminho existe, retornando True em caso verdadeiro"/>
+<node CREATED="1609876605273" ID="Freemind_Link_184999657" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1525265704" MODIFIED="1717616879697" TEXT="import os&#xa;&#xa;caminho = &apos;/home/users/pasta1/pasta2/arquivo.txt&apos;&#xa;if os.path.exists(caminho):&#xa;    ..."/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1717616463855" ID="Freemind_Link_989881707" MODIFIED="1717624716759" TEXT="expanduser">
+<node CREATED="1717616728866" ID="Freemind_Link_1548390409" MODIFIED="1717624733662" TEXT="Retorna um path expandindo caracteres especiais como &apos;~&apos;"/>
+<node CREATED="1609876605273" ID="Freemind_Link_789648701" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_48098984" MODIFIED="1717624742668" TEXT="import os&#xa;&#xa;print(os.path.expanduser(&apos;~/tmp&apos;))">
+<node CREATED="1717624749659" ID="Freemind_Link_1122718926" MODIFIED="1717624752859" TEXT="Resultado: /home/ebenezer.botelho/tmp"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" FOLDED="true" ID="Freemind_Link_1230942116" MODIFIED="1717617088468" TEXT="listdir">
+<node CREATED="1609876580616" ID="Freemind_Link_1672221313" MODIFIED="1717617375006" TEXT="Usado para nagevar em diret&#xf3;rios">
+<arrowlink COLOR="#fb080b" DESTINATION="Freemind_Link_1686482183" ENDARROW="Default" ENDINCLINATION="177;0;" ID="Freemind_Arrow_Link_496656053" STARTARROW="Default" STARTINCLINATION="177;0;"/>
+</node>
+<node CREATED="1717617350140" ID="Freemind_Link_456497784" MODIFIED="1717617357904" TEXT="N&#xe3;o entra nos diret&#xf3;rios filho (subpastas)"/>
+<node CREATED="1717617325100" ID="Freemind_Link_1155745340" MODIFIED="1717617325832" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717617326670" ID="Freemind_Link_1305663402" MODIFIED="1717617339243" TEXT="import os&#xa;&#xa;caminho = &apos;/tmp&apos;&#xa;for item in os.listdir(caminho):&#xa;    print(f&apos;Item {item}&apos;)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" FOLDED="true" ID="Freemind_Link_420561751" MODIFIED="1717617106834" TEXT="walk">
+<node CREATED="1609876580616" ID="Freemind_Link_1686482183" MODIFIED="1717617375007" TEXT="Usado para nagevar em diret&#xf3;rios de forma recursiva"/>
+<node CREATED="1717617746795" ID="Freemind_Link_94043733" MODIFIED="1717617891306" TEXT="Ele retorna uma tupla com 3 itens:">
+<node CREATED="1717617892490" ID="Freemind_Link_535535808" MODIFIED="1717617893415" TEXT="root">
+<node CREATED="1717617894289" ID="Freemind_Link_1467179113" MODIFIED="1717617915964" TEXT="A pasta atual"/>
+</node>
+<node CREATED="1717617900074" ID="Freemind_Link_883619207" MODIFIED="1717617901244" TEXT="dirs">
+<node CREATED="1717617901919" ID="Freemind_Link_853368291" MODIFIED="1717617912918" TEXT="A lista de subdiret&#xf3;rios da pasta atual"/>
+</node>
+<node CREATED="1717617917650" ID="Freemind_Link_733641905" MODIFIED="1717618025714" TEXT="files">
+<node CREATED="1717617901919" ID="Freemind_Link_928840165" MODIFIED="1717618034810" TEXT="A lista de arquivos da pasta atual"/>
+</node>
+</node>
+<node CREATED="1717617325100" ID="Freemind_Link_1355820812" MODIFIED="1717617325832" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1717617326670" ID="Freemind_Link_389043863" MODIFIED="1717617739318" TEXT="import os&#xa;&#xa;caminho = &apos;/tmp&apos;&#xa;for item in os.walk(caminho):&#xa;    print(f&apos;Item {item}&apos;)&#xa;&#xa;# for root, dir, files in os.walk(caminho):&#xa;#     print(f&apos;{root=}\n{dir=}\n{files=}&apos;)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_193291873" MODIFIED="1717624149283" TEXT="stat">
+<node CREATED="1609876580616" ID="Freemind_Link_245330813" MODIFIED="1717624161771" TEXT="Usado para se obter informa&#xe7;&#xf5;es de arquivos">
+<node CREATED="1717624164719" ID="Freemind_Link_1399413915" MODIFIED="1717624168024" TEXT="Tamanho"/>
+<node CREATED="1717624168250" ID="Freemind_Link_1202465970" MODIFIED="1717624170640" TEXT="Data de modifica&#xe7;&#xe3;o"/>
+<node CREATED="1717624170860" ID="Freemind_Link_1029754493" MODIFIED="1717624171641" TEXT="etc."/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1416602804" MODIFIED="1717694447652" TEXT="getenv">
+<node CREATED="1609876580616" ID="Freemind_Link_1810261142" MODIFIED="1717694471471" TEXT="Usado para obter valor de&#xa;vari&#xe1;vel de ambiente do S.O."/>
+<node CREATED="1717694476137" ID="Freemind_Link_723322849" MODIFIED="1717694476916" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_63004470" MODIFIED="1717694490037" TEXT="import os&#xa;print(os.getenv(&apos;PATH&apos;))"/>
+</node>
+</node>
+</node>
+</node>
 <node CREATED="1609876470660" FOLDED="true" ID="_" MODIFIED="1609876472574" POSITION="right" TEXT="Pandas">
 <node CREATED="1609876530394" ID="Freemind_Link_1873829830" MODIFIED="1609876539885" TEXT="Biblioteca usada para ci&#xea;ncia de dados"/>
 <node CREATED="1609876485809" ID="Freemind_Link_1068423036" MODIFIED="1609876493740" TEXT="Trata dados como um dataframe"/>
@@ -463,608 +1351,103 @@
 </node>
 </node>
 </node>
-<node CREATED="1609876474357" FOLDED="true" ID="Freemind_Link_1789216705" MODIFIED="1609876476133" POSITION="right" TEXT="Seaborn">
-<node CREATED="1609876497969" ID="Freemind_Link_1276270964" MODIFIED="1609876508356" TEXT="Trabalho com gr&#xe1;ficos"/>
-<node CREATED="1609876661409" ID="Freemind_Link_601053903" MODIFIED="1609876666051" TEXT="Uso">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1272709758" MODIFIED="1609876699099" TEXT="import seaborn as srn"/>
+<node CREATED="1718034388551" FOLDED="true" ID="Freemind_Link_701821818" MODIFIED="1718034390061" POSITION="right" TEXT="pillow">
+<node CREATED="1718034397446" ID="Freemind_Link_1453348996" MODIFIED="1718034406731" TEXT="Biblioteca de ferramentas de redimensionamento de imagens"/>
+<node CREATED="1609876661409" ID="Freemind_Link_1365191952" MODIFIED="1718034647180" TEXT="Instala&#xe7;&#xe3;o">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1699629029" MODIFIED="1718034651564" TEXT="pip install pillow"/>
 </node>
-<node CREATED="1609876566896" ID="Freemind_Link_1145918397" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_867874125" MODIFIED="1609882846906" TEXT="boxplot">
-<node CREATED="1609876580616" ID="Freemind_Link_796007916" MODIFIED="1609882880993" TEXT="Plota um gr&#xe1;fico com os valores estat&#xed;sticos principais de um conjuto de dados">
-<node CREATED="1609882881600" ID="Freemind_Link_1216372047" MODIFIED="1609882893744" TEXT="M&#xed;n, M&#xe1;x, mediana, 1o e 3o quart&#xed;s"/>
+<node CREATED="1609876661409" ID="Freemind_Link_412128239" MODIFIED="1718036899331" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_660466159" MODIFIED="1718036914131" TEXT="from PIL import Image"/>
 </node>
-<node CREATED="1609883403816" ID="Freemind_Link_1412234597" MODIFIED="1609883424823" TEXT="&#xc9; &#xfa;til para detectar dados com anomalia (muito diferentes dos demais)"/>
-<node CREATED="1621971250590" ID="Freemind_Link_1210408420" MODIFIED="1621971257657" TEXT="&#xc9; poss&#xed;vel passar um Dataframe como data">
-<node CREATED="1621971258289" ID="Freemind_Link_1275026395" MODIFIED="1621971271128" TEXT="Nesse caso ser&#xe3;o plotados os boxplots de todas as colunas (Series)"/>
-</node>
-<node CREATED="1609876605273" ID="Freemind_Link_1015457990" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_210989238" MODIFIED="1609882931548" TEXT="srn.boxplot(dataset[&apos;Score&apos;]).set_title(&apos;Socre&apos;)"/>
-<node COLOR="#0000ff" CREATED="1620330254688" ID="Freemind_Link_858436948" MODIFIED="1620330266292" TEXT="sns.boxplot(data=dados_combinados.query(&apos;composto in @composto_principal&apos;), y=&apos;g0&apos;, x=&apos;composto&apos;, hue=&apos;ativo_moa&apos;)">
-<node CREATED="1620330268078" ID="Freemind_Link_377450744" MODIFIED="1620330284202" TEXT="O par&#xe2;metro &apos;hue&apos; separa os gr&#xe1;ficos por uma coluna espec&#xed;fica"/>
+<node CREATED="1718037328419" ID="Freemind_Link_1438836778" MODIFIED="1718037329172" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_78716490" MODIFIED="1718037345370" TEXT="# Pillow: redimensionando imagens com Python&#xa;# Essa biblioteca &#xe9; o Photoshop do Python &#xd83d;&#xde02;&#xa;from pathlib import Path&#xa;&#xa;from PIL import Image&#xa;&#xa;ROOT_FOLDER = Path(__file__).parent&#xa;ORIGINAL = ROOT_FOLDER / &apos;original.JPG&apos;&#xa;NEW_IMAGE = ROOT_FOLDER / &apos; new.JPG&apos;&#xa;&#xa;pil_image = Image.open(ORIGINAL)&#xa;width, height = pil_image.size&#xa;exif = pil_image.info[&apos;exif&apos;]&#xa;&#xa;# width     new_width&#xa;# height    ??&#xa;new_width = 640&#xa;new_height = round(height * new_width / width)&#xa;&#xa;new_image = pil_image.resize(size=(new_width, new_height))&#xa;new_image.save(&#xa;    NEW_IMAGE,&#xa;    optimize=True,&#xa;    quality=70,&#xa;    # exif=exif,&#xa;)"/>
 </node>
 </node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_483671004" MODIFIED="1609883209159" TEXT="histplot">
-<node CREATED="1609876580616" ID="Freemind_Link_432401187" MODIFIED="1609883212381" TEXT="Plota o histograma  de um conjuto de dados"/>
-<node CREATED="1609876605273" ID="Freemind_Link_461671169" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1213005617" MODIFIED="1609883236454" TEXT="srn.histplot(dataset[&apos;Score&apos;]).set_title(&apos;Socre&apos;)"/>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1203436337" MODIFIED="1609882947938" TEXT="distplot">
-<node CREATED="1609876580616" ID="Freemind_Link_1244539760" MODIFIED="1609883202960" TEXT="Plota o histograma  de um conjuto de dados, mostrando a curva"/>
-<node CREATED="1609876605273" ID="Freemind_Link_851629053" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_836406576" MODIFIED="1609883231089" TEXT="srn.distplot(dataset[&apos;Score&apos;]).set_title(&apos;Socre&apos;)"/>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_561866657" MODIFIED="1610572776407" TEXT="srn.distplot(dataset[&apos;Score&apos;], kde=True, &#xa;                   bins=6, hist=True,&#xa;                   hist_kws={&apos;edgecolor&apos;: &apos;blue&apos;}, &#xa;                   color=&apos;blue&apos;).set_title(&apos;Socre&apos;)">
-<node CREATED="1610572460968" ID="Freemind_Link_1914569891" MODIFIED="1610572758606" TEXT="&apos;kde=True&apos; Plota a curva da linha de densidade junto ao histograma"/>
-<node CREATED="1610572779251" ID="Freemind_Link_1584078036" MODIFIED="1610572788838" TEXT="&apos;hist=True&apos; Plota as barras do histograma"/>
-<node CREATED="1610572511447" ID="Freemind_Link_457125700" MODIFIED="1610572528786" TEXT="&apos;bins=6&apos; Seta a quantidade de barras do histograma para 6 (seis eixos)"/>
-<node CREATED="1610572567149" ID="Freemind_Link_1716862480" MODIFIED="1610572580457" TEXT="&quot;color=&apos;blue&apos;&quot; define a cor do gr&#xe1;fico como azul"/>
-<node CREATED="1610572657964" ID="Freemind_Link_1825257974" MODIFIED="1610572687865" TEXT="&quot;hist_kws={&apos;edgecolor&apos;: &apos;blue&apos;}&quot; Define a cor da borda das barras do histograma como azul"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_127267203" MODIFIED="1620133012934" TEXT="countplot">
-<node CREATED="1609876580616" ID="Freemind_Link_625879051" MODIFIED="1620133029607" TEXT="Plota a quantidade de ocorr&#xea;ncias dos valores de uma coluna">
-<node CREATED="1620133030962" ID="Freemind_Link_1532099101" MODIFIED="1620133053782" TEXT="Como se fosse um gr&#xe1;fico do value_counts()"/>
-</node>
-<node CREATED="1609876605273" ID="Freemind_Link_1848200368" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_783953365" MODIFIED="1620133094496" TEXT="ax = sns.countplot(x=&apos;composto&apos;, data=top5compostos)&#xa;ax.set_title(&apos;Top 5 compostos&apos;)&#xa;plt.show()">
-<node CREATED="1610572460968" ID="Freemind_Link_1300383396" MODIFIED="1620133110967" TEXT="plt.show() &#xe9; s&#xf3; para evitar a exibi&#xe7;&#xe3;o das informa&#xe7;&#xf5;es do gr&#xe1;fico"/>
-<node CREATED="1620133201385" ID="Freemind_Link_1486227328" MODIFIED="1620133213615" TEXT="O eixo &apos;y&apos; por padr&#xe3;o ser&#xe1; o count dos valores da coluna X indicada"/>
-<node CREATED="1620133129068" ID="Freemind_Link_232618730" MODIFIED="1620133195120" TEXT="x=&apos;composto&apos; diz que o eixo X ser&#xe1; formado com os dados da coluna &apos;composto&apos;"/>
-<node CREATED="1620133144668" ID="Freemind_Link_925097907" MODIFIED="1620133151999" TEXT="data &#xe9; o dataframe com os dados"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1814610093" MODIFIED="1620225017399" TEXT="scatterplot">
-<node CREATED="1609876580616" ID="Freemind_Link_550166617" MODIFIED="1620226213419" TEXT="Plota o gr&#xe1;fico de dispers&#xe3;o">
-<arrowlink DESTINATION="Freemind_Link_1776037724" ENDARROW="Default" ENDINCLINATION="140;0;" ID="Freemind_Arrow_Link_543973926" STARTARROW="Default" STARTINCLINATION="140;0;"/>
-</node>
-<node CREATED="1609876605273" ID="Freemind_Link_865619323" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_585799444" MODIFIED="1620224966570" TEXT="sns.scatterplot(x=&apos;g0&apos;, y=&apos;g3&apos;, data=dados[[&apos;g0&apos;,&apos;g3&apos;]])">
-<node CREATED="1610572460968" ID="Freemind_Link_1327182029" MODIFIED="1620225003870" TEXT="dados[[&apos;g0&apos;,&apos;g3&apos;]] &#xe9; uma se&#xe7;&#xe3;o do dataframe dados, pegando apenas as colunas g0 e g3"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1054850281" MODIFIED="1620226186735" TEXT="lmplot">
-<node CREATED="1609876580616" ID="Freemind_Link_1776037724" MODIFIED="1620226213420" TEXT="Plota o gr&#xe1;fico de dispers&#xe3;o com a linha de tend&#xea;ncia"/>
-<node CREATED="1609876605273" ID="Freemind_Link_1732158613" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1800153088" MODIFIED="1620226201387" TEXT="sns.lmplot(x=&apos;g0&apos;, y=&apos;g3&apos;, data=dados[[&apos;g0&apos;,&apos;g3&apos;]])">
-<node CREATED="1610572460968" ID="Freemind_Link_1050349181" MODIFIED="1620225003870" TEXT="dados[[&apos;g0&apos;,&apos;g3&apos;]] &#xe9; uma se&#xe7;&#xe3;o do dataframe dados, pegando apenas as colunas g0 e g3"/>
-<node CREATED="1620231476729" ID="Freemind_Link_506953787" MODIFIED="1620231488277" TEXT="A cor da linha pode ser alterada. Ex: line_kws={&apos;color&apos;:&apos;red&apos;}"/>
-<node CREATED="1620232369021" ID="Freemind_Link_1941163901" MODIFIED="1620232432063" TEXT="O gr&#xe1;fico pode ser partido por mais colunas. Ex: col=&apos;tratamento, row=&apos;tempo&apos;"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1111473303" MODIFIED="1621959852579" TEXT="regplot">
-<node CREATED="1609876580616" ID="Freemind_Link_198942965" MODIFIED="1621959877802" TEXT="Plota o gr&#xe1;fico de dispers&#xe3;o com &apos;afastamento&apos; dos dados">
-<node CREATED="1621959879443" ID="Freemind_Link_1946218424" MODIFIED="1621960007187" TEXT="Provoca uma &quot;tremula&#xe7;&#xe3;o&quot; nos dados"/>
-<node CREATED="1621960008134" ID="Freemind_Link_944771900" MODIFIED="1621960020761" TEXT="&#xda;til quando os dados s&#xe3;o muito sobrepostos"/>
-</node>
-<node CREATED="1609876605273" ID="Freemind_Link_1785238199" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1506137475" MODIFIED="1621959899404" TEXT="sns.regplot(x=base.Girth, y=base.Volume, data = base, x_jitter = 0.3, fit_reg = False)">
-<node CREATED="1621959915126" ID="Freemind_Link_364341515" MODIFIED="1621959927396" TEXT="fit_reg indica se a linha de tend&#x1ebd;ncia deve ser plotada"/>
-<node CREATED="1621959950457" ID="Freemind_Link_201895190" MODIFIED="1621959963386" TEXT="x_jitter indica a perturba&#xe7;&#xe3;o que se quer causar"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1702296804" MODIFIED="1620413221155" TEXT="lineplot">
-<node CREATED="1609876580616" ID="Freemind_Link_1057117392" MODIFIED="1620413228597" TEXT="Plota gr&#xe1;fico de linhas"/>
-<node CREATED="1609876605273" ID="Freemind_Link_847917726" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1678871589" MODIFIED="1620413273550" TEXT="sns.lineplot(x=range(1,15), y=teste, label=&apos;Teste&apos;)  &#xa;sns.lineplot(x=range(1,15), y=treino, label=&apos;Treino&apos;)  ">
-<node CREATED="1610572460968" ID="Freemind_Link_1825043756" MODIFIED="1620413284042" TEXT="Neste exemplo ploto duas curvas no mesmo gr&#xe1;fico"/>
-<node CREATED="1620133201385" ID="Freemind_Link_1356340744" MODIFIED="1620413293371" TEXT="O label ser&#xe1; usado para criar a legenda de cada curva"/>
-<node CREATED="1620413300665" ID="Freemind_Link_684324431" MODIFIED="1620413545142" TEXT="&apos;teste&apos; e &apos;treino&apos; s&#xe3;o dados do tipo &apos;list&apos;"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1984879221" MODIFIED="1622477286617" TEXT="catplot">
-<node CREATED="1609876580616" ID="Freemind_Link_354665620" MODIFIED="1622477291538" TEXT="Plota o gr&#xe1;fico de dispers&#xe3;o ">
-<node CREATED="1621959879443" ID="Freemind_Link_286068364" MODIFIED="1622477301385" TEXT="Permite agrupamento por uma coluna espec&#xed;fica"/>
-</node>
-<node CREATED="1609876605273" ID="Freemind_Link_821806327" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_118223083" MODIFIED="1622477322165" TEXT="srn.catplot(x=&apos;alcgp&apos;, y=&apos;ncontrols&apos;, data=base2)"/>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1879841269" MODIFIED="1622477315325" TEXT="srn.catplot(x=&apos;alcgp&apos;, y=&apos;ncontrols&apos;, data=base2, col=&apos;tobgp&apos;)">
-<node CREATED="1621959915126" ID="Freemind_Link_1964583362" MODIFIED="1622477340414" TEXT="col indica por qual coluna o gr&#xe1;fico deve ser agrupado"/>
-<node CREATED="1622477344344" ID="Freemind_Link_1265424939" MODIFIED="1622477351927" TEXT="Ser&#xe1; exibida uma imagem para cada valor de &apos;col&apos;"/>
-</node>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1620403423143" FOLDED="true" ID="Freemind_Link_1085356855" MODIFIED="1620403428510" POSITION="right" TEXT="Scikit Learn">
-<node CREATED="1620403429149" ID="Freemind_Link_457040450" MODIFIED="1620403431728" TEXT="Instala&#xe7;&#xe3;o:">
-<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_1086810015" MODIFIED="1620403487584" TEXT="pip install -U scikit-learn"/>
-</node>
-<node CREATED="1620404289756" ID="Freemind_Link_1079043038" MODIFIED="1620404714145" TEXT="TestSplit">
-<node CREATED="1620404714996" ID="Freemind_Link_1428431798" MODIFIED="1620404741640" TEXT="Ferramenta usado para dividir a base de dados em 2 bases: uma para treinamento e outra para testes do treinamento"/>
-<node CREATED="1620403709963" ID="Freemind_Link_1383367794" MODIFIED="1620403749607" TEXT="Import">
-<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_1289129197" MODIFIED="1620404785591" TEXT="from sklearn.model_selection import train_test_split"/>
-</node>
-<node CREATED="1620404790681" ID="Freemind_Link_397114474" MODIFIED="1620404794299" TEXT="train_test_split">
-<node CREATED="1620410146053" ID="Freemind_Link_979008172" MODIFIED="1620410162168" TEXT="Para evitar varia&#xe7;&#xf5;es nos treinamentos, use o par&#xe2;metro random_state">
-<node CREATED="1620410162829" ID="Freemind_Link_1650653250" MODIFIED="1620410165568" TEXT="Ex: ">
-<node COLOR="#0000ff" CREATED="1620410173347" ID="Freemind_Link_1703686563" MODIFIED="1620410178444" TEXT="x_treino, x_teste, y_treino, y_teste =  train_test_split(x,y, test_size=0.2, random_state=376)"/>
-</node>
-</node>
-<node CREATED="1620410146053" ID="Freemind_Link_1155116835" MODIFIED="1620410650765" TEXT="Para fazer a extra&#xe7;&#xe3;o o mais fidedigna &#xa;poss&#xed;vel, podemos usar o par&#xe2;metro stratify">
-<node CREATED="1620410520450" ID="Freemind_Link_1192768428" MODIFIED="1620410550995" TEXT="O stratify obt&#xe9;m a base de testes e de treino o mais pr&#xf3;ximo da realidade poss&#xed;vel"/>
-<node CREATED="1620410551955" ID="Freemind_Link_1049693058" MODIFIED="1620410618198" TEXT="Isso evitaria, por exemplo, que a base de treino sejam os registros com resposta &apos;false&apos; e a base de testes sejam os registros com resposta &apos;true&apos;"/>
-<node CREATED="1620410652072" ID="Freemind_Link_1769029633" MODIFIED="1620410680378" TEXT="Devemos informar a ele a coluna que ser&#xe1; usada como refer&#xea;ncia para dividir os valores nos dois grupos (de treino e de teste)"/>
-<node CREATED="1620410162829" ID="Freemind_Link_988874123" MODIFIED="1620410165568" TEXT="Ex: ">
-<node COLOR="#0000ff" CREATED="1620410173347" ID="Freemind_Link_837167063" MODIFIED="1620410643155" TEXT="x_treino, x_teste, y_treino, y_teste =  train_test_split(x,y, test_size=0.2, stratify=y)"/>
-</node>
-</node>
-<node CREATED="1620404799030" ID="Freemind_Link_1773579674" MODIFIED="1620404803314" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_1072935429" MODIFIED="1620404838904" TEXT="x = dados_combinados.select_dtypes(&apos;float64&apos;)&#xa;y = dados_combinados.[&apos;ativo_moa&apos;]&#xa;x_treino, x_teste, y_treino, y_teste =  train_test_split(x,y)">
-<arrowlink DESTINATION="Freemind_Link_925702199" ENDARROW="Default" ENDINCLINATION="135;0;" ID="Freemind_Arrow_Link_1767827382" STARTARROW="Default" STARTINCLINATION="135;0;"/>
-<node CREATED="1620403943587" ID="Freemind_Link_1178370626" MODIFIED="1620403953032" TEXT="x &#xe9; o dado de entrada (assinatura)"/>
-<node CREATED="1620403953645" ID="Freemind_Link_1836530372" MODIFIED="1620403970569" TEXT="y &#xe9; o dado de sa&#xed;da"/>
-</node>
-<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_406378394" MODIFIED="1620404875698" TEXT="x_treino, x_teste, y_treino, y_teste =  train_test_split(x,y, test_size=0.2)">
-<node CREATED="1620404876304" ID="Freemind_Link_970531738" MODIFIED="1620404889772" TEXT="&#xc9; poss&#xed;vel determinar o tamanho da base de testes com o par&#xe2;metro test_size"/>
-<node CREATED="1620404890286" ID="Freemind_Link_151514903" MODIFIED="1620404905475" TEXT="O valor &#xe9; passado em porcentagem (ex de 20%)"/>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1620404271015" ID="Freemind_Link_1031224714" MODIFIED="1620404275292" TEXT="LogisticRegression">
-<node CREATED="1620410843846" ID="Freemind_Link_509407978" MODIFIED="1620410860785" TEXT="&#xc9; um modelo de treinamento"/>
-<node CREATED="1620403709963" ID="Freemind_Link_561022995" MODIFIED="1620403749607" TEXT="Import">
-<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_161444242" MODIFIED="1620403763096" TEXT="from sklearn.linear_model import LogisticRegression"/>
-</node>
-<node CREATED="1620403709963" ID="Freemind_Link_1560090570" MODIFIED="1620403712945" TEXT="In&#xed;cio:">
-<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_1137530556" MODIFIED="1620403743387" TEXT="modelo_rlogistica = LogisticRegression()"/>
-<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_92663607" MODIFIED="1620405265213" TEXT="modelo_rlogistica = LogisticRegression(max_iter=1000)">
-<node CREATED="1620405235960" ID="Freemind_Link_842654189" MODIFIED="1620405252798" TEXT="&#xc9; poss&#xed;vel pasar o ar&#xe2;metro max_iter quando o modelo n&#xe3;o converge no treinamento"/>
-</node>
-</node>
-<node CREATED="1620405094364" ID="Freemind_Link_3338287" MODIFIED="1620405095944" TEXT="fit">
-<node CREATED="1620405051798" ID="Freemind_Link_1250153196" MODIFIED="1620405059723" TEXT="Usado para treinar o modelo"/>
-<node CREATED="1620403980261" ID="Freemind_Link_1330514758" MODIFIED="1620403983799" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_925702199" MODIFIED="1620404838908" TEXT="x = dados_combinados.select_dtypes(&apos;float64&apos;)&#xa;y = dados_combinados.[&apos;ativo_moa&apos;]&#xa;modelo_rlogistica.fit(x, y)">
-<node CREATED="1620403943587" ID="Freemind_Link_1763009455" MODIFIED="1620403953032" TEXT="x &#xe9; o dado de entrada (assinatura)"/>
-<node CREATED="1620403953645" ID="Freemind_Link_1012542585" MODIFIED="1620403970569" TEXT="y &#xe9; o dado de sa&#xed;da"/>
-</node>
-</node>
-</node>
-<node CREATED="1620405102101" ID="Freemind_Link_1943030908" MODIFIED="1620405106920" TEXT="score">
-<node CREATED="1620405107415" ID="Freemind_Link_1774056505" MODIFIED="1620405119160" TEXT="Analisa o modelo para ver a acur&#xe1;cia (p&#xf3;s treinamento)"/>
-<node CREATED="1620405122284" ID="Freemind_Link_20373339" MODIFIED="1620405123007" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_1485452712" MODIFIED="1620405133906" TEXT="modelo_rlogistica.score(x_teste, y_teste)">
-<node CREATED="1620405135082" ID="Freemind_Link_1592403271" MODIFIED="1620405141046" TEXT="x s&#xe3;o os dados de teste de entrada"/>
-<node CREATED="1620405135082" ID="Freemind_Link_1479698749" MODIFIED="1620405153861" TEXT="y s&#xe3;o os dados de teste de sa&#xed;da"/>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1620409235563" ID="Freemind_Link_1184119184" MODIFIED="1620409241401" TEXT="DummyClassifier">
-<node CREATED="1620410843846" ID="Freemind_Link_539100420" MODIFIED="1620410860785" TEXT="&#xc9; um modelo de treinamento"/>
-<node CREATED="1620409241993" ID="Freemind_Link_1875843428" MODIFIED="1620409255315" TEXT="Classificador que usa algoritmos ing&#xea;nuas"/>
-<node CREATED="1620409255927" ID="Freemind_Link_259391750" MODIFIED="1620409277740" TEXT="Usado para testar vaagamente o modelo e comparar com os resultados de um modelo mais &apos;profissional&apos;"/>
-<node CREATED="1620409281479" ID="Freemind_Link_1830960273" MODIFIED="1620409285393" TEXT="https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html">
+<node CREATED="1718203627473" FOLDED="true" ID="Freemind_Link_770001460" MODIFIED="1718203630564" POSITION="right" TEXT="pyinstaller">
+<node CREATED="1718203632251" ID="Freemind_Link_864425009" MODIFIED="1718203645363" TEXT="https://pyinstaller.org/en/stable/">
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1620409564874" ID="Freemind_Link_1932817068" MODIFIED="1620409566143" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1100407205" MODIFIED="1620409578933" TEXT="from sklearn.dummy import DummyClassifier&#xa;from sklearn.metrics import accuracy_score&#xa;&#xa;modelo_dummy = DummyClassifier(&apos;most_frequent&apos;)&#xa;modelo_dummy.fit(x_treino, y_treino)&#xa;previsao_dummy = modelo_dummy.predict(x_teste)&#xa;accuracy_score(y_teste, previsao_dummy)">
-<node CREATED="1620409581548" ID="Freemind_Link_1952479439" MODIFIED="1620409597740" TEXT="o &apos;predict&apos; obtem apenas a previs&#xe3;o gerada pelo teste do modelo"/>
-<node CREATED="1620409599065" ID="Freemind_Link_650373930" MODIFIED="1620409621990" TEXT="o &apos;accuracy_store&apos; verifica a acur&#xe1;cia da previs&#xe3;o obtida"/>
-<node CREATED="1620409623531" ID="Freemind_Link_1361489966" MODIFIED="1620409662461" TEXT="a obten&#xe7;&#xe3;o da acur&#xe1;cia poderia ter sido obtida diretamente via comando modelo_dummy.score(x_teste, y_teste)"/>
+<node CREATED="1718203641189" ID="Freemind_Link_1176572024" MODIFIED="1718203648482" TEXT="https://www.pythonguis.com/tutorials/packaging-pyside6-applications-windows-pyinstaller-installforge/">
+<icon BUILTIN="attach"/>
 </node>
+<node CREATED="1718203649177" ID="Freemind_Link_1271801954" MODIFIED="1718203666024" TEXT="Biblioteca de ferramentas de&#xa;empacotamento de aplica&#xe7;&#xf5;es python">
+<node CREATED="1718203667461" ID="Freemind_Link_32897716" MODIFIED="1718203679359" TEXT="Gera execut&#xe1;veis do S.O. em que o pacote foi gerado"/>
+<node CREATED="1718203685757" ID="Freemind_Link_879252568" MODIFIED="1718203693759" TEXT="O pacote gerado n&#xe3;o &#xe9; cross-platform"/>
 </node>
+<node CREATED="1609876605273" ID="Freemind_Link_825055711" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1570774685" MODIFIED="1718204283212" TEXT="pyinstaller --name=&quot;Calculadora&quot; --noconfirm --onefile \&#xa;  --add-data=&apos;pasta_do_projeto/files/:files/&apos; \&#xa;  --icon=&apos;pasta_do_projeto/files/icon.png&apos; \&#xa;  --noconsole --clean --log-level=WARN \&#xa;  pasta_do_projeto/main.py"/>
 </node>
-<node CREATED="1620410827551" ID="Freemind_Link_1002758899" MODIFIED="1620410828251" TEXT="DecisionTreeClassifier">
-<node CREATED="1620410843846" ID="Freemind_Link_620488860" MODIFIED="1620410860785" TEXT="&#xc9; um modelo de treinamento"/>
-<node CREATED="1620410940247" ID="Freemind_Link_1747374113" MODIFIED="1620410940993" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1620410941529" ID="Freemind_Link_1230116453" MODIFIED="1620411019880" TEXT="from sklearn.tree import DecisionTreeClassifier&#xa;&#xa;x = dados_combinados.select_dtypes(&apos;float64&apos;)&#xa;y = dados_combinados[&apos;ativo_moa&apos;]&#xa;x_treino, x_teste, y_treino, y_teste =  train_test_split(x,y, test_size=0.2, random_state=376, stratify=y)&#xa;modelo_tree = DecisionTreeClassifier(max_depth=3)&#xa;modelo_tree.fit(x_treino, y_treino)&#xa;modelo_tree.score(x_teste, y_teste)"/>
 </node>
+<node CREATED="1718319021108" FOLDED="true" ID="Freemind_Link_1105323484" MODIFIED="1718319023616" POSITION="right" TEXT="pymysql">
+<node CREATED="1718323258258" ID="Freemind_Link_184075390" MODIFIED="1718323273774" TEXT="https://pymysql.readthedocs.io/en/latest/"/>
+<node CREATED="1718319024461" ID="Freemind_Link_1918082205" MODIFIED="1718319037363" TEXT="Biblioteca do cliente do SGBD MySql"/>
+<node CREATED="1609876661409" ID="Freemind_Link_24445434" MODIFIED="1718319046647" TEXT="Instala&#xe7;&#xe3;o">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_219486132" MODIFIED="1718319050848" TEXT="pip install pymysql"/>
 </node>
-<node CREATED="1620410827551" ID="Freemind_Link_1666015041" MODIFIED="1620419317938" TEXT="RandomForest">
-<node CREATED="1620410843846" ID="Freemind_Link_1940291073" MODIFIED="1620419335272" TEXT="&#xc9; um modelo de treinamento que simula v&#xe1;rias &#xe1;rvores e obtem um estimador"/>
-<node CREATED="1620410940247" ID="Freemind_Link_211628050" MODIFIED="1620410940993" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1620410941529" ID="Freemind_Link_589566906" MODIFIED="1620419348040" TEXT="from sklearn.ensemble import RandomForestClassifier&#xa;&#xa;x = dados_combinados.drop([&apos;id&apos;,&apos;n_moa&apos;,&apos;ativo_moa&apos;,&apos;composto&apos;], axis=True) #axis=1 indica que estou passando nomes de colunas&#xa;x = pd.get_dummies(x, columns=[&apos;tratamento&apos;, &apos;dose&apos;, &apos;tempo&apos;]) #Aqui &quot;transformo&quot; colunas de texto em colunas do tipo booleana (0 ou 1)&#xa;&#xa;y = dados_combinados[&apos;ativo_moa&apos;]&#xa;x_treino, x_teste, y_treino, y_teste =  train_test_split(x,y, test_size=0.2, random_state=376, stratify=y)&#xa;modelo_randforest = RandomForestClassifier()&#xa;modelo_randforest.fit(x_treino, y_treino)&#xa;modelo_randforest.score(x_teste, y_teste)"/>
+<node CREATED="1718324610709" ID="Freemind_Link_129231970" MODIFIED="1718324613205" TEXT="Configura&#xe7;&#xe3;o">
+<node CREATED="1718324614162" ID="Freemind_Link_988808125" MODIFIED="1718324636674" TEXT="Pode-se alterar o cursor para&#xa;retornar dict nos selects">
+<node CREATED="1718324637894" ID="Freemind_Link_1875386029" MODIFIED="1718324649665" TEXT="&#xc9; necess&#xe1;rio importar o m&#xf3;dulo pymysql.cursors"/>
+<node CREATED="1718324668780" ID="Freemind_Link_737872115" MODIFIED="1718324715376" TEXT="Na conex&#xe3;o ao SGBD, &#xe9; necess&#xe1;rio definir o par&#xe2;metro cursorclass=pymysql.cursors.DictCursor"/>
+<node CREATED="1609876605273" ID="Freemind_Link_28035333" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_512863119" MODIFIED="1718324856286" TEXT="import pymysql&#xa;import pymysql.cursors&#xa;&#xa;connection = pymysql.connect(&#xa;    host=os.environ[&apos;MYSQL_HOST&apos;],&#xa;    user=os.environ[&apos;MYSQL_USER&apos;],&#xa;    password=os.environ[&apos;MYSQL_PASSWORD&apos;],&#xa;    database=os.environ[&apos;MYSQL_DATABASE&apos;],&#xa;    charset=&apos;utf8mb4&apos;,&#xa;    cursorclass=pymysql.cursors.DictCursor,&#xa;)&#xa;&#xa;...&#xa;"/>
 </node>
 </node>
 </node>
-<node CREATED="1609876477873" FOLDED="true" ID="Freemind_Link_1702268812" MODIFIED="1609876480160" POSITION="right" TEXT="Statistics">
-<node CREATED="1609876509241" ID="Freemind_Link_1456077688" MODIFIED="1609876523892" TEXT="Ferramentas estat&#xed;sticas"/>
-<node CREATED="1609876661409" ID="Freemind_Link_1920224202" MODIFIED="1609876666051" TEXT="Uso">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1416899252" MODIFIED="1609876706066" TEXT="import statistics as sts"/>
+<node CREATED="1609876661409" ID="Freemind_Link_491649754" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_310359540" MODIFIED="1718319059907" TEXT="import pymysql"/>
 </node>
-<node CREATED="1609876566896" ID="Freemind_Link_261800889" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_921521276" MODIFIED="1609880114463" TEXT="mean">
-<node CREATED="1609876580616" ID="Freemind_Link_338999039" MODIFIED="1609880124035" TEXT="Calcula a m&#xe9;dia dos valores de uma lista"/>
-<node CREATED="1609876605273" ID="Freemind_Link_1406617224" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1796676505" MODIFIED="1609880138637" TEXT="x = sts.mean(lst)"/>
+<node CREATED="1609876605273" FOLDED="true" ID="Freemind_Link_1577938480" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1259892624" MODIFIED="1718323254328" TEXT="import os&#xa;&#xa;import dotenv&#xa;import pymysql&#xa;&#xa;TABLE_NAME = &apos;customers&apos;&#xa;&#xa;dotenv.load_dotenv()&#xa;&#xa;connection = pymysql.connect(&#xa;    host=os.environ[&apos;MYSQL_HOST&apos;],&#xa;    user=os.environ[&apos;MYSQL_USER&apos;],&#xa;    password=os.environ[&apos;MYSQL_PASSWORD&apos;],&#xa;    database=os.environ[&apos;MYSQL_DATABASE&apos;],&#xa;    charset=&apos;utf8mb4&apos;&#xa;)&#xa;&#xa;with connection:&#xa;    with connection.cursor() as cursor:&#xa;        cursor.execute(  # type: ignore&#xa;            f&apos;CREATE TABLE IF NOT EXISTS {TABLE_NAME} (&apos;&#xa;            &apos;id INT NOT NULL AUTO_INCREMENT, &apos;&#xa;            &apos;nome VARCHAR(50) NOT NULL, &apos;&#xa;            &apos;idade INT NOT NULL, &apos;&#xa;            &apos;PRIMARY KEY (id)&apos;&#xa;            &apos;) &apos;&#xa;        )&#xa;        # CUIDADO: ISSO LIMPA A TABELA&#xa;        cursor.execute(f&apos;TRUNCATE TABLE {TABLE_NAME}&apos;)  # type: ignore&#xa;    connection.commit()&#xa;&#xa;    # Come&#xe7;o a manipular dados a partir daqui&#xa;&#xa;    with connection.cursor() as cursor:&#xa;        cursor.execute(  # type: ignore&#xa;            f&apos;INSERT INTO {TABLE_NAME} &apos;&#xa;            &apos;(nome, idade) VALUES (&quot;Luiz&quot;, 25) &apos;&#xa;        )&#xa;        cursor.execute(  # type: ignore&#xa;            f&apos;INSERT INTO {TABLE_NAME} &apos;&#xa;            &apos;(nome, idade) VALUES (&quot;Luiz&quot;, 25) &apos;&#xa;        )&#xa;        result = cursor.execute(  # type: ignore&#xa;            f&apos;INSERT INTO {TABLE_NAME} &apos;&#xa;            &apos;(nome, idade) VALUES (&quot;Luiz&quot;, 25) &apos;&#xa;        )&#xa;        print(result)&#xa;    connection.commit()"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1036603017" MODIFIED="1718324104336" TEXT="        sql = (&#xa;            f&apos;INSERT INTO {TABLE_NAME} &apos;&#xa;            &apos;(nome, idade) &apos;&#xa;            &apos;VALUES &apos;&#xa;            &apos;(%s, %s) &apos;&#xa;        )&#xa;        data = (&apos;Luiz&apos;, 18)&#xa;        result = cursor.execute(sql, data) ">
+<node CREATED="1718324108921" ID="Freemind_Link_1857437980" MODIFIED="1718324112780" TEXT="Usando placeholders"/>
 </node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_270820746" MODIFIED="1718324342309" TEXT="        sql = (&#xa;            f&apos;INSERT INTO {TABLE_NAME} &apos;&#xa;            &apos;(nome, idade) &apos;&#xa;            &apos;VALUES &apos;&#xa;            &apos;(%(name)s, %(age)s) &apos;&#xa;        )&#xa;        data2 = {&#xa;            &quot;age&quot;: 37,&#xa;            &quot;name&quot;: &quot;Le&quot;,&#xa;        }&#xa;        result = cursor.execute(sql, data2)">
+<node CREATED="1718324108921" ID="Freemind_Link_1986632618" MODIFIED="1718324259280" TEXT="Usando placeholders e dict"/>
 </node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1990845122" MODIFIED="1609880116495" TEXT="median">
-<node CREATED="1609876580616" ID="Freemind_Link_35170248" MODIFIED="1609880159148" TEXT="Calcula a mediana dos valores de uma lista">
-<node CREATED="1610043202159" ID="Freemind_Link_1561765007" MODIFIED="1610043216390" TEXT="A mediana &#xe9; menos sujeita a valores fora do padr&#xe3;o (outliers)"/>
 </node>
-<node CREATED="1609876605273" ID="Freemind_Link_592030005" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1527696908" MODIFIED="1609880166018" TEXT="x = sts.median(lst)"/>
 </node>
+<node CREATED="1717788713527" FOLDED="true" ID="Freemind_Link_585951979" MODIFIED="1717788715995" POSITION="right" TEXT="PyPDF2">
+<node CREATED="1717789063275" ID="Freemind_Link_1935009519" MODIFIED="1717789066823" TEXT="https://pypdf2.readthedocs.io/en/3.x/">
+<icon BUILTIN="attach"/>
 </node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_412274079" MODIFIED="1609881131307" TEXT="mode">
-<node CREATED="1609876580616" ID="Freemind_Link_1902206674" MODIFIED="1609882544644" TEXT="Calcula a moda dos valores de uma lista">
-<node CREATED="1610042384485" ID="Freemind_Link_892171664" MODIFIED="1610042391119" TEXT="A moda &#xe9; o valor que mais ocorre"/>
+<node CREATED="1717788721094" ID="Freemind_Link_362686779" MODIFIED="1717788731779" TEXT="Biblioteca de ferramentas para manipula&#xe7;&#xe3;o de PDF&apos;s"/>
+<node CREATED="1717788924654" ID="Freemind_Link_1050189660" MODIFIED="1717788926470" TEXT="Instala&#xe7;&#xe3;o">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1038504129" MODIFIED="1717788942925" TEXT="pip install PyPDF2"/>
 </node>
-<node CREATED="1609876605273" ID="Freemind_Link_179242398" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_5417713" MODIFIED="1609881167410" TEXT="x = sts.mode(lst)"/>
+<node CREATED="1609876661409" ID="Freemind_Link_276204926" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1076062719" MODIFIED="1609876759581" TEXT="import ??? as ??"/>
 </node>
+<node CREATED="1609876566896" ID="Freemind_Link_1939540217" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_753910854" MODIFIED="1717789873046" TEXT="pages">
+<node CREATED="1609876580616" ID="Freemind_Link_781026507" MODIFIED="1717789893215" TEXT="Retorna lista das p&#xe1;ginas do PDF"/>
 </node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_163018204" MODIFIED="1609881136009" TEXT="stdev">
-<node CREATED="1609876580616" ID="Freemind_Link_1686154205" MODIFIED="1609881181324" TEXT="Calcula o desvio padr&#xe3;o dos valores de uma lista"/>
-<node CREATED="1609876605273" ID="Freemind_Link_1553254868" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1580114203" MODIFIED="1609881191178" TEXT="x = sts.stdev(lst)"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_531923974" MODIFIED="1717789916806" TEXT="extract_text">
+<node CREATED="1717789927171" ID="Freemind_Link_1618557593" MODIFIED="1717789934926" TEXT="M&#xe9;todo usado em uma p&#xe1;gina do PDF"/>
+<node CREATED="1609876580616" ID="Freemind_Link_462379041" MODIFIED="1717789924994" TEXT="Extrai o texto de uma p&#xe1;gina do PDF"/>
 </node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1606810619" MODIFIED="1717789986795" TEXT="images">
+<node CREATED="1609876580616" ID="Freemind_Link_1362724989" MODIFIED="1717789993581" TEXT="Retorna a lista de imagens do PDF"/>
+<node CREATED="1717789994160" ID="Freemind_Link_759120228" MODIFIED="1717790010733" TEXT="H&#xe1; PDF&apos;s que n&#xe3;o s&#xe3;o gerados corretamente (como texto), mas como imagens"/>
 </node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_790197747" MODIFIED="1609881145024" TEXT="variance">
-<node CREATED="1609876580616" ID="Freemind_Link_1338272202" MODIFIED="1609881198907" TEXT="Calcula a vari&#xe2;ncia dos valores de uma lista"/>
-<node CREATED="1609876605273" ID="Freemind_Link_873185799" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1293789533" MODIFIED="1609881207321" TEXT="x = sts.variance(lst)"/>
+<node CREATED="1717789939298" ID="Freemind_Link_1409012857" MODIFIED="1717789940557" TEXT="etc."/>
 </node>
+<node CREATED="1609876605273" ID="Freemind_Link_1355773108" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_881775532" MODIFIED="1717789855887" TEXT="import os&#xa;from PyPDF2 import PdfReader&#xa;&#xa;PDF_ORIGINAL_PATH = os.path.dirname(__file__) + &apos;/pdfs_originais&apos;&#xa;PDF_NOVO_PATH = os.path.dirname(__file__) + &apos;/pdfs_novos&apos;&#xa;&#xa;&#xa;RELATORIO_BACEN = PDF_ORIGINAL_PATH + &apos;/R20240531.pdf&apos;&#xa;&#xa;if not os.path.exists(RELATORIO_BACEN):&#xa;    raise FileNotFoundError(f&apos;Arquivo PDF {RELATORIO_BACEN} n&#xe3;o encontrado!&apos;)&#xa;&#xa;reader = PdfReader(RELATORIO_BACEN)&#xa;&#xa;print(f&apos;O relat&#xf3;rio {os.path.basename(RELATORIO_BACEN)} tem {len(reader.pages)} p&#xe1;ginas&apos;)&#xa;print(&quot;Conte&#xfa;do da p&#xe1;gina 1:&quot;, reader.pages[0].extract_text(), sep=&apos;\n&apos;)"/>
 </node>
 </node>
+<node CREATED="1718037896147" FOLDED="true" ID="Freemind_Link_6207032" MODIFIED="1718037898228" POSITION="right" TEXT="pyside6">
+<node CREATED="1718037921109" ID="Freemind_Link_339492954" MODIFIED="1718037924994" TEXT="https://doc.qt.io/qtforpython/">
+<icon BUILTIN="attach"/>
 </node>
-<node CREATED="1610547824229" FOLDED="true" ID="Freemind_Link_1400798417" MODIFIED="1610547826796" POSITION="right" TEXT="Numpy">
-<node CREATED="1609876497969" ID="Freemind_Link_1127785882" MODIFIED="1610547875182" TEXT="Trabalho com estat&#xed;stica"/>
-<node CREATED="1610547908748" ID="Freemind_Link_1139902648" MODIFIED="1610547914144" TEXT="Biblioteca cient&#xed;fica"/>
-<node CREATED="1609876661409" ID="Freemind_Link_652425837" MODIFIED="1609876666051" TEXT="Uso">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_341612145" MODIFIED="1610547866975" TEXT="import numpy as np"/>
+<node CREATED="1718037899571" ID="Freemind_Link_7749697" MODIFIED="1718037901628" TEXT="PySide6 para GUI (interface gr&#xe1;fica) com Qt em Python"/>
+<node CREATED="1718038061053" ID="Freemind_Link_1122401254" MODIFIED="1718038068035" TEXT="Instala&#xe7;&#xe3;o">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1739954562" MODIFIED="1718038076251" TEXT="pip install pyside6"/>
 </node>
-<node CREATED="1610547852579" ID="Freemind_Link_1341626660" MODIFIED="1610547854446" TEXT="Fun&#xe7;&#xf5;es">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_961209902" MODIFIED="1610551133897" TEXT="histogram">
-<node CREATED="1609876580616" ID="Freemind_Link_663956981" MODIFIED="1610551149601" TEXT="Gera o array com os pontos do histograma dos dados"/>
-<node CREATED="1610551173790" ID="Freemind_Link_343328552" MODIFIED="1610551177409" TEXT="Argumentos">
-<node CREATED="1610551178934" ID="Freemind_Link_541911818" MODIFIED="1610551180265" TEXT="bins">
-<node CREATED="1610551180614" ID="Freemind_Link_1084757477" MODIFIED="1610551190376" TEXT="Indica quantos eixos (barras) deve ter no histograma"/>
+<node CREATED="1609876661409" ID="Freemind_Link_637873902" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_856112147" MODIFIED="1609876759581" TEXT="import ??? as ??"/>
 </node>
-</node>
-<node CREATED="1609876605273" ID="Freemind_Link_278485905" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_760144888" MODIFIED="1610551170913" TEXT="np.histogram(base.iloc[:,1], bins=6)"/>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_538388295" MODIFIED="1624299157237" TEXT="random">
-<node CREATED="1609876580616" ID="Freemind_Link_205747894" MODIFIED="1624299228479" TEXT="Ferramenta de gera&#xe7;&#xe3;o de n&#xfa;meros aleat&#xf3;rios"/>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_959713467" MODIFIED="1624299162224" TEXT="seed">
-<node CREATED="1609876580616" ID="Freemind_Link_1793702219" MODIFIED="1624299190605" TEXT="Determina a semente para gera&#xe7;&#xe3;o de n&#xfa;meros aleat&#xf3;rios"/>
-<node CREATED="1610551173790" ID="Freemind_Link_1705330443" MODIFIED="1624299209548" TEXT="Indicado para casos em que se quer reproduzir os mesmos resultados em outro momento/local"/>
-<node CREATED="1609876605273" ID="Freemind_Link_329909402" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_74792002" MODIFIED="1624299174830" TEXT="np.random.seed(2345)"/>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1703104480" MODIFIED="1624299233796" TEXT="choice">
-<node CREATED="1609876580616" ID="Freemind_Link_507321608" MODIFIED="1624299257814" TEXT="Escolha aleat&#xf3;ria de registro de uma base de dados"/>
-<node CREATED="1609876605273" ID="Freemind_Link_73593545" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_876606390" MODIFIED="1624299287165" TEXT="np.random.choice(a=[0,1], size=150, replace=True, p=[0.7,0.3])">
-<node CREATED="1624299290820" ID="Freemind_Link_1158308820" MODIFIED="1624299337702" TEXT="150 amostras, de 0&apos;s e 1&apos;s, com reposi&#xe7;&#xe3;o e com probabilidades 0.7 e 0.3 respectv//"/>
-</node>
-</node>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1610547827467" FOLDED="true" ID="Freemind_Link_1107441332" MODIFIED="1610547831694" POSITION="right" TEXT="Matplotlib">
-<node CREATED="1610550899375" ID="Freemind_Link_390408308" MODIFIED="1610550904355" TEXT=".pyplot">
-<node CREATED="1609876497969" ID="Freemind_Link_1329424061" MODIFIED="1609876508356" TEXT="Trabalho com gr&#xe1;ficos"/>
-<node CREATED="1609876661409" ID="Freemind_Link_579355271" MODIFIED="1609876666051" TEXT="Uso">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_360305371" MODIFIED="1610550930427" TEXT="import matplotlib.pyplot as plt"/>
-</node>
-<node CREATED="1609876470660" ID="Freemind_Link_1590228585" MODIFIED="1622477591016" TEXT="Axes3d">
-<node CREATED="1609876530394" ID="Freemind_Link_1146171283" MODIFIED="1622477668464" TEXT="Biblioteca  que estende o matplotlib para plotagem de gr&#xe1;ficos 3D">
-<node CREATED="1622477992976" ID="Freemind_Link_1885478212" MODIFIED="1622478000915" TEXT="O gr&#xe1;fico &#xe9; est&#xe1;tico, n&#xe3;o interativo"/>
-</node>
-<node CREATED="1609876661409" ID="Freemind_Link_105819182" MODIFIED="1609876666051" TEXT="Uso">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1659405731" MODIFIED="1622477617393" TEXT="from mpl_toolkits.mplot3d import axes3d"/>
-</node>
-<node CREATED="1609876605273" ID="Freemind_Link_825982932" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1252166022" MODIFIED="1622477892397" TEXT="base = pd.read_csv(&apos;../dados/orchard.csv&apos;)&#xa;figura = plt.figure()&#xa;eixo = figura.add_subplot(1,1,1,projection=&apos;3d&apos;)&#xa;eixo.scatter(base.decrease, base.rowpos, base.colpos)&#xa;eixo.set_xlabel(&apos;decrease&apos;)&#xa;eixo.set_ylabel(&apos;rowpos&apos;)&#xa;eixo.set_zlabel(&apos;colpos&apos;)"/>
-</node>
-</node>
-<node CREATED="1610547852579" ID="Freemind_Link_1245451147" MODIFIED="1610547854446" TEXT="Fun&#xe7;&#xf5;es">
-<node CREATED="1621967313007" ID="Freemind_Link_1695300122" MODIFIED="1621967368153" TEXT="Chamadas sucessivas a fun&#xe7;&#xf5;es que plotam gr&#xe1;ficos &#xa;colocam todos os gr&#xe1;ficos na mesma imagem">
-<icon BUILTIN="messagebox_warning"/>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1771279890" MODIFIED="1610550942698" TEXT="hist">
-<node CREATED="1609876580616" ID="Freemind_Link_1377027773" MODIFIED="1610550950835" TEXT="Plota o histograma dos dados"/>
-<node CREATED="1609876605273" ID="Freemind_Link_1853392264" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1456559388" MODIFIED="1610550972962" TEXT="plt.hist(base.iloc[:,1], bins=6)"/>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_834850550" MODIFIED="1621959378695" TEXT="scatter">
-<node CREATED="1609876580616" ID="Freemind_Link_65899650" MODIFIED="1621959386151" TEXT="Plota o gr&#xe1;fico de dispers&#xe3;o"/>
-<node CREATED="1609876605273" ID="Freemind_Link_468586942" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1035541194" MODIFIED="1621959487519" TEXT="plt.scatter(base.Girth, base.Volume, color=&apos;blue&apos;, facecolors = &apos;none&apos;, marker =&apos;*&apos;)"/>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_278505610" MODIFIED="1621959585578" TEXT="plot">
-<node CREATED="1609876580616" ID="Freemind_Link_685007593" MODIFIED="1621959592433" TEXT="Plota o gr&#xe1;fico de linha"/>
-<node CREATED="1609876605273" ID="Freemind_Link_1414377437" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_582990258" MODIFIED="1621959605266" TEXT="plt.scatter(base.Girth, base.Volume)"/>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1589998173" MODIFIED="1621969311443" TEXT="boxplot">
-<node CREATED="1609876580616" ID="Freemind_Link_1007673313" MODIFIED="1621969316260" TEXT="Plota o gr&#xe1;fico de boxplot"/>
-<node CREATED="1609876605273" ID="Freemind_Link_321688190" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_841066044" MODIFIED="1621969336410" TEXT="plt.boxplot(base.Volume, vert = False, showfliers = False, notch = True,patch_artist = True)">
-<node CREATED="1621969443198" ID="Freemind_Link_1175545910" MODIFIED="1621969455146" TEXT="Pode ser passado mais de uma s&#xe9;rie">
-<node CREATED="1621969455456" ID="Freemind_Link_373075507" MODIFIED="1621969467488" TEXT="Ex: [base.Volume, base.Girth]"/>
-</node>
-<node CREATED="1621969347495" ID="Freemind_Link_933430766" MODIFIED="1621969378594" TEXT="showFliers mostra os outliers"/>
-<node CREATED="1621969357345" ID="Freemind_Link_1093264047" MODIFIED="1621969578416" TEXT="notch faz um talho na linha da mediana"/>
-<node CREATED="1621969390261" ID="Freemind_Link_980197597" MODIFIED="1621969399448" TEXT="patch_artist preenche o boxplot"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_316309538" MODIFIED="1610551028643" TEXT="title">
-<node CREATED="1609876580616" ID="Freemind_Link_1422803735" MODIFIED="1610551038163" TEXT="Define o t&#xed;tulo do gr&#xe1;fico"/>
-<node CREATED="1609876605273" ID="Freemind_Link_1591831169" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_424773552" MODIFIED="1610551050138" TEXT="plt.title(&apos;&#xc1;rvores&apos;)"/>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_789001210" MODIFIED="1610551055977" TEXT="ylabel">
-<node CREATED="1609876580616" ID="Freemind_Link_557929981" MODIFIED="1610551070490" TEXT="Define o texto do eixo das ordenadas do gr&#xe1;fico"/>
-<node CREATED="1609876605273" ID="Freemind_Link_1476136053" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_272446595" MODIFIED="1610551081764" TEXT="plt.ylabel(&apos;Frequencia&apos;)"/>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1317825242" MODIFIED="1610551092161" TEXT="xlabel">
-<node CREATED="1609876580616" ID="Freemind_Link_1567512718" MODIFIED="1610551097721" TEXT="Define o texto do eixo das absci&#xe7;as do gr&#xe1;fico"/>
-<node CREATED="1609876605273" ID="Freemind_Link_604415105" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1315435058" MODIFIED="1610551106514" TEXT="plt.xlabel(&apos;Altura&apos;)"/>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1312925747" MODIFIED="1621967091014" TEXT="legend">
-<node CREATED="1609876580616" ID="Freemind_Link_1414442478" MODIFIED="1621967098680" TEXT="Adiciona uma legenda ao gr&#xe1;fico"/>
-<node CREATED="1609876605273" ID="Freemind_Link_1316301920" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1568610033" MODIFIED="1621967108488" TEXT="plt.legend(loc = &apos;lower right&apos;)"/>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_7735739" MODIFIED="1621969006068" TEXT="subplot">
-<node CREATED="1609876580616" ID="Freemind_Link_1527844656" MODIFIED="1621969026138" TEXT="Usado para plotar v&#xe1;rios gr&#xe1;ficos (magens) como um grid de imagens">
-<node CREATED="1621969027580" ID="Freemind_Link_557149359" MODIFIED="1621969039980" TEXT="Como o &apos;screen&apos; do linux"/>
-</node>
-<node CREATED="1609876605273" ID="Freemind_Link_1699643791" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1200952483" MODIFIED="1621969050212" TEXT="plt.figure(1)&#xa;plt.subplot(2,2,1)&#xa;plt.scatter(base.Girth, base.Volume)&#xa;plt.subplot(2,2,2)&#xa;plt.scatter(base.Girth, base.Height)&#xa;plt.subplot(2,2,3)&#xa;plt.scatter(base.Height, base.Volume, marker = &apos;*&apos;)&#xa;plt.subplot(2,2,4)&#xa;plt.hist(base.Volume)">
-<node CREATED="1621969052416" ID="Freemind_Link_789785944" MODIFIED="1621969066931" TEXT="2,2 =&gt; qtd de linhas e colunas"/>
-</node>
-</node>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1609876470660" FOLDED="true" ID="Freemind_Link_1868837144" MODIFIED="1716383506466" POSITION="right" TEXT="os">
-<node CREATED="1716383516493" ID="Freemind_Link_325806044" MODIFIED="1716383527823" TEXT="Biblioteca que permite efetuar chamadas de comandos do S.O."/>
-<node CREATED="1717625086528" ID="Freemind_Link_286139285" LINK="#Freemind_Link_1176141369" MODIFIED="1717625111292" TEXT="Para manipula&#xe7;&#xf5;es de arquivos, prefira a bilioteca shutil"/>
-<node CREATED="1609876530394" ID="Freemind_Link_249712244" MODIFIED="1716383533113" TEXT="Nativa do Python"/>
-<node CREATED="1609876661409" ID="Freemind_Link_1356362143" MODIFIED="1609876666051" TEXT="Uso">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1086489164" MODIFIED="1716383539568" TEXT="import os"/>
-</node>
-<node CREATED="1609876566896" ID="Freemind_Link_32324062" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
-<node COLOR="#0000ff" CREATED="1609876573952" FOLDED="true" ID="Freemind_Link_804525595" MODIFIED="1716383553432" TEXT="system">
-<node CREATED="1609876580616" ID="Freemind_Link_1504571454" MODIFIED="1716383563216" TEXT="Efetua chamadas de comandos do sistema operacional"/>
-<node CREATED="1609876605273" ID="Freemind_Link_1029678701" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_112137638" MODIFIED="1716383571416" TEXT="os.system(&apos;clear&apos;)">
-<node CREATED="1716383572940" ID="Freemind_Link_965727028" MODIFIED="1716383575681" TEXT="Limpa o terminal"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" FOLDED="true" ID="Freemind_Link_1982596262" MODIFIED="1716990919796" TEXT="remove ou unlink">
-<node CREATED="1609876580616" ID="Freemind_Link_1596869295" MODIFIED="1716990931173" TEXT="Exclui um arquivo"/>
-<node CREATED="1609876605273" ID="Freemind_Link_696716096" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1299750227" MODIFIED="1716990972630" TEXT="os.unlink(&apos;arquivo.txt&apos;)"/>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_857402278" MODIFIED="1716990982036" TEXT="os.remove(&apos;arquivo.txt&apos;)"/>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_703308435" MODIFIED="1716991099344" TEXT="rename">
-<node CREATED="1609876580616" ID="Freemind_Link_1797453830" MODIFIED="1716991103465" TEXT="Renomeia um aquivo"/>
-<node CREATED="1609876605273" ID="Freemind_Link_210336857" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1060091935" MODIFIED="1716991123702" TEXT="os.rename(&apos;nomeantigo.txt&apos;, &apos;nomenovo.txt&apos;)&#xa;"/>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" FOLDED="true" ID="Freemind_Link_256359971" MODIFIED="1717616463882" TEXT="path">
-<node CREATED="1609876580616" ID="Freemind_Link_1162274824" MODIFIED="1717615940140" TEXT="Manipula paths no S.O."/>
-<node COLOR="#0000ff" CREATED="1717616463855" ID="Freemind_Link_172753087" MODIFIED="1717616469690" TEXT="join">
-<node CREATED="1717616471714" ID="Freemind_Link_1153207621" MODIFIED="1717616487424" TEXT="Junta partes de um caminho usando o separador de pastas do S.O."/>
-<node CREATED="1609876605273" ID="Freemind_Link_900815765" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1318936478" MODIFIED="1717616630187" TEXT="import os&#xa;&#xa;caminho = &apos;/home/users/pasta1/pasta2/arquivo.txt&apos;&#xa;print(os.path.splitext(caminho))">
-<node CREATED="1717616078326" ID="Freemind_Link_1118966160" MODIFIED="1717616636841" TEXT="Resultado:&#xa;(&apos;/home/users/pasta1/pasta2&apos;, &apos;arquivo.txt&apos;)"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1717616463855" ID="Freemind_Link_1073560288" MODIFIED="1717616498426" TEXT="split">
-<node CREATED="1717616471714" ID="Freemind_Link_1182721547" MODIFIED="1717616955540" TEXT="Separa um caminho em uma tupla com&#xa;2 partes: o diret&#xf3;rio e o arquivo">
-<node CREATED="1717616956731" ID="Freemind_Link_791543530" MODIFIED="1717616970946" TEXT="Equivalente a combinar os usos&#xa;de dirname e basename">
-<node COLOR="#0000ff" CREATED="1717617009228" ID="Freemind_Link_661047797" MODIFIED="1717617012968" TEXT="print(os.path.dirname(caminho), os.path.basename(caminho))"/>
-</node>
-</node>
-<node CREATED="1609876605273" ID="Freemind_Link_1543841735" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_701250032" MODIFIED="1717616752723" TEXT="import os&#xa;&#xa;caminho = &apos;/home/users/pasta1/pasta2/arquivo.txt&apos;&#xa;print(os.path.split(caminho))&#xa;">
-<node CREATED="1717616078326" ID="Freemind_Link_543844344" MODIFIED="1717616790734" TEXT="Resultado:&#xa;(&apos;/home/users/pasta1/pasta2&apos;, &apos;arquivo.txt&apos;)"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1717616463855" ID="Freemind_Link_621476854" MODIFIED="1717616734962" TEXT="splittext">
-<node CREATED="1717616728866" ID="Freemind_Link_7028321" MODIFIED="1717616800032" TEXT="Separa um caminho em uma tupla com 2 partes: o caminho&#xa;do arquivo (incluindo seu nome) e a extens&#xe3;o do arquivo"/>
-<node CREATED="1609876605273" ID="Freemind_Link_833947647" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1009381649" MODIFIED="1717616757796" TEXT="import os&#xa;&#xa;caminho = &apos;/home/users/pasta1/pasta2/arquivo.txt&apos;&#xa;print(os.path.splitext(caminho))">
-<node CREATED="1717616078326" ID="Freemind_Link_1744840443" MODIFIED="1717616786192" TEXT="Resultado:&#xa;(&apos;/home/users/pasta1/pasta2/arquivo&apos;, &apos;.txt&apos;)"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1717616463855" ID="Freemind_Link_93782037" MODIFIED="1717616844248" TEXT="exists">
-<node CREATED="1717616728866" ID="Freemind_Link_1384489496" MODIFIED="1717616861305" TEXT="Checa se um caminho existe, retornando True em caso verdadeiro"/>
-<node CREATED="1609876605273" ID="Freemind_Link_184999657" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1525265704" MODIFIED="1717616879697" TEXT="import os&#xa;&#xa;caminho = &apos;/home/users/pasta1/pasta2/arquivo.txt&apos;&#xa;if os.path.exists(caminho):&#xa;    ..."/>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1717616463855" ID="Freemind_Link_989881707" MODIFIED="1717624716759" TEXT="expanduser">
-<node CREATED="1717616728866" ID="Freemind_Link_1548390409" MODIFIED="1717624733662" TEXT="Retorna um path expandindo caracteres especiais como &apos;~&apos;"/>
-<node CREATED="1609876605273" ID="Freemind_Link_789648701" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_48098984" MODIFIED="1717624742668" TEXT="import os&#xa;&#xa;print(os.path.expanduser(&apos;~/tmp&apos;))">
-<node CREATED="1717624749659" ID="Freemind_Link_1122718926" MODIFIED="1717624752859" TEXT="Resultado: /home/ebenezer.botelho/tmp"/>
-</node>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" FOLDED="true" ID="Freemind_Link_1230942116" MODIFIED="1717617088468" TEXT="listdir">
-<node CREATED="1609876580616" ID="Freemind_Link_1672221313" MODIFIED="1717617375006" TEXT="Usado para nagevar em diret&#xf3;rios">
-<arrowlink COLOR="#fb080b" DESTINATION="Freemind_Link_1686482183" ENDARROW="Default" ENDINCLINATION="177;0;" ID="Freemind_Arrow_Link_496656053" STARTARROW="Default" STARTINCLINATION="177;0;"/>
-</node>
-<node CREATED="1717617350140" ID="Freemind_Link_456497784" MODIFIED="1717617357904" TEXT="N&#xe3;o entra nos diret&#xf3;rios filho (subpastas)"/>
-<node CREATED="1717617325100" ID="Freemind_Link_1155745340" MODIFIED="1717617325832" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1717617326670" ID="Freemind_Link_1305663402" MODIFIED="1717617339243" TEXT="import os&#xa;&#xa;caminho = &apos;/tmp&apos;&#xa;for item in os.listdir(caminho):&#xa;    print(f&apos;Item {item}&apos;)"/>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" FOLDED="true" ID="Freemind_Link_420561751" MODIFIED="1717617106834" TEXT="walk">
-<node CREATED="1609876580616" ID="Freemind_Link_1686482183" MODIFIED="1717617375007" TEXT="Usado para nagevar em diret&#xf3;rios de forma recursiva"/>
-<node CREATED="1717617746795" ID="Freemind_Link_94043733" MODIFIED="1717617891306" TEXT="Ele retorna uma tupla com 3 itens:">
-<node CREATED="1717617892490" ID="Freemind_Link_535535808" MODIFIED="1717617893415" TEXT="root">
-<node CREATED="1717617894289" ID="Freemind_Link_1467179113" MODIFIED="1717617915964" TEXT="A pasta atual"/>
-</node>
-<node CREATED="1717617900074" ID="Freemind_Link_883619207" MODIFIED="1717617901244" TEXT="dirs">
-<node CREATED="1717617901919" ID="Freemind_Link_853368291" MODIFIED="1717617912918" TEXT="A lista de subdiret&#xf3;rios da pasta atual"/>
-</node>
-<node CREATED="1717617917650" ID="Freemind_Link_733641905" MODIFIED="1717618025714" TEXT="files">
-<node CREATED="1717617901919" ID="Freemind_Link_928840165" MODIFIED="1717618034810" TEXT="A lista de arquivos da pasta atual"/>
-</node>
-</node>
-<node CREATED="1717617325100" ID="Freemind_Link_1355820812" MODIFIED="1717617325832" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1717617326670" ID="Freemind_Link_389043863" MODIFIED="1717617739318" TEXT="import os&#xa;&#xa;caminho = &apos;/tmp&apos;&#xa;for item in os.walk(caminho):&#xa;    print(f&apos;Item {item}&apos;)&#xa;&#xa;# for root, dir, files in os.walk(caminho):&#xa;#     print(f&apos;{root=}\n{dir=}\n{files=}&apos;)"/>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_193291873" MODIFIED="1717624149283" TEXT="stat">
-<node CREATED="1609876580616" ID="Freemind_Link_245330813" MODIFIED="1717624161771" TEXT="Usado para se obter informa&#xe7;&#xf5;es de arquivos">
-<node CREATED="1717624164719" ID="Freemind_Link_1399413915" MODIFIED="1717624168024" TEXT="Tamanho"/>
-<node CREATED="1717624168250" ID="Freemind_Link_1202465970" MODIFIED="1717624170640" TEXT="Data de modifica&#xe7;&#xe3;o"/>
-<node CREATED="1717624170860" ID="Freemind_Link_1029754493" MODIFIED="1717624171641" TEXT="etc."/>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1416602804" MODIFIED="1717694447652" TEXT="getenv">
-<node CREATED="1609876580616" ID="Freemind_Link_1810261142" MODIFIED="1717694471471" TEXT="Usado para obter valor de&#xa;vari&#xe1;vel de ambiente do S.O."/>
-<node CREATED="1717694476137" ID="Freemind_Link_723322849" MODIFIED="1717694476916" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_63004470" MODIFIED="1717694490037" TEXT="import os&#xa;print(os.getenv(&apos;PATH&apos;))"/>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1717698224217" FOLDED="true" ID="Freemind_Link_328447137" MODIFIED="1717698226398" POSITION="right" TEXT="argparse">
-<node CREATED="1717698268086" ID="Freemind_Link_897596979" MODIFIED="1717698269068" TEXT="https://docs.python.org/3/library/argparse.html#module-argparse"/>
-<node CREATED="1717698227298" ID="Freemind_Link_145286280" MODIFIED="1717698241163" TEXT="Biblioteca usada para tratar argumentos recebidos na aplica&#xe7;&#xe3;o"/>
-</node>
-<node CREATED="1717694560472" FOLDED="true" ID="Freemind_Link_824662076" MODIFIED="1717694562049" POSITION="right" TEXT="dotenv">
-<node CREATED="1717694563071" ID="Freemind_Link_813568561" MODIFIED="1717694595403" TEXT="Biblioteca de funcionalidades para manipular vari&#xe1;veis de ambiente via arquivo .env&#xa;"/>
-<node CREATED="1609876530394" ID="Freemind_Link_1770190083" MODIFIED="1717694626712" TEXT="Instala&#xe7;&#xe3;o">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_378167854" MODIFIED="1717694679175" TEXT="pip install python-dotenv "/>
-</node>
-<node CREATED="1609876661409" ID="Freemind_Link_128622289" MODIFIED="1609876666051" TEXT="Uso">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_470062995" MODIFIED="1717694623463" TEXT="import dotenv"/>
-</node>
-<node CREATED="1609876566896" ID="Freemind_Link_539069422" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_559325979" MODIFIED="1717695030472" TEXT="load_dotenv">
-<node CREATED="1609876580616" ID="Freemind_Link_169250733" MODIFIED="1717695039906" TEXT="Carrega as vari&#xe1;veis declaradas no arquivo .env"/>
-<node CREATED="1717695079277" ID="Freemind_Link_549185451" MODIFIED="1717695190672" TEXT="As vari&#xe1;veis carregadas estar&#xe3;o acess&#xed;veis via clase os.environ ou m&#xe9;todo os.getenv()"/>
-<node CREATED="1609876605273" ID="Freemind_Link_627516274" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1144757653" MODIFIED="1717695200765" TEXT="import os&#xa;&#xa;from dotenv import load_dotenv #type: ignore&#xa;load_dotenv()&#xa;print(os.environ[&apos;NOME&apos;])&#xa;print(os.getenv(&apos;NOME&apos;))">
-<node CREATED="1717694993478" ID="Freemind_Link_124883783" MODIFIED="1717695006475" TEXT="Conte&#xfa;do do arquivo .env&#xa;NOME=&quot;Ana&quot;"/>
-<node CREATED="1717695008224" ID="Freemind_Link_1093656083" MODIFIED="1717695206062" TEXT="Resultado:&#xa;Ana&#xa;Ana"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1821971393" MODIFIED="1717695353763" TEXT="environ">
-<node CREATED="1609876580616" ID="Freemind_Link_1799220048" MODIFIED="1717695362764" TEXT="Permite acessar ou declarar vari&#xe1;veis de ambiente"/>
-<node CREATED="1609876605273" ID="Freemind_Link_1537572250" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1984518176" MODIFIED="1717695412589" TEXT="import os&#xa;&#xa;from dotenv import load_dotenv #type: ignore&#xa;load_dotenv()&#xa;&#xa;print(os.environ[&apos;NOME&apos;]) #Exibe a vari&#xe1;vel de ambiente &apos;NOME&apos;&#xa;os.environ[&apos;IDADE&apos;] = 15 #Declarta a vari&#xe1;vel de ambiente &apos;IDADE&apos;"/>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1717625056539" FOLDED="true" ID="Freemind_Link_1176141369" MODIFIED="1717625058766" POSITION="right" TEXT="shutil">
-<node CREATED="1717625061098" ID="Freemind_Link_260182020" MODIFIED="1717625071871" TEXT="Biblioteca &#xfa;til para a&#xe7;&#xf5;es no S.O.">
-<node CREATED="1717625072722" ID="Freemind_Link_1317672526" MODIFIED="1717625079669" TEXT="Principalmente manipula&#xe7;&#xe3;o de arquivos"/>
-</node>
-<node CREATED="1609876530394" ID="Freemind_Link_1261382392" MODIFIED="1716383533113" TEXT="Nativa do Python"/>
-<node CREATED="1609876661409" ID="Freemind_Link_1549252843" MODIFIED="1609876666051" TEXT="Uso">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1735492873" MODIFIED="1717625127259" TEXT="import shutil"/>
-</node>
-</node>
-<node CREATED="1716489278424" FOLDED="true" ID="Freemind_Link_363827175" MODIFIED="1716489279389" POSITION="right" TEXT="re">
-<node CREATED="1716489280228" ID="Freemind_Link_294544001" MODIFIED="1716489292198" TEXT="Biblioteca de express&#xf5;es regulares"/>
-<node CREATED="1716489302508" ID="Freemind_Link_1283100668" MODIFIED="1716489304527" TEXT="Fun&#xe7;&#xf5;es">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1244060811" MODIFIED="1716489350343" TEXT="sub">
-<node CREATED="1609876580616" ID="Freemind_Link_158060772" MODIFIED="1716489425866" TEXT="Faz substitui&#xe7;&#xf5;es usando regex"/>
-<node CREATED="1609876605273" ID="Freemind_Link_1644273075" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1927464693" MODIFIED="1716489405345" TEXT="import re&#xa;re.sub(r&apos;[^0-9]&apos;,&apos;&apos;,&apos;051.535.257-83&apos;)">
-<node CREATED="1716489407006" ID="Freemind_Link_16716707" MODIFIED="1716489418628" TEXT="Remove todos os caracteres n&#xe3;o num&#xe9;ricos da string"/>
-</node>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1716489278424" FOLDED="true" ID="Freemind_Link_717379321" MODIFIED="1716489720471" POSITION="right" TEXT="sys">
-<node CREATED="1716489280228" ID="Freemind_Link_1250247439" MODIFIED="1716489727031" TEXT="Biblioteca de chamadas de sistema"/>
-<node CREATED="1716489302508" ID="Freemind_Link_81016718" MODIFIED="1716489304527" TEXT="Fun&#xe7;&#xf5;es">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1316161707" MODIFIED="1716489729327" TEXT="exit">
-<node CREATED="1609876580616" ID="Freemind_Link_1552965765" MODIFIED="1716489738000" TEXT="Aborta (finaliza) a execu&#xe7;&#xe3;o da aplica&#xe7;&#xe3;o"/>
-<node CREATED="1609876605273" ID="Freemind_Link_681483294" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1235702458" MODIFIED="1716489774167" TEXT="import sys&#xa;sys.exit()"/>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1065466283" MODIFIED="1717697247376" TEXT="argv">
-<node CREATED="1609876580616" ID="Freemind_Link_1353971988" MODIFIED="1717697258958" TEXT="Exibe os argumentos que foram passados para a aplica&#xe7;&#xe3;o"/>
-<node CREATED="1609876605273" ID="Freemind_Link_337415515" MODIFIED="1609876606302" TEXT="Ex:">
-<node CREATED="1717697365849" ID="Freemind_Link_383169975" MODIFIED="1717697372655" TEXT="Nome do arquivo: aula306.py"/>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_83940547" MODIFIED="1717697323858" TEXT="import sys&#xa;&#xa;print(sys.argv)">
-<node CREATED="1717697331723" ID="Freemind_Link_1419070338" MODIFIED="1717697358641" TEXT="&#xa;Ao executar:&#xa;&#x279c; python aula306.py teste            &#xa;&#xa;Tenho como resultado:&#xa;[&apos;aula306.py&apos;, &apos;teste&apos;]"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_889910843" MODIFIED="1717782233823" TEXT="platform">
-<node CREATED="1609876580616" ID="Freemind_Link_888147127" MODIFIED="1717782250320" TEXT="Informa em qual sistema operacional voc&#xea; est&#xe1; executando a aplica&#xe7;&#xe3;o"/>
-<node CREATED="1717782274008" ID="Freemind_Link_754696036" MODIFIED="1717782278781" TEXT="Resultados">
-<node CREATED="1717782279706" ID="Freemind_Link_1653861677" MODIFIED="1717782282584" TEXT="linux">
-<node CREATED="1717782282844" ID="Freemind_Link_392328814" MODIFIED="1717782303232" TEXT="O ambiente &#xe9; Linux"/>
-</node>
-<node CREATED="1717782279706" ID="Freemind_Link_191254977" MODIFIED="1717782308875" TEXT="linux2">
-<node CREATED="1717782282844" ID="Freemind_Link_1441220753" MODIFIED="1717782303232" TEXT="O ambiente &#xe9; Linux"/>
-</node>
-<node CREATED="1717782279706" ID="Freemind_Link_277781567" MODIFIED="1717782311987" TEXT="win32">
-<node CREATED="1717782282844" ID="Freemind_Link_1904327524" MODIFIED="1717782315107" TEXT="O ambiente &#xe9; Windows"/>
-</node>
-<node CREATED="1717782279706" ID="Freemind_Link_1536463876" MODIFIED="1717782318251" TEXT="darwin">
-<node CREATED="1717782282844" ID="Freemind_Link_1705925989" MODIFIED="1717782321821" TEXT="O ambiente &#xe9; Mac"/>
-</node>
-</node>
-<node CREATED="1609876605273" ID="Freemind_Link_1082167139" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1670948922" MODIFIED="1717782267185" TEXT="import sys&#xa;&#xa;print(sys.platform)"/>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1716599127736" FOLDED="true" ID="Freemind_Link_594366204" MODIFIED="1717773725492" POSITION="right" TEXT="copy">
-<icon BUILTIN="button_ok"/>
-<node CREATED="1716599130432" ID="Freemind_Link_1252210564" MODIFIED="1716599138203" TEXT="Bibiolteca de c&#xf3;pia de objetos mut&#xe1;veis"/>
-<node CREATED="1716489302508" ID="Freemind_Link_1642009796" MODIFIED="1716489304527" TEXT="Fun&#xe7;&#xf5;es">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_384772239" MODIFIED="1716599147802" TEXT="copy">
-<node CREATED="1609876580616" ID="Freemind_Link_85310645" MODIFIED="1716599162684" TEXT="Realiza c&#xf3;pia rasa de objetos mut&#xe1;veis"/>
-<node CREATED="1716599169015" ID="Freemind_Link_601193253" MODIFIED="1716599180339" TEXT="Semelhante ao m&#xe9;todo copy() dos objetos mut&#xe1;veis"/>
-<node CREATED="1716599614840" ID="Freemind_Link_90744689" MODIFIED="1716599618859" TEXT="shallow copy"/>
-<node CREATED="1609879856862" ID="Freemind_Link_904295457" MODIFIED="1609879858136" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1983409433" MODIFIED="1716599412063" TEXT="import copy&#xa;p1=dict(nome=&apos;Ana&apos;, idade=25, dias=[1,2,3])&#xa;p2=copy.copy(p1)&#xa;p1[&apos;dias&apos;][1]=20&#xa;print(p1)&#xa;print(p2)">
-<node CREATED="1716570223083" ID="Freemind_Link_1153747739" MODIFIED="1716598877590" TEXT="Ambos ter&#xe3;o o dado [&apos;dias&apos;][1] alterado para 20"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1960143203" MODIFIED="1716599421730" TEXT="deepcopy">
-<node CREATED="1609876580616" ID="Freemind_Link_1873836450" MODIFIED="1716599429810" TEXT="Realiza c&#xf3;pia profunda de objetos mut&#xe1;veis"/>
-<node CREATED="1609879856862" ID="Freemind_Link_162076155" MODIFIED="1609879858136" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1691858722" MODIFIED="1716599478106" TEXT="import copy&#xa;p1=dict(nome=&apos;Ana&apos;, idade=25, dias=[1,2,3])&#xa;p2=copy.deepcopy(p1)&#xa;p1[&apos;dias&apos;][1]=20&#xa;print(p1)&#xa;print(p2)">
-<node CREATED="1716570223083" ID="Freemind_Link_1637517444" MODIFIED="1716599503674" TEXT="Apenas a vari&#xe1;vel p1 ter&#xe1; o dado [&apos;dias&apos;][1] alterado para 20"/>
-</node>
-</node>
-</node>
+<node CREATED="1609876605273" FOLDED="true" ID="Freemind_Link_1117389754" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_80510258" MODIFIED="1718044216025" TEXT="# Trabalhando com classes e heran&#xe7;a no PySide6&#xa;import sys&#xa;&#xa;from PySide6.QtCore import Slot&#xa;from PySide6.QtWidgets import (QApplication, QGridLayout, QMainWindow,&#xa;                               QPushButton, QWidget)&#xa;&#xa;&#xa;class MyWindow(QMainWindow):&#xa;    def __init__(self, parent=None):&#xa;        super().__init__(parent)&#xa;&#xa;        self.central_widget = QWidget()&#xa;&#xa;        self.setCentralWidget(self.central_widget)&#xa;        self.setWindowTitle(&apos;Minha janela bonita&apos;)&#xa;&#xa;        # Bot&#xe3;o&#xa;        self.botao1 = self.make_button(&apos;Texto do bot&#xe3;o&apos;)&#xa;        self.botao1.clicked.connect(self.segunda_acao_marcada)  # type: ignore&#xa;&#xa;        self.botao2 = self.make_button(&apos;Bot&#xe3;o 2&apos;)&#xa;&#xa;        self.botao3 = self.make_button(&apos;Terceiro&apos;)&#xa;&#xa;        self.grid_layout = QGridLayout()&#xa;        self.central_widget.setLayout(self.grid_layout)&#xa;&#xa;        self.grid_layout.addWidget(self.botao1, 1, 1, 1, 1)&#xa;        self.grid_layout.addWidget(self.botao2, 1, 2, 1, 1)&#xa;        self.grid_layout.addWidget(self.botao3, 3, 1, 1, 2)&#xa;&#xa;        # statusBar&#xa;        self.status_bar = self.statusBar()&#xa;        self.status_bar.showMessage(&apos;Mostrar mensagem na barra&apos;)&#xa;&#xa;        # menuBar&#xa;        self.menu = self.menuBar()&#xa;        self.primeiro_menu = self.menu.addMenu(&apos;Primeiro menu&apos;)&#xa;        self.primeira_acao = self.primeiro_menu.addAction(&apos;Primeira a&#xe7;&#xe3;o&apos;)&#xa;        self.primeira_acao.triggered.connect(  # type:ignore&#xa;            self.muda_mensagem_da_status_bar)&#xa;&#xa;        self.segunda_action = self.primeiro_menu.addAction(&apos;Segunda a&#xe7;&#xe3;o&apos;)&#xa;        self.segunda_action.setCheckable(True)&#xa;        self.segunda_action.toggled.connect(  # type:ignore&#xa;            self.segunda_acao_marcada)&#xa;        self.segunda_action.hovered.connect(  # type:ignore&#xa;            self.segunda_acao_marcada)&#xa;&#xa;    @Slot()&#xa;    def muda_mensagem_da_status_bar(self):&#xa;        self.status_bar.showMessage(&apos;O meu slot foi executado&apos;)&#xa;&#xa;    @Slot()&#xa;    def segunda_acao_marcada(self):&#xa;        print(&apos;Est&#xe1; marcado?&apos;, self.segunda_action.isChecked())&#xa;&#xa;    def make_button(self, text):&#xa;        btn = QPushButton(text)&#xa;        btn.setStyleSheet(&apos;font-size: 80px;&apos;)&#xa;        return btn&#xa;&#xa;&#xa;if __name__ == &apos;__main__&apos;:&#xa;    app = QApplication(sys.argv)&#xa;    window = MyWindow()&#xa;    window.show()&#xa;    app.exec()  # O loop da aplica&#xe7;&#xe3;o"/>
 </node>
 </node>
 <node CREATED="1716489278424" FOLDED="true" ID="Freemind_Link_1015161708" MODIFIED="1716489969409" POSITION="right" TEXT="random">
@@ -1192,570 +1575,16 @@
 </node>
 </node>
 </node>
-<node CREATED="1716913688795" FOLDED="true" ID="Freemind_Link_277427291" MODIFIED="1716913691204" POSITION="right" TEXT="itertools">
-<node CREATED="1716913696727" ID="Freemind_Link_518104455" MODIFIED="1716913706820" TEXT="Biblioteca de ferramentas de itera&#xe7;&#xf5;es em iter&#xe1;veis"/>
-<node CREATED="1716489302508" ID="Freemind_Link_997547970" MODIFIED="1716489304527" TEXT="Fun&#xe7;&#xf5;es">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_704663608" MODIFIED="1716913737805" TEXT="zip_longest">
-<node CREATED="1609876580616" ID="Freemind_Link_464857777" MODIFIED="1716913751853" TEXT="Agrupa duas listas pareando seus elementos"/>
-<node CREATED="1716913752442" ID="Freemind_Link_891337814" MODIFIED="1716913765123" TEXT="Diferentemente da fun&#xe7;&#xe3;o &apos;zip&apos;, esta fun&#xe7;&#xe3;o se baseia na maior lista"/>
-<node CREATED="1609876605273" ID="Freemind_Link_602709895" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_506314144" MODIFIED="1716913727644" TEXT="from itertools import zip_longest&#xa; &#xa;lista_a = [10, 2, 3, 4, 5]&#xa;lista_b = [12, 2, 3, 6, 50, 60, 70]&#xa;lista_soma = [x + y for x, y in zip_longest(lista_a, lista_b, fillvalue=0)]&#xa;print(lista_soma)  # [22, 4, 6, 10, 55, 60, 70]">
-<node CREATED="1716913855925" ID="Freemind_Link_680357690" MODIFIED="1716913871981" TEXT="Neste exemplo eu somo os valores de duas listas, gerando uma nova lista"/>
-<node CREATED="1716490028237" ID="Freemind_Link_1729166100" MODIFIED="1716913821435" TEXT="Se fillvalue n&#xe3;o for informado, ser&#xe1; usado o valor None nos &#xed;tens da maior lista que n&#xe3;o tiverem o par correspondente na menor"/>
+<node CREATED="1716489278424" FOLDED="true" ID="Freemind_Link_363827175" MODIFIED="1716489279389" POSITION="right" TEXT="re">
+<node CREATED="1716489280228" ID="Freemind_Link_294544001" MODIFIED="1716489292198" TEXT="Biblioteca de express&#xf5;es regulares"/>
+<node CREATED="1716489302508" ID="Freemind_Link_1283100668" MODIFIED="1716489304527" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1244060811" MODIFIED="1716489350343" TEXT="sub">
+<node CREATED="1609876580616" ID="Freemind_Link_158060772" MODIFIED="1716489425866" TEXT="Faz substitui&#xe7;&#xf5;es usando regex"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1644273075" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1927464693" MODIFIED="1716489405345" TEXT="import re&#xa;re.sub(r&apos;[^0-9]&apos;,&apos;&apos;,&apos;051.535.257-83&apos;)">
+<node CREATED="1716489407006" ID="Freemind_Link_16716707" MODIFIED="1716489418628" TEXT="Remove todos os caracteres n&#xe3;o num&#xe9;ricos da string"/>
 </node>
 </node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" FOLDED="true" ID="Freemind_Link_1651182022" MODIFIED="1716913939343" TEXT="count">
-<node CREATED="1609876580616" ID="Freemind_Link_1393735091" MODIFIED="1716913947638" TEXT="um iterator sem fim"/>
-<node CREATED="1716913752442" ID="Freemind_Link_1152059508" MODIFIED="1716913961831" TEXT="Diferentemente do range, esta fun&#xe7;&#xe3;o retorna infinitos elementos"/>
-<node CREATED="1716914309019" ID="Freemind_Link_309720568" MODIFIED="1716914428917" TEXT="Par&#xe2;metros">
-<node CREATED="1716914426196" ID="Freemind_Link_144282991" MODIFIED="1716914427136" TEXT="1">
-<node CREATED="1716914323338" ID="Freemind_Link_1452959170" MODIFIED="1716914332696" TEXT="Informa o n&#xfa;mero inicial do count"/>
-<node CREATED="1716914491579" ID="Freemind_Link_1578652419" MODIFIED="1716914497614" TEXT="ou nome &apos;step&apos;"/>
-</node>
-<node CREATED="1716914428905" ID="Freemind_Link_1544310889" MODIFIED="1716914429518" TEXT="2">
-<node CREATED="1716914333493" ID="Freemind_Link_682878416" MODIFIED="1716914344189" TEXT="Informa o tamanho de cada pulo do count"/>
-<node CREATED="1716914498882" ID="Freemind_Link_1497563104" MODIFIED="1716914501860" TEXT="ou nome &apos;start&apos;"/>
-</node>
-</node>
-<node CREATED="1609876605273" ID="Freemind_Link_408441902" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_366404895" MODIFIED="1716914252459" TEXT="import itertools&#xa;c1 = itertools.count()&#xa;for i in c1:&#xa;    if i &gt; 100:&#xa;        break&#xa;    print(i)">
-<node CREATED="1716913855925" ID="Freemind_Link_1628526696" MODIFIED="1716914210210" TEXT="Resultado: listar&#xe1; os n&#xfa;meros de 1 a 100"/>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_674383001" MODIFIED="1716914403698" TEXT="import itertools&#xa;c1 = itertools.count(5, 7)&#xa;for i in c1:&#xa;    if i &gt; 60:&#xa;        break&#xa;    print(i)">
-<node CREATED="1716913855925" ID="Freemind_Link_259741748" MODIFIED="1716914398189" TEXT="Resultado: &#xa;5&#xa;12&#xa;19&#xa;26&#xa;33&#xa;40&#xa;47&#xa;54"/>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_428613472" MODIFIED="1716914521240" TEXT="import itertools&#xa;c1 = itertools.count(step=7, start=5)&#xa;for i in c1:&#xa;    if i &gt; 60:&#xa;        break&#xa;    print(i)">
-<node CREATED="1716913855925" ID="Freemind_Link_1401420240" MODIFIED="1716914398189" TEXT="Resultado: &#xa;5&#xa;12&#xa;19&#xa;26&#xa;33&#xa;40&#xa;47&#xa;54"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_359238241" MODIFIED="1716914673647" TEXT="combinations">
-<node CREATED="1609876580616" ID="Freemind_Link_1176438677" MODIFIED="1716914686739" TEXT="Faz combina&#xe7;&#xf5;es entre elementos de uma lista">
-<node CREATED="1716914938218" ID="Freemind_Link_1306360518" MODIFIED="1716915336290" TEXT="A ordem n&#xe3;o importa"/>
-</node>
-<node CREATED="1609876605273" ID="Freemind_Link_1032809789" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_550330438" MODIFIED="1716915051461" TEXT="import itertools&#xa;lista1=[&apos;Ana&apos;, &apos;Beto&apos;, &apos;Caio&apos;, &apos;Davi&apos;]&#xa;print(*list(itertools.combinations(lista1, 2)), sep=&apos;\n&apos;)">
-<node CREATED="1716913855925" ID="Freemind_Link_1358010027" MODIFIED="1716914872238" TEXT="Resultado: &#xa;(&apos;Ana&apos;, &apos;Beto&apos;)&#xa;(&apos;Ana&apos;, &apos;Caio&apos;)&#xa;(&apos;Ana&apos;, &apos;Davi&apos;)&#xa;(&apos;Beto&apos;, &apos;Caio&apos;)&#xa;(&apos;Beto&apos;, &apos;Davi&apos;)&#xa;(&apos;Caio&apos;, &apos;Davi&apos;)"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1387229118" MODIFIED="1716915012987" TEXT="permutations">
-<node CREATED="1609876580616" ID="Freemind_Link_777302044" MODIFIED="1716915285799" TEXT="Faz produto cartesiano entre os elementos dlistase ">
-<node CREATED="1716914938218" ID="Freemind_Link_1547122882" MODIFIED="1716915283151" TEXT="A ordem importa">
-<arrowlink COLOR="#fa0909" DESTINATION="Freemind_Link_1306360518" ENDARROW="Default" ENDINCLINATION="151;0;" ID="Freemind_Arrow_Link_1587101293" STARTARROW="Default" STARTINCLINATION="151;0;"/>
-</node>
-</node>
-<node CREATED="1609876605273" ID="Freemind_Link_244920932" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_806510064" MODIFIED="1716915319948" TEXT="import itertools &#xa;lista1=[&apos;Ana&apos;, &apos;Beto&apos;, &apos;Caio&apos;]&#xa;print(*list(itertools.permutations(lista1, 2)), sep=&apos;\n&apos;)">
-<node CREATED="1716913855925" ID="Freemind_Link_1008685448" MODIFIED="1716915065870" TEXT="Resultado: &#xa;(&apos;Ana&apos;, &apos;Beto&apos;)&#xa;(&apos;Ana&apos;, &apos;Caio&apos;)&#xa;(&apos;Beto&apos;, &apos;Ana&apos;)&#xa;(&apos;Beto&apos;, &apos;Caio&apos;)&#xa;(&apos;Caio&apos;, &apos;Ana&apos;)&#xa;(&apos;Caio&apos;, &apos;Beto&apos;)&#xa;"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1944533479" MODIFIED="1716915332324" TEXT="product">
-<node CREATED="1609876580616" ID="Freemind_Link_1082825159" MODIFIED="1716915382069" TEXT="Faz produto cartesiano entre os elementos das listas informadas"/>
-<node CREATED="1609876605273" ID="Freemind_Link_335055672" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1893693911" MODIFIED="1716915353263" TEXT="import itertools &#xa;tamanhos=[&apos;P&apos;, &apos;M&apos;, &apos;G&apos;]&#xa;cores=[&apos;Branca&apos;, &apos;Preta&apos;, &apos;Azul&apos;]&#xa;camisas=itertools.product(cores, tamanhos)&#xa;print(*list(camisas), sep=&apos;\n&apos;)">
-<node CREATED="1716913855925" ID="Freemind_Link_303299261" MODIFIED="1716915371311" TEXT="Resultado: &#xa;(&apos;Branca&apos;, &apos;P&apos;)&#xa;(&apos;Branca&apos;, &apos;M&apos;)&#xa;(&apos;Branca&apos;, &apos;G&apos;)&#xa;(&apos;Preta&apos;, &apos;P&apos;)&#xa;(&apos;Preta&apos;, &apos;M&apos;)&#xa;(&apos;Preta&apos;, &apos;G&apos;)&#xa;(&apos;Azul&apos;, &apos;P&apos;)&#xa;(&apos;Azul&apos;, &apos;M&apos;)&#xa;(&apos;Azul&apos;, &apos;G&apos;)"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1462943569" MODIFIED="1716915924275" TEXT="groupby">
-<node CREATED="1609876580616" ID="Freemind_Link_1913422340" MODIFIED="1716915937395" TEXT="Agrupa elementos de um iterable"/>
-<node CREATED="1716915939311" ID="Freemind_Link_216350308" MODIFIED="1716916070343" TEXT="em listas">
-<node CREATED="1716916020121" ID="Freemind_Link_1724449777" MODIFIED="1716916030049" TEXT="O groupby assume que a lista est&#xe1; ordenada">
-<node CREATED="1716916030739" ID="Freemind_Link_1751043830" MODIFIED="1716916043422" TEXT="Se n&#xe3;o estiver, o agrupamento n&#xe3;o funcionar&#xe1; bem"/>
-</node>
-<node CREATED="1609876605273" ID="Freemind_Link_139208798" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1083838474" MODIFIED="1716916000937" TEXT="import itertools&#xa;&#xa;lista=[1,2,3,4,2,1,2,1,3]&#xa;&#xa;for chave, grupo in itertools.groupby(sorted(lista)):&#xa;    print(chave,&apos; =&gt; &apos;, list(grupo))">
-<node CREATED="1716913855925" ID="Freemind_Link_1830907232" MODIFIED="1716916014537" TEXT="Resultado: &#xa;1  =&gt;  [1, 1, 1]&#xa;2  =&gt;  [2, 2, 2]&#xa;3  =&gt;  [3, 3]&#xa;4  =&gt;  [4]"/>
-</node>
-</node>
-</node>
-<node CREATED="1716916058777" ID="Freemind_Link_1276298507" MODIFIED="1716916073588" TEXT="em dicion&#xe1;rios">
-<node CREATED="1609876605273" ID="Freemind_Link_577268050" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1329625936" MODIFIED="1716916833386" TEXT="import itertools&#xa;&#xa;alunos=[&#xa;    {&apos;nome&apos;:&apos;Ana&apos;, &apos;nota&apos;:&apos;A&apos;},&#xa;    {&apos;nome&apos;:&apos;Beto&apos;, &apos;nota&apos;:&apos;A&apos;},&#xa;    {&apos;nome&apos;:&apos;Caio&apos;, &apos;nota&apos;:&apos;C&apos;},&#xa;    {&apos;nome&apos;:&apos;Davi&apos;, &apos;nota&apos;:&apos;B&apos;},&#xa;    {&apos;nome&apos;:&apos;Emerson&apos;, &apos;nota&apos;:&apos;A&apos;},&#xa;    {&apos;nome&apos;:&apos;Felipe&apos;, &apos;nota&apos;:&apos;C&apos;},&#xa;    {&apos;nome&apos;:&apos;Joana&apos;, &apos;nota&apos;:&apos;A&apos;},&#xa;]&#xa;&#xa;chaveordenacao=lambda aluno: aluno[&apos;nota&apos;]&#xa;alunosordenadospornota=sorted(alunos, key=chaveordenacao)&#xa;alunosagrupadospornota=itertools.groupby(alunosordenadospornota, key=chaveordenacao)&#xa;for chave, grupo in alunosagrupadospornota:&#xa;    print(chave,&apos; =&gt; &apos;, end=&apos;&apos;)&#xa;    for aluno in grupo:&#xa;        print(f&apos;\t{aluno}&apos;)">
-<node CREATED="1716913855925" ID="Freemind_Link_1941609407" MODIFIED="1716916694887" TEXT="Resultado: &#xa;&#xa;A  =&gt;   {&apos;nome&apos;: &apos;Ana&apos;, &apos;nota&apos;: &apos;A&apos;}&#xa;        {&apos;nome&apos;: &apos;Beto&apos;, &apos;nota&apos;: &apos;A&apos;}&#xa;        {&apos;nome&apos;: &apos;Emerson&apos;, &apos;nota&apos;: &apos;A&apos;}&#xa;        {&apos;nome&apos;: &apos;Joana&apos;, &apos;nota&apos;: &apos;A&apos;}&#xa;B  =&gt;   {&apos;nome&apos;: &apos;Davi&apos;, &apos;nota&apos;: &apos;B&apos;}&#xa;C  =&gt;   {&apos;nome&apos;: &apos;Caio&apos;, &apos;nota&apos;: &apos;C&apos;}&#xa;        {&apos;nome&apos;: &apos;Felipe&apos;, &apos;nota&apos;: &apos;C&apos;}"/>
-</node>
-</node>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1716991758376" FOLDED="true" ID="Freemind_Link_1231091591" MODIFIED="1716991760837" POSITION="right" TEXT="json">
-<node CREATED="1716991767818" ID="Freemind_Link_226286989" MODIFIED="1716991778164" TEXT="Conjunto de fun&#xe7;&#xf5;es de manipula&#xe7;&#xe3;o de dados json"/>
-<node CREATED="1717634992936" FOLDED="true" ID="Freemind_Link_1518025987" MODIFIED="1717635851441" TEXT="Para ter a ajuda de tipagem em uma IDE">
-<icon BUILTIN="idea"/>
-<node CREATED="1717635241606" ID="Freemind_Link_899999720" MODIFIED="1717635289552" TEXT="importe o m&#xf3;dulo typing, tipo TypeDict">
-<icon BUILTIN="full-1"/>
-</node>
-<node CREATED="1717635296956" ID="Freemind_Link_676823360" MODIFIED="1717635343055" TEXT="Implemente uma subclasse de TypeDict cujos atributos coincidam com os atributos do dict">
-<icon BUILTIN="full-2"/>
-</node>
-<node CREATED="1717635349168" ID="Freemind_Link_1298963981" MODIFIED="1717635443693" TEXT="Declare um objeto do tipo da subclasse criada e atribua a uma vari&#xe1;vel">
-<icon BUILTIN="full-3"/>
-</node>
-<node CREATED="1717635382426" ID="Freemind_Link_1614677688" MODIFIED="1717635399674" TEXT="Tente usar essa vari&#xe1;vel e perceba a IDE fazendo o autocomplete conforme a classe Movie">
-<icon BUILTIN="full-4"/>
-</node>
-<node CREATED="1716993225398" ID="Freemind_Link_1153051333" MODIFIED="1716993226034" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1716993226949" ID="Freemind_Link_1275151915" MODIFIED="1717635649723" TEXT="import json&#xa;from typing import TypedDict&#xa;&#xa;class Movie(TypedDict):&#xa;    nome: str   &#xa;    ano: int&#xa;    is_movie: bool&#xa;    characters: list[str]&#xa;&#xa;string_movie: Movie = &apos;&apos;&apos;&#xa;{&#xa;    &quot;nome&quot;: &quot;O Senhor dos an&#xe9;is&quot;,&#xa;    &quot;ano&quot;: 2015,&#xa;    &quot;is_movie&quot;: true,&#xa;    &quot;characters&quot;: [&quot;Frodo&quot;, &quot;Sam&quot;, &quot;Gandalf&quot;, &quot;Boromir&quot;]&#xa;}&apos;&apos;&apos;&#xa;&#xa;filme: Movie = json.loads(string_movie)">
-<node CREATED="1717634967109" ID="Freemind_Link_1298576879" MODIFIED="1717635698336" TEXT="Nesse c&#xf3;digo, ao referenciar a vari&#xe1;vel &apos;filme&apos;, repare que&#xa;a IDE dar&#xe1; as sugest&#xf5;es conforme a classe &apos;Movie&apos;">
-<arrowlink DESTINATION="Freemind_Link_1061891429" ENDARROW="Default" ENDINCLINATION="85;0;" ID="Freemind_Arrow_Link_1542499644" STARTARROW="None" STARTINCLINATION="85;0;"/>
-</node>
-<node CREATED="1717635620958" ID="Freemind_Link_1061891429" MODIFIED="1717635698312" TEXT="&lt;html&gt;&lt;img src=&quot;imagens/dict_autocomplete.png&quot;&gt;">
-<node CREATED="1717635715596" ID="Freemind_Link_252194477" MODIFIED="1717635770346" TEXT="ao abrir o colchete da vari&#xe1;vel &apos;filme&apos;, a IDE sugere os atributos &apos;ano&apos;, &apos;characters&apos;,&#xa;&apos;is_movie&apos; e &apos;nome&apos;, conforme a classe Movie (que &#xe9; subclasse de TypesDict)"/>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1716991791896" ID="Freemind_Link_817287610" MODIFIED="1716991794036" TEXT="Fun&#xe7;&#xf5;es">
-<node COLOR="#0000ff" CREATED="1716991795193" FOLDED="true" ID="Freemind_Link_1932931791" MODIFIED="1717635903133" TEXT="dump">
-<node CREATED="1716991811485" ID="Freemind_Link_628339663" MODIFIED="1716991827609" TEXT="Grava um dict do python em formato json em um arquivo"/>
-<node CREATED="1716993298923" ID="Freemind_Link_312172917" MODIFIED="1716993301453" TEXT="Argumentos">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1917492719" MODIFIED="1716993329135" TEXT="ensure_ascii">
-<node CREATED="1716993329786" ID="Freemind_Link_964550134" MODIFIED="1716993352471" TEXT="For&#xe7;a a escrita do arquivo em ascii se True">
-<node CREATED="1716993339064" ID="Freemind_Link_345546152" MODIFIED="1716993341678" TEXT="N&#xe3;o recomendado"/>
-</node>
-<node CREATED="1716993357041" ID="Freemind_Link_1209952523" MODIFIED="1716993360726" TEXT="Pode ser False ou True"/>
-<node CREATED="1716993393675" ID="Freemind_Link_970689328" MODIFIED="1716993394438" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_502937315" MODIFIED="1716993506504" TEXT="    json.dump(pessoa, arquivo, ensure_ascii=False)">
-<node CREATED="1716993492729" ID="Freemind_Link_618097300" MODIFIED="1716993565871" TEXT="Resultado: ... &quot;bairro&quot;: &quot;Graja&#xfa;&quot;">
-<arrowlink COLOR="#e40b0e" DESTINATION="Freemind_Link_849094226" ENDARROW="Default" ENDINCLINATION="36;0;" ID="Freemind_Arrow_Link_681919728" STARTARROW="Default" STARTINCLINATION="36;0;"/>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_429039302" MODIFIED="1716993432956" TEXT="    json.dump(pessoa, arquivo, ensure_ascii=True)">
-<node CREATED="1716993492729" ID="Freemind_Link_849094226" MODIFIED="1716993559249" TEXT="Resultado: ...&quot;bairro&quot;: &quot;Graja\u00fa&quot;,"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1797311684" MODIFIED="1716993369279" TEXT="indent">
-<node CREATED="1716993329786" ID="Freemind_Link_643164138" MODIFIED="1716993378836" TEXT="Faz a escrita do arquivo com identa&#xe7;&#xf5;es"/>
-<node CREATED="1716993357041" ID="Freemind_Link_80429284" MODIFIED="1716993390059" TEXT="O valor deve ser um n&#xfa;mero"/>
-<node CREATED="1716993393675" ID="Freemind_Link_1770740804" MODIFIED="1716993394438" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_536018708" MODIFIED="1716993411878" TEXT="    json.dump(pessoa, arquivo, indent=2)"/>
-</node>
-</node>
-</node>
-<node CREATED="1716993739620" ID="Freemind_Link_248718753" MODIFIED="1716993806988" TEXT="Aten&#xe7;&#xe3;o:">
-<icon BUILTIN="messagebox_warning"/>
-<node CREATED="1716993744634" ID="Freemind_Link_1639129185" MODIFIED="1716993753798" TEXT="Tuplas do Python ser&#xe3;o escritas como listas no Json"/>
-<node CREATED="1716993754292" ID="Freemind_Link_1059725696" MODIFIED="1716993816757" TEXT="O Set do Python n&#xe3;o tem um equivalente&#xa;no Json, portanto n&#xe3;o ser&#xe1; serializado">
-<node CREATED="1716993773098" ID="Freemind_Link_816046210" MODIFIED="1716993780615" TEXT="Uma exec&#xe7;&#xe3;o ser&#xe1; lan&#xe7;ada"/>
-</node>
-</node>
-<node CREATED="1716993225398" ID="Freemind_Link_1869407210" MODIFIED="1716993226034" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1716993226949" ID="Freemind_Link_1249457978" MODIFIED="1716993264562" TEXT="import json&#xa;&#xa;pessoa={&#xa;    &apos;nome&apos;: &apos;Ana&apos;,&#xa;    &apos;idade&apos;: 25,&#xa;    &apos;pets&apos;: [&#xa;        {&apos;tipo&apos;: &apos;canino&apos;, &apos;nome&apos;: &apos;Pepperoni&apos;, &apos;idade&apos;: 7},&#xa;        {&apos;tipo&apos;: &apos;canino&apos;, &apos;nome&apos;: &apos;Minuim&apos;, &apos;idade&apos;: 8},&#xa;        {&apos;tipo&apos;: &apos;felino&apos;, &apos;nome&apos;: &apos;Mingau&apos;, &apos;idade&apos;: 3},&#xa;    ],&#xa;    &apos;endereco&apos; : {&#xa;        &apos;logradouro&apos;: &apos;Rua sete&apos;,&#xa;        &apos;numero&apos;: 125,&#xa;        &apos;bairro&apos;: &apos;Graja&#xfa;&apos;,&#xa;        &apos;lotes&apos;: [3,4,5,12]&#xa;    }&#xa;}&#xa;&#xa;with open(&apos;meusdados.json&apos;, &apos;w&apos;, encoding=&apos;utf-8&apos;) as arquivo:&#xa;    json.dump(pessoa, arquivo, indent=2)"/>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1716991795193" FOLDED="true" ID="Freemind_Link_1338794295" MODIFIED="1716993601167" TEXT="load">
-<node CREATED="1716991811485" ID="Freemind_Link_299771352" MODIFIED="1716993616104" TEXT="Carrega um arquivo json em um dict Python"/>
-<node CREATED="1716993225398" ID="Freemind_Link_1118156270" MODIFIED="1716993226034" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1716993226949" ID="Freemind_Link_1981690157" MODIFIED="1716993705706" TEXT="import json&#xa;&#xa;with open(&apos;meusdados.json&apos;, &apos;r&apos;, encoding=&apos;utf-8&apos;) as arquivo:&#xa;    pessoa2=json.load(arquivo)    &#xa;    print(pessoa2)"/>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1716991795193" ID="Freemind_Link_1325508284" MODIFIED="1717634797695" TEXT="loads">
-<node CREATED="1716991811485" ID="Freemind_Link_1366886840" MODIFIED="1717634807818" TEXT="Carrega um arquivo json de uma string em um dict Python"/>
-<node CREATED="1716993225398" ID="Freemind_Link_1714672305" MODIFIED="1716993226034" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1716993226949" ID="Freemind_Link_1988221560" MODIFIED="1717634959741" TEXT="import json&#xa;&#xa;string_movie = &apos;&apos;&apos;&#xa;{&#xa;    &quot;nome&quot;: &quot;O Senhor dos an&#xe9;is&quot;,&#xa;    &quot;ano&quot;: 2015,&#xa;    &quot;is_movie&quot;: true,&#xa;    &quot;characters&quot;: [&quot;Frodo&quot;, &quot;Sam&quot;, &quot;Gandalf&quot;, &quot;Boromir&quot;]&#xa;}&apos;&apos;&apos;&#xa;&#xa;filme = json.loads(string_movie)&#xa;print(filme)">
-<node CREATED="1717634967109" ID="Freemind_Link_1744418970" MODIFIED="1717634974299" TEXT="Resultado:&#xa;{&apos;nome&apos;: &apos;O Senhor dos an&#xe9;is&apos;, &apos;ano&apos;: 2015, &apos;is_movie&apos;: True, &apos;characters&apos;: [&apos;Frodo&apos;, &apos;Sam&apos;, &apos;Gandalf&apos;, &apos;Boromir&apos;]}"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1716991795193" ID="Freemind_Link_157257979" MODIFIED="1717635869259" TEXT="dumps">
-<node CREATED="1716991811485" ID="Freemind_Link_793812806" MODIFIED="1717635903134" TEXT="Igual ao dump, mas em vez de escrever em um&#xa;arquivo, devolve como uma vari&#xe1;vel do tipo string">
-<arrowlink DESTINATION="Freemind_Link_1932931791" ENDARROW="Default" ENDINCLINATION="446;0;" ID="Freemind_Arrow_Link_1851765804" STARTARROW="None" STARTINCLINATION="446;0;"/>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1717687344962" FOLDED="true" ID="Freemind_Link_1997026584" MODIFIED="1717687346420" POSITION="right" TEXT="csv">
-<node CREATED="1609876530394" ID="Freemind_Link_106655148" MODIFIED="1717687356339" TEXT="Biblioteca de fun&#xe7;&#xf5;es para manipular arquivos csv"/>
-<node CREATED="1609876661409" ID="Freemind_Link_1361625711" MODIFIED="1609876666051" TEXT="Uso">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1257648852" MODIFIED="1717687361716" TEXT="import csv"/>
-</node>
-<node CREATED="1609876566896" ID="Freemind_Link_1273086161" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
-<node COLOR="#0000ff" CREATED="1609876573952" FOLDED="true" ID="Freemind_Link_1115593476" MODIFIED="1717687387440" TEXT="reader">
-<node CREATED="1609876580616" ID="Freemind_Link_590152065" MODIFIED="1717687398929" TEXT="L&#xea; um arquivo csv"/>
-<node CREATED="1609876605273" ID="Freemind_Link_104272511" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1843456781" MODIFIED="1717687604070" TEXT="import csv&#xa;&#xa;with open(&apos;aula293.csv&apos;, &apos;r&apos;) as arqcsv:&#xa;    leitor = csv.reader(arqcsv)&#xa;&#xa;    for linha in leitor:&#xa;        print(linha[0], linha[1], linha[2])">
-<node CREATED="1717687610060" ID="Freemind_Link_1363384455" MODIFIED="1717687612416" TEXT="Para o csv:">
-<node CREATED="1717687612925" ID="Freemind_Link_344632072" MODIFIED="1717688395306" TEXT="Nome,Idade,Endere&#xe7;o&#xa;Ana,12,&quot;Rua Z, 23, &quot;&quot;Centro&quot;&quot;&quot;&#xa;Beto,27,&quot;Rua A, 35, &quot;&quot;Sul&quot;&quot;&quot;&#xa;Caio,32,&quot;Ruz X, 321, &quot;&quot;Norte&quot;&quot;&quot;&#xa;"/>
-</node>
-<node CREATED="1717687622074" ID="Freemind_Link_856696768" MODIFIED="1717688426211" TEXT="Resultado:&#xa;Nome Idade Endere&#xe7;o&#xa;Ana 12 Rua Z, 23, &quot;Centro&quot;&#xa;Beto 27 Rua A, 35, &quot;Sul&quot;&#xa;Caio 32 Ruz X, 321, &quot;Norte&quot;"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" FOLDED="true" ID="Freemind_Link_1504077213" MODIFIED="1717687687686" TEXT="Dictreader">
-<node CREATED="1609876580616" ID="Freemind_Link_37274868" MODIFIED="1717687694406" TEXT="L&#xea; um arquivo csv e o carrega em um dict"/>
-<node CREATED="1609876605273" ID="Freemind_Link_1250397789" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1027658888" MODIFIED="1717687714874" TEXT="import csv&#xa;&#xa;with open(&apos;aula293.csv&apos;, &apos;r&apos;) as arqcsv:&#xa;    leitor = csv.DictReader(arqcsv)&#xa;&#xa;    for linha in leitor:&#xa;        print(linha">
-<node CREATED="1717687610060" ID="Freemind_Link_1339867084" MODIFIED="1717687612416" TEXT="Para o csv:">
-<node CREATED="1717687612925" ID="Freemind_Link_1493928961" MODIFIED="1717688398869" TEXT="Nome,Idade,Endere&#xe7;o&#xa;Ana,12,&quot;Rua Z, 23, &quot;&quot;Centro&quot;&quot;&quot;&#xa;Beto,27,&quot;Rua A, 35, &quot;&quot;Sul&quot;&quot;&quot;&#xa;Caio,32,&quot;Ruz X, 321, &quot;&quot;Norte&quot;&quot;&quot;&#xa;"/>
-</node>
-<node CREATED="1717687622074" ID="Freemind_Link_1797248795" MODIFIED="1717688434476" TEXT="Resultado:&#xa;{&apos;Nome&apos;: &apos;Ana&apos;, &apos;Idade&apos;: &apos;12&apos;, &apos;Endere&#xe7;o&apos;: &apos;Rua Z, 23, &quot;Centro&quot;&apos;}&#xa;{&apos;Nome&apos;: &apos;Beto&apos;, &apos;Idade&apos;: &apos;27&apos;, &apos;Endere&#xe7;o&apos;: &apos;Rua A, 35, &quot;Sul&quot;&apos;}&#xa;{&apos;Nome&apos;: &apos;Caio&apos;, &apos;Idade&apos;: &apos;32&apos;, &apos;Endere&#xe7;o&apos;: &apos;Ruz X, 321, &quot;Norte&quot;&apos;}"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" FOLDED="true" ID="Freemind_Link_255229352" MODIFIED="1717689009965" TEXT="writer">
-<node CREATED="1609876580616" ID="Freemind_Link_1664461941" MODIFIED="1717689020796" TEXT="Grava dados em arquivo csv"/>
-<node CREATED="1609876605273" ID="Freemind_Link_687107024" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_723098748" MODIFIED="1717689303416" TEXT="import csv&#xa;&#xa;csv_string = [&#xa;    [&apos;Nome&apos;,&apos;Idade&apos;,&apos;Endere&#xe7;o&apos;],&#xa;    [&apos;Ana&apos;,&apos;12&apos;,&apos;Rua Z, 23, &quot;Centro&quot;&apos;],&#xa;    [&apos;Beto&apos;,&apos;27&apos;,&apos;Rua A, 35, &quot;Sul&quot;&apos;],&#xa;    [&apos;Caio&apos;,&apos;32&apos;,&apos;Ruz X, 321, &quot;Norte&quot;&apos;]&#xa;]&#xa;&#xa;with open(&apos;aula293_b.csv&apos;, &apos;w&apos;) as arqcsv:&#xa;    escritor = csv.writer(arqcsv)&#xa;&#xa;    for item in csv_string:&#xa;        escritor.writerow(item)">
-<node CREATED="1717687610060" ID="Freemind_Link_1324006438" MODIFIED="1717689033965" TEXT="CSV gerado:">
-<node CREATED="1717687612925" ID="Freemind_Link_1600245071" MODIFIED="1717689072789" TEXT="Nome,Idade,Endere&#xe7;o&#xa;Ana,12,&quot;Rua Z, 23, &quot;&quot;Centro&quot;&quot;&quot;&#xa;Beto,27,&quot;Rua A, 35, &quot;&quot;Sul&quot;&quot;&quot;&#xa;Caio,32,&quot;Ruz X, 321, &quot;&quot;Norte&quot;&quot;&quot;&#xa;"/>
-</node>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" FOLDED="true" ID="Freemind_Link_278799306" MODIFIED="1717689591810" TEXT="Dictwriter">
-<node CREATED="1609876580616" ID="Freemind_Link_1168008586" MODIFIED="1717689597721" TEXT="Grava dados de um dict em arquivo csv"/>
-<node CREATED="1609876605273" ID="Freemind_Link_1733523186" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1912898167" MODIFIED="1717689608739" TEXT="import csv&#xa;&#xa;csv_dict = [&#xa;    {&apos;Nome&apos;: &apos;Ana&apos;, &apos;Idade&apos;: &apos;12&apos;, &apos;Endere&#xe7;o&apos;: &apos;Rua Z, 23, &quot;Centro&quot;&apos;},&#xa;    {&apos;Nome&apos;: &apos;Beto&apos;, &apos;Idade&apos;: &apos;27&apos;, &apos;Endere&#xe7;o&apos;: &apos;Rua A, 35, &quot;Sul&quot;&apos;},&#xa;    {&apos;Nome&apos;: &apos;Caio&apos;, &apos;Idade&apos;: &apos;32&apos;, &apos;Endere&#xe7;o&apos;: &apos;Ruz X, 321, &quot;Norte&quot;&apos;}&#xa;]&#xa;&#xa;with open(&apos;aula293_c.csv&apos;, &apos;w&apos;) as arqcsv:&#xa;    escritor = csv.DictWriter(arqcsv, fieldnames=csv_dict[0].keys())&#xa;    escritor.writeheader()&#xa;    for item in csv_dict:&#xa;        escritor.writerow(item)        ">
-<node CREATED="1717687610060" ID="Freemind_Link_1937578147" MODIFIED="1717689033965" TEXT="CSV gerado:">
-<node CREATED="1717687612925" ID="Freemind_Link_1898097586" MODIFIED="1717689072789" TEXT="Nome,Idade,Endere&#xe7;o&#xa;Ana,12,&quot;Rua Z, 23, &quot;&quot;Centro&quot;&quot;&quot;&#xa;Beto,27,&quot;Rua A, 35, &quot;&quot;Sul&quot;&quot;&quot;&#xa;Caio,32,&quot;Ruz X, 321, &quot;&quot;Norte&quot;&quot;&quot;&#xa;"/>
-</node>
-</node>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1717862228358" FOLDED="true" ID="Freemind_Link_1391613099" MODIFIED="1717862231339" POSITION="right" TEXT="openpyxl">
-<node CREATED="1718033431741" ID="Freemind_Link_1349970466" MODIFIED="1718033445859" TEXT="https://openpyxl.readthedocs.io/en/stable/">
-<icon BUILTIN="attach"/>
-</node>
-<node CREATED="1717862240744" ID="Freemind_Link_320567885" MODIFIED="1718033456530" TEXT="Biblioteca de ferramentas para&#xa;lidar com arquivos excel">
-<node CREATED="1717862266688" ID="Freemind_Link_677443036" MODIFIED="1717862269372" TEXT="*.xls"/>
-<node CREATED="1717862266688" ID="Freemind_Link_1480552379" MODIFIED="1717862276168" TEXT="*.xlsx"/>
-<node CREATED="1717862266688" ID="Freemind_Link_938532563" MODIFIED="1717862287937" TEXT="*.xlsm"/>
-<node CREATED="1717862289129" ID="Freemind_Link_1331849932" MODIFIED="1717862301626" TEXT="*.xltx"/>
-<node CREATED="1717862289129" ID="Freemind_Link_1584434089" MODIFIED="1717862306273" TEXT="*.xltm"/>
-</node>
-<node CREATED="1609876661409" ID="Freemind_Link_1606220421" MODIFIED="1717862356351" TEXT="Instala&#xe7;&#xe3;o">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_947212606" MODIFIED="1717862367970" TEXT="pip install openpyxl"/>
-</node>
-<node CREATED="1609876661409" ID="Freemind_Link_305364342" MODIFIED="1718033491129" TEXT="Ex:">
-<node CREATED="1718033491072" ID="Freemind_Link_1749336292" MODIFIED="1718033499522" TEXT="Criando um&#xa;arquivo Excel">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_471742193" MODIFIED="1718033429531" TEXT="from pathlib import Path&#xa;&#xa;from openpyxl import Workbook&#xa;from openpyxl.worksheet.worksheet import Worksheet&#xa;&#xa;ROOT_FOLDER = Path(__file__).parent&#xa;WORKBOOK_PATH = ROOT_FOLDER / &apos;workbook.xlsx&apos;&#xa;&#xa;workbook = Workbook()&#xa;worksheet: Worksheet = workbook.active&#xa;&#xa;# Criando os cabe&#xe7;alhos&#xa;worksheet.cell(1, 1, &apos;Nome&apos;)&#xa;worksheet.cell(1, 2, &apos;Idade&apos;)&#xa;worksheet.cell(1, 3, &apos;Nota&apos;)&#xa;&#xa;students = [&#xa;    # nome      idade nota&#xa;    [&apos;Jo&#xe3;o&apos;,    14,   5.5],&#xa;    [&apos;Maria&apos;,   13,   9.7],&#xa;    [&apos;Luiz&apos;,    15,   8.8],&#xa;    [&apos;Alberto&apos;, 16,   10],&#xa;]&#xa;&#xa;# for i, student_row in enumerate(students, start=2):&#xa;#     for j, student_column in enumerate(student_row, start=1):&#xa;#         worksheet.cell(i, j, student_column)&#xa;&#xa;for student in students:&#xa;    worksheet.append(student)&#xa;&#xa;workbook.save(WORKBOOK_PATH)"/>
-</node>
-</node>
-</node>
-<node CREATED="1718034388551" FOLDED="true" ID="Freemind_Link_701821818" MODIFIED="1718034390061" POSITION="right" TEXT="pillow">
-<node CREATED="1718034397446" ID="Freemind_Link_1453348996" MODIFIED="1718034406731" TEXT="Biblioteca de ferramentas de redimensionamento de imagens"/>
-<node CREATED="1609876661409" ID="Freemind_Link_1365191952" MODIFIED="1718034647180" TEXT="Instala&#xe7;&#xe3;o">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1699629029" MODIFIED="1718034651564" TEXT="pip install pillow"/>
-</node>
-<node CREATED="1609876661409" ID="Freemind_Link_412128239" MODIFIED="1718036899331" TEXT="Uso">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_660466159" MODIFIED="1718036914131" TEXT="from PIL import Image"/>
-</node>
-<node CREATED="1718037328419" ID="Freemind_Link_1438836778" MODIFIED="1718037329172" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_78716490" MODIFIED="1718037345370" TEXT="# Pillow: redimensionando imagens com Python&#xa;# Essa biblioteca &#xe9; o Photoshop do Python &#xd83d;&#xde02;&#xa;from pathlib import Path&#xa;&#xa;from PIL import Image&#xa;&#xa;ROOT_FOLDER = Path(__file__).parent&#xa;ORIGINAL = ROOT_FOLDER / &apos;original.JPG&apos;&#xa;NEW_IMAGE = ROOT_FOLDER / &apos; new.JPG&apos;&#xa;&#xa;pil_image = Image.open(ORIGINAL)&#xa;width, height = pil_image.size&#xa;exif = pil_image.info[&apos;exif&apos;]&#xa;&#xa;# width     new_width&#xa;# height    ??&#xa;new_width = 640&#xa;new_height = round(height * new_width / width)&#xa;&#xa;new_image = pil_image.resize(size=(new_width, new_height))&#xa;new_image.save(&#xa;    NEW_IMAGE,&#xa;    optimize=True,&#xa;    quality=70,&#xa;    # exif=exif,&#xa;)"/>
-</node>
-</node>
-<node CREATED="1718037896147" FOLDED="true" ID="Freemind_Link_6207032" MODIFIED="1718037898228" POSITION="right" TEXT="pyside6">
-<node CREATED="1718037921109" ID="Freemind_Link_339492954" MODIFIED="1718037924994" TEXT="https://doc.qt.io/qtforpython/">
-<icon BUILTIN="attach"/>
-</node>
-<node CREATED="1718037899571" ID="Freemind_Link_7749697" MODIFIED="1718037901628" TEXT="PySide6 para GUI (interface gr&#xe1;fica) com Qt em Python"/>
-<node CREATED="1718038061053" ID="Freemind_Link_1122401254" MODIFIED="1718038068035" TEXT="Instala&#xe7;&#xe3;o">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1739954562" MODIFIED="1718038076251" TEXT="pip install pyside6"/>
-</node>
-<node CREATED="1609876661409" ID="Freemind_Link_637873902" MODIFIED="1609876666051" TEXT="Uso">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_856112147" MODIFIED="1609876759581" TEXT="import ??? as ??"/>
-</node>
-<node CREATED="1609876605273" FOLDED="true" ID="Freemind_Link_1117389754" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_80510258" MODIFIED="1718044216025" TEXT="# Trabalhando com classes e heran&#xe7;a no PySide6&#xa;import sys&#xa;&#xa;from PySide6.QtCore import Slot&#xa;from PySide6.QtWidgets import (QApplication, QGridLayout, QMainWindow,&#xa;                               QPushButton, QWidget)&#xa;&#xa;&#xa;class MyWindow(QMainWindow):&#xa;    def __init__(self, parent=None):&#xa;        super().__init__(parent)&#xa;&#xa;        self.central_widget = QWidget()&#xa;&#xa;        self.setCentralWidget(self.central_widget)&#xa;        self.setWindowTitle(&apos;Minha janela bonita&apos;)&#xa;&#xa;        # Bot&#xe3;o&#xa;        self.botao1 = self.make_button(&apos;Texto do bot&#xe3;o&apos;)&#xa;        self.botao1.clicked.connect(self.segunda_acao_marcada)  # type: ignore&#xa;&#xa;        self.botao2 = self.make_button(&apos;Bot&#xe3;o 2&apos;)&#xa;&#xa;        self.botao3 = self.make_button(&apos;Terceiro&apos;)&#xa;&#xa;        self.grid_layout = QGridLayout()&#xa;        self.central_widget.setLayout(self.grid_layout)&#xa;&#xa;        self.grid_layout.addWidget(self.botao1, 1, 1, 1, 1)&#xa;        self.grid_layout.addWidget(self.botao2, 1, 2, 1, 1)&#xa;        self.grid_layout.addWidget(self.botao3, 3, 1, 1, 2)&#xa;&#xa;        # statusBar&#xa;        self.status_bar = self.statusBar()&#xa;        self.status_bar.showMessage(&apos;Mostrar mensagem na barra&apos;)&#xa;&#xa;        # menuBar&#xa;        self.menu = self.menuBar()&#xa;        self.primeiro_menu = self.menu.addMenu(&apos;Primeiro menu&apos;)&#xa;        self.primeira_acao = self.primeiro_menu.addAction(&apos;Primeira a&#xe7;&#xe3;o&apos;)&#xa;        self.primeira_acao.triggered.connect(  # type:ignore&#xa;            self.muda_mensagem_da_status_bar)&#xa;&#xa;        self.segunda_action = self.primeiro_menu.addAction(&apos;Segunda a&#xe7;&#xe3;o&apos;)&#xa;        self.segunda_action.setCheckable(True)&#xa;        self.segunda_action.toggled.connect(  # type:ignore&#xa;            self.segunda_acao_marcada)&#xa;        self.segunda_action.hovered.connect(  # type:ignore&#xa;            self.segunda_acao_marcada)&#xa;&#xa;    @Slot()&#xa;    def muda_mensagem_da_status_bar(self):&#xa;        self.status_bar.showMessage(&apos;O meu slot foi executado&apos;)&#xa;&#xa;    @Slot()&#xa;    def segunda_acao_marcada(self):&#xa;        print(&apos;Est&#xe1; marcado?&apos;, self.segunda_action.isChecked())&#xa;&#xa;    def make_button(self, text):&#xa;        btn = QPushButton(text)&#xa;        btn.setStyleSheet(&apos;font-size: 80px;&apos;)&#xa;        return btn&#xa;&#xa;&#xa;if __name__ == &apos;__main__&apos;:&#xa;    app = QApplication(sys.argv)&#xa;    window = MyWindow()&#xa;    window.show()&#xa;    app.exec()  # O loop da aplica&#xe7;&#xe3;o"/>
-</node>
-</node>
-<node CREATED="1717548619155" FOLDED="true" ID="Freemind_Link_897129555" MODIFIED="1717550948199" POSITION="right" TEXT="dataclasses">
-<node CREATED="1717549938337" ID="Freemind_Link_891634692" MODIFIED="1717549944938" TEXT="Inclu&#xed;do na vers&#xe3;o 3.7 do Python"/>
-<node CREATED="1717550950603" ID="Freemind_Link_1623552075" MODIFIED="1717550952584" TEXT="dataclass">
-<node CREATED="1717548622416" ID="Freemind_Link_878773725" MODIFIED="1717548662788" TEXT="Facilita o processo de cria&#xe7;&#xe3;o de classes, implementando&#xa;de forma simples as funcionalidades mais comuns">
-<node CREATED="1717548641561" ID="Freemind_Link_1312917678" MODIFIED="1717548642324" TEXT="Ex:">
-<node CREATED="1717548643811" ID="Freemind_Link_658843457" MODIFIED="1717548646190" TEXT="getter&apos;s"/>
-<node CREATED="1717548646418" ID="Freemind_Link_1941194082" MODIFIED="1717548648205" TEXT="setter&apos;s"/>
-<node CREATED="1717548648722" ID="Freemind_Link_1560385770" MODIFIED="1717549862790" TEXT="repr&apos;s"/>
-<node CREATED="1717548651503" ID="Freemind_Link_1304488375" MODIFIED="1717548655451" TEXT="etc"/>
-</node>
-</node>
-<node CREATED="1717550419491" ID="Freemind_Link_1295260226" MODIFIED="1717550421131" TEXT="Argumentos">
-<node COLOR="#990000" CREATED="1717550421637" ID="Freemind_Link_1052368538" MODIFIED="1717550450030" TEXT="init">
-<node CREATED="1717550425415" ID="Freemind_Link_867659241" MODIFIED="1717550441778" TEXT="Indica se quero ou n&#xe3;o que o dataclass implemente o m&#xe9;todo __init__"/>
-<node CREATED="1717550451636" ID="Freemind_Link_1401412919" MODIFIED="1717550458834" TEXT="Valor default: True"/>
-</node>
-<node COLOR="#990000" CREATED="1717550477302" ID="Freemind_Link_557439650" MODIFIED="1717550480362" TEXT="eq">
-<node CREATED="1717550425415" ID="Freemind_Link_93948903" MODIFIED="1717550496672" TEXT="Indica se quero ou n&#xe3;o que o dataclass implemente o m&#xe9;todo __eq__"/>
-<node CREATED="1717550451636" ID="Freemind_Link_150554842" MODIFIED="1717550458834" TEXT="Valor default: True"/>
-</node>
-<node COLOR="#990000" CREATED="1717550555082" ID="Freemind_Link_1639622388" MODIFIED="1717550557924" TEXT="frozen">
-<node CREATED="1717550558576" ID="Freemind_Link_1757314323" MODIFIED="1717550577189" TEXT="Indica se a classe decorada &#xe9; congelada ou n&#xe3;o (se aceita ou n&#xe3;o altera&#xe7;&#xe3;o)"/>
-<node CREATED="1717550584672" ID="Freemind_Link_133805228" MODIFIED="1717550629620" TEXT="Quando uma clase &#xe9; &apos;congelada&apos;, voc&#xea; n&#xe3;o poder&#xe1; alterar o valor de seus&#xa;atributos. No m&#xe1;ximo poder&#xe1; fazer uma c&#xf3;pia modificada do objeto original."/>
-<node CREATED="1717550451636" ID="Freemind_Link_1439754818" MODIFIED="1717550583071" TEXT="Valor default: False"/>
-</node>
-<node COLOR="#990000" CREATED="1717550755599" ID="Freemind_Link_1373375688" MODIFIED="1717550759664" TEXT="order">
-<node CREATED="1717550760095" ID="Freemind_Link_1356545179" MODIFIED="1717550771219" TEXT="Ativa a ordena&#xe7;&#xe3;o dos objetos da classe">
-<node CREATED="1717550772028" ID="Freemind_Link_1873199718" MODIFIED="1717550789402" TEXT="Os objetos ser&#xe3;o ordenados pelos atributos, na ordem em que s&#xe3;o declarados na classe"/>
-<node CREATED="1717550791432" ID="Freemind_Link_578925037" MODIFIED="1717550804915" TEXT="O m&#xe9;todo &apos;sorted&apos; passa a funcionar para uma lista dessa classe"/>
-</node>
-<node CREATED="1717550451636" ID="Freemind_Link_391425278" MODIFIED="1717550583071" TEXT="Valor default: False"/>
-</node>
-<node CREATED="1717550501629" ID="Freemind_Link_533352939" MODIFIED="1717550502352" TEXT="etc"/>
-</node>
-<node CREATED="1717551235166" ID="Freemind_Link_1265397894" MODIFIED="1717551695123" TEXT="Permite declara&#xe7;&#xe3;o&#xa;de valores padr&#xe3;o">
-<node CREATED="1717551244567" ID="Freemind_Link_1762719572" MODIFIED="1717551528164" TEXT="Para os tipos imut&#xe1;veis">
-<node CREATED="1717551252366" ID="Freemind_Link_1414334750" MODIFIED="1717551253201" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1368611181" MODIFIED="1717551289815" TEXT="from dataclasses import dataclass&#xa;&#xa;@dataclass&#xa;class Pessoa():&#xa;    nome: str = &apos;Pedro&apos;&#xa;    idade: int = 17&#xa;&#xa;p1 = Pessoa()&#xa;print(p1, sep=&apos;\n&apos;)">
-<node CREATED="1717549730182" ID="Freemind_Link_1370999324" MODIFIED="1717551341326" TEXT="Resultado:&#xa;Pessoa(nome=&apos;Pedro&apos;, idade=17)"/>
-</node>
-</node>
-</node>
-<node CREATED="1717551461259" ID="Freemind_Link_1260749783" MODIFIED="1717551511965" TEXT="Para tipos mut&#xe1;veis">
-<node CREATED="1717551512938" ID="Freemind_Link_402335404" MODIFIED="1717551722922" TEXT="Requer o uso do m&#xf3;dulo &apos;field&apos;">
-<arrowlink DESTINATION="Freemind_Link_994299774" ENDARROW="Default" ENDINCLINATION="596;0;" ID="Freemind_Arrow_Link_1262304707" STARTARROW="None" STARTINCLINATION="596;0;"/>
-</node>
-<node CREATED="1717551252366" ID="Freemind_Link_510168483" MODIFIED="1717551253201" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_437140022" MODIFIED="1717551609680" TEXT="from dataclasses import dataclass, field&#xa;&#xa;@dataclass&#xa;class Pessoa():&#xa;    nome: str = &apos;Pedro&apos;&#xa;    idade: int = 17&#xa;    endenrecos: list[str] = field(default_factory=list)&#xa;&#xa;p1 = Pessoa()&#xa;print(p1, sep=&apos;\n&apos;)">
-<node CREATED="1717549730182" ID="Freemind_Link_1983469652" MODIFIED="1717551601386" TEXT="Resultado:&#xa;Pessoa(nome=&apos;Pedro&apos;, idade=17, endenrecos=[])"/>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1717548666074" FOLDED="true" ID="Freemind_Link_1623273055" MODIFIED="1717548666829" TEXT="Ex:">
-<node CREATED="1717548671801" ID="Freemind_Link_11048511" MODIFIED="1717548678878" TEXT="Classe feita na m&#xe3;o">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_3429281" MODIFIED="1717549721966" TEXT="&#xa;class Pessoa():&#xa;    def __init__(self, nome: str, idade: int) -&gt; None:&#xa;        self._nome = nome&#xa;        self._idade = idade&#xa;&#xa;    @property&#xa;    def nome(self):&#xa;        return self._nome&#xa;    &#xa;    @nome.setter&#xa;    def nome(self, nome: str):&#xa;        self._nome = nome&#xa;&#xa;    @property&#xa;    def idade(self):&#xa;        return self._idade&#xa;    &#xa;    @idade.setter&#xa;    def idade(self, idade: int):&#xa;        self._idade = idade&#xa;&#xa;    def __repr__(self) -&gt; str:&#xa;        class_name = type(self).__name__&#xa;        attrs = f&apos;(nome={self._nome!r}, idade={self._idade!r})&apos;&#xa;        return f&apos;{class_name}{attrs}&apos;&#xa;    &#xa;p1 = Pessoa(&apos;Ana&apos;, 15)&#xa;print(p1, sep=&apos;\n&apos;)">
-<node CREATED="1717549730182" ID="Freemind_Link_742270836" MODIFIED="1717549735935" TEXT="Resultado:&#xa;Pessoa(nome=&apos;Ana&apos;, idade=15)"/>
-</node>
-</node>
-<node CREATED="1717548681241" ID="Freemind_Link_751499711" MODIFIED="1717548688021" TEXT="Classe feita via decorator">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1005639739" MODIFIED="1717549843130" TEXT="from dataclasses import dataclass&#xa;&#xa;@dataclass&#xa;class Pessoa():&#xa;    nome: str&#xa;    idade: int&#xa;&#xa;p1 = Pessoa(&apos;Ana&apos;, 15)&#xa;print(p1, sep=&apos;\n&apos;)">
-<node CREATED="1717549730182" ID="Freemind_Link_37731875" MODIFIED="1717549735935" TEXT="Resultado:&#xa;Pessoa(nome=&apos;Ana&apos;, idade=15)"/>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_193370837" MODIFIED="1717550353167" TEXT="from dataclasses import dataclass&#xa;&#xa;@dataclass(init=False&#xa;class Pessoa():&#xa;    nome: str&#xa;    idade: int&#xa;&#xa;    def __init__(self, nome: str, idade: int):&#xa;        self._nome = nome&#xa;        self._idade = idade&#xa;&#xa;p1 = Pessoa(&apos;Ana&apos;, 15)&#xa;print(p1, sep=&apos;\n&apos;)">
-<node CREATED="1717550359798" ID="Freemind_Link_1866446607" MODIFIED="1717550376700" TEXT="Aqui eu quis implementar o meu pr&#xf3;prio __init__ e n&#xe3;o deix&#xe1;-lo a cargo do dataclass"/>
-<node CREATED="1717549730182" ID="Freemind_Link_649933515" MODIFIED="1717549735935" TEXT="Resultado:&#xa;Pessoa(nome=&apos;Ana&apos;, idade=15)"/>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1717551700374" ID="Freemind_Link_994299774" MODIFIED="1717551722920" TEXT="field">
-<node CREATED="1717551702674" ID="Freemind_Link_1193431398" MODIFIED="1717551710920" TEXT="Permite configurar os campos no dataclass"/>
-<node CREATED="1717551712446" ID="Freemind_Link_1171189277" MODIFIED="1717551718073" TEXT="&#xc9; poderoso. Vale ler a documenta&#xe7;&#xe3;o"/>
-</node>
-<node CREATED="1717550965548" ID="Freemind_Link_320390920" MODIFIED="1717550967344" TEXT="asdict">
-<node CREATED="1717550967884" ID="Freemind_Link_864767978" MODIFIED="1717550984102" TEXT="Converte uma classe para um dicion&#xe1;rio"/>
-<node CREATED="1717551054499" ID="Freemind_Link_801621370" MODIFIED="1717551055230" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1717551056061" ID="Freemind_Link_1046980" MODIFIED="1717551136342" TEXT="from dataclasses import dataclass, asdict&#xa;&#xa;@dataclass&#xa;class Pessoa():&#xa;    nome: str&#xa;    idade: int&#xa;&#xa;p1 = Pessoa(&apos;Ana&apos;, 15)&#xa;print(p1, sep=&apos;\n&apos;)&#xa;print(asdict(p1))">
-<node CREATED="1717551146717" ID="Freemind_Link_871903450" MODIFIED="1717551154258" TEXT="Resultado:&#xa;Pessoa(nome=&apos;Ana&apos;, idade=15)&#xa;{&apos;nome&apos;: &apos;Ana&apos;, &apos;idade&apos;: 15}"/>
-</node>
-</node>
-</node>
-<node CREATED="1717550978530" ID="Freemind_Link_1823514856" MODIFIED="1717550979798" TEXT="astuple">
-<node CREATED="1717550967884" ID="Freemind_Link_1634836662" MODIFIED="1717550992574" TEXT="Converte uma classe para uma tupla"/>
-<node CREATED="1717551054499" ID="Freemind_Link_362337941" MODIFIED="1717551055230" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1717551056061" ID="Freemind_Link_1761897636" MODIFIED="1717551169809" TEXT="from dataclasses import dataclass, astuple&#xa;&#xa;@dataclass&#xa;class Pessoa():&#xa;    nome: str&#xa;    idade: int&#xa;&#xa;p1 = Pessoa(&apos;Ana&apos;, 15)&#xa;print(p1, sep=&apos;\n&apos;)&#xa;print(astuple(p1))">
-<node CREATED="1717551146717" ID="Freemind_Link_315884687" MODIFIED="1717551182837" TEXT="Resultado:&#xa;Pessoa(nome=&apos;Ana&apos;, idade=15)&#xa;(&apos;Ana&apos;, 15)"/>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1717609550872" FOLDED="true" ID="Freemind_Link_247897315" MODIFIED="1717609552370" POSITION="right" TEXT="datetime">
-<node CREATED="1717609856640" ID="Freemind_Link_689711760" MODIFIED="1717609857383" TEXT="https://docs.python.org/3/library/datetime.html#module-datetime"/>
-<node CREATED="1717610054515" ID="Freemind_Link_366104311" MODIFIED="1717610068664" TEXT="Biblioteca &#xfa;til para lidar com data e hora"/>
-<node CREATED="1609876661409" ID="Freemind_Link_1371959802" MODIFIED="1609876666051" TEXT="Uso">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1733174951" MODIFIED="1717609578081" TEXT="import datetime"/>
-</node>
-<node CREATED="1609876566896" ID="Freemind_Link_1077242059" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1041637939" MODIFIED="1717610243094" TEXT="datetime">
-<node COLOR="#0000ff" CREATED="1717610243038" ID="Freemind_Link_871321609" MODIFIED="1717610271877" TEXT="now">
-<node CREATED="1717610407055" ID="Freemind_Link_1522322593" MODIFIED="1717610449754" TEXT="&#xc9; importante us&#xe1;-lo&#xa;com o TimeZone">
-<icon BUILTIN="messagebox_warning"/>
-<node CREATED="1717610418399" ID="Freemind_Link_1023963403" MODIFIED="1717610442547" TEXT="Para tal, recomenda-se&#xa;usar a biblioteca pytz">
-<node CREATED="1717610734079" ID="Freemind_Link_1807596668" MODIFIED="1717610740748" TEXT="Instala&#xe7;&#xe3;o do pytz:">
-<node COLOR="#0000ff" CREATED="1717610202053" ID="Freemind_Link_1649107348" MODIFIED="1717610489114" TEXT="pip instal pytz types-pytz&#xa;&#xa;"/>
-<node COLOR="#0000ff" CREATED="1717610202053" ID="Freemind_Link_1842726807" MODIFIED="1717610720670" TEXT="python -m pip instal pytz types-pytz  "/>
-</node>
-<node CREATED="1717610261514" ID="Freemind_Link_1456365234" MODIFIED="1717610262582" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1717610202053" ID="Freemind_Link_662477749" MODIFIED="1717610854837" TEXT="from datetime import datetime&#xa;from pytz import timezone&#xa;&#xa;date = datetime.now(timezone(&apos;America/Sao_Paulo&apos;))&#xa;print(date)">
-<node CREATED="1717610856831" ID="Freemind_Link_1024977248" MODIFIED="1717610867304" TEXT="Resultado: 2024-06-05 15:07:09.764337-03:00"/>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1717610192690" ID="Freemind_Link_1807197569" MODIFIED="1717610292767" TEXT="Obt&#xe9;m hora atual&#xa;do sistema">
-<node CREATED="1717610261514" ID="Freemind_Link_755923277" MODIFIED="1717610262582" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1717610202053" ID="Freemind_Link_443500756" MODIFIED="1717610312963" TEXT="from datetime import datetime&#xa;&#xa;date = datetime.now()&#xa;print(date)"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1717610243038" ID="Freemind_Link_1477543837" MODIFIED="1717610991807" TEXT="timestamp">
-<node CREATED="1717610993465" ID="Freemind_Link_1000961867" MODIFIED="1717611005400" TEXT="Retorna o n&#xfa;mero de segundos desde a Epoch at&#xe9; agora"/>
-<node CREATED="1717610261514" ID="Freemind_Link_903692508" MODIFIED="1717610262582" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1717610202053" ID="Freemind_Link_979599973" MODIFIED="1717611057450" TEXT="from datetime import datetime&#xa;&#xa;date = datetime.now()&#xa;print(date.timestamp())">
-<node CREATED="1717611073304" ID="Freemind_Link_1117350264" MODIFIED="1717611076602" TEXT="Resultado: 1724148005.0"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1717610243038" ID="Freemind_Link_811109592" MODIFIED="1717610266845" TEXT="strptime">
-<node CREATED="1717610192690" ID="Freemind_Link_1763677549" MODIFIED="1717612176288" TEXT="Efetua convers&#xe3;o de&#xa;string para datetime">
-<node CREATED="1717610261514" ID="Freemind_Link_1217830048" MODIFIED="1717610262582" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1717610202053" ID="Freemind_Link_192566869" MODIFIED="1717610214277" TEXT="from datetime import datetime&#xa;&#xa;str_data = &apos;2024-08-20 07:00:05&apos;&#xa;str_fmt = &apos;%Y-%m-%d %H:%M:%S&apos;&#xa;&#xa;date = datetime.strptime(str_data, str_fmt)&#xa;print(date)"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1717610243038" ID="Freemind_Link_1368557927" MODIFIED="1717612187721" TEXT="strftime">
-<node CREATED="1717612378293" ID="Freemind_Link_1956657949" MODIFIED="1717612387251" TEXT="Retorna um string"/>
-<node CREATED="1717610192690" ID="Freemind_Link_1199064907" MODIFIED="1717612200336" TEXT="Forma a exibi&#xe7;&#xe3;o da data">
-<node CREATED="1717610261514" ID="Freemind_Link_686021397" MODIFIED="1717610262582" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1717610202053" ID="Freemind_Link_1764176089" MODIFIED="1717612346579" TEXT="from datetime import datetime&#xa;&#xa;str_fmt = &apos;%d/%m/%Y %H:%M:%S&apos;&#xa;&#xa;date = datetime.now()&#xa;print(date)&#xa;print(date.strftime(str_fmt))">
-<node CREATED="1717612354743" ID="Freemind_Link_905698889" MODIFIED="1717612360064" TEXT="Resultado:&#xa;2024-06-05 15:31:57.061685&#xa;05/06/2024 15:31:57"/>
-</node>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1717611405344" ID="Freemind_Link_1408526846" MODIFIED="1717611507732" TEXT="timedelta">
-<node CREATED="1717611713773" ID="Freemind_Link_680587306" MODIFIED="1717611730224" TEXT="Armazena um per&#xed;odo de tempo (tempo decorrido entre dois mmentos)"/>
-<node CREATED="1717611507721" ID="Freemind_Link_1829884888" MODIFIED="1717611526935" TEXT="A diferen&#xe7;a entre dois datetime&apos;s&#xa;retorna um timedelta">
-<node CREATED="1717611419322" ID="Freemind_Link_1998743217" MODIFIED="1717611420021" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1717611420956" ID="Freemind_Link_147240190" MODIFIED="1717611442594" TEXT="from datetime import datetime&#xa;&#xa;data_inicio = datetime(1979,8,20,6,20,13)&#xa;data_termino = datetime(2024,6,5,15,15,52)&#xa;delta = data_termino - data_inicio&#xa;print(delta)">
-<node CREATED="1717611444532" ID="Freemind_Link_1652041152" MODIFIED="1717611455798" TEXT="Resultado: 16361 days, 8:55:39"/>
-</node>
-</node>
-</node>
-<node CREATED="1717611419322" ID="Freemind_Link_701246676" MODIFIED="1717611420021" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1717611420956" ID="Freemind_Link_1082837274" MODIFIED="1717611688890" TEXT="from datetime import datetime, timedelta&#xa;&#xa;delta = timedelta(days=16361, hours=8, minutes=55, seconds=39)&#xa;data_inicio = datetime(1979,8,20,6,20,13)&#xa;data_termino = data_inicio + delta&#xa;print(data_termino)&#xa;">
-<node CREATED="1717611444532" ID="Freemind_Link_1128246512" MODIFIED="1717611707804" TEXT="Resultado: 2024-06-05 15:15:52"/>
-</node>
-</node>
-</node>
-<node CREATED="1609876605273" ID="Freemind_Link_841021437" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_117928179" MODIFIED="1717609680087" TEXT="from datetime import datetime&#xa;data = datetime(2024, 08, 20)&#xa;print(data)">
-<node CREATED="1717609681829" ID="Freemind_Link_466532874" MODIFIED="1717609690959" TEXT="Resultado: 2024-08-20 00:00:00"/>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1999050544" MODIFIED="1717609700488" TEXT="from datetime import datetime&#xa;data = datetime(2024, 08, 20, 7)&#xa;print(data)">
-<node CREATED="1717609681829" ID="Freemind_Link_1655636650" MODIFIED="1717609704509" TEXT="Resultado: 2024-08-20 07:00:00"/>
-</node>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1717613124486" FOLDED="true" ID="Freemind_Link_191925553" MODIFIED="1717615056518" POSITION="right" TEXT="calendar">
-<node CREATED="1717613128612" ID="Freemind_Link_940452594" MODIFIED="1717613129561" TEXT="https://docs.python.org/3/library/calendar.html#module-calendar"/>
-<node CREATED="1717613130157" ID="Freemind_Link_489998162" MODIFIED="1717613138473" TEXT="Permite opera&#xe7;&#xf5;es de calend&#xe1;rio">
-<node CREATED="1717613139045" ID="Freemind_Link_964491632" MODIFIED="1717613140832" TEXT="Ex:">
-<node CREATED="1717613141621" ID="Freemind_Link_188884272" MODIFIED="1717613149713" TEXT="Pegar o &#xfa;ltimo dia do m&#xea;s"/>
-</node>
-</node>
-<node CREATED="1717613264827" ID="Freemind_Link_1195474163" MODIFIED="1717613265538" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1717613266353" ID="Freemind_Link_741846818" MODIFIED="1717613281792" TEXT="import calendar&#xa;&#xa;print(calendar.calendar(2024))">
-<node CREATED="1717613282852" ID="Freemind_Link_668390115" MODIFIED="1717613289758" TEXT="Resultado: imprime o calend&#xe1;rio do ano 2024"/>
-</node>
-<node COLOR="#0000ff" CREATED="1717613266353" ID="Freemind_Link_1549003220" MODIFIED="1717613303678" TEXT="import calendar&#xa;&#xa;print(calendar.month(2024,6))">
-<node CREATED="1717613282852" ID="Freemind_Link_190221785" MODIFIED="1717613297767" TEXT="Resultado: imprime o calend&#xe1;rio de junho do ano 2024"/>
-</node>
-</node>
-<node CREATED="1609876566896" ID="Freemind_Link_623730130" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1880723109" MODIFIED="1717613388685" TEXT="monthrange">
-<node CREATED="1717613506246" ID="Freemind_Link_1428525782" MODIFIED="1717613633278" TEXT="O dia da semana &#xe9; tal que 0=segunda-feira e 6=domingo">
-<arrowlink DESTINATION="Freemind_Link_430011416" ENDARROW="Default" ENDINCLINATION="429;0;" ID="Freemind_Arrow_Link_1110079957" STARTARROW="None" STARTINCLINATION="429;0;"/>
-</node>
-<node CREATED="1609876580616" ID="Freemind_Link_735305697" MODIFIED="1717613438916" TEXT="Retorna o &#xfa;ltimo dia do m&#xea;s 12/2022"/>
-<node CREATED="1609876605273" ID="Freemind_Link_43485" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1717613266353" ID="Freemind_Link_430328973" MODIFIED="1717613433180" TEXT="import calendar&#xa;&#xa;print(calendar.monthrange(2022,12))">
-<node CREATED="1717613282852" ID="Freemind_Link_1589887522" MODIFIED="1717613503765" TEXT="Resultado: &#xa;(3, 31)&#xa;31 &#xe9; o dia do M&#x1ebd;s&#xa;3 &#xe9; o dia da semana (no caso, quarta-feira)"/>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1717613616253" ID="Freemind_Link_1389079763" MODIFIED="1717613617820" TEXT="Atributos">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_430011416" MODIFIED="1717613633277" TEXT="day_name">
-<node CREATED="1717613506246" ID="Freemind_Link_1634803143" MODIFIED="1717613625702" TEXT="Lista dos dias da semana"/>
-<node CREATED="1609876605273" ID="Freemind_Link_1081506856" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1717613266353" ID="Freemind_Link_391476670" MODIFIED="1717613645469" TEXT="import calendar&#xa;&#xa;print(list(calendar.day_name))">
-<node CREATED="1717613282852" ID="Freemind_Link_865256965" MODIFIED="1717613659126" TEXT="Resultado: &#xa;[&apos;Monday&apos;, &apos;Tuesday&apos;, &apos;Wednesday&apos;, &apos;Thursday&apos;, &apos;Friday&apos;, &apos;Saturday&apos;, &apos;Sunday&apos;]"/>
-</node>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1717614168289" FOLDED="true" ID="Freemind_Link_170205463" MODIFIED="1717614171694" POSITION="right" TEXT="locale">
-<node CREATED="1717614175153" ID="Freemind_Link_990559924" MODIFIED="1717614297828" TEXT="Permite implementar internacionaliza&#xe7;&#xe3;o de c&#xf3;digo">
-<node CREATED="1717614298151" ID="Freemind_Link_1671864441" MODIFIED="1717614299997" TEXT="Tradu&#xe7;&#xe3;o"/>
-</node>
-<node CREATED="1717615032221" ID="Freemind_Link_530840149" MODIFIED="1717615059696" TEXT="Para descobrir as locale&apos;s dispon&#xed;veis no S.O. Linux, use o comando &apos;locale -a&apos;">
-<icon BUILTIN="idea"/>
-</node>
-<node CREATED="1609876605273" ID="Freemind_Link_1708755618" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1039571615" MODIFIED="1717614988371" TEXT="import locale&#xa;import calendar&#xa;&#xa;locale.setlocale(locale.LC_ALL, &apos;&apos;)&#xa;# locale.setlocale(locale.LC_ALL, &apos;pt_BR.utf-8&apos;)&#xa;print(calendar.month(2024,12))">
-<node CREATED="1717614483571" ID="Freemind_Link_1959466733" MODIFIED="1717614486406" TEXT="Neste exemplo:">
-<node CREATED="1717614449828" ID="Freemind_Link_1441974679" MODIFIED="1717614481352" TEXT="Em &apos;locale.setlocale(locale.LC_ALL, &apos;&apos;)&apos;, ao deixar o locale vazio (2o par&#xe2;metro), ser&#xe1; usado o locale do sistema "/>
-<node CREATED="1717614490346" ID="Freemind_Link_1796598623" MODIFIED="1717614531841" TEXT="Defini de uma s&#xf3; vez todo o locale (LC_ALL), mas pode-se fazer isso por partes (idioma, unidades de medida, moeda etc.)"/>
-</node>
-<node CREATED="1717614541995" ID="Freemind_Link_1717345307" MODIFIED="1717614566974" TEXT="Resultado: O calend&#xe1;rio de dezembro ser&#xe1; exibido em portugu&#xea;s (&apos;Dezembro&apos; em vez de &apos;December&apos;)"/>
-</node>
-</node>
-<node CREATED="1609876566896" ID="Freemind_Link_1636046497" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1857681318" MODIFIED="1717614855013" TEXT="getlocale">
-<node CREATED="1609876605273" ID="Freemind_Link_149108027" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1610396790" MODIFIED="1717614888667" TEXT="import locale&#xa;&#xa;print(locale.getlocale())">
-<node CREATED="1717614541995" ID="Freemind_Link_516267512" MODIFIED="1717614918207" TEXT="Resultado: (&apos;pt_BR&apos;, &apos;UTF-8&apos;)"/>
-</node>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1717692408567" FOLDED="true" ID="Freemind_Link_1387609466" MODIFIED="1717692410244" POSITION="right" TEXT="string">
-<node CREATED="1717692411375" ID="Freemind_Link_262568996" MODIFIED="1717692419498" TEXT="Biblioteca que facilita manipula&#xe7;&#xe3;o de strings"/>
-<node CREATED="1609876566896" ID="Freemind_Link_1558445934" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_40002055" MODIFIED="1717692435148" TEXT="ascii_letters">
-<node CREATED="1609876580616" ID="Freemind_Link_957282301" MODIFIED="1717692449291" TEXT="Lista de todas as letras que est&#xe3;o dispon&#xed;veis para uso"/>
-<node CREATED="1609876605273" ID="Freemind_Link_1134313258" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1237643127" MODIFIED="1717692460598" TEXT="import string as s&#xa;&#xa;print(s.ascii_letters)&#xa;print(s.digits)&#xa;print(s.punctuation)">
-<node CREATED="1717692466517" ID="Freemind_Link_953647397" MODIFIED="1717692472500" TEXT="Resultado:&#xa;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&#xa;0123456789&#xa;!&quot;#$%&amp;&apos;()*+,-./:;&lt;=&gt;?@[\]^_`{|}~"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_562225044" MODIFIED="1717692479435" TEXT="digits">
-<node CREATED="1609876580616" ID="Freemind_Link_1437842523" MODIFIED="1717692491162" TEXT="Lista de todos os n&#xfa;meros que est&#xe3;o dispon&#xed;veis para uso"/>
-<node CREATED="1609876605273" ID="Freemind_Link_1332125379" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_747724963" MODIFIED="1717692498506" TEXT="import string as s&#xa;&#xa;print(s.digits)">
-<node CREATED="1717692466517" ID="Freemind_Link_1711790932" MODIFIED="1717692505314" TEXT="Resultado:&#xa;0123456789"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1832700757" MODIFIED="1717692509742" TEXT="punctuation">
-<node CREATED="1609876580616" ID="Freemind_Link_1486496385" MODIFIED="1717692527402" TEXT="Lista de todos os caracteres de pontua&#xe7;&#xe3;o que est&#xe3;o dispon&#xed;veis para uso"/>
-<node CREATED="1609876605273" ID="Freemind_Link_615590368" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_862233890" MODIFIED="1717692533130" TEXT="import string as s&#xa;&#xa;print(s.punctuation)">
-<node CREATED="1717692466517" ID="Freemind_Link_1171977216" MODIFIED="1717692538420" TEXT="Resultado:&#xa;!&quot;#$%&amp;&apos;()*+,-./:;&lt;=&gt;?@[\]^_`{|}~"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1722105554" MODIFIED="1717693434952" TEXT="Template">
-<node CREATED="1609876580616" ID="Freemind_Link_1070698377" MODIFIED="1717693452349" TEXT="Permite o uso de templates com vari&#xe1;veis para substitui&#xe7;&#xe3;o posterior"/>
-<node CREATED="1717693517875" ID="Freemind_Link_138445289" MODIFIED="1717693572825" TEXT="Pode-se usar o &apos;substitute&apos; ou o&#xa;&apos;safe_substitute&apos;, conforme a necessidade">
-<node COLOR="#0000ff" CREATED="1717693574218" ID="Freemind_Link_1634467131" MODIFIED="1717693649383" TEXT="substitute">
-<node CREATED="1717693576938" ID="Freemind_Link_1436361771" MODIFIED="1717693600299" TEXT="Cada vari&#xe1;vel usada no template deve, obrigatoriamente, ser informada nos par&#xe2;metros"/>
-</node>
-<node COLOR="#0000ff" CREATED="1717693604370" ID="Freemind_Link_460368121" MODIFIED="1717693654196" TEXT="safe_substitute">
-<node CREATED="1717693607744" ID="Freemind_Link_1157300084" MODIFIED="1717693642443" TEXT="A vari&#xe1;vel que estiver no template mas que n&#xe3;o tiver sido&#xa;informada por par&#xe2;metro ser&#xe1; exibida como vari&#xe1;vel no texto final"/>
-</node>
-</node>
-<node CREATED="1717693826068" ID="Freemind_Link_1670635484" MODIFIED="1717693878912" TEXT="Pode-se alterar o delimiter (sinal que&#xa;identifica a vari&#xe1;vel) por outro, se necess&#xe1;rio">
-<node CREATED="1717693880333" ID="Freemind_Link_1378529096" MODIFIED="1717693903367" TEXT="Para tal, implemente uma classe que herda de string.Template e redefina o atributo delimiter conforme a necessidade"/>
-<node CREATED="1609876605273" FOLDED="true" ID="Freemind_Link_1214623208" MODIFIED="1609876606302" TEXT="Ex:">
-<node CREATED="1717694149549" ID="Freemind_Link_1208247041" MODIFIED="1717694165249" TEXT="Neste exemplo, altero o delimitador padr&#xe3;o &apos;$&apos; para o &apos;%&apos;"/>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_180756878" MODIFIED="1717694124762" TEXT="import string&#xa;&#xa;class MeuTemplate(string.Template)&#xa;    delimiter=%&#xa;&#xa;template = &quot;&quot;&quot;&#xa;Prezado %{nome},&#xa;No dia %{data} foram realizadas %{qtd_tentativas} tentaivas de contato com o telefone %{telefone}.&#xa;&#xa;Favor entrar em contato conosco o quanto antes.&#xa;%{empresa}&#xa;&quot;&quot;&quot;&#xa;&#xa;dados = dict(nome=&apos;Ana&apos;,&#xa;             data=&apos;20/05/2023&apos;,&#xa;             telefone=&apos;(21)234-5678&apos;,&#xa;             empresa=&apos;Jos&#xe9; das Couves&apos;,&#xa;             qtd_tentativas=5)&#xa;&#xa;&#xa;# Em vez de &#xa;#   texto = string.Template(template).substitute(dados)&#xa;# Use&#xa;texto = MeuTemplate(template).substitute(dados)&#xa;print(texto)"/>
-</node>
-</node>
-<node CREATED="1609876605273" ID="Freemind_Link_1311838013" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1514342113" MODIFIED="1717693461672" TEXT="import string&#xa;&#xa;template = &quot;&quot;&quot;&#xa;Prezado ${nome},&#xa;No dia ${data} foram realizadas ${qtd_tentativas} tentaivas de contato com o telefone ${telefone}.&#xa;&#xa;Favor entrar em contato conosco o quanto antes.&#xa;${empresa}&#xa;&quot;&quot;&quot;&#xa;dados = dict(nome=&apos;Ana&apos;,&#xa;             data=&apos;20/05/2023&apos;,&#xa;             telefone=&apos;(21)234-5678&apos;,&#xa;             empresa=&apos;Jos&#xe9; das Couves&apos;,&#xa;             qtd_tentativas=5)&#xa;&#xa;texto = string.Template(template).substitute(dados)&#xa;print(texto)&#xa;">
-<node CREATED="1717692466517" ID="Freemind_Link_1375124419" MODIFIED="1717693482161" TEXT="Resultado:&#xa;Prezado Ana,&#xa;No dia 20/05/2023 foram realizadas 5 tentaivas de contato com o telefone (21)234-5678.&#xa;&#xa;Favor entrar em contato conosco o quanto antes.&#xa;Jos&#xe9; das Couves"/>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1717692672579" ID="Freemind_Link_1341527873" MODIFIED="1717692674207" TEXT="Ex:">
-<node CREATED="1717692676623" ID="Freemind_Link_1935196155" MODIFIED="1717692740986" TEXT="Gera&#xe7;&#xe3;o de uma&#xa;senha aleat&#xf3;ria segura">
-<node COLOR="#0000ff" CREATED="1717692685403" ID="Freemind_Link_1369112977" MODIFIED="1717692726490" TEXT="import string as s&#xa;from secrets import SystemRandom as Sr&#xa;tamanho_senha=64&#xa;print(&apos;&apos;.join(Sr().choices(s.ascii_letters + s.digits + s.punctuation, k=tamanho_senha)))"/>
 </node>
 </node>
 </node>
@@ -1831,48 +1660,206 @@
 </node>
 </node>
 </node>
-<node CREATED="1717712275199" FOLDED="true" ID="Freemind_Link_783947560" MODIFIED="1717712277501" POSITION="right" TEXT="bs4">
-<node CREATED="1717712352637" ID="Freemind_Link_1702599356" MODIFIED="1717712365450" TEXT="Ferramenta de web scraping"/>
-<node CREATED="1717712278487" ID="Freemind_Link_616518884" MODIFIED="1717712299690" TEXT="Biblioteca de fun&#xe7;&#xf5;es &#xfa;teis para raspar conte&#xfa;do da internet"/>
-<node CREATED="1609876661409" ID="Freemind_Link_1109264056" MODIFIED="1717700128303" TEXT="Instala&#xe7;&#xe3;o">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1117602826" MODIFIED="1717712313992" TEXT="pip install bs4"/>
+<node CREATED="1620403423143" FOLDED="true" ID="Freemind_Link_1085356855" MODIFIED="1620403428510" POSITION="right" TEXT="Scikit Learn">
+<node CREATED="1620403429149" ID="Freemind_Link_457040450" MODIFIED="1620403431728" TEXT="Instala&#xe7;&#xe3;o:">
+<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_1086810015" MODIFIED="1620403487584" TEXT="pip install -U scikit-learn"/>
 </node>
-<node CREATED="1609876566896" ID="Freemind_Link_1555085928" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1759300080" MODIFIED="1717712397740" TEXT="BeautifulSoup">
-<node CREATED="1717712556648" ID="Freemind_Link_1375104210" MODIFIED="1717712557118" TEXT="https://pypi.org/project/beautifulsoup4/"/>
-<node CREATED="1717712568268" ID="Freemind_Link_1607274556" MODIFIED="1717712569079" TEXT="https://beautiful-soup-4.readthedocs.io/en/latest/"/>
-<node CREATED="1609876580616" ID="Freemind_Link_1386059753" MODIFIED="1717712428850" TEXT="Permite interpretar dados de conte&#xfa;do HTML em formato de objetos Python"/>
-<node CREATED="1717713164816" ID="Freemind_Link_534663070" MODIFIED="1717713181136" TEXT="Fun&#xe7;&#xf5;es">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_884480536" MODIFIED="1717713223192" TEXT="select">
-<node CREATED="1717713223799" ID="Freemind_Link_1411705895" MODIFIED="1717713234841" TEXT="Seleciona itens usando seletor css"/>
+<node CREATED="1620404289756" ID="Freemind_Link_1079043038" MODIFIED="1620404714145" TEXT="TestSplit">
+<node CREATED="1620404714996" ID="Freemind_Link_1428431798" MODIFIED="1620404741640" TEXT="Ferramenta usado para dividir a base de dados em 2 bases: uma para treinamento e outra para testes do treinamento"/>
+<node CREATED="1620403709963" ID="Freemind_Link_1383367794" MODIFIED="1620403749607" TEXT="Import">
+<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_1289129197" MODIFIED="1620404785591" TEXT="from sklearn.model_selection import train_test_split"/>
 </node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_331311448" MODIFIED="1717713241281" TEXT="select_one">
-<node CREATED="1717713223799" ID="Freemind_Link_183678275" MODIFIED="1717713249667" TEXT="Seleciona um &#xfa;nico item usando seletor css"/>
+<node CREATED="1620404790681" ID="Freemind_Link_397114474" MODIFIED="1620404794299" TEXT="train_test_split">
+<node CREATED="1620410146053" ID="Freemind_Link_979008172" MODIFIED="1620410162168" TEXT="Para evitar varia&#xe7;&#xf5;es nos treinamentos, use o par&#xe2;metro random_state">
+<node CREATED="1620410162829" ID="Freemind_Link_1650653250" MODIFIED="1620410165568" TEXT="Ex: ">
+<node COLOR="#0000ff" CREATED="1620410173347" ID="Freemind_Link_1703686563" MODIFIED="1620410178444" TEXT="x_treino, x_teste, y_treino, y_teste =  train_test_split(x,y, test_size=0.2, random_state=376)"/>
 </node>
 </node>
-<node CREATED="1609876605273" ID="Freemind_Link_954741375" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_463760220" MODIFIED="1717713171672" TEXT="import requests&#xa;from bs4 import BeautifulSoup&#xa;&#xa;url = &apos;http://localhost:3333/&apos;&#xa;&#xa;response = requests.get(url)&#xa;raw_html = response.text&#xa;parsed_html = BeautifulSoup(raw_html, &apos;html.parser&apos;)&#xa;print(parsed_html.title)&#xa;print(parsed_html.title.text)&#xa;&#xa;seletor_top3_jobs = parsed_html.select_one(&apos;#top-3 &gt; div &gt; div &gt; header &gt; h2&apos;)&#xa;print(seletor_top3_jobs)&#xa;print(seletor_top3_jobs.text)&#xa;">
-<node CREATED="1717713502840" ID="Freemind_Link_1231965107" MODIFIED="1717713544541" TEXT="Adicione o par&#xe2;metro &quot;from_encoding=&apos;utf-8&apos;&quot; na chamada&#xa;a BeautifulSoup caso tenha problemas de encoding"/>
-<node CREATED="1717702533111" ID="Freemind_Link_1886934475" MODIFIED="1717713264154" TEXT="Resultado:&#xa;&lt;title&gt;Site&lt;/title&gt;&#xa;Site&#xa;&lt;h2&gt;TOP 3 jobs&lt;/h2&gt;&#xa;TOP 3 jobs"/>
+<node CREATED="1620410146053" ID="Freemind_Link_1155116835" MODIFIED="1620410650765" TEXT="Para fazer a extra&#xe7;&#xe3;o o mais fidedigna &#xa;poss&#xed;vel, podemos usar o par&#xe2;metro stratify">
+<node CREATED="1620410520450" ID="Freemind_Link_1192768428" MODIFIED="1620410550995" TEXT="O stratify obt&#xe9;m a base de testes e de treino o mais pr&#xf3;ximo da realidade poss&#xed;vel"/>
+<node CREATED="1620410551955" ID="Freemind_Link_1049693058" MODIFIED="1620410618198" TEXT="Isso evitaria, por exemplo, que a base de treino sejam os registros com resposta &apos;false&apos; e a base de testes sejam os registros com resposta &apos;true&apos;"/>
+<node CREATED="1620410652072" ID="Freemind_Link_1769029633" MODIFIED="1620410680378" TEXT="Devemos informar a ele a coluna que ser&#xe1; usada como refer&#xea;ncia para dividir os valores nos dois grupos (de treino e de teste)"/>
+<node CREATED="1620410162829" ID="Freemind_Link_988874123" MODIFIED="1620410165568" TEXT="Ex: ">
+<node COLOR="#0000ff" CREATED="1620410173347" ID="Freemind_Link_837167063" MODIFIED="1620410643155" TEXT="x_treino, x_teste, y_treino, y_teste =  train_test_split(x,y, test_size=0.2, stratify=y)"/>
+</node>
+</node>
+<node CREATED="1620404799030" ID="Freemind_Link_1773579674" MODIFIED="1620404803314" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_1072935429" MODIFIED="1620404838904" TEXT="x = dados_combinados.select_dtypes(&apos;float64&apos;)&#xa;y = dados_combinados.[&apos;ativo_moa&apos;]&#xa;x_treino, x_teste, y_treino, y_teste =  train_test_split(x,y)">
+<arrowlink DESTINATION="Freemind_Link_925702199" ENDARROW="Default" ENDINCLINATION="135;0;" ID="Freemind_Arrow_Link_1767827382" STARTARROW="Default" STARTINCLINATION="135;0;"/>
+<node CREATED="1620403943587" ID="Freemind_Link_1178370626" MODIFIED="1620403953032" TEXT="x &#xe9; o dado de entrada (assinatura)"/>
+<node CREATED="1620403953645" ID="Freemind_Link_1836530372" MODIFIED="1620403970569" TEXT="y &#xe9; o dado de sa&#xed;da"/>
+</node>
+<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_406378394" MODIFIED="1620404875698" TEXT="x_treino, x_teste, y_treino, y_teste =  train_test_split(x,y, test_size=0.2)">
+<node CREATED="1620404876304" ID="Freemind_Link_970531738" MODIFIED="1620404889772" TEXT="&#xc9; poss&#xed;vel determinar o tamanho da base de testes com o par&#xe2;metro test_size"/>
+<node CREATED="1620404890286" ID="Freemind_Link_151514903" MODIFIED="1620404905475" TEXT="O valor &#xe9; passado em porcentagem (ex de 20%)"/>
 </node>
 </node>
 </node>
 </node>
+<node CREATED="1620404271015" ID="Freemind_Link_1031224714" MODIFIED="1620404275292" TEXT="LogisticRegression">
+<node CREATED="1620410843846" ID="Freemind_Link_509407978" MODIFIED="1620410860785" TEXT="&#xc9; um modelo de treinamento"/>
+<node CREATED="1620403709963" ID="Freemind_Link_561022995" MODIFIED="1620403749607" TEXT="Import">
+<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_161444242" MODIFIED="1620403763096" TEXT="from sklearn.linear_model import LogisticRegression"/>
 </node>
-<node CREATED="1717699358074" FOLDED="true" ID="Freemind_Link_998809945" MODIFIED="1717699361999" POSITION="right" TEXT="http.server">
-<node CREATED="1717699362636" ID="Freemind_Link_396053732" MODIFIED="1717699374157" TEXT="M&#xf3;dulo que sobe um servidor http localmente"/>
-<node CREATED="1717699435359" ID="Freemind_Link_1808846512" MODIFIED="1717699442242" TEXT="Argumentos">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1328552326" MODIFIED="1717699452722" TEXT="-d pasta_dos_htmls">
-<node CREATED="1717699455122" ID="Freemind_Link_991630845" MODIFIED="1717699484381" TEXT="Informa a pasta raiz em que est&#xe3;o os documentos a serem servidos"/>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_472387840" MODIFIED="1717699508203" TEXT="&lt;porta&gt;">
-<node CREATED="1717699455122" ID="Freemind_Link_1567363239" MODIFIED="1717699523475" TEXT="Informa a porta em que o servi&#xe7;o ser&#xe1; disponibilizado"/>
-<node CREATED="1717699523801" ID="Freemind_Link_66047663" MODIFIED="1717699530800" TEXT="Se n&#xe3;o informada, ser&#xe1; usada a porta 8000"/>
+<node CREATED="1620403709963" ID="Freemind_Link_1560090570" MODIFIED="1620403712945" TEXT="In&#xed;cio:">
+<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_1137530556" MODIFIED="1620403743387" TEXT="modelo_rlogistica = LogisticRegression()"/>
+<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_92663607" MODIFIED="1620405265213" TEXT="modelo_rlogistica = LogisticRegression(max_iter=1000)">
+<node CREATED="1620405235960" ID="Freemind_Link_842654189" MODIFIED="1620405252798" TEXT="&#xc9; poss&#xed;vel pasar o ar&#xe2;metro max_iter quando o modelo n&#xe3;o converge no treinamento"/>
 </node>
 </node>
-<node CREATED="1609876661409" ID="Freemind_Link_1466836532" MODIFIED="1717699569660" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1099559129" MODIFIED="1717699565755" TEXT="python -m http.server -d aula310_site 3333">
-<node CREATED="1717699537753" ID="Freemind_Link_128828290" MODIFIED="1717699560276" TEXT="Sobre o servidor http na porta 3333, servindo os documentos da pasta  &apos;aula310_site&apos;"/>
+<node CREATED="1620405094364" ID="Freemind_Link_3338287" MODIFIED="1620405095944" TEXT="fit">
+<node CREATED="1620405051798" ID="Freemind_Link_1250153196" MODIFIED="1620405059723" TEXT="Usado para treinar o modelo"/>
+<node CREATED="1620403980261" ID="Freemind_Link_1330514758" MODIFIED="1620403983799" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_925702199" MODIFIED="1620404838908" TEXT="x = dados_combinados.select_dtypes(&apos;float64&apos;)&#xa;y = dados_combinados.[&apos;ativo_moa&apos;]&#xa;modelo_rlogistica.fit(x, y)">
+<node CREATED="1620403943587" ID="Freemind_Link_1763009455" MODIFIED="1620403953032" TEXT="x &#xe9; o dado de entrada (assinatura)"/>
+<node CREATED="1620403953645" ID="Freemind_Link_1012542585" MODIFIED="1620403970569" TEXT="y &#xe9; o dado de sa&#xed;da"/>
+</node>
+</node>
+</node>
+<node CREATED="1620405102101" ID="Freemind_Link_1943030908" MODIFIED="1620405106920" TEXT="score">
+<node CREATED="1620405107415" ID="Freemind_Link_1774056505" MODIFIED="1620405119160" TEXT="Analisa o modelo para ver a acur&#xe1;cia (p&#xf3;s treinamento)"/>
+<node CREATED="1620405122284" ID="Freemind_Link_20373339" MODIFIED="1620405123007" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1620403432874" ID="Freemind_Link_1485452712" MODIFIED="1620405133906" TEXT="modelo_rlogistica.score(x_teste, y_teste)">
+<node CREATED="1620405135082" ID="Freemind_Link_1592403271" MODIFIED="1620405141046" TEXT="x s&#xe3;o os dados de teste de entrada"/>
+<node CREATED="1620405135082" ID="Freemind_Link_1479698749" MODIFIED="1620405153861" TEXT="y s&#xe3;o os dados de teste de sa&#xed;da"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1620409235563" ID="Freemind_Link_1184119184" MODIFIED="1620409241401" TEXT="DummyClassifier">
+<node CREATED="1620410843846" ID="Freemind_Link_539100420" MODIFIED="1620410860785" TEXT="&#xc9; um modelo de treinamento"/>
+<node CREATED="1620409241993" ID="Freemind_Link_1875843428" MODIFIED="1620409255315" TEXT="Classificador que usa algoritmos ing&#xea;nuas"/>
+<node CREATED="1620409255927" ID="Freemind_Link_259391750" MODIFIED="1620409277740" TEXT="Usado para testar vaagamente o modelo e comparar com os resultados de um modelo mais &apos;profissional&apos;"/>
+<node CREATED="1620409281479" ID="Freemind_Link_1830960273" MODIFIED="1620409285393" TEXT="https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1620409564874" ID="Freemind_Link_1932817068" MODIFIED="1620409566143" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1100407205" MODIFIED="1620409578933" TEXT="from sklearn.dummy import DummyClassifier&#xa;from sklearn.metrics import accuracy_score&#xa;&#xa;modelo_dummy = DummyClassifier(&apos;most_frequent&apos;)&#xa;modelo_dummy.fit(x_treino, y_treino)&#xa;previsao_dummy = modelo_dummy.predict(x_teste)&#xa;accuracy_score(y_teste, previsao_dummy)">
+<node CREATED="1620409581548" ID="Freemind_Link_1952479439" MODIFIED="1620409597740" TEXT="o &apos;predict&apos; obtem apenas a previs&#xe3;o gerada pelo teste do modelo"/>
+<node CREATED="1620409599065" ID="Freemind_Link_650373930" MODIFIED="1620409621990" TEXT="o &apos;accuracy_store&apos; verifica a acur&#xe1;cia da previs&#xe3;o obtida"/>
+<node CREATED="1620409623531" ID="Freemind_Link_1361489966" MODIFIED="1620409662461" TEXT="a obten&#xe7;&#xe3;o da acur&#xe1;cia poderia ter sido obtida diretamente via comando modelo_dummy.score(x_teste, y_teste)"/>
+</node>
+</node>
+</node>
+<node CREATED="1620410827551" ID="Freemind_Link_1002758899" MODIFIED="1620410828251" TEXT="DecisionTreeClassifier">
+<node CREATED="1620410843846" ID="Freemind_Link_620488860" MODIFIED="1620410860785" TEXT="&#xc9; um modelo de treinamento"/>
+<node CREATED="1620410940247" ID="Freemind_Link_1747374113" MODIFIED="1620410940993" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1620410941529" ID="Freemind_Link_1230116453" MODIFIED="1620411019880" TEXT="from sklearn.tree import DecisionTreeClassifier&#xa;&#xa;x = dados_combinados.select_dtypes(&apos;float64&apos;)&#xa;y = dados_combinados[&apos;ativo_moa&apos;]&#xa;x_treino, x_teste, y_treino, y_teste =  train_test_split(x,y, test_size=0.2, random_state=376, stratify=y)&#xa;modelo_tree = DecisionTreeClassifier(max_depth=3)&#xa;modelo_tree.fit(x_treino, y_treino)&#xa;modelo_tree.score(x_teste, y_teste)"/>
+</node>
+</node>
+<node CREATED="1620410827551" ID="Freemind_Link_1666015041" MODIFIED="1620419317938" TEXT="RandomForest">
+<node CREATED="1620410843846" ID="Freemind_Link_1940291073" MODIFIED="1620419335272" TEXT="&#xc9; um modelo de treinamento que simula v&#xe1;rias &#xe1;rvores e obtem um estimador"/>
+<node CREATED="1620410940247" ID="Freemind_Link_211628050" MODIFIED="1620410940993" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1620410941529" ID="Freemind_Link_589566906" MODIFIED="1620419348040" TEXT="from sklearn.ensemble import RandomForestClassifier&#xa;&#xa;x = dados_combinados.drop([&apos;id&apos;,&apos;n_moa&apos;,&apos;ativo_moa&apos;,&apos;composto&apos;], axis=True) #axis=1 indica que estou passando nomes de colunas&#xa;x = pd.get_dummies(x, columns=[&apos;tratamento&apos;, &apos;dose&apos;, &apos;tempo&apos;]) #Aqui &quot;transformo&quot; colunas de texto em colunas do tipo booleana (0 ou 1)&#xa;&#xa;y = dados_combinados[&apos;ativo_moa&apos;]&#xa;x_treino, x_teste, y_treino, y_teste =  train_test_split(x,y, test_size=0.2, random_state=376, stratify=y)&#xa;modelo_randforest = RandomForestClassifier()&#xa;modelo_randforest.fit(x_treino, y_treino)&#xa;modelo_randforest.score(x_teste, y_teste)"/>
+</node>
+</node>
+</node>
+<node CREATED="1609876474357" FOLDED="true" ID="Freemind_Link_1789216705" MODIFIED="1609876476133" POSITION="right" TEXT="Seaborn">
+<node CREATED="1609876497969" ID="Freemind_Link_1276270964" MODIFIED="1609876508356" TEXT="Trabalho com gr&#xe1;ficos"/>
+<node CREATED="1609876661409" ID="Freemind_Link_601053903" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1272709758" MODIFIED="1609876699099" TEXT="import seaborn as srn"/>
+</node>
+<node CREATED="1609876566896" ID="Freemind_Link_1145918397" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_867874125" MODIFIED="1609882846906" TEXT="boxplot">
+<node CREATED="1609876580616" ID="Freemind_Link_796007916" MODIFIED="1609882880993" TEXT="Plota um gr&#xe1;fico com os valores estat&#xed;sticos principais de um conjuto de dados">
+<node CREATED="1609882881600" ID="Freemind_Link_1216372047" MODIFIED="1609882893744" TEXT="M&#xed;n, M&#xe1;x, mediana, 1o e 3o quart&#xed;s"/>
+</node>
+<node CREATED="1609883403816" ID="Freemind_Link_1412234597" MODIFIED="1609883424823" TEXT="&#xc9; &#xfa;til para detectar dados com anomalia (muito diferentes dos demais)"/>
+<node CREATED="1621971250590" ID="Freemind_Link_1210408420" MODIFIED="1621971257657" TEXT="&#xc9; poss&#xed;vel passar um Dataframe como data">
+<node CREATED="1621971258289" ID="Freemind_Link_1275026395" MODIFIED="1621971271128" TEXT="Nesse caso ser&#xe3;o plotados os boxplots de todas as colunas (Series)"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_1015457990" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_210989238" MODIFIED="1609882931548" TEXT="srn.boxplot(dataset[&apos;Score&apos;]).set_title(&apos;Socre&apos;)"/>
+<node COLOR="#0000ff" CREATED="1620330254688" ID="Freemind_Link_858436948" MODIFIED="1620330266292" TEXT="sns.boxplot(data=dados_combinados.query(&apos;composto in @composto_principal&apos;), y=&apos;g0&apos;, x=&apos;composto&apos;, hue=&apos;ativo_moa&apos;)">
+<node CREATED="1620330268078" ID="Freemind_Link_377450744" MODIFIED="1620330284202" TEXT="O par&#xe2;metro &apos;hue&apos; separa os gr&#xe1;ficos por uma coluna espec&#xed;fica"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_483671004" MODIFIED="1609883209159" TEXT="histplot">
+<node CREATED="1609876580616" ID="Freemind_Link_432401187" MODIFIED="1609883212381" TEXT="Plota o histograma  de um conjuto de dados"/>
+<node CREATED="1609876605273" ID="Freemind_Link_461671169" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1213005617" MODIFIED="1609883236454" TEXT="srn.histplot(dataset[&apos;Score&apos;]).set_title(&apos;Socre&apos;)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1203436337" MODIFIED="1609882947938" TEXT="distplot">
+<node CREATED="1609876580616" ID="Freemind_Link_1244539760" MODIFIED="1609883202960" TEXT="Plota o histograma  de um conjuto de dados, mostrando a curva"/>
+<node CREATED="1609876605273" ID="Freemind_Link_851629053" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_836406576" MODIFIED="1609883231089" TEXT="srn.distplot(dataset[&apos;Score&apos;]).set_title(&apos;Socre&apos;)"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_561866657" MODIFIED="1610572776407" TEXT="srn.distplot(dataset[&apos;Score&apos;], kde=True, &#xa;                   bins=6, hist=True,&#xa;                   hist_kws={&apos;edgecolor&apos;: &apos;blue&apos;}, &#xa;                   color=&apos;blue&apos;).set_title(&apos;Socre&apos;)">
+<node CREATED="1610572460968" ID="Freemind_Link_1914569891" MODIFIED="1610572758606" TEXT="&apos;kde=True&apos; Plota a curva da linha de densidade junto ao histograma"/>
+<node CREATED="1610572779251" ID="Freemind_Link_1584078036" MODIFIED="1610572788838" TEXT="&apos;hist=True&apos; Plota as barras do histograma"/>
+<node CREATED="1610572511447" ID="Freemind_Link_457125700" MODIFIED="1610572528786" TEXT="&apos;bins=6&apos; Seta a quantidade de barras do histograma para 6 (seis eixos)"/>
+<node CREATED="1610572567149" ID="Freemind_Link_1716862480" MODIFIED="1610572580457" TEXT="&quot;color=&apos;blue&apos;&quot; define a cor do gr&#xe1;fico como azul"/>
+<node CREATED="1610572657964" ID="Freemind_Link_1825257974" MODIFIED="1610572687865" TEXT="&quot;hist_kws={&apos;edgecolor&apos;: &apos;blue&apos;}&quot; Define a cor da borda das barras do histograma como azul"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_127267203" MODIFIED="1620133012934" TEXT="countplot">
+<node CREATED="1609876580616" ID="Freemind_Link_625879051" MODIFIED="1620133029607" TEXT="Plota a quantidade de ocorr&#xea;ncias dos valores de uma coluna">
+<node CREATED="1620133030962" ID="Freemind_Link_1532099101" MODIFIED="1620133053782" TEXT="Como se fosse um gr&#xe1;fico do value_counts()"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_1848200368" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_783953365" MODIFIED="1620133094496" TEXT="ax = sns.countplot(x=&apos;composto&apos;, data=top5compostos)&#xa;ax.set_title(&apos;Top 5 compostos&apos;)&#xa;plt.show()">
+<node CREATED="1610572460968" ID="Freemind_Link_1300383396" MODIFIED="1620133110967" TEXT="plt.show() &#xe9; s&#xf3; para evitar a exibi&#xe7;&#xe3;o das informa&#xe7;&#xf5;es do gr&#xe1;fico"/>
+<node CREATED="1620133201385" ID="Freemind_Link_1486227328" MODIFIED="1620133213615" TEXT="O eixo &apos;y&apos; por padr&#xe3;o ser&#xe1; o count dos valores da coluna X indicada"/>
+<node CREATED="1620133129068" ID="Freemind_Link_232618730" MODIFIED="1620133195120" TEXT="x=&apos;composto&apos; diz que o eixo X ser&#xe1; formado com os dados da coluna &apos;composto&apos;"/>
+<node CREATED="1620133144668" ID="Freemind_Link_925097907" MODIFIED="1620133151999" TEXT="data &#xe9; o dataframe com os dados"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1814610093" MODIFIED="1620225017399" TEXT="scatterplot">
+<node CREATED="1609876580616" ID="Freemind_Link_550166617" MODIFIED="1620226213419" TEXT="Plota o gr&#xe1;fico de dispers&#xe3;o">
+<arrowlink DESTINATION="Freemind_Link_1776037724" ENDARROW="Default" ENDINCLINATION="140;0;" ID="Freemind_Arrow_Link_543973926" STARTARROW="Default" STARTINCLINATION="140;0;"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_865619323" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_585799444" MODIFIED="1620224966570" TEXT="sns.scatterplot(x=&apos;g0&apos;, y=&apos;g3&apos;, data=dados[[&apos;g0&apos;,&apos;g3&apos;]])">
+<node CREATED="1610572460968" ID="Freemind_Link_1327182029" MODIFIED="1620225003870" TEXT="dados[[&apos;g0&apos;,&apos;g3&apos;]] &#xe9; uma se&#xe7;&#xe3;o do dataframe dados, pegando apenas as colunas g0 e g3"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1054850281" MODIFIED="1620226186735" TEXT="lmplot">
+<node CREATED="1609876580616" ID="Freemind_Link_1776037724" MODIFIED="1620226213420" TEXT="Plota o gr&#xe1;fico de dispers&#xe3;o com a linha de tend&#xea;ncia"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1732158613" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1800153088" MODIFIED="1620226201387" TEXT="sns.lmplot(x=&apos;g0&apos;, y=&apos;g3&apos;, data=dados[[&apos;g0&apos;,&apos;g3&apos;]])">
+<node CREATED="1610572460968" ID="Freemind_Link_1050349181" MODIFIED="1620225003870" TEXT="dados[[&apos;g0&apos;,&apos;g3&apos;]] &#xe9; uma se&#xe7;&#xe3;o do dataframe dados, pegando apenas as colunas g0 e g3"/>
+<node CREATED="1620231476729" ID="Freemind_Link_506953787" MODIFIED="1620231488277" TEXT="A cor da linha pode ser alterada. Ex: line_kws={&apos;color&apos;:&apos;red&apos;}"/>
+<node CREATED="1620232369021" ID="Freemind_Link_1941163901" MODIFIED="1620232432063" TEXT="O gr&#xe1;fico pode ser partido por mais colunas. Ex: col=&apos;tratamento, row=&apos;tempo&apos;"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1111473303" MODIFIED="1621959852579" TEXT="regplot">
+<node CREATED="1609876580616" ID="Freemind_Link_198942965" MODIFIED="1621959877802" TEXT="Plota o gr&#xe1;fico de dispers&#xe3;o com &apos;afastamento&apos; dos dados">
+<node CREATED="1621959879443" ID="Freemind_Link_1946218424" MODIFIED="1621960007187" TEXT="Provoca uma &quot;tremula&#xe7;&#xe3;o&quot; nos dados"/>
+<node CREATED="1621960008134" ID="Freemind_Link_944771900" MODIFIED="1621960020761" TEXT="&#xda;til quando os dados s&#xe3;o muito sobrepostos"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_1785238199" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1506137475" MODIFIED="1621959899404" TEXT="sns.regplot(x=base.Girth, y=base.Volume, data = base, x_jitter = 0.3, fit_reg = False)">
+<node CREATED="1621959915126" ID="Freemind_Link_364341515" MODIFIED="1621959927396" TEXT="fit_reg indica se a linha de tend&#x1ebd;ncia deve ser plotada"/>
+<node CREATED="1621959950457" ID="Freemind_Link_201895190" MODIFIED="1621959963386" TEXT="x_jitter indica a perturba&#xe7;&#xe3;o que se quer causar"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1702296804" MODIFIED="1620413221155" TEXT="lineplot">
+<node CREATED="1609876580616" ID="Freemind_Link_1057117392" MODIFIED="1620413228597" TEXT="Plota gr&#xe1;fico de linhas"/>
+<node CREATED="1609876605273" ID="Freemind_Link_847917726" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1678871589" MODIFIED="1620413273550" TEXT="sns.lineplot(x=range(1,15), y=teste, label=&apos;Teste&apos;)  &#xa;sns.lineplot(x=range(1,15), y=treino, label=&apos;Treino&apos;)  ">
+<node CREATED="1610572460968" ID="Freemind_Link_1825043756" MODIFIED="1620413284042" TEXT="Neste exemplo ploto duas curvas no mesmo gr&#xe1;fico"/>
+<node CREATED="1620133201385" ID="Freemind_Link_1356340744" MODIFIED="1620413293371" TEXT="O label ser&#xe1; usado para criar a legenda de cada curva"/>
+<node CREATED="1620413300665" ID="Freemind_Link_684324431" MODIFIED="1620413545142" TEXT="&apos;teste&apos; e &apos;treino&apos; s&#xe3;o dados do tipo &apos;list&apos;"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1984879221" MODIFIED="1622477286617" TEXT="catplot">
+<node CREATED="1609876580616" ID="Freemind_Link_354665620" MODIFIED="1622477291538" TEXT="Plota o gr&#xe1;fico de dispers&#xe3;o ">
+<node CREATED="1621959879443" ID="Freemind_Link_286068364" MODIFIED="1622477301385" TEXT="Permite agrupamento por uma coluna espec&#xed;fica"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_821806327" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_118223083" MODIFIED="1622477322165" TEXT="srn.catplot(x=&apos;alcgp&apos;, y=&apos;ncontrols&apos;, data=base2)"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1879841269" MODIFIED="1622477315325" TEXT="srn.catplot(x=&apos;alcgp&apos;, y=&apos;ncontrols&apos;, data=base2, col=&apos;tobgp&apos;)">
+<node CREATED="1621959915126" ID="Freemind_Link_1964583362" MODIFIED="1622477340414" TEXT="col indica por qual coluna o gr&#xe1;fico deve ser agrupado"/>
+<node CREATED="1622477344344" ID="Freemind_Link_1265424939" MODIFIED="1622477351927" TEXT="Ser&#xe1; exibida uma imagem para cada valor de &apos;col&apos;"/>
+</node>
+</node>
 </node>
 </node>
 </node>
@@ -1925,6 +1912,159 @@
 <node CREATED="1717780036590" ID="Freemind_Link_18844064" MODIFIED="1717780058425" TEXT="4 - Obtenho a lista de resultados e clico no primeiro deles"/>
 </node>
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1204767636" MODIFIED="1717779937754" TEXT="import time&#xa;import os&#xa;from selenium import webdriver&#xa;from selenium.webdriver.chrome.service import Service&#xa;from selenium.webdriver.common.by import By&#xa;from selenium.webdriver.common.keys import Keys&#xa;from selenium.webdriver.support.wait import WebDriverWait&#xa;from selenium.webdriver.support import expected_conditions as EC&#xa;&#xa;TIME_TO_WAIT=10&#xa;&#xa;def make_chrome_browser(*options: str) -&gt; webdriver.Chrome:&#xa;    ROOT_DIR: str = os.path.dirname(__file__)&#xa;    CHROME_DRIVER_PATH: str = ROOT_DIR + &apos;/drivers/chromedriver&apos;&#xa;&#xa;    if not os.path.exists(CHROME_DRIVER_PATH):&#xa;        raise FileNotFoundError(&apos;Driver do Chrome n&#xe3;o encontrado em&apos;, CHROME_DRIVER_PATH)&#xa;&#xa;    chrome_service = Service(executable_path=CHROME_DRIVER_PATH)&#xa;&#xa;    chrome_options = webdriver.ChromeOptions()&#xa;    if options is not None:&#xa;        for option in options:&#xa;            print(&apos;Adicionando op&#xe7;&#xe3;o&apos;, option)&#xa;            chrome_options.add_argument(option)&#xa;&#xa;    chrome_browser = webdriver.Chrome(service=chrome_service, options=chrome_options)&#xa;    &#xa;    return chrome_browser&#xa;&#xa;# Abrindo o Chrome browser&#xa;url: str = &apos;https://www.google.com/&apos;&#xa;options= ()&#xa;browser = make_chrome_browser(*options)&#xa;browser.get(url)&#xa;&#xa;# Aguardando o input de pesquisa (cujo atributo &apos;name&apos; &#xe9; igual a &apos;q&apos;) ser carregado&#xa;search_input = WebDriverWait(browser, TIME_TO_WAIT).until(&#xa;    EC.presence_of_element_located((By.NAME, &apos;q&apos;))&#xa;)&#xa;&#xa;# Digitando um texto na caixa de pesquisa e pressionando o &apos;Enter&apos;&#xa;search_input.send_keys(&apos;Ol&#xe1; mundo&apos;)&#xa;search_input.send_keys(Keys.ENTER)&#xa;&#xa;# Clicando no primeiro link da lista d resultados&#xa;results = browser.find_element(By.ID, &apos;search&apos;) # A div com o resultados tem ID igual a &apos;search&apos;&#xa;links = results.find_elements(By.TAG_NAME, &apos;a&apos;) # dentro de results, quero encontrar todas as tags de link (nome &apos;a&apos;)&#xa;links[0].click() # Clicando no primeiro link da lista de links obtidos&#xa;time.sleep(2)"/>
+</node>
+</node>
+<node CREATED="1717625056539" FOLDED="true" ID="Freemind_Link_1176141369" MODIFIED="1717625058766" POSITION="right" TEXT="shutil">
+<node CREATED="1717625061098" ID="Freemind_Link_260182020" MODIFIED="1717625071871" TEXT="Biblioteca &#xfa;til para a&#xe7;&#xf5;es no S.O.">
+<node CREATED="1717625072722" ID="Freemind_Link_1317672526" MODIFIED="1717625079669" TEXT="Principalmente manipula&#xe7;&#xe3;o de arquivos"/>
+</node>
+<node CREATED="1609876530394" ID="Freemind_Link_1261382392" MODIFIED="1716383533113" TEXT="Nativa do Python"/>
+<node CREATED="1609876661409" ID="Freemind_Link_1549252843" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1735492873" MODIFIED="1717625127259" TEXT="import shutil"/>
+</node>
+</node>
+<node CREATED="1718218196172" FOLDED="true" ID="Freemind_Link_284194512" MODIFIED="1718218199096" POSITION="right" TEXT="sqlite3">
+<node COLOR="#0000ff" CREATED="1718218200299" ID="Freemind_Link_305332605" MODIFIED="1718305972109" TEXT="M&#xf3;dulo que prov&#xea; ferramentas de trabalho com o SGBD sqlite"/>
+<node CREATED="1609876661409" ID="Freemind_Link_52799044" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1553489196" MODIFIED="1718218224966" TEXT="import sqlite3"/>
+</node>
+<node CREATED="1609876566896" FOLDED="true" ID="Freemind_Link_1938011137" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1016479459" MODIFIED="1718219969531" TEXT="execute">
+<node CREATED="1609876580616" ID="Freemind_Link_504675163" MODIFIED="1718219978814" TEXT="Executa um comando DDL ou DML na base de dados"/>
+<node CREATED="1718220412872" ID="Freemind_Link_1369032799" MODIFIED="1718220427800" TEXT="Pode ou n&#xe3;o receber os par&#xe2;metros (quando usar os bindings)"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1063025735" MODIFIED="1718220511766" TEXT="Ex:">
+<node CREATED="1718220511747" FOLDED="true" ID="Freemind_Link_1677066648" MODIFIED="1718220525256" TEXT="Refer&#xea;ncia para os&#xa;exemplos abaixo:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1540835009" MODIFIED="1718220465791" TEXT="import sqlite3&#xa;import os&#xa;&#xa;ROOT_DIR = os.path.dirname(__file__)&#xa;DB_FILE = ROOT_DIR + &apos;/db.sqlite3&apos;&#xa;&#xa;try:&#xa;    conn = sqlite3.connect(DB_FILE)&#xa;    cursor = conn.cursor()&#xa;&#xa;    # Criando a minha tabela&#xa;    cursor.execute(&#xa;        &apos;CREATE TABLE IF NOT EXISTS customers(&apos;&#xa;        &apos; id INTEGER PRIMARY KEY AUTOINCREMENT,&apos;&#xa;        &apos; name TEXT ,&apos;&#xa;        &apos; weight REAL&apos;&#xa;        &apos;)&apos;&#xa;    )&#xa;&#xa;    # Comandos DML aqui&#xa;    ...&#xa;&#xa;    # Comitando minhas transa&#xe7;&#xf5;es&#xa;    conn.commit()&#xa;finally:&#xa;    cursor.close()&#xa;    conn.close()"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_935121374" MODIFIED="1718220484621" TEXT="    # Inserindo dados na tabela&#xa;    cursor.execute(&#xa;        &apos;INSERT INTO customers (name, weight) VALUES&apos;&#xa;        &apos;(&quot;Ana&quot;, 25),&apos;&#xa;        &apos;(&quot;Beto&quot;, 12.6),&apos;&#xa;        &apos;(&quot;Caio&quot;, 33.8)&apos;&#xa;    )">
+<node CREATED="1718220388925" ID="Freemind_Link_265095342" MODIFIED="1718220401523" TEXT="Vulner&#xe1;vel a SQL-Injection">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1194749346" MODIFIED="1718305488985" TEXT="# Inserindo dados na tabela&#xa;cursor.execute(&#xa;    &apos;INSERT INTO customers (name, weight) VALUES (?, ?)&apos;,&#xa;    [&apos;Bruna&apos;, 35.9]&#xa;)">
+<node CREATED="1718220378713" ID="Freemind_Link_1828301528" MODIFIED="1718220382492" TEXT="Uso de statement"/>
+<node CREATED="1718220383289" ID="Freemind_Link_1450883704" MODIFIED="1718220386099" TEXT="Mais seguro"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1139801177" MODIFIED="1718305515609" TEXT="# Inserindo dados na tabela com dict&#xa;dados = {&apos;nome&apos;: &apos;Aderbal&apos;, &apos;peso&apos;: 50.69}&#xa;cursor.execute(&#xa;    &apos;INSERT INTO customers (name, weight) VALUES (:nome, :peso)&apos;,&#xa;    dados&#xa;)">
+<node CREATED="1718220378713" ID="Freemind_Link_268420380" MODIFIED="1718305499718" TEXT="Uso de dict"/>
+<node CREATED="1718305519414" ID="Freemind_Link_1846665089" MODIFIED="1718305535356" TEXT="A chave no dict deve coincidir com a chave no &apos;VALUES&apos; do DML"/>
+</node>
+<node COLOR="#0000ff" CREATED="1718305947241" ID="Freemind_Link_1765280829" MODIFIED="1718305976557" TEXT="#Recuperando os dados da base &#xa;cursor.execute(&apos;SELECT * from customers&apos;)&#xa;&#xa;for row in cursor.fetchall():&#xa;    _id, name, weight = row&#xa;    print(f&apos;{_id=}, {name=}, {weight=}&apos;)">
+<node CREATED="1718305979730" ID="Freemind_Link_475193667" MODIFIED="1718305985541" TEXT="Recuperando os dados da base de dados"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1604214997" MODIFIED="1718223695878" TEXT="executemany">
+<node CREATED="1609876580616" ID="Freemind_Link_1671010026" MODIFIED="1718223729062" TEXT="Executa um comando DDL ou DML m&#xfa;ltiplas vezes&#xa;para cada posi&#xe7;&#xe3;o de um iterator recebido"/>
+<node CREATED="1609876605273" ID="Freemind_Link_866450328" MODIFIED="1718220511766" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1492927053" MODIFIED="1718223769591" TEXT="    # Inserindo muitos dados na tabela&#xa;    cursor.executemany(&#xa;        &apos;INSERT INTO customers (name, weight) VALUES (?, ?)&apos;,&#xa;        ((&apos;Bruna&apos;, 35.9), (&apos;Caio&apos;, 22.3), (&apos;Davi&apos;, 17), (&apos;Enio&apos;, 5.2))&#xa;    )&#xa;"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1247005660" MODIFIED="1718220001789" TEXT="commit">
+<node CREATED="1609876580616" ID="Freemind_Link_1008402004" MODIFIED="1718220008082" TEXT="Efetua o commit das opera&#xe7;&#xf5;es"/>
+<node CREATED="1609876605273" ID="Freemind_Link_498251330" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1360952443" MODIFIED="1718220036820" TEXT="    # Removendo todos os dados na tabela&#xa;    cursor.execute(&apos;DELETE FROM customers&apos;)&#xa;&#xa;    ...&#xa;&#xa;    # Comitando minhas transa&#xe7;&#xf5;es&#xa;    conn.commit()&#xa;"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1609876477873" FOLDED="true" ID="Freemind_Link_1702268812" MODIFIED="1609876480160" POSITION="right" TEXT="Statistics">
+<node CREATED="1609876509241" ID="Freemind_Link_1456077688" MODIFIED="1609876523892" TEXT="Ferramentas estat&#xed;sticas"/>
+<node CREATED="1609876661409" ID="Freemind_Link_1920224202" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1416899252" MODIFIED="1609876706066" TEXT="import statistics as sts"/>
+</node>
+<node CREATED="1609876566896" ID="Freemind_Link_261800889" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_921521276" MODIFIED="1609880114463" TEXT="mean">
+<node CREATED="1609876580616" ID="Freemind_Link_338999039" MODIFIED="1609880124035" TEXT="Calcula a m&#xe9;dia dos valores de uma lista"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1406617224" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1796676505" MODIFIED="1609880138637" TEXT="x = sts.mean(lst)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1990845122" MODIFIED="1609880116495" TEXT="median">
+<node CREATED="1609876580616" ID="Freemind_Link_35170248" MODIFIED="1609880159148" TEXT="Calcula a mediana dos valores de uma lista">
+<node CREATED="1610043202159" ID="Freemind_Link_1561765007" MODIFIED="1610043216390" TEXT="A mediana &#xe9; menos sujeita a valores fora do padr&#xe3;o (outliers)"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_592030005" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1527696908" MODIFIED="1609880166018" TEXT="x = sts.median(lst)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_412274079" MODIFIED="1609881131307" TEXT="mode">
+<node CREATED="1609876580616" ID="Freemind_Link_1902206674" MODIFIED="1609882544644" TEXT="Calcula a moda dos valores de uma lista">
+<node CREATED="1610042384485" ID="Freemind_Link_892171664" MODIFIED="1610042391119" TEXT="A moda &#xe9; o valor que mais ocorre"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_179242398" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_5417713" MODIFIED="1609881167410" TEXT="x = sts.mode(lst)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_163018204" MODIFIED="1609881136009" TEXT="stdev">
+<node CREATED="1609876580616" ID="Freemind_Link_1686154205" MODIFIED="1609881181324" TEXT="Calcula o desvio padr&#xe3;o dos valores de uma lista"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1553254868" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1580114203" MODIFIED="1609881191178" TEXT="x = sts.stdev(lst)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_790197747" MODIFIED="1609881145024" TEXT="variance">
+<node CREATED="1609876580616" ID="Freemind_Link_1338272202" MODIFIED="1609881198907" TEXT="Calcula a vari&#xe2;ncia dos valores de uma lista"/>
+<node CREATED="1609876605273" ID="Freemind_Link_873185799" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1293789533" MODIFIED="1609881207321" TEXT="x = sts.variance(lst)"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717692408567" FOLDED="true" ID="Freemind_Link_1387609466" MODIFIED="1717692410244" POSITION="right" TEXT="string">
+<node CREATED="1717692411375" ID="Freemind_Link_262568996" MODIFIED="1717692419498" TEXT="Biblioteca que facilita manipula&#xe7;&#xe3;o de strings"/>
+<node CREATED="1609876566896" ID="Freemind_Link_1558445934" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_40002055" MODIFIED="1717692435148" TEXT="ascii_letters">
+<node CREATED="1609876580616" ID="Freemind_Link_957282301" MODIFIED="1717692449291" TEXT="Lista de todas as letras que est&#xe3;o dispon&#xed;veis para uso"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1134313258" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1237643127" MODIFIED="1717692460598" TEXT="import string as s&#xa;&#xa;print(s.ascii_letters)&#xa;print(s.digits)&#xa;print(s.punctuation)">
+<node CREATED="1717692466517" ID="Freemind_Link_953647397" MODIFIED="1717692472500" TEXT="Resultado:&#xa;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&#xa;0123456789&#xa;!&quot;#$%&amp;&apos;()*+,-./:;&lt;=&gt;?@[\]^_`{|}~"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_562225044" MODIFIED="1717692479435" TEXT="digits">
+<node CREATED="1609876580616" ID="Freemind_Link_1437842523" MODIFIED="1717692491162" TEXT="Lista de todos os n&#xfa;meros que est&#xe3;o dispon&#xed;veis para uso"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1332125379" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_747724963" MODIFIED="1717692498506" TEXT="import string as s&#xa;&#xa;print(s.digits)">
+<node CREATED="1717692466517" ID="Freemind_Link_1711790932" MODIFIED="1717692505314" TEXT="Resultado:&#xa;0123456789"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1832700757" MODIFIED="1717692509742" TEXT="punctuation">
+<node CREATED="1609876580616" ID="Freemind_Link_1486496385" MODIFIED="1717692527402" TEXT="Lista de todos os caracteres de pontua&#xe7;&#xe3;o que est&#xe3;o dispon&#xed;veis para uso"/>
+<node CREATED="1609876605273" ID="Freemind_Link_615590368" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_862233890" MODIFIED="1717692533130" TEXT="import string as s&#xa;&#xa;print(s.punctuation)">
+<node CREATED="1717692466517" ID="Freemind_Link_1171977216" MODIFIED="1717692538420" TEXT="Resultado:&#xa;!&quot;#$%&amp;&apos;()*+,-./:;&lt;=&gt;?@[\]^_`{|}~"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1722105554" MODIFIED="1717693434952" TEXT="Template">
+<node CREATED="1609876580616" ID="Freemind_Link_1070698377" MODIFIED="1717693452349" TEXT="Permite o uso de templates com vari&#xe1;veis para substitui&#xe7;&#xe3;o posterior"/>
+<node CREATED="1717693517875" ID="Freemind_Link_138445289" MODIFIED="1717693572825" TEXT="Pode-se usar o &apos;substitute&apos; ou o&#xa;&apos;safe_substitute&apos;, conforme a necessidade">
+<node COLOR="#0000ff" CREATED="1717693574218" ID="Freemind_Link_1634467131" MODIFIED="1717693649383" TEXT="substitute">
+<node CREATED="1717693576938" ID="Freemind_Link_1436361771" MODIFIED="1717693600299" TEXT="Cada vari&#xe1;vel usada no template deve, obrigatoriamente, ser informada nos par&#xe2;metros"/>
+</node>
+<node COLOR="#0000ff" CREATED="1717693604370" ID="Freemind_Link_460368121" MODIFIED="1717693654196" TEXT="safe_substitute">
+<node CREATED="1717693607744" ID="Freemind_Link_1157300084" MODIFIED="1717693642443" TEXT="A vari&#xe1;vel que estiver no template mas que n&#xe3;o tiver sido&#xa;informada por par&#xe2;metro ser&#xe1; exibida como vari&#xe1;vel no texto final"/>
+</node>
+</node>
+<node CREATED="1717693826068" ID="Freemind_Link_1670635484" MODIFIED="1717693878912" TEXT="Pode-se alterar o delimiter (sinal que&#xa;identifica a vari&#xe1;vel) por outro, se necess&#xe1;rio">
+<node CREATED="1717693880333" ID="Freemind_Link_1378529096" MODIFIED="1717693903367" TEXT="Para tal, implemente uma classe que herda de string.Template e redefina o atributo delimiter conforme a necessidade"/>
+<node CREATED="1609876605273" FOLDED="true" ID="Freemind_Link_1214623208" MODIFIED="1609876606302" TEXT="Ex:">
+<node CREATED="1717694149549" ID="Freemind_Link_1208247041" MODIFIED="1717694165249" TEXT="Neste exemplo, altero o delimitador padr&#xe3;o &apos;$&apos; para o &apos;%&apos;"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_180756878" MODIFIED="1717694124762" TEXT="import string&#xa;&#xa;class MeuTemplate(string.Template)&#xa;    delimiter=%&#xa;&#xa;template = &quot;&quot;&quot;&#xa;Prezado %{nome},&#xa;No dia %{data} foram realizadas %{qtd_tentativas} tentaivas de contato com o telefone %{telefone}.&#xa;&#xa;Favor entrar em contato conosco o quanto antes.&#xa;%{empresa}&#xa;&quot;&quot;&quot;&#xa;&#xa;dados = dict(nome=&apos;Ana&apos;,&#xa;             data=&apos;20/05/2023&apos;,&#xa;             telefone=&apos;(21)234-5678&apos;,&#xa;             empresa=&apos;Jos&#xe9; das Couves&apos;,&#xa;             qtd_tentativas=5)&#xa;&#xa;&#xa;# Em vez de &#xa;#   texto = string.Template(template).substitute(dados)&#xa;# Use&#xa;texto = MeuTemplate(template).substitute(dados)&#xa;print(texto)"/>
+</node>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_1311838013" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1514342113" MODIFIED="1717693461672" TEXT="import string&#xa;&#xa;template = &quot;&quot;&quot;&#xa;Prezado ${nome},&#xa;No dia ${data} foram realizadas ${qtd_tentativas} tentaivas de contato com o telefone ${telefone}.&#xa;&#xa;Favor entrar em contato conosco o quanto antes.&#xa;${empresa}&#xa;&quot;&quot;&quot;&#xa;dados = dict(nome=&apos;Ana&apos;,&#xa;             data=&apos;20/05/2023&apos;,&#xa;             telefone=&apos;(21)234-5678&apos;,&#xa;             empresa=&apos;Jos&#xe9; das Couves&apos;,&#xa;             qtd_tentativas=5)&#xa;&#xa;texto = string.Template(template).substitute(dados)&#xa;print(texto)&#xa;">
+<node CREATED="1717692466517" ID="Freemind_Link_1375124419" MODIFIED="1717693482161" TEXT="Resultado:&#xa;Prezado Ana,&#xa;No dia 20/05/2023 foram realizadas 5 tentaivas de contato com o telefone (21)234-5678.&#xa;&#xa;Favor entrar em contato conosco o quanto antes.&#xa;Jos&#xe9; das Couves"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1717692672579" ID="Freemind_Link_1341527873" MODIFIED="1717692674207" TEXT="Ex:">
+<node CREATED="1717692676623" ID="Freemind_Link_1935196155" MODIFIED="1717692740986" TEXT="Gera&#xe7;&#xe3;o de uma&#xa;senha aleat&#xf3;ria segura">
+<node COLOR="#0000ff" CREATED="1717692685403" ID="Freemind_Link_1369112977" MODIFIED="1717692726490" TEXT="import string as s&#xa;from secrets import SystemRandom as Sr&#xa;tamanho_senha=64&#xa;print(&apos;&apos;.join(Sr().choices(s.ascii_letters + s.digits + s.punctuation, k=tamanho_senha)))"/>
+</node>
 </node>
 </node>
 <node CREATED="1717781075649" FOLDED="true" ID="Freemind_Link_36431788" MODIFIED="1717781077668" POSITION="right" TEXT="subprocess">
@@ -1992,6 +2132,46 @@
 </node>
 <node CREATED="1717781270207" ID="Freemind_Link_34991430" MODIFIED="1717781660660" TEXT="Resultado:&#xa;proc.args=[&apos;ping&apos;, &apos;127.0.0.1&apos;, &apos;-c&apos;, &apos;4&apos;]&#xa;proc.returncode=0&#xa;proc.stdout=b&apos;PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.\n64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.027 ms\n64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.055 ms\n64 bytes from 127.0.0.1: icmp_seq=3 ttl=64 time=0.071 ms\n64 bytes from 127.0.0.1: icmp_seq=4 ttl=64 time=0.030 ms\n\n--- 127.0.0.1 ping statistics ---\n4 packets transmitted, 4 received, 0% packet loss, time 3069ms\nrtt min/avg/max/mdev = 0.027/0.045/0.071/0.018 ms\n&apos;&#xa;proc.stderr=b&apos;&apos;&#xa;"/>
 </node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1716489278424" FOLDED="true" ID="Freemind_Link_717379321" MODIFIED="1716489720471" POSITION="right" TEXT="sys">
+<node CREATED="1716489280228" ID="Freemind_Link_1250247439" MODIFIED="1716489727031" TEXT="Biblioteca de chamadas de sistema"/>
+<node CREATED="1716489302508" ID="Freemind_Link_81016718" MODIFIED="1716489304527" TEXT="Fun&#xe7;&#xf5;es">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1316161707" MODIFIED="1716489729327" TEXT="exit">
+<node CREATED="1609876580616" ID="Freemind_Link_1552965765" MODIFIED="1716489738000" TEXT="Aborta (finaliza) a execu&#xe7;&#xe3;o da aplica&#xe7;&#xe3;o"/>
+<node CREATED="1609876605273" ID="Freemind_Link_681483294" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1235702458" MODIFIED="1716489774167" TEXT="import sys&#xa;sys.exit()"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1065466283" MODIFIED="1717697247376" TEXT="argv">
+<node CREATED="1609876580616" ID="Freemind_Link_1353971988" MODIFIED="1717697258958" TEXT="Exibe os argumentos que foram passados para a aplica&#xe7;&#xe3;o"/>
+<node CREATED="1609876605273" ID="Freemind_Link_337415515" MODIFIED="1609876606302" TEXT="Ex:">
+<node CREATED="1717697365849" ID="Freemind_Link_383169975" MODIFIED="1717697372655" TEXT="Nome do arquivo: aula306.py"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_83940547" MODIFIED="1717697323858" TEXT="import sys&#xa;&#xa;print(sys.argv)">
+<node CREATED="1717697331723" ID="Freemind_Link_1419070338" MODIFIED="1717697358641" TEXT="&#xa;Ao executar:&#xa;&#x279c; python aula306.py teste            &#xa;&#xa;Tenho como resultado:&#xa;[&apos;aula306.py&apos;, &apos;teste&apos;]"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_889910843" MODIFIED="1717782233823" TEXT="platform">
+<node CREATED="1609876580616" ID="Freemind_Link_888147127" MODIFIED="1717782250320" TEXT="Informa em qual sistema operacional voc&#xea; est&#xe1; executando a aplica&#xe7;&#xe3;o"/>
+<node CREATED="1717782274008" ID="Freemind_Link_754696036" MODIFIED="1717782278781" TEXT="Resultados">
+<node CREATED="1717782279706" ID="Freemind_Link_1653861677" MODIFIED="1717782282584" TEXT="linux">
+<node CREATED="1717782282844" ID="Freemind_Link_392328814" MODIFIED="1717782303232" TEXT="O ambiente &#xe9; Linux"/>
+</node>
+<node CREATED="1717782279706" ID="Freemind_Link_191254977" MODIFIED="1717782308875" TEXT="linux2">
+<node CREATED="1717782282844" ID="Freemind_Link_1441220753" MODIFIED="1717782303232" TEXT="O ambiente &#xe9; Linux"/>
+</node>
+<node CREATED="1717782279706" ID="Freemind_Link_277781567" MODIFIED="1717782311987" TEXT="win32">
+<node CREATED="1717782282844" ID="Freemind_Link_1904327524" MODIFIED="1717782315107" TEXT="O ambiente &#xe9; Windows"/>
+</node>
+<node CREATED="1717782279706" ID="Freemind_Link_1536463876" MODIFIED="1717782318251" TEXT="darwin">
+<node CREATED="1717782282844" ID="Freemind_Link_1705925989" MODIFIED="1717782321821" TEXT="O ambiente &#xe9; Mac"/>
+</node>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_1082167139" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1670948922" MODIFIED="1717782267185" TEXT="import sys&#xa;&#xa;print(sys.platform)"/>
 </node>
 </node>
 </node>
@@ -2100,65 +2280,16 @@
 </node>
 </node>
 </node>
-<node CREATED="1717788713527" FOLDED="true" ID="Freemind_Link_585951979" MODIFIED="1717788715995" POSITION="right" TEXT="PyPDF2">
-<node CREATED="1717789063275" ID="Freemind_Link_1935009519" MODIFIED="1717789066823" TEXT="https://pypdf2.readthedocs.io/en/3.x/">
-<icon BUILTIN="attach"/>
-</node>
-<node CREATED="1717788721094" ID="Freemind_Link_362686779" MODIFIED="1717788731779" TEXT="Biblioteca de ferramentas para manipula&#xe7;&#xe3;o de PDF&apos;s"/>
-<node CREATED="1717788924654" ID="Freemind_Link_1050189660" MODIFIED="1717788926470" TEXT="Instala&#xe7;&#xe3;o">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1038504129" MODIFIED="1717788942925" TEXT="pip install PyPDF2"/>
-</node>
-<node CREATED="1609876661409" ID="Freemind_Link_276204926" MODIFIED="1609876666051" TEXT="Uso">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1076062719" MODIFIED="1609876759581" TEXT="import ??? as ??"/>
-</node>
-<node CREATED="1609876566896" ID="Freemind_Link_1939540217" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_753910854" MODIFIED="1717789873046" TEXT="pages">
-<node CREATED="1609876580616" ID="Freemind_Link_781026507" MODIFIED="1717789893215" TEXT="Retorna lista das p&#xe1;ginas do PDF"/>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_531923974" MODIFIED="1717789916806" TEXT="extract_text">
-<node CREATED="1717789927171" ID="Freemind_Link_1618557593" MODIFIED="1717789934926" TEXT="M&#xe9;todo usado em uma p&#xe1;gina do PDF"/>
-<node CREATED="1609876580616" ID="Freemind_Link_462379041" MODIFIED="1717789924994" TEXT="Extrai o texto de uma p&#xe1;gina do PDF"/>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1606810619" MODIFIED="1717789986795" TEXT="images">
-<node CREATED="1609876580616" ID="Freemind_Link_1362724989" MODIFIED="1717789993581" TEXT="Retorna a lista de imagens do PDF"/>
-<node CREATED="1717789994160" ID="Freemind_Link_759120228" MODIFIED="1717790010733" TEXT="H&#xe1; PDF&apos;s que n&#xe3;o s&#xe3;o gerados corretamente (como texto), mas como imagens"/>
-</node>
-<node CREATED="1717789939298" ID="Freemind_Link_1409012857" MODIFIED="1717789940557" TEXT="etc."/>
-</node>
-<node CREATED="1609876605273" ID="Freemind_Link_1355773108" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_881775532" MODIFIED="1717789855887" TEXT="import os&#xa;from PyPDF2 import PdfReader&#xa;&#xa;PDF_ORIGINAL_PATH = os.path.dirname(__file__) + &apos;/pdfs_originais&apos;&#xa;PDF_NOVO_PATH = os.path.dirname(__file__) + &apos;/pdfs_novos&apos;&#xa;&#xa;&#xa;RELATORIO_BACEN = PDF_ORIGINAL_PATH + &apos;/R20240531.pdf&apos;&#xa;&#xa;if not os.path.exists(RELATORIO_BACEN):&#xa;    raise FileNotFoundError(f&apos;Arquivo PDF {RELATORIO_BACEN} n&#xe3;o encontrado!&apos;)&#xa;&#xa;reader = PdfReader(RELATORIO_BACEN)&#xa;&#xa;print(f&apos;O relat&#xf3;rio {os.path.basename(RELATORIO_BACEN)} tem {len(reader.pages)} p&#xe1;ginas&apos;)&#xa;print(&quot;Conte&#xfa;do da p&#xe1;gina 1:&quot;, reader.pages[0].extract_text(), sep=&apos;\n&apos;)"/>
-</node>
-</node>
-<node CREATED="1717861711311" FOLDED="true" ID="Freemind_Link_36559580" MODIFIED="1717861713038" POSITION="right" TEXT="collections">
-<node CREATED="1717861718121" ID="Freemind_Link_623876679" MODIFIED="1717861755317" TEXT="Biblioteca com funcionalidaes&#xa;de trabalho com cole&#xe7;&#xf5;es">
-<node CREATED="1717861733505" ID="Freemind_Link_452103954" MODIFIED="1717861740285" TEXT="Pilhas"/>
-<node CREATED="1717861741162" ID="Freemind_Link_437516476" MODIFIED="1717861744716" TEXT="Listas encadeadas"/>
-<node CREATED="1717861745041" ID="Freemind_Link_1683006532" MODIFIED="1717861749686" TEXT="Listas duplamente encadeadas"/>
-</node>
-<node CREATED="1609876661409" ID="Freemind_Link_1875309231" MODIFIED="1609876666051" TEXT="Uso">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1451902077" MODIFIED="1717861770092" TEXT="from collections import deque"/>
-</node>
-<node CREATED="1609876566896" ID="Freemind_Link_238210676" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1586005690" MODIFIED="1609876761667" TEXT="???">
-<node CREATED="1609876580616" ID="Freemind_Link_973812105" MODIFIED="1609876767449" TEXT="???"/>
-<node CREATED="1609876605273" ID="Freemind_Link_572572751" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1876174539" MODIFIED="1609876764389" TEXT="???"/>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1717348778077" FOLDED="true" ID="Freemind_Link_18217416" MODIFIED="1717348779380" POSITION="right" TEXT="ABC">
-<node CREATED="1717348780257" ID="Freemind_Link_958663719" MODIFIED="1717348787634" TEXT="Abstract Base Class"/>
-<node CREATED="1717348789616" ID="Freemind_Link_1897588557" MODIFIED="1717348798540" TEXT="M&#xf3;dulo para cria&#xe7;&#xe3;o de classes abstratas"/>
-<node CREATED="1717348800887" ID="Freemind_Link_596438753" LINK="_tiposDados.mm" MODIFIED="1717348826814" TEXT="Ver mapa &apos;Tipos de dados&apos; -&gt; CLasse"/>
-</node>
 <node CREATED="1718129947354" FOLDED="true" ID="Freemind_Link_645359434" MODIFIED="1718129949117" POSITION="right" TEXT="typing">
 <node CREATED="1718129954138" ID="Freemind_Link_1550331961" MODIFIED="1718129971670" TEXT="Ferramentas de apoio ao lint checking das IDE&apos;s"/>
+<node CREATED="1718639305268" ID="Freemind_Link_383963306" MODIFIED="1718639315848" TEXT="Para testar as tipagens, use a biblioteca MyPy">
+<node CREATED="1718639317414" ID="Freemind_Link_1245429459" LINK="_bibliotecas.mm" MODIFIED="1718639330565" TEXT="Ver mapa de bibliotecas"/>
+</node>
 <node CREATED="1609876661409" ID="Freemind_Link_131935448" MODIFIED="1609876666051" TEXT="Uso">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_92432325" MODIFIED="1718129998861" TEXT="from typing import TYPE_CHECKING"/>
 </node>
 <node CREATED="1609876566896" ID="Freemind_Link_1458126186" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1113720015" MODIFIED="1718131119874" TEXT="TYPE_CHECKING">
+<node COLOR="#0000ff" CREATED="1609876573952" FOLDED="true" ID="Freemind_Link_1113720015" MODIFIED="1718131119874" TEXT="TYPE_CHECKING">
 <node CREATED="1718130019014" ID="Freemind_Link_244539689" MODIFIED="1718130028266" TEXT="Usado para resolver problema de include circular"/>
 <node CREATED="1718131119839" ID="Freemind_Link_392718273" MODIFIED="1718131122272" TEXT="Cen&#xe1;rio">
 <node CREATED="1718130029367" ID="Freemind_Link_1969175644" MODIFIED="1718131124969" TEXT="Inicial">
@@ -2246,59 +2377,81 @@
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_900765045" MODIFIED="1718214307679" TEXT="var1 = obj1&#xa;var1 = cast(TipoX, var1)"/>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1609876573952" FOLDED="true" ID="Freemind_Link_313617034" MODIFIED="1718638983942" TEXT="List, Tuple, Dict,&#xa;Union, Iterable etc.">
+<node CREATED="1718130019014" ID="Freemind_Link_589255896" MODIFIED="1718635981297" TEXT="Usado para declarar listas de tipos espec&#xed;ficos"/>
+<node CREATED="1718214210375" ID="Freemind_Link_845819922" MODIFIED="1718214236653" TEXT="&#xda;til apenas para orientar as ferramentas de apoio ao desenvolvedor">
+<node CREATED="1718214237818" ID="Freemind_Link_449738184" MODIFIED="1718214241929" TEXT="IDE&apos;s"/>
+<node CREATED="1718214242152" ID="Freemind_Link_1680345710" MODIFIED="1718214247326" TEXT="lynt&apos;s"/>
+<node CREATED="1718214247560" ID="Freemind_Link_1319976726" MODIFIED="1718214249499" TEXT="etc"/>
+</node>
+<node CREATED="1609876605273" ID="Freemind_Link_1836078234" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_908488611" MODIFIED="1718636084983" TEXT="from typing import List&#xa;nomes: List[str] = [&apos;Ana&apos;, &apos;Beto&apos;, &apos;Caio&apos;]">
+<node CREATED="1718636027052" ID="Freemind_Link_832664523" MODIFIED="1718639716761" TEXT="Equivalente a &#xa;nomes: list[str] = [&apos;Ana&apos;, &apos;Beto&apos;, &apos;Caio&apos;]&#xa;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_127332944" MODIFIED="1718636262793" TEXT="from typing import List, Union&#xa;nomes: List[Union(str, int)] = [&apos;Ana&apos;, &apos;Beto&apos;, &apos;Caio&apos;, 1, 3]">
+<node CREATED="1718636268398" ID="Freemind_Link_1291043871" MODIFIED="1718636284833" TEXT="Declara uma lista que suporta elementos dos tipos str e int"/>
+<node CREATED="1718636027052" ID="Freemind_Link_1509515153" MODIFIED="1718639761278" TEXT="Equivalente a &#xa;nomes: list[str|int] = [&apos;Ana&apos;, &apos;Beto&apos;, &apos;Caio&apos;, 1, 2, 3]&#xa;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_335309707" MODIFIED="1718636448693" TEXT="from typing import Tuple&#xa;nomes: Tuple[int, int, int] = (1,2,3)">
+<node CREATED="1718636268398" ID="Freemind_Link_114268765" MODIFIED="1718636284833" TEXT="Declara uma lista que suporta elementos dos tipos str e int"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1448889840" MODIFIED="1718636908990" TEXT="from typing import Dict, List, Union&#xa;MeuDIct = Dict[str, Union[str, int, List[int]]]&#xa;pessoa: MeuDict = {&apos;nme&apos;: &apos;Ana&apos;, &apos;sobrenome&apos;: &apos;Dias&apos;, &apos;idade&apos;: 25, &apos;dias&apos;: [1,2,3]}">
+<node CREATED="1718636268398" ID="Freemind_Link_1297740731" MODIFIED="1718636890180" TEXT="Aqui criou-se um Alias de nome &apos;MeuDict&apos;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1671794510" MODIFIED="1718637093357" TEXT="from typing import Callable&#xa;def retorna_funcao(funcao: Callable[[], None]) -&gt; Callable:&#xa;    return funcao">
+<node CREATED="1718636268398" ID="Freemind_Link_1185642562" MODIFIED="1718637195066" TEXT="Declara uma fun&#xe7;&#xe3;o de nome &apos;retorna_funcao&apos; que:&#xa;  1- recebe um argumento &apos;funcao&apos; tal que &apos;funcao&apos; &#xe9; uma fun&#xe7;&#xe3;o sem argumentos e que n&#xe3;o retorna nada&#xa;  2 - Retorna uma fun&#xe7;&#xe3;o (Callable)"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_663097513" MODIFIED="1718637473526" TEXT="def fala_oi():&#xa;    print(&apos;Oi!&apos;)&#xa;&#xa;retorna_funcao(fala_oi)()">
+<icon BUILTIN="button_ok"/>
+<node CREATED="1718636268398" ID="Freemind_Link_922389757" MODIFIED="1718637345035" TEXT="Uso v&#xe1;lido da fun&#xe7;&#xe3;o &apos;retorna_funcao&apos;, j&#xe1; que &apos;fala_oi&apos;&#xa;n&#xe3;o recebe argumentos e n&#xe3;o retorna nada"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1834267747" MODIFIED="1718637590221" TEXT="def obtem_numero():&#xa;    return 5&#xa;&#xa;retorna_funcao(obtem_numero)()">
+<icon BUILTIN="button_cancel"/>
+<node CREATED="1718636268398" ID="Freemind_Link_1515602777" MODIFIED="1718637432786" TEXT="Uso inv&#xe1;lido da fun&#xe7;&#xe3;o &apos;retorna_funcao&apos;, j&#xe1; que &apos;obtem_numero&apos;&#xa;tem um retorno (que no caso &#xe9; do tipo &apos;int&apos;)"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_895877760" MODIFIED="1718638422895" TEXT="# Para que funcione, &apos;retorna_funcao&apos; deveria sr declarada assim:&#xa;def retorna_funcao(funcao: Callable[[], int]) -&gt; Callable:&#xa;    return funcao"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_987728887" MODIFIED="1718637579767" TEXT="def soma(x: int, y: int):&#xa;    return x+y&#xa;&#xa;retorna_funcao(soma)(5, 7)">
+<icon BUILTIN="button_cancel"/>
+<node CREATED="1718636268398" ID="Freemind_Link_35383394" MODIFIED="1718637619377" TEXT="Uso inv&#xe1;lido da fun&#xe7;&#xe3;o &apos;retorna_funcao&apos;, j&#xe1; que &apos;soma&apos;&#xa;recebe argumentos e tem um retorno (que no caso &#xe9; do tipo &apos;int&apos;)"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1755731922" MODIFIED="1718638403383" TEXT="# Para que funcione, &apos;retorna_funcao&apos; deveria sr declarada assim:&#xa;def retorna_funcao(funcao: Callable[[int, int], int]) -&gt; Callable:&#xa;    return funcao"/>
 </node>
 </node>
-<node CREATED="1718218196172" FOLDED="true" ID="Freemind_Link_284194512" MODIFIED="1718218199096" POSITION="right" TEXT="sqlite3">
-<node CREATED="1718218200299" ID="Freemind_Link_305332605" MODIFIED="1718218212675" TEXT="M&#xf3;dulo que prov&#xea; ferramentas de trabalho com o SGBD sqlite"/>
-<node CREATED="1609876661409" ID="Freemind_Link_52799044" MODIFIED="1609876666051" TEXT="Uso">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1553489196" MODIFIED="1718218224966" TEXT="import sqlite3"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1996269191" MODIFIED="1718638707781" TEXT="from typing import Sequence&#xa;&#xa;sequencia: Sequence[int]">
+<node CREATED="1718636268398" ID="Freemind_Link_1725791223" MODIFIED="1718638815656" TEXT="sequencia pode ser uma lista ou uma tupla de inteiros"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1753012770" MODIFIED="1718638796885" TEXT="# Equivalente a:&#xa;from typing import List, Tuple, Union&#xa;&#xa;sequencia: Union[List, Tuple, str]"/>
 </node>
-<node CREATED="1609876566896" ID="Freemind_Link_1938011137" MODIFIED="1609876569126" TEXT="Fun&#xe7;&#xf5;es">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1016479459" MODIFIED="1718219969531" TEXT="execute">
-<node CREATED="1609876580616" ID="Freemind_Link_504675163" MODIFIED="1718219978814" TEXT="Executa um comando DDL ou DML na base de dados"/>
-<node CREATED="1718220412872" ID="Freemind_Link_1369032799" MODIFIED="1718220427800" TEXT="Pode ou n&#xe3;o receber os par&#xe2;metros (quando usar os bindings)"/>
-<node CREATED="1609876605273" ID="Freemind_Link_1063025735" MODIFIED="1718220511766" TEXT="Ex:">
-<node CREATED="1718220511747" FOLDED="true" ID="Freemind_Link_1677066648" MODIFIED="1718220525256" TEXT="Refer&#xea;ncia para os&#xa;exemplos abaixo:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1540835009" MODIFIED="1718220465791" TEXT="import sqlite3&#xa;import os&#xa;&#xa;ROOT_DIR = os.path.dirname(__file__)&#xa;DB_FILE = ROOT_DIR + &apos;/db.sqlite3&apos;&#xa;&#xa;try:&#xa;    conn = sqlite3.connect(DB_FILE)&#xa;    cursor = conn.cursor()&#xa;&#xa;    # Criando a minha tabela&#xa;    cursor.execute(&#xa;        &apos;CREATE TABLE IF NOT EXISTS customers(&apos;&#xa;        &apos; id INTEGER PRIMARY KEY AUTOINCREMENT,&apos;&#xa;        &apos; name TEXT ,&apos;&#xa;        &apos; weight REAL&apos;&#xa;        &apos;)&apos;&#xa;    )&#xa;&#xa;    # Comandos DML aqui&#xa;    ...&#xa;&#xa;    # Comitando minhas transa&#xe7;&#xf5;es&#xa;    conn.commit()&#xa;finally:&#xa;    cursor.close()&#xa;    conn.close()"/>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_935121374" MODIFIED="1718220484621" TEXT="    # Inserindo dados na tabela&#xa;    cursor.execute(&#xa;        &apos;INSERT INTO customers (name, weight) VALUES&apos;&#xa;        &apos;(&quot;Ana&quot;, 25),&apos;&#xa;        &apos;(&quot;Beto&quot;, 12.6),&apos;&#xa;        &apos;(&quot;Caio&quot;, 33.8)&apos;&#xa;    )">
-<node CREATED="1718220388925" ID="Freemind_Link_265095342" MODIFIED="1718220401523" TEXT="Vulner&#xe1;vel a SQL-Injection">
-<icon BUILTIN="messagebox_warning"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1297687690" MODIFIED="1718639004691" TEXT="from typing import Iterable&#xa;&#xa;sequencia: Iterable"/>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1194749346" MODIFIED="1718223751051" TEXT="    # Inserindo dados na tabela     cursor.execute(         &apos;INSERT INTO customers (name, weight) VALUES (?, ?)&apos;,         [&apos;Bruna&apos;, 35.9]     )">
-<node CREATED="1718220378713" ID="Freemind_Link_1828301528" MODIFIED="1718220382492" TEXT="Uso de statement"/>
-<node CREATED="1718220383289" ID="Freemind_Link_1450883704" MODIFIED="1718220386099" TEXT="Mais seguro"/>
-</node>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1604214997" MODIFIED="1718223695878" TEXT="executemany">
-<node CREATED="1609876580616" ID="Freemind_Link_1671010026" MODIFIED="1718223729062" TEXT="Executa um comando DDL ou DML m&#xfa;ltiplas vezes&#xa;para cada posi&#xe7;&#xe3;o de um iterator recebido"/>
-<node CREATED="1609876605273" ID="Freemind_Link_866450328" MODIFIED="1718220511766" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1492927053" MODIFIED="1718223769591" TEXT="    # Inserindo muitos dados na tabela&#xa;    cursor.executemany(&#xa;        &apos;INSERT INTO customers (name, weight) VALUES (?, ?)&apos;,&#xa;        ((&apos;Bruna&apos;, 35.9), (&apos;Caio&apos;, 22.3), (&apos;Davi&apos;, 17), (&apos;Enio&apos;, 5.2))&#xa;    )&#xa;"/>
-</node>
-</node>
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1247005660" MODIFIED="1718220001789" TEXT="commit">
-<node CREATED="1609876580616" ID="Freemind_Link_1008402004" MODIFIED="1718220008082" TEXT="Efetua o commit das opera&#xe7;&#xf5;es"/>
-<node CREATED="1609876605273" ID="Freemind_Link_498251330" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1360952443" MODIFIED="1718220036820" TEXT="    # Removendo todos os dados na tabela&#xa;    cursor.execute(&apos;DELETE FROM customers&apos;)&#xa;&#xa;    ...&#xa;&#xa;    # Comitando minhas transa&#xe7;&#xf5;es&#xa;    conn.commit()&#xa;"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1407813755" MODIFIED="1718652123890" TEXT="TypeVar">
+<node CREATED="1718130019014" ID="Freemind_Link_278587745" MODIFIED="1718652134034" TEXT="Permite definir um tipo em fun&#xe7;&#xe3;o de outro"/>
+<node CREATED="1718214210375" ID="Freemind_Link_1686141696" MODIFIED="1718652141238" TEXT="Semelhante ao VarType do Java"/>
+<node CREATED="1609876605273" ID="Freemind_Link_1946887217" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_948107448" MODIFIED="1718652193617" TEXT="from typing import TypeVar&#xa;&#xa;meuTipo = TypeVar(&apos;T&apos;)&#xa;&#xa;def minha_funcao(dados: list[T]) -&gt; T:&#xa;     ...">
+<node CREATED="1718652202250" ID="Freemind_Link_267471654" MODIFIED="1718652230162" TEXT="Declaro uma fun&#xe7;&#xe3;o que obt&#xe9;m uma lista de um&#xa;determinado tipo e retorna um elemento desse mesmo tipo"/>
+<node CREATED="1718652231375" ID="Freemind_Link_1192351156" MODIFIED="1718652250952" TEXT="Uma fun&#xe7;&#xe3;o que recebe uma lista de strings&#xa;n&#xe3;o poderia retornar um int, por exemplo"/>
 </node>
 </node>
 </node>
 </node>
-<node CREATED="1718203627473" FOLDED="true" ID="Freemind_Link_770001460" MODIFIED="1718203630564" POSITION="right" TEXT="pyinstaller">
-<node CREATED="1718203632251" ID="Freemind_Link_864425009" MODIFIED="1718203645363" TEXT="https://pyinstaller.org/en/stable/">
-<icon BUILTIN="attach"/>
 </node>
-<node CREATED="1718203641189" ID="Freemind_Link_1176572024" MODIFIED="1718203648482" TEXT="https://www.pythonguis.com/tutorials/packaging-pyside6-applications-windows-pyinstaller-installforge/">
-<icon BUILTIN="attach"/>
+<node CREATED="1718396323206" FOLDED="true" ID="Freemind_Link_7417121" MODIFIED="1718396325121" POSITION="right" TEXT="unittest">
+<node CREATED="1718396347257" ID="Freemind_Link_711027583" MODIFIED="1718396355609" TEXT="Biblioteca de implementa&#xe7;&#xe3;o de testes unit&#xe1;rios"/>
+<node CREATED="1609876661409" ID="Freemind_Link_99141963" MODIFIED="1609876666051" TEXT="Uso">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1148540192" MODIFIED="1718396346309" TEXT="import unittest"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_452621454" MODIFIED="1718408944631" TEXT="from unittest.mock import patch"/>
 </node>
-<node CREATED="1718203649177" ID="Freemind_Link_1271801954" MODIFIED="1718203666024" TEXT="Biblioteca de ferramentas de&#xa;empacotamento de aplica&#xe7;&#xf5;es python">
-<node CREATED="1718203667461" ID="Freemind_Link_32897716" MODIFIED="1718203679359" TEXT="Gera execut&#xe1;veis do S.O. em que o pacote foi gerado"/>
-<node CREATED="1718203685757" ID="Freemind_Link_879252568" MODIFIED="1718203693759" TEXT="O pacote gerado n&#xe3;o &#xe9; cross-platform"/>
+<node CREATED="1609876605273" ID="Freemind_Link_269919933" MODIFIED="1609876606302" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1987048407" MODIFIED="1718396393837" TEXT="def soma(x: int, y: int):&#xa;    assert(isinstance(x,(int, float))), &apos;O argumento x deve ser do tipo int ou float&apos;&#xa;    assert(isinstance(y,(int, float))), &apos;O argumento y deve ser do tipo int ou float&apos;&#xa;    return x + y&#xa;&#xa;def subtrai(x: int, y: int):&#xa;    assert(isinstance(x,(int, float))), &apos;O argumento x deve ser do tipo int ou float&apos;&#xa;    assert(isinstance(y,(int, float))), &apos;O argumento y deve ser do tipo int ou float&apos;&#xa;    return x - y&#xa;&#xa;if __name__ == &apos;__main__&apos;:&#xa;    print(soma(10,5))&#xa;    print(subtrai(10,5))">
+<node CREATED="1718396396050" ID="Freemind_Link_353566244" MODIFIED="1718396403372" TEXT="calculadora.py"/>
 </node>
-<node CREATED="1609876605273" ID="Freemind_Link_825055711" MODIFIED="1609876606302" TEXT="Ex:">
-<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1570774685" MODIFIED="1718204283212" TEXT="pyinstaller --name=&quot;Calculadora&quot; --noconfirm --onefile \&#xa;  --add-data=&apos;pasta_do_projeto/files/:files/&apos; \&#xa;  --icon=&apos;pasta_do_projeto/files/icon.png&apos; \&#xa;  --noconsole --clean --log-level=WARN \&#xa;  pasta_do_projeto/main.py"/>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_753631567" MODIFIED="1718396373218" TEXT="import unittest&#xa;from calculadora import soma, subtrai&#xa;&#xa;class TestaCalculadora(unittest.TestCase):&#xa;    def test_soma_5_e_5_retorna_10(self):&#xa;        self.assertEqual(soma(5,5), 10)&#xa;&#xa;    def test_soma_menos_5_e_5_retorna_0(self):&#xa;        self.assertEqual(soma(-5,5), 0)&#xa;&#xa;    # testa se soma com par&#xe2;metro inv&#xe1;lido no argumento x lan&#xe7;a a exce&#xe7;&#xe3;o esperada (assertionerror)&#xa;    def test_soma_argumento_x_invalido_lanca_assertioerror(self):&#xa;        with self.assertRaises(AssertionError):&#xa;            soma(&apos;5&apos;, 0)&#xa;&#xa;    # testa se subtrai com par&#xe2;metro inv&#xe1;lido no argumento x lan&#xe7;a a exce&#xe7;&#xe3;o esperada (assertionerror)&#xa;    def test_subtrai_argumento_x_invalido_lanca_assertioerror(self):&#xa;        with self.assertRaises(AssertionError):&#xa;            subtrai(&apos;5&apos;, 0)&#xa;&#xa;unittest.main(verbosity=2)">
+<node CREATED="1718396405521" ID="Freemind_Link_141880889" MODIFIED="1718396408444" TEXT="test_calculadora.py"/>
+<node CREATED="1718396422857" ID="Freemind_Link_154277240" MODIFIED="1718396428628" TEXT="Resultado:&#xa;test_soma_5_e_5_retorna_10 (__main__.TestaCalculadora.test_soma_5_e_5_retorna_10) ... ok&#xa;test_soma_argumento_x_invalido_lanca_assertioerror (__main__.TestaCalculadora.test_soma_argumento_x_invalido_lanca_assertioerror) ... ok&#xa;test_soma_menos_5_e_5_retorna_0 (__main__.TestaCalculadora.test_soma_menos_5_e_5_retorna_0) ... ok&#xa;test_subtrai_argumento_x_invalido_lanca_assertioerror (__main__.TestaCalculadora.test_subtrai_argumento_x_invalido_lanca_assertioerror) ... ok"/>
+</node>
+<node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1534887629" MODIFIED="1718409174088" TEXT="import unittest&#xa;from unittest.mock import patch&#xa;&#xa;class TestaPessoa(unittest.TestCase):&#xa;    ...&#xa;    def testar_request_http(self):&#xa;        with patch(&apos;request.get&apos;) as fake_request:&#xa;            fake_request.return_value.ok = False&#xa;&#xa;        self.assertEqual(self.p1.obter_dados(), &apos;Erro 404&apos;)">
+<node CREATED="1718396405521" ID="Freemind_Link_1745782195" MODIFIED="1718408990687" TEXT="Exemplo de mock"/>
+<node CREATED="1718409179678" ID="Freemind_Link_1519314723" MODIFIED="1718409225138" TEXT="Aqui &#xe9; feito um mock na chamada ao m&#xe9;todo &apos;request.get&apos;,&#xa;alterando-se o valor do atributo de resposta &apos;return_value.ok&apos; para False"/>
+</node>
 </node>
 </node>
 <node CREATED="1609876470660" ID="Freemind_Link_1952635201" MODIFIED="1609876747404" POSITION="right" TEXT="???">

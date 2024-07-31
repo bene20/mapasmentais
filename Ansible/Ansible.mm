@@ -13,8 +13,8 @@
 <node CREATED="1574965218759" ID="Freemind_Link_1910284875" MODIFIED="1574965230887" TEXT="Usa ssh para fazer as instala&#xe7;&#xf5;es na m&#xe1;quina target"/>
 <node CREATED="1575385702059" ID="Freemind_Link_979133388" MODIFIED="1575385706254" TEXT="S&#xf3; SSH e Python"/>
 </node>
-<node CREATED="1575385712416" ID="Freemind_Link_1753371469" MODIFIED="1575385716230" POSITION="right" TEXT="Usa 3 modelos de script">
-<node CREATED="1575385748471" FOLDED="true" ID="Freemind_Link_708606257" MODIFIED="1575385753322" TEXT="Arq. de invent&#xe1;rio">
+<node CREATED="1575385712416" FOLDED="true" ID="Freemind_Link_1753371469" MODIFIED="1575385716230" POSITION="right" TEXT="Usa 3 modelos de script">
+<node CREATED="1575385748471" ID="Freemind_Link_708606257" MODIFIED="1575385753322" TEXT="Arq. de invent&#xe1;rio">
 <node CREATED="1575385822182" ID="Freemind_Link_439848246" MODIFIED="1575385840177" TEXT="Grupos de m&#xe1;quinas a serem configuradas"/>
 <node CREATED="1576676296570" ID="Freemind_Link_1361179768" MODIFIED="1576676297379" TEXT="https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html"/>
 <node CREATED="1575385844316" ID="Freemind_Link_281935356" MODIFIED="1575385858970" TEXT="Par&#xe2;metro obrigat&#xf3;rio p/ o Ansible">
@@ -57,7 +57,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1575385755720" ID="Freemind_Link_1774933042" MODIFIED="1575385757577" TEXT="Playbook">
+<node CREATED="1575385755720" FOLDED="true" ID="Freemind_Link_1774933042" MODIFIED="1575385757577" TEXT="Playbook">
 <node CREATED="1575385769415" ID="Freemind_Link_1054555287" MODIFIED="1575385775211" TEXT="Receita do que ser&#xe1; feito"/>
 <node CREATED="1575387870383" ID="Freemind_Link_1558220273" MODIFIED="1575387883558" TEXT="Execut&#xe1;vel pelo comando ansible-playbook">
 <icon BUILTIN="messagebox_warning"/>
@@ -96,7 +96,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_625043602" MODIFIED="1578573276768" TEXT="lineinfile">
+<node COLOR="#ff00ff" CREATED="1575386532184" FOLDED="true" ID="Freemind_Link_625043602" MODIFIED="1578573276768" TEXT="lineinfile">
 <node CREATED="1575386528969" ID="Freemind_Link_1334239526" MODIFIED="1578573285432" TEXT="Adiciona linhas em arquivos espec&#xed;ficos"/>
 <node CREATED="1578573296550" ID="Freemind_Link_449280587" MODIFIED="1578573303130" TEXT="https://docs.ansible.com/ansible/latest/modules/lineinfile_module.html">
 <icon BUILTIN="attach"/>
@@ -105,7 +105,7 @@
 <node COLOR="#ff00ff" CREATED="1578573332621" ID="Freemind_Link_728145258" MODIFIED="1578573355544" TEXT="- name: config apt proxy http do trt10&#xa;  lineinfile:&#xa;    path: /etc/apt/apt.conf.d/80proxy&#xa;    line: Acquire::http::proxy &quot;http://{{ PROXYADMIN_HOST }}:{{ PROXYADMIN_PORT }}&quot;;&#xa;    create: yes&#xa;"/>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_299311849" MODIFIED="1575387338446" TEXT="apt">
+<node COLOR="#ff00ff" CREATED="1575386532184" FOLDED="true" ID="Freemind_Link_299311849" MODIFIED="1575387338446" TEXT="apt">
 <node CREATED="1575386528969" ID="Freemind_Link_367834196" MODIFIED="1575386844298" TEXT="Instala um pacote de distribui&#xe7;&#xe3;o Debian"/>
 <node CREATED="1575388839228" ID="Freemind_Link_1920462797" MODIFIED="1575388856824" TEXT="https://docs.ansible.com/ansible/latest/modules/apt_module.html#apt-module">
 <icon BUILTIN="attach"/>
@@ -214,7 +214,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_1936110905" MODIFIED="1575390716787" TEXT="notify">
+<node COLOR="#ff00ff" CREATED="1575386532184" FOLDED="true" ID="Freemind_Link_1936110905" MODIFIED="1575390716787" TEXT="notify">
 <node CREATED="1575386528969" ID="Freemind_Link_1198110052" MODIFIED="1575390727827" TEXT="Dispara um handler">
 <arrowlink DESTINATION="Freemind_Link_805322592" ENDARROW="Default" ENDINCLINATION="311;0;" ID="Freemind_Arrow_Link_1921785018" STARTARROW="None" STARTINCLINATION="311;0;"/>
 </node>
@@ -227,7 +227,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#ff00ff" CREATED="1575386532184" ID="Freemind_Link_1191442657" MODIFIED="1575895678058" TEXT="with_items">
+<node COLOR="#ff00ff" CREATED="1575386532184" FOLDED="true" ID="Freemind_Link_1191442657" MODIFIED="1575895678058" TEXT="with_items">
 <node CREATED="1575895588225" ID="Freemind_Link_553028641" MODIFIED="1575895882398" TEXT="N&#xe3;o est&#xe1; aninhado na &apos;task&apos; em si, mas no comando da task">
 <icon BUILTIN="messagebox_warning"/>
 </node>
@@ -361,7 +361,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1575897399538" ID="Freemind_Link_1711336624" MODIFIED="1576258812670" TEXT="templates">
+<node CREATED="1575897399538" FOLDED="true" ID="Freemind_Link_1711336624" MODIFIED="1576258812670" TEXT="templates">
 <icon BUILTIN="forward"/>
 <node CREATED="1575897408055" ID="Freemind_Link_731360314" MODIFIED="1575897419554" TEXT="S&#xe3;o manipulados por meio de um m&#xf3;dulo hom&#xf4;nimo"/>
 <node CREATED="1575897449866" ID="Freemind_Link_993841373" MODIFIED="1575897457730" TEXT="Todo template termina com a extens&#xe3;o j2"/>
@@ -382,7 +382,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1576258689198" ID="Freemind_Link_818568523" MODIFIED="1576258801380" TEXT="roles">
+<node CREATED="1576258689198" FOLDED="true" ID="Freemind_Link_818568523" MODIFIED="1576258801380" TEXT="roles">
 <icon BUILTIN="forward"/>
 <node CREATED="1576258715805" ID="Freemind_Link_608974361" MODIFIED="1576258735814" TEXT="Permite a modularioza&#xe7;&#xe3;o dos c&#xf3;digos Ansible"/>
 <node CREATED="1576261303299" ID="Freemind_Link_706754165" MODIFIED="1576261312341" TEXT="Pode ser usada no playbook">
@@ -478,7 +478,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1574965341983" FOLDED="true" ID="Freemind_Link_177292562" MODIFIED="1574965344124" POSITION="right" TEXT="Comando">
+<node CREATED="1574965341983" ID="Freemind_Link_177292562" MODIFIED="1574965344124" POSITION="right" TEXT="Comando">
 <node CREATED="1574965356782" ID="Freemind_Link_686440155" MODIFIED="1574965358974" TEXT="Par&#xe2;metros">
 <node CREATED="1574965360759" ID="Freemind_Link_33090424" MODIFIED="1575386250269" TEXT="-i &lt;nome_arquivo&gt;">
 <node CREATED="1574965369184" ID="Freemind_Link_1802560157" MODIFIED="1574965371974" TEXT="Invent&#xe1;rio"/>

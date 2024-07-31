@@ -7,7 +7,7 @@
 <node CREATED="1609878544741" ID="Freemind_Link_318355391" MODIFIED="1609878546353" POSITION="right" TEXT="#">
 <node CREATED="1609878546980" ID="Freemind_Link_479405806" MODIFIED="1609878552057" TEXT="Coment&#xe1;rio de linha"/>
 </node>
-<node CREATED="1609880737937" ID="Freemind_Link_599429828" MODIFIED="1609880741132" POSITION="right" TEXT="Personalizada">
+<node CREATED="1609880737937" FOLDED="true" ID="Freemind_Link_599429828" MODIFIED="1609880741132" POSITION="right" TEXT="Personalizada">
 <node CREATED="1609880765152" ID="Freemind_Link_17541053" MODIFIED="1609880776643" TEXT="&#xc9; poss&#xed;vel criar sua pr&#xf3;pria fun&#xe7;&#xe3;o"/>
 <node CREATED="1609880777184" ID="Freemind_Link_372912649" MODIFIED="1609880786484" TEXT="&#xc9; necess&#xe1;rio o uso do termo &apos;def&apos;"/>
 <node CREATED="1609880871609" ID="Freemind_Link_377358868" MODIFIED="1609880890526" TEXT="&#xc9; poss&#xed;vel definir valor default para os par&#xe2;metros"/>
@@ -192,6 +192,18 @@
 <node CREATED="1609876530394" ID="Freemind_Link_1873829830" MODIFIED="1609878129702" TEXT="Exibe o tipo de uma vari&#xe1;vel"/>
 <node CREATED="1609876605273" ID="Freemind_Link_25333434" MODIFIED="1609876606302" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1609876573952" ID="Freemind_Link_1686683377" MODIFIED="1609878116540" TEXT="x = 1&#xa;type(x)"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1718389360667" FOLDED="true" ID="Freemind_Link_570633622" MODIFIED="1718389381794" POSITION="right" TEXT="assert">
+<node CREATED="1718389383648" ID="Freemind_Link_180201465" MODIFIED="1718389394182" TEXT="Verifica se uma situa&#xe7;&#xe3;o &#xe9; verdadeira">
+<node CREATED="1718389394662" ID="Freemind_Link_1177036281" MODIFIED="1718389403988" TEXT="Lan&#xe7;a uma exce&#xe7;&#xe3;o caso a condi&#xe7;&#xe3;o seja falsa"/>
+</node>
+<node CREATED="1718389405002" ID="Freemind_Link_167036540" MODIFIED="1718389417108" TEXT="Muito &#xfa;til no desenvolvimento de testes (TDD)"/>
+<node CREATED="1718389500215" ID="Freemind_Link_1765638633" MODIFIED="1718389515058" TEXT="O foco dessa fun&#xe7;&#xe3;o s&#xe3;o outros desenvolvedores, e n&#xe3;o o usu&#xe1;rio final"/>
+<node CREATED="1718389421329" ID="Freemind_Link_1484088113" MODIFIED="1718389421994" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1718389360667" ID="Freemind_Link_392054085" MODIFIED="1718389463096" TEXT="def soma(x, y):&#xa;    assert isinstance(x, (int, float)), &apos;x precisa ser int ou float&apos;&#xa;    assert isinstance(y, (int, float)), &apos;y precisa ser int ou float&apos;&#xa;    return x + y&#xa;&#xa;print(soma(3,5))&#xa;print(soma(13,11))&#xa;print(soma(&apos;3&apos;,2))">
+<node CREATED="1718389433185" ID="Freemind_Link_31687669" MODIFIED="1718389453037" TEXT="Resultado:&#xa;8&#xa;24&#xa;AssertionError: x precisa ser int ou float"/>
+</node>
 </node>
 </node>
 <node COLOR="#0000ff" CREATED="1609877779258" FOLDED="true" ID="Freemind_Link_128234340" MODIFIED="1716487090959" POSITION="right" TEXT="print">
@@ -512,7 +524,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1718129231932" ID="Freemind_Link_735597694" MODIFIED="1718129244736" POSITION="right" TEXT="eval">
+<node COLOR="#0000ff" CREATED="1718129231932" FOLDED="true" ID="Freemind_Link_735597694" MODIFIED="1718129244736" POSITION="right" TEXT="eval">
 <node CREATED="1718129246881" ID="Freemind_Link_1350914858" MODIFIED="1718129255697" TEXT="Permite a execu&#xe7;&#xe3;o de um c&#xf3;digo montado dinamicamente"/>
 <node CREATED="1718129339895" ID="Freemind_Link_646127002" MODIFIED="1718129360771" TEXT="Esta fun&#xe7;&#xe3;o &#xe9; muito perigosa. Use-a com cuidado!">
 <icon BUILTIN="messagebox_warning"/>
@@ -521,6 +533,48 @@
 <node CREATED="1716913456578" ID="Freemind_Link_341538372" MODIFIED="1716913457927" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1716913356423" ID="Freemind_Link_170415936" MODIFIED="1718129317275" TEXT="meucomando=&apos;print(1234)&apos;&#xa;&#xa;print(&apos;Vou executar o comando:&apos;, meucomando)&#xa;eval(meucomando)">
 <node CREATED="1716913547688" ID="Freemind_Link_1623244254" MODIFIED="1718129326907" TEXT="Resultado: Vou executar o comando: 1234"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1718652957110" ID="Freemind_Link_637493319" MODIFIED="1718652980907" POSITION="right" TEXT="match">
+<node CREATED="1718655395795" ID="Freemind_Link_301297510" MODIFIED="1718655396811" TEXT="https://www.youtube.com/watch?v=2f_5LRQV3k0"/>
+<node CREATED="1718652981870" ID="Freemind_Link_1497118856" MODIFIED="1718652994145" TEXT="Semelhante ao &apos;switch&apos; das linguagens C-Like">
+<node CREATED="1718653805284" ID="Freemind_Link_1252608740" MODIFIED="1718653812925" TEXT="Mas muito mais poderoso!">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node CREATED="1718654508938" ID="Freemind_Link_511018755" MODIFIED="1718654510506" TEXT="Simples">
+<node CREATED="1718654512673" ID="Freemind_Link_1457001883" MODIFIED="1718654530211" TEXT="Como o switch das linguagens c-like, recebe um valor e faz o match"/>
+<node CREATED="1716913456578" ID="Freemind_Link_1942316124" MODIFIED="1716913457927" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1716913356423" ID="Freemind_Link_1095849040" MODIFIED="1718653062851" TEXT="match my_command:&#xa;    case &apos;ls&apos;:&#xa;        print(&apos;Listing files...&apos;)&#xa;    case &apos;cd&apos;:&#xa;        print(&apos;Changing directory...&apos;)&#xa;    case _:&#xa;        print(&apos;Default: Command not implemented...&apos;)">
+<node CREATED="1716913547688" ID="Freemind_Link_1074551552" MODIFIED="1718129326907" TEXT="Resultado: Vou executar o comando: 1234"/>
+</node>
+</node>
+</node>
+<node CREATED="1718654541202" ID="Freemind_Link_1691043020" MODIFIED="1718654889535" TEXT="Com argumentos">
+<node CREATED="1718654545345" ID="Freemind_Link_258748720" MODIFIED="1718654586048" TEXT="O termo do match pode vir acompanhado de mais dados. Para o match&#xa;process&#xe1;-los, passe um iter&#xe1;vel (ou quebre o dado com split)"/>
+<node CREATED="1718654620288" ID="Freemind_Link_1975292650" MODIFIED="1718654622400" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1716913356423" ID="Freemind_Link_100674025" MODIFIED="1718653786951" TEXT="def testa_comando(comando: str):&#xa;    match comando.split():&#xa;        case [&apos;ls&apos;, *path]:&#xa;            print(f&apos;Listando conte&#xfa;do de pasta {path}&apos;)&#xa;        case &apos;cd&apos;:&#xa;            print(&apos;Mudando para pasta&apos;)&#xa;        case _:&#xa;            print(&apos;Comando n&#xe3;o implementado&apos;)&#xa;&#xa;testa_comando(&apos;ls /Users -la&apos;)            ">
+<node CREATED="1718653793167" ID="Freemind_Link_1979188828" MODIFIED="1718653800504" TEXT="Resultado:&#xa;Listando conte&#xfa;do de pasta [&apos;/Users&apos;, &apos;-la&apos;]"/>
+</node>
+</node>
+</node>
+<node CREATED="1718654541202" ID="Freemind_Link_1450944091" MODIFIED="1718654897246" TEXT="Com alias">
+<node CREATED="1718654545345" ID="Freemind_Link_1415344113" MODIFIED="1718654933635" TEXT="Pode-se definir aliases (mais de um&#xa;termo para um mesmo match)">
+<node CREATED="1718654935729" ID="Freemind_Link_1838200773" MODIFIED="1718654955363" TEXT="Usa-se o | entre os poss&#xed;veis termos de match"/>
+</node>
+<node CREATED="1718654620288" ID="Freemind_Link_901421486" MODIFIED="1718654622400" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1716913356423" ID="Freemind_Link_920123471" MODIFIED="1718654975704" TEXT="def testa_comando(comando: str):&#xa;    match comando.split():&#xa;        case [&apos;ls&apos; | &apos;list&apos;, *path]:&#xa;            print(f&apos;Listando conte&#xfa;do de pasta {path}&apos;)&#xa;        case &apos;cd&apos;:&#xa;            print(&apos;Mudando para pasta&apos;)&#xa;        case _:&#xa;            print(&apos;Comando n&#xe3;o implementado&apos;)&#xa;&#xa;testa_comando(&apos;ls /Users -la&apos;)            &#xa;testa_comando(&apos;list /Users -la&apos;)      ">
+<node CREATED="1718653793167" ID="Freemind_Link_1371799192" MODIFIED="1718654986181" TEXT="Resultado:&#xa;Listando conte&#xfa;do de pasta [&apos;/Users&apos;, &apos;-la&apos;]&#xa;Listando conte&#xfa;do de pasta [&apos;/Users&apos;, &apos;-la&apos;]"/>
+</node>
+</node>
+</node>
+<node CREATED="1718654644285" ID="Freemind_Link_1667143313" MODIFIED="1718654647884" TEXT="Condicionados">
+<node CREATED="1718654650223" ID="Freemind_Link_147023216" MODIFIED="1718654688082" TEXT="O termo do match pode, ainda, ser verificado se atende&#xa;uma determinada condi&#xe7;&#xe3;o paraconcretizar o match"/>
+<node CREATED="1716913456578" ID="Freemind_Link_1025366203" MODIFIED="1716913457927" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1716913356423" ID="Freemind_Link_1009941372" MODIFIED="1718654476047" TEXT="def testa_comando(comando: str):&#xa;    match comando.split():&#xa;        case [&apos;ls&apos;, *path] if len(path) &gt; 2:&#xa;            print(f&apos;Listando MUITO conte&#xfa;do de pasta {path}&apos;)&#xa;        case [&apos;ls&apos;, *path] if len(path) &lt;= 2:&#xa;            print(f&apos;Listando POUCO conte&#xfa;do de pasta {path}&apos;)&#xa;        case &apos;cd&apos;:&#xa;            print(&apos;Mudando para pasta&apos;)&#xa;        case _:&#xa;            print(&apos;Comando n&#xe3;o implementado&apos;)&#xa;&#xa;testa_comando(&apos;ls /Users /home&apos;)            &#xa;testa_comando(&apos;ls /Users /home /tmp&apos;)            ">
+<node CREATED="1718653793167" ID="Freemind_Link_841588396" MODIFIED="1718654487977" TEXT="Resultado:&#xa;Listando POUCO conte&#xfa;do de pasta [&apos;/Users&apos;, &apos;/home&apos;]&#xa;Listando MUITO conte&#xfa;do de pasta [&apos;/Users&apos;, &apos;/home&apos;, &apos;/tmp&apos;]"/>
+</node>
 </node>
 </node>
 </node>

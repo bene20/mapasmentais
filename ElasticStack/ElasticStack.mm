@@ -1,7 +1,7 @@
 <map version="0.8.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1553000049733" ID="Freemind_Link_683934292" LINK="../Mapas.mm" MODIFIED="1666110281733" TEXT="Elastic Stack">
-<node CREATED="1666110284987" ID="_" MODIFIED="1666110288451" POSITION="right" TEXT="Elastic search">
+<node CREATED="1666110284987" FOLDED="true" ID="_" MODIFIED="1666110288451" POSITION="right" TEXT="Elastic search">
 <node CREATED="1666268194269" ID="Freemind_Link_230790975" MODIFIED="1667924186145" TEXT="Mappings">
 <node CREATED="1666268210834" ID="Freemind_Link_1903893376" MODIFIED="1667924204856" TEXT="Text">
 <icon BUILTIN="full-1"/>
@@ -135,7 +135,7 @@
 <node CREATED="1666637075530" ID="Freemind_Link_2926019" MODIFIED="1666637076882" TEXT="exists"/>
 </node>
 </node>
-<node CREATED="1666111255422" ID="Freemind_Link_1036977007" MODIFIED="1666111256825" TEXT="API">
+<node CREATED="1666111255422" FOLDED="true" ID="Freemind_Link_1036977007" MODIFIED="1666111256825" TEXT="API">
 <node CREATED="1666111257474" ID="Freemind_Link_1404651250" MODIFIED="1666111259036" TEXT="Index">
 <node CREATED="1666111472457" ID="Freemind_Link_640785479" MODIFIED="1666111481922" TEXT="https://www.elastic.co/guide/en/elasticsearch/reference/7.17/docs-index_.html">
 <icon BUILTIN="attach"/>
@@ -471,12 +471,12 @@
 <node CREATED="1669124710558" ID="Freemind_Link_1463890187" MODIFIED="1669124712050" TEXT="Config">
 <node CREATED="1669124712642" ID="Freemind_Link_409950443" MODIFIED="1669130689998" TEXT="Arquivo &apos;/etc/logstash/conf.d/logstash.conf"/>
 <node CREATED="1669124849172" ID="Freemind_Link_691074484" MODIFIED="1669124852666" TEXT="Formato JSON"/>
-<node COLOR="#0000ff" CREATED="1669124730171" FOLDED="true" ID="Freemind_Link_921937653" MODIFIED="1669124798954" TEXT="input">
+<node COLOR="#0000ff" CREATED="1669124730171" ID="Freemind_Link_921937653" MODIFIED="1669124798954" TEXT="input">
 <node CREATED="1669124739706" ID="Freemind_Link_1129814952" MODIFIED="1669124746163" TEXT="Configura as origens de dados"/>
 <node CREATED="1669216215069" ID="Freemind_Link_1490412080" MODIFIED="1669216221917" TEXT="https://www.elastic.co/guide/en/logstash/current/input-plugins.html">
 <icon BUILTIN="forward"/>
 </node>
-<node COLOR="#0000ff" CREATED="1669124730171" ID="Freemind_Link_833157928" MODIFIED="1669124804011" TEXT="file">
+<node COLOR="#0000ff" CREATED="1669124730171" FOLDED="true" ID="Freemind_Link_833157928" MODIFIED="1669124804011" TEXT="file">
 <node CREATED="1669124832032" ID="Freemind_Link_1855716436" MODIFIED="1669124840388" TEXT="Configura arquivo de entrada de dados"/>
 <node CREATED="1669216240000" ID="Freemind_Link_1681775545" MODIFIED="1669216240588" TEXT="https://www.elastic.co/guide/en/logstash/current/plugins-inputs-file.html"/>
 <node COLOR="#0000ff" CREATED="1669124730171" ID="Freemind_Link_1777341981" MODIFIED="1669124846580" TEXT="path">
@@ -533,7 +533,7 @@
 <node COLOR="#0000ff" CREATED="1669124730171" ID="Freemind_Link_151534749" MODIFIED="1669214794248" TEXT="input{&#xa;  file {&#xa;    path =&gt; &quot;/home/bene/access.log&quot;&#xa;    start_position =&gt; &quot;beginning&quot;&#xa;    sincedb_path =&gt; &quot;/dev/null&quot;&#xa;  }&#xa;}"/>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1669126263349" ID="Freemind_Link_1112182418" MODIFIED="1669126270672" TEXT="jdbc">
+<node COLOR="#0000ff" CREATED="1669126263349" FOLDED="true" ID="Freemind_Link_1112182418" MODIFIED="1669126270672" TEXT="jdbc">
 <node CREATED="1669126272670" ID="Freemind_Link_1426747612" MODIFIED="1669126294520" TEXT="Configura select em SGBD como entrada de dados"/>
 <node CREATED="1669216245395" ID="Freemind_Link_1894574433" MODIFIED="1669216256212" TEXT="https://www.elastic.co/guide/en/logstash/current/plugins-inputs-jdbc.html"/>
 <node CREATED="1669126297473" ID="Freemind_Link_971720878" MODIFIED="1669126298665" TEXT="Ex:">
@@ -541,7 +541,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1669124750142" ID="Freemind_Link_1226700333" MODIFIED="1669124817546" TEXT="filter">
+<node COLOR="#0000ff" CREATED="1669124750142" FOLDED="true" ID="Freemind_Link_1226700333" MODIFIED="1669124817546" TEXT="filter">
 <font NAME="SansSerif" SIZE="13"/>
 <node CREATED="1669124752970" ID="Freemind_Link_1203271560" MODIFIED="1669124760530" TEXT="Trata o processamento dos dados de entrada"/>
 <node COLOR="#0000ff" CREATED="1669126425968" ID="Freemind_Link_1389775607" MODIFIED="1669126451457" TEXT="mutate">

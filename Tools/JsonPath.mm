@@ -112,7 +112,7 @@
 <icon BUILTIN="messagebox_warning"/>
 </node>
 </node>
-<node CREATED="1664193084876" ID="Freemind_Link_798006725" MODIFIED="1664193103829" TEXT="Use n&#xfa;meros negativos oara pegar os elementos do final">
+<node CREATED="1664193084876" ID="Freemind_Link_798006725" MODIFIED="1721946830959" TEXT="Use n&#xfa;meros negativos para pegar os elementos do final">
 <icon BUILTIN="messagebox_warning"/>
 <node COLOR="#0000ff" CREATED="1662722233088" ID="Freemind_Link_123591748" MODIFIED="1664193472484" TEXT="[-1:0] ou [-1:]">
 <node CREATED="1664192498318" ID="Freemind_Link_1326748861" MODIFIED="1664193216125" TEXT="Pega o &#xfa;ltimo elemento da lista"/>
