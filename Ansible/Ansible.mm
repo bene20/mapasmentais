@@ -13,8 +13,8 @@
 <node CREATED="1574965218759" ID="Freemind_Link_1910284875" MODIFIED="1574965230887" TEXT="Usa ssh para fazer as instala&#xe7;&#xf5;es na m&#xe1;quina target"/>
 <node CREATED="1575385702059" ID="Freemind_Link_979133388" MODIFIED="1575385706254" TEXT="S&#xf3; SSH e Python"/>
 </node>
-<node CREATED="1575385712416" FOLDED="true" ID="Freemind_Link_1753371469" MODIFIED="1575385716230" POSITION="right" TEXT="Usa 3 modelos de script">
-<node CREATED="1575385748471" ID="Freemind_Link_708606257" MODIFIED="1575385753322" TEXT="Arq. de invent&#xe1;rio">
+<node CREATED="1575385712416" ID="Freemind_Link_1753371469" MODIFIED="1575385716230" POSITION="right" TEXT="Usa 3 modelos de script">
+<node CREATED="1575385748471" FOLDED="true" ID="Freemind_Link_708606257" MODIFIED="1575385753322" TEXT="Arq. de invent&#xe1;rio">
 <node CREATED="1575385822182" ID="Freemind_Link_439848246" MODIFIED="1575385840177" TEXT="Grupos de m&#xe1;quinas a serem configuradas"/>
 <node CREATED="1576676296570" ID="Freemind_Link_1361179768" MODIFIED="1576676297379" TEXT="https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html"/>
 <node CREATED="1575385844316" ID="Freemind_Link_281935356" MODIFIED="1575385858970" TEXT="Par&#xe2;metro obrigat&#xf3;rio p/ o Ansible">
@@ -25,6 +25,23 @@
 </node>
 <node CREATED="1575385922391" ID="Freemind_Link_1190167359" MODIFIED="1575897073796" TEXT="Ex (arq hosts):">
 <node COLOR="#ff00ff" CREATED="1575385938828" ID="Freemind_Link_1581582100" MODIFIED="1575386019423" TEXT="[wordpress]&#xa;10.10.0.1&#xa;10.10.0.2&#xa;&#xa;[mysql]&#xa;maq1.dominio.com.br"/>
+</node>
+<node CREATED="1575388150367" ID="Freemind_Link_1748843386" MODIFIED="1722889129878" TEXT="Pode ser inclu&#xed;do alias do host">
+<node CREATED="1575385922391" ID="Freemind_Link_301874137" MODIFIED="1575388165676" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575385938828" ID="Freemind_Link_1111599030" MODIFIED="1722889148226" TEXT="db ansible_host=10.10.0.1"/>
+</node>
+</node>
+<node CREATED="1722889456973" ID="Freemind_Link_663720307" MODIFIED="1722889476133" TEXT="Define-se o tipo de conex&#xe3;o&#xa;com ansible_connection">
+<node COLOR="#ff00ff" CREATED="1722889477989" ID="Freemind_Link_1689215438" MODIFIED="1722890077848" TEXT="ssh">
+<node CREATED="1722889479801" ID="Freemind_Link_227394717" MODIFIED="1722889483572" TEXT="Para m&#xe1;quinas Linux"/>
+<node CREATED="1575385922391" ID="Freemind_Link_494796417" MODIFIED="1575388165676" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575385938828" ID="Freemind_Link_628773897" MODIFIED="1722890128352" TEXT="db ansible_host=10.10.0.1 ansible_connection=ssh"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1722889484632" ID="Freemind_Link_22762273" MODIFIED="1722890090212" TEXT="winrm">
+<node CREATED="1722889486915" ID="Freemind_Link_496977531" MODIFIED="1722889494364" TEXT="Para m&#xe1;quinas windows"/>
+<node COLOR="#ff00ff" CREATED="1575385938828" ID="Freemind_Link_34135940" MODIFIED="1722890119217" TEXT="db ansible_host=10.10.0.1 ansible_connection=winrm"/>
+</node>
 </node>
 <node CREATED="1575388150367" ID="Freemind_Link_1149327160" MODIFIED="1575388156957" TEXT="Pode ser inclu&#xed;do nome de usu&#xe1;rio">
 <node CREATED="1575385922391" ID="Freemind_Link_692575243" MODIFIED="1575388165676" TEXT="Ex:">
@@ -57,7 +74,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1575385755720" FOLDED="true" ID="Freemind_Link_1774933042" MODIFIED="1575385757577" TEXT="Playbook">
+<node CREATED="1575385755720" ID="Freemind_Link_1774933042" MODIFIED="1575385757577" TEXT="Playbook">
 <node CREATED="1575385769415" ID="Freemind_Link_1054555287" MODIFIED="1575385775211" TEXT="Receita do que ser&#xe1; feito"/>
 <node CREATED="1575387870383" ID="Freemind_Link_1558220273" MODIFIED="1575387883558" TEXT="Execut&#xe1;vel pelo comando ansible-playbook">
 <icon BUILTIN="messagebox_warning"/>
@@ -335,7 +352,7 @@
 </node>
 </node>
 <node CREATED="1575896183175" ID="Freemind_Link_1070165121" MODIFIED="1575896217830" POSITION="right" TEXT="Pastas e arquivos">
-<node CREATED="1575896616532" ID="Freemind_Link_202031229" MODIFIED="1576258817334" TEXT="group_vars">
+<node CREATED="1575896616532" FOLDED="true" ID="Freemind_Link_202031229" MODIFIED="1576258817334" TEXT="group_vars">
 <icon BUILTIN="forward"/>
 <node CREATED="1575896621830" ID="Freemind_Link_620346108" MODIFIED="1575896627209" TEXT="Pasta especial do ansible"/>
 <node CREATED="1575897207312" ID="Freemind_Link_605005244" MODIFIED="1575897219485" TEXT="Cada grupo espec&#xed;fico pode ter seu pr&#xf3;prio arquivo de chaves-valores"/>
@@ -361,10 +378,12 @@
 </node>
 </node>
 </node>
-<node CREATED="1575897399538" FOLDED="true" ID="Freemind_Link_1711336624" MODIFIED="1576258812670" TEXT="templates">
+<node CREATED="1575897399538" ID="Freemind_Link_1711336624" MODIFIED="1576258812670" TEXT="templates">
 <icon BUILTIN="forward"/>
 <node CREATED="1575897408055" ID="Freemind_Link_731360314" MODIFIED="1575897419554" TEXT="S&#xe3;o manipulados por meio de um m&#xf3;dulo hom&#xf4;nimo"/>
-<node CREATED="1575897449866" ID="Freemind_Link_993841373" MODIFIED="1575897457730" TEXT="Todo template termina com a extens&#xe3;o j2"/>
+<node CREATED="1575897449866" ID="Freemind_Link_993841373" MODIFIED="1575897457730" TEXT="Todo template termina com a extens&#xe3;o j2">
+<node CREATED="1723733609570" ID="Freemind_Link_803169430" LINK="#Freemind_Link_1901164526" MODIFIED="1723733644052" TEXT="Jinja2"/>
+</node>
 <node CREATED="1575897755718" ID="Freemind_Link_1386663146" MODIFIED="1575897768127" TEXT="&#xc9; feita uma c&#xf3;pia do template processado para a m&#xe1;quina de destino">
 <node CREATED="1575897771328" ID="Freemind_Link_1351917007" MODIFIED="1575897785145" TEXT="Substitui o m&#xf3;dulo &apos;copy&apos;"/>
 </node>
@@ -478,7 +497,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1574965341983" ID="Freemind_Link_177292562" MODIFIED="1574965344124" POSITION="right" TEXT="Comando">
+<node CREATED="1574965341983" FOLDED="true" ID="Freemind_Link_177292562" MODIFIED="1574965344124" POSITION="right" TEXT="Comando">
 <node CREATED="1574965356782" ID="Freemind_Link_686440155" MODIFIED="1574965358974" TEXT="Par&#xe2;metros">
 <node CREATED="1574965360759" ID="Freemind_Link_33090424" MODIFIED="1575386250269" TEXT="-i &lt;nome_arquivo&gt;">
 <node CREATED="1574965369184" ID="Freemind_Link_1802560157" MODIFIED="1574965371974" TEXT="Invent&#xe1;rio"/>
@@ -519,6 +538,160 @@
 <node COLOR="#0000ff" CREATED="1576605465554" ID="Freemind_Link_1633119263" MODIFIED="1576605481036" TEXT="ANSIBLE_ENABLE_TASK_DEBUGGER=True ansible-playbook provisioning.yml -i hosts.yml"/>
 </node>
 </node>
+</node>
+</node>
+<node CREATED="1723728108269" ID="Freemind_Link_1901164526" MODIFIED="1723728110895" POSITION="right" TEXT="Jinja2">
+<node CREATED="1723728118691" ID="Freemind_Link_1734000298" MODIFIED="1723728129341" TEXT="Uso em templates de arquivos"/>
+<node CREATED="1723728227602" ID="Freemind_Link_1596324907" MODIFIED="1723728235637" TEXT="Aplica vari&#xe1;veis em templates">
+<node CREATED="1723728236041" ID="Freemind_Link_1156682208" MODIFIED="1723728241042" TEXT="Via uso do {{...}}"/>
+<node CREATED="1723728259487" ID="Freemind_Link_1701304667" MODIFIED="1723728277490" TEXT="Se a vari&#xe1;vel n&#xe3;o tiver sido declarada, o Jinja2 falha">
+<node CREATED="1723728553930" ID="Freemind_Link_1162902675" MODIFIED="1723728857568" TEXT="A menos que se use o filtro &apos;default&apos;">
+<arrowlink DESTINATION="Freemind_Link_805946670" ENDARROW="Default" ENDINCLINATION="691;0;" ID="Freemind_Arrow_Link_1864650398" STARTARROW="None" STARTINCLINATION="691;0;"/>
+</node>
+</node>
+</node>
+<node CREATED="1723730050469" ID="Freemind_Link_1131051209" MODIFIED="1723730071747" TEXT="Recomenda-se usar a extens&#xe3;o &apos;.j2&apos;&#xa;nos arquivos de template jinja2">
+<node CREATED="1723730076862" ID="Freemind_Link_1889052475" MODIFIED="1723730077530" TEXT="Ex:">
+<node CREATED="1723730078442" ID="Freemind_Link_917576369" MODIFIED="1723730080906" TEXT="index.html">
+<node CREATED="1723730082573" ID="Freemind_Link_1792669926" MODIFIED="1723730087994" TEXT="=&gt; index.html.j2"/>
+</node>
+<node CREATED="1723730089401" ID="Freemind_Link_1427130699" MODIFIED="1723730097225" TEXT="email.txt">
+<node CREATED="1723730098629" ID="Freemind_Link_450914986" MODIFIED="1723730104295" TEXT="=&gt; email.txt.j2"/>
+</node>
+</node>
+</node>
+<node CREATED="1723728749950" ID="Freemind_Link_1411713856" MODIFIED="1723728751657" TEXT="Filtros">
+<node CREATED="1723728753427" ID="Freemind_Link_1899650610" MODIFIED="1723728754891" TEXT="upper">
+<node CREATED="1723728131841" ID="Freemind_Link_88645600" MODIFIED="1723728132596" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_1397262337" MODIFIED="1723728783733" TEXT="O nome &#xe9; {{ meu_nome | upper}} =&gt; O nome &#xe9; CAIO&#xa;"/>
+</node>
+</node>
+<node CREATED="1723728758549" ID="Freemind_Link_311699909" MODIFIED="1723728759970" TEXT="lower">
+<node CREATED="1723728131841" ID="Freemind_Link_286503946" MODIFIED="1723728132596" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_1308118896" MODIFIED="1723728875227" TEXT="O nome &#xe9; {{ meu_nome | lower}} =&gt; O nome &#xe9; caio"/>
+</node>
+</node>
+<node CREATED="1723728756118" ID="Freemind_Link_1157224420" MODIFIED="1723728757314" TEXT="title">
+<node CREATED="1723728131841" ID="Freemind_Link_885058808" MODIFIED="1723728132596" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_1329119956" MODIFIED="1723728821694" TEXT="O nome &#xe9; {{ meu_nome | title}} =&gt; O nome &#xe9; Caio&#xa;"/>
+</node>
+</node>
+<node CREATED="1723728764159" ID="Freemind_Link_745289334" MODIFIED="1723728765577" TEXT="replace">
+<node CREATED="1723728131841" ID="Freemind_Link_1052253770" MODIFIED="1723728132596" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_1873655884" MODIFIED="1723728828945" TEXT="O nome &#xe9; {{ meu_nome | replace(&quot;Caio&quot;, &quot;Ana&quot;)}} =&gt; O nome &#xe9; Ana&#xa;"/>
+</node>
+</node>
+<node CREATED="1723728767076" ID="Freemind_Link_805946670" MODIFIED="1723728857564" TEXT="default">
+<node CREATED="1723728131841" ID="Freemind_Link_987797323" MODIFIED="1723728132596" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_502266222" MODIFIED="1723728691244" TEXT="O nome &#xe9; {{ meu_nome | default(&quot;Bia&quot;)}} =&gt; O nome &#xe9; Caio">
+<node CREATED="1723728674944" ID="Freemind_Link_580973035" MODIFIED="1723728701972" TEXT="Caso &apos;meu_nome&apos; tenha sido declarado como &apos;Caio&apos;"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_262322948" MODIFIED="1723728673823" TEXT="O nome &#xe9; {{ meu_nome | default(&quot;Bia&quot;)}} =&gt; O nome &#xe9; Bia">
+<node CREATED="1723728674944" ID="Freemind_Link_1375801922" MODIFIED="1723728675730" TEXT="Caso &apos;meu_nome&apos; n&#xe3;o tenha sido declarado"/>
+</node>
+</node>
+</node>
+<node CREATED="1723728764159" ID="Freemind_Link_1690796754" MODIFIED="1723728901599" TEXT="min">
+<node CREATED="1723728131841" ID="Freemind_Link_189176686" MODIFIED="1723728132596" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_819301585" MODIFIED="1723728914977" TEXT="{{ [1,2,3] | min }}">
+<node CREATED="1723728919075" ID="Freemind_Link_657535071" MODIFIED="1723728922400" TEXT="Retorna 1"/>
+</node>
+</node>
+</node>
+<node CREATED="1723728764159" ID="Freemind_Link_142190682" MODIFIED="1723728928001" TEXT="max">
+<node CREATED="1723728131841" ID="Freemind_Link_515652484" MODIFIED="1723728132596" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_363500232" MODIFIED="1723728935323" TEXT="{{ [1,2,3] | max }}">
+<node CREATED="1723728919075" ID="Freemind_Link_331517302" MODIFIED="1723728938670" TEXT="Retorna 3"/>
+</node>
+</node>
+</node>
+<node CREATED="1723728764159" ID="Freemind_Link_421411411" MODIFIED="1723728945310" TEXT="unique">
+<node CREATED="1723728131841" ID="Freemind_Link_141467736" MODIFIED="1723728132596" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_1780160317" MODIFIED="1723728957150" TEXT="{{ [1,2,2,3] | unique }}">
+<node CREATED="1723728919075" ID="Freemind_Link_1455940842" MODIFIED="1723728962851" TEXT="Retorna [1,2,3]"/>
+</node>
+</node>
+</node>
+<node CREATED="1723728764159" ID="Freemind_Link_361210369" MODIFIED="1723729013373" TEXT="union">
+<node CREATED="1723728131841" ID="Freemind_Link_1347818191" MODIFIED="1723728132596" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_1040038180" MODIFIED="1723729032428" TEXT="{{ [1,2,3] | union([4,5]) }}">
+<node CREATED="1723728919075" ID="Freemind_Link_112564659" MODIFIED="1723729043821" TEXT="Retorna [1,2,3,4,5]"/>
+</node>
+</node>
+</node>
+<node CREATED="1723728764159" ID="Freemind_Link_1225573347" MODIFIED="1723729060211" TEXT="intersect">
+<node CREATED="1723728131841" ID="Freemind_Link_590993915" MODIFIED="1723728132596" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_1114153772" MODIFIED="1723729072337" TEXT="{{ [1,2,3,4] | intersect([4,5]) }}">
+<node CREATED="1723728919075" ID="Freemind_Link_592948181" MODIFIED="1723729080523" TEXT="Retorna [4]"/>
+</node>
+</node>
+</node>
+<node CREATED="1723728764159" ID="Freemind_Link_926189271" MODIFIED="1723729098146" TEXT="random">
+<node CREATED="1723728131841" ID="Freemind_Link_1795423394" MODIFIED="1723728132596" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_1570306560" MODIFIED="1723729115333" TEXT="{{ 100 | random }}">
+<node CREATED="1723728919075" ID="Freemind_Link_651914955" MODIFIED="1723729127963" TEXT="Retorna um numero aleat&#xf3;rio entre 0 e 100"/>
+</node>
+</node>
+</node>
+<node CREATED="1723728764159" ID="Freemind_Link_1064880198" MODIFIED="1723729146083" TEXT="join">
+<node CREATED="1723728131841" ID="Freemind_Link_668383192" MODIFIED="1723728132596" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_1887476552" MODIFIED="1723729174589" TEXT="{{ [&quot;Ana&quot;, &quot;Beatriz&quot;, &quot;Silva&quot;] | join(&quot; &quot;) }}">
+<node CREATED="1723728919075" ID="Freemind_Link_1558155017" MODIFIED="1723729189017" TEXT="Retorna &quot;Ana Beatriz Silva&quot;"/>
+</node>
+</node>
+</node>
+<node CREATED="1723728764159" ID="Freemind_Link_1983987802" MODIFIED="1723729234085" TEXT="for">
+<node CREATED="1723728131841" ID="Freemind_Link_709357770" MODIFIED="1723728132596" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_468642588" MODIFIED="1723729296752" TEXT="{% for number in [1,2,3] %}&#xa;  {{number}}&#xa;{% endfor %}">
+<node CREATED="1723728919075" ID="Freemind_Link_605499709" MODIFIED="1723729301508" TEXT="Retorna:&#xa;1&#xa;2&#xa;3"/>
+</node>
+</node>
+</node>
+<node CREATED="1723728764159" ID="Freemind_Link_685328867" MODIFIED="1723729329758" TEXT="if">
+<node CREATED="1723728131841" ID="Freemind_Link_1741301255" MODIFIED="1723728132596" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_1084470791" MODIFIED="1723729345635" TEXT="{% if number==2 %}&#xa;  {{number}}&#xa;{% endif %}">
+<node CREATED="1723728919075" ID="Freemind_Link_155737027" MODIFIED="1723729359622" TEXT="Retorna:&#xa;2"/>
+</node>
+</node>
+</node>
+<node CREATED="1723728764159" ID="Freemind_Link_1483302135" MODIFIED="1723729436548" TEXT="basename">
+<node CREATED="1723729490928" ID="Freemind_Link_1636493182" MODIFIED="1723729496010" TEXT="No windows, use win_basename">
+<node CREATED="1723728131841" ID="Freemind_Link_1076659235" MODIFIED="1723728132596" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_488302117" MODIFIED="1723729511217" TEXT="{{ &quot;c:\etc\hosts&quot; | win_basename }}">
+<node CREATED="1723728919075" ID="Freemind_Link_153162044" MODIFIED="1723729470430" TEXT="Retorna &quot;hosts&quot;"/>
+</node>
+</node>
+</node>
+<node CREATED="1723728131841" ID="Freemind_Link_1987374405" MODIFIED="1723728132596" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_331075176" MODIFIED="1723729462522" TEXT="{{ &quot;/etc/hosts&quot; | basename }}">
+<node CREATED="1723728919075" ID="Freemind_Link_260386455" MODIFIED="1723729470430" TEXT="Retorna &quot;hosts&quot;"/>
+</node>
+</node>
+</node>
+<node CREATED="1723728764159" ID="Freemind_Link_1571021034" MODIFIED="1723729562081" TEXT="win_splitdrive">
+<node CREATED="1723728131841" ID="Freemind_Link_1789607562" MODIFIED="1723728132596" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_1102887882" MODIFIED="1723729591323" TEXT="{{ &quot;c:\etc\hosts&quot; | win_splitdrive }}">
+<node CREATED="1723728919075" ID="Freemind_Link_1673768386" MODIFIED="1723729616548" TEXT="Retorna [&quot;c:&quot;, &quot;\etc\hosts&quot;]"/>
+</node>
+</node>
+</node>
+<node CREATED="1723728764159" ID="Freemind_Link_457939170" MODIFIED="1723729650392" TEXT="first">
+<node CREATED="1723728131841" ID="Freemind_Link_719375066" MODIFIED="1723728132596" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_113934851" MODIFIED="1723729669065" TEXT="{{ [4,3,2,1] | first }}">
+<node CREATED="1723728919075" ID="Freemind_Link_1215773715" MODIFIED="1723729674039" TEXT="Retorna 4"/>
+</node>
+</node>
+</node>
+<node CREATED="1723728764159" ID="Freemind_Link_700843272" MODIFIED="1723729678183" TEXT="last">
+<node CREATED="1723728131841" ID="Freemind_Link_1869957162" MODIFIED="1723728132596" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_1848927302" MODIFIED="1723729685073" TEXT="{{ [4,3,2,1] | last }}">
+<node CREATED="1723728919075" ID="Freemind_Link_1961154466" MODIFIED="1723729688095" TEXT="Retorna 1"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1723728131841" ID="Freemind_Link_83291593" MODIFIED="1723728132596" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1575387390295" ID="Freemind_Link_1482754440" MODIFIED="1723728608871" TEXT="O nome &#xe9; {{ meu_nome}} =&gt; O nome &#xe9; Caio&#xa;O nome &#xe9; {{ meu_nome | upper}} =&gt; O nome &#xe9; CAIO&#xa;O nome &#xe9; {{ meu_nome | title}} =&gt; O nome &#xe9; Caio&#xa;O nome &#xe9; {{ meu_nome | replace(&quot;Caio&quot;, &quot;Ana&quot;)}} =&gt; O nome &#xe9; Ana&#xa;O nome &#xe9; {{ meu_nome | default(&quot;Bia&quot;)}} =&gt; O nome &#xe9; Bia - Caso &apos;meu_nome&apos; n&#xe3;o tenha sido declarado"/>
 </node>
 </node>
 <node CREATED="1576695069449" ID="Freemind_Link_875265807" MODIFIED="1576695073015" POSITION="right" TEXT="Ansible galaxy">

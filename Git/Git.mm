@@ -367,7 +367,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1554819676521" FOLDED="true" ID="Freemind_Link_1049723798" MODIFIED="1554819679212" POSITION="right" TEXT="Pesquisa">
+<node CREATED="1554819676521" ID="Freemind_Link_1049723798" MODIFIED="1554819679212" POSITION="right" TEXT="Pesquisa">
 <node COLOR="#0000ff" CREATED="1553000479465" ID="Freemind_Link_1961848905" MODIFIED="1554819691900" TEXT="git bisect">
 <icon BUILTIN="wizard"/>
 <node CREATED="1554819699651" ID="Freemind_Link_1478699948" MODIFIED="1554819958965" TEXT="Nos ajuda a encontrar um commit espec&#xed;fico de acordo&#xa;com as altera&#xe7;&#xf5;es procuradas fazendo busca bin&#xe1;ria"/>

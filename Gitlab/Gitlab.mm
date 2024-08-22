@@ -241,7 +241,7 @@
 <node CREATED="1579543326378" ID="Freemind_Link_129089085" MODIFIED="1579543327219" TEXT="tags">
 <node CREATED="1579543327882" ID="Freemind_Link_1677386332" MODIFIED="1579543337418" TEXT="Indica qual/quais runners ir&#xe3;o executar o job"/>
 </node>
-<node CREATED="1579544531134" ID="Freemind_Link_930363076" MODIFIED="1579544533164" TEXT="dependencies">
+<node CREATED="1579544531134" FOLDED="true" ID="Freemind_Link_930363076" MODIFIED="1579544533164" TEXT="dependencies">
 <node CREATED="1579544536814" ID="Freemind_Link_688738344" MODIFIED="1579544548187" TEXT="Indica que um job depende da conclus&#xe3;o de outro"/>
 <node CREATED="1721138466074" ID="Freemind_Link_124614387" MODIFIED="1721138494415" TEXT="&#xc9; necess&#xe1;rio declarar &apos;dependencies&apos; para definir a lista dos jobs dos quais se quer pegar os artefatos"/>
 <node CREATED="1579544549026" ID="Freemind_Link_1787119120" MODIFIED="1579544566857" TEXT="Um job s&#xf3; pode ser dependente de um job de outro stage"/>
@@ -252,7 +252,7 @@
 <node COLOR="#ff0000" CREATED="1578683237010" ID="Freemind_Link_206483679" MODIFIED="1580149377289" TEXT="job:&#xa;  script: &quot;echo Hello, Rules!&quot;&#xa;  retry: 2"/>
 </node>
 </node>
-<node CREATED="1580149023013" ID="Freemind_Link_1065414690" MODIFIED="1590022371926" TEXT="when">
+<node CREATED="1580149023013" FOLDED="true" ID="Freemind_Link_1065414690" MODIFIED="1590022371926" TEXT="when">
 <node CREATED="1580149026063" ID="Freemind_Link_1929045178" MODIFIED="1580149033779" TEXT="Executa o job apenas em uma situa&#xe7;&#xe3;o espec&#xed;fica"/>
 <node CREATED="1580149036294" ID="Freemind_Link_237269865" MODIFIED="1580149039234" TEXT="Situa&#xe7;&#xf5;es:">
 <node CREATED="1580149040022" ID="Freemind_Link_847589180" MODIFIED="1580149046298" TEXT="on_succes">
@@ -298,6 +298,19 @@
 <node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_821506215" MODIFIED="1590022457656" TEXT="build:&#xa;  stage: build&#xa;  artifacts:&#xa;    expire_in: 1 week&#xa;    paths:&#xa;      - build/&#xa;"/>
 </node>
 </node>
+<node CREATED="1724326810188" ID="Freemind_Link_14292772" MODIFIED="1724327186380" TEXT="Para disponibilizar uma vari&#xe1;vel&#xa;de um job em outro, use &apos;dotenv&apos;">
+<node CREATED="1724327186350" ID="Freemind_Link_430775684" MODIFIED="1724327188911" TEXT="Passos">
+<node CREATED="1724327101985" ID="Freemind_Link_1892304670" MODIFIED="1724327200954" TEXT="No job que cria a vari&#xe1;vel, ela deve ser armazenada no arquivo .env&#xa;e esse arquivo deve ser declarado na diretiva &apos;artifacts.reports.dotenv&apos;">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1724327142854" ID="Freemind_Link_1271320618" MODIFIED="1724327213243" TEXT="No job que herda a vari&#xe1;vel, a diretiva &apos;dependency&apos;&#xa;deve referenciar o job que disponibiliza o arquivo dotenv.">
+<icon BUILTIN="full-2"/>
+</node>
+</node>
+<node CREATED="1724326956248" ID="Freemind_Link_679771320" MODIFIED="1724326958394" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_355469375" MODIFIED="1724327263994" TEXT="review:&#xa;  script:&#xa;    - echo &quot;MINHA_VARIAVEL=&apos;Valor da vari&#xe1;vel&apos;&quot; &gt;&gt; deploy.env&#xa;  artifacts:&#xa;    reports:&#xa;      dotenv: deploy.env"/>
+</node>
+</node>
 <node CREATED="1590022364237" ID="Freemind_Link_1027954170" MODIFIED="1590022371927" TEXT="Aceita o uso do when">
 <arrowlink DESTINATION="Freemind_Link_1065414690" ENDARROW="Default" ENDINCLINATION="554;0;" ID="Freemind_Arrow_Link_1521061584" STARTARROW="None" STARTINCLINATION="554;0;"/>
 </node>
@@ -305,7 +318,7 @@
 <node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_1124902659" MODIFIED="1590021817998" TEXT="build:&#xa;  stage: build&#xa;  artifacts:&#xa;    paths:&#xa;      - build/&#xa;"/>
 </node>
 </node>
-<node CREATED="1720707137412" ID="Freemind_Link_1194274381" MODIFIED="1720707140709" TEXT="workflow">
+<node CREATED="1720707137412" FOLDED="true" ID="Freemind_Link_1194274381" MODIFIED="1720707140709" TEXT="workflow">
 <node CREATED="1720707149910" ID="Freemind_Link_181239232" MODIFIED="1720707162937" TEXT="Usado para controlar quando o pipeline ser&#xe1; criado"/>
 <node CREATED="1590021806761" ID="Freemind_Link_1655858902" MODIFIED="1590021808035" TEXT="Ex:">
 <node COLOR="#ff00ff" CREATED="1578683237010" ID="Freemind_Link_766498786" MODIFIED="1720707244682" TEXT="workflow:&#xa;  rules:&#xa;    - if: $CI_COMMIT_BRANCH != &quot;main&quot;&#xa;      when: never&#xa;    - when: always">
@@ -342,6 +355,67 @@
 <node CREATED="1721137153854" ID="Freemind_Link_1559836229" MODIFIED="1721137170805" TEXT="tags: [&apos;docker&apos;] sobrescreve tags: [&apos;production&apos;]"/>
 <node CREATED="1721137187407" ID="Freemind_Link_1498252514" MODIFIED="1721137221660" TEXT="script n&#xe3;o &#xe9; fundido, mas script: [&apos;rake rspec&apos;] sobrescreve script: [&apos;echo &quot;Hello world!&quot;&apos;].&#xa;"/>
 <node CREATED="1721137223114" ID="Freemind_Link_1817249471" MODIFIED="1721137250778" TEXT="&#xc9; poss&#xed;vel usar YAML anchors para fundir arrays"/>
+</node>
+</node>
+</node>
+<node CREATED="1724342252138" ID="Freemind_Link_1632892070" MODIFIED="1724342254896" TEXT="environment">
+<node CREATED="1724342269289" ID="Freemind_Link_1314600074" MODIFIED="1724342276148" TEXT="Define um ambiente de deploy da aplica&#xe7;&#xe3;o"/>
+<node CREATED="1724342285156" ID="Freemind_Link_1039615908" MODIFIED="1724342303589" TEXT="&#xda;til para publicar a aplica&#xe7;&#xe3;o em ambientes est&#xe1;ticos (HOM, PROD etc.) ou din&#xe2;micos (por branch)"/>
+<node COLOR="#ff00ff" CREATED="1724342359554" ID="Freemind_Link_875903249" MODIFIED="1724342375236" TEXT="name">
+<node CREATED="1724342361061" ID="Freemind_Link_1746874555" MODIFIED="1724342365678" TEXT="Nome do ambiente"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1724342359554" ID="Freemind_Link_823793818" MODIFIED="1724342390198" TEXT="url">
+<node CREATED="1724342361061" ID="Freemind_Link_941331666" MODIFIED="1724342400574" TEXT="URL para se acessar/testar o ambiente criado"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1724342359554" ID="Freemind_Link_1703931452" MODIFIED="1724342424719" TEXT="action">
+<node CREATED="1724342361061" ID="Freemind_Link_1297584959" MODIFIED="1724342456036" TEXT="Especifica como o job ir&#xe1; interagir com o ambiente"/>
+<node COLOR="#ff00ff" CREATED="1724342359554" ID="Freemind_Link_1535820273" MODIFIED="1724345649435" TEXT="start">
+<node CREATED="1724342361061" ID="Freemind_Link_1205260850" MODIFIED="1724342468794" TEXT="Valor default"/>
+<node CREATED="1724342469944" ID="Freemind_Link_310460638" MODIFIED="1724342499420" TEXT="Indica que o job inicializa o ambiente (o ambiente &#xe9; criado quando o job &#xe9; iniciado)"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1724342359554" ID="Freemind_Link_385062003" MODIFIED="1724342506960" TEXT="prepare">
+<node CREATED="1724342469944" ID="Freemind_Link_461972341" MODIFIED="1724342517288" TEXT="Indica que o job apenas prepara o ambiente"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1724342359554" ID="Freemind_Link_505685826" MODIFIED="1724342522539" TEXT="stop">
+<node CREATED="1724342469944" ID="Freemind_Link_782013680" MODIFIED="1724342530744" TEXT="Indica que o job finaliza o ambiente"/>
+<node CREATED="1724345563124" ID="Freemind_Link_1405507299" MODIFIED="1724345649436" TEXT="O job de stop n&#xe3;o funcionar&#xe1; se estiver em um est&#xe1;gio&#xa;posterior ao est&#xe1;gio do job que cria o ambiente!">
+<arrowlink DESTINATION="Freemind_Link_1535820273" ENDARROW="Default" ENDINCLINATION="407;0;" ID="Freemind_Arrow_Link_1849540730" STARTARROW="None" STARTINCLINATION="407;0;"/>
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node CREATED="1724345695758" ID="Freemind_Link_262596803" MODIFIED="1724345773664" TEXT="&#xc9; necess&#xe1;rio setar o GIT_STRATEGY para none no job de stop de environment. para que o Runner n&#xe3;o tente fazer o checkout do c&#xf3;digo ap&#xf3;s a exclus&#xe3;o da branch">
+<icon BUILTIN="messagebox_warning"/>
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node CREATED="1724345985883" ID="Freemind_Link_1632413591" MODIFIED="1724346047972" TEXT="JOb de stop de environment n&#xe3;o funciona em branchs protegidas pois o evento stop s&#xf3; &#xe9; disparado quando a branch &#xe9; deletada (ap&#xf3;s o merge), e o Gitlab n&#xe3;o aceita excluir branches protegidas.">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1724342359554" ID="Freemind_Link_1867990009" MODIFIED="1724342538264" TEXT="verify">
+<node CREATED="1724342469944" ID="Freemind_Link_1272449889" MODIFIED="1724342544712" TEXT="Indica que o job faz verifica&#xe7;&#xf5;es do ambiente"/>
+</node>
+<node COLOR="#ff00ff" CREATED="1724342359554" ID="Freemind_Link_664725223" MODIFIED="1724342549744" TEXT="access">
+<node CREATED="1724342469944" ID="Freemind_Link_1510152248" MODIFIED="1724342556792" TEXT="Indica que o job faz acessos ao ambiente"/>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1724342359554" ID="Freemind_Link_1600885" MODIFIED="1724342410453" TEXT="on_stop">
+<node CREATED="1724342361061" ID="Freemind_Link_687427312" MODIFIED="1724343023788" TEXT="Indica qual job far&#xe1; as a&#xe7;&#xf5;es de exclus&#xe3;o do ambiente"/>
+<node CREATED="1724343138142" ID="Freemind_Link_1745381950" MODIFIED="1724345462670" TEXT="Ser&#xe1; executado APENAS quando a branch do merge for deletada">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node CREATED="1724342748324" ID="Freemind_Link_718462329" MODIFIED="1724342784012" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1724342753064" ID="Freemind_Link_1636099997" MODIFIED="1724345883983" TEXT="create_teste:&#xa;  ...&#xa;  environment:&#xa;    name: test&#xa;    url: http://test.com&#xa;    on_stop: destroy_teste&#xa;&#xa;destroy_teste:&#xa;  ...&#xa;  variables:&#xa;    GIT_STRATEGY: none&#xa;  environment:&#xa;    name: test&#xa;    action: stop&#xa;  when: manual">
+<node CREATED="1724345695758" ID="Freemind_Link_449356417" MODIFIED="1724345832913" TEXT="Note que &#xe9; necess&#xe1;rio setar o GIT_STRATEGY para none no job de stop de environment. para que o Runner n&#xe3;o tente fazer o checkout do c&#xf3;digo ap&#xf3;s a exclus&#xe3;o da branch"/>
+<node CREATED="1724345885310" ID="Freemind_Link_887322841" MODIFIED="1724345913781" TEXT="Note que um job de stop de environment deve ser manual, para evitar que o job seja disparado logo depois da cria&#xe7;&#xe3;o do ambiente"/>
+</node>
+</node>
+</node>
+<node COLOR="#ff00ff" CREATED="1724342359554" ID="Freemind_Link_639189532" MODIFIED="1724342719467" TEXT="auto_stop_in">
+<node CREATED="1724342361061" ID="Freemind_Link_1615820805" MODIFIED="1724342739908" TEXT="Usado para agendar a finaliza&#xe7;&#xe3;o do ambiente"/>
+<node CREATED="1724342748324" ID="Freemind_Link_1119216018" MODIFIED="1724342784012" TEXT="Ex:">
+<node COLOR="#ff00ff" CREATED="1724342753064" ID="Freemind_Link_1231098407" MODIFIED="1724342801088" TEXT="auto_stop_in: 168 hours"/>
+<node COLOR="#ff00ff" CREATED="1724342757837" ID="Freemind_Link_304345129" MODIFIED="1724342803021" TEXT="auto_stop_in: 7 days"/>
+<node COLOR="#ff00ff" CREATED="1724342759784" ID="Freemind_Link_33378391" MODIFIED="1724342804540" TEXT="auto_stop_in: one week"/>
+<node COLOR="#ff00ff" CREATED="1724342764283" ID="Freemind_Link_639748814" MODIFIED="1724342806269" TEXT="auto_stop_in: never"/>
 </node>
 </node>
 </node>

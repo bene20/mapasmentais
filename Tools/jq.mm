@@ -21,7 +21,7 @@
 <icon BUILTIN="attach"/>
 </node>
 </node>
-<node CREATED="1704306378227" ID="Freemind_Link_1092179416" MODIFIED="1722435538842" POSITION="right" TEXT="Fun&#xe7;&#xf5;es e&#xa;filtros">
+<node CREATED="1704306378227" FOLDED="true" ID="Freemind_Link_1092179416" MODIFIED="1722881194472" POSITION="right" TEXT="Fun&#xe7;&#xf5;es e&#xa;filtros">
 <node CREATED="1704384215302" FOLDED="true" ID="Freemind_Link_194776386" MODIFIED="1704384222706" TEXT="para strings">
 <node CREATED="1704385011435" ID="Freemind_Link_1692380934" MODIFIED="1704385019007" TEXT="https://exercism.org/tracks/jq/concepts/strings">
 <icon BUILTIN="attach"/>
@@ -363,6 +363,19 @@
 </node>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1704306381706" ID="Freemind_Link_1822635094" MODIFIED="1722459411545" TEXT="+=">
+<node CREATED="1722459081907" ID="Freemind_Link_1648503378" MODIFIED="1722459089066" TEXT="Pode ser usado para adicionar um item a um array"/>
+<node CREATED="1704306409293" ID="Freemind_Link_1430199903" MODIFIED="1722459389209" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1662722233088" ID="Freemind_Link_1055079831" MODIFIED="1722459193494" TEXT="jq -n &apos;{&quot;nome&quot;: &quot;Ana&quot;, &quot;sexo&quot;:[&quot;m&quot;]} | .sexo+=[&quot;f&quot;]&apos;">
+<node CREATED="1704306611583" ID="Freemind_Link_419211894" MODIFIED="1704306614291" TEXT="Sa&#xed;da:">
+<node CREATED="1704306614911" ID="Freemind_Link_1301746932" MODIFIED="1722459214552" TEXT="{&#xa;  &quot;nome&quot;: &quot;Ana&quot;,&#xa;  &quot;sexo&quot;: [&quot;m&quot;,&quot;f&quot;]&#xa;}"/>
+</node>
+<node CREATED="1722459323274" ID="Freemind_Link_271069105" MODIFIED="1722459376974" TEXT="Se usasse apenas o &apos;+&apos; aqui, em&#xa;vez de &apos;+=&apos;, teria outro resultado:">
+<node CREATED="1722459337562" ID="Freemind_Link_1510298555" MODIFIED="1722459347314" TEXT="[&#xa;  &quot;m&quot;,&#xa;  &quot;f&quot;&#xa;]"/>
+</node>
+</node>
+</node>
+</node>
 </node>
 <node CREATED="1722436297869" FOLDED="true" ID="Freemind_Link_543667229" MODIFIED="1722436300178" TEXT="para objetos">
 <node COLOR="#0000ff" CREATED="1704306381706" ID="Freemind_Link_4384383" MODIFIED="1704384240403" TEXT="length">
@@ -386,7 +399,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1704306381706" FOLDED="true" ID="Freemind_Link_283844508" MODIFIED="1704306504274" TEXT="select">
+<node COLOR="#0000ff" CREATED="1704306381706" ID="Freemind_Link_283844508" MODIFIED="1704306504274" TEXT="select">
 <node CREATED="1704306387180" ID="Freemind_Link_1624281222" MODIFIED="1704306523954" TEXT="Permite selecionar elementos que atendam express&#xf5;es booleanas verdadeiras"/>
 <node CREATED="1704306409293" ID="Freemind_Link_142987768" MODIFIED="1704306410224" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1662722233088" ID="Freemind_Link_1691868750" MODIFIED="1704306551610" TEXT="[1,2,3] | map(select(. &gt;= 2))">
@@ -452,7 +465,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1704306381706" FOLDED="true" ID="Freemind_Link_1649409730" MODIFIED="1722434307216" TEXT="|">
+<node COLOR="#0000ff" CREATED="1704306381706" ID="Freemind_Link_1649409730" MODIFIED="1722434307216" TEXT="|">
 <node CREATED="1704306387180" ID="Freemind_Link_154408899" MODIFIED="1722434309821" TEXT="Pipe"/>
 <node CREATED="1721846208844" ID="Freemind_Link_1921480916" MODIFIED="1722434321205" TEXT="Permite encadear execu&#xe7;&#xf5;es de fun&#xe7;&#xf5;es"/>
 <node CREATED="1722434329272" ID="Freemind_Link_1737183810" MODIFIED="1722434357484" TEXT="O json de sa&#xed;da de uma execu&#xe7;&#xe3;o serve como json entrada de outra execu&#xe7;&#xe3;o"/>
@@ -649,7 +662,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1704306381706" ID="Freemind_Link_297480752" MODIFIED="1722456709382" TEXT="has">
+<node COLOR="#0000ff" CREATED="1704306381706" FOLDED="true" ID="Freemind_Link_297480752" MODIFIED="1722456709382" TEXT="has">
 <node CREATED="1722456709373" ID="Freemind_Link_1574230581" MODIFIED="1722456712857" TEXT="Usada para ">
 <node CREATED="1704306387180" ID="Freemind_Link_1366952468" MODIFIED="1722456708488" TEXT="verificar se um objeto tem uma chave ou n&#xe3;o"/>
 <node CREATED="1722456710292" ID="Freemind_Link_88089758" MODIFIED="1722456721621" TEXT="verificar se um array tem um &#xed;ndice ou n&#xe3;o"/>
@@ -672,7 +685,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1704306381706" ID="Freemind_Link_156939936" MODIFIED="1722457968572" TEXT="map">
+<node COLOR="#0000ff" CREATED="1704306381706" FOLDED="true" ID="Freemind_Link_156939936" MODIFIED="1722457968572" TEXT="map">
 <node CREATED="1722456709373" ID="Freemind_Link_1314809089" MODIFIED="1722457229030" TEXT="Para cada idem de um array, executa uma l&#xf3;gica e retorna o resultado final como um array"/>
 <node CREATED="1722457443014" ID="Freemind_Link_1379268779" MODIFIED="1722457483645" TEXT="&#xc9; a fun&#xe7;&#xe3;o recomendada quando se quer gerar um&#xa;array de sa&#xed;da baseado em um array de entrada">
 <icon BUILTIN="idea"/>
@@ -685,7 +698,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0000ff" CREATED="1704306381706" ID="Freemind_Link_1810042048" MODIFIED="1722457943767" TEXT="map_values">
+<node COLOR="#0000ff" CREATED="1704306381706" FOLDED="true" ID="Freemind_Link_1810042048" MODIFIED="1722457943767" TEXT="map_values">
 <node CREATED="1722457945805" ID="Freemind_Link_232057349" MODIFIED="1722457968574" TEXT="Se o dado de entrada for um array, ent&#xe3;o seu funcionamento ser&#xe1; exatamente o do &apos;map&apos;">
 <arrowlink DESTINATION="Freemind_Link_156939936" ENDARROW="Default" ENDINCLINATION="644;0;" ID="Freemind_Arrow_Link_104100613" STARTARROW="None" STARTINCLINATION="644;0;"/>
 </node>
@@ -701,8 +714,84 @@
 </node>
 </node>
 </node>
+<node COLOR="#0000ff" CREATED="1704306381706" FOLDED="true" ID="Freemind_Link_1789268168" MODIFIED="1722469301223" TEXT="@csv&#xa;@tsv">
+<node CREATED="1722457945805" ID="Freemind_Link_912000214" MODIFIED="1722469293326" TEXT="Converte um json em arquivo csv ou tsv">
+<arrowlink DESTINATION="Freemind_Link_156939936" ENDARROW="Default" ENDINCLINATION="644;0;" ID="Freemind_Arrow_Link_242566157" STARTARROW="None" STARTINCLINATION="644;0;"/>
 </node>
-<node CREATED="1721845860221" FOLDED="true" ID="Freemind_Link_1360001388" MODIFIED="1721845864644" POSITION="right" TEXT="Par&#xe2;metros">
+<node CREATED="1722469303200" ID="Freemind_Link_835010643" MODIFIED="1722469309886" TEXT="CSV: Arquivo separado por v&#xed;rgulas"/>
+<node CREATED="1722469310641" ID="Freemind_Link_621959367" MODIFIED="1722469316205" TEXT="TSV: Arquivo separado por tabs"/>
+<node CREATED="1722469321911" ID="Freemind_Link_1807727741" MODIFIED="1722469388724" TEXT="Essa convers&#xe3;o s&#xf3; funciona para arquivos json cuja estrutura&#xa;seja a de um array cujos elementos tamb&#xe9;m s&#xe3;o arrays (array de arrays)&#xa;"/>
+<node CREATED="1722469849101" ID="Freemind_Link_1914565582" MODIFIED="1722471706079" TEXT="Caso voc&#xea; tenha um array de objetos, ser&#xe1; necess&#xe1;rio fazer&#xa;a convers&#xe3;o para array de values antes de usar o @csv ou @tsv">
+<node CREATED="1722471706061" ID="Freemind_Link_142621631" MODIFIED="1722472012662" TEXT="Ex:">
+<node CREATED="1722472012639" ID="Freemind_Link_612104" MODIFIED="1722472081128" TEXT="Json de origem:">
+<icon BUILTIN="full-1"/>
+<node COLOR="#0000ff" CREATED="1722471693732" ID="Freemind_Link_607360656" MODIFIED="1722472348447" TEXT="{&quot;Users&quot;:[&#xa;    {&quot;nome&quot;:&quot;Ana&quot;, &quot;idade&quot;:15, &quot;aprovado&quot;:true},&#xa;    {&quot;nome&quot;:&quot;Beto&quot;, &quot;idade&quot;:20, &quot;aprovado&quot;:false},&#xa;    {&quot;nome&quot;:&quot;Caio&quot;, &quot;idade&quot;:7, &quot;aprovado&quot;:true}&#xa;]}"/>
+</node>
+<node CREATED="1722472086358" ID="Freemind_Link_1922646126" MODIFIED="1722472159738" TEXT="Extra&#xe7;&#xe3;o do array principal">
+<icon BUILTIN="full-2"/>
+<node COLOR="#0000ff" CREATED="1722471693732" ID="Freemind_Link_1972815492" MODIFIED="1722472379172" TEXT="&lt;Passo 1 aqui&gt; | .Users[]"/>
+</node>
+<node CREATED="1722472086358" ID="Freemind_Link_1722448051" MODIFIED="1722472448017" TEXT="Convers&#xe3;o dos objetos em lista de arrays">
+<icon BUILTIN="full-3"/>
+<node COLOR="#0000ff" CREATED="1722471693732" ID="Freemind_Link_1629571859" MODIFIED="1722472386085" TEXT="&lt;Passo 2 aqui&gt; | [.nome, .idade, .aprovado]"/>
+</node>
+<node CREATED="1722472086358" ID="Freemind_Link_17268094" MODIFIED="1722472464016" TEXT="Convers&#xe3;o da lista de arrays em csv">
+<icon BUILTIN="full-4"/>
+<node COLOR="#0000ff" CREATED="1722471693732" ID="Freemind_Link_1266389061" MODIFIED="1722472403933" TEXT="&lt;Passo 3 aqui&gt; | @csv&apos;"/>
+</node>
+<node COLOR="#0000ff" CREATED="1722471693732" ID="Freemind_Link_1124058860" MODIFIED="1722471993880" TEXT="jq -rn &apos;{&quot;Users&quot;:[{&quot;nome&quot;:&quot;Ana&quot;, &quot;idade&quot;:15, &quot;aprovado&quot;:true},{&quot;nome&quot;:&quot;Beto&quot;, &quot;idade&quot;:20, &quot;aprovado&quot;:false},{&quot;nome&quot;:&quot;Caio&quot;, &quot;idade&quot;:7, &quot;aprovado&quot;:true}]} | .Users[] | [.nome, .idade, .aprovado] | @csv&apos;"/>
+</node>
+</node>
+<node CREATED="1721845879561" ID="Freemind_Link_1064279203" MODIFIED="1721845880647" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1722451896095" ID="Freemind_Link_1976462479" MODIFIED="1722469793141" TEXT="jq -rn &apos;[[&quot;Ana&quot;, 15, true],[&quot;Beto&quot;, 20, false],[&quot;Caio&quot;, 7, true]] | .[] | @csv&apos;">
+<node CREATED="1722469610205" ID="Freemind_Link_100692953" MODIFIED="1722469656369" TEXT="Se quiser adicionar um cabe&#xe7;alho, substitua &#xa;.[] por [&quot;Nome&quot;, &quot;idade&quot;, &quot;Aprovado&quot;], .[]&#xa;Resultado:">
+<node CREATED="1722469660747" ID="Freemind_Link_710949125" MODIFIED="1722469663514" TEXT="&quot;\&quot;Nome\&quot;,\&quot;idade\&quot;,\&quot;Aprovado\&quot;&quot;&#xa;&quot;\&quot;Ana\&quot;,15,true&quot;&#xa;&quot;\&quot;Beto\&quot;,20,false&quot;&#xa;&quot;\&quot;Caio\&quot;,7,true&quot;&#xa;"/>
+</node>
+<node CREATED="1722469534323" ID="Freemind_Link_1856212326" MODIFIED="1722469537662" TEXT="Sa&#xed;da:">
+<node CREATED="1722451896095" ID="Freemind_Link_1015764311" MODIFIED="1722469812046" TEXT="&quot;Ana&quot;,15,true&#xa;&quot;Beto&quot;,20,false&#xa;&quot;Caio&quot;,7,true&#xa;"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1722881194437" ID="Freemind_Link_1861024734" MODIFIED="1722881196039" TEXT="regex">
+<node COLOR="#0000ff" CREATED="1704306381706" ID="Freemind_Link_1123535692" MODIFIED="1722616127816" TEXT="test">
+<node CREATED="1704306387180" ID="Freemind_Link_1405438046" MODIFIED="1722881227230" TEXT="Testa se uma string d&#xe1; match com uma regex"/>
+<node CREATED="1722880697341" ID="Freemind_Link_279272952" MODIFIED="1722880705816" TEXT="https://exercism.org/tracks/jq/concepts/regular-expressions">
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1721845879561" ID="Freemind_Link_1690916865" MODIFIED="1721845880647" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1721845882491" ID="Freemind_Link_1922978009" MODIFIED="1722881157095" TEXT="kubectl get ns -o json | \&#xa;  jq &apos;.items[].metadata | select(.name | test(&quot;.*-dev$&quot;)) | {&quot;nome&quot;:.name, &quot;criacao&quot;:.creationTimestamp}&apos;">
+<node CREATED="1722881073936" ID="Freemind_Link_264000636" MODIFIED="1722881141773" TEXT="Traz todos os namespaces de um cluster&#xa;k8s cujos nomes terminam com &apos;-dev&apos;"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1704306381706" ID="Freemind_Link_1042147053" MODIFIED="1722881251288" TEXT="match">
+<node CREATED="1704306387180" ID="Freemind_Link_1595473282" MODIFIED="1722881262992" TEXT="Extrai uma substring que d&#xe1; match com uma regex"/>
+</node>
+<node COLOR="#0000ff" CREATED="1704306381706" ID="Freemind_Link_851421512" MODIFIED="1722881276508" TEXT="capture">
+<node CREATED="1704306387180" ID="Freemind_Link_891263881" MODIFIED="1722881291462" TEXT="Captura o objeto cuja string d&#xe1; match com uma regex"/>
+<node CREATED="1722881310747" ID="Freemind_Link_906465936" MODIFIED="1722881311910" TEXT="Ex:">
+<node CREATED="1722881312813" ID="Freemind_Link_591032304" MODIFIED="1722881316119" TEXT="&quot;JIRAISSUE-1234&quot; | capture(&quot;(?&lt;project&gt;\\w+)-(?&lt;issue_num&gt;\\d+)&quot;)&#xa;# =&gt; {&#xa;#      &quot;project&quot;: &quot;JIRAISSUE&quot;,&#xa;#      &quot;issue_num&quot;: &quot;1234&quot;&#xa;#    }"/>
+</node>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1704306381706" FOLDED="true" ID="Freemind_Link_1280200231" MODIFIED="1722879820758" TEXT="@base64&#xa;@base64d">
+<node CREATED="1722879820743" ID="Freemind_Link_757585355" MODIFIED="1722879849032" TEXT="Faz encode e decode de strings em formato base 64"/>
+<node CREATED="1721845879561" ID="Freemind_Link_1590844281" MODIFIED="1721845880647" TEXT="Ex:">
+<node COLOR="#0000ff" CREATED="1722451896095" ID="Freemind_Link_1494197408" MODIFIED="1722879700194" TEXT="senha=&quot;abc@123&quot; jq -n &apos;env.senha | @base64&apos;">
+<node CREATED="1722469534323" ID="Freemind_Link_687139177" MODIFIED="1722469537662" TEXT="Sa&#xed;da:">
+<node CREATED="1722451896095" ID="Freemind_Link_1377428633" MODIFIED="1722879718555" TEXT="&quot;YWJjQDEyMw==&quot;"/>
+</node>
+</node>
+<node COLOR="#0000ff" CREATED="1722451896095" ID="Freemind_Link_1932123755" MODIFIED="1722879875622" TEXT="senha=&quot;YWJjQDEyMw==&quot; jq -n &apos;env.senha | @base64d&apos;">
+<node CREATED="1722469534323" ID="Freemind_Link_1780358648" MODIFIED="1722469537662" TEXT="Sa&#xed;da:">
+<node CREATED="1722451896095" ID="Freemind_Link_828654442" MODIFIED="1722879879394" TEXT="&quot;abc@123&quot;"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1721845860221" ID="Freemind_Link_1360001388" MODIFIED="1721845864644" POSITION="right" TEXT="Par&#xe2;metros">
 <node CREATED="1721845865642" ID="Freemind_Link_174913107" MODIFIED="1721845866582" TEXT="-r">
 <node CREATED="1721845867588" ID="Freemind_Link_902616171" MODIFIED="1721845874086" TEXT="Fornece os dados em formato raw"/>
 <node CREATED="1721845879561" ID="Freemind_Link_780870850" MODIFIED="1721845880647" TEXT="Ex:">
@@ -734,9 +823,10 @@
 </node>
 </node>
 </node>
-<node CREATED="1721846397918" FOLDED="true" ID="Freemind_Link_1972108576" MODIFIED="1721846624704" TEXT="-s">
+<node CREATED="1721846397918" ID="Freemind_Link_1972108576" MODIFIED="1721846624704" TEXT="-s">
 <node CREATED="1721846399992" ID="Freemind_Link_444609200" MODIFIED="1721846639128" TEXT="Gera um json que &#xe9; a uni&#xe3;o de dois ou mais jsons"/>
-<node CREATED="1721845879561" ID="Freemind_Link_421888186" MODIFIED="1721846645680" TEXT="Ex:">
+<node CREATED="1721845879561" ID="Freemind_Link_421888186" MODIFIED="1724087672730" TEXT="Ex:">
+<node CREATED="1724087672692" ID="Freemind_Link_1986670628" MODIFIED="1724087673631" TEXT="1">
 <node CREATED="1721846645652" ID="Freemind_Link_778255291" MODIFIED="1721846647782" TEXT="Considere:">
 <node CREATED="1721845941201" ID="Freemind_Link_1933750293" MODIFIED="1721846662560" TEXT="arquivo a.json:&#xa;">
 <node CREATED="1721845948223" ID="Freemind_Link_653636489" MODIFIED="1721846746264" TEXT="[1, 2]"/>
@@ -750,6 +840,14 @@
 </node>
 <node COLOR="#0000ff" CREATED="1721845882491" ID="Freemind_Link_1012539863" MODIFIED="1721846837156" TEXT="jq -s &apos;.&apos; a.json b.json c.json">
 <node CREATED="1721845892675" ID="Freemind_Link_1872623923" MODIFIED="1721846806326" TEXT="Sa&#xed;da: &#xa;{&#xa;  [1,2],&#xa;  [3,4],&#xa;  {&#xa;    &quot;nome&quot;: &quot;Ana&quot;,&#xa;    &quot;idade&quot;: 15&#xa;  }&#xa;}"/>
+</node>
+</node>
+<node CREATED="1724087676534" ID="Freemind_Link_1682953577" MODIFIED="1724087677111" TEXT="2">
+<node CREATED="1724087616267" ID="Freemind_Link_10613946" MODIFIED="1724087811500" TEXT="Para fazer o merge entre 2 arquivos json&#xa;preservando as chaves/valores de ambos:">
+<node CREATED="1724087750636" ID="Freemind_Link_1557396646" MODIFIED="1724087774995" TEXT="Considerando que tenho 2 arquivos json:  &#xa;app/smartend/core/composer.json e  doc/nexus_composer.json"/>
+<node CREATED="1724087790909" ID="Freemind_Link_1377328380" MODIFIED="1724087805212" TEXT="Se houver uma chave duplicada, o valor do segundo substitui o do primeiro"/>
+</node>
+<node COLOR="#0000ff" CREATED="1724087639582" ID="Freemind_Link_343833812" MODIFIED="1724087741762" TEXT="jq -s &apos;.[0] * .[1]&apos; app/smartend/core/composer.json doc/nexus_composer.json"/>
 </node>
 </node>
 </node>
