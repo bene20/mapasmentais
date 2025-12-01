@@ -22,7 +22,7 @@
 </node>
 </node>
 <node CREATED="1704306378227" FOLDED="true" ID="Freemind_Link_1092179416" MODIFIED="1722881194472" POSITION="right" TEXT="Fun&#xe7;&#xf5;es e&#xa;filtros">
-<node CREATED="1704384215302" FOLDED="true" ID="Freemind_Link_194776386" MODIFIED="1704384222706" TEXT="para strings">
+<node CREATED="1704384215302" ID="Freemind_Link_194776386" MODIFIED="1704384222706" TEXT="para strings">
 <node CREATED="1704385011435" ID="Freemind_Link_1692380934" MODIFIED="1704385019007" TEXT="https://exercism.org/tracks/jq/concepts/strings">
 <icon BUILTIN="attach"/>
 </node>
@@ -500,7 +500,6 @@
 </node>
 </node>
 <node CREATED="1704306767739" ID="Freemind_Link_872840480" MODIFIED="1704306829970" TEXT="Filtros">
-<node CREATED="1704306844667" ID="Freemind_Link_818126765" MODIFIED="1722442121660" TEXT=""/>
 <node CREATED="1704306853204" ID="Freemind_Link_211550952" MODIFIED="1704306879735" TEXT="&#xc9; um select embutido que s&#xf3; seleciona as entradas que sejam do tipo especificado"/>
 <node CREATED="1704306829964" ID="Freemind_Link_1544611309" MODIFIED="1704306831615" TEXT="Ex:">
 <node COLOR="#0000ff" CREATED="1704306381706" ID="Freemind_Link_1527999136" MODIFIED="1704307028282" TEXT="arrays">
@@ -792,7 +791,7 @@
 </node>
 </node>
 <node CREATED="1721845860221" ID="Freemind_Link_1360001388" MODIFIED="1721845864644" POSITION="right" TEXT="Par&#xe2;metros">
-<node CREATED="1721845865642" ID="Freemind_Link_174913107" MODIFIED="1721845866582" TEXT="-r">
+<node CREATED="1721845865642" FOLDED="true" ID="Freemind_Link_174913107" MODIFIED="1721845866582" TEXT="-r">
 <node CREATED="1721845867588" ID="Freemind_Link_902616171" MODIFIED="1721845874086" TEXT="Fornece os dados em formato raw"/>
 <node CREATED="1721845879561" ID="Freemind_Link_780870850" MODIFIED="1721845880647" TEXT="Ex:">
 <node CREATED="1721845941201" ID="Freemind_Link_1058342223" MODIFIED="1721846022581" TEXT="Considere o arquivo&#xa;sample.json:">
@@ -823,7 +822,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1721846397918" ID="Freemind_Link_1972108576" MODIFIED="1721846624704" TEXT="-s">
+<node CREATED="1721846397918" FOLDED="true" ID="Freemind_Link_1972108576" MODIFIED="1721846624704" TEXT="-s">
 <node CREATED="1721846399992" ID="Freemind_Link_444609200" MODIFIED="1721846639128" TEXT="Gera um json que &#xe9; a uni&#xe3;o de dois ou mais jsons"/>
 <node CREATED="1721845879561" ID="Freemind_Link_421888186" MODIFIED="1724087672730" TEXT="Ex:">
 <node CREATED="1724087672692" ID="Freemind_Link_1986670628" MODIFIED="1724087673631" TEXT="1">
@@ -851,7 +850,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1721850875044" FOLDED="true" ID="Freemind_Link_1437097835" MODIFIED="1721850878713" TEXT="-n">
+<node CREATED="1721850875044" ID="Freemind_Link_1437097835" MODIFIED="1721850878713" TEXT="-n">
 <node CREATED="1721850880053" ID="Freemind_Link_1226698357" MODIFIED="1721850887658" TEXT="Instrui o jq a n&#xe3;o esperar nenhum input"/>
 <node CREATED="1721850888100" ID="Freemind_Link_1591504972" MODIFIED="1721850943879" TEXT="Por padr&#xe3;o, se voc&#xea; executar o comando &quot;jq &apos;.&apos;&quot;, o jq abrir&#xe1; um campo de entrada onde voc&#xea; poder&#xe1; informar o conte&#xfa;do do json. Nos casos em que voc&#xea; n&#xe3;o quer informar nenhum input, use esse par&#xe2;metro."/>
 <node CREATED="1721850946357" ID="Freemind_Link_486836109" MODIFIED="1721850965601" TEXT="&#xda;til quando se quer criar arquivos json sem nenhum input de refer&#xea;ncia"/>

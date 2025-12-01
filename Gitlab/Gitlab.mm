@@ -241,8 +241,8 @@
 <node CREATED="1579543326378" ID="Freemind_Link_129089085" MODIFIED="1579543327219" TEXT="tags">
 <node CREATED="1579543327882" ID="Freemind_Link_1677386332" MODIFIED="1579543337418" TEXT="Indica qual/quais runners ir&#xe3;o executar o job"/>
 </node>
-<node CREATED="1579544531134" FOLDED="true" ID="Freemind_Link_930363076" MODIFIED="1579544533164" TEXT="dependencies">
-<node CREATED="1579544536814" ID="Freemind_Link_688738344" MODIFIED="1579544548187" TEXT="Indica que um job depende da conclus&#xe3;o de outro"/>
+<node CREATED="1579544531134" ID="Freemind_Link_930363076" MODIFIED="1579544533164" TEXT="dependencies">
+<node CREATED="1579544536814" ID="Freemind_Link_688738344" MODIFIED="1726772288307" TEXT="Indica que um job depende de artefatos gerados por outro job"/>
 <node CREATED="1721138466074" ID="Freemind_Link_124614387" MODIFIED="1721138494415" TEXT="&#xc9; necess&#xe1;rio declarar &apos;dependencies&apos; para definir a lista dos jobs dos quais se quer pegar os artefatos"/>
 <node CREATED="1579544549026" ID="Freemind_Link_1787119120" MODIFIED="1579544566857" TEXT="Um job s&#xf3; pode ser dependente de um job de outro stage"/>
 </node>
@@ -358,7 +358,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1724342252138" ID="Freemind_Link_1632892070" MODIFIED="1724342254896" TEXT="environment">
+<node CREATED="1724342252138" FOLDED="true" ID="Freemind_Link_1632892070" MODIFIED="1724342254896" TEXT="environment">
 <node CREATED="1724342269289" ID="Freemind_Link_1314600074" MODIFIED="1724342276148" TEXT="Define um ambiente de deploy da aplica&#xe7;&#xe3;o"/>
 <node CREATED="1724342285156" ID="Freemind_Link_1039615908" MODIFIED="1724342303589" TEXT="&#xda;til para publicar a aplica&#xe7;&#xe3;o em ambientes est&#xe1;ticos (HOM, PROD etc.) ou din&#xe2;micos (por branch)"/>
 <node COLOR="#ff00ff" CREATED="1724342359554" ID="Freemind_Link_875903249" MODIFIED="1724342375236" TEXT="name">

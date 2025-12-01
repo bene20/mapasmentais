@@ -23,5 +23,6 @@
 <node CREATED="1587587977702" ID="Freemind_Link_885152527" LINK="Kubernetes/Kubernetes.mm" MODIFIED="1654784556428" TEXT="Kubernetes"/>
 <node CREATED="1588092347383" ID="Freemind_Link_1148869046" LINK="Java/_Maven.mm" MODIFIED="1588092396251" TEXT="Nexus(Maven)"/>
 </node>
+<node CREATED="1764592900123" ID="Freemind_Link_1599152475" LINK="IA/IA.mm" MODIFIED="1764592940074" POSITION="left" TEXT="IA"/>
 </node>
 </map>
