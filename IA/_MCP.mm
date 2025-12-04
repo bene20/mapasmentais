@@ -62,5 +62,15 @@
 </node>
 </node>
 </node>
+<node CREATED="1764682440448" ID="Freemind_Link_732877706" MODIFIED="1764682442994" POSITION="right" TEXT="Recomendados">
+<node CREATED="1764682443824" ID="Freemind_Link_1587257178" MODIFIED="1764682445883" TEXT="Context7">
+<node CREATED="1764682446639" ID="Freemind_Link_1958930755" MODIFIED="1764682460131" TEXT="&#xda;til para sempre obter orienta&#xe7;&#xf5;es segundo a &#xfa;ltima vers&#xe3;o dos componentes"/>
+<node CREATED="1764682461023" ID="Freemind_Link_1429042430" MODIFIED="1764682492788" TEXT="Ex: Integre a aplica&#xe7;&#xe3;o ao Sonarqube. Use contex7"/>
+</node>
+<node CREATED="1764682499413" ID="Freemind_Link_1928910638" MODIFIED="1764682507372" TEXT="PlayWright">
+<node CREATED="1764682515402" ID="Freemind_Link_1712024597" MODIFIED="1764682526628" TEXT="Automa&#xe7;&#xe3;o com uso de browsers para testes e extra&#xe7;&#xe3;o de dados"/>
+<node CREATED="1764682548505" ID="Freemind_Link_1294985334" MODIFIED="1764682564013" TEXT="Ex: Use o playwright para abrir o site e clicar no bot&#xe3;o &apos;Login&apos;"/>
+</node>
+</node>
 </node>
 </map>
